@@ -1,6 +1,6 @@
   The Mutt E-Mail Client
   by Michael Elkins <me@cs.hmc.edu>
-  v0.92.13, 30 June 1998
+  v0.94.2, 31 July 1998
 
   ``All mail clients suck.  This one just sucks less.'' -me, circa 1995
 
@@ -15,21 +15,20 @@
 
   11..11..  MMuutttt HHoommee PPaaggee
 
-  http://www.cs.hmc.edu/~me/mutt/index.html
+  http://www.mutt.org/
 
 
   11..22..  MMaaiilliinngg LLiissttss
 
   To subscribe to one of the following mailing lists, send a message
-  with the word _s_u_b_s_c_r_i_b_e in the subject to list-name_-
-  _r_e_q_u_e_s_t@cs.hmc.edu.
+  with the word _s_u_b_s_c_r_i_b_e in the subject to list-name_-_r_e_q_u_e_s_t@mutt.org.
 
 
-  +o  mutt-announce@cs.hmc.edu -- low traffic list for announcements
+  +o  mutt-announce@mutt.org -- low traffic list for announcements
 
-  +o  mutt-users@cs.hmc.edu -- help, bug reports and feature requests
+  +o  mutt-users@mutt.org -- help, bug reports and feature requests
 
-  +o  mutt-dev@cs.hmc.edu -- development mailing list
+  +o  mutt-dev@mutt.org -- development mailing list
 
   NNoottee:: all messages posted to _m_u_t_t_-_a_n_n_o_u_n_c_e are automatically forwarded
   to _m_u_t_t_-_u_s_e_r_s, so you do not need to be subscribed to both lists.
@@ -38,7 +37,7 @@
   11..33..  SSooffttwwaarree DDiissttrriibbuuttiioonn SSiitteess
 
 
-  +o  ftp://ftp.cs.hmc.edu/pub/me/mutt/
+  +o  ftp://ftp.guug.de/pub/mutt/
 
 
   11..44..  IIRRCC
@@ -65,7 +64,6 @@
   WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   General Public License for more details.
-
   You should have received a copy of the GNU General Public License
   along with this program; if not, write to the Free Software
   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
@@ -115,6 +113,8 @@
   Mutt has a builtin line editor which is used as the primary way to
   input textual data such as email addresses or filenames.  The keys
   used to move around while editing are very similar to those of Emacs.
+
+
 
 
 
@@ -292,7 +292,7 @@
        n               display the next message
        ?               show keybindings
        /               search for a regular expression (pattern)
-       \              toggle search pattern coloring
+       \               toggle search pattern coloring
 
 
 
@@ -612,7 +612,7 @@
   commands are used, they must be separated by a semicolon (;).
 
 
-               set realname='Mutt user' ; ignore x-
+       set realname='Mutt user' ; ignore x-
 
 
 
@@ -673,8 +673,18 @@
   oriented, only the first line of output from the Unix command will be
   substituted.
 
-  For a complete list of the commands understood by mutt, see the
-  ``command reference''.
+  UNIX environments can be accessed like the way it is done in shells
+  like sh and bash: Prepend the name of the environment by a
+  ``$dollar;''.  For example,
+
+
+       set record=+sent_on_$HOSTNAME
+
+
+
+
+  The commands understood by mutt are explained in the next paragraphs.
+  For a complete list, see the ``command reference''.
 
 
   33..22..  DDeeffiinniinngg//UUssiinngg aalliiaasseess
@@ -714,7 +724,6 @@
   that Mutt will happily append aliases to any file, but in order for
   the new aliases to take effect you need to explicitly ``source'' this
   file too.
-
   For example:
 
 
@@ -722,6 +731,8 @@
        source /usr/local/share/Mutt.aliases
        source ~/.mail_aliases
        set alias_file=~/.mail_aliases
+
+
 
 
   To use aliases, you merely use the alias at any place in mutt where
@@ -778,36 +789,29 @@
   key as a three digit octal number prefixed with a ``\'' (for example
   _\_1_7_7 is equivalent to _\_c_?).
 
+
   In addition, _k_e_y may consist of:
 
 
 
-
-
-
-
-
-
-
-
-  \t             tab
-  \r             carriage return
-  \n             newline
-  \e             escape
-  <up>            up arrow
-  <down>          down arrow
-  <left>          left arrow
-  <right>         right arrow
-  <pageup>        Page Up
-  <pagedown>      Page Down
-  <backspace>     Backspace
-  <delete>        Delete
-  <insert>        Insert
-  <enter>         Enter
-  <home>          Home
-  <end>           End
-  f1              function key 1
-  f10             function key 10
+       \t              tab
+       \r              carriage return
+       \n              newline
+       \e              escape
+       <up>            up arrow
+       <down>          down arrow
+       <left>          left arrow
+       <right>         right arrow
+       <pageup>        Page Up
+       <pagedown>      Page Down
+       <backspace>     Backspace
+       <delete>        Delete
+       <insert>        Insert
+       <enter>         Enter
+       <home>          Home
+       <end>           End
+       f1              function key 1
+       f10             function key 10
 
 
 
@@ -822,7 +826,7 @@
 
   33..44..  SSeettttiinngg vvaarriiaabblleess bbaasseedd uuppoonn mmaaiillbbooxx
 
-  Usage: folder-hook [!]_p_a_t_t_e_r_n _c_o_m_m_a_n_d
+  Usage: folder-hook [!]_r_e_g_e_x_p _c_o_m_m_a_n_d
 
   It is often desirable to change settings based on which mailbox you
   are reading.  The folder-hook command provides a method by which you
@@ -852,9 +856,11 @@
   pattern ``.'':
 
 
-
-
        folder-hook . set sort=date-sent
+
+
+
+
 
   33..55..  KKeeyybbooaarrdd mmaaccrrooss
 
@@ -988,6 +994,7 @@
 
   If your terminal does not support color, it is still possible change
   the video attributes through the use of the ``mono'' command:
+
   Usage: mono _<_o_b_j_e_c_t_> _<_a_t_t_r_i_b_u_t_e_> [ _r_e_g_e_x_p ]
 
   where _a_t_t_r_i_b_u_t_e is one of the following:
@@ -1046,13 +1053,12 @@
   mailing lists.
 
   It is important to note that you should nneevveerr specify the domain name
-  ( the part after the ``@'') with the lists command.  You should only
+  (the part after the ``@'') with the lists command.  You should only
   specify the ``mailbox'' portion of the address (the part before the
   ``@'').  For example, if you've subscribed to the Mutt mailing list,
-  you will receive mail addressed to _m_u_t_t_-_u_s_e_r_s_@_c_s_._h_m_c_._e_d_u.  So, to tell
+  you will receive mail addressed to _m_u_t_t_-_u_s_e_r_s_@_m_u_t_t_._o_r_g.  So, to tell
   Mutt that this is a mailing list, you would add ``lists mutt-users''
   to your initialization file.
-
 
   The ``unlists'' command is to remove a token from the list of mailing-
   lists.  Use ``unlists *'' to remove all tokens.
@@ -1114,7 +1120,6 @@
   For example, if you would like to add an ``Organization:'' header
   field to all of your outgoing messages, you can put the command
 
-
        my_hdr Organization: A Really Big Company, Anytown, USA
 
 
@@ -1156,7 +1161,7 @@
 
   33..1133..  SSppeecciiffyy ddeeffaauulltt ssaavvee ffiilleennaammee
 
-  Usage: save-hook [!]_r_e_g_e_x_p _f_i_l_e_n_a_m_e
+  Usage: save-hook [!]_p_a_t_t_e_r_n _f_i_l_e_n_a_m_e
 
   This command is used to override the default filename used when saving
   messages.  _f_i_l_e_n_a_m_e will be used as the default filename if the
@@ -1164,7 +1169,7 @@
   and the message is addressed _t_o_: something matching _r_e_g_e_x_p.
 
   See ``matching messages'' for information on the exact format of
-  _r_e_g_e_x_p.
+  _p_a_t_t_e_r_n.
 
   Examples:
 
@@ -1179,9 +1184,11 @@
   Also see the ``fcc-save-hook'' command.
 
 
+
+
   33..1144..  SSppeecciiffyy ddeeffaauulltt FFcccc:: mmaaiillbbooxx wwhheenn ccoommppoossiinngg
 
-  Usage: fcc-hook [!]_r_e_g_e_x_p _m_a_i_l_b_o_x
+  Usage: fcc-hook [!]_p_a_t_t_e_r_n _m_a_i_l_b_o_x
 
   This command is used to save outgoing mail in a mailbox other than
   ``$record''.  Mutt searches the initial list of message recipients for
@@ -1190,7 +1197,7 @@
   ``$record'' mailbox.
 
   See ``matching messages'' for information on the exact format of
-  _r_e_g_e_x_p.
+  _p_a_t_t_e_r_n.
 
   Example: fcc-hook aol.com$ +spammers
 
@@ -1201,7 +1208,7 @@
 
   33..1155..  SSppeecciiffyy ddeeffaauulltt ssaavvee ffiilleennaammee aanndd ddeeffaauulltt FFcccc:: mmaaiillbbooxx aatt oonnccee
 
-  Usage: fcc-save-hook [!]_r_e_g_e_x_p _m_a_i_l_b_o_x
+  Usage: fcc-save-hook [!]_p_a_t_t_e_r_n _m_a_i_l_b_o_x
 
   This command is a shortcut, equivalent to doing both a ``fcc-hook''
   and a ``save-hook'' with its arguments.
@@ -1209,16 +1216,16 @@
 
   33..1166..  CChhaannggee sseettttiinnggss bbaasseedd uuppoonn mmeessssaaggee rreecciippiieennttss
 
-  Usage: send-hook [!]_r_e_g_e_x_p _c_o_m_m_a_n_d
+  Usage: send-hook [!]_p_a_t_t_e_r_n _c_o_m_m_a_n_d
 
   This command can be used to execute arbitrary configuration commands
-  based upon recipients of the message.  _r_e_g_e_x_p is a regular expression
+  based upon recipients of the message.  _p_a_t_t_e_r_n is a regular expression
   matching the desired address.  _c_o_m_m_a_n_d is executed when _r_e_g_e_x_p matches
   recipients of the message.  When multiple matches occur, commands are
   executed in the order they are specified in the muttrc.
 
   See ``matching messages'' for information on the exact format of
-  _r_e_g_e_x_p.
+  _p_a_t_t_e_r_n.
 
   Example: send-hook mutt "set mime_forward signature=''"
 
@@ -1252,13 +1259,15 @@
   This command adds the named string to the keyboard buffer.  You may
   use it to automatically run a sequence of commands at startup, or when
   entering certain folders.
+
+
   33..1199..  MMeessssaaggee SSccoorriinngg
 
   Usage: score _p_a_t_t_e_r_n _v_a_l_u_e
   Usage: unscore _p_a_t_t_e_r_n [ _p_a_t_t_e_r_n ... ]
 
   The score commands adds _v_a_l_u_e to a message's score if _p_a_t_t_e_r_n matches
-  it.  _p_a_t_t_e_r_n is a string in the format described in the ``searching''
+  it.  _p_a_t_t_e_r_n is a string in the format described in the ``patterns''
   section.  _v_a_l_u_e is a positive or negative integer.  A message's final
   score is the sum total of all matching score entries.  However, you
   may optionally prefix _v_a_l_u_e with an equal sign (=) to cause evaluation
@@ -1318,6 +1327,8 @@
        set ?allow_8bit
 
 
+
+
   The question mark is actually only required for boolean variables.
 
   The reset command resets all given variables to the compile time
@@ -1343,27 +1354,23 @@
 
   If the filename ends with a vertical bar (|), then _f_i_l_e_n_a_m_e is
   considered to be an executable program from which to read input (eg.
-  source ~bin/myscript|/.
+  source ~bin/myscript|/).
 
 
   44..  AAddvvaanncceedd UUssaaggee
 
-  44..11..  SSeeaarrcchhiinngg aanndd RReegguullaarr EExxpprreessssiioonnss
+  44..11..  RReegguullaarr EExxpprreessssiioonnss
 
-  All text patterns for searching and matching in Mutt must be specified
-  as regular expressions (regexp) in the ``POSIX extended'' syntax
-  (which is more or less the syntax used by egrep and GNU awk).  For
-  your convenience, we have included below a brief description of this
-  syntax.
+  All string patterns in Mutt including those in more complex
+  ``patterns'' must be specified using regular expressions (regexp) in
+  the ``POSIX extended'' syntax (which is more or less the syntax used
+  by egrep and GNU awk).  For your convenience, we have included below a
+  brief description of this syntax.
 
   The search is case sensitive if the pattern contains at least one
   upper case letter, and case insensitive otherwise. Note that ``\''
   must be quoted if used for a regular expression in an initialization
-  command: ``\\''.  For more information, see the section on
-  ``searching'' below.
-
-
-  44..11..11..  RReegguullaarr EExxpprreessssiioonnss
+  command: ``\\''.
 
   A regular expression is a pattern that describes a set of strings.
   Regular expressions are constructed analogously to arithmetic
@@ -1375,6 +1382,7 @@
   digits, are regular expressions that match themselves.  Any
   metacharacter with special meaning may be quoted by preceding it with
   a backslash.
+
 
   The period ``.'' matches any single character.  The caret ``^'' and
   the dollar sign ``$'' are metacharacters that respectively match the
@@ -1449,7 +1457,6 @@
   collating or sorting purposes:
 
 
-
      CCoollllaattiinngg SSyymmbboollss
         A collating symbols is a multi-character collating element
         enclosed in ``[.'' and ``.]''.  For example, if ``ch'' is a
@@ -1508,13 +1515,13 @@
 
      \\BB Matches the empty string within a word.
 
+
      \\<< Matches the empty string at the beginning of a word.
 
      \\>> Matches the empty string at the end of a word.
 
      \\ww Matches any word-constituent character (letter, digit, or
         underscore).
-
 
      \\WW Matches any character that is not word-constituent.
 
@@ -1527,7 +1534,7 @@
   systems.
 
 
-  44..11..22..  SSeeaarrcchhiinngg
+  44..22..  PPaatttteerrnnss
 
   Many of Mutt's commands allow you to specify a pattern to match
   (limit, tag-pattern, delete-pattern, etc.).  There are several ways to
@@ -1536,22 +1543,22 @@
 
 
        ~A              all messages
-       ~b PATTERN      messages which contain PATTERN in the message body
-       ~B PATTERN      messages which contain PATTERN in the whole message
+       ~b EXPR         messages which contain EXPR in the message body
+       ~B EXPR         messages which contain EXPR in the whole message
        ~c USER         messages carbon-copied to USER
-       ~C PATTERN      message is either to: or cc: PATTERN
+       ~C EXPR         message is either to: or cc: EXPR
        ~D              deleted messages
        ~d [MIN]-[MAX]  messages with ``date-sent'' in a Date range
        ~E              expired messages
-       ~e PATTERN      message which contains PATTERN in the ``Sender'' field
+       ~e EXPR         message which contains EXPR in the ``Sender'' field
        ~F              flagged messages
        ~f USER         messages originating from USER
-       ~h PATTERN      messages which contain PATTERN in the message header
+       ~h EXPR         messages which contain EXPR in the message header
        ~i ID           message which match ID in the ``Message-ID'' field
-       ~L PATTERN      message is either originated or received by PATTERN
+       ~L EXPR         message is either originated or received by EXPR
        ~l              message is addressed to a known mailing list
-       ~m [MIN]-[MAX]  message in the range MIN to MAX
-       ~n [MIN]-[MAX]  messages with a score in the range MIN to MAX
+       ~m [MIN]-[MAX]  message in the range MIN to MAX *)
+       ~n [MIN]-[MAX]  messages with a score in the range MIN to MAX *)
        ~N              new messages
        ~O              old messages
        ~p              message is addressed to you (consults $alternates)
@@ -1564,16 +1571,18 @@
        ~T              tagged messages
        ~t USER         messages addressed to USER
        ~U              unread messages
-       ~x PATTERN      messages which contain PATTERN in the `References' field
-       ~z [MIN]-[MAX]  messages with a size in the range MIN to MAX
+       ~x EXPR         messages which contain EXPR in the `References' field
+       ~z [MIN]-[MAX]  messages with a size in the range MIN to MAX *)
 
 
 
 
-  Where PATTERN, USER, ID, and SUBJECT are ``regular expressions''.
+  Where EXPR, USER, ID, and SUBJECT are ``regular expressions''.
+
+  *) The forms <[MAX], >[MIN], [MIN]- and -[MAX] are allowed, too.
 
 
-  44..11..33..  CCoommpplleexx SSeeaarrcchheess
+  44..22..11..  CCoommpplleexx PPaatttteerrnnss
 
 
   Logical AND is performed by specifying more than one criterion.  For
@@ -1581,8 +1590,7 @@
 
 
 
-
-  ~t mutt ~f elkins
+       ~t mutt ~f elkins
 
 
 
@@ -1613,7 +1621,7 @@
 
 
 
-  44..11..44..  SSeeaarrcchhiinngg bbyy DDaattee
+  44..22..22..  SSeeaarrcchhiinngg bbyy DDaattee
 
   Mutt supports two types of dates, _a_b_s_o_l_u_t_e and _r_e_l_a_t_i_v_e.
 
@@ -1639,14 +1647,13 @@
 
   +o  >_o_f_f_s_e_t (messages older than _o_f_f_s_e_t units)
 
+
   +o  <_o_f_f_s_e_t (messages newer than _o_f_f_s_e_t units)
 
   +o  =_o_f_f_s_e_t (messages exactly _o_f_f_s_e_t units old)
 
   _o_f_f_s_e_t is specified as a positive number with one of the following
   units:
-
-
 
   y       years
   m       months
@@ -1669,7 +1676,7 @@
   index.
 
 
-  44..22..  UUssiinngg TTaaggss
+  44..33..  UUssiinngg TTaaggss
 
 
   Sometimes it is desirable to perform an operation on a group of
@@ -1679,7 +1686,7 @@
   pattern, use the tag-pattern function, which is bound to ``control-T''
   by default.  Or you can select individual messages by hand using the
   ``tag-message'' function, which is bound to ``t'' by default.  See
-  ``searching'' for Mutt's searching syntax.
+  ``patterns'' for Mutt's pattern matching syntax.
 
   Once you have tagged the desired messages, you can use the ``tag-
   prefix'' operator, which is the ``;'' (semicolon) key by default.
@@ -1690,14 +1697,14 @@
   ``tag-prefix''.
 
 
-  44..33..  UUssiinngg HHooookkss
+  44..44..  UUssiinngg HHooookkss
 
   A _h_o_o_k is a concept borrowed from the EMACS editor which allows you to
   execute arbitrary commands before performing some operation.  For
   example, you may wish to tailor your configuration based upon which
   mailbox you are reading, or to whom you are sending mail.  In the Mutt
-  world, a _h_o_o_k consists of a ``regular expression'' along with a
-  configuration option/command.  See
+  world, a _h_o_o_k consists of a ``regular expression'' or ``pattern''
+  along with a configuration option/command.  See
 
   +o  ``folder-hook''
 
@@ -1714,13 +1721,13 @@
      for specific details on each type of _h_o_o_k available.
 
 
-  44..33..11..  MMeessssaaggee MMaattcchhiinngg iinn HHooookkss
+  44..44..11..  MMeessssaaggee MMaattcchhiinngg iinn HHooookkss
 
   Hooks that act upon messages (send-hook, save-hook, fcc-hook) are
   evaluated in a slightly different manner.  For the other types of
-  hooks, a ``regular expression''.  But in dealing with messages a finer
-  grain of control is needed for matching since for different purposes
-  you want to match different criteria.
+  hooks, a ``regular expression'' is sufficient.  But in dealing with
+  messages a finer grain of control is needed for matching since for
+  different purposes you want to match different criteria.
 
   Mutt allows the use of the ``search pattern'' language for matching
   messages in hook commands.  This works in exactly the same way as it
@@ -1744,12 +1751,12 @@
   the full searching language.  You can still specify a simple _r_e_g_u_l_a_r
   _e_x_p_r_e_s_s_i_o_n like the other hooks, in which case Mutt will translate
   your pattern into the full language, using the translation specified
-  by the ``$dfault_hook'' variable.  The pattern is translated at the
+  by the ``$default_hook'' variable.  The pattern is translated at the
   time the hook is declared, so the value of ``$dfault_hook'' that is in
   effect at that time will be used.
 
 
-  44..44..  EExxtteerrnnaall AAddddrreessss QQuueerriieess
+  44..55..  EExxtteerrnnaall AAddddrreessss QQuueerriieess
 
   Mutt supports connecting to external directory databases such as LDAP,
   ph/qi, bbdb, or NIS through a wrapper script which connects to mutt
@@ -1773,10 +1780,11 @@
   An example multiple response output:
 
 
-       Searching database ... 20 entries ... 3 matching:
-       me@cs.hmc.edu   Michael Elkins  mutt dude
-       blong@fiction.net       Brandon Long    mutt and more
-       roessler@guug.de        Thomas Roessler mutt pgp
+  Searching database ... 20 entries ... 3 matching:
+  me@cs.hmc.edu           Michael Elkins  mutt dude
+  blong@fiction.net       Brandon Long    mutt and more
+  roessler@guug.de        Thomas Roessler mutt pgp
+
 
 
 
@@ -1799,7 +1807,7 @@
   or more addresses to be added to the prompt.
 
 
-  44..55..  MMaaiillbbooxx FFoorrmmaattss
+  44..66..  MMaaiillbbooxx FFoorrmmaattss
 
   Mutt supports reading and writing of four different mailbox formats:
   mbox, MMDF, MH and Maildir.  The mailbox type is autodetected, so
@@ -1841,11 +1849,13 @@
   locking is needed.
 
 
-  44..66..  MMaaiillbbooxx SShhoorrttccuuttss
+  44..77..  MMaaiillbbooxx SShhoorrttccuuttss
 
   There are a number of built in shortcuts which refer to specific
   mailboxes.  These shortcuts can be used anywhere you are prompted for
   a file or mailbox path.
+
+
   +o  ! -- refers to your ``$spool'' (incoming) mailbox
 
   +o  > -- refers to your ``$mbox'' file
@@ -1862,7 +1872,7 @@
      the address of the alias
 
 
-  44..77..  HHaannddlliinngg MMaaiilliinngg LLiissttss
+  44..88..  HHaannddlliinngg MMaaiilliinngg LLiissttss
 
 
   Mutt has a few configuration options that make dealing with large
@@ -1908,7 +1918,7 @@
   delete uninteresting threads and quickly find topics of value.
 
 
-  44..88..  DDeelliivveerryy SSttaattuuss NNoottiiffiiccaattiioonn ((DDSSNN)) SSuuppppoorrtt
+  44..99..  DDeelliivveerryy SSttaattuuss NNoottiiffiiccaattiioonn ((DDSSNN)) SSuuppppoorrtt
 
   RFC1894 defines a set of MIME content types for relaying information
   about the status of electronic mail messages.  These can be thought of
@@ -1923,7 +1933,7 @@
   Refer to the man page on sendmail for more details on DSN.
 
 
-  44..99..  PPOOPP33 SSuuppppoorrtt ((OOPPTTIIOONNAALL))
+  44..1100..  PPOOPP33 SSuuppppoorrtt ((OOPPTTIIOONNAALL))
 
 
   If Mutt was compiled with POP3 support (by running the _c_o_n_f_i_g_u_r_e
@@ -1943,7 +1953,7 @@
   specialized program, such as fetchmail
 
 
-  44..1100..  IIMMAAPP SSuuppppoorrtt ((OOPPTTIIOONNAALL))
+  44..1111..  IIMMAAPP SSuuppppoorrtt ((OOPPTTIIOONNAALL))
 
 
   If Mutt was compiled with IMAP support (by running the _c_o_n_f_i_g_u_r_e
@@ -1960,6 +1970,23 @@
   NNoottee:: The IMAP support is in a very early state and quite unstable at
   the moment. If you need a more stable way to access your IMAP folder,
   consider using a specialized program, such as fetchmail.
+
+
+  44..1122..  SSttaarrtt aa WWWWWW BBrroowwsseerr oonn UURRLLss ((EEXXTTEERRNNAALL))
+
+  If a message contains URLs (_u_n_i_f_i_e_d _r_e_s_s_o_u_r_c_e _l_o_c_a_t_o_r = address in the
+  WWW space like _h_t_t_p_:_/_/_w_w_w_._m_u_t_t_._o_r_g_/), it is efficient to get a menu
+  with all the URLs and start a WWW browser on one of them.  This
+  functionality is provided by the external urlview program which can be
+  retrieved at ftp://ftp.cs.hmc.edu/pub/me/ and the configuration
+  commands:
+
+
+       macro index \cb |urlview\n
+       macro pager \cb |urlview\n
+
+
+
 
 
   55..  MMuutttt''ss MMIIMMEE SSuuppppoorrtt
@@ -2044,6 +2071,7 @@
       2 [applica/x-gunzip, base64, 422K]   ~/src/mutt-0.85.tar.gz <no description>
 
 
+
   The '-' denotes that Mutt will delete the file after sending the
   message.  It can be toggled with the toggle-unlink command (default:
   u).  The next field is the MIME content-type, and can be changed with
@@ -2107,6 +2135,7 @@
 
 
        ${HOME}/.mailcap:SHAREDIR/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap
+
 
 
 
@@ -2213,7 +2242,6 @@
   In addition to the required content-type and view command fields, you
   can add semi-colon ';' separated fields to set flags and other
   options.  Mutt recognizes the following optional fields:
-
      ccooppiioouussoouuttppuutt
         This flag tells Mutt that the command passes possibly large
         amounts of text on stdout.  This causes Mutt to invoke a pager
@@ -2275,6 +2303,7 @@
 
 
           text/html; lynx %s; nametemplate=%s.html
+
 
 
 
@@ -2344,6 +2373,7 @@
   viewing.
 
 
+
   55..33..22..33..  CCoommmmaanndd EExxppaannssiioonn
 
   The various commands defined in the mailcap files are passed to the
@@ -2373,9 +2403,9 @@
 
 
 
-     then Mutt will expand %{charset} to iso-8859-1.  The default
-     metamail mailcap file uses this feature to test the charset to
-     spawn an xterm using the right charset to view the message.
+     then Mutt will expand %{charset} to iso-8859-1.  The default meta-
+     mail mailcap file uses this feature to test the charset to spawn an
+     xterm using the right charset to view the message.
 
         This will be replaced by a %
 
@@ -2400,36 +2430,6 @@
 
 
   This mailcap file shows quite a number of examples:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4150,7 +4150,7 @@
 
   Specifies how Mutt should expand a simple search into a real search
   pattern.  A simple search is one that does not contain any of the ~
-  operators.  See ``searching'' for more information on search patterns.
+  operators.  See ``patterns'' for more information on search patterns.
 
   For example, if you simply type joe at a search or limit prompt, Mutt
   will automatically expand it to the value specified by this variable.
@@ -4409,7 +4409,7 @@
   Default: unset
 
   Affects the _~_b and _~_h search operations described in section
-  ``Searching'' above.  If set, the headers and attachments of messages
+  ``patterns'' above.  If set, the headers and attachments of messages
   to be searched are decoded before searching.  If unset, messages are
   searched as they appear in the folder.
 
