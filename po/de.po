@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.2.2\n"
-"POT-Creation-Date: 2000-07-28 20:51+0200\n"
+"POT-Creation-Date: 2002-01-01 20:57+0100\n"
 "PO-Revision-Date: 2000-07-03 14:44+02:00\n"
 "Last-Translator: Roland Rosenfeld <roland@spinnaker.de>\n"
 "Language-Team: German <mutt-po@mutt.org>\n"
@@ -69,6 +69,7 @@ msgstr "Namensschema kann nicht erfüllt werden, fortfahren?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:123
+#, c-format
 msgid "Mailcap compose entry requires %%s"
 msgstr "\"compose\"-Eintrag in der Mailcap-Datei erfordert %%s."
 
@@ -94,6 +95,7 @@ msgstr ""
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
+#, c-format
 msgid "Mailcap Edit entry requires %%s"
 msgstr "\"edit\"-Eintrag in Mailcap erfordert %%s."
 
@@ -357,15 +359,15 @@ msgstr "In Kommando einspeisen: "
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Umgekehrt "
-"(D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/(F)aden/(u)nsort/(G)röße/Be(w)ert?: "
+"Umgekehrt (D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/(F)aden/(u)nsort/(G)röße/Be(w)"
+"ert?: "
 
 #: commands.c:373
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Sortieren "
-"(D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/(F)aden/(u)nsort/(G)röße/Be(w)ert?: "
+"Sortieren (D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/(F)aden/(u)nsort/(G)röße/Be(w)"
+"ert?: "
 
 #: commands.c:374
 msgid "dfrsotuzc"
@@ -2336,8 +2338,8 @@ msgstr ""
 #: main.c:77
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2350,8 +2352,8 @@ msgid ""
 "    along with this program; if not, write to the program's developers.\n"
 msgstr ""
 "\n"
-"SHA1 Implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 Implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Die Weitergabe und Nutzung als Source sowie in binärer Form, mit\n"
 "    oder ohne Veränderungen, ist unter bestimmten Bedingungen erlaubt.\n"
@@ -2367,10 +2369,10 @@ msgstr ""
 
 #: main.c:103
 msgid ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2395,10 +2397,10 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2476,6 +2478,7 @@ msgid "Mailbox is empty."
 msgstr "Mailbox ist leer."
 
 #: mbox.c:129 mbox.c:287
+#, c-format
 msgid "Reading %s... %d (%d%%)"
 msgstr "Lese %s... %d (%d%%)"
 
@@ -2505,6 +2508,7 @@ msgstr ""
 "sync: Mailbox verändert, aber Nachrichten unverändert! (bitte Bug melden)"
 
 #: mbox.c:793
+#, c-format
 msgid "Writing messages... %d (%d%%)"
 msgstr "Schreibe Nachrichten... %d (%d%%)"
 
@@ -3640,7 +3644,8 @@ msgstr "Bezugsnachricht ist nicht verfügbar."
 #~ "--]\n"
 #~ "\n"
 #~ msgstr ""
-#~ "[-- Fehler: Diese Nachricht verstößt gegen die PGP/MIME-Spezifikation! --]\n"
+#~ "[-- Fehler: Diese Nachricht verstößt gegen die PGP/MIME-Spezifikation! "
+#~ "--]\n"
 
 #~ msgid "Saved output of child process to %s.\n"
 #~ msgstr "Ausgabe des Unterprozesses in %s abgespeichert.\n"

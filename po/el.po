@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt-1.1.11i\n"
-"POT-Creation-Date: 2000-07-28 20:51+0200\n"
+"POT-Creation-Date: 2002-01-01 20:57+0100\n"
 "PO-Revision-Date: 2000-04-01 12:00+0200\n"
 "Last-Translator: Φάνης Δοκιανάκης <madf@hellug.gr>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -87,6 +87,7 @@ msgstr "Αδυναμία ταιριάσματος του nametemplate, να συνεχίσω;"
 #
 #. For now, editing requires a file, no piping
 #: attach.c:123
+#, c-format
 msgid "Mailcap compose entry requires %%s"
 msgstr "Η καταχώρηση στοιχείων του mailcap χρειάζεται το %%s"
 
@@ -116,6 +117,7 @@ msgstr "Καμμία καταχώρηση mailcap για το %s, δημιουργία κενού αρχείου."
 #
 #. For now, editing requires a file, no piping
 #: attach.c:250
+#, c-format
 msgid "Mailcap Edit entry requires %%s"
 msgstr "Η καταχώρηση mailcap Edit χρειάζεται το %%s"
 
@@ -244,8 +246,8 @@ msgstr "Μάσκα αρχείου: "
 #: browser.c:996
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr ""
-"Ανάστροφη ταξινόμηση κατά (d)ημερομηνία, (a)αλφαβητικά, (z)μέγεθος ή "
-"(n)άκυρο;"
+"Ανάστροφη ταξινόμηση κατά (d)ημερομηνία, (a)αλφαβητικά, (z)μέγεθος ή (n)"
+"άκυρο;"
 
 #
 #: browser.c:997
@@ -2748,8 +2750,8 @@ msgid ""
 "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 "To report a bug, please use the muttbug utility.\n"
 msgstr ""
-"Για να επικοινωνήσετε με τους developers, στείλτε mail στο "
-"<mutt-dev@mutt.org>.\n"
+"Για να επικοινωνήσετε με τους developers, στείλτε mail στο <mutt-dev@mutt."
+"org>.\n"
 "Για να αναφέρετε ένα πρόβλημα χρησιμοποιήσετε το εργαλείο muttbug.\n"
 
 #
@@ -2761,8 +2763,8 @@ msgid ""
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
 "Copyright (C) 1996-2000 Michael R. Elkins και άλλοι.\n"
-"Το Mutt έρχεται ΑΠΟΚΛΕΙΣΤΙΚΑ ΧΩΡΙΣ ΕΓΓΥΗΣΗ; για λεπτομέρειες πατήστε `mutt "
-"-vv'.\n"
+"Το Mutt έρχεται ΑΠΟΚΛΕΙΣΤΙΚΑ ΧΩΡΙΣ ΕΓΓΥΗΣΗ; για λεπτομέρειες πατήστε `mutt -"
+"vv'.\n"
 "Το Mutt έιναι ελεύθερο λογισμικό, και ευχαρίστως μπορείτε να το "
 "επαναδιανέμετε\n"
 "υπο ορισμένους όρους; γράψτε `mutt -vv' για λεπτομέρειες.\n"
@@ -2826,8 +2828,8 @@ msgstr ""
 #: main.c:77
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2858,10 +2860,10 @@ msgstr ""
 #
 #: main.c:103
 msgid ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2903,8 +2905,8 @@ msgstr ""
 "  -F <αρχείο>\tκαθορίστε ένα εναλλακτικό αρχείο muttrc\n"
 "  -H <αρχείο>\tκαθορίστε ένα προσχέδιο από το οποίο θα διαβαστεί η "
 "επικεφαλίδα\n"
-"  -i <αρχείο>\tκαθορίστε ένα αρχείο που το Mutt θα συμπεριλαμβάνει κατά την "
-"\n"
+"  -i <αρχείο>\tκαθορίστε ένα αρχείο που το Mutt θα συμπεριλαμβάνει κατά "
+"την \n"
 "απάντηση\n"
 "  -m <τύπος>\tκαθορίστε ένα τύπο προκαθορισμένου γραμματοκιβωτίου\n"
 "  -n\t\tκάνετε το Mutt να μην διαβάσει το Muttrc του συστήματος\n"
@@ -2982,6 +2984,7 @@ msgstr "Το γραμματοκιβώτιο είναι άδειο."
 
 #
 #: mbox.c:129 mbox.c:287
+#, c-format
 msgid "Reading %s... %d (%d%%)"
 msgstr "Ανάγνωση %s... %d (%d%%)"
 
@@ -3018,6 +3021,7 @@ msgstr ""
 
 #
 #: mbox.c:793
+#, c-format
 msgid "Writing messages... %d (%d%%)"
 msgstr "Εγγραφή μηνυμάτων... %d (%d%%)"
 
@@ -4053,8 +4057,8 @@ msgstr "Δεν βρέθηκαν λίστες συζητήσεων!"
 #: recvcmd.c:776
 msgid "Can't decode all tagged attachments.  MIME-encapsulate the others?"
 msgstr ""
-"Αδυναμία αποκωδικοποίησης όλων των σημειωμένων προσαρτήσεων. "
-"MIME-encapsulate τις άλλες;"
+"Αδυναμία αποκωδικοποίησης όλων των σημειωμένων προσαρτήσεων. MIME-"
+"encapsulate τις άλλες;"
 
 #
 #: remailer.c:480

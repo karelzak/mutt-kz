@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.1.11i\n"
-"POT-Creation-Date: 2000-07-28 20:51+0200\n"
+"POT-Creation-Date: 2002-01-01 20:57+0100\n"
 "PO-Revision-Date: 2000-03-31\n"
 "Last-Translator: Pawe³ Dziekoñski <p.dziekonski@mml.ch.pwr.wroc.pl>\n"
 "Language-Team: POLISH <pl@li.org>\n"
@@ -75,6 +75,7 @@ msgstr "Nie pasuj±cy szablon nazwy, kontynuowaæ?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:123
+#, c-format
 msgid "Mailcap compose entry requires %%s"
 msgstr "Pole \"compose\" w pliku 'mailcap' wymaga %%s"
 
@@ -100,6 +101,7 @@ msgstr ""
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
+#, c-format
 msgid "Mailcap Edit entry requires %%s"
 msgstr "Pole \"Edit\" w pliku 'mailcap' wymaga %%s"
 
@@ -362,8 +364,8 @@ msgstr "Wy¶lij przez potok do polecenia: "
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Odwr-Sort "
-"(d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)a?: "
+"Odwr-Sort (d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)"
+"a?: "
 
 #: commands.c:373
 msgid ""
@@ -2282,11 +2284,11 @@ msgid ""
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
 "Copyright (C) 1996-2000 Michael R. Elkins i inni.\n"
-"Program nie jest objêty ¯ADN¡ gwarancj±; szczegó³y poznasz pisz±c 'mutt "
-"-vv'.\n"
+"Program nie jest objêty ¯ADN¡ gwarancj±; szczegó³y poznasz pisz±c 'mutt -"
+"vv'.\n"
 "Mutt jest darmowym oprogramowaniem, jeste¶ jak najbardziej uprawniony do\n"
-"jego redystrybucji pod pewnymi warunkami, szczegó³y poznasz pisz±c 'mutt "
-"-vv'.\n"
+"jego redystrybucji pod pewnymi warunkami, szczegó³y poznasz pisz±c 'mutt -"
+"vv'.\n"
 
 #: main.c:50
 msgid ""
@@ -2343,8 +2345,8 @@ msgstr ""
 #: main.c:77
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2357,8 +2359,8 @@ msgid ""
 "    along with this program; if not, write to the program's developers.\n"
 msgstr ""
 "\n"
-"Implementacja SHA1 - Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.om>\n"
+"Implementacja SHA1 - Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"om>\n"
 "\n"
 "    Redystrybucja i u¿ytkowanie zarówno w postaci ¼ród³owej jak i "
 "skompilowanej\n"
@@ -2374,10 +2376,10 @@ msgstr ""
 
 #: main.c:103
 msgid ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2402,11 +2404,11 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
-"u¿ycie: mutt [ -nRzZ ] [ -e <polec> ] [ -F <plik> ] [ -m <typ> ] [ -f <plik> "
-"]\n"
-"        mutt [ -nx ] [ -e <polec> ] [ -a <plik> ] [ -F <plik> ] [ -H <plik> "
-"] [ -i <plik> ] [ -s <tytu³> ] [ -b <adres> ] [ -c <adres> ] <adres> [ ... "
-"]\n"
+"u¿ycie: mutt [ -nRzZ ] [ -e <polec> ] [ -F <plik> ] [ -m <typ> ] [ -f "
+"<plik> ]\n"
+"        mutt [ -nx ] [ -e <polec> ] [ -a <plik> ] [ -F <plik> ] [ -H "
+"<plik> ] [ -i <plik> ] [ -s <tytu³> ] [ -b <adres> ] [ -c <adres> ] <adres> "
+"[ ... ]\n"
 "        mutt [ -n ] [ -e <polec> ] [ -F <plik> ] -p\n"
 "        mutt -v[v]\n"
 "\n"
@@ -2484,6 +2486,7 @@ msgid "Mailbox is empty."
 msgstr "Folder poczty jest pusty."
 
 #: mbox.c:129 mbox.c:287
+#, c-format
 msgid "Reading %s... %d (%d%%)"
 msgstr "Czytanie %s... %d (%d%%)"
 
@@ -2514,6 +2517,7 @@ msgstr ""
 "(zg³o¶ ten b³±d)"
 
 #: mbox.c:793
+#, c-format
 msgid "Writing messages... %d (%d%%)"
 msgstr "Zapisywanie listów... %d (%d%%)"
 

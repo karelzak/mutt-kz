@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.2.2\n"
-"POT-Creation-Date: 2000-07-28 20:51+0200\n"
+"POT-Creation-Date: 2002-01-01 20:57+0100\n"
 "PO-Revision-Date: 2000-07-03 18:55+0200\n"
 "Last-Translator: Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre "
 "<vincent@vinc17.org>\n"
@@ -74,6 +74,7 @@ msgstr "Ne correspond pas au nametemplate, continuer ?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:123
+#, c-format
 msgid "Mailcap compose entry requires %%s"
 msgstr "L'entrée compose du fichier mailcap nécessite %%s"
 
@@ -99,6 +100,7 @@ msgstr "Pas d'entrée compose pour %s dans mailcap, création d'un fichier vide."
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
+#, c-format
 msgid "Mailcap Edit entry requires %%s"
 msgstr "L'entrée Edit du fichier mailcap nécessite %%s"
 
@@ -375,8 +377,8 @@ msgstr "Passer à la commande : "
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Tri inv (d)ate/(a)uteur/(r)eçu/(o)bj/de(s)t/d(i)sc/(n)on/(t)aille/s(c)ore ? "
-": "
+"Tri inv (d)ate/(a)uteur/(r)eçu/(o)bj/de(s)t/d(i)sc/(n)on/(t)aille/s(c)"
+"ore ? : "
 
 #: commands.c:373
 msgid ""
@@ -501,8 +503,8 @@ msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
 msgstr ""
-"(c)hiffrer, (s)igner, (e)n tant que, les (d)eux, select algo (m)ic, (a)nnul "
-"? "
+"(c)hiffrer, (s)igner, (e)n tant que, les (d)eux, select algo (m)ic, (a)"
+"nnul ? "
 
 #: compose.c:138
 msgid "esabmf"
@@ -2364,8 +2366,8 @@ msgid ""
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
 "Copyright (C) 1996-2000 Michael R. Elkins et autres.\n"
-"Mutt ne fournit ABSOLUMENT AUCUNE GARANTIE ; pour les détails tapez `mutt "
-"-vv'.\n"
+"Mutt ne fournit ABSOLUMENT AUCUNE GARANTIE ; pour les détails tapez `mutt -"
+"vv'.\n"
 "Mutt est un logiciel libre, et vous êtes libre de le redistribuer\n"
 "sous certaines conditions ; tapez `mutt -vv' pour les détails.\n"
 
@@ -2422,8 +2424,8 @@ msgstr ""
 #: main.c:77
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2436,8 +2438,8 @@ msgid ""
 "    along with this program; if not, write to the program's developers.\n"
 msgstr ""
 "\n"
-"Implémentation SHA1 Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"Implémentation SHA1 Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution et utilisation sous formes source et binaire, avec ou\n"
 "    sans modification, sont autorisées sous certaines conditions.\n"
@@ -2454,10 +2456,10 @@ msgstr ""
 
 #: main.c:103
 msgid ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2482,8 +2484,8 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
-"usage : mutt [ -nRzZ ] [ -e <cmd> ] [ -F <fich> ] [ -m <type> ] [ -f <fich> "
-"]\n"
+"usage : mutt [ -nRzZ ] [ -e <cmd> ] [ -F <fich> ] [ -m <type> ] [ -f "
+"<fich> ]\n"
 "        mutt [ -nx ] [ -e <cmd> ] [ -a <fich> ] [ -F <fich> ] [ -H <fich> ] "
 "[ -i <fich> ] [ -s <obj> ] [ -b <adr> ] [ -c <adr> ] <adr> [ ... ]\n"
 "        mutt [ -n ] [ -e <cmd> ] [ -F <fich> ] -p\n"
@@ -2569,6 +2571,7 @@ msgid "Mailbox is empty."
 msgstr "La boîte aux lettres est vide."
 
 #: mbox.c:129 mbox.c:287
+#, c-format
 msgid "Reading %s... %d (%d%%)"
 msgstr "Lecture de %s... %d (%d%%)"
 
@@ -2597,6 +2600,7 @@ msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr "sync : BAL modifiée, mais pas de message modifié ! (signalez ce bug)"
 
 #: mbox.c:793
+#, c-format
 msgid "Writing messages... %d (%d%%)"
 msgstr "Écriture des messages... %d (%d%%)"
 
@@ -3459,8 +3463,8 @@ msgstr "Faire suivre en MIME encapsulé ?"
 #: recvcmd.c:412
 msgid "Can't decode all tagged attachments.  MIME-forward the others?"
 msgstr ""
-"Impossible de décoder tous les attachements marqués. Faire suivre les autres "
-"?"
+"Impossible de décoder tous les attachements marqués. Faire suivre les "
+"autres ?"
 
 # , c-format
 #: recvcmd.c:545 recvcmd.c:797

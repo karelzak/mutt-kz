@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.2\n"
-"POT-Creation-Date: 2000-07-28 20:51+0200\n"
+"POT-Creation-Date: 2002-01-01 20:57+0100\n"
 "PO-Revision-Date: 1999-12-20 20:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -71,6 +71,7 @@ msgstr "無法配合二個同樣名稱，繼續？"
 
 #. For now, editing requires a file, no piping
 #: attach.c:123
+#, c-format
 msgid "Mailcap compose entry requires %%s"
 msgstr "Mailcap 編輯項目需要 %%s"
 
@@ -95,6 +96,7 @@ msgstr "沒有 %s 的 mailcap 組成登錄，正在建立空的檔案。"
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
+#, c-format
 msgid "Mailcap Edit entry requires %%s"
 msgstr "編輯 Mailcap 項目時需要 %%s"
 
@@ -148,7 +150,7 @@ msgstr "信箱 [%d]"
 #: browser.c:488
 #, c-format
 msgid "Subscribed [%s], File mask: %s"
-msgstr "已訂閱\ [%s], 檔案遮罩: %s"
+msgstr "已訂閱 [%s], 檔案遮罩: %s"
 
 #: browser.c:492
 #, c-format
@@ -313,7 +315,7 @@ msgstr "無法建立暫存檔！"
 
 #: commands.c:153
 msgid "PGP signature successfully verified."
-msgstr "PGP 簽名驗證成功\。"
+msgstr "PGP 簽名驗證成功。"
 
 #: commands.c:176
 msgid "Command: "
@@ -357,15 +359,15 @@ msgstr "用管道輸出至命令："
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"反方向 "
-"d)日期,f)發信人,r)收信時間,s)標題,o)收信人,t)序列,u)不排,z)大小,c)分數:"
+"反方向 d)日期,f)發信人,r)收信時間,s)標題,o)收信人,t)序列,u)不排,z)大小,c)分"
+"數:"
 
 #: commands.c:373
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"排序 "
-"d)日期,f)發信人,r)收信時間,s)標題,o)收信人,t)序列,u)不排序,z)大小,c)分數:"
+"排序 d)日期,f)發信人,r)收信時間,s)標題,o)收信人,t)序列,u)不排序,z)大小,c)分"
+"數:"
 
 #: commands.c:374
 msgid "dfrsotuzc"
@@ -482,8 +484,8 @@ msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
 msgstr ""
-"(e)加密, (s)簽名, (a)用別的身份簽, (b)兩者皆要, 選擇 (m)ic 演算法 或 "
-"(f)放棄？"
+"(e)加密, (s)簽名, (a)用別的身份簽, (b)兩者皆要, 選擇 (m)ic 演算法 或 (f)放"
+"棄？"
 
 #: compose.c:138
 msgid "esabmf"
@@ -583,7 +585,7 @@ msgstr "這個附件會被轉換。"
 
 #: compose.c:806
 msgid "Recoding successful."
-msgstr "重新編碼成功\。"
+msgstr "重新編碼成功。"
 
 #: compose.c:880
 msgid "Invalid encoding."
@@ -682,7 +684,7 @@ msgstr "信箱是唯讀的。"
 
 #: curs_main.c:58 pager.c:62 recvattach.c:764
 msgid "Function not permitted in attach-message mode."
-msgstr "功\能在 attach-message 模式下不被支援。"
+msgstr "功能在 attach-message 模式下不被支援。"
 
 #: curs_main.c:225
 msgid "Cannot toggle write on a readonly mailbox!"
@@ -845,7 +847,7 @@ msgstr "序列中有尚未讀取的信件。"
 
 #: curs_main.c:1460 flags.c:228 thread.c:651 thread.c:702
 msgid "Threading is not enabled."
-msgstr "序列功\能尚未啟動。"
+msgstr "序列功能尚未啟動。"
 
 #.
 #. * SLcurses_waddnstr() can't take a "const char *", so this is only
@@ -889,7 +891,7 @@ msgstr ""
 "~w 檔案\t\t將訊息寫入檔案\n"
 "~x\t\t停止修改並離開編輯器\n"
 "~?\t\t這訊息\n"
-".\t\t如果是一行裏的唯一字符，則代表結束輸入\n"
+".\t\t[on a line by itself ends input]\n"
 
 #: edit.c:178
 #, c-format
@@ -898,7 +900,7 @@ msgstr "%d：無效的信件號碼。\n"
 
 #: edit.c:309
 msgid "(End message with a . on a line by itself)\n"
-msgstr "（在一行裏輸入一個 . 符號來結束信件）\n"
+msgstr "[end message with a . on a line by itself]\n"
 
 #: edit.c:367
 msgid "No mailbox.\n"
@@ -1091,7 +1093,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"標準功\能定義：\n"
+"標準功能定義：\n"
 "\n"
 
 #: help.c:331
@@ -1101,7 +1103,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"未被定義的功\能：\n"
+"未被定義的功能：\n"
 "\n"
 
 #: help.c:339
@@ -1236,12 +1238,12 @@ msgstr "正在刪除伺服器上的信件…"
 #: imap/imap.c:1425
 #, c-format
 msgid "Subscribing to %s..."
-msgstr "訂閱\ %s…"
+msgstr "訂閱 %s…"
 
 #: imap/imap.c:1427
 #, c-format
 msgid "Unsubscribing to %s..."
-msgstr "取消訂閱\ %s…"
+msgstr "取消訂閱 %s…"
 
 #: imap/imap_ssl.c:86
 msgid "Filling entropy pool"
@@ -1505,12 +1507,12 @@ msgstr "檢測到巨集中有迴圈。"
 
 #: keymap.c:636 keymap.c:644
 msgid "Key is not bound."
-msgstr "這個鍵還未被定義功\能。"
+msgstr "這個鍵還未被定義功能。"
 
 #: keymap.c:648
 #, c-format
 msgid "Key is not bound.  Press '%s' for help."
-msgstr "這個鍵還未被定義功\能。 按 '%s' 以取得說明。"
+msgstr "這個鍵還未被定義功能。 按 '%s' 以取得說明。"
 
 #: keymap.c:659
 msgid "push: too many arguments"
@@ -1586,17 +1588,17 @@ msgstr "顯示所選擇的檔案"
 #: keymap_alldefs.h:13
 #, fuzzy
 msgid "subscribe to current mailbox (IMAP only)"
-msgstr "訂閱\這個郵箱 (只適用於 IMAP)"
+msgstr "訂閱這個郵箱 (只適用於 IMAP)"
 
 #: keymap_alldefs.h:14
 #, fuzzy
 msgid "unsubscribe to current mailbox (IMAP only)"
-msgstr "取消訂閱\這個郵箱 (只適用於 IMAP)"
+msgstr "取消訂閱這個郵箱 (只適用於 IMAP)"
 
 #: keymap_alldefs.h:15
 #, fuzzy
 msgid "toggle view all/subscribed mailboxes (IMAP only)"
-msgstr "切換顯示 全部/已訂閱\ 的郵箱 (只適用於 IMAP)"
+msgstr "切換顯示 全部/已訂閱 的郵箱 (只適用於 IMAP)"
 
 #: keymap_alldefs.h:16
 msgid "change directories"
@@ -2143,7 +2145,7 @@ msgstr "標記現在的記錄"
 
 #: keymap_alldefs.h:152
 msgid "apply next function to tagged messages"
-msgstr "應用下一個功\能到已標記的訊息"
+msgstr "應用下一個功能到已標記的訊息"
 
 #: keymap_alldefs.h:153
 msgid "tag the current subthread"
@@ -2231,7 +2233,7 @@ msgstr "檢驗 PGP 公共鑰匙"
 
 #: keymap_alldefs.h:174
 msgid "view the key's user id"
-msgstr "檢閱\這把鑰匙的使用者 id"
+msgstr "檢閱這把鑰匙的使用者 id"
 
 #: keymap_alldefs.h:175
 msgid "make decrypted copy and delete"
@@ -2332,7 +2334,7 @@ msgstr ""
 "Copyright (C) 1999-2000 Brendan Cully <brendan@kublai.com>\n"
 "Copyright (C) 1999-2000 Tommi Komulainen <Tommi.Komulainen@iki.fi>\n"
 "\n"
-"還有許\多在這裡沒有提及到的人仕，他們曾提供程式碼，修正，和意見。\n"
+"還有許多在這裡沒有提及到的人仕，他們曾提供程式碼，修正，和意見。\n"
 "\n"
 "    這個應用程式是自由軟體；您可以在自由軟體基金會的 GNU 一般公共\n"
 "    授權書（版本 2，或i隨你喜好使用以後的版本）下重複散布並/或修\n"
@@ -2350,8 +2352,8 @@ msgstr ""
 #, fuzzy
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2367,7 +2369,7 @@ msgstr ""
 "SHA1 implementation Copyrigt (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
 "\n"
 "     重複散布並使用原始程式碼和編譯過的程式碼，不管有否經過修改，\n"
-"     在某些條件下是許\可的。\n"
+"     在某些條件下是許可的。\n"
 "\n"
 "     SHA1 程序不附帶任何擔保，不論係明示還是暗示，包括但不限於銷售性\n"
 "     和適於特定目的之暗示擔保。\n"
@@ -2377,10 +2379,10 @@ msgstr ""
 
 #: main.c:103
 msgid ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2405,8 +2407,8 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
-"用法: mutt [ -nRzZ ] [ -e <命令> ] [ -F <檔案> ] [ -m <類型> ] [ -f <檔案> "
-"]\n"
+"用法: mutt [ -nRzZ ] [ -e <命令> ] [ -F <檔案> ] [ -m <類型> ] [ -f <檔案"
+"> ]\n"
 "        mutt [ -nx ] [ -e <命令> ] [ -a <檔案> ] [ -F <檔案> ] [ -H <檔案> ] "
 "[ -i <檔案> ] [ -s <主題> ] [ -b <地址> ] [ -c <地址> ] <地址> [ ... ]\n"
 "        mutt [ -n ] [ -e <命令> ] [ -F <檔案> ] -p\n"
@@ -2417,7 +2419,7 @@ msgstr ""
 "  -b <地址>     指定一個 秘密複製 (BCC) 的地址\n"
 "  -c <地址>     指定一個 複製 (CC) 的地址\n"
 "  -e <命令>     指定一個初始化後要被執行的命令\n"
-"  -f <檔案>     指定要閱\讀那一個郵筒\n"
+"  -f <檔案>     指定要閱讀那一個郵筒\n"
 "  -F <檔案>     指定另一個 muttrc 檔案\n"
 "  -H <檔案>     指定一個範本檔案以讀取標題來源\n"
 "  -i <檔案>     指定一個包括在回覆中的檔案\n"
@@ -2487,6 +2489,7 @@ msgid "Mailbox is empty."
 msgstr "信箱內空無一物。"
 
 #: mbox.c:129 mbox.c:287
+#, c-format
 msgid "Reading %s... %d (%d%%)"
 msgstr "讀取 %s 中… %d (%d%%)"
 
@@ -2515,6 +2518,7 @@ msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr "同步：信箱已被修改，但沒有被修改過的信件！（請回報這個錯誤）"
 
 #: mbox.c:793
+#, c-format
 msgid "Writing messages... %d (%d%%)"
 msgstr "寫入信件中… %d (%d%%)"
 
@@ -2598,15 +2602,15 @@ msgstr "沒有已標記的記錄。"
 
 #: menu.c:904
 msgid "Search is not implemented for this menu."
-msgstr "這個選單中沒有搜尋功\能。"
+msgstr "這個選單中沒有搜尋功能。"
 
 #: menu.c:909
 msgid "Jumping is not implemented for dialogs."
-msgstr "對話模式中不支援跳躍功\能。"
+msgstr "對話模式中不支援跳躍功能。"
 
 #: menu.c:944
 msgid "Tagging is not supported."
-msgstr "不支援標記功\能。"
+msgstr "不支援標記功能。"
 
 #: mh.c:189
 #, c-format
@@ -2623,7 +2627,7 @@ msgstr "在目錄底下的檔案："
 
 #: muttlib.c:745
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "檔案已經存在, (o)覆蓋\, (a)附加, 或是 (c)取消 ?"
+msgstr "檔案已經存在, (o)覆蓋, (a)附加, 或是 (c)取消 ?"
 
 #: muttlib.c:745
 msgid "oac"
@@ -2665,7 +2669,7 @@ msgstr "嘗試 flock 時超過時間！"
 #: mx.c:225
 #, c-format
 msgid "Waiting for flock attempt... %d"
-msgstr "正在等待 flock 執行成功\… %d"
+msgstr "正在等待 flock 執行成功… %d"
 
 #: mx.c:537
 #, c-format
@@ -2728,7 +2732,7 @@ msgstr " 請按下 '%s' 來切換寫入模式"
 
 #: mx.c:1029
 msgid "Use 'toggle-write' to re-enable write!"
-msgstr "請使用 'toggle-write' 來重新啟動寫入功\能!"
+msgstr "請使用 'toggle-write' 來重新啟動寫入功能!"
 
 #: mx.c:1031
 #, c-format
@@ -2747,7 +2751,7 @@ msgstr "編輯信件內容"
 
 #: pager.c:60
 msgid "Not available in this menu."
-msgstr "在這個菜單中沒有這個功\能。"
+msgstr "在這個菜單中沒有這個功能。"
 
 #: pager.c:1386
 msgid "PrevPg"
@@ -3199,12 +3203,12 @@ msgstr "寫入信箱時發生錯誤！"
 #: pop.c:308
 #, fuzzy, c-format
 msgid "%s [%d of %d messages read]"
-msgstr "%s [已閱\讀 %2d 封信件中的 %1d 封]"
+msgstr "%s [已閱讀 %2d 封信件中的 %1d 封]"
 
 #: pop.c:310
 #, fuzzy, c-format
 msgid "%s [%d message read]"
-msgstr "%s [已閱\讀 %d 封信件]"
+msgstr "%s [已閱讀 %d 封信件]"
 
 #: postpone.c:159
 msgid "Postponed Messages"
@@ -3271,7 +3275,7 @@ msgstr "附件已被儲存。"
 #: recvattach.c:499
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
-msgstr "警告! 您正在覆蓋\ %s, 是否要繼續?"
+msgstr "警告! 您正在覆蓋 %s, 是否要繼續?"
 
 #: recvattach.c:517
 msgid "Attachment filtered."
@@ -3345,7 +3349,7 @@ msgstr "無法建立 %s: %s."
 #: recvcmd.c:676
 #, fuzzy
 msgid "Can't find any tagged messages."
-msgstr "應用下一個功\能到已標記的訊息"
+msgstr "應用下一個功能到已標記的訊息"
 
 #: recvcmd.c:697 send.c:647
 msgid "No mailing lists found!"
@@ -3600,7 +3604,7 @@ msgstr "（沒有信箱）"
 #: thread.c:712
 #, fuzzy
 msgid "Parent message is not visible in limited view"
-msgstr "在限制閱\覽模式下無法顯示主信件。"
+msgstr "在限制閱覽模式下無法顯示主信件。"
 
 #: thread.c:717
 msgid "Parent message is not available."

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1.2\n"
-"POT-Creation-Date: 2000-07-28 20:51+0200\n"
+"POT-Creation-Date: 2002-01-01 20:57+0100\n"
 "PO-Revision-Date: 2000-03-09 07:40+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarag.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -71,6 +71,7 @@ msgstr "이름 보기판과 맞지 않음. 계속할까요?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:123
+#, c-format
 msgid "Mailcap compose entry requires %%s"
 msgstr "Mailcap 작성 항목은 %%s가 필요함"
 
@@ -95,6 +96,7 @@ msgstr "%s의 mailcap 작성 항목이 없음, 빈 파일을 생성함."
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
+#, c-format
 msgid "Mailcap Edit entry requires %%s"
 msgstr "Mailcap 편집 항목은 %%s가 필요함"
 
@@ -356,14 +358,12 @@ msgstr "명령어로 연결: "
 #: commands.c:372
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr ""
-"역순정렬 (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr "역순정렬 (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 
 #: commands.c:373
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr ""
-"정렬 (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr "정렬 (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 
 #: commands.c:374
 msgid "dfrsotuzc"
@@ -479,8 +479,7 @@ msgstr "MIC 알고리즘: "
 msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
-msgstr ""
-"암호화(e), 서명(s), 사용 서명(a), 둘 다(b), (m)ic 알고리즘, 또는 취소(f)? "
+msgstr "암호화(e), 서명(s), 사용 서명(a), 둘 다(b), (m)ic 알고리즘, 또는 취소(f)? "
 
 #: compose.c:138
 msgid "esabmf"
@@ -2334,8 +2333,8 @@ msgstr ""
 #: main.c:77
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2350,10 +2349,10 @@ msgstr ""
 
 #: main.c:103
 msgid ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2378,10 +2377,8 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
-"사용법 mutt [ -nRzZ ] [ -e <명령어> ] [ -F <파일> ] [ -m <종류> ] [ -f "
-"<파일> ]\n"
-"       mutt [ -nx ] [ -e <명령어> ] [ -a <파일> ] [ -F <파일> ] [ -H <파일> "
-"] [-i <파일> ] [ -s <제목> ] [ -b <주소> ] [ -c <주소> ] <주소>  [ ... ]\n"
+"사용법 mutt [ -nRzZ ] [ -e <명령어> ] [ -F <파일> ] [ -m <종류> ] [ -f <파일> ]\n"
+"       mutt [ -nx ] [ -e <명령어> ] [ -a <파일> ] [ -F <파일> ] [ -H <파일> ] [-i <파일> ] [ -s <제목> ] [ -b <주소> ] [ -c <주소> ] <주소>  [ ... ]\n"
 "       mutt [ -n ] [ -e <명령어> ] [ -F <파일> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2459,6 +2456,7 @@ msgid "Mailbox is empty."
 msgstr "편지함이 비었음"
 
 #: mbox.c:129 mbox.c:287
+#, c-format
 msgid "Reading %s... %d (%d%%)"
 msgstr "%s 읽는 중... %d (%d%%)"
 
@@ -2487,6 +2485,7 @@ msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr "sync: mbox가 수정되었으나, 수정된 메세지는 없음! (버그 보고 바람)"
 
 #: mbox.c:793
+#, c-format
 msgid "Writing messages... %d (%d%%)"
 msgstr "메세지 쓰는 중... %d (%d%%)"
 

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.11\n"
-"POT-Creation-Date: 2000-07-28 20:51+0200\n"
+"POT-Creation-Date: 2002-01-01 20:57+0100\n"
 "PO-Revision-Date: 2000-04-07 08:46+01:00\n"
 "Last-Translator: Jörgen Tegnér <teg@post.netlink.se>\n"
 "Language-Team: \n"
@@ -68,6 +68,7 @@ msgstr "Kan inte para ihop namnmall, fortsätt?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:123
+#, c-format
 msgid "Mailcap compose entry requires %%s"
 msgstr "'compose' i 'mailcap' kräver %%s"
 
@@ -92,6 +93,7 @@ msgstr "Saknar 'compose' i mailcap för %s, skapar en tom fil."
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
+#, c-format
 msgid "Mailcap Edit entry requires %%s"
 msgstr "'edit' i 'mailcap' kräver %%s"
 
@@ -477,8 +479,8 @@ msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
 msgstr ""
-"(k)ryptera, (s)ignera, signera s(o)m, (b)åda, välj algoritmen (m)ic, "
-"sk(i)ppa det"
+"(k)ryptera, (s)ignera, signera s(o)m, (b)åda, välj algoritmen (m)ic, sk(i)"
+"ppa det"
 
 #: compose.c:138
 msgid "esabmf"
@@ -2260,8 +2262,8 @@ msgid ""
 "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 "To report a bug, please use the muttbug utility.\n"
 msgstr ""
-"För att kontakta utvecklarna, var vänlig skicka ett brev till "
-"<mutt-dev@mutt.org>.\n"
+"För att kontakta utvecklarna, var vänlig skicka ett brev till <mutt-dev@mutt."
+"org>.\n"
 "För att rapportera ett fel, var vänlig använd programmet 'muttbug'.\n"
 
 #: main.c:44
@@ -2332,8 +2334,8 @@ msgstr ""
 #: main.c:77
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2346,8 +2348,8 @@ msgid ""
 "    along with this program; if not, write to the program's developers.\n"
 msgstr ""
 "\n"
-"SHA1 implementering, upphovsrätt (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementering, upphovsrätt (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Följande text är en informell översättning som enbart tillhandahålls i\n"
 "    informativt syfte. För alla juridiska tolkningar gäller den engelska\n"
@@ -2365,10 +2367,10 @@ msgstr ""
 
 #: main.c:103
 msgid ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2479,6 +2481,7 @@ msgid "Mailbox is empty."
 msgstr "Brevlådan är tom."
 
 #: mbox.c:129 mbox.c:287
+#, c-format
 msgid "Reading %s... %d (%d%%)"
 msgstr "Läser %s... %d (%d%%)"
 
@@ -2509,6 +2512,7 @@ msgstr ""
 "rapportera det här felet]."
 
 #: mbox.c:793
+#, c-format
 msgid "Writing messages... %d (%d%%)"
 msgstr "Skriver meddelanden ... %d (%d%%)"
 

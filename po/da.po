@@ -1,13 +1,13 @@
 # This Danish translation of Mutt was made by people on the 
-# sslug-locale mailing list in the month of March 2000. The 
-# mailing list is archived at http://www.sslug.dk/emailarkiv/locale/
+# sslug-locale mailing-list in the month of March 2000. The 
+# maling-list is archived at http://www.sslug.dk/emailarkiv/locale/
 # 
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mutt-1.2.5i \n"
-"POT-Creation-Date: 2000-07-28 20:51+0200\n"
-"PO-Revision-Date: 2000-08-31 21:15+02:00\n"
+"Project-Id-Version: Mutt-1.2.4i \n"
+"POT-Creation-Date: 2002-01-01 20:57+0100\n"
+"PO-Revision-Date: 2000-07-09 10:46+02:00\n"
 "Last-Translator: Byrial Jensen <Byrial@image.dk>, Morten Bo Johansen "
 "<mojo@image.dk>\n"
 "Language-Team: Danish <da@li.org>\n"
@@ -73,6 +73,7 @@ msgstr "Kan ikke matche navneskabelon, fortsæt?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:123
+#, c-format
 msgid "Mailcap compose entry requires %%s"
 msgstr "Brug af \"compose\" i mailcap-fil kræver %%s."
 
@@ -97,6 +98,7 @@ msgstr "Ingen \"compose\"-regel for %s i mailcap-fil, opretter en tom fil."
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
+#, c-format
 msgid "Mailcap Edit entry requires %%s"
 msgstr "Brug af \"edit\" i mailcap-fil kræver %%s."
 
@@ -359,8 +361,8 @@ msgstr "Overfør til kommando: "
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Omvendt-sort "
-"(d)ato/(f)ra/(a)nk./(e)mne/t(i)l/(t)råd/(u)sort/(s)tr./s(c)ore?: "
+"Omvendt-sort (d)ato/(f)ra/(a)nk./(e)mne/t(i)l/(t)råd/(u)sort/(s)tr./s(c)"
+"ore?: "
 
 #: commands.c:373
 msgid ""
@@ -575,11 +577,11 @@ msgstr "Indkodning til UTF-8 er ikke muligt endnu"
 
 #: compose.c:775
 msgid "The current attachment won't be converted."
-msgstr "Den aktuelle brevdel vil ikke blive konverteret"
+msgstr "Den aktuelle del vil ikke blive konverteret"
 
 #: compose.c:777
 msgid "The current attachment will be converted."
-msgstr "Den aktuelle brevdel vil blive konverteret"
+msgstr "Den aktuelle del vil blive konverteret"
 
 #: compose.c:806
 msgid "Recoding successful."
@@ -1613,11 +1615,11 @@ msgstr "ret i Cc-listen"
 
 #: keymap_alldefs.h:23
 msgid "edit attachment description"
-msgstr "ret brevdelens beskrivelse"
+msgstr "ret delens beskrivelse"
 
 #: keymap_alldefs.h:24
 msgid "edit attachment transfer-encoding"
-msgstr "ret brevdelens indkodning"
+msgstr "ret delens indkodning"
 
 #: keymap_alldefs.h:25
 msgid "enter a file to save a copy of this message in"
@@ -1693,7 +1695,7 @@ msgstr "send brevet"
 
 #: keymap_alldefs.h:43
 msgid "toggle disposition between inline/attachment"
-msgstr "skift status mellem integreret og bilagt"
+msgstr "skift status mellem intregeret og bilagt"
 
 #: keymap_alldefs.h:44
 msgid "toggle whether to delete file after sending it"
@@ -2322,15 +2324,15 @@ msgstr ""
 "    underforstået garanti om SALGBARHED eller EGNETHED TIL NOGET BESTEMT\n"
 "    FORMÅL. Se GNU General Public License for yderligere detaljer\n"
 "\n"
-"    Du bør have modtaget en kopi af GNU General Public License sammen med \n"
-"    dette program; hvis ikke, så skriv til The Free Software Foundation, Inc., \n"
-"    59 Temple Place - Suite 330, Boston, MA  02111, USA.\n"
+"    Du skulle have modtaget en kopi af GNU General Public License\n"
+"    sammen med dette program; skriv til Free Software Foundation, Inc.,\n"
+"    675 Mass Ave, Cambridge, MA 02139, USA, hvis det ikke er tilfældet.\n"
 
 #: main.c:77
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2359,10 +2361,10 @@ msgstr ""
 
 #: main.c:103
 msgid ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2467,6 +2469,7 @@ msgid "Mailbox is empty."
 msgstr "Brevbakken er tom."
 
 #: mbox.c:129 mbox.c:287
+#, c-format
 msgid "Reading %s... %d (%d%%)"
 msgstr "Læser %s ... %d (%d%%)"
 
@@ -2495,6 +2498,7 @@ msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr "sync: mbox ændret, men ingen ændrede breve! (rapportér denne bug)"
 
 #: mbox.c:793
+#, c-format
 msgid "Writing messages... %d (%d%%)"
 msgstr "Skriver breve ... %d (%d%%)"
 
@@ -2831,7 +2835,7 @@ msgstr "fejl: ukendt op %d (rapportér denne fejl)."
 
 #: pattern.c:959 pattern.c:1088
 msgid "Compiling search pattern..."
-msgstr "Klargør søgemønster..."
+msgstr "Klargører søgemønster..."
 
 #: pattern.c:973
 msgid "Executing command on matching messages..."

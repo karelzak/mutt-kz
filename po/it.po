@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.1.9\n"
-"POT-Creation-Date: 2000-07-28 20:51+0200\n"
-"PO-Revision-Date: 2000-08-01 18:12+02:00\n"
+"POT-Creation-Date: 2002-01-01 20:57+0100\n"
+"PO-Revision-Date: 2000-04-24 20:39+02:00\n"
 "Last-Translator: Marco d'Itri <md@linux.it>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -74,6 +74,7 @@ msgstr "Il nametemplate non corrisponde, continuo?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:123
+#, c-format
 msgid "Mailcap compose entry requires %%s"
 msgstr "La voce compose di mailcap richiede %%s"
 
@@ -98,6 +99,7 @@ msgstr "Manca la voce compose di mailcap per %s, creo un file vuoto."
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
+#, c-format
 msgid "Mailcap Edit entry requires %%s"
 msgstr "La voce edit di mailcap richiede %%s"
 
@@ -369,8 +371,8 @@ msgstr ""
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Ordina per "
-"(d)ata/(f)rom/(r)icev/(s)ogg/t(o)/(t)hread/n(u)lla/si(z)e/s(c)ore?: "
+"Ordina per (d)ata/(f)rom/(r)icev/(s)ogg/t(o)/(t)hread/n(u)lla/si(z)e/s(c)"
+"ore?: "
 
 #: commands.c:374
 msgid "dfrsotuzc"
@@ -1274,16 +1276,18 @@ msgid "[unable to calculate]"
 msgstr "[impossibile da calcolare]"
 
 #: imap/imap_ssl.c:292
+#, fuzzy
 msgid "[invalid date]"
-msgstr "[data non valida]"
+msgstr "%s: valore non valido"
 
 #: imap/imap_ssl.c:367
 msgid "Server certificate is not yet valid"
-msgstr "Il certificato del server non è ancora valido"
+msgstr ""
 
 #: imap/imap_ssl.c:374
+#, fuzzy
 msgid "Server certificate has expired"
-msgstr "Il certificato del server è scaduto"
+msgstr "Questo certificato è stato emesso da:"
 
 #: imap/imap_ssl.c:447
 msgid "This certificate belongs to:"
@@ -1294,18 +1298,19 @@ msgid "This certificate was issued by:"
 msgstr "Questo certificato è stato emesso da:"
 
 #: imap/imap_ssl.c:467
+#, fuzzy
 msgid "This certificate is valid"
-msgstr "Questo certificato è valido"
+msgstr "Questo certificato è stato emesso da:"
 
 #: imap/imap_ssl.c:468
 #, c-format
 msgid "   from %s"
-msgstr "   da %s"
+msgstr ""
 
 #: imap/imap_ssl.c:470
 #, c-format
 msgid "     to %s"
-msgstr "     a %s"
+msgstr ""
 
 #: imap/imap_ssl.c:476
 #, c-format
@@ -2312,8 +2317,8 @@ msgstr ""
 #: main.c:77
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
-"<eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young <eay@cryptsoft."
+"com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2328,10 +2333,10 @@ msgstr ""
 
 #: main.c:103
 msgid ""
-"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
-"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f "
+"<file> ]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
+"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
 "       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2436,6 +2441,7 @@ msgid "Mailbox is empty."
 msgstr "La mailbox è vuota."
 
 #: mbox.c:129 mbox.c:287
+#, c-format
 msgid "Reading %s... %d (%d%%)"
 msgstr "Leggo %s... %d (%d%%)"
 
@@ -2464,6 +2470,7 @@ msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr "sync: mbox modified, but no modified messages! (segnala questo bug)"
 
 #: mbox.c:793
+#, c-format
 msgid "Writing messages... %d (%d%%)"
 msgstr "Scrivo i messaggi... %d (%d%%)"
 
