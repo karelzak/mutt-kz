@@ -86,6 +86,17 @@ time_t mutt_local_tz (void);
 time_t mutt_mktime (struct tm *, int);
 time_t is_from (const char *, char *, size_t);
 
+const char *mutt_attach_fmt (
+	char *dest,
+	size_t destlen,
+	char op,
+	const char *src,
+	const char *prefix,
+	const char *ifstring,
+	const char *elsestring,
+	unsigned long data,
+	format_flag flags);
+
 char *mutt_expand_path (char *, size_t);
 char *mutt_find_hook (int, const char *);
 char *mutt_generate_boundary (void);

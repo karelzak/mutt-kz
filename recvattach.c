@@ -39,6 +39,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 #include <string.h>
 #include <errno.h>
 
@@ -59,6 +60,7 @@ void mutt_update_tree (ATTACHPTR **idx, short idxlen)
 
   for (x = 0; x < idxlen; x++)
   {
+    idx[x]->num = x;
     if (2 * (idx[x]->level + 2) < sizeof (buf))
     {
       if (idx[x]->level)
@@ -133,8 +135,112 @@ ATTACHPTR **mutt_gen_attach_list (BODY *m,
   return (idx);
 }
 
+/* %D = deleted flag
+   %d = description
+   %e = MIME content-transfer-encoding
+   %f = filename
+   %t = tagged flag
+   %m = major MIME type
+   %M = MIME subtype
+   %n = attachment number
+   %s = size
+   %u = unlink */
+const char *mutt_attach_fmt (char *dest,
+    size_t destlen,
+    char op,
+    const char *src,
+    const char *prefix,
+    const char *ifstring,
+    const char *elsestring,
+    unsigned long data,
+    format_flag flags)
+{
+  char fmt[16];
+  ATTACHPTR *aptr = (ATTACHPTR *) data;
+
+  switch (op)
+  {
+    case 'd':
+      snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
+      if (aptr->content->type == TYPEMESSAGE && MsgFmt &&
+	  (!strcasecmp ("rfc822", aptr->content->subtype) ||
+	   !strcasecmp ("news", aptr->content->subtype)))
+      {
+	char s[SHORT_STRING];
+	_mutt_make_string (s, sizeof (s), MsgFmt, NULL, aptr->content->hdr,
+	    M_FORMAT_FORCESUBJ | M_FORMAT_MAKEPRINT);
+	snprintf (dest, destlen, fmt, s);
+	break;
+      }
+      else if (aptr->content->description)
+      {
+	snprintf (dest, destlen, fmt, aptr->content->description);
+	break;
+      }
+      /* FALLS THROUGH TO 'f' */
+    case 'f':
+      snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
+      if (aptr->content->filename && *aptr->content->filename == '/')
+      {
+	  char path[_POSIX_PATH_MAX];
+	  
+	  strfcpy (path, aptr->content->filename, sizeof (path));
+	  mutt_pretty_mailbox (path);
+	  snprintf (dest, destlen, fmt, path);
+      }
+      else
+	  snprintf (dest, destlen, fmt, NONULL (aptr->content->filename));
+      break;
+    case 'D':
+      snprintf (dest, destlen, "%c", aptr->content->deleted ? 'D' : ' ');
+      break;
+    case 'e':
+      snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
+      snprintf (dest, destlen, fmt, ENCODING (aptr->content->encoding));
+      break;
+    case 'm':
+      snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
+      snprintf (dest, destlen, fmt, TYPE (aptr->content->type));
+      break;
+    case 'M':
+      snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
+      snprintf (dest, destlen, fmt, aptr->content->subtype);
+      break;
+    case 'n':
+      snprintf (fmt, sizeof (fmt), "%%%sd", prefix);
+      snprintf (dest, destlen, fmt, aptr->num + 1);
+      break;
+    case 's':
+      if (flags & M_FORMAT_STAT_FILE)
+      {
+	  struct stat st;
+
+	  stat (aptr->content->filename, &st);
+	  mutt_pretty_size (dest, destlen, st.st_size);
+      }
+      else
+	  mutt_pretty_size (dest, destlen, aptr->content->length);
+      break;
+    case 't':
+      snprintf (dest, destlen, "%c", aptr->content->tagged ? '*' : ' ');
+      break;
+    case 'T':
+      snprintf (dest, destlen, "%s", NONULL (aptr->tree));
+      break;
+    case 'u':
+      snprintf (dest, destlen, "%c", aptr->content->unlink ? '-' : ' ');
+      break;
+    default:
+      *dest = 0;
+  }
+  return (src);
+}
+
 void attach_entry (char *b, size_t blen, MUTTMENU *menu, int num)
 {
+#if 1
+  mutt_FormatString (b, blen, NONULL (AttachFormat), mutt_attach_fmt, (unsigned long) (((ATTACHPTR **)menu->data)[num]), 0);
+#else
   char t[SHORT_STRING];
   char s[SHORT_STRING];
   char size[SHORT_STRING];
@@ -159,6 +265,7 @@ void attach_entry (char *b, size_t blen, MUTTMENU *menu, int num)
 	    idx[num]->tree ? idx[num]->tree : "",
 	    s[0] ? s : (m->description ? m->description :
 			(m->filename ? m->filename : "<no description>")));
+#endif
 }
 
 int mutt_tag_attach (MUTTMENU *menu, int n)

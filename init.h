@@ -77,6 +77,7 @@ struct option_t MuttVars[] = {
   { "ascii_chars",	DT_BOOL, R_BOTH, OPTASCIICHARS, 0 },
   { "askbcc",		DT_BOOL, R_NONE, OPTASKBCC, 0 },
   { "askcc",		DT_BOOL, R_NONE, OPTASKCC, 0 },
+  { "attach_format",	DT_STR,  R_NONE, UL &AttachFormat, UL "%u%D%t%2n %T%d%> [%.7m/%.10M, %.6e, %s] " },
   { "attribution",	DT_STR,	 R_NONE, UL &Attribution, UL "On %d, %n wrote:" },
   { "autoedit",		DT_BOOL, R_NONE, OPTAUTOEDIT, 0 },
   { "auto_tag",		DT_BOOL, R_NONE, OPTAUTOTAG, 0 },

@@ -97,7 +97,8 @@ typedef enum
   M_FORMAT_FORCESUBJ	= (1<<0), /* print the subject even if unchanged */
   M_FORMAT_TREE		= (1<<1), /* draw the thread tree */
   M_FORMAT_MAKEPRINT	= (1<<2), /* make sure that all chars are printable */
-  M_FORMAT_OPTIONAL	= (1<<3)
+  M_FORMAT_OPTIONAL	= (1<<3),
+  M_FORMAT_STAT_FILE	= (1<<4)  /* used by mutt_attach_fmt */
 } format_flag;
 
 /* types for mutt_add_hook() */
@@ -570,6 +571,7 @@ typedef struct attachptr
   BODY *content;
   char *tree;
   int level;
+  int num;
 } ATTACHPTR;
 
 typedef struct

@@ -71,6 +71,11 @@ static struct mapping_t ComposeHelp[] = {
 
 void snd_entry (char *b, size_t blen, MUTTMENU *menu, int num)
 {
+#if 1
+    mutt_FormatString (b, blen, NONULL (AttachFormat), mutt_attach_fmt,
+	    (unsigned long)(((ATTACHPTR **) menu->data)[num]),
+	    M_FORMAT_STAT_FILE);
+#else
   char t[SHORT_STRING], size[SHORT_STRING];
   char tmp[_POSIX_PATH_MAX];
   BODY *m;
@@ -105,6 +110,7 @@ void snd_entry (char *b, size_t blen, MUTTMENU *menu, int num)
 	    idx[num]->tree ? idx[num]->tree : "",
 	    tmp,
 	    m->description ? m->description : "no description");
+#endif
 }
 
 
