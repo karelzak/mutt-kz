@@ -500,7 +500,7 @@ rfc822_cat (char *buf, size_t buflen, const char *value, const char *specials)
     size_t tmplen = sizeof (tmp) - 3;
 
     *pc++ = '"';
-    for (; *value && tmplen; value++)
+    for (; *value && tmplen > 1; value++)
     {
       if (*value == '\\' || *value == '"')
       {
