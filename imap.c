@@ -1972,7 +1972,8 @@ void imap_fastclose_mailbox (CONTEXT *ctx)
     return;
 
   if ((CTX_DATA->state == IMAP_SELECTED) && (ctx == CTX_DATA->selected_ctx))
-    if (imap_close_mailbox (CTX_DATA) != 0)
+    if (!imap_close_mailbox (CTX_DATA))
+      return;
 
   for (i = 0; i < IMAP_CACHE_LEN; i++)
   {
