@@ -161,6 +161,7 @@ void mutt_remove_trailing_ws (char *);
 void mutt_query_exit (void);
 void mutt_query_menu (char *, size_t);
 void mutt_safe_path (char *s, size_t l, ADDRESS *a);
+void mutt_sanitize_filename (const char *);
 void mutt_save_path (char *s, size_t l, ADDRESS *a);
 void mutt_score_message (HEADER *);
 void mutt_select_fcc (char *, size_t, HEADER *);

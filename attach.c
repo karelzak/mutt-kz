@@ -304,6 +304,8 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
     else if (fp == NULL) /* send case */
       strfcpy (tempfile, a->filename, sizeof (tempfile));
 
+    mutt_sanitize_filename(tempfile);
+    
     if (fp)
     {
       /* recv case: we need to save the attachment to a file */

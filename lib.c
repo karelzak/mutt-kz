@@ -783,6 +783,17 @@ void mutt_safe_path (char *s, size_t l, ADDRESS *a)
       *p = '_';
 }
 
+static char safe_chars[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789._-:%";
+
+void mutt_sanitize_filename(char *f)
+{
+  for(; *f; f++)
+  {
+    if(!strchr(safe_chars, *f))
+      *f = '_';
+  }
+}
+
 /* Read a line from ``fp'' into the dynamically allocated ``s'',
  * increasing ``s'' if necessary. The ending "\n" or "\r\n" is removed.
  * If a line ends with "\", this char and the linefeed is removed,
