@@ -251,7 +251,7 @@ static void show_version (void)
 
 
 
-  puts ("\nMail bug reports along with this output to <mutt-dev@cs.hmc.edu>.");
+  puts ("\nMail bug reports along with this output to <mutt-dev@mutt.org>.");
 
   exit (0);
 }
