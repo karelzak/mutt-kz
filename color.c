@@ -360,14 +360,6 @@ parse_color_name (const char *s, int *col, int *attr, int brite, BUFFER *err)
     return (-1);
   }
 
-#ifdef HAVE_USE_DEFAULT_COLORS
-  if (*col == COLOR_DEFAULT && use_default_colors () != OK)
-  {
-    strfcpy (err->data, "default colors not supported", err->dsize);
-    return (-1);
-  }
-#endif
-
   return 0;
 }
 
@@ -517,6 +509,13 @@ int mutt_parse_color (BUFFER *buf, BUFFER *s, unsigned long data, BUFFER *err)
     {
       return 0;
     }
+#ifdef HAVE_USE_DEFAULT_COLORS
+    if (use_default_colors () != OK && (fg == COLOR_DEFAULT || bg == COLOR_DEFAULT))
+    {
+      strfcpy (err->data, "default colors not supported", err->dsize);
+      return (-1);
+    }
+#endif /* HAVE_USE_DEFAULT_COLORS */
 
     if (object == MT_COLOR_HEADER)
       r = add_pattern (&ColorHdrList, buf->data, 0, fg, bg, bold, err,0);
@@ -547,6 +546,13 @@ int mutt_parse_color (BUFFER *buf, BUFFER *s, unsigned long data, BUFFER *err)
     {
       return 0;
     }
+#ifdef HAVE_USE_DEFAULT_COLORS
+    if (use_default_colors () != OK && (fg == COLOR_DEFAULT || bg == COLOR_DEFAULT))
+    {
+      strfcpy (err->data, "default colors not supported", err->dsize);
+      return (-1);
+    }
+#endif /* HAVE_USE_DEFAULT_COLORS */
 
     if (object == MT_COLOR_QUOTED)
     {
