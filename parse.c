@@ -245,8 +245,7 @@ int mutt_check_mime_type (const char *s)
 static void parse_content_type (char *s, BODY *ct)
 {
   char *pc;
-  char buffer[SHORT_STRING];
-  short i = 0;
+  char *subtype;
 
   safe_free((void **)&ct->subtype);
   mutt_free_parameter(&ct->parameter);
@@ -265,16 +264,13 @@ static void parse_content_type (char *s, BODY *ct)
   }
   
   /* Now get the subtype */
-  if ((pc = strchr(s, '/')))
+  if ((subtype = strchr(s, '/')))
   {
-    *pc++ = 0;
-    while (*pc && !ISSPACE (*pc) && *pc != ';')
-    {
-      buffer[i++] = *pc;
-      pc++;
-    }
-    buffer[i] = 0;
-    ct->subtype = safe_strdup (buffer);
+    *subtype++ = '\0';
+    for(pc = subtype; *pc && !ISSPACE(*pc) && *pc != ';'; pc++)
+      ;
+    *pc = '\0';
+    ct->subtype = safe_strdup (subtype);
   }
 
   /* Finally, get the major type */
@@ -293,6 +289,8 @@ static void parse_content_type (char *s, BODY *ct)
       ct->subtype = safe_strdup ("rfc822");
     else if (ct->type == TYPEOTHER)
     {
+      char buffer[SHORT_STRING];
+
       ct->type = TYPEAPPLICATION;
       snprintf (buffer, sizeof (buffer), "x-%s", s);
       ct->subtype = safe_strdup (buffer);
