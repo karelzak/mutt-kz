@@ -1,7 +1,7 @@
 # $Id$
 msgid ""
 msgstr ""
-"Project-Id-Version: Mutt 1.3.27\n"
+"Project-Id-Version: Mutt 1.3.99\n"
 "POT-Creation-Date: 2002-05-02 01:08+0200\n"
 "PO-Revision-Date: 2002-01-19 14:33+01:00\n"
 "Last-Translator: Jörgen Tegnér <jorgen.tegner@telia.com>\n"
@@ -1781,9 +1781,8 @@ msgid "move the cursor to the end of the word"
 msgstr "flytta markören till slutet av ordet"
 
 #: keymap_alldefs.h:73
-#, fuzzy
 msgid "scroll down through the history list"
-msgstr "rulla upp genom historielistan"
+msgstr "rulla ner genom historielistan"
 
 #: keymap_alldefs.h:74
 msgid "scroll up through the history list"
