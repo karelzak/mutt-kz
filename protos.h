@@ -223,6 +223,7 @@ int mutt_parse_hook (BUFFER *, BUFFER *, unsigned long, BUFFER *);
 int mutt_parse_macro (BUFFER *, BUFFER *, unsigned long, BUFFER *);
 int mutt_parse_mailboxes (BUFFER *, BUFFER *, unsigned long, BUFFER *);
 int mutt_parse_mono (BUFFER *, BUFFER *, unsigned long, BUFFER *);
+int mutt_parse_unmono (BUFFER *, BUFFER *, unsigned long, BUFFER *);
 int mutt_parse_push (BUFFER *, BUFFER *, unsigned long, BUFFER *);
 int mutt_parse_rc_line (/* const */ char *, BUFFER *, BUFFER *);
 int mutt_parse_score (BUFFER *, BUFFER *, unsigned long, BUFFER *);

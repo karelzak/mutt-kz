@@ -349,6 +349,7 @@ struct command_t Commands[] = {
   { "unalias",		parse_unalias,		0 },
   { "unignore",		parse_unignore,		0 },
   { "unlists",		parse_unlist,		UL &MailLists },
+  { "unmono",		mutt_parse_unmono,	0 },
   { "unmy_hdr",		parse_unmy_hdr,		0 },
   { "unscore",		mutt_parse_unscore,	0 },
   { "unset",		parse_set,		M_SET_UNSET },
