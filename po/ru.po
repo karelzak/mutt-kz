@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 0.95.1i\n"
-"POT-Creation-Date: 1999-08-04 22:07+0200\n"
+"POT-Creation-Date: 1999-08-24 18:04+0200\n"
 "PO-Revision-Date: 1999-09-10 10:44 +0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
@@ -249,7 +249,7 @@ msgstr "слишком много аргументов"
 msgid "default colors not supported"
 msgstr "цвета по умолчанию не поддерживаются"
 
-#: commands.c:87 commands.c:95 pgp.c:1388 pgpkey.c:220
+#: commands.c:87 commands.c:95 pgp.c:1389 pgpkey.c:220
 msgid "Invoking PGP..."
 msgstr "Запускается PGP..."
 
@@ -1924,7 +1924,7 @@ msgstr ""
 #: main.c:42
 #, fuzzy
 msgid ""
-"Copyright (C) 1996-8 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-9 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -1941,10 +1941,10 @@ msgstr ""
 #: main.c:48
 #, fuzzy
 msgid ""
-"Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998   Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998   Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -2626,12 +2626,12 @@ msgstr ""
 msgid "Can't open PGP subprocess!"
 msgstr "Не удалось открыть PGP подпроцесс!"
 
-#: pgp.c:1206
+#: pgp.c:1207
 #, c-format
 msgid "Use keyID = \"%s\" for %s?"
 msgstr "Использовть ключ \"%s\" для %s?"
 
-#: pgp.c:1212
+#: pgp.c:1213
 #, c-format
 msgid "Enter keyID for %s: "
 msgstr "Введите идентификатор ключа для %s: "
@@ -3061,26 +3061,26 @@ msgstr "Сообщение послано."
 msgid "Sending in background."
 msgstr ""
 
-#: sendlib.c:481
+#: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
 msgstr "Параметр boundary не найден! [сообщите об этой ошибке]"
 
-#: sendlib.c:515
+#: sendlib.c:523
 #, c-format
 msgid "%s no longer exists!"
 msgstr "%s больше не существует!"
 
-#: sendlib.c:783
+#: sendlib.c:791
 #, c-format
 msgid "Could not open %s"
 msgstr "Не удалось открыть %s"
 
-#: sendlib.c:1682
+#: sendlib.c:1690
 #, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s)."
 msgstr "Не удалось послать сообщение, процесс-потомок вернул %d (%s).\n"
 
-#: sendlib.c:1688
+#: sendlib.c:1696
 msgid "Output of the delivery process"
 msgstr ""
 

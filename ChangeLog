@@ -1,3 +1,88 @@
+Tue Aug 24 15:51:56 1999  Thomas Roessler  <roessler@guug.de>
+
+	* The first 1.0 pre-release is ready.
+
+Mon Aug 23 22:12:05 1999  Thomas Roessler  <roessler@guug.de>
+
+	* main.c: Fix a small typo affecting mutt -v's output.
+
+Fri Aug 20 08:24:13 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/fr.po: Fixed french translation.
+
+	* doc/Attic/manual.sgml.in, NEWS, copy.c, init.h, mutt.h,
+	sendlib.c: Back-port $bounce_delivered from unstable.
+
+	* po/fr.po: [stable] Small fixes.
+
+Thu Aug 19 10:11:23 1999  Thomas Roessler  <roessler@guug.de>
+
+	* charsets/Attic/Makefile.in:
+	[stable] parse_i18n doesn't need libraries.
+
+	* sendlib.c: [stable] Fix a back-porting bug.
+
+	* configure.in:
+	[stable] Albert Chin-A-Young <china@thewrittenword.com> suggests a
+	different check for -lnsl and -lsocket.
+
+	* doc/Attic/manual.sgml.in: [stable] fix the urlview url.
+
+	* main.c: copyright message cosmetics.
+
+	* Makefile.am, configure.in, prepare:
+	Remove the $output.in hack, and create a fake charmaps directory
+	instead.
+
+	* charsets/Attic/Makefile.in:
+	[stable] $(LDFLAGS) were missing when building parse_i18n.  Pointed
+	out by Lutz Jaenicke <Lutz.Jaenicke@aet.TU-Cottbus.DE>.
+
+	* acconfig.h, configure.in:
+	[stable] check signal.h for sig_atomic_t.  This should help to build
+	this version of mutt on systems such as SunOS 4.1.
+
+	* sendlib.c:
+	[stable] Force quotes around the boundary parameter's value.
+
+	* pgp.c:
+	[stable] Make sure the boundary MIME parameter is the last one on
+	multipart/signed.  Otherwise, Outlook will fail.  Pointed out by Ian
+	Bell, Turnpike.
+
+Wed Aug 18 06:54:13 1999  Thomas Roessler  <roessler@guug.de>
+
+	* doc/Attic/muttrc.man, doc/muttrc.man.head, doc/Attic/manual.sgml, NEWS:
+	documentation fixes.
+
+	* commands.c:
+	Fetch senders' keys also when decrypting a message.  There may be a
+	signature.
+
+	* main.c: Don't try to create $maildir if it's an IMAP folder.
+
+Tue Aug 17 20:04:07 1999  Thomas Roessler  <roessler@guug.de>
+
+	* reldate.h: :-(
+
+	* reldate.h: *grmbls*
+
+	* po/de.po, ChangeLog, VERSION: post-release commit for 0.96.4.
+
+	* po/de.po, VERSION, ChangeLog: post-release commit for 0.95.7.
+
+	* doc/Attic/manual.sgml, doc/Attic/muttrc.man, Attic/Muttrc:
+	ispell's default path.
+
+	* postpone.c: Fixing a mutt -p segfault.
+
+	* doc/mutt.man, main.c:
+	cosmetics; mention warranties in the manual page.
+
+Sun Aug 15 19:59:09 1999  Thomas Roessler  <roessler@guug.de>
+
+	* compose.c: Make attach-message work with IMAP folders.
+
 Sun Aug 15 19:59:09 1999  Thomas Roessler  <roessler@guug.de>
 
 	* dotlock.c: [stable] take dotlock.c from unstable.

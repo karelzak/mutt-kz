@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-0.95.5\n"
-"POT-Creation-Date: 1999-08-04 22:07+0200\n"
+"POT-Creation-Date: 1999-08-24 18:04+0200\n"
 "PO-Revision-Date: 1999-05-24 22:24+02:00\n"
 "Last-Translator: Marco d'Itri <md@linux.it>\n"
 "Language-Team: none\n"
@@ -255,7 +255,7 @@ msgstr "troppi argomenti"
 msgid "default colors not supported"
 msgstr "i colori predefiniti non sono gestiti"
 
-#: commands.c:87 commands.c:95 pgp.c:1388 pgpkey.c:220
+#: commands.c:87 commands.c:95 pgp.c:1389 pgpkey.c:220
 msgid "Invoking PGP..."
 msgstr "Eseguo PGP..."
 
@@ -1919,8 +1919,9 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "Per contattare gli sviluppatori scrivi a <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-8 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-9 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -1932,10 +1933,10 @@ msgstr ""
 
 #: main.c:48
 msgid ""
-"Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998   Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998   Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -2561,12 +2562,12 @@ msgstr ""
 msgid "Can't open PGP subprocess!"
 msgstr "Impossibile aprire il sottoprocesso PGP!"
 
-#: pgp.c:1206
+#: pgp.c:1207
 #, c-format
 msgid "Use keyID = \"%s\" for %s?"
 msgstr "Uso il keyID \"%s\" per %s?"
 
-#: pgp.c:1212
+#: pgp.c:1213
 #, c-format
 msgid "Enter keyID for %s: "
 msgstr "Inserisci il keyID per %s: "
@@ -2996,27 +2997,27 @@ msgstr "Messaggio spedito."
 msgid "Sending in background."
 msgstr ""
 
-#: sendlib.c:481
+#: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
 msgstr "No boundary parameter found! [segnala questo errore]"
 
-#: sendlib.c:515
+#: sendlib.c:523
 #, c-format
 msgid "%s no longer exists!"
 msgstr "%s non esiste più!"
 
-#: sendlib.c:783
+#: sendlib.c:791
 #, c-format
 msgid "Could not open %s"
 msgstr "Impossibile aprire %s"
 
-#: sendlib.c:1682
+#: sendlib.c:1690
 #, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s)."
 msgstr ""
 "Errore nella spedizione del messaggio, il figlio è uscito con %d (%s).\n"
 
-#: sendlib.c:1688
+#: sendlib.c:1696
 msgid "Output of the delivery process"
 msgstr ""
 
