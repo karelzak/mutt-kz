@@ -29,12 +29,18 @@
 #include <sys/utsname.h>
 #include <errno.h>
 #include <time.h>
+#include <fcntl.h>
+
+#ifndef _POSIX_PATH_MAX
+#include <posix1_lim.h>
+#endif
 
 #include "dotlock.h"
 #include "config.h"
 #include "reldate.h"
 
 #define MAXLINKS 1024 /* maximum link depth */
+#define LONG_STRING 1024
 
 #define strfcpy(A,B,C) strncpy(A,B,C), *(A+(C)-1)=0
 
@@ -66,11 +72,19 @@ static gid_t MailGid;
 extern int snprintf(char *, size_t, const char *, ...);
 #endif
 
-static int dotlock_try(const char *);
+static int dotlock_deference_symlink(char *, size_t, const char *);
+static int dotlock_prepare(char *, size_t, const char *);
+static int dotlock_init_privs(void);
+
+/* These functions work on the current directory.
+ * Invoke dotlock_prepare() before and check their
+ * return value.
+ */
+
+static int dotlock_try(void);
 static int dotlock_unlock(const char *);
 static int dotlock_lock(const char *);
-static int dotlock_deference_symlink(char *, size_t, const char *);
-static int dotlock_allowed(const char *);
+
 
 static void usage(const char *);
 static void dotlock_expand_link(char *, const char *, const char *);
@@ -83,22 +97,25 @@ int main(int argc, char **argv)
   char *p;
   const char *f;
   struct utsname utsname;
+  char realpath[_POSIX_PATH_MAX];
 
-#ifdef USE_SETGID
+
+  /* first, drop privileges */
   
-  UserGid = getgid();
-  MailGid = getegid();
-
-  if(SETEGID(UserGid) != 0)
+  if(dotlock_init_privs() == -1)
     return DL_EX_ERROR;
 
-#endif
+
+  /* determine the system's host name */
   
   uname(&utsname);
   if(!(Hostname = strdup(utsname.nodename)))
     return DL_EX_ERROR;
   if((p = strchr(Hostname, '.')))
     *p = '\0';
+
+
+  /* parse the command line options. */
   
   while((i = getopt(argc, argv, "tfupr:")) != EOF)
   {
@@ -118,18 +135,72 @@ int main(int argc, char **argv)
   
   f = argv[optind];
 
+
+  /* If dotlock_prepare() succeeds [return value == 0],
+   * realpath contains the basename of f, and we have
+   * successfully changed our working directory to
+   * `dirname $f`.  Additionally, f has been opened for
+   * reading to verify that the user has at least read
+   * permissions on that file.
+   * 
+   * For a more detailed explanation of all this, see the
+   * lengthy comment below.
+   */
+  
+  if(dotlock_prepare(realpath, sizeof(realpath), f) != 0)
+    return DL_EX_ERROR;
+
+  /* Finally, actually perform the locking operation. */
+  
   if(f_try)
-    return dotlock_try(f);
+    return dotlock_try();
   else if(f_unlock)
-    return dotlock_unlock(f);
+    return dotlock_unlock(realpath);
   else /* lock */
-    return dotlock_lock(f);
+    return dotlock_lock(realpath);
+
 }
 
 
+/* 
+ * Determine our effective group ID, and drop 
+ * privileges.
+ * 
+ * Return value:
+ * 
+ *  0 - everything went fine
+ * -1 - we couldn't drop privileges.
+ * 
+ */
 
+static int
+dotlock_init_privs(void)
+{
 
+#ifdef USE_SETGID
+  
+  UserGid = getgid();
+  MailGid = getegid();
 
+  if(SETEGID(UserGid) != 0)
+    return -1;
+
+#endif
+
+  return 0;
+}
+  
+
+/*
+ * Get privileges 
+ * 
+ * This function re-acquires the privileges we may have
+ * if the user told us to do so by giving the "-p"
+ * command line option.
+ * 
+ * BEGIN_PRIVILEGES() won't return if an error occurs.
+ * 
+ */
 
 static void
 BEGIN_PRIVILEGED(void)
@@ -146,6 +217,15 @@ BEGIN_PRIVILEGED(void)
 #endif
 }
 
+/*
+ * Drop privileges
+ * 
+ * This function drops the group privileges we may have.
+ * 
+ * END_PRIVILEGED() won't return if an error occurs.
+ *
+ */
+
 static void
 END_PRIVILEGED(void)
 {
@@ -161,63 +241,13 @@ END_PRIVILEGED(void)
 #endif
 }
 
-
-/* XXX - This check is not bullet-proof at all.  
+/*
+ * Usage information.
  * 
- * The problem is that the user may give us a deeply
- * nested path to a file which has the same name as the
- * file he wants to lock, but different permissions, say, 
- * e.g. /tmp/lots/of/subdirs/var/spool/mail/root.
+ * This function doesn't return.
  * 
- * He may then try to replace /tmp/lots/of/subdirs by a
- * symbolic link to / after we have invoked access() to
- * check the file's permissions.  The lockfile we'd
- * create or remove would then actually be
- * /var/spool/mail/root.
- * 
- * To avoid this attack, we'd have to proceed as follows:
- * 
- * - First, follow symbolic links a la
- *   dotlock_deference_symlink().
- * 
- * - get the result's dirname.
- * 
- * - chdir to this directory.  If you can't, bail out.
- * 
- * - try to open the file in question, only using its
- *   basename.  If you can't, bail out.
- * 
- * - fstat that file and compare the result to a 
- *   subsequent lstat (only using the basename).  If 
- *   the comparison fails, bail out.
- * 
- * - finally generate (or remove) the lock file, only
- *   using the file's basename.
- * 
- * Anyway, I don't see any possibility to abuse the
- * current code for a persisting attack (except maybe
- * when using mode 1777 /var/spool/mail, but in this case
- * there are no privileges to abuse, and all the damage
- * can be done without privileges) - the victim can
- * always use dotlock -p -u to remove the "bad" lock
- * file.
- *
- * Feel free to implement the algorithm given above (or
- * convince me that there is an actual, nasty attack it
- * may avoid).
- * 
- * tlr, Jul 15 1998
  */
 
-static int 
-dotlock_allowed(const char *f)
-{
-  if(access(f, R_OK) || access(f, W_OK))
-    return 0;
-  else
-    return 1;
-}
- 
 static void 
 usage(const char *av0)
 {
@@ -238,6 +268,127 @@ usage(const char *av0)
   
   exit(DL_EX_ERROR);
 }
+
+
+/*
+ * Access checking: Let's avoid to lock other users' mail
+ * spool files if we aren't permitted to read them.
+ * 
+ * Some simple-minded access(2) checking isn't sufficient
+ * here: The problem is that the user may give us a
+ * deeply nested path to a file which has the same name
+ * as the file he wants to lock, but different
+ * permissions, say, e.g.
+ * /tmp/lots/of/subdirs/var/spool/mail/root.
+ * 
+ * He may then try to replace /tmp/lots/of/subdirs by a
+ * symbolic link to / after we have invoked access() to
+ * check the file's permissions.  The lockfile we'd
+ * create or remove would then actually be
+ * /var/spool/mail/root.
+ * 
+ * To avoid this attack, we proceed as follows:
+ * 
+ * - First, follow symbolic links a la
+ *   dotlock_deference_symlink().
+ * 
+ * - get the result's dirname.
+ * 
+ * - chdir to this directory.  If you can't, bail out.
+ * 
+ * - try to open the file in question, only using its
+ *   basename.  If you can't, bail out.
+ * 
+ * - fstat that file and compare the result to a
+ *   subsequent lstat (only using the basename).  If
+ *   the comparison fails, bail out.
+ * 
+ * dotlock_prepare() is invoked from main() directly
+ * after the command line parsing has been done.
+ *
+ * Return values:
+ * 
+ * 0 - Evereything's fine.  The program's new current
+ *     directory is the contains the file to be locked.
+ *     The string pointed to by bn contains the name of
+ *     the file to be locked.
+ * 
+ * -1 - Something failed. Don't continue.
+ * 
+ * tlr, Jul 15 1998
+ */
+
+static int
+dotlock_prepare(char *bn, size_t l, const char *f)
+{
+  struct stat fsb, lsb;
+  char realpath[_POSIX_PATH_MAX];
+  char *basename, *dirname;
+  char *p;
+  int fd;
+  int r;
+  
+  if(dotlock_deference_symlink(realpath, sizeof(realpath), f) == -1)
+    return -1;
+  
+  if((p = strrchr(realpath, '/')))
+  {
+    *p = '\0';
+    basename = p + 1;
+    dirname = realpath;
+  }
+  else
+  {
+    basename = realpath;
+    dirname = ".";
+  }
+
+  if(strlen(basename) + 1 > l)
+    return -1;
+  
+  strfcpy(bn, basename, l);
+  
+  if(chdir(dirname) == -1)
+    return -1;
+  
+  if((fd = open(basename, O_RDONLY)) == -1)
+    return -1;
+  
+  r = fstat(fd, &fsb);
+  close(fd);
+  
+  if(r == -1)
+    return -1;
+  
+  if(lstat(basename, &lsb) == -1)
+    return -1;
+  
+  if(S_ISLNK(lsb.st_mode))
+    return -1;
+  
+  if((lsb.st_dev != fsb.st_dev) ||
+     (lsb.st_ino != fsb.st_ino) ||
+     (lsb.st_mode != fsb.st_mode) ||
+     (lsb.st_nlink != fsb.st_nlink) ||
+     (lsb.st_uid != fsb.st_uid) ||
+     (lsb.st_gid != fsb.st_gid) ||
+     (lsb.st_rdev != fsb.st_rdev) ||
+     (lsb.st_size != fsb.st_size))
+  {
+    /* something's fishy */
+    return -1;
+  }
+  
+  return 0;
+}
+
+/*
+ * Expand a symbolic link.
+ * 
+ * This function expects newpath to have space for
+ * at least _POSIX_PATH_MAX characters.
+ *
+ */
 
 static void 
 dotlock_expand_link (char *newpath, const char *path, const char *link)
@@ -265,7 +416,12 @@ dotlock_expand_link (char *newpath, const char *path, const char *link)
 }
 
 
-/* this is pretty similar to realpath(3) */
+/*
+ * Deference a chain of symbolic links
+ * 
+ * The final path is written to d.
+ *
+ */
 
 static int
 dotlock_deference_symlink(char *d, size_t l, const char *path)
@@ -308,23 +464,25 @@ dotlock_deference_symlink(char *d, size_t l, const char *path)
   return 0;
 }
 
+/*
+ * Dotlock a file.
+ * 
+ * realpath is assumed _not_ to be an absolute path to
+ * the file we are about to lock.  Invoke
+ * dotlock_prepare() before using this function!
+ * 
+ */
+
 static int
-dotlock_lock(const char *f)
+dotlock_lock(const char *realpath)
 {
-  char realpath[_POSIX_PATH_MAX];
-  char lockfile[_POSIX_PATH_MAX];
-  char nfslockfile[_POSIX_PATH_MAX];
+  char lockfile[_POSIX_PATH_MAX + LONG_STRING];
+  char nfslockfile[_POSIX_PATH_MAX + LONG_STRING];
   size_t prev_size = 0;
   int fd;
   int count = 0;
   struct stat sb;
   time_t t;
-  
-  if(dotlock_deference_symlink(realpath, sizeof(realpath), f) == -1)
-    return DL_EX_ERROR;
-
-  if(dotlock_allowed(realpath) == -1)
-    return DL_EX_ERROR;
   
   snprintf(nfslockfile, sizeof(nfslockfile), "%s.%s.%d",
 	   realpath, Hostname, (int) getpid());
@@ -414,19 +572,19 @@ dotlock_lock(const char *f)
 }
 
 
+/*
+ * Unlock a file. 
+ * 
+ * The same comment as for dotlock_lock() applies here.
+ * 
+ */
+
 static int
-dotlock_unlock(const char *f)
+dotlock_unlock(const char *realpath)
 {
-  char lockfile[_POSIX_PATH_MAX];
-  char realpath[_POSIX_PATH_MAX];
+  char lockfile[_POSIX_PATH_MAX + LONG_STRING];
   int i;
 
-  if(dotlock_deference_symlink(realpath, sizeof(realpath), f) == -1)
-    return DL_EX_ERROR;
-
-  if(dotlock_allowed(realpath) == -1)
-    return DL_EX_ERROR;
-  
   snprintf(lockfile, sizeof(lockfile), "%s.lock",
 	   realpath);
   
@@ -441,28 +599,22 @@ dotlock_unlock(const char *f)
 }
 
 
+/*
+ * Check if a file can be locked at all.
+ * 
+ * The same comment as for dotlock_lock() applies here.
+ * 
+ */
+
 static int
-dotlock_try(const char *f)
+dotlock_try(void)
 {
-  char realpath[_POSIX_PATH_MAX];
-  char *p;
   struct stat sb;
 
-  if(dotlock_deference_symlink(realpath, sizeof(realpath), f) == -1)
-    return DL_EX_ERROR;
-
-  if(dotlock_allowed(realpath) == -1)
-    return DL_EX_IMPOSSIBLE;
-  
-  if((p = strrchr(realpath, '/')))
-    *p = '\0';
-  else
-    strfcpy(realpath, ".", sizeof(realpath));
-  
-  if(access(realpath, W_OK) == 0)
+  if(access(".", W_OK) == 0)
     return DL_EX_OK;
 
-  if(stat(realpath, &sb) == 0)
+  if(stat(".", &sb) == 0)
   {
     if((sb.st_mode & S_IWGRP) == S_IWGRP && sb.st_gid == MailGid)
       return DL_EX_NEED_PRIVS;

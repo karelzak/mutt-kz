@@ -120,19 +120,21 @@ command line option.  It means that
 .B dotlock 
 is unable to lock \fIfile\fP even with group mail
 privileges.
-.SH BUGS
+.SH NOTES
 .PP
-While
 .B dotlock
-tries to avoid abuse by checking \fIfile\fP's permissions
-before locking or unlocking it, there is a race condition
-between this check and the actual locking process.  This
-means that
-.B dotlock
-can be used to lock or unlock other folks' mail spool
-files under certain circumstances.
+tries to implement an NFS-safe dotlocking method which was
+borrowed from 
+.B lockfile
+(1).  
 .PP
-For details, see the comments in dotlock.c.
+If the user can't open \fIfile\fP for reading with his
+normal privileges, dotlock will return the
+.B DL_EX_ERROR
+exit value to avoid certain attacks against other users'
+spool files. The code carefully avoids race conditions
+when checking permissions; for details of all this see the
+comments in dotlock.c.
 .SH HISTORY
 .PP
 .B dotlock
