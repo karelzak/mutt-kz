@@ -150,7 +150,7 @@ folder_format_str (char *dest, size_t destlen, char op, const char *src,
 		   const char *fmt, const char *ifstring, const char *elsestring,
 		   unsigned long data, format_flag flags)
 {
-  char fn[SHORT_STRING], tmp[SHORT_STRING], permission[10];
+  char fn[SHORT_STRING], tmp[SHORT_STRING], permission[11];
   char date[16], *t_fmt;
   time_t tnow;
   FOLDER *folder = (FOLDER *) data;
