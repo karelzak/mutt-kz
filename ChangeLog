@@ -1,3 +1,38 @@
+Fri Apr 23 08:55:26 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/uk.po, po/sk.po, po/ru.po, po/pl.po, po/nl.po, po/it.po, po/id.po, po/fr.po, po/es.po, po/de.po, po/cs.po:
+	New translations and typo fixes.
+
+	* OPS: Fix a documentation typo.
+
+	* po/de.po: translation fixes from Roland and Gero.
+
+Thu Apr 22 10:21:41 1999  Thomas Roessler  <roessler@guug.de>
+
+	* menu.c: Fix redraws.  Back-port from unstable.
+
+	* imap.h, init.h, mutt.h, mutt_socket.h, socket.c, imap.c:
+	IMAP update from Brandon Long.
+
+Tue Apr 20 19:26:28 1999  Thomas Roessler  <roessler@guug.de>
+
+	* sendlib.c: [stable] fix timezone snafu.
+
+	* po/ru.po, po/sk.po, po/uk.po, po/fr.po, po/id.po, po/it.po, po/nl.po, po/pl.po, po/cs.po, po/de.po, po/es.po, VERSION, reldate.h, ChangeLog:
+	Preparing 0.96.2.
+
+	* po/uk.po, po/sk.po, po/ru.po, po/pl.po, po/nl.po, po/id.po, po/it.po, po/fr.po, po/es.po, po/de.po, po/cs.po, VERSION, reldate.h, ChangeLog:
+	preparing 0.95.5 (first take.  This one was only released to
+	the development list.)
+
+Mon Apr 12 21:02:35 1999  Thomas Roessler  <roessler@guug.de>
+
+	* recvattach.c: more multipart/alternative handling.
+
+	* recvattach.c: Change multipart handling when receiving messages.
+
+	* compose.c: Clean-up, from Vikas.
+
 Mon Apr 12 21:02:35 1999  Thomas Roessler  <roessler@guug.de>
 
 	* po/sk.po, po/id.po, configure.in: new languages: id, sk.
