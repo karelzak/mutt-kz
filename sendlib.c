@@ -838,7 +838,7 @@ static void transform_to_7bit (BODY *a, FILE *fpin)
 
 static const char *get_text_charset (BODY *b, CONTENT *info)
 {
-  char send_charset[SHORT_STRING];
+  static char send_charset[SHORT_STRING];
   char *chsname;
 
   chsname = mutt_get_send_charset (send_charset, sizeof (send_charset), b, 1);
