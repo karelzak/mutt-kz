@@ -295,6 +295,26 @@ static void start_curses (void)
 #define M_RO      (1<<3)	/* -R */
 #define M_SELECT  (1<<4)	/* -y */
 
+#ifdef USE_SLANG_CURSES
+
+static void check_slang(void)
+{
+  char *term = getenv("TERM");
+
+  /* slang < 1.2x */
+  
+  if(SLANG_VERSION < 12000)
+  {
+    if(term && strlen(term) > 100)
+    {
+      fputs("Sorry, your TERM variable's value is too long.\n", stderr);
+      exit(1);
+    }
+  }
+}
+
+#endif
+
 int main (int argc, char **argv)
 {
   char folder[_POSIX_PATH_MAX] = "";
@@ -313,10 +333,6 @@ int main (int argc, char **argv)
   extern int optind;
 
   mutt_error = mutt_nocurses_error;
-
-  SRAND (time (NULL));
-  setlocale (LC_CTYPE, "");
-  umask (077);
 
 #ifdef USE_SETGID
   /* Determine the user's default gid and the gid to use for locking the spool
@@ -339,6 +355,16 @@ int main (int argc, char **argv)
     exit (0);
   }
 #endif
+
+#ifdef USE_SLANG_CURSES
+
+  check_slang();
+  
+#endif
+  
+  SRAND (time (NULL));
+  setlocale (LC_CTYPE, "");
+  umask (077);
 
   memset (Options, 0, sizeof (Options));
 
