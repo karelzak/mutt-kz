@@ -156,73 +156,129 @@ folder_format_str (char *dest, size_t destlen, char op, const char *src,
   FOLDER *folder = (FOLDER *) data;
   struct passwd *pw;
   struct group *gr;
- 
+
   switch (op)
   {
     case 'd':
-      tnow = time (NULL);
-      t_fmt = tnow - folder->f->st_mtime < 31536000 ? "%b %d %H:%M" : "%b %d  %Y";
-      strftime (date, sizeof (date), t_fmt, localtime (&folder->f->st_mtime));
-      snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
-      snprintf (dest, destlen, tmp, date);
+      if (folder->f != NULL)
+      {
+	tnow = time (NULL);
+	t_fmt = tnow - folder->f->st_mtime < 31536000 ? "%b %d %H:%M" : "%b %d  %Y";
+	strftime (date, sizeof (date), t_fmt, localtime (&folder->f->st_mtime));
+	snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
+	snprintf (dest, destlen, tmp, date);
+      }
+      else
+      {
+	snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
+	snprintf (dest, destlen, tmp, "");
+      }
       break;
     case 'f':
       strncpy (fn, folder->name, sizeof(fn) - 1);
-      strcat (fn, S_ISLNK (folder->f->st_mode) ? "@" : 
-	      (S_ISDIR (folder->f->st_mode) ? "/" : 
-	       ((folder->f->st_mode & S_IXUSR) != 0 ? "*" : "")));
+      if (folder->f != NULL)
+      {
+	strcat (fn, S_ISLNK (folder->f->st_mode) ? "@" : 
+		(S_ISDIR (folder->f->st_mode) ? "/" : 
+		 ((folder->f->st_mode & S_IXUSR) != 0 ? "*" : "")));
+      }
       snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
       snprintf (dest, destlen, tmp, fn);
       break;
     case 'F':
-      sprintf (permission, "%c%c%c%c%c%c%c%c%c%c",
-	       S_ISDIR(folder->f->st_mode) ? 'd' : (S_ISLNK(folder->f->st_mode) ? 'l' : '-'),
-	       (folder->f->st_mode & S_IRUSR) != 0 ? 'r': '-',
-	       (folder->f->st_mode & S_IWUSR) != 0 ? 'w' : '-',
-	       (folder->f->st_mode & S_ISUID) != 0 ? 's' : (folder->f->st_mode & S_IXUSR) != 0 ? 'x': '-',
-	       (folder->f->st_mode & S_IRGRP) != 0 ? 'r' : '-',
-	       (folder->f->st_mode & S_IWGRP) != 0 ? 'w' : '-',
-	       (folder->f->st_mode & S_ISGID) != 0 ? 's' : (folder->f->st_mode & S_IXGRP) != 0 ? 'x': '-',
-	       (folder->f->st_mode & S_IROTH) != 0 ? 'r' : '-',
-	       (folder->f->st_mode & S_IWOTH) != 0 ? 'w' : '-',
-	       (folder->f->st_mode & S_ISVTX) != 0 ? 't' : (folder->f->st_mode & S_IXOTH) != 0 ? 'x': '-');
-      snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
-      snprintf (dest, destlen, tmp, permission);
-      break;
-    case 'g':
-      if ((gr = getgrgid (folder->f->st_gid)))
+      if (folder->f != NULL)
       {
+	sprintf (permission, "%c%c%c%c%c%c%c%c%c%c",
+		 S_ISDIR(folder->f->st_mode) ? 'd' : (S_ISLNK(folder->f->st_mode) ? 'l' : '-'),
+		 (folder->f->st_mode & S_IRUSR) != 0 ? 'r': '-',
+		 (folder->f->st_mode & S_IWUSR) != 0 ? 'w' : '-',
+		 (folder->f->st_mode & S_ISUID) != 0 ? 's' : (folder->f->st_mode & S_IXUSR) != 0 ? 'x': '-',
+		 (folder->f->st_mode & S_IRGRP) != 0 ? 'r' : '-',
+		 (folder->f->st_mode & S_IWGRP) != 0 ? 'w' : '-',
+		 (folder->f->st_mode & S_ISGID) != 0 ? 's' : (folder->f->st_mode & S_IXGRP) != 0 ? 'x': '-',
+		 (folder->f->st_mode & S_IROTH) != 0 ? 'r' : '-',
+		 (folder->f->st_mode & S_IWOTH) != 0 ? 'w' : '-',
+		 (folder->f->st_mode & S_ISVTX) != 0 ? 't' : (folder->f->st_mode & S_IXOTH) != 0 ? 'x': '-');
 	snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
-	snprintf (dest, destlen, tmp, gr->gr_name);
+	snprintf (dest, destlen, tmp, permission);
       }
       else
       {
-	snprintf (tmp, sizeof (tmp), "%%%sld", fmt);
-	snprintf (dest, destlen, tmp, folder->f->st_gid);
+#ifdef USE_IMAP
+	if (strchr(folder->name, '{'))
+	{
+	  snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
+	  snprintf (dest, destlen, tmp, "IMAP");
+	}                                        
+#endif
+      }
+      break;
+    case 'g':
+      if (folder->f != NULL)
+      {
+	if ((gr = getgrgid (folder->f->st_gid)))
+	{
+	  snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
+	  snprintf (dest, destlen, tmp, gr->gr_name);
+	}
+	else
+	{
+	  snprintf (tmp, sizeof (tmp), "%%%sld", fmt);
+	  snprintf (dest, destlen, tmp, folder->f->st_gid);
+	}
+      }
+      else
+      {
+	snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
+	snprintf (dest, destlen, tmp, "");
       }
       break;
     case 'l':
-      snprintf (tmp, sizeof (tmp), "%%%sd", fmt);
-      snprintf (dest, destlen, tmp, folder->f->st_nlink);
+      if (folder->f != NULL)
+      {
+	snprintf (tmp, sizeof (tmp), "%%%sd", fmt);
+	snprintf (dest, destlen, tmp, folder->f->st_nlink);
+      }
+      else
+      {
+	snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
+	snprintf (dest, destlen, tmp, "");
+      }
       break;
     case 'N':
       snprintf (tmp, sizeof (tmp), "%%%sc", fmt);
       snprintf (dest, destlen, tmp, folder->new ? 'N' : ' ');
       break;
     case 's':
-      snprintf (tmp, sizeof (tmp), "%%%sld", fmt);
-      snprintf (dest, destlen, tmp, (long) folder->f->st_size);
-      break;
-    case 'u':
-      if ((pw = getpwuid (folder->f->st_uid)))
+      if (folder->f != NULL)
       {
-	snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
-	snprintf (dest, destlen, tmp, pw->pw_name);
+	snprintf (tmp, sizeof (tmp), "%%%sld", fmt);
+	snprintf (dest, destlen, tmp, (long) folder->f->st_size);
       }
       else
       {
-	snprintf (tmp, sizeof (tmp), "%%%sld", fmt);
-	snprintf (dest, destlen, tmp, folder->f->st_uid);
+	snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
+	snprintf (dest, destlen, tmp, "");
+      }
+      break;
+    case 'u':
+      if (folder->f != NULL)
+      {
+	if ((pw = getpwuid (folder->f->st_uid)))
+	{
+	  snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
+	  snprintf (dest, destlen, tmp, pw->pw_name);
+	}
+	else
+	{
+	  snprintf (tmp, sizeof (tmp), "%%%sld", fmt);
+	  snprintf (dest, destlen, tmp, folder->f->st_uid);
+	}
+      }
+      else
+      {
+	snprintf (tmp, sizeof (tmp), "%%%ss", fmt);
+	snprintf (dest, destlen, tmp, "");
       }
       break;
   }
@@ -250,9 +306,12 @@ static void add_folder (MUTTMENU *m, struct browser_state *state,
       m->data = state->entry;
   }
 
+  if (s != NULL)
+  {
   (state->entry)[state->entrylen].mode = s->st_mode;
   (state->entry)[state->entrylen].mtime = s->st_mtime;
   (state->entry)[state->entrylen].size = s->st_size;
+  }
   (state->entry)[state->entrylen].name = safe_strdup (name);
   (state->entry)[state->entrylen].desc = safe_strdup (buffer);
 
@@ -341,6 +400,13 @@ static int examine_mailboxes (MUTTMENU *menu, struct browser_state *state)
 
   do
   {
+#ifdef USE_IMAP
+    if (tmp->path[0] == '{')
+    {
+      add_folder (menu, state, tmp->path, NULL, tmp->new);
+      continue;
+    }
+#endif
     if (lstat (tmp->path, &s) == -1)
       continue;
 

@@ -177,6 +177,9 @@ enum
   M_PRINT,
   M_AUTOVIEW,
 
+  /* options for socket code */
+  M_NEW_SOCKET,
+
   /* Options for mutt_save_attachment */
   M_SAVE_APPEND
 };
@@ -565,7 +568,6 @@ typedef struct
   int msgnotreadyet;		/* which msg "new" in pager, -1 if none */
 #ifdef USE_IMAP
   void *data;			/* driver specific data */
-  int fd;
 #endif /* USE_IMAP */
 
   short magic;			/* mailbox type */

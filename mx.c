@@ -292,7 +292,7 @@ FILE *mx_open_file_lock (const char *path, const char *mode)
 
 #ifdef USE_IMAP
 
-static int mx_is_imap(const char *p)
+int mx_is_imap(const char *p)
 {
   return p && (*p == '{');
 }

@@ -2939,7 +2939,7 @@ else
   echo "$ac_t""no" 1>&6
 fi
 
-	LIBOBJS="$LIBOBJS imap.o"
+	LIBOBJS="$LIBOBJS imap.o socket.o"
 
 fi
 

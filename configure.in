@@ -392,7 +392,7 @@ AC_ARG_ENABLE(imap, [  --enable-imap              Enable IMAP support],
 [	AC_DEFINE(USE_IMAP)
 	AC_CHECK_LIB(socket, socket)
 	AC_CHECK_LIB(nsl, gethostbyname)
-	LIBOBJS="$LIBOBJS imap.o"
+	LIBOBJS="$LIBOBJS imap.o socket.o"
 ])
 
 AC_ARG_ENABLE(flock, [  --enable-flock             Use flock() to lock files],

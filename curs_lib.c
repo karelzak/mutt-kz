@@ -178,6 +178,7 @@ void mutt_curses_error (const char *fmt, ...)
   vsnprintf (Errorbuf, sizeof (Errorbuf), fmt, ap);
   va_end (ap);
   
+  dprint (1, (debugfile, "%s\n", Errorbuf));
   Errorbuf[ (COLS < sizeof (Errorbuf) ? COLS : sizeof (Errorbuf)) - 2 ] = 0;
 
   BEEP ();
@@ -232,6 +233,8 @@ void mutt_perror (const char *s)
 {
   char *p = strerror (errno);
 
+  dprint (1, (debugfile, "%s: %s (errno = %d)\n", s, 
+      p ? p : "unknown error", errno));
   mutt_error ("%s: %s (errno = %d)", s, p ? p : "unknown error", errno);
 }
 

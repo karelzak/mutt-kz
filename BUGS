@@ -38,3 +38,5 @@
   it doesn't honor $tmpdir under some conditions if
   matching nametemplates exist.
 
+- mutt_gen_msgid() should _always_ rely on the real FQDN,
+  regardless of the hidden_domain feature.
