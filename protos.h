@@ -267,7 +267,7 @@ ADDRESS *alias_reverse_lookup (ADDRESS *);
 	((unsigned char)(c) >= 0xa0)))
 #endif
 
-#define new_pattern() calloc(1, sizeof (pattern_t))
+#define new_pattern() safe_calloc(1, sizeof (pattern_t))
 
 int mutt_pattern_exec (struct pattern_t *pat, pattern_exec_flag flags, CONTEXT *ctx, HEADER *h);
 pattern_t *mutt_pattern_comp (/* const */ char *s, int flags, BUFFER *err);
