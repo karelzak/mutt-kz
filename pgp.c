@@ -1139,9 +1139,10 @@ static BODY *pgp_sign_message (BODY *a)
   t->use_disp = 0;
   t->encoding = ENC7BIT;
 
+  mutt_generate_boundary (&t->parameter);
+  
   mutt_set_parameter ("protocol", "application/pgp-signature", &t->parameter);
   mutt_set_parameter ("micalg", PgpSignMicalg, &t->parameter);
-  mutt_generate_boundary (&t->parameter);
 
   t->parts = a;
   a = t;
@@ -1339,8 +1340,8 @@ static BODY *pgp_encrypt_message (BODY *a, char *keylist, int sign)
   t->encoding = ENC7BIT;
   t->use_disp = 0;
 
-  mutt_set_parameter("protocol", "application/pgp-encrypted", &t->parameter);
   mutt_generate_boundary(&t->parameter);
+  mutt_set_parameter("protocol", "application/pgp-encrypted", &t->parameter);
   
   t->parts = mutt_new_body ();
   t->parts->type = TYPEAPPLICATION;
