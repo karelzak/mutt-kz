@@ -374,6 +374,10 @@ static void init_menu (struct browser_state *state, MUTTMENU *menu, char *title,
   char path[_POSIX_PATH_MAX];
 
   menu->max = state->entrylen;
+
+  if(menu->current >= menu->max)
+    menu->current = menu->max - 1;
+  
   if (buffy)
     snprintf (title, titlelen, "Mailboxes [%d]", mutt_buffy_check (0));
   else
