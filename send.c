@@ -1189,13 +1189,11 @@ main_loop:
 #ifdef _PGPPATH
   if (msg->pgp)
   {
-    if (pgp_get_keys (msg, &pgpkeylist) == -1)
-      goto main_loop;
-
     /* save the decrypted attachments */
     save_content = msg->content;
 
-    if (pgp_protect (msg, pgpkeylist) == -1)
+    if ((pgp_get_keys (msg, &pgpkeylist) == -1) ||
+	(pgp_protect (msg, pgpkeylist) == -1))
     {
       if (msg->content->parts)
       {
@@ -1229,7 +1227,6 @@ main_loop:
   mutt_expand_path (fcc, sizeof (fcc));
   if (*fcc && mutt_strcmp ("/dev/null", fcc) != 0)
   {
-    struct stat st;
     BODY *tmpbody = msg->content;
 #ifdef _PGPPATH
     BODY *save_sig = NULL;
