@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.4i\n"
 "POT-Creation-Date: 2002-01-22 13:12+0100\n"
-"PO-Revision-Date: 2002-01-23 13:48+0200\n"
+"PO-Revision-Date: 2002-02-26 11:49+0200\n"
 "Last-Translator: mutt-ru@woe.spb.ru\n"
 "Language-Team: RUSSIAN <mutt-ru@woe.spb.ru>\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgstr "Удалить"
 
 #: addrbook.c:33 curs_main.c:399 postpone.c:39
 msgid "Undel"
-msgstr "Восст."
+msgstr "Восстановить"
 
 #: addrbook.c:34
 msgid "Select"
@@ -725,7 +725,7 @@ msgstr "Выход"
 
 #: curs_main.c:400 recvattach.c:58
 msgid "Save"
-msgstr "Сохр."
+msgstr "Сохранить"
 
 #: curs_main.c:401 query.c:44
 msgid "Mail"
@@ -733,11 +733,11 @@ msgstr "Создать"
 
 #: curs_main.c:402 pager.c:1443
 msgid "Reply"
-msgstr "Отв."
+msgstr "Ответить"
 
 #: curs_main.c:403
 msgid "Group"
-msgstr "Отв. всем"
+msgstr "Всем"
 
 #: curs_main.c:485
 msgid "Mailbox was externally modified.  Flags may be wrong."
