@@ -240,6 +240,8 @@ int mutt_check_mime_type (const char *s)
     return TYPEAUDIO;
   else if (mutt_strcasecmp ("video", s) == 0)
     return TYPEVIDEO;
+  else if (mutt_strcasecmp ("model", s) == 0)
+    return TYPEMODEL;
   else
     return TYPEOTHER;
 }
