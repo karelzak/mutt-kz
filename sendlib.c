@@ -943,10 +943,11 @@ BODY *mutt_make_message_attach (CONTEXT *ctx, HEADER *hdr, int attach_msg)
   fflush(fp);
   rewind(fp);
 
-  body->hdr         = mutt_new_header();
+  body->hdr = mutt_new_header();
   body->hdr->offset = 0;
-  body->hdr->env    = mutt_read_rfc822_header(fp, body->hdr);
+  body->hdr->env = mutt_read_rfc822_header(fp, body->hdr);
   mutt_update_encoding (body);
+  body->parts = body->hdr->content;
 
   fclose(fp);
   

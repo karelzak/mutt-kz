@@ -645,6 +645,8 @@ int mutt_decode_save_attachment (FILE *fp, BODY *m, char *path,
 {
   STATE s;
   unsigned int saved_encoding = 0;
+  BODY *saved_parts = NULL;
+  HEADER *saved_hdr = NULL;
 
   memset (&s, 0, sizeof (s));
   s.flags = displaying ? M_DISPLAY : 0;
@@ -683,7 +685,11 @@ int mutt_decode_save_attachment (FILE *fp, BODY *m, char *path,
     m->encoding = ENC8BIT;
     m->offset = 0;
     if (mutt_is_message_type(m->type, m->subtype))
+    {
+      saved_parts = m->parts;
+      saved_hdr = m->hdr;
       m->parts = mutt_parse_messageRFC822 (s.fpin, m);
+    }
   }
   else
     s.fpin = fp;
@@ -695,8 +701,12 @@ int mutt_decode_save_attachment (FILE *fp, BODY *m, char *path,
   {
     m->length = 0;
     m->encoding = saved_encoding;
-    if (m->parts)
-      mutt_free_body (&m->parts);
+    if (saved_parts)
+    {
+      mutt_free_header (&m->hdr);
+      m->parts = saved_parts;
+      m->hdr = saved_hdr;
+    }
     fclose (s.fpin);
   }
 
