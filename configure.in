@@ -666,10 +666,19 @@ AC_SUBST(LIBIMAPDEPS)
 dnl -- iconv/gettext --
 
 MUTT_AM_GNU_GETTEXT
+AC_CHECK_HEADERS(iconv.h,
+        [AC_MSG_CHECKING(whether iconv.h defines iconv_t)
+         AC_EGREP_HEADER([typedef.*iconv_t],iconv.h,
+                [AC_MSG_RESULT(yes)
+                 AC_DEFINE(HAVE_ICONV_T_DEF, 1,
+                        [Define if <iconv.h> defines iconv_t.])],
+                 AC_MSG_RESULT(no))])
+
 if test "$am_cv_func_iconv" != "yes"
 then
-  AC_MSG_ERROR([Unable to find an iconv function. See INSTALL for help])
-fi
+#  AC_MSG_ERROR([Unable to find an iconv function. See INSTALL for help])
+  AC_MSG_WARN([Unable to find an iconv function. See INSTALL for help])
+else
 
 dnl (1) Some implementations of iconv won't convert from UTF-8 to UTF-8.
 dnl (2) In glibc-2.1.2 and earlier there is a bug that messes up ob and
@@ -735,6 +744,8 @@ if test "$mutt_cv_iconv_nontrans" = yes; then
 else
   AC_DEFINE(ICONV_NONTRANS, 0)
 fi
+
+fi # libiconv
 
 CPPFLAGS="$CPPFLAGS -I\$(top_srcdir)/intl"
 
