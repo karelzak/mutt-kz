@@ -786,7 +786,7 @@ static int imap_exec (char *buf, size_t buflen,
   }
   while (mutt_strncmp (buf, seq, SEQLEN) != 0);
 
-  if (!selctx->closing && 
+  if (selctx && !selctx->closing && 
       (SELCTX_DATA->status == IMAP_NEW_MAIL || 
        SELCTX_DATA->status == IMAP_EXPUNGE))
   {
