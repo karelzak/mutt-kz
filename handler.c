@@ -65,73 +65,113 @@ int Index_64[128] = {
 
 void mutt_decode_xbit (STATE *s, long len, int istext)
 {
-  int linelen;
-  char buffer[LONG_STRING];
+  int c;
 
   if (istext)
   {
-    while (len > 0)
+    if(s->prefix) state_puts(s->prefix, s);
+    while ((c = fgetc(s->fpin)) != EOF && len--)
     {
-      if (fgets (buffer, LONG_STRING, s->fpin) == 0) return;
-      linelen = strlen (buffer);
-      len -= linelen;
-      if (linelen >= 2 && buffer[linelen-2] == '\r')
+      if (c == '\r' && len)
       {
-	buffer[linelen-2] = '\n';
-	buffer[linelen-1] = 0;
+	if((c = fgetc(s->fpin)) != '\n')
+	  ungetc(c, s->fpin);
+	else
+	  len--;
       }
-      if (s->prefix) state_puts (s->prefix, s);
-      state_puts (buffer, s);
+      fputc(c, s->fpout);
+      if(c == '\n' && s->prefix)
+	state_puts (s->prefix, s);
     }
   }
   else
     mutt_copy_bytes (s->fpin, s->fpout, len);
 }
 
+static int handler_state_fgetc(STATE *s)
+{
+  int ch;
+  
+  if((ch = fgetc(s->fpin)) == EOF)
+  {
+    dprint(1, (debugfile, "handler_state_fgetc: unexpected EOF.\n"));
+    state_puts ("[-- Error: unexpected end of file! --]\n", s);
+  }
+  return ch;
+}
+
 void mutt_decode_quoted (STATE *s, long len, int istext)
 {
-  char *c, buffer[LONG_STRING];
-  int ch, soft = 0;
+  int ch, lbreak = 1;
 
   while (len > 0)
   {
-    if (fgets (buffer, LONG_STRING, s->fpin) == NULL)
-    {
-      dprint (1, (debugfile, "mutt_decode_quoted: unexpected EOF.\n"));
-      state_puts ("[-- Error: unexpected end of file! --]\n", s);
+    if ((ch = handler_state_fgetc(s)) == EOF)
       break;
-    }
-    c = buffer;
-    len -= strlen (buffer);
-    if (s->prefix && !soft) state_puts (s->prefix, s);
-    soft = 0;
-    while (*c)
+
+    len--;
+    
+    if (s->prefix && lbreak) state_puts (s->prefix, s);
+    lbreak = 0;
+    if (ch == '=')
     {
-      if (*c == '=')
+      int ch1, ch2;
+      
+      if((ch1 = handler_state_fgetc(s)) == EOF)
+	break;
+
+      len--;
+      
+      if (ch1 == '\n' || ch1 == '\r' || ch1 == ' ' || ch1 == '\t')
       {
-        if (c[1] == '\n' || c[1] == '\r' || c[1] == ' ' || c[1] == '\t')
+	/* Skip whitespace at the end of the line since MIME does not
+	 * allow for it
+	 */
+	while((ch1 = handler_state_fgetc(s)) != EOF)
 	{
-          /* Skip whitespace at the end of the line since MIME does not
-           * allow for it
-	   */
-          soft = 1;
-          break;
-        }
-        ch = hexval ((int) c[1]) << 4;
-        ch |= hexval ((int) c[2]);
-        state_putc (ch, s);
-        c += 3;
-      }
-      else if (istext && c[0] == '\r' && c[1] == '\n')
-      {
-        state_putc ('\n', s);
-        break;
+	  len--;
+	  if(ch1 == '\n')
+	  {
+	    state_putc(ch1, s);
+	    lbreak = 1;
+	    break;
+	  }
+	}
+	
+	if(ch1 == EOF) 
+	  break;
       }
       else
       {
-        state_putc (*c, s);
-        c++;
+	if((ch2 = handler_state_fgetc(s)) == EOF)
+	  break;
+
+	len--;
+	
+        ch = hexval (ch1) << 4;
+        ch |= hexval (ch2);
+        state_putc (ch, s);
+	if(ch == '\n')
+	  lbreak = 1;
       }
+    } /* ch == '=' */
+    else if (istext && ch == '\r')
+    {
+      int ch1 = fgetc(s->fpin);
+      if(ch1 == '\n')
+      {
+	state_putc ('\n', s);
+	lbreak = 1;
+      }
+      else
+      {
+	ungetc(ch1, s->fpin);
+	state_putc (ch, s);
+      }
+    }
+    else
+    {
+      state_putc (ch, s);
     }
   }
 }
