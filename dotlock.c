@@ -17,6 +17,12 @@
  *     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */ 
 
+/*
+ * This module either be compiled into Mutt, or it can be
+ * built as a separate program. For building it
+ * separately, define the DL_STANDALONE preprocessor
+ * macro.
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,44 +43,74 @@
 
 #include "dotlock.h"
 #include "config.h"
+
+#ifdef DL_STANDALONE
 #include "reldate.h"
-
-#define MAXLINKS 1024 /* maximum link depth */
-#define LONG_STRING 1024
-
-#define strfcpy(A,B,C) strncpy(A,B,C), *(A+(C)-1)=0
-
-#ifdef USE_SETGID
-#ifdef HAVE_SETEGID
-#define SETEGID setegid
-#else
-#define SETEGID setgid
-#endif
 #endif
 
-#ifndef S_ISLNK
-#define S_ISLNK(x) (((x) & S_IFMT) == S_IFLNK ? 1 : 0)
-#endif
+# define MAXLINKS 1024 /* maximum link depth */
+
+# ifdef DL_STANDALONE
+
+# define LONG_STRING 1024
+# define MAXLOCKATTEMPT 5
+
+# define strfcpy(A,B,C) strncpy(A,B,C), *(A+(C)-1)=0
+
+# ifdef USE_SETGID
+
+#  ifdef HAVE_SETEGID
+#   define SETEGID setegid
+#  else
+#   define SETEGID setgid
+#  endif
+#  ifndef S_ISLNK
+#   define S_ISLNK(x) (((x) & S_IFMT) == S_IFLNK ? 1 : 0)
+#  endif
+
+# endif
+
+# ifndef HAVE_SNPRINTF
+extern int snprintf(char *, size_t, const char *, ...);
+# endif
+
+#else  /* DL_STANDALONE */
+
+# ifdef USE_SETGID
+#  error Do not try to compile dotlock as a mutt module when requiring egid switching!
+# endif
+
+# include "mutt.h"
+# include "mx.h"
+
+#endif /* DL_STANDALONE */
 
 static short f_try = 0;
 static short f_force = 0;
 static short f_unlock = 0;
 static short f_priv = 0;
-static int   Retry = 5;
+static int   Retry = MAXLOCKATTEMPT;
+
+#ifdef DL_STANDALONE
 static char *Hostname;
+#endif
 
 #ifdef USE_SETGID
 static gid_t UserGid;
 static gid_t MailGid;
 #endif
 
-#ifndef HAVE_SNPRINTF
-extern int snprintf(char *, size_t, const char *, ...);
-#endif
-
 static int dotlock_deference_symlink(char *, size_t, const char *);
 static int dotlock_prepare(char *, size_t, const char *);
+
+#ifdef DL_STANDALONE
 static int dotlock_init_privs(void);
+static void usage(const char *);
+#endif
+
+static void dotlock_expand_link(char *, const char *, const char *);
+static void BEGIN_PRIVILEGED(void);
+static void END_PRIVILEGED(void);
 
 /* These functions work on the current directory.
  * Invoke dotlock_prepare() before and check their
@@ -86,10 +122,7 @@ static int dotlock_unlock(const char *);
 static int dotlock_lock(const char *);
 
 
-static void usage(const char *);
-static void dotlock_expand_link(char *, const char *, const char *);
-static void BEGIN_PRIVILEGED(void);
-static void END_PRIVILEGED(void);
+#ifdef DL_STANDALONE
 
 int main(int argc, char **argv)
 {
@@ -161,7 +194,6 @@ int main(int argc, char **argv)
 
 }
 
-
 /* 
  * Determine our effective group ID, and drop 
  * privileges.
@@ -173,11 +205,12 @@ int main(int argc, char **argv)
  * 
  */
 
+
 static int
 dotlock_init_privs(void)
 {
 
-#ifdef USE_SETGID
+# ifdef USE_SETGID
   
   UserGid = getgid();
   MailGid = getegid();
@@ -185,12 +218,61 @@ dotlock_init_privs(void)
   if(SETEGID(UserGid) != 0)
     return -1;
 
-#endif
+# endif
 
   return 0;
 }
   
 
+#else  /* DL_STANDALONE */
+
+/* 
+ * This function is intended to be invoked from within
+ * mutt instead of mx.c's invoke_dotlock().
+ * 
+ */
+
+int dotlock_invoke(const char *path, int flags, int retry)
+{
+  int currdir;
+  int r;
+  char realpath[_POSIX_PATH_MAX];
+  
+  if((currdir = open(".", O_RDONLY)) == -1)
+    return DL_EX_ERROR;
+  
+  if(!(flags & DL_FL_RETRY) || retry)
+    Retry = MAXLOCKATTEMPT;
+  else
+    Retry = 0;
+  
+  f_priv = f_try = f_unlock = f_force = 0;
+  
+  if(flags & DL_FL_FORCE)
+    f_force = 1;
+
+  r = DL_EX_ERROR;
+  if(dotlock_prepare(realpath, sizeof(realpath), path) == -1)
+    goto bail;
+  
+  if(flags & DL_FL_TRY)
+    r = dotlock_try();
+  else if(flags & DL_FL_UNLOCK)
+    r = dotlock_unlock(realpath);
+  else /* lock */
+    r = dotlock_lock(realpath);
+  
+ bail:
+  
+  fchdir(currdir);
+  close(currdir);
+  
+  return r;
+}
+    
+#endif  /* DL_STANDALONE */
+  
+  
 /*
  * Get privileges 
  * 
@@ -241,6 +323,8 @@ END_PRIVILEGED(void)
 #endif
 }
 
+#ifdef DL_STANDALONE
+
 /*
  * Usage information.
  * 
@@ -269,6 +353,7 @@ usage(const char *av0)
   exit(DL_EX_ERROR);
 }
 
+#endif
 
 /*
  * Access checking: Let's avoid to lock other users' mail
@@ -609,16 +694,20 @@ dotlock_unlock(const char *realpath)
 static int
 dotlock_try(void)
 {
+#ifdef USE_SETGID
   struct stat sb;
+#endif
 
   if(access(".", W_OK) == 0)
     return DL_EX_OK;
 
+#ifdef USE_SETGID
   if(stat(".", &sb) == 0)
   {
     if((sb.st_mode & S_IWGRP) == S_IWGRP && sb.st_gid == MailGid)
       return DL_EX_NEED_PRIVS;
   }
+#endif
 
   return DL_EX_IMPOSSIBLE;
 }

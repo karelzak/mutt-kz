@@ -61,19 +61,13 @@
 
 #define mutt_is_spool(s)  (strcmp (Spoolfile, s) == 0)
 
-#define MAXLOCKATTEMPT 5
-
 #ifdef USE_DOTLOCK
 /* parameters: 
  * path - file to lock
  * retry - should retry if unable to lock?
  */
 
-#define DL_FL_TRY	(1 << 0)
-#define DL_FL_UNLOCK	(1 << 1)
-#define DL_FL_USEPRIV	(1 << 2)
-#define DL_FL_FORCE	(1 << 3)
-#define DL_FL_RETRY	(1 << 4)
+#ifdef DL_STANDALONE
 
 static int invoke_dotlock(const char *path, int flags, int retry)
 {
@@ -96,6 +90,12 @@ static int invoke_dotlock(const char *path, int flags, int retry)
   return mutt_system(cmd);
 }
 
+#else 
+
+#define invoke_dotlock dotlock_invoke
+
+#endif
+
 static int dotlock_file (const char *path, int retry)
 {
   int r;
@@ -104,17 +104,20 @@ static int dotlock_file (const char *path, int retry)
   if(retry) retry = 1;
 
 retry_lock:
-  mutt_message("Trying to lock %s...", path);
+  mutt_clear_error();
   if((r = invoke_dotlock(path, flags, retry)) == DL_EX_EXIST)
   {
-    if(retry && mutt_yesorno("Lock count exceeded, remove lock?", 1) == 1)
+    char msg[LONG_STRING];
+
+    snprintf(msg, sizeof(msg), "Lock count exceedet, remove lock for %s?",
+	     path);
+    if(retry && mutt_yesorno(msg, 1) == 1)
     {
       flags |= DL_FL_FORCE;
       retry--;
       goto retry_lock;
     }
   }
-  mutt_clear_error();
   return (r == DL_EX_OK ? 0 : -1);
 }
 

@@ -56,7 +56,7 @@ NONEXPORT=pgp.c pgp.h pgpinvoke.c pgpkey.c pgppubring.c sha.h sha1dgst.c \
 	gnupgparse.c sha_locl.h OPS.PGP doc/pgp-Notes.txt doc/language.txt \
 	doc/language50.txt
 
-all: mutt dotlock
+all: mutt @DOTLOCK_TARGET@
 
 mutt: keymap_defs.h $(OBJS) $(REGEX)
 	$(CC) -o mutt $(OBJS) $(REGEX) $(LDFLAGS) $(LIBS)
@@ -67,13 +67,10 @@ keymap_defs.h: Makefile $(OPS)
 	rm -f keymap_defs.h
 	$(srcdir)/gen_defs $(OPS) > keymap_defs.h
 
-install: mutt dotlock install.doc
+install: mutt install.doc @DOTLOCK_INSTALL_TARGET@
 	$(srcdir)/mkinstalldirs $(bindir)
-	$(srcdir)/mkinstalldirs $(libdir)
 	-mv -f $(bindir)/mutt $(bindir)/mutt.old
-	-mv -f $(libdir)/dotlock $(libdir)/dotlock.old
 	$(INSTALL) -m 755 mutt $(bindir)
-	$(INSTALL) @DOTLOCK_GROUP@ -m @DOTLOCK_PERMISSION@ dotlock $(libdir)
 	-if [ ! -f $(sharedir)/Muttrc ]; then \
 		$(srcdir)/mkinstalldirs $(sharedir); \
 		$(INSTALL) -m 644 $(srcdir)/Muttrc $(sharedir); \
@@ -82,11 +79,16 @@ install: mutt dotlock install.doc
 		$(INSTALL) -m 644 $(srcdir)/mime.types $(sharedir); \
 	fi
 
+install.dotlock: dotlock
+	$(srcdir)/mkinstalldirs $(libdir)
+	-mv -f $(libdir)/dotlock $(libdir)/dotlock.old
+	$(INSTALL) @DOTLOCK_GROUP@ -m @DOTLOCK_PERMISSION@ dotlock $(libdir)
+
 install.doc: 
 	( cd $(srcdir)/doc &&  make install )
 
 uninstall: uninstall.doc
-	rm -f $(bindir)/mutt $(sharedir)/Muttrc
+	rm -f $(bindir)/mutt $(sharedir)/Muttrc $(libdir)/dotlock
 
 uninstall.doc:
 	( cd $(srcdir)/doc/ && make uninstall )
