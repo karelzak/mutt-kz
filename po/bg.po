@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.4\n"
-"POT-Creation-Date: 2002-05-30 20:51+0200\n"
+"POT-Creation-Date: 2003-03-19 23:12+0100\n"
 "PO-Revision-Date: 2002-06-29 19:50+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=windows-1251\n"
@@ -85,7 +85,7 @@ msgstr "Запис във файл: "
 msgid "Alias added."
 msgstr "Псевдонимът е добавен."
 
-#: attach.c:111 attach.c:238 attach.c:431 attach.c:915
+#: attach.c:111 attach.c:238 attach.c:430 attach.c:920
 msgid "Can't match nametemplate, continue?"
 msgstr "Няма шаблон с това име. Да продължа ли?"
 
@@ -95,7 +95,7 @@ msgstr "Няма шаблон с това име. Да продължа ли?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "Записът \"compose\" в mailcap изисква %%s"
 
-#: attach.c:131 attach.c:256 commands.c:190 compose.c:1154 curs_lib.c:145
+#: attach.c:131 attach.c:256 commands.c:190 compose.c:1153 curs_lib.c:145
 #: curs_lib.c:374
 #, c-format
 msgid "Error running \"%s\"!"
@@ -120,37 +120,37 @@ msgstr "В mailcap липсва вписване \"compose\" за %s. Създавам празен файл."
 msgid "Mailcap Edit entry requires %%s"
 msgstr "Вписването \"edit\" в mailcap изисква %%s"
 
-#: attach.c:269
+#: attach.c:268
 #, c-format
 msgid "No mailcap edit entry for %s"
 msgstr "В mailcap липсва вписване \"edit\" за %s"
 
-#: attach.c:397
+#: attach.c:396
 msgid "No matching mailcap entry found.  Viewing as text."
 msgstr "Няма подходящо mailcap вписване. Показвам прикачения файл като текст."
 
-#: attach.c:410
+#: attach.c:409
 msgid "MIME type not defined.  Cannot view attachment."
 msgstr "Недефиниран MIME тип. Прикаченият файл не може да бъде показан."
 
-#: attach.c:500
+#: attach.c:499
 msgid "Cannot create filter"
 msgstr "Грешка при създаване на филтър"
 
-#: attach.c:629 attach.c:661 attach.c:948 attach.c:1006 handler.c:1549
+#: attach.c:628 attach.c:660 attach.c:953 attach.c:1011 handler.c:1549
 #: pgpkey.c:566 pgpkey.c:755
 msgid "Can't create filter"
 msgstr "Грешка при създаване на филтър"
 
-#: attach.c:736 recvattach.c:419 recvattach.c:479
+#: attach.c:741 recvattach.c:419 recvattach.c:479
 msgid "Attachment saved."
 msgstr "Прикаченият файл е записан на диска."
 
-#: attach.c:787
+#: attach.c:792
 msgid "Write fault!"
 msgstr "Грешка при запис!"
 
-#: attach.c:1029
+#: attach.c:1034
 msgid "I don't know how to print that!"
 msgstr "Не знам как да го отпечатам!"
 
@@ -162,88 +162,90 @@ msgstr "Директория"
 msgid "Mask"
 msgstr "Маска"
 
-#: browser.c:375 browser.c:963
+#: browser.c:377 browser.c:965
 #, c-format
 msgid "%s is not a directory."
 msgstr "%s не е директория."
 
-#: browser.c:495
+#: browser.c:497
 #, c-format
 msgid "Mailboxes [%d]"
 msgstr "Пощенски кутии [%d]"
 
-#: browser.c:502
+#: browser.c:504
 #, c-format
 msgid "Subscribed [%s], File mask: %s"
 msgstr "Абонирани [%s], Файлова маска: %s"
 
-#: browser.c:506
+#: browser.c:508
 #, c-format
 msgid "Directory [%s], File mask: %s"
 msgstr "Директория [%s], Файлова маска: %s"
 
-#: browser.c:518
+#: browser.c:520
 msgid "Can't attach a directory!"
 msgstr "Не може да прикачвате директория!"
 
-#: browser.c:649 browser.c:1030 browser.c:1123
+#: browser.c:651 browser.c:1032 browser.c:1125
 msgid "No files match the file mask"
 msgstr "Няма файлове, отговарящи на маската"
 
-#: browser.c:855
+#: browser.c:857
 msgid "Create is only supported for IMAP mailboxes"
 msgstr "Само IMAP пощенски кутии могат да бъдат създавани"
 
-#: browser.c:875
+#: browser.c:877
 msgid "Delete is only supported for IMAP mailboxes"
 msgstr "Само IMAP пощенски кутии могат да бъдат изтривани"
 
-#: browser.c:883
+#: browser.c:885
 #, c-format
 msgid "Really delete mailbox \"%s\"?"
 msgstr "Действително ли искате да изтриете пощенската кутия \"%s\"?"
 
-#: browser.c:897
+#: browser.c:899
 msgid "Mailbox deleted."
 msgstr "Пощенската кутия е изтрита."
 
-#: browser.c:903
+#: browser.c:905
 msgid "Mailbox not deleted."
 msgstr "Пощенската кутия не е изтрита."
 
-#: browser.c:922
+#: browser.c:924
 msgid "Chdir to: "
 msgstr "Смяна на директорията: "
 
-#: browser.c:956 browser.c:1023
+#: browser.c:958 browser.c:1025
 msgid "Error scanning directory."
 msgstr "Грешка при прочитене на директорията."
 
-#: browser.c:974
+#: browser.c:976
 msgid "File Mask: "
 msgstr "Файлова маска: "
 
-#: browser.c:1046
+#: browser.c:1048
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr "Обратно подреждане по: дата(d), азбучен ред(a), размер(z) или неподредени(n)? "
+msgstr ""
+"Обратно подреждане по: дата(d), азбучен ред(a), размер(z) или неподредени"
+"(n)? "
 
-#: browser.c:1047
+#: browser.c:1049
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "Подреждане по: дата(d), азбучен ред(a), размер(z) или неподредени(n)? "
 
-#: browser.c:1048
+#: browser.c:1050
 msgid "dazn"
 msgstr "dazn"
 
-#: browser.c:1110
+#: browser.c:1112
 msgid "New file name: "
 msgstr "Ново име на файла: "
 
-#: browser.c:1141
+#: browser.c:1143
 msgid "Can't view a directory"
 msgstr "Директорията не може да бъде показана"
 
-#: browser.c:1159
+#: browser.c:1161
 msgid "Error trying to view file"
 msgstr "Грешка при показване на файла"
 
@@ -408,12 +410,16 @@ msgstr "Писмата не могат да бъдат отпечатани"
 #: commands.c:467
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr "Обратно подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател(o)/нишка(t)/неподредени(u)/размер(z)/стойност(c)? :"
+msgstr ""
+"Обратно подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател"
+"(o)/нишка(t)/неподредени(u)/размер(z)/стойност(c)? :"
 
 #: commands.c:468
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr "Подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател(o)/нишка(t)/неподредени(u)/размер(z)/стойност(c)? :"
+msgstr ""
+"Подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател(o)/нишка"
+"(t)/неподредени(u)/размер(z)/стойност(c)? :"
 
 #: commands.c:469
 msgid "dfrsotuzc"
@@ -604,51 +610,51 @@ msgstr "Невалидна кодова таблица."
 msgid "Save a copy of this message?"
 msgstr "Запис на копие от това писмо?"
 
-#: compose.c:982
+#: compose.c:981
 msgid "Rename to: "
 msgstr "Преименуване в: "
 
-#: compose.c:987 editmsg.c:96 sendlib.c:906
+#: compose.c:986 editmsg.c:95 sendlib.c:906
 #, c-format
 msgid "Can't stat %s: %s"
 msgstr "Грешка при четене на записът за %s: %s"
 
-#: compose.c:1013
+#: compose.c:1012
 msgid "New file: "
 msgstr "Нов файл: "
 
-#: compose.c:1026
+#: compose.c:1025
 msgid "Content-Type is of the form base/sub"
 msgstr "Полето Content-Type има формата базов-тип/подтип"
 
-#: compose.c:1032
+#: compose.c:1031
 #, c-format
 msgid "Unknown Content-Type %s"
 msgstr "Непознат Content-Type %s"
 
-#: compose.c:1045
+#: compose.c:1044
 #, c-format
 msgid "Can't create file %s"
 msgstr "Грешка при създаване на файла %s"
 
-#: compose.c:1053
+#: compose.c:1052
 msgid "What we have here is a failure to make an attachment"
 msgstr "Грешка при създаване на прикачения файл"
 
-#: compose.c:1115
+#: compose.c:1114
 msgid "Postpone this message?"
 msgstr "Запис на черновата?"
 
-#: compose.c:1172
+#: compose.c:1171
 msgid "Write message to mailbox"
 msgstr "Запис на писмото в пощенска кутия"
 
-#: compose.c:1175
+#: compose.c:1174
 #, c-format
 msgid "Writing message to %s ..."
 msgstr "Запис на писмото в %s ..."
 
-#: compose.c:1184
+#: compose.c:1183
 msgid "Message written."
 msgstr "Писмото е записано."
 
@@ -898,10 +904,12 @@ msgstr ""
 "~b адрес\tдобавяне на адреси към полето Bcc:\n"
 "~c адреси\tдобавяне на адреси към полето Cc:\n"
 "~f писма\tвмъкване на писма\n"
-"~F писма\tсъщото като ~f, с изключение на това, че се вмъкват и заглавните части\n"
+"~F писма\tсъщото като ~f, с изключение на това, че се вмъкват и заглавните "
+"части\n"
 "~h\t\tредактиране на заглавната част\n"
 "~m писма\tвмъкване и цитиране на писма\n"
-"~M писма\tсъщото като ~m, с изключение на това, че се вмъкват и заглавните части\n"
+"~M писма\tсъщото като ~m, с изключение на това, че се вмъкват и заглавните "
+"части\n"
 "~p\t\tотпечатване на писмото\n"
 "~q\t\tзапис на файла и затваряне на редактора\n"
 "~r файл\t\tотваряне на файла в редактора\n"
@@ -957,25 +965,25 @@ msgstr "грешка при създаване на временна пощенска кутия: %s"
 msgid "could not write temporary mail folder: %s"
 msgstr "грешка при запис във временната пощенска кутия: %s"
 
-#: editmsg.c:102
+#: editmsg.c:101
 msgid "Message file is empty!"
 msgstr "Файлът с писмото е празен!"
 
-#: editmsg.c:109
+#: editmsg.c:108
 msgid "Message not modified!"
 msgstr "Писмото е непроменено!"
 
-#: editmsg.c:117
+#: editmsg.c:116
 #, c-format
 msgid "Can't open message file: %s"
 msgstr "Грешка при отваряне на файла: %s"
 
-#: editmsg.c:124 editmsg.c:152
+#: editmsg.c:123 editmsg.c:151
 #, c-format
 msgid "Can't append to folder: %s"
 msgstr "Грешка при добавяне към пощенската кутия: %s"
 
-#: editmsg.c:183
+#: editmsg.c:182
 #, c-format
 msgid "Error. Preserving temporary file: %s"
 msgstr "Грешка. Запазване на временния файл: %s"
@@ -990,7 +998,9 @@ msgstr "Изключване на индикатор"
 
 #: handler.c:1330
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
-msgstr "[-- Грешка: Невъзможно е показването на която и да е от частите Multipart/Altermative! --]\n"
+msgstr ""
+"[-- Грешка: Невъзможно е показването на която и да е от частите Multipart/"
+"Altermative! --]\n"
 
 #: handler.c:1448
 #, c-format
@@ -1024,7 +1034,8 @@ msgstr "[-- Auto view stderr of %s --]\n"
 
 #: handler.c:1629
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
-msgstr "[-- Грешка: message/external-body няма параметри за метод на достъп --]\n"
+msgstr ""
+"[-- Грешка: message/external-body няма параметри за метод на достъп --]\n"
 
 #: handler.c:1648
 #, c-format
@@ -1319,7 +1330,8 @@ msgstr "Отписване от %s..."
 #. Unable to fetch headers for lower versions
 #: imap/message.c:74
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr "Грешка при получаване на заглавните части от тази версия на IMAP-сървъра."
+msgstr ""
+"Грешка при получаване на заглавните части от тази версия на IMAP-сървъра."
 
 #: imap/message.c:84
 #, c-format
@@ -1357,102 +1369,102 @@ msgstr "Копиране на писмо %s в %s..."
 msgid "Continue?"
 msgstr "Да продължа ли?"
 
-#: init.c:492
+#: init.c:493
 msgid "alias: no address"
 msgstr "alias: липсва адрес"
 
-#: init.c:592
+#: init.c:593
 msgid "invalid header field"
 msgstr "невалидно заглавно поле"
 
-#: init.c:645
+#: init.c:646
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: непознат метод за подреждане"
 
-#: init.c:757
+#: init.c:758
 #, c-format
 msgid "mutt_restore_default(%s): error in regexp: %s\n"
 msgstr "mutt_restore_default(%s): грешка в регулярния израз: %s\n"
 
-#: init.c:820
+#: init.c:821
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: непозната променлива"
 
-#: init.c:829
+#: init.c:830
 msgid "prefix is illegal with reset"
 msgstr "при \"reset\" не е позволен префикс"
 
-#: init.c:835
+#: init.c:836
 msgid "value is illegal with reset"
 msgstr "стойността е непозволена с \"reset\""
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is set"
 msgstr "%s е включен"
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is unset"
 msgstr "%s не е включен"
 
-#: init.c:1080
+#: init.c:1081
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: невалиден тип на пощенската кутия"
 
-#: init.c:1105 init.c:1150
+#: init.c:1106 init.c:1151
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: невалидна стойност"
 
-#: init.c:1211
+#: init.c:1212
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: непознат тип"
 
-#: init.c:1254
+#: init.c:1255
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Грешка в %s, ред %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1270
+#: init.c:1271
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: грешки в %s"
 
-#: init.c:1271
+#: init.c:1272
 #, c-format
 msgid "source: reading aborted due too many errors in %s"
 msgstr "source: вмъкването е прекъснато поради твърде много грешки в %s"
 
-#: init.c:1285
+#: init.c:1286
 #, c-format
 msgid "source: error at %s"
 msgstr "source: грешка при %s"
 
-#: init.c:1290
+#: init.c:1291
 msgid "source: too many arguments"
 msgstr "source: твърде много аргументи"
 
-#: init.c:1341
+#: init.c:1342
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: непозната команда"
 
-#: init.c:1697
+#: init.c:1698
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Грешка в командния ред: %s\n"
 
-#: init.c:1746
+#: init.c:1747
 msgid "unable to determine home directory"
 msgstr "не мога да установя коя директория е home"
 
-#: init.c:1754
+#: init.c:1755
 msgid "unable to determine username"
 msgstr "не мога да установя потребителското име"
 
@@ -1554,7 +1566,9 @@ msgstr "отписване от текущо избраната пощенска кутия (само IMAP)"
 
 #: keymap_alldefs.h:16
 msgid "toggle view all/subscribed mailboxes (IMAP only)"
-msgstr "включване/изключване показването на всички или само абонираните пощенски кутии (само IMAP)"
+msgstr ""
+"включване/изключване показването на всички или само абонираните пощенски "
+"кутии (само IMAP)"
 
 #: keymap_alldefs.h:17
 msgid "change directories"
@@ -1726,7 +1740,9 @@ msgstr "показване пълния адрес на подателя"
 
 #: keymap_alldefs.h:59
 msgid "display message and toggle header weeding"
-msgstr "показване на писмо и включване/изключване показването на всички заглавни части"
+msgstr ""
+"показване на писмо и включване/изключване показването на всички заглавни "
+"части"
 
 #: keymap_alldefs.h:60
 msgid "display a message"
@@ -2034,7 +2050,9 @@ msgstr "скок към началото на писмото"
 
 #: keymap_alldefs.h:136
 msgid "pipe message/attachment to a shell command"
-msgstr "изпращане на писмо или прикачен файл към команда на командния интерпретатор (pipe)"
+msgstr ""
+"изпращане на писмо или прикачен файл към команда на командния интерпретатор "
+"(pipe)"
 
 #: keymap_alldefs.h:137
 msgid "move to the previous entry"
@@ -2170,7 +2188,8 @@ msgstr "показване версията и датата на Mutt"
 
 #: keymap_alldefs.h:170
 msgid "view attachment using mailcap entry if necessary"
-msgstr "показване на прикачен файл, с използване на mailcap вписване при необходимост"
+msgstr ""
+"показване на прикачен файл, с използване на mailcap вписване при необходимост"
 
 #: keymap_alldefs.h:171
 msgid "show MIME attachments"
@@ -2269,8 +2288,9 @@ msgstr ""
 "За да съобщите за грешка, моля използвайте скрипта flea(1).\n"
 
 #: main.c:44
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-2001 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-2002 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -2281,14 +2301,15 @@ msgstr ""
 "при определени условия; напишете `mutt -vv' за повече подробности.\n"
 
 #: main.c:50
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-2001 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1996-2001 Brandon Long <blong@fiction.net>\n"
-"Copyright (C) 1997-2001 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-2001 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1999-2001 Brendan Cully <brendan@kublai.com>\n"
-"Copyright (C) 1999-2001 Tommi Komulainen <Tommi.Komulainen@iki.fi>\n"
-"Copyright (C) 2000-2001 Edmund Grimley Evans <edmundo@rano.org>\n"
+"Copyright (C) 1996-2002 Michael R. Elkins <me@mutt.org>\n"
+"Copyright (C) 1996-2002 Brandon Long <blong@fiction.net>\n"
+"Copyright (C) 1997-2002 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-2002 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1999-2002 Brendan Cully <brendan@kublai.com>\n"
+"Copyright (C) 1999-2002 Tommi Komulainen <Tommi.Komulainen@iki.fi>\n"
+"Copyright (C) 2000-2002 Edmund Grimley Evans <edmundo@rano.org>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -2318,7 +2339,8 @@ msgstr ""
 "Мнозина, неспоменати тук, съдействаха с много код, поправки и предложения\n"
 "\n"
 "    Тази програма е свободен софтуер; можете да я разпространявате и/или\n"
-"    променяте съобразно правилата на GNU General Public License, публикувани\n"
+"    променяте съобразно правилата на GNU General Public License, "
+"публикувани\n"
 "    от Фондацията за свободен софтуер, използвайки версия 2 на лиценза или\n"
 "    (по Ваше желание) по-късна версия.\n"
 "\n"
@@ -2328,7 +2350,8 @@ msgstr ""
 "    Вижте GNU General Public License за повече подробности.\n"
 "\n"
 "    Би трябвало да сте получили копие от GNU General Public License\n"
-"    заедно с тази програма; ако това не е така, моля пишете на Free Software\n"
+"    заедно с тази програма; ако това не е така, моля пишете на Free "
+"Software\n"
 "    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111, USA.\n"
 
 #: main.c:88
@@ -2363,8 +2386,9 @@ msgid ""
 msgstr ""
 "Стартиране: mutt [ -nRyzZ ] [ -e <команда> ] [ -F <файл> ] [ -m <тип> ] [ -f "
 "<файл> ]\n"
-"       mutt [ -nx ] [ -e <команда> ] [ -a <файл> ] [ -F <файл> ] [ -H <файл> ] "
-"[ -i <файл> ] [ -s <тема> ] [ -b <адрес> ] [ -c <адрес> ] <адрес> [ ... ]\n"
+"       mutt [ -nx ] [ -e <команда> ] [ -a <файл> ] [ -F <файл> ] [ -H "
+"<файл> ] [ -i <файл> ] [ -s <тема> ] [ -b <адрес> ] [ -c <адрес> ] <адрес> "
+"[ ... ]\n"
 "       mutt [ -n ] [ -e <команда> ] [ -F <файл> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2386,7 +2410,8 @@ msgstr ""
 "  -x\t\tсимулира mailx изпращане\n"
 "  -y\t\tизбор на пощенска кутия, указана във Вашия `mailboxes' списък\n"
 "  -z\t\tнезабавен изход от програмата, ако в пощенската кутия няма писма\n"
-"  -Z\t\tотваряне на първата пощенска кутия с нови писма или незабавен изход от програмата ако няма такава\n"
+"  -Z\t\tотваряне на първата пощенска кутия с нови писма или незабавен изход "
+"от програмата ако няма такава\n"
 "  -h\t\tпоказва този текст"
 
 #: main.c:142
@@ -2456,7 +2481,8 @@ msgstr "Пощенската кутия биде разрушена!"
 
 #: mbox.c:702 mbox.c:978
 msgid "Fatal error!  Could not reopen mailbox!"
-msgstr "Непоправима грешка! Грешка при повторното отваряне на пощенската кутия!"
+msgstr ""
+"Непоправима грешка! Грешка при повторното отваряне на пощенската кутия!"
 
 #: mbox.c:711
 msgid "Unable to lock mailbox!"
@@ -2468,7 +2494,9 @@ msgstr "Грешка при заключване на пощенската кутия!"
 #.
 #: mbox.c:757
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr "sync: пощенската кутия е променена, но няма променени писма! (моля, съобщете за тази грешка)"
+msgstr ""
+"sync: пощенската кутия е променена, но няма променени писма! (моля, съобщете "
+"за тази грешка)"
 
 #: mbox.c:798
 #, c-format
@@ -3482,7 +3510,9 @@ msgstr "Препращане като прикачени файлове?"
 
 #: recvcmd.c:419
 msgid "Can't decode all tagged attachments.  MIME-forward the others?"
-msgstr "Невъзможно декодирането на всички маркирани прикачени файлове. MIME за останалите?"
+msgstr ""
+"Невъзможно декодирането на всички маркирани прикачени файлове. MIME за "
+"останалите?"
 
 #: recvcmd.c:544
 msgid "Forward MIME encapsulated?"
@@ -3503,7 +3533,9 @@ msgstr "Няма дефинирани mailing list-ове!"
 
 #: recvcmd.c:781
 msgid "Can't decode all tagged attachments.  MIME-encapsulate the others?"
-msgstr "Невъзможно декодирането на всички маркирани прикачени файлове. MIME за останалите?"
+msgstr ""
+"Невъзможно декодирането на всички маркирани прикачени файлове. MIME за "
+"останалите?"
 
 #: remailer.c:480
 msgid "Append"
@@ -3731,12 +3763,12 @@ msgstr "Изпращащ процес:"
 msgid "%s...  Exiting.\n"
 msgstr "%s... Изход.\n"
 
-#: signal.c:42
+#: signal.c:42 signal.c:45
 #, c-format
 msgid "Caught %s...  Exiting.\n"
 msgstr "Получен сигнал %s... Изход.\n"
 
-#: signal.c:44
+#: signal.c:47
 #, c-format
 msgid "Caught signal %d...  Exiting.\n"
 msgstr "Получен сигнал %d... Изход.\n"
@@ -3747,7 +3779,8 @@ msgstr "Подреждане на пощенската кутия..."
 
 #: sort.c:239
 msgid "Could not find sorting function! [report this bug]"
-msgstr "Не мога да намеря функция за подреждане! (Моля, съобщете за тази грешка)"
+msgstr ""
+"Не мога да намеря функция за подреждане! (Моля, съобщете за тази грешка)"
 
 #: status.c:102
 msgid "(no mailbox)"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3\n"
-"POT-Creation-Date: 2002-06-18 12:03+0200\n"
+"POT-Creation-Date: 2003-03-19 23:12+0100\n"
 "PO-Revision-Date: 2001-04-22 22:05+0200\n"
 "Last-Translator: Roberto Suarez Soto <ask4it@bigfoot.com>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
@@ -84,7 +84,7 @@ msgstr "Gardar a ficheiro: "
 msgid "Alias added."
 msgstr "Alias engadido."
 
-#: attach.c:111 attach.c:238 attach.c:431 attach.c:915
+#: attach.c:111 attach.c:238 attach.c:430 attach.c:920
 msgid "Can't match nametemplate, continue?"
 msgstr "Non se puido atopa-lo nome, ¿continuar?"
 
@@ -94,7 +94,7 @@ msgstr "Non se puido atopa-lo nome, ¿continuar?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "A entrada \"compose\" no ficheiro Mailcap require %%s"
 
-#: attach.c:131 attach.c:256 commands.c:190 compose.c:1154 curs_lib.c:145
+#: attach.c:131 attach.c:256 commands.c:190 compose.c:1153 curs_lib.c:145
 #: curs_lib.c:374
 #, c-format
 msgid "Error running \"%s\"!"
@@ -121,39 +121,39 @@ msgstr ""
 msgid "Mailcap Edit entry requires %%s"
 msgstr "A entrada \"Edit\" do ficheiro Mailcap require %%s"
 
-#: attach.c:269
+#: attach.c:268
 #, c-format
 msgid "No mailcap edit entry for %s"
 msgstr "Non hai entrada \"edit\" no ficheiro Mailcap para %s"
 
-#: attach.c:397
+#: attach.c:396
 msgid "No matching mailcap entry found.  Viewing as text."
 msgstr ""
 "Non se atopou ningunha entrada coincidente no ficheiro mailcap.Vendo como "
 "texto"
 
-#: attach.c:410
+#: attach.c:409
 msgid "MIME type not defined.  Cannot view attachment."
 msgstr "Tipo MIME non definido. Non se pode ver-lo ficheiro adxunto."
 
-#: attach.c:500
+#: attach.c:499
 msgid "Cannot create filter"
 msgstr "Non se puido crea-lo filtro"
 
-#: attach.c:629 attach.c:661 attach.c:948 attach.c:1006 handler.c:1549
+#: attach.c:628 attach.c:660 attach.c:953 attach.c:1011 handler.c:1549
 #: pgpkey.c:566 pgpkey.c:755
 msgid "Can't create filter"
 msgstr "Non podo crea-lo filtro"
 
-#: attach.c:736 recvattach.c:419 recvattach.c:479
+#: attach.c:741 recvattach.c:419 recvattach.c:479
 msgid "Attachment saved."
 msgstr "Adxunto gardado."
 
-#: attach.c:787
+#: attach.c:792
 msgid "Write fault!"
 msgstr "¡Fallo de escritura!"
 
-#: attach.c:1029
+#: attach.c:1034
 msgid "I don't know how to print that!"
 msgstr "¡Non lle sei cómo imprimir iso!"
 
@@ -165,88 +165,88 @@ msgstr "Directorio"
 msgid "Mask"
 msgstr "Máscara"
 
-#: browser.c:375 browser.c:963
+#: browser.c:377 browser.c:965
 #, c-format
 msgid "%s is not a directory."
 msgstr "%s non é un directorio."
 
-#: browser.c:495
+#: browser.c:497
 #, c-format
 msgid "Mailboxes [%d]"
 msgstr "Buzóns [%d]"
 
-#: browser.c:502
+#: browser.c:504
 #, c-format
 msgid "Subscribed [%s], File mask: %s"
 msgstr "Subscrito [%s], máscara de ficheiro: %s"
 
-#: browser.c:506
+#: browser.c:508
 #, c-format
 msgid "Directory [%s], File mask: %s"
 msgstr "Directorio [%s], máscara de ficheiro: %s"
 
-#: browser.c:518
+#: browser.c:520
 msgid "Can't attach a directory!"
 msgstr "Non é posible adxuntar un directorio"
 
-#: browser.c:649 browser.c:1030 browser.c:1123
+#: browser.c:651 browser.c:1032 browser.c:1125
 msgid "No files match the file mask"
 msgstr "Non hai ficheiros que coincidan coa máscara"
 
-#: browser.c:855
+#: browser.c:857
 msgid "Create is only supported for IMAP mailboxes"
 msgstr "A operación 'Crear' está soportada só en buzóns IMAP"
 
-#: browser.c:875
+#: browser.c:877
 msgid "Delete is only supported for IMAP mailboxes"
 msgstr "A operación 'Borrar' está soportada só en buzóns IMAP"
 
-#: browser.c:883
+#: browser.c:885
 #, c-format
 msgid "Really delete mailbox \"%s\"?"
 msgstr "¿Seguro de borra-lo buzón \"%s\"?"
 
-#: browser.c:897
+#: browser.c:899
 msgid "Mailbox deleted."
 msgstr "Buzón borrado."
 
-#: browser.c:903
+#: browser.c:905
 msgid "Mailbox not deleted."
 msgstr "Buzón non borrado."
 
-#: browser.c:922
+#: browser.c:924
 msgid "Chdir to: "
 msgstr "Cambiar directorio a: "
 
-#: browser.c:956 browser.c:1023
+#: browser.c:958 browser.c:1025
 msgid "Error scanning directory."
 msgstr "Erro lendo directorio."
 
-#: browser.c:974
+#: browser.c:976
 msgid "File Mask: "
 msgstr "Máscara de ficheiro: "
 
-#: browser.c:1046
+#: browser.c:1048
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "¿Ordear inversamente por (d)ata, (a)lfabeto, (t)amaño ou (s)en orden?"
 
-#: browser.c:1047
+#: browser.c:1049
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "¿Ordear por (d)ata, (a)lfabeto, (t)amaño ou (s)en orden?"
 
-#: browser.c:1048
+#: browser.c:1050
 msgid "dazn"
 msgstr "dats"
 
-#: browser.c:1110
+#: browser.c:1112
 msgid "New file name: "
 msgstr "Novo nome de ficheiro: "
 
-#: browser.c:1141
+#: browser.c:1143
 msgid "Can't view a directory"
 msgstr "Non é posible ver un directorio"
 
-#: browser.c:1159
+#: browser.c:1161
 msgid "Error trying to view file"
 msgstr "Erro intentando ver ficheiro"
 
@@ -610,51 +610,51 @@ msgstr "Codificación inválida."
 msgid "Save a copy of this message?"
 msgstr "¿Gardar unha copia desta mensaxe?"
 
-#: compose.c:982
+#: compose.c:981
 msgid "Rename to: "
 msgstr "Cambiar nome a: "
 
-#: compose.c:987 editmsg.c:96 sendlib.c:906
+#: compose.c:986 editmsg.c:95 sendlib.c:906
 #, fuzzy, c-format
 msgid "Can't stat %s: %s"
 msgstr "Non foi atopado: %s"
 
-#: compose.c:1013
+#: compose.c:1012
 msgid "New file: "
 msgstr "Novo ficheiro: "
 
-#: compose.c:1026
+#: compose.c:1025
 msgid "Content-Type is of the form base/sub"
 msgstr "Content-Type é da forma base/subtipo"
 
-#: compose.c:1032
+#: compose.c:1031
 #, c-format
 msgid "Unknown Content-Type %s"
 msgstr "Non coñezo ó Content-Type %s"
 
-#: compose.c:1045
+#: compose.c:1044
 #, c-format
 msgid "Can't create file %s"
 msgstr "Non fun capaz de crea-lo ficheiro %s"
 
-#: compose.c:1053
+#: compose.c:1052
 msgid "What we have here is a failure to make an attachment"
 msgstr "O que temos aquí é un fallo ó face-lo adxunto"
 
-#: compose.c:1115
+#: compose.c:1114
 msgid "Postpone this message?"
 msgstr "¿Pospór esta mensaxe?"
 
-#: compose.c:1172
+#: compose.c:1171
 msgid "Write message to mailbox"
 msgstr "Escribir mensaxe ó buzón"
 
-#: compose.c:1175
+#: compose.c:1174
 #, c-format
 msgid "Writing message to %s ..."
 msgstr "Escribindo mensaxe a %s..."
 
-#: compose.c:1184
+#: compose.c:1183
 msgid "Message written."
 msgstr "Mensaxe escrita."
 
@@ -968,25 +968,25 @@ msgstr "Non foi posible crea-la carpeta temporal: %s"
 msgid "could not write temporary mail folder: %s"
 msgstr "Non foi posible crea-lo buzón temporal: %s"
 
-#: editmsg.c:102
+#: editmsg.c:101
 msgid "Message file is empty!"
 msgstr "¡A mensaxe está valeira!"
 
-#: editmsg.c:109
+#: editmsg.c:108
 msgid "Message not modified!"
 msgstr "Mensaxe non modificada."
 
-#: editmsg.c:117
+#: editmsg.c:116
 #, c-format
 msgid "Can't open message file: %s"
 msgstr "Non foi posible abri-lo ficheiro da mensaxe: %s"
 
-#: editmsg.c:124 editmsg.c:152
+#: editmsg.c:123 editmsg.c:151
 #, c-format
 msgid "Can't append to folder: %s"
 msgstr "Non foi posible engadir á carpeta: %s"
 
-#: editmsg.c:183
+#: editmsg.c:182
 #, c-format
 msgid "Error. Preserving temporary file: %s"
 msgstr "Erro. Conservando ficheiro temporal: %s"
@@ -2296,8 +2296,9 @@ msgstr ""
 "Para informar dun fallo, use a utilidade flea(1).\n"
 
 #: main.c:44
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-2001 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-2002 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -2309,14 +2310,15 @@ msgstr ""
 "baixo certas condicións; escriba `mutt -vv' para ve-losdetalles.\n"
 
 #: main.c:50
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-2001 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1996-2001 Brandon Long <blong@fiction.net>\n"
-"Copyright (C) 1997-2001 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-2001 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1999-2001 Brendan Cully <brendan@kublai.com>\n"
-"Copyright (C) 1999-2001 Tommi Komulainen <Tommi.Komulainen@iki.fi>\n"
-"Copyright (C) 2000-2001 Edmund Grimley Evans <edmundo@rano.org>\n"
+"Copyright (C) 1996-2002 Michael R. Elkins <me@mutt.org>\n"
+"Copyright (C) 1996-2002 Brandon Long <blong@fiction.net>\n"
+"Copyright (C) 1997-2002 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-2002 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1999-2002 Brendan Cully <brendan@kublai.com>\n"
+"Copyright (C) 1999-2002 Tommi Komulainen <Tommi.Komulainen@iki.fi>\n"
+"Copyright (C) 2000-2002 Edmund Grimley Evans <edmundo@rano.org>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -3782,12 +3784,12 @@ msgstr "Saída do proceso de distribución"
 msgid "%s...  Exiting.\n"
 msgstr "Atrapado %s... Saíndo.\n"
 
-#: signal.c:42
+#: signal.c:42 signal.c:45
 #, c-format
 msgid "Caught %s...  Exiting.\n"
 msgstr "Atrapado %s... Saíndo.\n"
 
-#: signal.c:44
+#: signal.c:47
 #, c-format
 msgid "Caught signal %d...  Exiting.\n"
 msgstr "Atrapado sinal %d... Saíndo.\n"

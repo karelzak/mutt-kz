@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.99\n"
-"POT-Creation-Date: 2002-06-18 12:03+0200\n"
+"POT-Creation-Date: 2003-03-19 23:12+0100\n"
 "PO-Revision-Date: 2002-01-19 14:33+01:00\n"
 "Last-Translator: Jörgen Tegnér <jorgen.tegner@telia.com>\n"
 "Language-Team: Swedish <mutt-po@mutt.org>\n"
@@ -81,7 +81,7 @@ msgstr "Spara i fil: "
 msgid "Alias added."
 msgstr "Lade till alias."
 
-#: attach.c:111 attach.c:238 attach.c:431 attach.c:915
+#: attach.c:111 attach.c:238 attach.c:430 attach.c:920
 msgid "Can't match nametemplate, continue?"
 msgstr "Kan inte para ihop namnmall, fortsätt?"
 
@@ -91,7 +91,7 @@ msgstr "Kan inte para ihop namnmall, fortsätt?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "'compose' i 'mailcap' kräver %%s"
 
-#: attach.c:131 attach.c:256 commands.c:190 compose.c:1154 curs_lib.c:145
+#: attach.c:131 attach.c:256 commands.c:190 compose.c:1153 curs_lib.c:145
 #: curs_lib.c:374
 #, c-format
 msgid "Error running \"%s\"!"
@@ -116,37 +116,37 @@ msgstr "Saknar 'compose' i mailcap för %s, skapar en tom fil."
 msgid "Mailcap Edit entry requires %%s"
 msgstr "'edit' i 'mailcap' kräver %%s"
 
-#: attach.c:269
+#: attach.c:268
 #, c-format
 msgid "No mailcap edit entry for %s"
 msgstr "'mailcap' saknar 'edit' för %s"
 
-#: attach.c:397
+#: attach.c:396
 msgid "No matching mailcap entry found.  Viewing as text."
 msgstr "Hittade ingen passande beskrivning i 'mailcap'. Visar som text."
 
-#: attach.c:410
+#: attach.c:409
 msgid "MIME type not defined.  Cannot view attachment."
 msgstr "MIME-typ är inte definierad. Kan inte visa bilaga."
 
-#: attach.c:500
+#: attach.c:499
 msgid "Cannot create filter"
 msgstr "Kan inte skapa filter"
 
-#: attach.c:629 attach.c:661 attach.c:948 attach.c:1006 handler.c:1549
+#: attach.c:628 attach.c:660 attach.c:953 attach.c:1011 handler.c:1549
 #: pgpkey.c:566 pgpkey.c:755
 msgid "Can't create filter"
 msgstr "Kan inte skapa filter"
 
-#: attach.c:736 recvattach.c:419 recvattach.c:479
+#: attach.c:741 recvattach.c:419 recvattach.c:479
 msgid "Attachment saved."
 msgstr "Bilaga sparad."
 
-#: attach.c:787
+#: attach.c:792
 msgid "Write fault!"
 msgstr "Ett fel uppstod vid skrivning!"
 
-#: attach.c:1029
+#: attach.c:1034
 msgid "I don't know how to print that!"
 msgstr "Jag vet inte hur det här ska skrivas ut!"
 
@@ -158,88 +158,88 @@ msgstr "Ändra katalog"
 msgid "Mask"
 msgstr "Mask"
 
-#: browser.c:375 browser.c:963
+#: browser.c:377 browser.c:965
 #, c-format
 msgid "%s is not a directory."
 msgstr "%s är inte en katalog."
 
-#: browser.c:495
+#: browser.c:497
 #, c-format
 msgid "Mailboxes [%d]"
 msgstr "Brevlådor [%d]"
 
-#: browser.c:502
+#: browser.c:504
 #, c-format
 msgid "Subscribed [%s], File mask: %s"
 msgstr "Prenumererar på [%s], filmask: %s"
 
-#: browser.c:506
+#: browser.c:508
 #, c-format
 msgid "Directory [%s], File mask: %s"
 msgstr "Katalog [%s], filmask: %s"
 
-#: browser.c:518
+#: browser.c:520
 msgid "Can't attach a directory!"
 msgstr "Kan inte bifoga en katalog!"
 
-#: browser.c:649 browser.c:1030 browser.c:1123
+#: browser.c:651 browser.c:1032 browser.c:1125
 msgid "No files match the file mask"
 msgstr "Ingen fil passar med filmasken"
 
-#: browser.c:855
+#: browser.c:857
 msgid "Create is only supported for IMAP mailboxes"
 msgstr "Endast brevlådor av IMAP-typ kan skapas"
 
-#: browser.c:875
+#: browser.c:877
 msgid "Delete is only supported for IMAP mailboxes"
 msgstr "Endast brevlådor av IMAP-typ kan tas bort"
 
-#: browser.c:883
+#: browser.c:885
 #, c-format
 msgid "Really delete mailbox \"%s\"?"
 msgstr "Ta bort brevlådan '%s'?"
 
-#: browser.c:897
+#: browser.c:899
 msgid "Mailbox deleted."
 msgstr "Brevlådan har tagits bort."
 
-#: browser.c:903
+#: browser.c:905
 msgid "Mailbox not deleted."
 msgstr "Brevlådan togs inte bort."
 
-#: browser.c:922
+#: browser.c:924
 msgid "Chdir to: "
 msgstr "Ändra katalog till: "
 
-#: browser.c:956 browser.c:1023
+#: browser.c:958 browser.c:1025
 msgid "Error scanning directory."
 msgstr "Ett fel uppstod när katalogen skulle läsas."
 
-#: browser.c:974
+#: browser.c:976
 msgid "File Mask: "
 msgstr "Filmask: "
 
-#: browser.c:1046
+#: browser.c:1048
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "Sortera omvänt efter (d)atum, (a)lpha, (s)torlek eller i(n)te alls? "
 
-#: browser.c:1047
+#: browser.c:1049
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "Sortera efter (d)atum, (a)lpha, (s)torlek eller i(n)te alls? "
 
-#: browser.c:1048
+#: browser.c:1050
 msgid "dazn"
 msgstr "dasn"
 
-#: browser.c:1110
+#: browser.c:1112
 msgid "New file name: "
 msgstr "Nytt filnamn: "
 
-#: browser.c:1141
+#: browser.c:1143
 msgid "Can't view a directory"
 msgstr "Kan inte visa katalogen"
 
-#: browser.c:1159
+#: browser.c:1161
 msgid "Error trying to view file"
 msgstr "Ett fel uppstod när filen skulle visas"
 
@@ -602,51 +602,51 @@ msgstr "Ogiltig kodning."
 msgid "Save a copy of this message?"
 msgstr "Spara en kopia av meddelandet?"
 
-#: compose.c:982
+#: compose.c:981
 msgid "Rename to: "
 msgstr "Byt namn till: "
 
-#: compose.c:987 editmsg.c:96 sendlib.c:906
+#: compose.c:986 editmsg.c:95 sendlib.c:906
 #, c-format
 msgid "Can't stat %s: %s"
 msgstr "Kan inte ta status på %s: %s"
 
-#: compose.c:1013
+#: compose.c:1012
 msgid "New file: "
 msgstr "Ny fil: "
 
-#: compose.c:1026
+#: compose.c:1025
 msgid "Content-Type is of the form base/sub"
 msgstr "'Content-Type' har formen bas/undertyp"
 
-#: compose.c:1032
+#: compose.c:1031
 #, c-format
 msgid "Unknown Content-Type %s"
 msgstr "Okänd 'Content-Type' %s"
 
-#: compose.c:1045
+#: compose.c:1044
 #, c-format
 msgid "Can't create file %s"
 msgstr "Kan inte skapa filen %s"
 
-#: compose.c:1053
+#: compose.c:1052
 msgid "What we have here is a failure to make an attachment"
 msgstr "Vad vi har här är en oförmåga att skapa en bilaga"
 
-#: compose.c:1115
+#: compose.c:1114
 msgid "Postpone this message?"
 msgstr "Skjut upp meddelandet?"
 
-#: compose.c:1172
+#: compose.c:1171
 msgid "Write message to mailbox"
 msgstr "Skriv meddelandet till brevlåda"
 
-#: compose.c:1175
+#: compose.c:1174
 #, c-format
 msgid "Writing message to %s ..."
 msgstr "Skriver meddelandet till %s ..."
 
-#: compose.c:1184
+#: compose.c:1183
 msgid "Message written."
 msgstr "Meddelandet skrevs."
 
@@ -955,25 +955,25 @@ msgstr "kunde inte skapa tillfällig katalog: %s"
 msgid "could not write temporary mail folder: %s"
 msgstr "kunde inte skapa tillfällig brevlåda: %s"
 
-#: editmsg.c:102
+#: editmsg.c:101
 msgid "Message file is empty!"
 msgstr "Filen för meddelandet är tom!"
 
-#: editmsg.c:109
+#: editmsg.c:108
 msgid "Message not modified!"
 msgstr "Meddelandet är inte ändrat!"
 
-#: editmsg.c:117
+#: editmsg.c:116
 #, c-format
 msgid "Can't open message file: %s"
 msgstr "Kan inte öppna meddelandefil: %s"
 
-#: editmsg.c:124 editmsg.c:152
+#: editmsg.c:123 editmsg.c:151
 #, c-format
 msgid "Can't append to folder: %s"
 msgstr "Kan inte lägga till brevlådan: %s"
 
-#: editmsg.c:183
+#: editmsg.c:182
 #, c-format
 msgid "Error. Preserving temporary file: %s"
 msgstr "Fel. Sparar tillfällig fil: %s"
@@ -2270,8 +2270,9 @@ msgstr ""
 "För att rapportera ett fel, var vänlig använd programmet flea(1).\n"
 
 #: main.c:44
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-2001 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-2002 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -2282,14 +2283,15 @@ msgstr ""
 "under vissa villkor; kör `mutt -vv' för detaljer.\n"
 
 #: main.c:50
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-2001 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1996-2001 Brandon Long <blong@fiction.net>\n"
-"Copyright (C) 1997-2001 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-2001 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1999-2001 Brendan Cully <brendan@kublai.com>\n"
-"Copyright (C) 1999-2001 Tommi Komulainen <Tommi.Komulainen@iki.fi>\n"
-"Copyright (C) 2000-2001 Edmund Grimley Evans <edmundo@rano.org>\n"
+"Copyright (C) 1996-2002 Michael R. Elkins <me@mutt.org>\n"
+"Copyright (C) 1996-2002 Brandon Long <blong@fiction.net>\n"
+"Copyright (C) 1997-2002 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-2002 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1999-2002 Brendan Cully <brendan@kublai.com>\n"
+"Copyright (C) 1999-2002 Tommi Komulainen <Tommi.Komulainen@iki.fi>\n"
+"Copyright (C) 2000-2002 Edmund Grimley Evans <edmundo@rano.org>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -3745,12 +3747,12 @@ msgstr "Utdata från sändprogrammet"
 msgid "%s...  Exiting.\n"
 msgstr "%s...  Avslutar.\n"
 
-#: signal.c:42
+#: signal.c:42 signal.c:45
 #, c-format
 msgid "Caught %s...  Exiting.\n"
 msgstr "Fångade %s...  Avslutar.\n"
 
-#: signal.c:44
+#: signal.c:47
 #, c-format
 msgid "Caught signal %d...  Exiting.\n"
 msgstr "Fångade signal %d...  Avslutar.\n"

@@ -1,3 +1,1743 @@
+Wed Mar 19 21:56:29 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/pgppubring.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix some memory management calls. (Stable branch.)
+
+	* /cvs/mutt/mutt/imap/utf7.c:
+	From: Edmund GRIMLEY EVANS <edmundo@rano.org>
+
+	Fix a buffer overflow in utf8_to_utf7. (Stable branch.)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/imap/utf7.c:
+	From: Edmund GRIMLEY EVANS <edmundo@rano.org>
+
+	Fix a buffer overflow in utf8_to_utf7.
+
+Tue Mar 18 14:52:50 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/buffy.c, /cvs/mutt/mutt/parse.c:
+	From: Andrew W. Nosenko <awn@bcs.zp.ua>
+
+
+	- buffy.c (test_last_status_new): Fix memory leak.  Envelope
+	  structure allocated by mutt_read_rfc822_header() was never
+	  deallocated.
+
+	- parse.c (mutt_read_rfc822_header): Comment added about needing
+	  deallocate envelope structure returned by
+	  mutt_read_rfc822_header().
+
+	* /cvs/mutt/mutt/mutt_idna.c: From: Andrew W. Nosenko <awn@bcs.zp.ua>
+
+	(mutt_addr_for_display): Fix memory leak.  `user' and `domain'
+	buffers was never deallocated.
+
+	(mbox_to_udomain): Fix memory leak.  `scratch' buffer was not
+	deallocated when `mbx' doesn't contain '@'. Also rewritten for
+	allocating memory only when needed and only how many as needed.
+
+Wed Mar 12 13:01:09 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/copy.c, /cvs/mutt/mutt/sendlib.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	We need to re-format address headers instead of just decoding them.
+
+Fri Mar  7 14:57:56 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/mutt_sasl.c: From: Brendan Cully <brendan@kublai.com>
+
+	The global callbacks set up in sasl_client_init are not copied by
+	the SASL library, so they can't be allocated on the stack. This is
+	the case with both versions of the SASL library, and I frankly don't
+	understand why it hasn't caused problems before. Since it segfaults
+	reliably on OS X for me now, I thought a patch would be in order.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/crypt.c, /cvs/mutt/mutt/pgp.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Don't use functions without importing the corresponding prototype.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/mutt_idna.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	It seems like libidn doesn't like to translate NULL pointers.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/globals.h: From: Jim Mock <mij@soupnazi.org>
+
+	globals.h is looking for crypt.h instead of mutt_crypt.h.
+
+Thu Mar  6 21:25:41 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/send.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fixing a segmentation fault.  Here's how to reproduce it: Start
+	mutt.  Compose a new message, with an attachment.  Turn on PGP
+	signing.  Press C-G on the pass phrase prompt.  Turn off PGP
+	signing.  Try to send the message.
+
+Wed Mar  5 21:19:26 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/protos.h, /cvs/mutt/mutt/sort.c:
+	From: Andrew W. Nosenko <awn@bcs.zp.ua>
+
+	Fix a warning.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/mutt_idna.c: From: Andrew W. Nosenko <awn@bcs.zp.ua>
+
+	Fix tlr's pre-processor screw-up.
+
+Tue Mar  4 09:52:33 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/mutt_idna.c, /cvs/mutt/mutt/mutt_socket.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Unset UseSTD3ASCIIRules, and set AllowUnassigned.  (Just reading
+	some standards.)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/handler.c:
+	From: Edmund GRIMLEY EVANS <edmundo@rano.org>
+
+	Be more friendly about bad multipart/alternative bodies; #1478. Note
+	that the relevant standards explicitly *forbid* nested MIME
+	encodings.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/copy.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix another stupid error, and decode IDNs in the CC header.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/init.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix two typos in one line.  Noted by Thomas Glanzmann and Steve
+	Kennedy.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/addrbook.c, /cvs/mutt/mutt/alias.c, /cvs/mutt/mutt/send.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fixing more IDN bugs.
+
+Mon Mar  3 14:25:52 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/copy.c, /cvs/mutt/mutt/sort.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fixing some nits.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/mutt_socket.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	IDNA support for the socket back-end.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/addrbook.c, /cvs/mutt/mutt/alias.c, /cvs/mutt/mutt/charset.h, /cvs/mutt/mutt/commands.c, /cvs/mutt/mutt/compose.c, /cvs/mutt/mutt/configure.in, /cvs/mutt/mutt/copy.c, /cvs/mutt/mutt/edit.c, /cvs/mutt/mutt/hdrline.c, /cvs/mutt/mutt/headers.c, /cvs/mutt/mutt/init.c, /cvs/mutt/mutt/main.c, /cvs/mutt/mutt/Makefile.am, /cvs/mutt/mutt/mutt_idna.c, /cvs/mutt/mutt/mutt_idna.h, /cvs/mutt/mutt/pgpinvoke.c, /cvs/mutt/mutt/protos.h, /cvs/mutt/mutt/query.c, /cvs/mutt/mutt/recvcmd.c, /cvs/mutt/mutt/rfc822.c, /cvs/mutt/mutt/rfc822.h, /cvs/mutt/mutt/send.c, /cvs/mutt/mutt/sendlib.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	IDN support for e-mail messages.  Things should work automagically
+	once you have the GNU IDN library available from
+	ftp://alpha.gnu.org/pub/gnu/libidn/ installed.  For IDN's which
+	can't be losslessly recoded to your local character set, mutt should
+	automatically fall back to using the ASCII representation.  There's
+	probably a considerable number of bugs in this, and the code may, at
+	this point, not even compile on machines without libidn.  Will start
+	working on that ASAP.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/contrib/sample.muttrc, /cvs/mutt/mutt/doc/manual.sgml.head, /cvs/mutt/mutt/recvcmd.c, /cvs/mutt/mutt/commands.c, /cvs/mutt/mutt/init.h, /cvs/mutt/mutt/mutt.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Introduce a new option named $bounce, and fix some inconsistencies
+	in the messages created when bouncing.  Based on work done by Thomas
+	Glanzmann <sithglan@stud.uni-erlangen.de>.
+
+Tue Feb 25 22:01:47 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/commands.c, /cvs/mutt/mutt/recvcmd.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix some (too lazy and tired to do all) of the inconsistencies
+	between message and attachment bouncing.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/crypt.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	I should test-compile things before committing.  Stupid typo.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/query.c: From: Michael Elkins <me@sigpipe.org>
+
+	Use mutt_strwidth for query response formatting.  (#1477)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/mx.c: From: Christian Vogel <vogelchr@vogel.cx>
+
+	Recognize MH folders used by sylpheed.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/es.po: From: jesus.climent@hispalinux.es
+
+	Fix a typo. (#1482)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Remove some ftp.guug.de URLs from the manual. (#1485)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/crypt.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix #1486; noted by Jeroen Coekaerts <jeroen@coekaerts.be>.
+
+Wed Feb 19 21:34:56 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pgpmicalg.c: From: David Shaw <dshaw@jabberwocky.com>
+
+	3156 defined several micalg values (pgp-md5, pgp-sha1, etc.)  Since
+	then, three more hashes have been assigned numbers in 2440bis.  Here
+	is a patch to add values for pgp-sha256, pgp-sha384, and pgp-sha512 so
+	mutt can properly handle them.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/parse.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix a memory leak observed by Vineet Kumar
+	<mutt-dev@virtual.doorstop.net>.
+
+Thu Feb 13 09:56:20 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/init.h: From: David Shaw <dshaw@jabberwocky.com>
+
+	Here are some updates to the muttrc docs (spell check, language
+	tweaks, etc).  No functional changes - this is just language stuff.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pgp.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix #1444, Debian #178563.  The details of this problem were tracked
+	down by Steven Barker <steve@blckknght.org>.
+
+Fri Jan 31 00:16:19 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/init.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Change the default for crypt_replyencrypt back to "yes".  Noted by
+	Thomas Poindessous in Debian bug #178899; also #1448.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pgp.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix #1442 (thanks, Dale); properly initialize some pointers which
+	could otherwise lead to crashes.
+
+Thu Jan 30 23:55:33 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/crypt.c, /cvs/mutt/mutt/init.h, /cvs/mutt/mutt/mutt_crypt.h, /cvs/mutt/mutt/mutt.h, /cvs/mutt/mutt/send.c:
+	From: David Shaw <dshaw@jabberwocky.com>
+
+	Introduce $pgp_auto_traditional.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/flags.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	The IMAP ACL patch broke things.
+
+Thu Jan 23 22:05:51 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pop_auth.c:
+	From: Nathan Dushman <nhd+mutt@andrew.cmu.edu>
+
+	SASL2 support for popo_auth.c.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/curs_main.c, /cvs/mutt/mutt/flags.c, /cvs/mutt/mutt/imap/imap.c, /cvs/mutt/mutt/pager.c:
+	From: Nathan Dushman <nhd+mutt@andrew.cmu.edu>
+
+	The attached patch provides improved support for IMAP ACLs (on
+	servers that support them).  This means that mutt will now write the
+	Seen flag in mailboxes that allow it, even if the mailbox doesn't
+	allow other changes.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/handler.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Automatically use the text/plain handler for text/* body parts which
+	don't have a handler of their own.
+
+Tue Jan 21 18:57:02 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/cryptglue.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix a typo which broke pgp-extract-traditional.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/mutt_crypt.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix an #ifdef.
+
+	* /cvs/mutt/mutt/ChangeLog: #changelog commit
+
+	* /cvs/mutt/mutt/acconfig.h, /cvs/mutt/mutt/attach.c, /cvs/mutt/mutt/commands.c, /cvs/mutt/mutt/compose.c, /cvs/mutt/mutt/configure.in, /cvs/mutt/mutt/copy.c, /cvs/mutt/mutt/copy.h, /cvs/mutt/mutt/crypt.c, /cvs/mutt/mutt/cryptglue.c, /cvs/mutt/mutt/curs_main.c, /cvs/mutt/mutt/functions.h, /cvs/mutt/mutt/globals.h, /cvs/mutt/mutt/gnupgparse.c, /cvs/mutt/mutt/handler.c, /cvs/mutt/mutt/hdrline.c, /cvs/mutt/mutt/headers.c, /cvs/mutt/mutt/hook.c, /cvs/mutt/mutt/init.c, /cvs/mutt/mutt/init.h, /cvs/mutt/mutt/keymap.c, /cvs/mutt/mutt/keymap.h, /cvs/mutt/mutt/main.c, /cvs/mutt/mutt/Makefile.am, /cvs/mutt/mutt/mutt_crypt.h, /cvs/mutt/mutt/mutt.h, /cvs/mutt/mutt/muttlib.c, /cvs/mutt/mutt/mx.c, /cvs/mutt/mutt/pager.c, /cvs/mutt/mutt/parse.c, /cvs/mutt/mutt/pattern.c, /cvs/mutt/mutt/pgp.c, /cvs/mutt/mutt/pgp.h, /cvs/mutt/mutt/pgpkey.c, /cvs/mutt/mutt/pgplib.c, /cvs/mutt/mutt/pgplib.h, /cvs/mutt/mutt/pgppubring.c, /cvs/mutt/mutt/pop.c, /cvs/mutt/mutt/postpone.c, /cvs/mutt/mutt/protos.h, /cvs/mutt/mutt/recvattach.c, /cvs/mutt/mutt/send.c, /cvs/mutt/mutt/sendlib.c, /cvs/mutt/mutt/smime.c, /cvs/mutt/mutt/smime.h, /cvs/mutt/mutt/sort.h:
+	From: Werner Koch <wk@gnupg.org>
+
+	 - To cleanup the pgp/smime code and prepare for other backends.
+	 - Support gpg-agent by not asking for a passphrase
+	 - autconf cleanups.
+
+	This is just a start and probably we need a couple of other things to
+	do. One drawback is that the help menu does always list all crypto
+	realted stuff even when configured for no crypto at all.  Same goes
+	for the configure options but I consider thsi a feature: It allows to
+	use the same .muttrc for different versions of mutt - at least during
+	development, this is an advantage.  This all might be fixed but
+	requires some changes to the configuration system.
+
+	Note, the use of the WithCrypto macro - it enables the compiler to do
+	dead-code-elimination depending on the configured backend.  This is
+	better readable than all the nested ifdefs.  I did some short tests
+	and it seems to work, althoug mutt's size does not change largely when
+	compiled w/o crypto.
+
+	cryptglue.c is new as a warpper to all crypto calls; some are still in
+	crypt.c but they should eventually also be wrapped.  We don't use
+	function pointers to keep a path to use dlopen or runtime configured
+	backends.  crypt.h is also new and replaces pgp.h and smime.h in most
+	files (except for the backend).
+
+
+
+	2003-01-06  Werner Koch  <wk@gnupg.org>
+
+		* crypt.c (crypt_valid_passphrase): Detect gpg-agent and don't ask
+		for the passphrase.
+		* pgp.c (pgp_decrypt_part, pgp_application_pgp_handler)
+		(pgp_sign_message, pgp_encrypt_message)
+		(pgp_traditional_encryptsign): Make sure that we never ever send
+		the passphrase if the gpg-agent has been detected.  Likewise.
+
+		* acconfig.h: Removed all remaining stuff as AC_TEMPLATEs to
+		configure.in. BTW, we should consider to rename configure.in to
+		configure.ac.
+
+	2003-01-04  Werner Koch  <wk@gnupg.org>
+
+	        Replaced the use of HAVE_PGP and HAVE_SMIME by a more readable
+		and extendable solution.
+
+		* pgplib.h: Moved enum pgp_ring and KEYFLAGS_* to
+		* crypt.h: here.
+		* smime.c (mutt_is_application_smime): Moved to
+		* crypt.c (mutt_is_application_smime): here.
+		* pgp.c (mutt_is_application_pgp): Moved to
+		* crypt.c (mutt_is_application_pgp): here.
+		* pgp.c (pgp_is_multipart_encrypted): Removed. Merged code with
+		* crypt.c (mutt_is_multipart_encrypted): this.
+
+		* mutt.h: Protect against double inclusion.
+
+		* pgplib.h (struct pgp_keyinfo): Remove the typedef to pgp_key_t.
+		* crypt.h (pgp_key_t): Declare the typedef here.  NOTE:  This is
+		now a pointer.  Changed all usages accordingly.
+
+		* configure.in: Replace HAVE_PGP and HAVE_SMIME by the new
+		CRYPT_BACKEND macros.  Always include all OPS.*.
+		(LIBOBJ): Replaced by AC_LIBOBJ as required by newer autoconfs.
+		* Makefile.am (EXTRA_mutt_SOURCES): Move crypt.c to mutt_SOURCES.
+		(mutt_SOURCES): Add cryptglue.c
+		(EXTRA_DIST): Add crypt.h
+
+		* pgp.h, pgplib.h, smime.h: Use the header only when the
+		approriate backend has been configured.
+		* pgp.c, pgpkey.c, smime.c: Build only if the approriate
+		CRYPT_BACKEND_ macro is defined.
+		* pgp.h, smime.h, global.h: Moved all variable declarations to
+		global.h because they are now always defined.
+
+		* sort.h: Always define PgpSortKey, although it does not belong to
+		here.
+
+		* keymap.h: Unconditionally include all PGP and SMIME stuff.
+		* mutt.h: Ditto.
+		* protos.h: Ditto.
+
+		* init.h (HAVE_SMIME): Unconditionally include all crypto related
+		definitions.  Mark the doc entries with "(Crypto/PGP/SMIME only)".
+
+		* globals.h: Replace gpg.h and smime.h by crypt.h.
+
+		* functions.h: Always include all crypto commands.
+
+		* copy.h: Unconditionally define the crypto related M_CM_
+
+		* pgplib.h: Move APPLICATION_PGP and PGP* to crypt.h and include
+		it.
+		* smime.h: Move APPLICATION_SMIME and SMIME* to crypt.h and
+		include it.
+		* mutt_crypt.h (ENCRYPT,SIGN,GOODSIGN, BADSIGN): Move to crypt.h.
+
+		* crypt.c: Replaced pgp.h and smime.h header by crypt.h.  Always
+		include all functions but shortcut them depending on WITHCRYPTO.
+	        All over the place use WITHCRYPTO instead of ifdefs.  Replaced all
+		direct calls of the backend fucntions by twrapper functions
+		defined in cryptglue.c
+		(crypt_get_keys): Removed prototypes.
+		* pgp.h (pgp_findKeys): New prototype.
+		* smime.h (smime_findKeys): New prototype.
+		* cryptglue.c: New.
+		* crypt.h: New.
+		* mutt_crypt.h: Moved all crypt_* prototypes to gcrypt.h.
+		Unconditionally use this file.
+
+		* init.c: Replaced pgp.h and smime.h header by crypt.h.
+		(parse_set): Use WITHCRYPTO instead of ifdefs.
+		(mutt_var_value_complete): Ditto.
+
+		* sendlib.c: Replaced pgp.h and smime.h header by crypt.h.
+		(write_as_text_part): Now one macro using WITHCRYPTO.
+		(mutt_write_mime_body): Use WITHCRYPTO instead of ifdefs.
+		(mutt_make_message_attach): Ditto.
+		(mutt_write_fcc): Ditto.
+
+		* send.c: Replaced pgp.h and smime.h header by crypt.h.
+		(include_forward): Use WITHCRYPTO and validate passphrases for pgp
+		and smime.
+		(include_reply): Ditto.
+		(generate_body): Use WITHCRYPTO instead of ifdefs.
+		(ci_send_message): Ditto.
+
+		* recvattach.c: Replaced pgp.h and smime.h header by crypt.h.
+		(mutt_gen_attach_list): Use WITHCRYPTO instead of ifdefs.
+		(mutt_attach_display_loop): Ditto
+		(mutt_view_attachments): Ditto.
+
+		* postpone.c: Replaced pgp.h and smime.h header by crypt.h.
+		(mutt_get_postponed): Use WITHCRYPTO instead of ifdefs.
+		(mutt_parse_crypt_hdr): Always include and use WITHCRYPTO instead
+		of ifdefs.
+		(mutt_prepare_template): Use WITHCRYPTO instead of ifdefs.
+
+		* pop.c: Removed pgp.h and smime.h.
+		(pop_fetch_message): Use WITHCRYPTO instead of ifdefs.
+
+		* pattern.c: Replaced pgp.h and smime.h header by crypt.h.
+		(Flags): Always include the crypto flags.
+		(msg_search): Use WITHCRYPTO instead of ifdefs.
+		(mutt_pattern_exec): Ditto.
+
+		* parse.c: Removed pgp.h and smime.h.
+		(mutt_parse_mime_message): Use WITHCRYPTO instead of ifdefs.
+
+		* pager.c: Replaced pgp.h and smime.h header by crypt.h.
+		(mutt_pager): Use WITHCRYPTO instead of ifdefs.
+
+		* mx.c: Removed smime.h and pgp.h.
+		(mx_update_context): Use WITHCRYPTO instead of ifdefs.
+
+		* muttlib.c: Replaced pgp.h and smime.h header by crypt.h.
+		(mutt_needs_mailcap): Use WITHCRYPTO. Note, that there used to be
+		an error when PGP was not configured so that TYPEAPPLICATION was
+		not recognized for SMIME.
+		(mutt_is_text_part): Use WITHCRYPTO instead of ifdefs.
+
+		* main.c: Include crypt.h.
+		(show_version): Remove HAVE_PGP and HAVE_SMIME.  Add
+		CRYPT_BACKEND_CLASSIC_PGP, CRYPT_BACKEND_CLASSIC_SMIME.
+
+		* keymap.c: Include crypt.h so that we can test WITHCRYPTO.
+		(Menus): Always include pgp and smime.
+		(km_init): Create smime and pgp bindings depending on WITHCRYPTO.
+		(km_get_table): Return OpPgp depending on WITHCRYPTO.
+
+		* hook.c (mutt_parse_hook): Use WITHCRYPTO instead of ifdefs.
+		(mutt_crypt_hook): Always include.
+
+		* headers.c: Replaced pgp.h and smime.h header by crypt.h.
+		(mutt_edit_headers): Use WITHCRYPTO instead of ifdefs
+
+		* hdrline.c: Replaced pgp.h and smime.h header by crypt.h.
+		(hdr_format_str): Use WITHCRYPTO.
+
+		* handler.c: Replaced pgp.h and smime.h header by crypt.h.
+		(mutt_can_decode): Use WITHCRYPTO instead of ifdefs.
+		(mutt_can_decode): Application/smime is now also checked when PGP
+		support is not configured.
+		(mutt_body_handler): Use WITHCRYPTO
+
+		* curs_main.c: Replaced pgp.h and smime.h header by crypt.h.
+		(mutt_index_menu): Shortcut crypto only operations depending on
+		WITHCRYPTO.
+
+		* copy.c: Replaced pgp.h and smime.h header by crypt.h.
+		(_mutt_copy_message):
+
+		* compose.c: Replaced pgp.h and smime.h header by crypt.h.
+		(enum): Always include HDR_CRYPT and HDR_CRYPTINFO.
+		(redraw_crypt_lines): Always include this fnc but shortcut it
+		depending on WITHCRYPT.  Draw lines depending on the configured
+		crypto support.
+		(pgp_send_menu): Always include this one.  Call wrapper functions.
+		(smime_send_menu): Likewise.
+		(draw_envelope): Use WITHCRYPTO instead of ifdefs.
+		(mutt_compose_menu): Allow pgp/smime commands only when configured.
+
+		* commands.c: Replaced pgp.h and smime.h header by crypt.h.
+		(mutt_display_message,pipe_msg, _mutt_pipe_message)
+		(set_copy_flags, mutt_save_message, mutt_edit_content_type)
+		(_mutt_check_traditional_pgp): Use pgp wrapper.
+
+		* attach.c (mutt_view_attachment): Removed HAVE_GPG and HAVE_SMIME
+		and replaced by global variable WITHCRYPTO.  Replaced pgp and
+		smime header by crypt.h.x
+
+Thu Jan  9 17:29:03 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pgppubring.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Don't make a "hard" transition to the new GnuPG syntax in pgpring.
+	This change undoes one of David Shaw's changes which were just
+	committed.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/gnupgparse.c, /cvs/mutt/mutt/pgppubring.c:
+	From: David Shaw <dshaw@jabberwocky.com>
+
+	The latest GnuPG has new abilities to work with disabled keys.  Part
+	of this change will eventually involve moving the 'd' that indicates a
+	disabled key to a different part of the key listing.
+
+	To smooth this transition, as of version 1.2.2, GnuPG will start
+	giving the 'd' in both places (and will do this for a good long time).
+
+	Here is a patch so mutt will accept either the old or new syntax.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/curs_lib.c: From: dshaw@jabberwocky.com
+
+	A recent change causes all mutt_yesorno prompts to come out as
+	[yes]/yes or [no]/no.  Here's a fix.
+
+Sun Jan  5 22:16:58 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/smime_keys.pl:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Error checking for the creation of the temporary directory; also,
+	use file mode 0700.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/smime_keys.pl: From: Bjoern Jacke <bjoern@j3e.de>
+
+	Improve temporary file handling.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/commands.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Another mutt_yesorno() change, in order to correctly interpret a C-g.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/recvcmd.c, /cvs/mutt/mutt/send.c, /cvs/mutt/mutt/alias.c, /cvs/mutt/mutt/attach.c, /cvs/mutt/mutt/commands.c, /cvs/mutt/mutt/curs_lib.c, /cvs/mutt/mutt/main.c, /cvs/mutt/mutt/muttlib.c, /cvs/mutt/mutt/mx.c, /cvs/mutt/mutt/pgpkey.c:
+	From: Armin Wolfermann <aw@osn.de>
+
+	Fix a number of invocations of mutt_yesorno(): Always explicitly use
+	the M_YES and M_NO constants.  Fixes a couple of cases in which C-g
+	would be mis-interpreted.
+
+Fri Jan  3 18:08:29 2003  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pgp.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Detect in-line key material when checking for traditional PGP
+	messages.
+
+Sun Dec 22 20:05:56 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/nl.po: From: René Clerc <rene@clerc.nl>
+
+	update
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/smime_keys.pl: From: Bjoern Jacke <bjoern@j3e.de>
+
+	Remove an unnecessary invocation of "cat"; call openssl with the
+	full path.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/fr.po: From: Vincent Lefevre <vincent@vinc17.org>
+
+	Another fr.po update for the CVS (taking into account the change in
+	pgpkey.c:486)...
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/hdrline.c, /cvs/mutt/mutt/init.h:
+	From: Martin Michlmayr <tbm@cyrius.com>
+
+	Add %A to the format strings, which expands to the reply-to address
+	(if present) or to the author's address when there's no Reply-To
+	header.
+
+Sat Dec 21 20:33:28 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/ChangeLog:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	ok, gotos suck.
+
+	* /cvs/mutt/mutt/curs_main.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	OK, Michael is right: Gotos suck. ;-)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/ru.po: From: Vsevolod Volkov <vvv@mutt.org.ua>
+
+	update
+
+Fri Dec 20 09:41:26 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pgpkey.c: From: David Shaw <dshaw@jabberwocky.com>
+
+	Minor tweak to an error message.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/pl.po: From: Pawel Dziekonski <dzieko@pwr.wroc.pl>
+
+	update
+
+Thu Dec 19 11:49:36 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head, /cvs/mutt/mutt/doc/muttrc.man.head:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Improve the documentation of pgp-hook/crypt-hook.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pgpkey.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Don't bother the user with weak keys when there's a strong one.
+	Experimental, based on discussions on mutt-dev.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/cvslog2changelog.pl:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Identify both the author of a change and the one who committed it to
+	the CVS in the changelog.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/fr.po: From: Vincent Lefevre <vincent@vinc17.org>
+
+	update
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Michael doesn't have $VISUAL set.
+
+Wed Dec 18 17:45:32 2002  me  <me@coruscant>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/init.h: From: Sahil Tandon <sahil@brandeis.edu>
+		I found a small typo in the manual, specifically at this[1] URL.
+		The description of the smart_wrap variable reads: "Controls the
+		display of lines longer then the screen width in the internal
+		pager."  The word _then_ should be _than_ if I'm not mistaken.
+
+Wed Dec 18 10:28:47 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/ja.po, /cvs/mutt/mutt/po/ko.po, /cvs/mutt/mutt/po/lt.po, /cvs/mutt/mutt/po/nl.po, /cvs/mutt/mutt/po/pl.po, /cvs/mutt/mutt/po/pt_BR.po, /cvs/mutt/mutt/po/ru.po, /cvs/mutt/mutt/po/sk.po, /cvs/mutt/mutt/po/sv.po, /cvs/mutt/mutt/po/tr.po, /cvs/mutt/mutt/po/uk.po, /cvs/mutt/mutt/po/zh_CN.po, /cvs/mutt/mutt/po/zh_TW.po, /cvs/mutt/mutt/po/ca.po, /cvs/mutt/mutt/po/cs.po, /cvs/mutt/mutt/po/da.po, /cvs/mutt/mutt/po/de.po, /cvs/mutt/mutt/po/el.po, /cvs/mutt/mutt/po/eo.po, /cvs/mutt/mutt/po/es.po, /cvs/mutt/mutt/po/et.po, /cvs/mutt/mutt/po/fr.po, /cvs/mutt/mutt/po/gl.po, /cvs/mutt/mutt/po/hu.po, /cvs/mutt/mutt/po/id.po, /cvs/mutt/mutt/po/it.po:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	make update-po
+
+	* /cvs/mutt/mutt/mkchangelog.sh:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Turn on compression when getting log messages from the CVS server.
+	(Now that I don't have the server locally, bandwidth is expensive...
+	;-)
+
+	* /cvs/mutt/mutt/keymap.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Make the messages from the what-key function internationalizable.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/Attic/crypt.h, /cvs/mutt/mutt/crypt.c, /cvs/mutt/mutt/mutt_crypt.h, /cvs/mutt/mutt/pgp.c, /cvs/mutt/mutt/pgp.h, /cvs/mutt/mutt/smime.c, /cvs/mutt/mutt/smime.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Rename crypt.h to mutt_crypt.h.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	cvs update ChangeLog before trying to update it locally.
+
+	* /cvs/mutt/mutt/ChangeLog: #changelog commit
+
+	* /cvs/mutt/mutt/po/de.po: From: Roland Rosenfeld <roland@spinnaker.de>
+
+	update
+
+Tue Dec 17 13:46:14 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/fr.po: From: Vincent Lefevre <vincent@vinc17.org>
+
+	update fr.po
+
+	* /cvs/mutt/mutt/ChangeLog: #changelog
+
+	* /cvs/mutt/mutt/.cvsignore:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Ignore some more files.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/Attic/mkjtags.c, /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Remve that jed tags generator.  I don't use it anyway.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/cvslog2changelog.pl:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Adding Michael's address to the changelog generator.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/build-release:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Adopting the release-building script to the new changelog process.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/ru.po, /cvs/mutt/mutt/po/sk.po, /cvs/mutt/mutt/po/sv.po, /cvs/mutt/mutt/po/tr.po, /cvs/mutt/mutt/po/uk.po, /cvs/mutt/mutt/po/zh_CN.po, /cvs/mutt/mutt/po/zh_TW.po, /cvs/mutt/mutt/po/hu.po, /cvs/mutt/mutt/po/id.po, /cvs/mutt/mutt/po/it.po, /cvs/mutt/mutt/po/ja.po, /cvs/mutt/mutt/po/ko.po, /cvs/mutt/mutt/po/lt.po, /cvs/mutt/mutt/po/nl.po, /cvs/mutt/mutt/po/pl.po, /cvs/mutt/mutt/po/pt_BR.po, /cvs/mutt/mutt/po/es.po, /cvs/mutt/mutt/po/et.po, /cvs/mutt/mutt/po/fr.po, /cvs/mutt/mutt/po/gl.po, /cvs/mutt/mutt/build-release, /cvs/mutt/mutt/po/ca.po, /cvs/mutt/mutt/po/cs.po, /cvs/mutt/mutt/po/da.po, /cvs/mutt/mutt/po/de.po, /cvs/mutt/mutt/po/el.po, /cvs/mutt/mutt/po/eo.po, /cvs/mutt/mutt/reldate.h, /cvs/mutt/mutt/VERSION:
+	automatic post-release commit for mutt-1.5.3
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/curs_main.c, /cvs/mutt/mutt/functions.h, /cvs/mutt/mutt/OPS:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Experimental: Introduce {next,previous}-new-then-unread.  These
+	functions behave like {next,previous}-new as long as new messages
+	are visible.  When no new messages are visibuel any more, there's a
+	fall-back to {next,prev}-unread.
+
+	Memo to self: Impose a weekly quota on the use of goto statements.
+
+Mon Dec 16 20:28:55 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/handler.c, /cvs/mutt/mutt/rfc2047.c, /cvs/mutt/mutt/url.c:
+	From: Edmund GRIMLEY EVANS <edmundo@rano.org>
+
+	Fix #1424.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pgp.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Experimental short-cut code if the "image" of an address under a
+	pgp-hook looks like a hexadecimal key id.
+
+Fri Dec 13 15:53:59 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/lib.c: From: David Shaw <dshaw@jabberwocky.com>
+
+	Fixing Thomas' screw-up in mutt_concat_path.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/nl.po: From: René Clerc <rene@clerc.nl>
+
+	update.
+
+Wed Dec 11 22:48:11 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/muttlib.c, /cvs/mutt/mutt/pgp.c, /cvs/mutt/mutt/protos.h, /cvs/mutt/mutt/send.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix #1417; thanks to Derek D. Martin <ddm@sophic.org> for the
+	excellent observation.  (In addition to the fix proper, some
+	tracking of temporary files is added to mutt's debugging output.)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/crypt.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Call endwin() before calling PGP for traditional encryption.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/fr.po: From: Vincent Lefevre <vincent@vinc17.org>
+
+	update.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/browser.c, /cvs/mutt/mutt/complete.c, /cvs/mutt/mutt/hook.c, /cvs/mutt/mutt/init.c, /cvs/mutt/mutt/lib.c, /cvs/mutt/mutt/lib.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Herbert Martin Dietze <herbert@the-little-red-haired-girl.org> notes
+	that mutt may currently build IMAP URLs like
+	imap://exchange//herbert for FCCs.  The fix in this patch is to
+	include a function named mutt_concat_path which concatenates path
+	elements, but avoids the creation of double slashes.  (These don't
+	create problems when you're just accessing the file system, but
+	apparently thy do cause problems with IMAP.)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/imap/auth.c, /cvs/mutt/mutt/imap/command.c, /cvs/mutt/mutt/imap/imap.c, /cvs/mutt/mutt/imap/imap.h, /cvs/mutt/mutt/imap/util.c, /cvs/mutt/mutt/Attic/mkjtags.c, /cvs/mutt/mutt/date.c, /cvs/mutt/mutt/dotlock.c, /cvs/mutt/mutt/dotlock.h, /cvs/mutt/mutt/edit.c, /cvs/mutt/mutt/editmsg.c, /cvs/mutt/mutt/enter.c, /cvs/mutt/mutt/extlib.c, /cvs/mutt/mutt/flags.c, /cvs/mutt/mutt/from.c, /cvs/mutt/mutt/functions.h, /cvs/mutt/mutt/gnupgparse.c, /cvs/mutt/mutt/handler.c, /cvs/mutt/mutt/hash.c, /cvs/mutt/mutt/hash.h, /cvs/mutt/mutt/headers.c, /cvs/mutt/mutt/help.c, /cvs/mutt/mutt/history.c, /cvs/mutt/mutt/history.h, /cvs/mutt/mutt/keymap.c, /cvs/mutt/mutt/keymap.h, /cvs/mutt/mutt/lib.c, /cvs/mutt/mutt/lib.h, /cvs/mutt/mutt/main.c, /cvs/mutt/mutt/makedoc.c, /cvs/mutt/mutt/mapping.h, /cvs/mutt/mutt/menu.c, /cvs/mutt/mutt/mh.c, /cvs/mutt/mutt/mime.h, /cvs/mutt/mutt/mutt_curses.h, /cvs/mutt/mutt/muttlib.c, /cvs/mutt/mutt/mutt_menu.h, /cvs/mutt/mutt/mutt_regex.h, /cvs/mutt/mutt/mutt_socket.c, /cvs/mutt/mutt/mx.c, /cvs/mutt/mutt/mx.h, /cvs/mutt/mutt/pager.h, /cvs/mutt/mutt/parse.c, /cvs/mutt/mutt/pattern.c, /cvs/mutt/mutt/pgp.c, /cvs/mutt/mutt/pgp.h, /cvs/mutt/mutt/pgpinvoke.c, /cvs/mutt/mutt/pgpkey.c, /cvs/mutt/mutt/pgplib.c, /cvs/mutt/mutt/pgplib.h, /cvs/mutt/mutt/postpone.c, /cvs/mutt/mutt/protos.h, /cvs/mutt/mutt/query.c, /cvs/mutt/mutt/recvattach.c, /cvs/mutt/mutt/recvcmd.c, /cvs/mutt/mutt/remailer.c, /cvs/mutt/mutt/remailer.h, /cvs/mutt/mutt/resize.c, /cvs/mutt/mutt/rfc1524.c, /cvs/mutt/mutt/rfc1524.h, /cvs/mutt/mutt/rfc2047.c, /cvs/mutt/mutt/rfc2047.h, /cvs/mutt/mutt/rfc2231.c, /cvs/mutt/mutt/rfc2231.h, /cvs/mutt/mutt/rfc822.c, /cvs/mutt/mutt/rfc822.h, /cvs/mutt/mutt/score.c, /cvs/mutt/mutt/signal.c, /cvs/mutt/mutt/snprintf.c, /cvs/mutt/mutt/sort.c, /cvs/mutt/mutt/sort.h, /cvs/mutt/mutt/status.c, /cvs/mutt/mutt/system.c, /cvs/mutt/mutt/thread.c, /cvs/mutt/mutt/url.c, /cvs/mutt/mutt/addrbook.c, /cvs/mutt/mutt/alias.c, /cvs/mutt/mutt/attach.c, /cvs/mutt/mutt/attach.h, /cvs/mutt/mutt/Attic/crypt.h, /cvs/mutt/mutt/browser.c, /cvs/mutt/mutt/browser.h, /cvs/mutt/mutt/buffy.c, /cvs/mutt/mutt/buffy.h, /cvs/mutt/mutt/charset.c, /cvs/mutt/mutt/charset.h, /cvs/mutt/mutt/commands.c, /cvs/mutt/mutt/complete.c, /cvs/mutt/mutt/compose.c, /cvs/mutt/mutt/copy.h, /cvs/mutt/mutt/crypt.c, /cvs/mutt/mutt/curs_main.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix Mike's and my e-mail addresses in copyright lines.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/muttbug.sh.in:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Ask for the user's e-mail address.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/pager.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Try to make search-next behave more closely to what people are used
+	to, again.  The behaviour introduced by this patch will give you the
+	previous search string as the default, but will search-next when you
+	just press enter without changing the search string.
+
+Tue Dec 10 20:57:06 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/imap/command.c, /cvs/mutt/mutt/imap/imap.c, /cvs/mutt/mutt/imap/message.c, /cvs/mutt/mutt/imap/utf7.c, /cvs/mutt/mutt/imap/util.c, /cvs/mutt/mutt/score.c, /cvs/mutt/mutt/send.c, /cvs/mutt/mutt/sendlib.c, /cvs/mutt/mutt/smime.c, /cvs/mutt/mutt/thread.c, /cvs/mutt/mutt/url.c, /cvs/mutt/mutt/addrbook.c, /cvs/mutt/mutt/alias.c, /cvs/mutt/mutt/attach.c, /cvs/mutt/mutt/browser.c, /cvs/mutt/mutt/buffy.c, /cvs/mutt/mutt/charset.c, /cvs/mutt/mutt/color.c, /cvs/mutt/mutt/compose.c, /cvs/mutt/mutt/copy.c, /cvs/mutt/mutt/crypt.c, /cvs/mutt/mutt/curs_main.c, /cvs/mutt/mutt/enter.c, /cvs/mutt/mutt/gnupgparse.c, /cvs/mutt/mutt/hash.c, /cvs/mutt/mutt/history.c, /cvs/mutt/mutt/hook.c, /cvs/mutt/mutt/init.c, /cvs/mutt/mutt/lib.c, /cvs/mutt/mutt/main.c, /cvs/mutt/mutt/mbox.c, /cvs/mutt/mutt/menu.c, /cvs/mutt/mutt/mh.c, /cvs/mutt/mutt/muttlib.c, /cvs/mutt/mutt/mutt_ssl.c, /cvs/mutt/mutt/mutt_ssl_nss.c, /cvs/mutt/mutt/mx.c, /cvs/mutt/mutt/pager.c, /cvs/mutt/mutt/parse.c, /cvs/mutt/mutt/pattern.c, /cvs/mutt/mutt/pgp.c, /cvs/mutt/mutt/pgpkey.c, /cvs/mutt/mutt/pgplib.c, /cvs/mutt/mutt/pgppacket.c, /cvs/mutt/mutt/pgppubring.c, /cvs/mutt/mutt/pop_auth.c, /cvs/mutt/mutt/pop.c, /cvs/mutt/mutt/postpone.c, /cvs/mutt/mutt/query.c, /cvs/mutt/mutt/recvattach.c, /cvs/mutt/mutt/remailer.c, /cvs/mutt/mutt/rfc1524.c, /cvs/mutt/mutt/rfc2047.c, /cvs/mutt/mutt/rfc2231.c, /cvs/mutt/mutt/rfc822.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Replace safe_free calls by the FREE macro.
+
+Mon Dec  9 19:06:52 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Minor formatting fix.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/cvslog2changelog.pl:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Change the ChangeLog format as suggested by  Martin Michlmayer.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/send.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Try to fix another obscure error in S/MIME auto-signing upon reply.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/rfc822.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Experimental patch to fix #1318.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/init.h: From: David Jardine <david@jardine.de>
+
+	Documentation fix concerning %L in index_format.  #1313.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/mh.c: From: David Shaw <dshaw@jabberwocky.com>
+
+	Reduce the meaning of the mark_old option so it only controls
+	whether new messages are marked as old when leaving the mailbox.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/parse.c: From: David Shaw <dshaw@jabberwocky.com>
+
+	Reduce the meaning of the mark_old option so it only controls
+	whether new messages are marked as old when leaving the mailbox.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/es.po:
+	From: Jesus Climent <jesus.climent@hispalinux.es>
+
+	Fix a typo.  (#1392)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/addrbook.c, /cvs/mutt/mutt/curs_lib.c, /cvs/mutt/mutt/protos.h, /cvs/mutt/mutt/query.c:
+	From: Anders Helmersson <anders.helmersson@telia.com>
+
+	Fix #1390.  Based on a patch submitted earlier by Edmund Grimley
+	Evans.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/PATCHES: Ups.
+
+	* /cvs/mutt/mutt/curs_main.c, /cvs/mutt/mutt/functions.h, /cvs/mutt/mutt/keymap.c, /cvs/mutt/mutt/keymap.h, /cvs/mutt/mutt/menu.c, /cvs/mutt/mutt/OPS, /cvs/mutt/mutt/PATCHES:
+	From: Michael Elkins <me@sigpipe.org>
+
+	This patch adds two features to mutt:
+
+	- you can now specify the octal code of a key in a bind or macro
+	  function, using the syntax <NNN>.  Eg, bind index <541>
+	  show-version This allows you to bind to a function key for which
+	  Mutt doesn't have a friendly name associated with it.
+
+	- adds a what-key function which allows you to press a key and have
+	  mutt show you the decimal/octal value.  (not bound to anything by
+	  default)
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/et.po: From: Toomas Soome <tsoome@muhv.pri.ee>
+
+	update.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/pt_BR.po, /cvs/mutt/mutt/po/ru.po, /cvs/mutt/mutt/po/sk.po, /cvs/mutt/mutt/po/sv.po, /cvs/mutt/mutt/po/tr.po, /cvs/mutt/mutt/po/uk.po, /cvs/mutt/mutt/po/zh_CN.po, /cvs/mutt/mutt/po/zh_TW.po, /cvs/mutt/mutt/po/gl.po, /cvs/mutt/mutt/po/hu.po, /cvs/mutt/mutt/po/id.po, /cvs/mutt/mutt/po/it.po, /cvs/mutt/mutt/po/ja.po, /cvs/mutt/mutt/po/ko.po, /cvs/mutt/mutt/po/lt.po, /cvs/mutt/mutt/po/nl.po, /cvs/mutt/mutt/po/pl.po, /cvs/mutt/mutt/po/eo.po, /cvs/mutt/mutt/po/es.po, /cvs/mutt/mutt/po/et.po, /cvs/mutt/mutt/po/fr.po, /cvs/mutt/mutt/po/ca.po, /cvs/mutt/mutt/po/cs.po, /cvs/mutt/mutt/po/da.po, /cvs/mutt/mutt/po/de.po, /cvs/mutt/mutt/po/el.po, /cvs/mutt/mutt/compose.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Try to fix a localization issue identified by Pawel Dzienkonski
+	(#1410).  Side effect: All translations will need an update of the
+	S/MIME key translations.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/pl.po: From: Pawel Dziekonski <dzieko@pwr.wroc.pl>
+
+	update.
+
+Sun Dec  8 23:14:57 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/el.po: From: ph04169@cc.uoi.gr
+
+	update.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/ja.po:
+	From: TAKAHASHI Tamotsu <ttakah@lapis.plala.or.jp>
+
+	update.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/po/de.po: From: Roland Rosenfeld <roland@spinnaker.de>
+
+	Update.
+
+Sat Dec  7 19:19:42 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	yet another one.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Another changelog-related change.
+
+	* /cvs/mutt/mutt/ChangeLog: # changelog commit
+
+	* /cvs/mutt/mutt/ChangeLog, /cvs/mutt/mutt/cvslog2changelog.pl, /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Automatically update ChangeLog as part of the commit process.
+
+	* /cvs/mutt/mutt/doc/Makefile.in, /cvs/mutt/mutt/ChangeLog, /cvs/mutt/mutt/ChangeLog.old, /cvs/mutt/mutt/cvslog2changelog.pl, /cvs/mutt/mutt/Makefile.am, /cvs/mutt/mutt/mkchangelog.sh:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Change the style of ChangeLog: Now, the actual patch submitter's
+	name is extracted from the commit message and used for the change
+	log.  For the moment, the date format doesn't match the one in the
+	old changelog.  If you want to fix this, submit a patch to
+	cvslog2changelog.pl. ;-)
+
+	* /cvs/mutt/mutt/po/fr.po: From: Vincent Lefevre <vincent@vinc17.org>
+
+	update
+
+	* /cvs/mutt/mutt/pgppubring.c:
+	From: Paul Walker <paul@black-sun.demon.co.uk>
+
+	Fix a compilation warning.
+
+	* /cvs/mutt/mutt/mh.c, /cvs/mutt/mutt/mutt.h, /cvs/mutt/mutt/muttlib.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Gracefully handle unknown maildir flags.
+
+Fri Dec  6 11:30:08 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Run check_sec.sh before committing.
+
+	* /cvs/mutt/mutt/m4/gettext.m4, /cvs/mutt/mutt/m4/iconv.m4, /cvs/mutt/mutt/build-release, /cvs/mutt/mutt/configure.in:
+	From: Brendan Cully <brendan@kublai.com>
+
+	autoconf cleanup.
+
+	* /cvs/mutt/mutt/po/zh_CN.po, /cvs/mutt/mutt/po/zh_TW.po, /cvs/mutt/mutt/po/uk.po, /cvs/mutt/mutt/po/ru.po, /cvs/mutt/mutt/po/sk.po, /cvs/mutt/mutt/po/sv.po, /cvs/mutt/mutt/po/tr.po, /cvs/mutt/mutt/po/lt.po, /cvs/mutt/mutt/po/nl.po, /cvs/mutt/mutt/po/pl.po, /cvs/mutt/mutt/po/pt_BR.po, /cvs/mutt/mutt/po/gl.po, /cvs/mutt/mutt/po/hu.po, /cvs/mutt/mutt/po/id.po, /cvs/mutt/mutt/po/it.po, /cvs/mutt/mutt/po/ja.po, /cvs/mutt/mutt/po/ko.po, /cvs/mutt/mutt/po/el.po, /cvs/mutt/mutt/po/eo.po, /cvs/mutt/mutt/po/es.po, /cvs/mutt/mutt/po/et.po, /cvs/mutt/mutt/po/fr.po, /cvs/mutt/mutt/po/da.po, /cvs/mutt/mutt/po/de.po, /cvs/mutt/mutt/po/ca.po, /cvs/mutt/mutt/po/cs.po, /cvs/mutt/mutt/reldate.h, /cvs/mutt/mutt/VERSION, /cvs/mutt/mutt/ChangeLog:
+	automatic post-release commit for mutt-1.5.2
+
+	* /cvs/mutt/mutt/curs_lib.c, /cvs/mutt/mutt/pgppubring.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fixing a number of traditional malloc calls which have made their
+	way into the code.
+
+	* /cvs/mutt/mutt/build-release:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Don't post announcements automatically for the moment.
+
+Thu Dec  5 22:30:02 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Fix #1398.
+
+Mon Nov 25 14:16:47 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/sendlib.c, /cvs/mutt/mutt/ChangeLog, /cvs/mutt/mutt/charset.h, /cvs/mutt/mutt/configure.in, /cvs/mutt/mutt/INSTALL:
+	From: Lars Hecking <lhecking@nmrc.ucc.ie>
+
+	The noiconv patch.
+
+Thu Nov 14 08:12:30 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/curs_lib.c: From: Michael Elkins <me@sigpipe.org>
+
+	Fix #1388.
+
+Wed Nov 13 10:10:52 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/main.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	A description of -A was lacking from the help string.
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head, /cvs/mutt/mutt/doc/mutt.man, /cvs/mutt/mutt/main.c, /cvs/mutt/mutt/protos.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Add a new command line option -A which is used to expand aliases.
+
+	* /cvs/mutt/mutt/keymap.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Add a safeguard #ifdef for the KEY_BTAB entry.  Suggested by Thomas
+	Dickey.
+
+Tue Nov 12 09:20:30 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/keymap.c: From: Michael Elkins <me@sigpipe.org>
+
+	Tell mutt about the back-tab key (shift tab).
+
+	* /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	ups.
+
+	* /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Add "make pclean" in order to clean up PATCHES.
+
+	* /cvs/mutt/mutt/po/ja.po:
+	From: TAKAHASHI Tamotsu <arms405@jade.dti.ne.jp>
+
+	update
+
+	* /cvs/mutt/mutt/README:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Add an explicit note that CVS doesn't work from ftp.mutt.org any more.
+
+	* /cvs/mutt/mutt/mbyte.c:
+	From: "Yasuhiro Matsumoto" <mattn_jp@hotmail.com>
+
+	cp932 should be treated like shift_jis.
+
+	* /cvs/mutt/mutt/imap/auth_gss.c, /cvs/mutt/mutt/imap/auth_sasl.c, /cvs/mutt/mutt/configure.in, /cvs/mutt/mutt/main.c, /cvs/mutt/mutt/mutt_sasl.c, /cvs/mutt/mutt/mutt_sasl.h:
+	From: Nathan Dushman <nhd+mutt@andrew.cmu.edu>
+
+	Hi - this is a patch against mutt-1.4 to use version 2 of the Cyrus
+	SASL library; all changes are ifdef'd so as not to break SASLv1
+	support. This includes a patch to configure.in to allow the choice
+	between v1 and v2, but someone with a better understanding of
+	autoconf should double-check it.
+
+	* /cvs/mutt/mutt/handler.c: From: Michael Elkins <me@sigpipe.org>
+
+	Actually commit patch-1.5.1.me.long_qp.2.
+
+	* /cvs/mutt/mutt/mailbox.h, /cvs/mutt/mutt/mh.c, /cvs/mutt/mutt/mx.c:
+	From: Michael Elkins <me@sigpipe.org>
+
+	The maildir_time patch.
+
+Mon Nov 11 21:17:25 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/muttbug.sh.in:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	You shall not use CVS to distribute test versions.
+
+	* /cvs/mutt/mutt/muttbug.sh.in:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	more fixes.
+
+	* /cvs/mutt/mutt/muttbug.sh.in:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Add some rpm-related intelligence to flea.
+
+	* /cvs/mutt/mutt/muttbug.sh.in:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix flea's interaction with bug(1) on Debian systems.
+
+	* /cvs/mutt/mutt/PATCHES:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Clean up the patch list.
+
+	* /cvs/mutt/mutt/hdrline.c, /cvs/mutt/mutt/PATCHES:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Fix #485: Make %z work like %Z inside of %{} in $index_format.
+
+	* /cvs/mutt/mutt/copy.c, /cvs/mutt/mutt/PATCHES:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Fix #1379 - update the total mailbox size when an attachment is
+	deleted.
+
+	* /cvs/mutt/mutt/curs_main.c, /cvs/mutt/mutt/menu.c, /cvs/mutt/mutt/pager.c, /cvs/mutt/mutt/PATCHES:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Fix #1310; redraw problems.
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head, /cvs/mutt/mutt/init.h:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Fix #1306.
+
+	* /cvs/mutt/mutt/send.c: From: Michael Elkins <me@sigpipe.org>
+
+	Fix #1364.
+
+	* /cvs/mutt/mutt/pgp.c: From: Steve Kennedy <steve-md@gbnet.net>
+
+	Fix memory leak in the PGP code.
+
+	* /cvs/mutt/mutt/commands.c, /cvs/mutt/mutt/protos.h, /cvs/mutt/mutt/sendlib.c:
+	From: Paul Walker <paul@black-sun.demon.co.uk>
+
+	Fix #718.
+
+	* /cvs/mutt/mutt/sendlib.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix #1366.
+
+	* /cvs/mutt/mutt/mx.c: From: Martin Siegert <siegert@sfu.ca>
+
+	Fix IMAP moving; #1367.
+
+	* /cvs/mutt/mutt/send.c: From: rene@clerc.nl
+
+	Another S/MIME ifdef misses and causes compilation problems.
+
+	* /cvs/mutt/mutt/init.h: From: Michael Elkins <me@sigpipe.org>
+
+	patch-1.5.1-me.status_doc.2
+
+	* /cvs/mutt/mutt/alias.c, /cvs/mutt/mutt/init.c, /cvs/mutt/mutt/protos.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	patch-1.5-tlr.alias-parse.1 - extension of patch-1.5.1-me.aliascheck.1
+
+	This patch catches the same kind of bad alias names caught by
+	Michael's patch.  There are some extensions:
+
+	1. Mutt makes sure that it doesn't _suggest_ bad names to the user.
+	2. If a name is bad, the user is informed, and may elect to fix the
+	   name.  In this case, mutt will automatically suggest a fixed
+	   version.
+	3. If the user insists in the bad name, it's written into the
+	   aliases file with proper quoting.
+	4. When mutt parses the aliases file, it now uses the normal
+	   tokenizer routines in order to properly handle quoted alias names.
+
+	* /cvs/mutt/mutt/handler.c: From: Michael Elkins <me@sigpipe.org>
+
+	patch-1.5-me.long_qp.2 (#1371) - fix truncation with overly long Q-P
+	encoded lines.
+
+Tue Oct 22 21:24:07 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/commands.c: From: René Clerc <rene@clerc.nl>
+
+	Add some missing #ifdefs.
+
+	* /cvs/mutt/mutt/init.h, /cvs/mutt/mutt/recvattach.c:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Documentation fix; #1326
+
+	* /cvs/mutt/mutt/send.c: From: René Clerc <rene@clerc.nl>
+
+	Another crypt_reply fix.
+
+	* /cvs/mutt/mutt/contrib/sample.muttrc:
+	From: Michael Elkins <me@sigpipe.org>
+
+	#1357
+
+Thu Oct 10 09:50:03 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/send.c: From: René Clerc <rene@clerc.nl>
+
+	Make sure that crypt_reply replies with the same type, despite a
+	possible S/MIME default.
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Document escaping rules for regular expressions (#1351).
+
+	* /cvs/mutt/mutt/pager.c: From: Michael Elkins <me@sigpipe.org>
+
+	Fix header coloring, so there is no difference between ncurses and
+	slang.
+
+	* /cvs/mutt/mutt/init.h: From: Michael Elkins <me@sigpipe.org>
+
+	PGP documentation glitch.
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head:
+	From: Paul Walker <paul@black-sun.demon.co.uk>
+
+	Fix #1340 (documentation)
+
+	* /cvs/mutt/mutt/pager.c: From: Michael Elkins <me@sigpipe.org>
+
+	Jeremy Lin wrote:
+	> When I search with / and get a match, doing '/\r' doesn't move to the next
+	> match. This behavior is unlike the less pager, and is rather useless, IMHO.
+
+	Try the attached patch.
+
+Mon Sep 23 12:08:43 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/buffy.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	A variant of buffy notification.  Note:  If you folks don't like
+	this, we can return to the old version.
+
+Mon Sep  9 21:48:19 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/browser.c, /cvs/mutt/mutt/buffy.c, /cvs/mutt/mutt/curs_main.c, /cvs/mutt/mutt/functions.h, /cvs/mutt/mutt/OPS, /cvs/mutt/mutt/pager.c, /cvs/mutt/mutt/protos.h:
+	From: Rudi Chiarito <nutello@sweetness.com>
+
+	Add a buffy-list function, and display more information when new
+	mail arrives.  With some modifications from tlr.
+
+	* /cvs/mutt/mutt/mh.c: From: Michael Elkins <me@sigpipe.org>
+
+	Fix #1321.
+
+	* /cvs/mutt/mutt/mh.c: From: Michael Elkins <me@sigpipe.org>
+
+	[STABLE] Fix #1321.
+
+	* /cvs/mutt/mutt/signal.c: From: Tony Leneis <tony@cvr.ds.adp.com>
+
+	Tru64 Unix portability patch.
+
+	* /cvs/mutt/mutt/signal.c: From: Tony Leneis <tony@cvr.ds.adp.com>
+
+	[STABLE] Tru64 Unix portability patch.
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head:
+	From: Vincent Lefevre <vincent@vinc17.org>
+
+	Fixing a typo.
+
+	* /cvs/mutt/mutt/postpone.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fixing #1300.  Noted by David Shaw <dshaw@jabberwocky.com>.
+
+	* /cvs/mutt/mutt/postpone.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix #1299; noted by David Shaw <dshaw@jabberwocky.com>.
+
+	* /cvs/mutt/mutt/init.h, /cvs/mutt/mutt/mutt.h, /cvs/mutt/mutt/send.c:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Introducing $forward_edit.
+
+	* /cvs/mutt/mutt/send.c: From: Michael Elkins <me@sigpipe.org>
+
+	#265:
+
+	> Suppose a user wants to fcc to a file (e.g., /a/b/c) but accidentally
+	> typed a = before the path name. Mutt will fail to find the =/a/b/c
+	> folder, display the error message and beep, but immediately erase the
+	> error message; the mail will be sent even though the fcc failed. (The
+	> same can be accomplished by accidentally mistyping other parts of the
+	> path name.) On local systems where screen update is quick, the user
+	> might not notice the error message at all.
+	>
+	> The problem with this behaviour is that the user might have no chance
+	> to read the error message if the screen update is quick enough; as a
+	> result (s)he might not notice that the fcc failed.
+	>
+	> A related thing (probably can't be classified as a problem) is that if
+	> fcc fails, the user probably don't want to send the mail out because
+	> if fcc is requested (s)he probably very much want to keep a copy of
+	> the sent mail.
+
+	Try the following patch.  We keep track of whether or not the fcc
+	failed with a local var `fcc_error' and perform the same behavior as
+	if the actual send of the message failed (without really sending)
+	when the FCC fails, thus giving the user a chance to correct the
+	error.
+
+	* /cvs/mutt/mutt/globals.h, /cvs/mutt/mutt/init.h, /cvs/mutt/mutt/send.c:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Introduce $content_type.  There's one change against Michael's
+	patch, in how the "format=flowed" parameter is used.
+
+	* /cvs/mutt/mutt/history.c: From: Vincent Lefevre <vincent@vinc17.org>
+
+	[STABLE] Fixing history classes.
+
+	* /cvs/mutt/mutt/history.c: From: Vincent Lefevre <vincent@vinc17.org>
+
+	Fixing history classes.
+
+	* /cvs/mutt/mutt/mh.c: From: Armin Wolfermann <aw@osn.de>
+
+	when doing the second parsing pass on a maildir, mutt doesn't delete
+	the fake HEADER struct if the file is unreadable. With this fix
+	unreadable files get silently ignored (like in the MH case).
+
+	* /cvs/mutt/mutt/po/ja.po:
+	From: "TAKAHASHI, Tamotsu" <arms405@jade.dti.ne.jp>
+
+	Update.
+
+	* /cvs/mutt/mutt/editmsg.c: From: Michael Elkins <me@sigpipe.org>
+
+	Fixing #1149:  Truncate files used for editing messages.
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head, /cvs/mutt/mutt/doc/muttrc.man.head, /cvs/mutt/mutt/buffy.c, /cvs/mutt/mutt/buffy.h, /cvs/mutt/mutt/init.h:
+	From: Nicolas Rachinsky <nicolas@dauerreden.de>
+
+	An unmailboxes command.  #1311.
+
+	* /cvs/mutt/mutt/attach.c: From: Michael Elkins <me@sigpipe.org>
+
+	Fixing #1330.
+
+	* /cvs/mutt/mutt/attach.c: From: Michael Elkins <me@sigpipe.org>
+
+	[STABLE] Fixing #1330.
+
+Fri Aug  9 07:01:11 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/doc/muttrc.man.head:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Document unalternative_order in the manual page.
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head, /cvs/mutt/mutt/init.c, /cvs/mutt/mutt/init.h:
+	From: Michael Elkins <me@sigpipe.org>
+
+	The following patch adds the `unalternative_order' command.  It also
+	allows using "*" more generically in un-commands which use
+	parse_unlists().
+
+Mon Aug  5 17:25:05 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/pgpewrap.c, /cvs/mutt/mutt/pgppubring.c:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Error handling fixes.
+
+Fri Jul 26 08:24:01 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Documentation for reply-hook.  Another patch (for the manual page)
+	would be most welcome. ;-))
+
+	* /cvs/mutt/mutt/curs_lib.c: From: Michael Elkins <me@sigpipe.org>
+
+	The attached patch fixes mutt_yesorno() so that the question will be
+	truncated enough to always fit in the default answer string.  The
+	size is calculated on the fly so that there is no artificial
+	truncation.
+
+Wed Jul 24 09:46:58 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/mutt.h: From: TAKIZAWA Takashi <taki@luna.email.ne.jp>
+
+	The attached patch sets MB_LEN_MAX to 16, which is MB_LEN_MAX value
+	on glibc-2.2. It works only with --without-wc-funcs switch. It may
+	be applied to mutt-1.4 and mutt-1.5.1.
+
+	* /cvs/mutt/mutt/configure.in: From: Lars Hecking <lhecking@nmrc.ie>
+
+	Fix a quoting sloppiness.  Noted by Vincent Lefevre.
+
+	* /cvs/mutt/mutt/browser.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fixing #1282.  An off-by-one error. :-/
+
+	* /cvs/mutt/mutt/mutt.h, /cvs/mutt/mutt/send.c, /cvs/mutt/mutt/hook.c, /cvs/mutt/mutt/init.h:
+	From: Michael Elkins <me@sigpipe.org>
+
+	reply-hook.  Documentation still needed.
+
+	* /cvs/mutt/mutt/po/fr.po: From: Vincent Lefevre <vincent@vinc17.org>
+
+	update.
+
+	* /cvs/mutt/mutt/doc/mutt.man, /cvs/mutt/mutt/compose.c, /cvs/mutt/mutt/editmsg.c, /cvs/mutt/mutt/init.c, /cvs/mutt/mutt/init.h, /cvs/mutt/mutt/attach.c:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Fix $editor and $visual.  Based on an earlier patch from Edmund
+	Grimley Evans.
+
+Fri Jul 19 19:23:21 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Another documentation patch.
+
+Wed Jul 17 12:48:38 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/sendlib.c:
+	From: Rocco Rutte <s1118644@mail.inf.tu-dresden.de>
+
+	* Thomas Roessler [02-07-08 10:14:53 +0200] wrote:
+	>  * sendlib.c, 3.12 -> 3.13
+	>    From: Rocco Rutte <s1118644@mail.inf.tu-dresden.de>
+
+	>    Make encode_from a bit more aggressive, by also catching a 'f' in
+	>    the beginning of a line.
+
+	'Catch' is good but also to encode it is better. It may have
+	been too late (sorry for that) so I fixed it. I don't know
+	why the current source only escapes lines that actually
+	begin with 'from' or 'From' followed by some text. I think
+	that escaping 'from' or 'From' on a single line should be
+	done, too.
+
+	Not a big deal, anyways.
+
+Tue Jul 16 07:28:11 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/main.c: From: Michael Elkins <me@sigpipe.org>
+
+	Update copyright notices.
+
+Sun Jul  7 19:33:50 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head, /cvs/mutt/mutt/doc/mutt.man, /cvs/mutt/mutt/init.h:
+	From: Cedric Duval <cedricduval@free.fr>
+
+	Documentation fixes.
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head:
+	From: "TAKAHASHI, Tamotsu" <arms405@jade.dti.ne.jp>
+
+	Dcumentation fixes.
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head, /cvs/mutt/mutt/doc/mutt.man, /cvs/mutt/mutt/init.h:
+	From: Cedric Duval <cedricduval@free.fr>
+
+	Documentation fixes.
+
+	* /cvs/mutt/mutt/sendlib.c:
+	From: Rocco Rutte <s1118644@mail.inf.tu-dresden.de>
+
+	Make encode_from a bit more aggressive, by also catching a 'f' in
+	the beginning of a line.
+
+	* /cvs/mutt/mutt/po/Attic/bg.po:
+	From: Velko Hristov <hristov@informatik.hu-berlin.de>
+
+	Update.
+
+	* /cvs/mutt/mutt/init.h:
+	From: Jeremy Blosser <jblosser-mutt@firinn.org>
+
+	Add unauto_view to the stable branch.  A one-liner.
+
+Fri Jun 28 19:52:31 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/doc/manual.sgml.head:
+	From: Michael Elkins <me@sigpipe.org>
+
+	Documentation fix (#271).
+
+Tue Jun 18 10:03:52 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/po/zh_TW.po, /cvs/mutt/mutt/po/tr.po, /cvs/mutt/mutt/po/uk.po, /cvs/mutt/mutt/po/zh_CN.po, /cvs/mutt/mutt/po/sv.po, /cvs/mutt/mutt/po/sk.po, /cvs/mutt/mutt/po/ru.po, /cvs/mutt/mutt/po/pt_BR.po, /cvs/mutt/mutt/po/nl.po, /cvs/mutt/mutt/po/pl.po, /cvs/mutt/mutt/po/ja.po, /cvs/mutt/mutt/po/ko.po, /cvs/mutt/mutt/po/lt.po, /cvs/mutt/mutt/po/it.po, /cvs/mutt/mutt/po/gl.po, /cvs/mutt/mutt/po/hu.po, /cvs/mutt/mutt/po/id.po, /cvs/mutt/mutt/po/eo.po, /cvs/mutt/mutt/po/es.po, /cvs/mutt/mutt/po/et.po, /cvs/mutt/mutt/po/fr.po, /cvs/mutt/mutt/po/el.po, /cvs/mutt/mutt/po/da.po, /cvs/mutt/mutt/po/de.po, /cvs/mutt/mutt/po/ca.po, /cvs/mutt/mutt/po/cs.po:
+	From: (automatic)
+
+	"make update-po"
+
+	* /cvs/mutt/mutt/po/ca.po: From: several submitters
+
+	Adding a BG translation.  Update for CA.
+
+	* /cvs/mutt/mutt/po/Attic/bg.po:
+	file bg.po was initially added on branch mutt-1-4-stable.
+
+	* /cvs/mutt/mutt/po/Attic/bg.po: From: several submitters
+
+	Adding a BG translation.  Update for CA.
+
+	* /cvs/mutt/mutt/configure.in: From: several submitters
+
+	Adding a BG translation.
+
+	* /cvs/mutt/mutt/init.c: From: Michael Elkins <me@sigpipe.org>
+
+	The string used to store the commmand for a backtic expansion in the
+	muttrc was not free'd if the command failed for some reason.
+
+	* /cvs/mutt/mutt/m4/gssapi.m4: From: David Champion <dgc@uchicago.edu>
+
+	Okay, two bugs here. One's an oversight of mine in my previous patch,
+	where I tried to use "[hH]" as Bourne code while m4 had quoting set to
+	([, ]) -- this probably makes mutt mis-detect Heimdal after all.
+
+	The other is not mine (i.e., it's in cvs now) and it makes mutt
+	overstrike $LIBS if Heimdal or MIT Kerberos is detected. This is a
+	problem for anyone who needs -lnsl -lsocket, in particular. I was
+	fixing
+	this by hand during late 1.3.x releases, as I didn't have time to
+	track
+	it down....
+
+	Here's a patch against the current (unpatched) 1.5 cvs copy of
+	m4/gssapi.m4. It probably should go into both branches. Sorry for the
+	repeats.
+
+Thu Jun  6 23:13:54 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/color.c: From: Michael Elkins <me@sigpipe.org>
+
+	Fix #1230.
+
+	* /cvs/mutt/mutt/init.h: From: Will Fiveash <william.fiveash@sun.com>
+
+	Fix a couple of compile-time warnings.
+
+Fri May 31 16:59:39 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/charset.c, /cvs/mutt/mutt/charset.h, /cvs/mutt/mutt/sendlib.c:
+	From: Edmund GRIMLEY EVANS <edmundo@rano.org>
+
+	Fix charset-hook.
+
+	* /cvs/mutt/mutt/m4/iconv.m4, /cvs/mutt/mutt/charset.h, /cvs/mutt/mutt/configure.in, /cvs/mutt/mutt/INSTALL:
+	From: Lars Hecking <lhecking@nmrc.ucc.ie>
+
+	The noiconv patch.  Should probably have been in 1.4.
+
+Thu May 30 12:15:02 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/rfc822.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Properly handle empty addresses (<>) when they show up in mail
+	headers.  The approach taken is to store this address as <@>, and to
+	check this special case when printing an address.
+
+Wed May 29 09:31:51 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/po/zh_CN.po, /cvs/mutt/mutt/po/zh_TW.po, /cvs/mutt/mutt/po/uk.po, /cvs/mutt/mutt/po/tr.po, /cvs/mutt/mutt/po/sk.po, /cvs/mutt/mutt/po/sv.po, /cvs/mutt/mutt/po/pl.po, /cvs/mutt/mutt/po/pt_BR.po, /cvs/mutt/mutt/po/ru.po, /cvs/mutt/mutt/po/ko.po, /cvs/mutt/mutt/po/lt.po, /cvs/mutt/mutt/po/nl.po, /cvs/mutt/mutt/po/it.po, /cvs/mutt/mutt/po/ja.po, /cvs/mutt/mutt/po/fr.po, /cvs/mutt/mutt/po/gl.po, /cvs/mutt/mutt/po/hu.po, /cvs/mutt/mutt/po/id.po, /cvs/mutt/mutt/po/eo.po, /cvs/mutt/mutt/po/es.po, /cvs/mutt/mutt/po/et.po, /cvs/mutt/mutt/po/da.po, /cvs/mutt/mutt/po/de.po, /cvs/mutt/mutt/po/el.po, /cvs/mutt/mutt/po/ca.po, /cvs/mutt/mutt/po/cs.po, /cvs/mutt/mutt/reldate.h, /cvs/mutt/mutt/VERSION, /cvs/mutt/mutt/ChangeLog:
+	automatic post-release commit for mutt-1.4
+
+	* /cvs/mutt/mutt/po/de.po: From: Roland Rosenfeld <roland@spinnaker.de>
+
+	update.
+
+	* /cvs/mutt/mutt/po/id.po: From: Ronny Haryanto <ronny@haryan.to>
+
+	update
+
 Wed May 29 09:28:33 2002  Thomas Roessler  <roessler@does-not-exist.org>
 
 	* po/de.po: From: Roland Rosenfeld <roland@spinnaker.de>
