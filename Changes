@@ -1,35 +1,27 @@
-Sat Jun 20 06:12:38 1998  Thomas Roessler  <roessler@guug.de>
+Tue Jun 30 06:35:32 1998  Thomas Roessler  <roessler@guug.de>
 
-	* handler.c: Fixing the quoted-printable decoder.
+	* configure.in, configure, TODO, README, NEWS:
+	Updating some of the documentation for 0.93. (And
+	bumping the version number.)
 
-	* handler.c, copy.c: Make mutt handle messages containing null bytes.
+	* doc/manual.txt: Incorporate the recent changes to manual.sgml.
 
-	* doc/manual.sgml: documenting alias-path
+	* main.c: Work around a buffer overflow in SLang.  (This is the same
+	bug which is fixed by 0.91.2i.)
 
-Fri Jun 19 12:52:16 1998  Thomas Roessler  <roessler@guug.de>
+Fri Jun 26 10:31:28 1998  Thomas Roessler  <roessler@guug.de>
 
-	* sendlib.c, send.c, protos.h, postpone.c, pattern.c, menu.c, main.c, headers.c, functions.h, curs_main.c, compose.c, OPS:
-	Removing the Attach-Menu feature for the next release
-	version.
+	* doc/manual.sgml, send.c, init.h, globals.h, Muttrc.in:
+	Removing $empty_to.
 
-Thu Jun 18 20:37:59 1998  Thomas Roessler  <roessler@guug.de>
+Thu Jun 25 22:31:46 1998  Thomas Roessler  <roessler@guug.de>
 
-	* protos.h, lib.c, alias.c:
-	Bradon long's alias_path patch, for the sake of Elm
-	compatibility.
+	* hdrline.c: Moved a break statement where it belongs.
 
-Tue Jun 16 20:59:20 1998  Thomas Roessler  <roessler@guug.de>
+	* mx.c: Fix an imap-related typo.
 
-	* mx.c: Avoid pointless error messages from mx_get_magic() when
-	called from an mx_open_mailbox_append() on a non-existing
-	mailbox.
+	* handler.c: Don't generate non-terminated last lines when quoting
+	8bit-"encoded" text-plain body parts.
 
-	* doc/manual.txt, doc/Makefile.in, configure.in, configure, Makefile.in:
-	Have "make install" install manual.txt as well.
-
-	* doc/Attic/makefile, doc/Makefile.in:
-	Putting Makefile under autoconf control.
-
-	* main.c: Switch the error reporting address from mutt-users to
-	mutt-dev.
+	* Makefile.in: Don't use GNU make specific features.
 
