@@ -1,3 +1,17 @@
+Tue May  9 15:11:36 2000  Thomas Roessler  <roessler@guug.de>
+
+	* build-release: unstable branch.
+
+	* build-release: start preparing 1.2.
+
+Wed May  3 07:48:46 2000  Thomas Roessler  <roessler@guug.de>
+
+	* po/zh_TW.Big5.po, po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/fr.po, po/gl.po, po/id.po, po/it.po, po/ko.po, po/nl.po, po/pl.po, po/pt_BR.po, po/ru.po, po/sk.po, po/sv.po, po/uk.po, ChangeLog, VERSION, po/cs.po:
+	automatic post-release commit for mutt-1.1.14
+
+	* po/sk.po, po/sv.po, po/uk.po, po/zh_TW.Big5.po, po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/fr.po, po/gl.po, po/id.po, po/it.po, po/ko.po, po/nl.po, po/pl.po, po/pt_BR.po, po/ru.po, ChangeLog, VERSION, po/cs.po, reldate.h:
+	automatic post-release commit for mutt-1.1.13
+
 Wed May  3 06:44:22 2000  Thomas Roessler  <roessler@guug.de>
 
 	* po/sk.po, po/sv.po, po/uk.po, po/zh_TW.Big5.po, po/da.po,
