@@ -108,7 +108,7 @@ static ADDRESS *mutt_expand_aliases_r (ADDRESS *a, LIST **expn)
     last->next = NULL;
   }
 
-  if (option (OPTUSEDOMAIN) && Fqdn[0] != '@')
+  if (option (OPTUSEDOMAIN) && Fqdn && Fqdn[0] != '@')
   {
     /* now qualify all local addresses */
     rfc822_qualify (head, Fqdn);
@@ -376,12 +376,12 @@ int mutt_addr_is_user (ADDRESS *addr)
     return 1;
   if (!addr->mailbox)
     return 0;
-  if (strcasecmp (addr->mailbox, Username) == 0)
+  if (strcasecmp (addr->mailbox, NONULL(Username)) == 0)
     return 1;
-  snprintf (buf, sizeof (buf), "%s@%s", Username, Hostname);
+  snprintf (buf, sizeof (buf), "%s@%s", NONULL(Username), NONULL(Hostname));
   if (strcasecmp (addr->mailbox, buf) == 0)
     return 1;
-  snprintf (buf, sizeof (buf), "%s@%s", Username, Fqdn);
+  snprintf (buf, sizeof (buf), "%s@%s", NONULL(Username), NONULL(Fqdn));
   if (strcasecmp (addr->mailbox, buf) == 0)
     return 1;
 

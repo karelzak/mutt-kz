@@ -141,7 +141,7 @@ static int pgp_send_menu (int bits)
       else
       {
 	/* Copy the existing MIC algorithm into place */
-	strfcpy(input_micalg, PgpSignMicalg, sizeof(input_micalg));
+	strfcpy(input_micalg, NONULL(PgpSignMicalg), sizeof(input_micalg));
 
 	if(mutt_get_field("MIC algorithm: ", input_micalg, sizeof(input_micalg), 0) == 0)
 	{
@@ -451,7 +451,7 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 	MAYBE_REDRAW (menu->redraw);
 	break;
       case OP_COMPOSE_EDIT_MESSAGE:
-	if (strcmp ("builtin", Editor) != 0 && !option (OPTEDITHDRS))
+	if (Editor && (strcmp ("builtin", Editor) != 0) && !option (OPTEDITHDRS))
 	{
 	  mutt_edit_file (Editor, msg->content->filename);
 	  mutt_update_encoding (msg->content);
@@ -463,7 +463,7 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 	if (op == OP_COMPOSE_EDIT_HEADERS ||
 	    (op == OP_COMPOSE_EDIT_MESSAGE && option (OPTEDITHDRS)))
 	{
-	  mutt_edit_headers (strcmp ("builtin", Editor) == 0 ? Visual : Editor,
+	  mutt_edit_headers ((!Editor || strcmp ("builtin", Editor) == 0) ? NONULL(Visual) : NONULL(Editor),
 			     msg->content->filename, msg, fcc, fcclen);
 	}
 	else
@@ -668,7 +668,7 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 
       case OP_COMPOSE_EDIT_FILE:
 	CHECK_COUNT;
-	mutt_edit_file (strcmp ("builtin", Editor) == 0 ? Visual : Editor,
+	mutt_edit_file ((!Editor || strcmp ("builtin", Editor) == 0) ? NONULL(Visual) : NONULL(Editor),
 			idx[menu->current]->content->filename);
 	mutt_update_encoding (idx[menu->current]->content);
 	menu->redraw = REDRAW_CURRENT;
@@ -848,7 +848,7 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 
       case OP_COMPOSE_ISPELL:
 	endwin ();
-	snprintf (buf, sizeof (buf), "%s -x %s", Ispell, msg->content->filename);
+	snprintf (buf, sizeof (buf), "%s -x %s", NONULL(Ispell), msg->content->filename);
 	mutt_system (buf);
 	break;
 

@@ -318,7 +318,7 @@ static int add_pattern (COLOR_LINE **top, const char *s, int sensitive,
     if (is_index) 
     {
       strcpy(buf,tmp->pattern);
-      mutt_check_simple (buf, sizeof (buf), SimpleSearch);
+      mutt_check_simple (buf, sizeof (buf), NONULL(SimpleSearch));
       tmp->color_pattern = mutt_pattern_comp (buf, M_FULL_MSG, err);
     }
 #endif
@@ -527,7 +527,7 @@ int mutt_parse_color (BUFFER *buf, BUFFER *s, unsigned long data, BUFFER *err)
       char tempbuf[LONG_STRING];
 
       strfcpy (tempbuf, buf->data, sizeof (tempbuf));
-      mutt_check_simple (tempbuf, sizeof (tempbuf), SimpleSearch);
+      mutt_check_simple (tempbuf, sizeof (tempbuf), NONULL(SimpleSearch));
       if ((pat = mutt_pattern_comp (tempbuf, M_FULL_MSG, err)) == NULL)
       {
 	mutt_pattern_free (&pat);
@@ -683,7 +683,7 @@ int mutt_parse_mono (BUFFER *buf, BUFFER *s, unsigned long data, BUFFER *err)
       char tempbuf[LONG_STRING];
 
       strfcpy (tempbuf, buf->data, sizeof (tempbuf));
-      mutt_check_simple (tempbuf, sizeof (tempbuf), SimpleSearch);
+      mutt_check_simple (tempbuf, sizeof (tempbuf), NONULL(SimpleSearch));
       if ((pat = mutt_pattern_comp (tempbuf, M_FULL_MSG, err)) == NULL)
       {
 	mutt_pattern_free (&pat);

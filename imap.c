@@ -702,7 +702,7 @@ static int imap_open_connection (CONTEXT *ctx, CONNECTION *conn)
   {
     if (!ImapUser)
     {
-      strfcpy (user, Username, sizeof (user));
+      strfcpy (user, NONULL(Username), sizeof (user));
       if (mutt_get_field ("IMAP Username: ", user, sizeof (user), 0) != 0 ||
 	  !user[0])
       {

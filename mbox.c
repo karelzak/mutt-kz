@@ -827,7 +827,7 @@ int mbox_sync_mailbox (CONTEXT *ctx)
     char savefile[_POSIX_PATH_MAX];
     
     snprintf (savefile, sizeof (savefile), "%s/mutt.%s-%s-%d",
-	      NONULL (Tempdir), Username, Hostname, getpid ());
+	      NONULL (Tempdir), NONULL(Username), NONULL(Hostname), getpid ());
     rename (tempfile, savefile);
     mutt_unblock_signals ();
     mx_fastclose_mailbox (ctx);

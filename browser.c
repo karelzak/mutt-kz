@@ -237,7 +237,7 @@ static void add_folder (MUTTMENU *m, struct browser_state *state,
   folder.name = name;
   folder.f = s;
   folder.new = new;
-  mutt_FormatString (buffer, sizeof (buffer), FolderFormat, folder_format_str,
+  mutt_FormatString (buffer, sizeof (buffer), NONULL(FolderFormat), folder_format_str,
 		     (unsigned long) &folder, 0);
 
   if (state->entrylen == state->entrymax)
@@ -432,7 +432,7 @@ void mutt_select_file (char *f, size_t flen, int buffy)
     killPrefix = 1;
   }
   else if (!LastDir[0])
-    strfcpy (LastDir, Maildir, sizeof (LastDir));
+    strfcpy (LastDir, NONULL(Maildir), sizeof (LastDir));
 
   *f = 0;
 
@@ -529,7 +529,7 @@ void mutt_select_file (char *f, size_t flen, int buffy)
 	      strfcpy (LastDir, OldLastDir, sizeof (LastDir));
 	      if (examine_directory (menu, &state, LastDir, prefix) == -1)
 	      {
-		strfcpy (LastDir, Homedir, sizeof (LastDir));
+		strfcpy (LastDir, NONULL(Homedir), sizeof (LastDir));
 		return;
 	      }
 	    }

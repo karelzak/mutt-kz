@@ -638,7 +638,7 @@ envelope_defaults (ENVELOPE *env, CONTEXT *ctx, HEADER *cur, int flags)
   else if (flags & SENDFORWARD)
   {
     /* set the default subject for the message. */
-    mutt_make_string (buffer, sizeof (buffer), ForwFmt, ctx, cur);
+    mutt_make_string (buffer, sizeof (buffer), NONULL(ForwFmt), ctx, cur);
     env->subject = safe_strdup (buffer);
   }
 
@@ -824,11 +824,11 @@ static ADDRESS *mutt_default_from (void)
 
   if (option (OPTUSEDOMAIN))
   {
-    adr->mailbox = safe_malloc (strlen (Username) + strlen (Fqdn) + 2);
-    sprintf (adr->mailbox, "%s@%s", Username, Fqdn);
+    adr->mailbox = safe_malloc (strlen (NONULL(Username)) + strlen (NONULL(Fqdn)) + 2);
+    sprintf (adr->mailbox, "%s@%s", NONULL(Username), NONULL(Fqdn));
   }
   else
-    adr->mailbox = safe_strdup (Username);
+    adr->mailbox = safe_strdup (NONULL(Username));
   return (adr);
 }
 
@@ -1017,7 +1017,7 @@ ci_send_message (int flags,		/* send mode */
     if (generate_body (tempfp, msg, flags, ctx, cur) == -1)
       goto cleanup;
 
-    if (! (flags & (SENDMAILX | SENDKEY)) && strcmp (NONULL(Editor), "builtin") != 0)
+    if (! (flags & (SENDMAILX | SENDKEY)) && Editor && strcmp (Editor, "builtin") != 0)
       append_signature (msg->env, tempfp);
   }
   /* wait until now to set the real name portion of our return address so
@@ -1069,7 +1069,7 @@ ci_send_message (int flags,		/* send mode */
     {
       if (mutt_needs_mailcap (msg->content))
 	mutt_edit_attachment (msg->content, 0);
-      else if (strcmp ("builtin", Editor) == 0)
+      else if (!Editor || strcmp ("builtin", Editor) == 0)
 	mutt_builtin_editor (msg->content->filename, msg, cur);
       else if (option (OPTEDITHDRS))
 	mutt_edit_headers (Editor, msg->content->filename, msg, fcc, sizeof (fcc));

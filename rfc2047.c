@@ -35,7 +35,7 @@ static void q_encode_string (char *d, size_t dlen, const unsigned char *s)
   char *wptr = d;
 
   snprintf (charset, sizeof (charset), "=?%s?Q?",
-	    strcasecmp ("us-ascii", charset) == 0 ? "unknown-8bit" : Charset);
+	    strcasecmp ("us-ascii", charset) == 0 ? "unknown-8bit" : NONULL(Charset));
   cslen = strlen (charset);
 
   strcpy (wptr, charset);
@@ -110,7 +110,7 @@ static void b_encode_string (char *d, size_t dlen, const unsigned char *s)
   int cslen;
   int wordlen;
 
-  snprintf (charset, sizeof (charset), "=?%s?B?", Charset);
+  snprintf (charset, sizeof (charset), "=?%s?B?", NONULL(Charset));
   cslen = strlen (charset);
   strcpy (wptr, charset);
   wptr += cslen;
@@ -188,8 +188,8 @@ void rfc2047_encode_string (char *d, size_t dlen, const unsigned char *s)
     return;
   }
 
-  if (strcasecmp("us-ascii", Charset) == 0 ||
-      strncasecmp("iso-8859", Charset, 8) == 0)
+  if (strcasecmp("us-ascii", NONULL(Charset)) == 0 ||
+      strncasecmp("iso-8859", NONULL(Charset), 8) == 0)
     encoder = q_encode_string;
   else
   {
@@ -251,7 +251,7 @@ static int rfc2047_decode_word (char *d, const char *s, size_t len)
     switch (count)
     {
       case 2:
-	if (strcasecmp (pp, Charset) != 0)
+	if (strcasecmp (pp, NONULL(Charset)) != 0)
 	  filter = 1;
 	break;
       case 3:

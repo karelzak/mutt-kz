@@ -1224,8 +1224,8 @@ static void start_debug (void)
   /* rotate the old debug logs */
   for (i=3; i>=0; i--)
   {
-    snprintf (buf, sizeof(buf), "%s/.muttdebug%d", Homedir, i);
-    snprintf (buf2, sizeof(buf2), "%s/.muttdebug%d", Homedir, i+1);
+    snprintf (buf, sizeof(buf), "%s/.muttdebug%d", NONULL(Homedir), i);
+    snprintf (buf2, sizeof(buf2), "%s/.muttdebug%d", NONULL(Homedir), i+1);
     rename (buf, buf2);
   }
   if ((debugfile = safe_fopen(buf, "w")) != NULL)
@@ -1335,8 +1335,8 @@ void mutt_init (int skip_sys_rc, LIST *commands)
 # ifdef HIDDEN_HOST
     Fqdn = safe_strdup (DOMAIN);
 # else
-    Fqdn = safe_malloc (strlen (DOMAIN) + strlen (Hostname) + 2);
-    sprintf (Fqdn, "%s.%s", Hostname, DOMAIN);
+    Fqdn = safe_malloc (strlen (DOMAIN) + strlen (NONULL(Hostname)) + 2);
+    sprintf (Fqdn, "%s.%s", NONULL(Hostname), DOMAIN);
 # endif /* HIDDEN_HOST */
   }
 
@@ -1345,9 +1345,9 @@ void mutt_init (int skip_sys_rc, LIST *commands)
   else
   {
 #ifdef HOMESPOOL
-    snprintf (buffer, sizeof (buffer), "%s/%s", Homedir, MAILPATH);
+    snprintf (buffer, sizeof (buffer), "%s/%s", NONULL(Homedir), MAILPATH);
 #else
-    snprintf (buffer, sizeof (buffer), "%s/%s", MAILPATH, Username);
+    snprintf (buffer, sizeof (buffer), "%s/%s", MAILPATH, NONULL(Username));
 #endif
     Spoolfile = safe_strdup (buffer);
   }
@@ -1376,9 +1376,9 @@ void mutt_init (int skip_sys_rc, LIST *commands)
   }
   else
   {
-    snprintf (buffer, sizeof (buffer), "%s/.pgp/pubring.pgp", Homedir);
+    snprintf (buffer, sizeof (buffer), "%s/.pgp/pubring.pgp", NONULL(Homedir));
     PgpV2Pubring = safe_strdup (buffer);
-    snprintf (buffer, sizeof (buffer), "%s/.pgp/secring.pgp", Homedir);
+    snprintf (buffer, sizeof (buffer), "%s/.pgp/secring.pgp", NONULL(Homedir));
     PgpV2Secring = safe_strdup (buffer);
   }
 #endif
@@ -1394,9 +1394,9 @@ void mutt_init (int skip_sys_rc, LIST *commands)
   }
   else
   {
-    snprintf (buffer, sizeof (buffer), "%s/.pgp/pubring.pkr", Homedir);
+    snprintf (buffer, sizeof (buffer), "%s/.pgp/pubring.pkr", NONULL(Homedir));
     PgpV3Pubring = safe_strdup (buffer);
-    snprintf (buffer, sizeof (buffer), "%s/.pgp/secring.skr", Homedir);
+    snprintf (buffer, sizeof (buffer), "%s/.pgp/secring.skr", NONULL(Homedir));
     PgpV3Secring = safe_strdup (buffer);
   }
 #endif
@@ -1447,9 +1447,9 @@ void mutt_init (int skip_sys_rc, LIST *commands)
 
   if (!Muttrc)
   {
-    snprintf (buffer, sizeof (buffer), "%s/.muttrc-%s", Homedir, VERSION);
+    snprintf (buffer, sizeof (buffer), "%s/.muttrc-%s", NONULL(Homedir), VERSION);
     if (access (buffer, F_OK) == -1)
-      snprintf (buffer, sizeof (buffer), "%s/.muttrc", Homedir);
+      snprintf (buffer, sizeof (buffer), "%s/.muttrc", NONULL(Homedir));
     default_rc = 1;
     Muttrc = safe_strdup (buffer);
   }
@@ -1461,7 +1461,7 @@ void mutt_init (int skip_sys_rc, LIST *commands)
     Muttrc = safe_strdup (buffer);
   }
   FREE (&AliasFile);
-  AliasFile = safe_strdup (Muttrc);
+  AliasFile = safe_strdup (NONULL(Muttrc));
 
   /* Process the global rc file if it exists and the user hasn't explicity
      requested not to via "-n".  */

@@ -202,8 +202,8 @@ int mutt_edit_attachment (BODY *a, int opt)
   else if (a->type == TYPETEXT)
   {
     /* On text, default to editor */
-    mutt_edit_file (strcmp ("builtin", Editor) == 0 ? Visual : Editor, 
-		    a->filename);
+    mutt_edit_file ((!Editor || strcmp ("builtin", Editor) == 0) ? 
+		    NONULL(Visual) : NONULL(Editor), a->filename);
   }
   else
   {
@@ -774,7 +774,7 @@ int mutt_print_attachment (FILE *fp, BODY *a)
 
   if (!strcasecmp ("text/plain", a->subtype) ||
       !strcasecmp ("application/postscript", a->subtype))
-    return (mutt_pipe_attachment (fp, a, PrintCmd, NULL));
+    return (mutt_pipe_attachment (fp, a, NONULL(PrintCmd), NULL));
   else if (mutt_can_decode (a))
   {
     /* decode and print */
@@ -787,7 +787,7 @@ int mutt_print_attachment (FILE *fp, BODY *a)
       if ((ifp = fopen (newfile, "r")) != NULL)
       {
 	endwin ();
-	thepid = mutt_create_filter (PrintCmd, &fpout, NULL, NULL);
+	thepid = mutt_create_filter (NONULL(PrintCmd), &fpout, NULL, NULL);
 	mutt_copy_stream (ifp, fpout);
 	fclose (ifp);
 	fclose (fpout);

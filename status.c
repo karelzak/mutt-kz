@@ -86,7 +86,7 @@ status_format_str (char *buf, size_t buflen, char op, const char *src,
 
     case 'h':
       snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
-      snprintf (buf, buflen, fmt, Hostname);
+      snprintf (buf, buflen, fmt, NONULL(Hostname));
       break;
 
     case 'f':

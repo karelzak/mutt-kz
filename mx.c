@@ -59,7 +59,7 @@
 #define S_ISLNK(x) (((x) & S_IFMT) == S_IFLNK ? 1 : 0)
 #endif
 
-#define mutt_is_spool(s)  (strcmp (Spoolfile, s) == 0)
+#define mutt_is_spool(s)  (strcmp (NONULL(Spoolfile), s) == 0)
 
 #ifdef USE_DOTLOCK
 /* parameters: 
@@ -738,7 +738,7 @@ int mx_close_mailbox (CONTEXT *ctx)
     }
     else
     {
-      strfcpy (mbox, Inbox, sizeof (mbox));
+      strfcpy (mbox, NONULL(Inbox), sizeof (mbox));
       isSpool = mutt_is_spool (ctx->path) && !mutt_is_spool (mbox);
     }
     mutt_expand_path (mbox, sizeof (mbox));
@@ -816,7 +816,7 @@ int mx_close_mailbox (CONTEXT *ctx)
 
   if (ctx->msgcount == ctx->deleted &&
       (ctx->magic == M_MMDF || ctx->magic == M_MBOX) &&
-      strcmp (ctx->path, Spoolfile) != 0 && !option (OPTSAVEEMPTY))
+      !mutt_is_spool(ctx->path) && !option (OPTSAVEEMPTY))
     unlink (ctx->path);
 
   mx_fastclose_mailbox (ctx);
@@ -884,7 +884,7 @@ int mx_sync_mailbox (CONTEXT *ctx)
 
     if (ctx->msgcount == ctx->deleted &&
 	(ctx->magic == M_MBOX || ctx->magic == M_MMDF) &&
-	strcmp (ctx->path, Spoolfile) != 0 && !option (OPTSAVEEMPTY))
+	!mutt_is_spool(ctx->path) && !option (OPTSAVEEMPTY))
     {
       unlink (ctx->path);
       mx_fastclose_mailbox (ctx);
@@ -1102,7 +1102,7 @@ MESSAGE *mx_open_new_message (CONTEXT *dest, HEADER *hdr, int flags)
       else
 	t = time (NULL);
 
-      fprintf (msg->fp, "From %s %s", p ? p->mailbox : Username, ctime (&t));
+      fprintf (msg->fp, "From %s %s", p ? p->mailbox : NONULL(Username), ctime (&t));
     }
   }
   else

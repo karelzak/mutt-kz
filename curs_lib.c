@@ -269,14 +269,14 @@ int mutt_do_pager (const char *banner,
 {
   int rc;
 
-  if (strcmp (Pager, "builtin") == 0)
+  if (!Pager || strcmp (Pager, "builtin") == 0)
     rc = mutt_pager (banner, tempfile, do_color, info);
   else
   {
     char cmd[STRING];
     
     endwin ();
-    snprintf (cmd, sizeof (cmd), "%s %s", Pager, tempfile);
+    snprintf (cmd, sizeof (cmd), "%s %s", NONULL(Pager), tempfile);
     mutt_system (cmd);
     mutt_unlink (tempfile);
     rc = 0;

@@ -64,7 +64,7 @@ be_snarf_data (FILE *f, char **buf, int *bufmax, int *buflen, int offset,
   tmp[sizeof (tmp) - 1] = 0;
   if (prefix)
   {
-    strfcpy (tmp, Prefix, sizeof (tmp));
+    strfcpy (tmp, NONULL(Prefix), sizeof (tmp));
     tmplen = strlen (tmp);
     p = tmp + tmplen;
     tmplen = sizeof (tmp) - tmplen;
@@ -323,7 +323,7 @@ int mutt_builtin_editor (const char *path, HEADER *msg, HEADER *cur)
     }
     addch ('\n');
 
-    if (tmp[0] == EscChar[0] && tmp[1] != EscChar[0])
+    if (EscChar && tmp[0] == EscChar[0] && tmp[1] != EscChar[0])
     {
       /* remove trailing whitespace from the line */
       p = tmp + strlen (tmp) - 1;
@@ -417,9 +417,9 @@ int mutt_builtin_editor (const char *path, HEADER *msg, HEADER *cur)
 	    bufmax = buflen = 0;
 
 	    if (option (OPTEDITHDRS))
-	      mutt_edit_headers (Visual, path, msg, NULL, 0);
+	      mutt_edit_headers (NONULL(Visual), path, msg, NULL, 0);
 	    else
-	      mutt_edit_file (Visual, path);
+	      mutt_edit_file (NONULL(Visual), path);
 
 	    buf = be_snarf_file (path, buf, &bufmax, &buflen, 0);
 

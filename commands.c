@@ -176,11 +176,11 @@ int mutt_display_message (HEADER *cur)
     return (0);
   }
 
-  if (strcmp (Pager, "builtin") == 0)
+  if (!Pager || strcmp (Pager, "builtin") == 0)
     builtin = 1;
   else
   {
-    mutt_make_string (buf, sizeof (buf), PagerFmt, Context, cur);
+    mutt_make_string (buf, sizeof (buf), NONULL(PagerFmt), Context, cur);
     fputs (buf, fpout);
     fputs ("\n\n", fpout);
   }
@@ -213,7 +213,7 @@ int mutt_display_message (HEADER *cur)
   else
   {
     endwin ();
-    snprintf (buf, sizeof (buf), "%s %s", Pager, tempfile);
+    snprintf (buf, sizeof (buf), "%s %s", NONULL(Pager), tempfile);
     mutt_system (buf);
     unlink (tempfile);
     keypad (stdscr, TRUE);
@@ -455,13 +455,16 @@ void mutt_shell_escape (void)
   buf[0] = 0;
   if (mutt_get_field ("Shell command: ", buf, sizeof (buf), M_CMD) == 0)
   {
-    if (!buf[0])
+    if (!buf[0] && Shell)
       strfcpy (buf, Shell, sizeof (buf));
-    CLEARLINE (LINES-1);
-    endwin ();
-    fflush (stdout);
-    if (mutt_system (buf) != 0 || option (OPTWAITKEY))
-      mutt_any_key_to_continue (NULL);
+    if(buf[0])
+    {
+      CLEARLINE (LINES-1);
+      endwin ();
+      fflush (stdout);
+      if (mutt_system (buf) != 0 || option (OPTWAITKEY))
+	mutt_any_key_to_continue (NULL);
+    }
   }
 }
 
@@ -673,7 +676,7 @@ void mutt_print_message (HEADER *h)
 			h ? "Print message?" : "Print tagged messages?") != M_YES)
     return;
   endwin ();
-  if ((thepid = mutt_create_filter (PrintCmd, &fp, NULL, NULL)) == -1)
+  if ((thepid = mutt_create_filter (NONULL(PrintCmd), &fp, NULL, NULL)) == -1)
     return;
   if (h)
   {

@@ -452,7 +452,7 @@ void maildir_create_filename (const char *path, HEADER *hdr, char *msg, char *fu
   FOREVER
   {
     snprintf (msg, _POSIX_PATH_MAX, "%s/%ld.%d_%d.%s%s",
-	      subdir, time (NULL), getpid (), Counter++, Hostname, suffix);
+	      subdir, time (NULL), getpid (), Counter++, NONULL(Hostname), suffix);
     snprintf (full, _POSIX_PATH_MAX, "%s/%s", path, msg);
     if (stat (full, &sb) == -1 && errno == ENOENT) return;
   }

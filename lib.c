@@ -196,7 +196,7 @@ char *mutt_expand_path (char *s, size_t slen)
   if (*s == '~')
   {
     if (*(s + 1) == '/' || *(s + 1) == 0)
-      snprintf (p, sizeof (p), "%s%s", Homedir, s + 1);
+      snprintf (p, sizeof (p), "%s%s", NONULL(Homedir), s + 1);
     else
     {
       struct passwd *pw;
@@ -470,7 +470,7 @@ void mutt_tabs_to_spaces (char *s)
 
 void mutt_mktemp (char *s)
 {
-  snprintf (s, _POSIX_PATH_MAX, "%s/mutt-%s-%d-%d", NONULL (Tempdir), Hostname, (int) getpid (), Counter++);
+  snprintf (s, _POSIX_PATH_MAX, "%s/mutt-%s-%d-%d", NONULL (Tempdir), NONULL(Hostname), (int) getpid (), Counter++);
   unlink (s);
 }
 
@@ -545,7 +545,7 @@ void mutt_pretty_mailbox (char *s)
     *s++ = '=';
     strcpy (s, s + len);
   }
-  else if (strncmp (s, Homedir, (len = strlen (Homedir))) == 0 &&
+  else if (strncmp (s, NONULL(Homedir), (len = strlen (NONULL(Homedir)))) == 0 &&
 	   s[len] == '/')
   {
     *s++ = '~';

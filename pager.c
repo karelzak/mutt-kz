@@ -1482,7 +1482,7 @@ mutt_pager (const char *banner, const char *fname, int do_color, pager_t *extra)
       menu_redraw_current (index);
 
       /* print out the index status bar */
-      menu_status_line (buffer, sizeof (buffer), index, Status);
+      menu_status_line (buffer, sizeof (buffer), index, NONULL(Status));
       move (indexoffset + (option (OPTSTATUSONTOP) ? 0 : (indexlen - 1)), 0);
       SETCOLOR (MT_COLOR_STATUS);
       printw ("%-*.*s", COLS, COLS, buffer);

@@ -575,7 +575,7 @@ static int lookup_mime_type (char *d, const char *s)
     switch (count)
     {
       case 0:
-	snprintf (buf, sizeof (buf), "%s/.mime.types", Homedir);
+	snprintf (buf, sizeof (buf), "%s/.mime.types", NONULL(Homedir));
 	break;
       case 1:
 	strfcpy (buf, SHAREDIR"/mime.types", sizeof (buf));
@@ -1199,7 +1199,7 @@ char *mutt_gen_msgid (void)
   snprintf (buf, sizeof (buf), "<%d%02d%02d%02d%02d%02d.%c%d@%s>",
 	    tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday, tm->tm_hour,
 	    tm->tm_min, tm->tm_sec, MsgIdPfx, getpid (),
-	    Fqdn[0] != '@' ? Fqdn : Hostname);
+	    Fqdn && Fqdn[0] != '@' ? Fqdn : NONULL(Hostname));
   MsgIdPfx = (MsgIdPfx == 'Z') ? 'A' : MsgIdPfx + 1;
   return (safe_strdup (buf));
 }
@@ -1615,7 +1615,7 @@ void mutt_bounce_message (HEADER *h, ADDRESS *to)
     {
       fseek (msg->fp, h->offset, 0);
       mutt_copy_header (msg->fp, h, f, CH_XMIT | CH_NONEWLINE, NULL);
-      fprintf (f, "Resent-From: %s", Username);
+      fprintf (f, "Resent-From: %s", NONULL(Username));
       if (Fqdn[0] != '@')
 	fprintf (f, "@%s", Fqdn);
       fprintf (f, "\nResent-%s", mutt_make_date (date));
