@@ -834,16 +834,19 @@ void pgp_close_keydb (KEYINFO **ki)
 {
   KEYINFO *tmp, *k = *ki;
   PGPUID *uid;
-  LIST *q;
+  LIST *p, *q;
   
   while (k)
   {
     if (k->keyid) safe_free ((void **)&k->keyid);
-    for(q = k->address; q; q = q-> next)
+    for(q = k->address; q; q = p)
     {
       uid = (PGPUID *) q->data;
+      p = q->next;
+
       safe_free((void **)&uid->addr);
       safe_free((void **)&q->data);
+      safe_free((void **)&q);
     }
     tmp = k;
     k = k->next;
