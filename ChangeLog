@@ -1,4 +1,119 @@
-Wed Jul 22 08:26:16 1998  Thomas Roessler  <roessler@guug.de>
+Fri Jul 31 08:17:50 1998  Thomas Roessler  <roessler@guug.de>
+
+	* rfc1524.c: Changing an sprintf to an snprintf (which it was meant to
+	be.)
+
+	* protos.h: mutt_sanitize_filename takes char *, not const char *.
+
+	* protos.h, lib.c, attach.c:
+	Introducing mutt_sanitize_filename().  The code is similar
+	to patch-0.91.1i.tlr.rfc1524_sanitize.1 and to Peter
+	Holzer's patch against 0.91.
+
+	* rfc1524.h, rfc1524.c, postpone.c, attach.c:
+	Avoid possible buffer overflows in mutt_adv_mktemp().
+
+	* sendlib.c: Interpret sysexits-style exit values from sendmail.
+
+	* configure.in, configure, config.h.in, acconfig.h:
+	Check for sysexits.h.
+
+Thu Jul 30 09:30:38 1998  Thomas Roessler  <roessler@guug.de>
+
+	* edit.c: When reading in files, be_snarf_file() wouldn't recognize
+	'~' as the user's home directory.
+
+Wed Jul 29 10:54:09 1998  Thomas Roessler  <roessler@guug.de>
+
+	* README, Changes: Finalizing 0.93.2i.
+
+	* configure.in, configure: Bumping to 0.93.2(i).
+
+	* parse.c: Fixing a buffer overflow in parse.c which presented a
+	serious security thread.  Noted by Paul Boehm
+	<paul@boehm.org>.
+
+Tue Jul 28 08:21:49 1998  Thomas Roessler  <roessler@guug.de>
+
+	* Attic/patch.slang-1.2.2.keypad.1: Adding a patch for a SLang bug.
+
+	* INSTALL: Adding a patch for a SLang bug.
+
+	* mx.c: Doing 'mutt -f NoSuchFile' just flickers the screen and
+	silently exits. Earlier (0.92.14 at least), it used to
+	spit out the error 'NoSuchFile: no such file or directory
+	(errno = 2)'.  (Noted and tracked down by Vikas Agnihotri
+	<VikasA@att.com>)
+
+	* color.c: The index cache should be updated even without color
+	support.
+
+Mon Jul 27 13:39:39 1998  Thomas Roessler  <roessler@guug.de>
+
+	* Attic/BUGS: Adding a notice about some more nits.
+
+	* main.c: Change the error reporting mail address from
+	<mutt-dev@cs.hmc.edu> to <mutt-dev@mutt.org>.
+
+	* protos.h, init.h, color.c:
+	This patch fixes index "color" patterns when using a
+	non-color capable curses library.  While working on color
+	support, I've thrown together the mutt_parse_color() and
+	mutt_parse_mono() functions as they are sharing most of
+	their code.  Additionally, a new directive called "unmono"
+	is introduced.  The implementation consists in adding a
+	flag and very few lines of code (plus ifdefs) to
+	mutt_parse_uncolor().
+
+	* snprintf.c, rfc1524.h, rfc1524.c, date.c:
+	Fixing some minor nits: missing #includes in date.c and
+	snprintf.c, and a not-so-nice declaration of
+	rfc1524_new_entry().  Noted by Digital cc and gcc.
+
+Fri Jul 24 08:12:46 1998  Thomas Roessler  <roessler@guug.de>
+
+	* copy.c, attach.c:
+	Fiddling around with message/rfc822 attachments once again.
+
+Thu Jul 23 20:57:50 1998  Thomas Roessler  <roessler@guug.de>
+
+	* status.c, sendlib.c, send.c, rfc2047.c, pop.c, pager.c, mx.c, mh.c, mbox.c, lib.c, init.c, imap.c, edit.c, curs_lib.c, compose.c, commands.c, color.c, browser.c, attach.c, alias.c:
+	Guard lots of global (char *) variable deferences against
+	NULL pointers.
+
+	* copy.c, attach.c:
+	Yet another patch about saving message/rfc822 attachments.
+
+	* main.c, send.c: Fixing potential NULL pointer deferences.
+
+Wed Jul 22 22:47:57 1998  Thomas Roessler  <roessler@guug.de>
+
+	* recvattach.c: Another fix from Liviu.
+
+	* recvattach.c, from.c, attach.c:
+	Another patch from liviu to fix the message/rfc822
+	behaviour.
+
+	* recvattach.c, mx.c, attach.c:
+	This patch fixes the saving of message/rfc822 attachments
+	to mail folders.  Additionally, it fixes an outstanding
+	bug with From_ lines being written to MH folders.
+
+	(From: Liviu Daia <daia@stoilow.imar.ro>)
+
+	* menu.c, functions.h, browser.c, OPS:
+	1. When I hit 'c' (change dir) in browser, it gives me the
+	   directory, but without the final '/', so I have to add
+	   '/' to add a subdirectory name. This patch fixes it.
+
+	2. check-new now will recheck mailbox folders for new
+	   mail.
+
+	3. added a function toggle-mailboxes which toggles in
+	   browser between mailboxes view and directory view.
+	   (bound to TAB by default).
+
+	(From: "Michael S. Tsirkin" <mtsirkin@iil.intel.com>)
 
 	* send.c: Correct an error message in send.c.
 	(From: Byrial Jensen <byrial@post3.tele.dk>)
