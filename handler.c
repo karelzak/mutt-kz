@@ -708,6 +708,7 @@ void text_enriched_handler (BODY *a, STATE *s)
 
       case ST_EOF :
 	enriched_putc ('\0', &stte);
+        enriched_flush (&stte, 1);
 	state = DONE;
 	break;
 
