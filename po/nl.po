@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-01-04 13:55+0100\n"
+"POT-Creation-Date: 1998-12-12 09:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,160 +13,158 @@ msgstr ""
 #: addrbook.c:32 browser.c:54 pager.c:1369 postpone.c:33 query.c:44
 #: recvattach.c:48
 msgid "Exit"
-msgstr "Verlassen"
+msgstr "Afsluiten"
 
 #: addrbook.c:33
 msgid "Select"
-msgstr "Auswählen"
+msgstr "Selecteren"
 
-#: addrbook.c:34 browser.c:57 compose.c:84 curs_main.c:259 pager.c:1466
+#: addrbook.c:34 browser.c:57 compose.c:84 curs_main.c:241 pager.c:1466
 #: pgpkey.c:181 postpone.c:36 query.c:49 recvattach.c:52
 msgid "Help"
-msgstr "Hilfe"
+msgstr "Hulp"
 
 #: addrbook.c:132
 msgid "You have no aliases!"
-msgstr "Keine Einträge im Adreßbuch!"
+msgstr "Geen afkortingen opgegeven!"
 
 #: addrbook.c:144
 msgid "Aliases"
-msgstr "Adreßbuch"
+msgstr "Afkortingen"
 
 #. add a new alias
 #: alias.c:193
 msgid "Alias as: "
-msgstr "Kurzname für Adreßbuch: "
+msgstr "Afkorten als:"
 
 #: alias.c:199
 msgid "You already have an alias defined with that name!"
-msgstr ""
-"Sie haben bereits einen Adreßbucheintrag mit diesem Kurznamen definiert."
+msgstr "U heeft al een afkorting onder die naam!"
 
 #: alias.c:213
 msgid "Address: "
-msgstr "Adresse: "
+msgstr "Adres: "
 
 #: alias.c:229
 msgid "Personal name: "
-msgstr "Name: "
+msgstr "Naam: "
 
 #: alias.c:238
 #, c-format
 msgid "[%s = %s] Accept?"
-msgstr "[%s = %s] Eintragen?"
+msgstr "[%s = %s] Accepteren?"
 
 #: alias.c:255 recvattach.c:344 recvattach.c:399
 msgid "Save to file: "
-msgstr "Speichern in Datei: "
+msgstr "Opslaan als: "
 
 #: alias.c:266
 msgid "Alias added."
-msgstr "Adresse eingetragen."
+msgstr "Adres toegevoegd."
 
 #: attach.c:112 attach.c:235 attach.c:367 attach.c:806
 msgid "Can't match nametemplate, continue?"
-msgstr "Namensschema kann nicht erfüllt werden, fortfahren?"
+msgstr "Naamschema kan niet worden ingevuld, doorgaan?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:124
 msgid "Mailcap compose entry requires %%s"
-msgstr "\"compose\"-Eintrag in der Mailcap-Datei erfordert %%s."
+msgstr "\"compose\"-entry in mailcap vereist %%s."
 
 #: attach.c:138
 msgid "Failure to open file to parse headers."
-msgstr "Kann Datei nicht öffnen, um Nachrichtenkopf zu untersuchen."
+msgstr "Kan bestand niet openen om header te onderzoeken."
 
 #: attach.c:169
 msgid "Failure to open file to strip headers."
-msgstr "Kann Datei nicht öffnen, um Nachrichtenkopf zu entfernen."
+msgstr "Kan bestand niet openen om header te verwijderen."
 
 #: attach.c:187
 #, c-format
 msgid "No mailcap compose entry for %s, creating empty file."
-msgstr ""
-"Kein \"compose\"-Eintrag für %s in der Mailcap-Datei, erzeuge leere Datei."
+msgstr "Geen \"compose\"-entry in mailcap, een leeg bestand wordt aangemaakt."
 
 #. For now, editing requires a file, no piping
 #: attach.c:247
 msgid "Mailcap Edit entry requires %%s"
-msgstr "\"edit\"-Eintrag in Mailcap erfordert %%s."
+msgstr "\"edit\"-entry in mailcap vereist %%s."
+
 
 #: attach.c:265
 #, c-format
 msgid "No mailcap edit entry for %s"
-msgstr "Kein \"edit\"-Eintrag für %s in Mailcap."
+msgstr "Geen \"edit\"-Eintrag voor %s in Mailcap."
 
 #: attach.c:333
 msgid "No matching mailcap entry found.  Viewing as text."
-msgstr "Es gibt keinen passenden Mailcap-Eintrag, Anzeige als Text."
+msgstr "Geen geschikte Mailcap-entry gevonden.  Weergave als normale tekst."
 
 #: attach.c:346
 msgid "MIME type not defined.  Cannot view attachment."
-msgstr "Undefinierter MIME-Typ, kann Anhang nicht anzeigen."
+msgstr "MIME type is niet gedefinieerd. Kan bijlage niet weergeven."
 
 #: attach.c:436
 msgid "Cannot create filter"
-msgstr "Kann Filter nicht erzeugen."
+msgstr "Filter kan niet worden aangelegd."
 
 #: attach.c:638 recvattach.c:374
 msgid "Attachment saved."
-msgstr "Anhang gespeichert."
+msgstr "Bijlage opgeslagen."
 
 #: attach.c:691
 msgid "Write fault!"
-msgstr "Schreibfehler!"
+msgstr "Schrijffout!"
 
 #: attach.c:890
 msgid "I don't know how to print that!"
-msgstr "Ich weiß nicht, wie man dies druckt."
+msgstr "Ik weet niet hoe dit afgerukt moet worden!"
 
 #: browser.c:55
 msgid "Chdir"
-msgstr "Verzeichnis"
+msgstr "Wijzig directory"
 
 #: browser.c:56
 msgid "Mask"
-msgstr "Maske"
+msgstr "Masker"
 
 #: browser.c:345 browser.c:672
 #, c-format
 msgid "%s is not a directory."
-msgstr "%s ist kein Verzeichnis."
+msgstr "%s is geen directory."
 
 #: browser.c:450
 #, c-format
 msgid "Mailboxes [%d]"
-msgstr "Mailbox-Dateien [%d]"
+msgstr "Mailboxen [%d]"
 
 #: browser.c:455
 #, c-format
 msgid "Directory [%s], File mask: %s"
-msgstr "Verzeichnis [%s], Dateimaske: %s"
+msgstr "Directory [%s], Bestandsmasker: %s"
 
 #: browser.c:539 browser.c:729 browser.c:812
 msgid "No files match the file mask"
-msgstr "Es gibt keine zur Maske passenden Dateien."
+msgstr "Geen bestanden waarop het masker past gevonden."
 
 #: browser.c:646
 msgid "Chdir to: "
-msgstr "Verzeichnis wechseln nach: "
+msgstr "Wisselen naar directory: "
 
 #: browser.c:665 browser.c:722
 msgid "Error scanning directory."
-msgstr "Fehler beim Einlesen des Verzeichnisses."
+msgstr "Fout opgetreden tijdens het analyseren van de directory."
 
 #: browser.c:683
 msgid "File Mask: "
-msgstr "Dateimaske: "
+msgstr "Bestandsmasker: "
 
 #: browser.c:745
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr ""
-"Sortiere umgekehrt nach (D)atum, (a)lphabetisch, (G)röße, oder (n)icht? "
+msgstr "Achteruit sorteren op (d)atum, bestands(g)rootte, (a)lpha of helemaal (n)iet ?"
 
 #: browser.c:746
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr "Sortiere nach (D)atum, (a)lphabetisch, (G)röße oder (n)icht?"
+msgstr "Sorteren op (d)atum, bestands(g)rootte, (a)lpha of helemaal (n)iet ?"
 
 #: browser.c:747
 msgid "dazn"
@@ -174,151 +172,147 @@ msgstr "dagn"
 
 #: browser.c:799
 msgid "New file name: "
-msgstr "Neuer Dateiname: "
+msgstr "Nieuwe bestandsnaam: "
 
 #: browser.c:820
 msgid "Can't view a directory"
-msgstr "Verzeichnisse können nicht angezeigt werden."
+msgstr "Directory kan niet worden getoond."
 
 #: browser.c:838
 msgid "Error trying to view file"
-msgstr "Fehler."
+msgstr "Fout opgetreden tijdens het weergeven van bestand"
 
 #: buffy.c:364
 #, c-format
 msgid "New mail in %s."
-msgstr "Neue Nachrichten in %s."
+msgstr "Nieuwe berichten in %s."
 
 #: color.c:307
 #, c-format
 msgid "%s: color not supported by term"
-msgstr "%s: color wird nicht vom Terminal unterstützt."
+msgstr "%s: Terminal ondersteunt geen kleur"
 
 #: color.c:313
 #, c-format
 msgid "%s: no such color"
-msgstr "%s: Farbe unbekannt."
+msgstr "%s: Onbekende kleur."
 
 #: color.c:359 color.c:550 color.c:561
 #, c-format
 msgid "%s: no such object"
-msgstr "%s: Objekt unbekannt."
+msgstr "%s: Object onbekend."
 
 #: color.c:366
 #, c-format
 msgid "%s: command valid only for index object"
-msgstr "%s: Kommando ist nur für Index-Objekt gültig."
+msgstr "%s: Commando alleen geldig voor index-objecten"
 
 #: color.c:374
 #, c-format
 msgid "%s: too few arguments"
-msgstr "%s: Zu wenige Parameter."
+msgstr "%s: Te weinig argumenten."
 
 #: color.c:538
 msgid "Missing arguments."
-msgstr "Fehlende Parameter."
+msgstr "Argumenten afwezig."
 
 #: color.c:577 color.c:588
 msgid "color: too few arguments"
-msgstr "color: Zu wenige Parameter."
+msgstr "color: Te weinig argumenten."
 
 #: color.c:611
 msgid "mono: too few arguments"
-msgstr "mono: Zu wenige Parameter."
+msgstr "mono: Te weinig argumenten."
 
 #: color.c:631
 #, c-format
 msgid "%s: no such attribute"
-msgstr "%s: Attribut unbekannt."
+msgstr "%s: Attribuut onbekend"
 
 #: color.c:671 hook.c:62 hook.c:70 keymap.c:681
 msgid "too few arguments"
-msgstr "Zu wenige Parameter."
+msgstr "Te weinig argumenten"
 
 #: color.c:680 hook.c:76
 msgid "too many arguments"
-msgstr "Zu viele Parameter."
+msgstr "Te veel argumenten"
 
 #: color.c:694
 msgid "default colors not supported"
-msgstr "Standard-Farben werden nicht unterstützt."
+msgstr "standaard kleuren niet ondersteund"
 
 #: commands.c:123
 msgid "Display message using mailcap?"
-msgstr "Nachricht mittels Mailcap anzeigen?"
+msgstr "Bericht weergeven volgens mailcap?"
 
 #: commands.c:154 commands.c:162 pgpkey.c:221
 msgid "Invoking PGP..."
-msgstr "Rufe PGP auf..."
+msgstr "PGP wordt aangeroepen..."
 
 #. find out whether or not the verify signature
 #: commands.c:159
 msgid "Verify PGP signature?"
-msgstr "PGP-Signatur überprüfen?"
+msgstr "PGP-handtekening controleren?"
 
-#: commands.c:177 mbox.c:724
+#: commands.c:177 mbox.c:721
 msgid "Could not create temporary file!"
-msgstr "Konnte Temporärdatei nicht anzeigen!"
+msgstr "Tijdelijk bestand kon niet worden aangelegd!"
 
 #: commands.c:225
 msgid "Command: "
-msgstr "Kommando: "
+msgstr "Commando: "
 
 #: commands.c:243 recvattach.c:677
 msgid "Bounce message to: "
-msgstr "Nachricht weiterleiten an: "
+msgstr "Bericht doorsturen naar: "
 
 #: commands.c:245 recvattach.c:679
 msgid "Bounce tagged messages to: "
-msgstr "Markierte Nachrichten weiterleiten an: "
+msgstr "Gemarkeerde berichten doorsturen naar: "
 
 #: commands.c:260
 msgid "Error parsing address!"
-msgstr "Unverständliche Adresse!"
+msgstr "Ongeldig adres!"
 
 #: commands.c:270
 #, c-format
 msgid "Bounce message to %s"
-msgstr "Nachricht an %s weiterleiten"
+msgstr "Bericht doorsturen aan %s"
 
 #: commands.c:270
 #, c-format
 msgid "Bounce messages to %s"
-msgstr "Nachrichten an %s weiterleiten"
+msgstr "Bericht doorsturen aan %s"
 
 #: commands.c:281
 msgid "Message bounced."
-msgstr "Nachricht weitergeleitet."
+msgstr "Bericht doorgestuurd."
 
 #: commands.c:281
 msgid "Messages bounced."
-msgstr "Nachrichten weitergeleitet."
+msgstr "Bericht doorgestuurd."
 
 #: commands.c:301
 msgid "Pipe to command: "
-msgstr "In Kommando einspeisen: "
+msgstr "Doorsluizen naar: "
 
 #: commands.c:401
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Umgekehrt "
-"(D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/(F)aden/(u)nsort/(G)röße/Be(w)ert?: "
 
 #: commands.c:402
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Sortieren "
-"(D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/(F)aden/(u)nsort/(G)röße/Be(w)ert?: "
 
 #: commands.c:403
 msgid "dfrsotuzc"
-msgstr "danbefugw"
+msgstr "dfrsotuzc"
 
 #: commands.c:456
 msgid "Shell command: "
-msgstr "Shell-Kommando: "
+msgstr "Shell-Commando: "
 
 #: commands.c:572
 #, c-format
@@ -327,418 +321,417 @@ msgstr "%s%s in Mailbox"
 
 #: commands.c:573
 msgid "Decode-save"
-msgstr "Decodiert speichern"
+msgstr "Gedecodeerd opslaan"
 
 #: commands.c:573
 msgid "Decode-copy"
-msgstr "Decodiert kopieren"
+msgstr "Gedecodeerd kopieeren"
 
 #: commands.c:574
 msgid "Decrypt-save"
-msgstr "Entschlüsselt speichern"
+msgstr "Gedecodeerd opslaan"
 
 #: commands.c:574
 msgid "Decrypt-copy"
-msgstr "Entschlüsselt kopieren"
+msgstr "Gedecodeerd kopieeren"
 
-#: commands.c:575 curs_main.c:255 recvattach.c:49
+#: commands.c:575 curs_main.c:237 recvattach.c:49
 msgid "Save"
-msgstr "Speichern"
+msgstr "Opslaan"
 
 #: commands.c:575
 msgid "Copy"
-msgstr "Kopieren"
+msgstr "Copieeren"
 
 #: commands.c:575
 msgid " tagged"
-msgstr " ausgewählt"
+msgstr " gemarkeerd"
 
 #: commands.c:644
 #, c-format
 msgid "Copying to %s..."
-msgstr "Kopiere nach %s..."
+msgstr "Kopieer naar %s..."
 
 #: commands.c:716
 msgid "Print message?"
-msgstr "Nachricht drucken?"
+msgstr "Bericht afdrukken?"
 
 #: commands.c:716
 msgid "Print tagged messages?"
-msgstr "Ausgewählte Nachrichten drucken?"
+msgstr "Geselecteerde berichten uitprinten?"
 
 #: commands.c:743
 msgid "Message printed"
-msgstr "Nachricht gedruckt"
+msgstr "Bericht afgedrukt"
 
 #: commands.c:743
 msgid "Messages printed"
-msgstr "Nachrichten gedruckt"
+msgstr "Berichten afgedrukt"
 
 #: compose.c:77
 msgid "Send"
-msgstr "Absenden"
+msgstr "Versturen"
 
 #: compose.c:78
 msgid "Abort"
-msgstr "Verwerfen"
+msgstr "Afbreken"
 
 #: compose.c:82 compose.c:539
 msgid "Attach file"
-msgstr "Datei anhängen"
+msgstr "Toevoegen"
 
 #: compose.c:83
 msgid "Descrip"
-msgstr "Beschr."
+msgstr "Omschr."
 
 #: compose.c:104
 msgid "Sign, Encrypt"
-msgstr "Signieren, Verschlüsseln"
+msgstr "Ondertekenen, versleutelen"
 
 #: compose.c:106
 msgid "Encrypt"
-msgstr "Verschlüsseln"
+msgstr "Versleutelen"
 
 #: compose.c:108
 msgid "Sign"
-msgstr "Signieren"
+msgstr "Ondertekenen"
 
 #: compose.c:110
 msgid "Clear"
-msgstr "Klartext"
+msgstr "Normaal"
 
 #: compose.c:117
 msgid " sign as: "
-msgstr " signiere als: "
+msgstr " ondertekenen als: "
 
 #: compose.c:117
 msgid "<default>"
-msgstr "<Voreinstellung>"
+msgstr "<standaard>"
 
 #: compose.c:118 compose.c:192
 msgid "MIC algorithm: "
-msgstr "MIC-Algorithmus: "
+msgstr "MIC-Algorithme: "
 
 #: compose.c:133
 msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
 msgstr ""
-"(v)erschl., (s)ign., sign. (a)ls, (b)eides, (m)ic auswählen, (k)ein PGP"
+"(v)ersl., (o)ndert, ondert (a)ls, (b)eide, (m)ic selecteren, (g)een PGP"
 
 #: compose.c:134
 msgid "esabmf"
-msgstr "vsabmk"
+msgstr "voabmg"
 
 #: compose.c:151
 msgid "Can't open your secret key ring!"
-msgstr "Kann geheimen Schlüsselbund nicht öffnen!"
+msgstr "Kan geheime sleutelhanger niet openen!"
 
 #: compose.c:156
 msgid "Sign as: "
-msgstr "Signiere als: "
+msgstr "Ondertekenen als: "
 
 #: compose.c:176
 msgid "An unkown PGP version was defined for signing."
-msgstr "Eine unbekannte PGP-Version wurde zum Signieren eingetragen."
+msgstr "Een onbekende PGP versie werd gedefinieerd tijdens het ondertekenen."
 
 #: compose.c:186
 msgid "This doesn't make sense if you don't want to sign the message."
-msgstr "Dies macht keinen Sinn, wenn Sie die Nachricht nicht signieren wollen."
+msgstr "Dit heeft geen zin als U het bericht niet wilt ondertekenen."
 
 #: compose.c:197
 msgid "Unknown MIC algorithm, valid ones are: pgp-md5, pgp-sha1, pgp-rmd160"
-msgstr ""
-"Unbekannter MIC-Algorithmus.  Gültig sind: pgp-md5, pgp-sha1, pgp-rmd160"
+msgstr "Onbekend MIC algorithme. Bekend zijn: pgp-md5, pgp-sha1 en pgp-rmd160"
 
 #: compose.c:233
 #, c-format
 msgid "%s [#%d] no longer exists!"
-msgstr "%s [#%d] existiert nicht mehr!"
+msgstr "%s [#%d] bestaat niet meer!"
 
 #: compose.c:241
 #, c-format
 msgid "%s [#%d] modified. Update encoding?"
-msgstr "%s [#%d] wurde modifiziert.  Codierung neu bestimmen?"
+msgstr "%s [#%d] werd veranderd. Codering aanpassen?"
 
 #: compose.c:282
 msgid "===== Attachments ====="
-msgstr "===== Anhänge ====="
+msgstr "===== Bijlagen ====="
 
 #: compose.c:320
 msgid "You may not delete the only attachment."
-msgstr "Der einzige Nachrichtenteil kann nicht gelöscht werden."
+msgstr "Een bericht bestaat uit minimaal een gedeelte!"
 
 #: compose.c:394
 msgid "Compose"
-msgstr "Nachricht erstellen"
+msgstr "Bericht samenstellen"
 
 #: compose.c:544
 msgid "Open mailbox to attach message from"
-msgstr "Öffne Mailbox, um Nachricht anzuhängen"
+msgstr "Open mailbox waaruit bericht als bijlage toegevoegd wordt"
 
 #: compose.c:583
 msgid "No messages in that folder."
-msgstr "Keine Nachrichten in diesem Ordner."
+msgstr "Geen berichten in deze mailbox."
 
 #: compose.c:590
 msgid "Tag the messages you want to attach!"
-msgstr "Bitte markieren Sie die Nachrichten, die Sie anhängen wollen!"
+msgstr "Selecteer de berichten die U wilt toevoegen"
 
 #: compose.c:625 compose.c:645
 msgid "Unable to attach!"
-msgstr "Kann nicht anhängen!"
+msgstr "Kan niet toevoegen!"
 
-#: compose.c:772
+#: compose.c:763
 msgid "Invalid encoding."
-msgstr "Ungültige Codierung."
+msgstr "Ongeldige codering."
 
-#: compose.c:787
+#: compose.c:778
 msgid "Save a copy of this message?"
-msgstr "Soll eine Kopie dieser Nachricht gespeichert werden?"
+msgstr "Een copie van dit bericht maken?"
 
-#: compose.c:832
+#: compose.c:823
 msgid "Rename to: "
-msgstr "Umbenennen in: "
+msgstr "Hernoemen naar: "
 
-#: compose.c:837
+#: compose.c:828
 #, c-format
 msgid "Can't stat: %s"
-msgstr "Kann Verzeichniseintrag für Datei nicht lesen: %s"
+msgstr "Kan directory %s niet lezen."
 
-#: compose.c:864
+#: compose.c:855
 msgid "New file: "
-msgstr "Neue Datei: "
+msgstr "Nieuw bestand: "
 
-#: compose.c:877
+#: compose.c:868
 msgid "Content-Type is of the form base/sub"
-msgstr "Content-Type ist von der Form Basis/Untertyp."
+msgstr "Content-Type is van de vorm Basis/ondertype."
 
-#: compose.c:883
+#: compose.c:874
 #, c-format
 msgid "Unknown Content-Type %s"
-msgstr "Unbekannter Content-Type %s."
+msgstr "Onbekende Content-Type %s."
 
-#: compose.c:896
+#: compose.c:887
 #, c-format
 msgid "Can't create file %s"
-msgstr "Kann Datei %s nicht anlegen."
+msgstr "Kan bestand %s nicht aanleggen."
 
-#: compose.c:904
+#: compose.c:895
 msgid "What we have here is a failure to make an attachment"
-msgstr "Anhang kann nicht erzeugt werden."
+msgstr "Het lukt niet helemaal met dat toevoegen. Het blijft moeilijk.."
 
-#: compose.c:967
+#: compose.c:958
 msgid "Postpone this message?"
-msgstr "Nachricht zurückstellen?"
+msgstr "Bericht uitstellen?"
 
-#: compose.c:1019
+#: compose.c:1010
 msgid "Write message to mailbox"
-msgstr "Schreibe Nachricht in Mailbox."
+msgstr "Sla bericht op in mailbox"
 
-#: compose.c:1023
+#: compose.c:1014
 #, c-format
 msgid "Writing message to %s ..."
-msgstr "Schreibe Nachricht nach %s ..."
+msgstr "Bericht wordt opgeslagen in %s ..."
 
-#: compose.c:1034
+#: compose.c:1025
 msgid "Message written."
-msgstr "Nachricht geschrieben."
+msgstr "Bericht opgeslagen."
 
-#: curs_lib.c:136
+#: curs_lib.c:135
 msgid "yes"
 msgstr "ja"
 
-#: curs_lib.c:137
+#: curs_lib.c:136
 msgid "no"
-msgstr "nein"
+msgstr "nee"
 
 #. restore blocking operation
-#: curs_lib.c:176
+#: curs_lib.c:175
 msgid "Exit Mutt?"
-msgstr "Mutt verlassen?"
+msgstr "Mutt verlaten?"
 
-#: curs_lib.c:275
+#: curs_lib.c:262
 msgid "unknown error"
-msgstr "unbekannter Fehler."
+msgstr "onbekende vaud."
 
-#: curs_lib.c:295
+#: curs_lib.c:282
 msgid "Press any key to continue..."
-msgstr "Bitte drücken Sie eine Taste."
+msgstr "Druk een willekeurige toets in."
 
-#: curs_lib.c:333
+#: curs_lib.c:320
 msgid " ('?' for list): "
-msgstr " (für eine Liste '?' eingeben): "
+msgstr " ('?' voor een overzicht): "
 
 #: curs_main.c:215
 msgid "Cannot toggle write on a readonly mailbox!"
-msgstr "Kann Schreib-Modus für eine Nur-Lesen-Mailbox nicht ändern!"
+msgstr "Kan niet schrijven in een readonly mailbox!"
 
 #: curs_main.c:222
 msgid "Changes to folder will be written on folder exit."
-msgstr "Änderungen an dieser Mailbox werden beim Verlassen geschrieben."
+msgstr "Wijzigingen zullen worden weggeschreven bij het verlaten van de mailbox."
 
 #: curs_main.c:227
 msgid "Changes to folder will not be written."
-msgstr "Änderungen an dieser Mailbox werden nicht geschrieben."
+msgstr "Wijzigingen worden niet weggeschreven."
 
-#: curs_main.c:252
+#: curs_main.c:234
 msgid "Quit"
-msgstr "Ende"
+msgstr "Einde"
 
-#: curs_main.c:253 pager.c:1376 postpone.c:34
+#: curs_main.c:235 pager.c:1376 postpone.c:34
 msgid "Del"
-msgstr "Lösch."
+msgstr "Wis"
 
-#: curs_main.c:254 postpone.c:35
+#: curs_main.c:236 postpone.c:35
 msgid "Undel"
-msgstr "Behalten"
+msgstr "Herstel"
 
-#: curs_main.c:256 query.c:45
+#: curs_main.c:238 query.c:45
 msgid "Mail"
-msgstr "Senden"
+msgstr "Sturen"
 
-#: curs_main.c:257 pager.c:1377
+#: curs_main.c:239 pager.c:1377
 msgid "Reply"
 msgstr "Antw."
 
-#: curs_main.c:258
+#: curs_main.c:240
 msgid "Group"
-msgstr "Antw.alle"
+msgstr "Groep"
 
-#: curs_main.c:423
+#: curs_main.c:405
 msgid "Mailbox was externally modified.  Flags may be wrong."
-msgstr "Mailbox wurde verändert. Markierungen können veraltet sein."
+msgstr "Mailbox werd extern veranderd. Markeringen kunnen onjuist zijn!"
 
-#: curs_main.c:426
+#: curs_main.c:408
 msgid "New mail in this mailbox."
-msgstr "Neue Nachrichten in dieser Mailbox."
+msgstr "Nieuwe berichten in deze mailbox."
 
-#: curs_main.c:526
+#: curs_main.c:508
 msgid "No mailbox is open."
-msgstr "Keine Mailbox offen."
+msgstr "Er is geen mailbox geopend."
 
-#: curs_main.c:532
+#: curs_main.c:514
 msgid "No tagged messages."
-msgstr "Keine markierten Nachrichten."
+msgstr "Geen gemarkeerde berichten."
 
-#: curs_main.c:612
+#: curs_main.c:594
 msgid "Jump to message: "
-msgstr "Springe zu Nachricht: "
+msgstr "Ga naar bericht: "
 
-#: curs_main.c:618
+#: curs_main.c:600
 msgid "Argument must be a message number."
-msgstr "Argument muß eine Nachrichtennummer sein."
+msgstr "Argument moet een berichtennummer zijn."
 
-#: curs_main.c:651
+#: curs_main.c:633
 msgid "That message is not visible."
-msgstr "Diese Nachricht ist nicht sichtbar."
+msgstr "Dit bericht is niet zichtbaar."
 
-#: curs_main.c:654
+#: curs_main.c:636
 msgid "Invalid message number."
-msgstr "Ungültige Nachrichtennummer."
+msgstr "Ongeldig berichtennummer"
 
-#: curs_main.c:667
+#: curs_main.c:649
 msgid "Delete messages matching: "
-msgstr "Lösche Nachrichten nach Muster: "
+msgstr "Wis berichten volgens patroon: "
 
-#: curs_main.c:689
+#: curs_main.c:671
 msgid "No limit pattern is in effect."
-msgstr "Zur Zeit ist kein Muster aktiv."
+msgstr "Er is geen limietpatroon in werking."
 
 #. i18n: ask for a limit to apply
-#: curs_main.c:694
+#: curs_main.c:676
 #, c-format
 msgid "Limit: %s"
-msgstr "Begrenze: %s"
+msgstr "Limiet: %s"
 
-#: curs_main.c:703
+#: curs_main.c:685
 msgid "Limit to messages matching: "
-msgstr "Begrenze auf Nachrichten nach Muster: "
+msgstr "Limiteer berichten volgens patroon: "
 
-#: curs_main.c:733
+#: curs_main.c:715
 msgid "Quit Mutt?"
-msgstr "Mutt beenden?"
+msgstr "Mutt verlaten?"
 
-#: curs_main.c:835
+#: curs_main.c:826
 msgid "Tag messages matching: "
-msgstr "Markiere Nachrichten nach Muster: "
+msgstr "Berichten markeren volgens patroon: "
 
-#: curs_main.c:843
+#: curs_main.c:834
 msgid "Undelete messages matching: "
-msgstr "Entferne Löschmarkierung nach Muster: "
+msgstr "Herstel berichten : "
 
-#: curs_main.c:850
+#: curs_main.c:841
 msgid "Untag messages matching: "
-msgstr "Entferne Markierung nach Muster: "
+msgstr "Verwijder markering volgens patroon: "
 
-#: curs_main.c:868
+#: curs_main.c:859
 msgid "Open mailbox"
-msgstr "Öffne Mailbox"
+msgstr "Open mailbox"
 
-#: curs_main.c:870
+#: curs_main.c:861
 msgid "Open mailbox in read-only mode"
-msgstr "Öffne Mailbox im nur-Lesen-Modus"
+msgstr "Open mailbox in read-only mode"
 
-#: curs_main.c:886 mx.c:423 mx.c:564
+#: curs_main.c:877 mx.c:423 mx.c:564
 #, c-format
 msgid "%s is not a mailbox."
-msgstr "%s ist keine Mailbox."
+msgstr "%s is geen mailbox."
 
 #: curs_main.c:973
 msgid "Exit Mutt without saving?"
-msgstr "Mutt verlassen, ohne Änderungen zu speichern?"
+msgstr "Mutt verlaten zonder op te slaan?"
 
-#: curs_main.c:990 curs_main.c:1014
+#: curs_main.c:987 curs_main.c:1011
 msgid "You are on the last message."
-msgstr "Sie sind bereits auf der letzten Nachricht."
+msgstr "U bent bij het laatste bericht."
 
-#: curs_main.c:997 curs_main.c:1039
+#: curs_main.c:994 curs_main.c:1036
 msgid "No undeleted messages."
-msgstr "Alle Nachrichten gelöscht."
+msgstr "Alle berichten zijn gewist."
 
-#: curs_main.c:1032 curs_main.c:1055
+#: curs_main.c:1029 curs_main.c:1052
 msgid "You are on the first message."
-msgstr "Sie sind bereits auf der ersten Nachricht."
+msgstr "U bent bij het eerste bericht."
 
-#: curs_main.c:1127 pattern.c:1114
+#: curs_main.c:1125 pattern.c:1103
 msgid "Search wrapped to top."
-msgstr "Suche von vorne begonnen."
+msgstr "Zoekopdracht bovenaan begonnen."
 
-#: curs_main.c:1136 pattern.c:1125
+#: curs_main.c:1134 pattern.c:1114
 msgid "Search wrapped to bottom."
-msgstr "Suche von hinten begonnen."
+msgstr "Zoekopdracht onderaan begonnen."
 
-#: curs_main.c:1162
+#: curs_main.c:1160
 msgid "No new messages"
-msgstr "Keine neuen Nachrichten"
+msgstr "Geen nieuwe berichten"
 
-#: curs_main.c:1162
+#: curs_main.c:1160
 msgid "No unread messages"
-msgstr "Keine ungelesenen Nachrichten"
+msgstr "Geen ongelezen berichten"
 
-#: curs_main.c:1163
+#: curs_main.c:1161
 msgid " in this limited view"
-msgstr " in dieser begrenzten Ansicht."
+msgstr " in deze beperkte weergave."
+
+#: curs_main.c:1271
+msgid "No more threads."
+msgstr "Geen verdere threads."
 
 #: curs_main.c:1273
-msgid "No more threads."
-msgstr "Keine weiteren Diskussionsfäden."
-
-#: curs_main.c:1275
 msgid "You are on the first thread."
-msgstr "Sie haben bereits den ersten Diskussionsfaden ausgewählt."
+msgstr "U bent al bij de eerste thread."
 
-#: curs_main.c:1328
+#: curs_main.c:1326
 msgid "Thread contains unread messages."
-msgstr "Diskussionsfaden enthält ungelesene Nachrichten."
+msgstr "Thread bevat ongelezen berichten"
 
-#: curs_main.c:1341 flags.c:220 thread.c:635
+#: curs_main.c:1339 flags.c:220 thread.c:629
 msgid "Threading is not enabled."
-msgstr "Darstellung von Diskussionsfäden ist nicht eingeschaltet."
+msgstr "Het weergeven van threads is niet ingeschakeld."
 
 #: date.c:49
 msgid "Please report this program error in the function mutt_mktime."
-msgstr "Bitte einen Fehler bezüglich der mutt_mktime Funktion melden."
+msgstr "Meldt deze programmafout in de functie mutt_mktime."
 
 #.
 #. * SLcurses_waddnstr() can't take a "const char *", so this is only
@@ -765,186 +758,184 @@ msgid ""
 "~?\t\tthis message\n"
 ".\t\ton a line by itself ends input\n"
 msgstr ""
-"~~\t\tZeile beginnt mit einer einzelnen Tilde.\n"
-"~b Adressen\tFüge Adressen zum Bcc-Feld hinzu.\n"
-"~c Adressen\tFüge Adressen zum Cc-Feld hinzu.\n"
-"~f Nachricht\tNachricht einfügen.\n"
-"~F Nachrichten\tWie ~f, mit Nachrichtenkopf.\n"
-"~h\t\tEditiere Nachrichtenkopf.\n"
-"~m Nachrichten\tNachrichten zitieren.\n"
-"~M Nachrichten\tWie ~t, mit Nachrichtenkopf.\n"
-"~p\t\tNachricht ausdrucken.\n"
-"~q\t\tDatei speichern und Editor verlassen.\n"
-"~r Datei\tDatei in Editor einlesen.\n"
-"~t Adressen\tFüge Adressen zum To-Feld hinzu.\n"
-"~u\t\tEditiere die letzte Zeile erneut.\n"
-"~v\t\tEditiere Nachricht mit visuellem Editor ($visual).\n"
-"~w Datei\tSchreibe Nachricht in Datei.\n"
-"~x\t\tVerwerfe Änderungen und verlasse Editor.\n"
-"~?\t\tDiese Nachricht.\n"
-".\t\tin einer Zeile alleine beendet die Eingabe.\n"
+"~~\t\tVoeg een regel in die begint met een enkele ~\n"
+"~b adressen\tVoeg adressen aan Bcc: veld toe\n"
+"~c adressen\tVoeg adressen aan Cc: veld toe\n"
+"~f berichten\tBerichten toevoegen\n"
+"~F berichten\tAls ~f, maar met header\n"
+"~h\t\tBewerk header\n"
+"~m berichten\tBerichten citeren\n"
+"~M berichten\tAls ~m, maar met header\n"
+"~p\t\tBericht afdrukken\n"
+"~q\t\tBericht opslaan en editor verlaten\n"
+"~r bestand\tBestand inlezen\n"
+"~t adressen\tVoeg adresen aan To: veld toe\n"
+"~u\t\tLaatste regel opnieuw bewerken\n"
+"~v\t\tBewerk bericht met alternatieve editor($visual)\n"
+"~w bestand\tSla bericht op in een bestand\n"
+"~x\t\tVerlaat de editor zonder wijzigingen te behouden\n"
+"~?\t\tDit bericht\n"
+".\t\tals enige inhoud van een regel beeindigt het invoegen\n"
 
 #: edit.c:179
 #, c-format
 msgid "%d: invalid message number.\n"
-msgstr "%d: Ungültige Nachrichtennummer.\n"
+msgstr "%d: ongeldig berichtennummer.\n"
 
 #: edit.c:313
 msgid "(End message with a . on a line by itself)\n"
-msgstr ""
-"(Nach Eingabe der Nachricht bitte einen einzelnen Punkt ('.') eingeben.)\n"
+msgstr "(Beeindig bericht met een . als enige inhoud van de regel)\n"
 
 #: edit.c:371
 msgid "No mailbox.\n"
-msgstr "Keine Mailbox.\n"
+msgstr "Geen Mailbox.\n"
 
 #: edit.c:375
 msgid "Message contains:\n"
-msgstr "Nachricht enthält:\n"
+msgstr "Bericht bevat:\n"
 
 #: edit.c:379 edit.c:431
 msgid "(continue)\n"
-msgstr "(weiter)\n"
+msgstr "(verder)\n"
 
 #: edit.c:392
 msgid "missing filename.\n"
-msgstr "Dateiname fehlt.\n"
+msgstr "Geen bestandsnaam opgegeven.\n"
 
 #: edit.c:413
 msgid "No lines in message.\n"
-msgstr "Keine Zeilen in der Nachricht.\n"
+msgstr "Bericht bevat geen regels.\n"
 
 #: edit.c:442
 #, c-format
 msgid "%s: unknown editor command (~? for help)\n"
-msgstr "%s: Unbekanntes Editor-Kommando (~? für Hilfestellung)\n"
+msgstr "%s: Onbekend editor-commando (~? voor hulp)\n"
 
 #: flags.c:258
 msgid "Set flag"
-msgstr "Setze Indikator"
+msgstr "Zet markering"
 
 #: flags.c:258
 msgid "Clear flag"
-msgstr "Entferne Indikator"
+msgstr "Verwijder markering"
 
 #: handler.c:128
 msgid "[-- Error: unexpected end of file! --]\n"
-msgstr "[-- Fehler: Unerwartetes Dateiende! --]\n"
+msgstr "[-- Fout: Onverwacht einde van het bestand! --]\n"
 
 #. didn't find anything that we could display!
 #: handler.c:954
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
 msgstr ""
-"[-- Fehler: Konnte keinen der multipart/alternative-Teile anzeigen! --]\n"
+"[-- Fout : Kon geen enkel Multipart/Alternative-gedeelte weergeven! --]\n"
 
 #: handler.c:1071
 #, c-format
 msgid "[-- Attachment #%d"
-msgstr "[-- Anhang #%d"
+msgstr "[-- Bijlage #%d"
 
 #: handler.c:1082
 #, c-format
 msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
-msgstr "[-- Typ: %s/%s, Codierung: %s, Größe: %s --]\n"
+msgstr "[-- Type: %s/%s, Codering: %s, Grootte: %s --]\n"
 
 #: handler.c:1141
 #, c-format
 msgid "[-- Autoview using %s --]\n"
-msgstr "[-- Automatische Anzeige mittels %s --]\n"
+msgstr "[-- Automatische weergave met %s --]\n"
 
 #: handler.c:1142
 #, c-format
 msgid "Invoking autoview command: %s"
-msgstr "Rufe Kommando auf: %s"
+msgstr "Commando wordt aangeroepen: %s"
 
 #: handler.c:1179 handler.c:1197
 #, c-format
 msgid "[-- Autoview stderr of %s --]\n"
-msgstr "[-- Fehlerausgabe von %s --]\n"
+msgstr "[-- Foutenuitvoer van %s --]\n"
 
 #: handler.c:1229
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
-msgstr ""
-"[-- Fehler: message/external-body hat keinen access-type Parameter --]\n"
+msgstr "[-- Fout: message/external-body heeft geen access-type paramter --]\n"
 
-#: handler.c:1246
+#: handler.c:1252
 #, c-format
 msgid "[-- This %s/%s attachment "
-msgstr "[-- Dieser %s/%s-Anhang "
+msgstr "[-- Deze %s/%s-bijlage "
 
-#: handler.c:1253
+#: handler.c:1259
 #, c-format
 msgid "(size %s bytes) "
-msgstr "(Größe %s Byte) "
+msgstr "(grootte %s bytes)"
 
-#: handler.c:1255
+#: handler.c:1261
 msgid "has been deleted --]\n"
-msgstr "wurde gelöscht --]\n"
+msgstr "werd gewist --]\n"
 
-#: handler.c:1258
+#: handler.c:1264
 #, c-format
 msgid "[-- on %s --]\n"
-msgstr "[-- am %s --]\n"
+msgstr "[-- op %s --]\n"
 
-#: handler.c:1268
+#: handler.c:1274
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
 "[-- and the indicated external source has --]\n"
 "[-- expired. --]\n"
 msgstr ""
-"[-- Dieser %s/%s-Anhang ist nicht in der Nachricht --]\n"
-"[-- enthalten, und die angegebene externe Quelle -- ]\n"
-"[-- existiert nicht mehr. --]\n"
+"[-- Deze %s/%s bijlage is niet in het bericht --]\n"
+"[-- opgenomen, en de aangegeven externe bron --]\n"
+"[-- bestaat niet meer --]\n"
 
-#: handler.c:1282
+#: handler.c:1288
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
 "[-- and the indicated access-type %s is unsupported --]\n"
 msgstr ""
-"[-- Dieser %s/%s-Anhang ist nicht in der Nachricht --]\n"
-"[-- enthalten, und die angegebene Zugangsmethode --]\n"
-"[-- %s wird nicht unterstützt. --]\n"
+"[-- Deze %s/%s bijlage is niet in het bericht --]\n"
+"[-- opgenomen, en het aangegeven access-type %s is --]\n"
+"[-- niet ondersteund --]\n"
 
-#: handler.c:1379
+#: handler.c:1385
 msgid "Error: multipart/signed has no protocol."
-msgstr "Fehler: multipart/signed ohne \"protocol\"-Parameter."
+msgstr "Fout: multipart/signed zonder \"protocol\"-parameter."
 
-#: handler.c:1391
+#: handler.c:1397
 msgid "Error: multipart/encrypted has no protocol parameter!"
-msgstr "Fehler: multipart/encrypted ohne \"protocol\"-Parameter!"
+msgstr "Fout: multipart/encrypted zonder \"protocol\"-parameter!"
 
-#: handler.c:1433
+#: handler.c:1439
 msgid "Unable to open temporary file!"
-msgstr "Konnte Temporärdatei nicht öffnen!"
+msgstr "Tijdelijk bestand kon niet worden geopend!"
 
-#: handler.c:1492
+#: handler.c:1498
 #, c-format
 msgid "[-- %s/%s is unsupported "
-msgstr "[-- %s/%s wird nicht unterstützt "
+msgstr "[-- %s/%s is niet ondersteund "
 
-#: handler.c:1497
+#: handler.c:1503
 #, c-format
 msgid "(use '%s' to view this part)"
-msgstr "(benutzen Sie '%s', um diesen Teil anzuzeigen)"
+msgstr "(gebruik '%s', om dit gedeelte weer te geven)"
 
-#: handler.c:1499
+#: handler.c:1505
 msgid "(need 'view-attachments' bound to key!)"
-msgstr "(benötige Tastaturbindung für 'view-attachments'!)"
+msgstr "('view-attachments' moet aan een toets gekoppeld zijn!)"
 
 #: headers.c:202
 #, c-format
 msgid "%s: unable to attach file"
-msgstr "%s: Kann Datei nicht anhängen."
+msgstr "%s: kan bestand niet toevoegen."
 
 #: help.c:274
 msgid "ERROR: please report this bug"
-msgstr "ERROR: Bitte melden sie diesen Fehler"
+msgstr "FOUT: Meldt deze bug!"
 
 #: help.c:316
 msgid "<UNKNOWN>"
-msgstr "<unbekannt>"
+msgstr "<onbekend>"
 
 #: help.c:328
 msgid ""
@@ -953,7 +944,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Allgemeine Tastenbelegungen:\n"
+"Algemene toetsenbindingen:\n"
 "\n"
 
 #: help.c:332
@@ -963,749 +954,749 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Unbelegte Funktionen:\n"
+"Ongebonden functies:\n"
 "\n"
 
 #: help.c:340
 #, c-format
 msgid "Help for %s"
-msgstr "Hilfe für %s"
+msgstr "Hulp voor %s"
 
 #: imap.c:103
 #, c-format
 msgid "imap_error(): unexpected response in %s: %s\n"
-msgstr "imap_error(): Unerwartete Reaktion in %s: %s\n"
+msgstr "imap_error(): Onbekend antwoord in %s:%s\n"
 
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
 #: imap.c:355
 msgid "Fatal error.  Message count is out of sync!"
-msgstr "Kritischer Fehler.  Nachrichtenzähler weicht ab!"
+msgstr "Kritieke fout. Berichtenteller wijkt af!"
 
 #: imap.c:425
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
-msgstr "Hole Nachrichten-Köpfe... [%d/%d]"
+msgstr "Headers worden gelezen... [%d/%d]"
 
-#: imap.c:623 mbox.c:1007
+#: imap.c:623 mbox.c:981
 msgid "Reopening mailbox..."
-msgstr "Öffne Mailbox erneut..."
+msgstr "Mailbox wordt heropend.."
 
 #: imap.c:865
 #, c-format
 msgid "Connecting to %s..."
-msgstr "Verbinde zu %s..."
+msgstr "Bezig met verbinden met %s..."
 
 #: imap.c:888
 msgid "IMAP Username: "
-msgstr "IMAP-Nutzername: "
+msgstr "IMAP-gebruikersnaam: "
 
 #: imap.c:901
 #, c-format
 msgid "Password for %s@%s: "
-msgstr "Paßwort für %s@%s: "
+msgstr "Paswoord voor %s@%s: "
 
 #: imap.c:914
 msgid "Logging in..."
-msgstr "Anmeldung..."
+msgstr "Aanmelden..."
 
 #. Login failed, try again
 #: imap.c:927
 msgid "Login failed."
-msgstr "Anmeldung gescheitert..."
+msgstr "Aanmelden mislukt..."
 
 #: imap.c:984
 #, c-format
 msgid "Selecting %s..."
-msgstr "Wähle %s aus..."
+msgstr "%s wordt uitgekozen..."
 
-#: imap.c:1083 lib.c:1194
+#: imap.c:1083 lib.c:1177
 #, c-format
 msgid "Create %s?"
-msgstr "%s erstellen?"
+msgstr "%s aanmaken?"
 
 #: imap.c:1132
 msgid "Fetching message..."
-msgstr "Hole Nachricht..."
+msgstr "Bericht wordt gelezen..."
 
 #: imap.c:1240
 msgid "Sending APPEND command ..."
-msgstr "Sende APPEND-Kommando..."
+msgstr "APPEND-commando wordt verstuurd..."
 
 #: imap.c:1279
 msgid "Uploading message ..."
-msgstr "Lade Nachrichten auf den Server..."
+msgstr "Bericht wordt verstuurd ..."
 
 #: imap.c:1334
 msgid "Closing connection to IMAP server..."
-msgstr "Schließe Verbindung zu IMAP-Server..."
+msgstr "Verbinding met IMAP-server wordt gesloten.."
 
 #: imap.c:1364
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
-msgstr "Speichere Nachrichten-Status-Indikatoren... [%d/%d]"
+msgstr "Berichten-status wordt opgeslagen... [%d/%d]"
 
 #: imap.c:1390
 msgid "Expunging messages from server..."
-msgstr "Lösche Nachrichten auf dem Server..."
+msgstr "Berichten op de server worden gewist..."
 
 #. tell the server to commit changes
 #: imap.c:1441
 msgid "Closing mailbox..."
-msgstr "Schließe Mailbox..."
+msgstr "Mailbox wordt gesloten..."
 
 #: init.c:433
 msgid "alias: no address"
-msgstr "alias: Keine Adresse"
+msgstr "alias: Geen adres"
 
 #: init.c:527
 msgid "invalid header field"
-msgstr "my_hdr: Ungültiges Kopf-Feld"
+msgstr "my_hdr: Ongeldig veld in berichtenkop"
 
 #: init.c:535
 #, c-format
 msgid "ignoring empty header field: %s"
-msgstr "my_hdr: Ignoriere leeres Kopf-Feld: %s"
+msgstr "Leeg Kop-veld %s wordt genegeerd."
 
 #: init.c:587
 #, c-format
 msgid "%s: unknown sorting method"
-msgstr "%s: Unbekannte Sortiermethode"
+msgstr "%s: Onbekende sorteermethode"
 
 #: init.c:660
 #, c-format
 msgid "mutt_restore_default: error in regexp: %s\n"
-msgstr "mutt_restore_default: Fehler in regulärem Ausdruck: %s\n"
+msgstr "mutt_restore_default: Fout in reguliere expressie: %s\n"
 
 #: init.c:720
 #, c-format
 msgid "%s: unknown variable"
-msgstr "%s: Unbekannte Variable."
+msgstr "%s: Onbekende variable."
 
 #: init.c:729
 msgid "prefix is illegal with reset"
-msgstr "reset: Präfix ist nicht erlaubt."
+msgstr "reset: Prefix is niet toegestaan."
 
 #: init.c:735
 msgid "value is illegal with reset"
-msgstr "reset: Wertzuweisung ist nicht erlaubt."
+msgstr "reset: Toekenning van een waarde is niet toegestaan."
 
 #: init.c:752
 #, c-format
 msgid "%s is a boolean var!"
-msgstr "%s ist eine Boolsche Variable!"
+msgstr "%s is een boolsche variable!"
 
 #: init.c:759
 #, c-format
 msgid "%s is set"
-msgstr "%s ist gesetzt."
+msgstr "%s is gezet."
 
 #: init.c:759
 #, c-format
 msgid "%s is unset"
-msgstr "%s ist nicht gesetzt."
+msgstr "%s is niet gezet."
 
 #: init.c:933
 #, c-format
 msgid "%s: invalid mailbox type"
-msgstr "%s: Ungültiger Mailbox-Typ"
+msgstr "%s: Ongeldig mailbox-type"
 
 #: init.c:992
 #, c-format
 msgid "%s: invalid value"
-msgstr "%s: Ungültiger Wert"
+msgstr "%s: ongeldige waarde"
 
 #: init.c:1042
 #, c-format
 msgid "%s: unknown type"
-msgstr "%s: Unbekannter Typ"
+msgstr "%s: onbekend type"
 
 #: init.c:1091
 #, c-format
 msgid "Error in %s, line %d: %s"
-msgstr "Fehler in %s, Zeile %d: %s"
+msgstr "Fout in %s, regel %d: %s"
 
 #. the muttrc source keyword
 #: init.c:1102
 #, c-format
 msgid "source: errors in %s"
-msgstr "source: Fehler in %s"
+msgstr "source: fouten in %s"
 
 #: init.c:1112
 #, c-format
 msgid "source: error at %s"
-msgstr "source: Fehler bei %s"
+msgstr "source: fout bij %s"
 
 #: init.c:1117
 msgid "source: too many arguments"
-msgstr "source: Zu viele Argumente"
+msgstr "source: Te veel argumenten"
 
 #: init.c:1168
 #, c-format
 msgid "%s: unknown command"
-msgstr "%s: Unbekanntes Kommando"
+msgstr "%s: onbekend commando"
 
 #: init.c:1497
 #, c-format
 msgid "Error in command line: %s\n"
-msgstr "Fehler in Kommandozeile: %s\n"
+msgstr "Fout in opdrachtregel: %s\n"
 
 #: init.c:1540
 msgid "unable to determine home directory"
-msgstr "Kann Home-Verzeichnis nicht bestimmen."
+msgstr "Kan Home-directory niet achterhalen"
 
 #: init.c:1548
 msgid "unable to determine username"
-msgstr "Kann Nutzernamen nicht bestimmen."
+msgstr "Kan gebruikersnaam niet achterhalen"
 
 #: keymap.c:434
 msgid "Macro loop detected."
-msgstr "Makro-Schleife!"
+msgstr "Macro-lus gedetecteerd!"
 
 #: keymap.c:620 keymap.c:628
 msgid "Key is not bound."
-msgstr "Taste ist nicht belegt."
+msgstr "Toets is niet in gebruik."
 
 #: keymap.c:632
 #, c-format
 msgid "Key is not bound.  Press '%s' for help."
-msgstr "Taste ist nicht belegt.  Drücken Sie '%s' für Hilfe."
+msgstr "Toets is niet in gebruik. Toets '%s' voor hulp."
 
 #: keymap.c:643
 msgid "push: too many arguments"
-msgstr "push: Zu viele Argumente"
+msgstr "push: te veel argumenten"
 
 #: keymap.c:664
 #, c-format
 msgid "%s: no such menu"
-msgstr "%s: Menü unbekannt."
+msgstr "%s: menu onbekend."
 
 #: keymap.c:673
 msgid "null key sequence"
-msgstr "Leere Tastenfolge"
+msgstr "Lege toetsenvolgorde"
 
 #: keymap.c:751
 msgid "bind: too many arguments"
-msgstr "bind: Zu viele Argumente"
+msgstr "bind: Te veel argumenten"
 
 #: keymap.c:766
 #, c-format
 msgid "%s: no such function in map"
-msgstr "%s: Funktion unbekannt"
+msgstr "%s: Onbekende functie"
 
 #: keymap.c:789
 msgid "macro: empty key sequence"
-msgstr "macro: Leere Tastenfolge"
+msgstr "macro: Lege toetsenvolgorde"
 
 #: keymap.c:800
 msgid "macro: too many arguments"
-msgstr "macro: Zu viele Parameter"
+msgstr "macro: Te veel argumenten"
 
 #: keymap.c:830
 msgid "exec: too few arguments"
-msgstr "%s: Zu wenige Parameter."
+msgstr "%s: Te weinig argumenten"
 
 #: keymap.c:850
 #, c-format
 msgid "%s: no such command"
-msgstr "%s: Menü unbekannt."
+msgstr "%s: Commando bestaat niet"
 
 #: keymap_defs.h:5
 msgid "null operation"
-msgstr "Leere Funktion"
+msgstr "Lege functie."
 
 #: keymap_defs.h:6
 msgid "force viewing of attachment using mailcap"
-msgstr "Erzwinge Mailcap für Anhang"
+msgstr "Bijlage wordt noodgedwongen volgens mailcap weergegeven"
 
 #: keymap_defs.h:7
 msgid "view attachment as text"
-msgstr "Zeige Anhang als Text an"
+msgstr "Toon bijlage als tekst"
 
 #: keymap_defs.h:8
 msgid "move to the bottom of the page"
-msgstr "Zum Ende der Seite"
+msgstr "Naar het einde van deze pagina"
 
 #: keymap_defs.h:9
 msgid "remail a message to another user"
-msgstr "Versende Nachricht erneut an anderen Empfänger"
+msgstr "Bericht opnieuw versturen naar een andere gebruiker"
 
 #: keymap_defs.h:10
 msgid "select a new file in this directory"
-msgstr "Wähle eine neue Datei in diesem Verzeichnis aus"
+msgstr "Kies een nieuw bestand in deze directory"
 
 #: keymap_defs.h:11
 msgid "view file"
-msgstr "Zeige Datei an"
+msgstr "Toon bestand"
 
 #: keymap_defs.h:12
 msgid "display the currently selected file's name"
-msgstr "Zeige den Namen der derzeit ausgewählten Datei"
+msgstr "Toon de bestandsnaam van het huidige bestand"
 
 #: keymap_defs.h:13
 msgid "change directories"
-msgstr "Wechsle Verzeichnisse"
+msgstr "Verander directories"
 
 #: keymap_defs.h:14
 msgid "check mailboxes for new mail"
-msgstr "Überprüfe Mailboxen auf neue Nachrichten"
+msgstr "Controleer mailboxes op nieuwe berichten"
 
 #: keymap_defs.h:15
 msgid "attach a file(s) to this message"
-msgstr "Hänge Datei(en) an diese Nachricht an"
+msgstr "Voeg bestand(en) aan dit bericht toe"
 
 #: keymap_defs.h:16
 msgid "attach message(s) to this message"
-msgstr "Hänge Nachricht(en) an diese Nachricht an"
+msgstr "Voeg bericht(en) aan dit bericht toe"
 
 #: keymap_defs.h:17
 msgid "edit the BCC list"
-msgstr "Editiere die BCC-Liste"
+msgstr "Bewerk de BCC-lijst"
 
 #: keymap_defs.h:18
 msgid "edit the CC list"
-msgstr "Editiere die CC-Liste"
+msgstr "Bewerk de CC-lijst"
 
 #: keymap_defs.h:19
 msgid "edit attachment description"
-msgstr "Editiere die Beschreibung des Anhangs"
+msgstr "Bewerk de omschrijving van de bijlage"
 
 #: keymap_defs.h:20
 msgid "edit attachment transfer-encoding"
-msgstr "Editiere die Codierung des Anhangs"
+msgstr "Bewerk de transport-codering van de bijlage"
 
 #: keymap_defs.h:21
 msgid "enter a file to save a copy of this message in"
-msgstr "Kopiere Nachricht in Datei"
+msgstr "Kopieer bericht in bestand"
 
 #: keymap_defs.h:22
 msgid "edit the file to be attached"
-msgstr "Editiere die anzuhängende Datei"
+msgstr "Bewerk het toe te voegen bestand"
 
 #: keymap_defs.h:23
 msgid "edit the from field"
-msgstr "Editiere das From-Feld"
+msgstr "Bewerk het From-veld"
 
 #: keymap_defs.h:24
 msgid "edit the message with headers"
-msgstr "Editiere Nachricht (einschließlich Kopf)"
+msgstr "Bewerk het bericht (incl. header)"
 
 #: keymap_defs.h:25
 msgid "edit the message"
-msgstr "Editiere Nachricht"
+msgstr "Bewerk het bericht"
 
 #: keymap_defs.h:26
 msgid "edit attachment using mailcap entry"
-msgstr "Editiere Anhang mittels Mailcap"
+msgstr "Bewerk bijlage volgens Mailcap"
 
 #: keymap_defs.h:27
 msgid "edit the Reply-To field"
-msgstr "Editiere Reply-To-Feld"
+msgstr "Bewerk Reply-To-veld"
 
 #: keymap_defs.h:28
 msgid "edit the subject of this message"
-msgstr "Editiere Betreff dieser Nachricht (Subject)"
+msgstr "Bewerk onderwerp (Subject) van dit bericht"
 
 #: keymap_defs.h:29
 msgid "edit the TO list"
-msgstr "Editiere Empfängerliste (To)"
+msgstr "Bewerk ontvangers (To-veld)"
 
 #: keymap_defs.h:30
 msgid "edit attachment type"
-msgstr "Editiere Typ des Anhangs"
+msgstr "Bewerk type van bijlage"
 
 #: keymap_defs.h:31
 msgid "get a temporary copy of an attachment"
-msgstr "Erzeuge temporäre Kopie dieses Anhangs"
+msgstr "Maak een tijdelijke kopie van de bijlage"
 
 #: keymap_defs.h:32
 msgid "run ispell on the message"
-msgstr "Rechtschreibprüfung via ispell"
+msgstr "Controleer spelling via ispell"
 
 #: keymap_defs.h:33
 msgid "compose new attachment using mailcap entry"
-msgstr "Erzeuge neues Attachment via mailcap"
+msgstr "Maak nieuwe bijlage aan volgens Mailcap"
 
 #: keymap_defs.h:34
 msgid "save this message to send later"
-msgstr "Stelle Nachricht zum späteren Versand zurück"
+msgstr "Sla dit bericht op om later te verzenden"
 
 #: keymap_defs.h:35
 msgid "rename/move an attached file"
-msgstr "Benenne angehängte Datei um"
+msgstr "Hernoem/verplaats een toegevoegd bestand"
 
 #: keymap_defs.h:36
 msgid "send the message"
-msgstr "Verschicke Nachricht"
+msgstr "Verstuur bericht"
 
 #: keymap_defs.h:37
 msgid "toggle whether to delete file after sending it"
-msgstr "Wähle, ob Datei nach Versand gelöscht wird"
+msgstr "Kies of bestand na verzenden gewist wordt"
 
 #: keymap_defs.h:38
 msgid "update an attachment's encoding info"
-msgstr "Überprüfe Codierungsinformation eines Anhangs"
+msgstr "Controleer encoding-info van bijlage"
 
 #: keymap_defs.h:39
 msgid "write the message to a folder"
-msgstr "Schreibe Nachricht in Mailbox"
+msgstr "Schrijf een bericht naar een mailbox"
 
 #: keymap_defs.h:40
 msgid "copy a message to a file/mailbox"
-msgstr "Kopiere Nachricht in Datei/Mailbox"
+msgstr "Kopieer bericht naar bestand/Mailbox"
 
 #: keymap_defs.h:41
 msgid "create an alias from a message sender"
-msgstr "Erzeuge Adreßbucheintrag für Absender"
+msgstr "Maak een afkorting van de afzender"
 
 #: keymap_defs.h:42
 msgid "move entry to bottom of screen"
-msgstr "Bewege Eintrag zum unteren Ende des Bildschirms"
+msgstr "verplaats item naar onderkant van scherm"
 
 #: keymap_defs.h:43
 msgid "move entry to middle of screen"
-msgstr "Bewege Eintrag zur Bildschirmmitte"
+msgstr "Verplaats item naar midden van scherm"
 
 #: keymap_defs.h:44
 msgid "move entry to top of screen"
-msgstr "Bewege Eintrag zum Bildschirmanfang"
+msgstr "Verplaats item naar bovenkant van scherm"
 
 #: keymap_defs.h:45
 msgid "make decoded (text/plain) copy"
-msgstr "Erzeuge decodierte Kopie (text/plain)"
+msgstr "Maak gedecodeerde (text/plain) kopie"
 
 #: keymap_defs.h:46
 msgid "make decoded copy (text/plain) and delete"
-msgstr "Erzeuge decodierte Kopie (text/plain) und lösche"
+msgstr "Maak gedecodeerde copie (text/plain) en verwijder"
 
 #: keymap_defs.h:47
 msgid "delete the current entry"
-msgstr "Lösche"
+msgstr "Verwijder huidig item"
 
 #: keymap_defs.h:48
 msgid "delete all messages in subthread"
-msgstr "Lösche alle Nachrichten im Diskussionsfadenteil"
+msgstr "verwijder alle berichten in subthread"
 
 #: keymap_defs.h:49
 msgid "delete all messages in thread"
-msgstr "Lösche alle Nachrichten im Diskussionsfaden"
+msgstr "Wis alle berichten in thread"
 
 #: keymap_defs.h:50
 msgid "display full address of sender"
-msgstr "Zeige Absenderadresse"
+msgstr "Toon adres van afzender"
 
 #: keymap_defs.h:51
 msgid "display message with full headers"
-msgstr "Zeige Nachricht mit vollem Nachrichtenkopf"
+msgstr "Toon bericht met complete berichtenkop"
 
 #: keymap_defs.h:52
 msgid "display a message"
-msgstr "Zeige Nachricht an"
+msgstr "Toon bericht"
 
 #: keymap_defs.h:53
 msgid "edit the current message for resending"
-msgstr "Editiere die aktuelle Nachricht für Neuversand"
+msgstr "Bewerk huidig bericht voor nieuwe verzending"
 
 #: keymap_defs.h:54
 msgid "delete the char in front of the cursor"
-msgstr "Lösche Zeichen vor dem Cursor"
+msgstr "Wis karakter voor de cursor"
 
 #: keymap_defs.h:55
 msgid "move the cursor one character to the left"
-msgstr "Bewege Cursor ein Zeichen nach links"
+msgstr "Verplaats cursor een karakter naar links"
 
 #: keymap_defs.h:56
 msgid "jump to the beginning of the line"
-msgstr "Springe zum Zeilenanfang"
+msgstr "Ga naar begin van de regel"
 
 #: keymap_defs.h:57
 msgid "cycle among incoming mailboxes"
-msgstr "Rotiere unter den Eingangs-Mailboxen"
+msgstr "Roteer door mailboxen"
 
 #: keymap_defs.h:58
 msgid "complete filename or alias"
-msgstr "Vervollständige Dateinamen oder Kurznamen"
+msgstr "Complete bestandsnaam of afkorting"
 
 #: keymap_defs.h:59
 msgid "complete address with query"
-msgstr "Vervollständige Adresse mit Abfrage"
+msgstr "Compleet adres met vraag"
 
 #: keymap_defs.h:60
 msgid "delete the char under the cursor"
-msgstr "Lösche das Zeichen unter dem Cursor"
+msgstr "Wis karakter onder de cursor"
 
 #: keymap_defs.h:61
 msgid "jump to the end of the line"
-msgstr "Springe zum Zeilenende"
+msgstr "Ga naar regeleinde"
 
 #: keymap_defs.h:62
 msgid "move the cursor one character to the right"
-msgstr "Bewege den Cursor ein Zeichen nach rechts"
+msgstr "Beweeg de cursor een karakter naar rechts"
 
 #: keymap_defs.h:63 keymap_defs.h:64
 msgid "scroll up through the history list"
-msgstr "Gehe in der Liste früherer Eingaben nach oben"
+msgstr "Ga omhoog in history list"
 
 #: keymap_defs.h:65
 msgid "delete chars from cursor to end of line"
-msgstr "Lösche bis Ende der Zeile"
+msgstr "Wis karakters tot einde van de regel"
 
 #: keymap_defs.h:66
 msgid "delete all chars on the line"
-msgstr "Lösche Zeile"
+msgstr "Wis regel"
 
 #: keymap_defs.h:67
 msgid "delete the word in front of the cursor"
-msgstr "Lösche Wort vor Cursor"
+msgstr "Wis woord voor de cursor"
 
 #: keymap_defs.h:68
 msgid "quote the next typed key"
-msgstr "Übernehme nächste Taste unverändert"
+msgstr "Voeg volgende toets onveranderd in"
 
 #: keymap_defs.h:69
 msgid "enter a muttrc command"
-msgstr "Gebe muttrc-Kommando ein"
+msgstr "Geef een muttrc commando in"
 
 #: keymap_defs.h:70
 msgid "enter a file mask"
-msgstr "Gebe Dateimaske ein"
+msgstr "Geef bestandsmasker in"
 
 #: keymap_defs.h:71
 msgid "exit this menu"
-msgstr "Menü verlassen"
+msgstr "Menu verlaten"
 
 #: keymap_defs.h:72
 msgid "filter attachment through a shell command"
-msgstr "Filtere Anhang mit Shell-Kommando"
+msgstr "Filter bijlage met shell commando"
 
 #: keymap_defs.h:73
 msgid "move to the first entry"
-msgstr "Gehe zum ersten Eintrag"
+msgstr "Ga naar eerste item"
 
 #: keymap_defs.h:74
 msgid "toggle a message's 'important' flag"
-msgstr "Markiere Nachricht als wichtig"
+msgstr "Markeer bericht als 'belangrijk'"
 
 #: keymap_defs.h:75
 msgid "forward a message with comments"
-msgstr "Leite Nachricht mit Kommentar weiter"
+msgstr "Stuur bericht door met commentaar"
 
 #: keymap_defs.h:76
 msgid "select the current entry"
-msgstr "Wähle den aktuellen Eintrag aus"
+msgstr "Selecteer het huidige item"
 
 #: keymap_defs.h:77
 msgid "reply to all recipients"
-msgstr "Antworte an alle Empfänger"
+msgstr "Antwoord aan alle ontvangers"
 
 #: keymap_defs.h:78
 msgid "scroll down 1/2 page"
-msgstr "Gehe 1/2 Seite nach unten"
+msgstr "Ga 1/2 pagina naar beneden"
 
 #: keymap_defs.h:79
 msgid "scroll up 1/2 page"
-msgstr "Gehe 1/2 Seite nach oben"
+msgstr "Ga 1/2 pagina omhoog"
 
 #: keymap_defs.h:80
 msgid "this screen"
-msgstr "Diese Darstellung"
+msgstr "dit scherm"
 
 #: keymap_defs.h:81
 msgid "jump to an index number"
-msgstr "Springe zu einer Index-Nummer"
+msgstr "Ga naar een index nummer"
 
 #: keymap_defs.h:82
 msgid "move to the last entry"
-msgstr "Springe zum letzten Eintrag"
+msgstr "Ga naar laatste item"
 
 #: keymap_defs.h:83
 msgid "reply to specified mailing list"
-msgstr "Antworte an Mailing-Listen"
+msgstr "Stuur antwoord naar mailing-list"
 
 #: keymap_defs.h:84
 msgid "execute a macro"
-msgstr "Führe Makro aus"
+msgstr "Voor macro uit"
 
 #: keymap_defs.h:85
 msgid "compose a new mail message"
-msgstr "Erzeuge neue Nachricht"
+msgstr "Maak nieuw bericht aan"
 
 #: keymap_defs.h:86
 msgid "open a different folder"
-msgstr "Öffne eine andere Mailbox"
+msgstr "open een andere mailbox"
 
 #: keymap_defs.h:87
 msgid "open a different folder in read only mode"
-msgstr "Öffne eine andere Mailbox im Nur-Lesen-Modus"
+msgstr "Open een andere mailbox in read-only mode"
 
 #: keymap_defs.h:88
 msgid "clear a status flag from a message"
-msgstr "Entferne einen Status-Indikator"
+msgstr "Verwijder een status-vlag"
 
 #: keymap_defs.h:89
 msgid "delete messages matching a pattern"
-msgstr "Lösche Nachrichten nach Muster"
+msgstr "Verwijder berichten volgens patroon"
 
 #: keymap_defs.h:90
 msgid "retrieve mail from POP server"
-msgstr "Hole Nachrichten von POP-Server"
+msgstr "haal mail vanaf POP-server"
 
 #: keymap_defs.h:91
 msgid "move to the first message"
-msgstr "Springe zu erster Nachricht"
+msgstr "Spring naar eeste bericht"
 
 #: keymap_defs.h:92
 msgid "move to the last message"
-msgstr "Springe zu letzter Nachricht"
+msgstr "Spring naar het laaste bericht"
 
 #: keymap_defs.h:93
 msgid "show only messages matching a pattern"
-msgstr "Wähle anzuzeigende Nachrichten mit Muster aus"
+msgstr "Geef alleen berichten weer volgens patroon"
 
 #: keymap_defs.h:94
 msgid "jump to the next new message"
-msgstr "Springe zur nächsten neuen Nachricht"
+msgstr "Spring naar het volgende nieuwe bericht"
 
 #: keymap_defs.h:95
 msgid "jump to the next subthread"
-msgstr "Springe zum nächsten Diskussionsfadenteil"
+msgstr "Spring naar de volgende subthread"
 
 #: keymap_defs.h:96
 msgid "jump to the next thread"
-msgstr "Springe zum nächsten Diskussionsfaden"
+msgstr "Spring naar de volgende thread"
 
 #: keymap_defs.h:97
 msgid "move to the next undeleted message"
-msgstr "Springe zur nächsten ungelöschten Nachricht"
+msgstr "Spring naar het volgende ongewiste bericht"
 
 #: keymap_defs.h:98
 msgid "jump to the next unread message"
-msgstr "Springe zur nächsten ungelesenen Nachricht"
+msgstr "Spring naar het volgende ongelezen bericht"
 
 #: keymap_defs.h:99
 msgid "jump to previous thread"
-msgstr "Springe zum vorigen Diskussionsfaden"
+msgstr "Spring naar de vorige thread"
 
 #: keymap_defs.h:100
 msgid "jump to previous subthread"
-msgstr "Springe zum vorigen Diskussionsfadenteil"
+msgstr "Spring naar de vorige subthread"
 
 #: keymap_defs.h:101
 msgid "move to the last undelete message"
-msgstr "Springe zur letzten ungelöschten Nachricht"
+msgstr "Spring naar het laaste ongewiste bericht"
 
 #: keymap_defs.h:102
 msgid "jump to the previous new message"
-msgstr "Springe zur vorigen neuen Nachricht"
+msgstr "Spring naar het vorige nieuwe bericht"
 
 #: keymap_defs.h:103
 msgid "jump to the previous unread message"
-msgstr "Springe zur vorigen ungelesenen Nachricht"
+msgstr "Spring naar het vorige ongelezen bericht"
 
 #: keymap_defs.h:104
 msgid "mark the current thread as read"
-msgstr "Markiere den aktuellen Diskussionsfaden als gelesen"
+msgstr "Markeer de huidige thread als gelezen"
 
 #: keymap_defs.h:105
 msgid "mark the current subthread as read"
-msgstr "Markiere den aktuellen Diskussionsfadenteil als gelesen"
+msgstr "Markeer de huidige subthread als gelezen"
 
 #: keymap_defs.h:106
 msgid "set a status flag on a message"
-msgstr "Setze Statusindikator einer Nachricht"
+msgstr "Zet een status-vlag in een bericht"
 
 #: keymap_defs.h:107
 msgid "save changes to mailbox"
-msgstr "Speichere Änderungen in Mailbox"
+msgstr "Sla wijzigingen in mailbox op"
 
 #: keymap_defs.h:108
 msgid "tag messages matching a pattern"
-msgstr "Markiere Nachrichten nach Muster"
+msgstr "Markeer berichten volgens patroon"
 
 #: keymap_defs.h:109
 msgid "undelete messages matching a pattern"
-msgstr "entferne Löschmarkierung nach Muster"
+msgstr "Herstel berichten volgens patroon"
 
 #: keymap_defs.h:110
 msgid "untag messages matching a pattern"
-msgstr "Entferne Markierung nach Muster"
+msgstr "Verwijder markering volgens patroon"
 
 #: keymap_defs.h:111
 msgid "move to the middle of the page"
-msgstr "Gehe zur Seitenmitte"
+msgstr "Ga naar het midden van de pagina"
 
 #: keymap_defs.h:112
 msgid "move to the next entry"
-msgstr "Gehe zum nächsten Eintrag"
+msgstr "Ga naar het volgende item"
 
 #: keymap_defs.h:113
 msgid "scroll down one line"
-msgstr "Gehe eine Zeile nach oben"
+msgstr "Ga een regel naar beneden"
 
 #: keymap_defs.h:114
 msgid "move to the next page"
-msgstr "Gehe zur nächsten Seite"
+msgstr "Ga naar de volgende pagina"
 
 #: keymap_defs.h:115
 msgid "jump to the bottom of the message"
-msgstr "Springe zum Ende der Nachricht"
+msgstr "Spring naar het einde van het bericht"
 
 #: keymap_defs.h:116
 msgid "return to the main-menu"
-msgstr "Kehre zum Hauptmenü zurück"
+msgstr "Ga terug naar het hoofdmenu"
 
 #: keymap_defs.h:117
 msgid "toggle display of quoted text"
-msgstr "Schalte Anzeige von zitiertem Text ein/aus"
+msgstr "Schakel weergeven van geciteerde tekst aan/uit"
 
 #: keymap_defs.h:118
 msgid "skip beyond quoted text"
-msgstr "Übergehe zitierten Text"
+msgstr "Sla geciteerde tekst over"
 
 #: keymap_defs.h:119
 msgid "jump to the top of the message"
-msgstr "Springe zum Nachrichtenanfang"
+msgstr "Spring naar het begin van het bericht"
 
 #: keymap_defs.h:120
 msgid "pipe message/attachment to a shell command"
-msgstr "Bearbeite (pipe) Nachricht/Anhang mit Shell-Kommando"
+msgstr "Bewerk (pipe) bericht/bijlage met een shell-commando"
 
 #: keymap_defs.h:121
 msgid "move to the previous entry"
-msgstr "Gehe zum vorigen Eintrag"
+msgstr "Ga naar het vorige item"
 
 #: keymap_defs.h:122
 msgid "scroll up one line"
-msgstr "Gehe eine Zeile nach oben"
+msgstr "Ga een regel omhoog"
 
 #: keymap_defs.h:123
 msgid "move to the previous page"
-msgstr "Gehe zur vorigen Seite"
+msgstr "Ga naar de vorige pagina"
 
 #: keymap_defs.h:124
 msgid "print the current entry"
-msgstr "Drucke aktuellen Eintrag"
+msgstr "Druk het huidige item af"
 
 #: keymap_defs.h:125
 msgid "query external program for addresses"
-msgstr "Externe Adressenabfrage"
+msgstr "Vraag een extern programma om adressen"
 
 #: keymap_defs.h:126
 msgid "append new query results to current results"
-msgstr "Hänge neue Abfrageergebnisse an"
+msgstr "Voeg resultaten van zoekopdracht toe aan huidige resultaten"
 
 #: keymap_defs.h:127
 msgid "save changes to mailbox and quit"
-msgstr "Speichere Änderungen in Mailbox und beende das Programm"
+msgstr "Sla wijzigingen in de mailbox op en verlaat Mutt"
 
 #: keymap_defs.h:128
 msgid "recall a postponed message"
-msgstr "Bearbeite eine zurückgestellte Nachricht"
+msgstr "Bewerk een uitgesteld bericht"
 
 #: keymap_defs.h:129
 msgid "clear and redraw the screen"
-msgstr "Erzeuge Bildschirmanzeige neu"
+msgstr "Wis scherm en bouw scherm opnieuw op"
 
 #: keymap_defs.h:130
 msgid "{internal}"
@@ -1713,179 +1704,177 @@ msgstr ""
 
 #: keymap_defs.h:131
 msgid "reply to a message"
-msgstr "Beantworte Nachricht"
+msgstr "Beantwoord een bericht"
 
 #: keymap_defs.h:132
 msgid "save message/attachment to a file"
-msgstr "Speichere Nachricht/Anhang in Datei"
+msgstr "Sla bericht/bijlage op in een bestand"
 
 #: keymap_defs.h:133
 msgid "search for a regular expression"
-msgstr "Suche nach regulärem Ausdruck"
+msgstr "Zoek volgens een reguliere expressie"
 
 #: keymap_defs.h:134
 msgid "search backwards for a regular expression"
-msgstr "Suche rückwärts nach regulärem Ausdruck"
+msgstr "Zoek achteruit volgens een reguliere expressie"
 
 #: keymap_defs.h:135
 msgid "search for next match"
-msgstr "Suche nächsten Treffer"
+msgstr "Zoek volgende match"
 
 #: keymap_defs.h:136
 msgid "search for next match in opposite direction"
-msgstr "Suche nächsten Treffer in umgekehrter Richtung"
+msgstr "Zoek achteruit naar volgende match"
 
 #: keymap_defs.h:137
 msgid "toggle search pattern coloring"
-msgstr "Schalte Suchtreffer-Hervorhebung ein/aus"
+msgstr "Schakel inkleuren van zoekpatronen in/uit"
 
 #: keymap_defs.h:138
 msgid "invoke a command in a subshell"
-msgstr "Rufe Kommando in Shell auf"
+msgstr "Roep een commando in een shell aan"
 
 #: keymap_defs.h:139
 msgid "sort messages"
-msgstr "Sortiere Nachrichten"
+msgstr "Sorteer berichten"
 
 #: keymap_defs.h:140
 msgid "sort messages in reverse order"
-msgstr "Sortiere Nachrichten in umgekehrter Reihenfolge"
+msgstr "Sorteer berichten in omgekeerde volgorde"
 
 #: keymap_defs.h:141
 msgid "tag the current entry"
-msgstr "Markiere aktuellen Eintrag"
+msgstr "Markeer huidig item"
 
 #: keymap_defs.h:142
 msgid "apply next function to tagged messages"
-msgstr "Wende nächste Funktion auf markierte Nachrichten an"
+msgstr "Voer volgende functie uit op gemarkeerde berichten"
 
 #: keymap_defs.h:143
 msgid "tag the current subthread"
-msgstr "Markiere aktuellen Diskussionsfadenteil"
+msgstr "Markeer de huidige subthread"
 
 #: keymap_defs.h:144
 msgid "tag the current thread"
-msgstr "Markiere aktuellen Diskussionsfaden"
+msgstr "Markeer de huidige thread"
 
 #: keymap_defs.h:145
 msgid "toggle a message's 'new' flag"
-msgstr "Setze/entferne den \"neu\"-Indikator einer Nachricht"
+msgstr "Zet / wis de 'nieuw'-vlag van een bericht"
 
 #: keymap_defs.h:146
 msgid "toggle whether the mailbox will be rewritten"
-msgstr "Schalte Sichern von Änderungen ein/aus"
+msgstr "Schakel het opslaan van wijzigingen aan/uit"
 
 #: keymap_defs.h:147
 msgid "toggle wether to browse mailboxes or all files"
-msgstr "Wähle zwischen Mailboxen und allen Dateien"
+msgstr "Kies tussen mailboxes en alle bestanden"
 
 #: keymap_defs.h:148
 msgid "move to the top of the page"
-msgstr "Springe zum Anfang der Seite"
+msgstr "Spring naar het begin van de pagina"
 
 #: keymap_defs.h:149
 msgid "undelete the current entry"
-msgstr "Entferne Löschmarkierung vom aktuellen Eintrag"
+msgstr "Verwijder wismarkering van huidig item"
 
 #: keymap_defs.h:150
 msgid "undelete all messages in thread"
-msgstr "Entferne Löschmarkierung von allen Nachrichten im Diskussionsfaden"
+msgstr "Verwijder wismarkering van alle berichten in thread"
 
 #: keymap_defs.h:151
 msgid "undelete all messages in subthread"
-msgstr "Entferne Löschmarkierung von allen Nachrichten im Diskussionsfadenteil"
+msgstr "Verwijder wismarkering van alle berichten in subtread"
 
 #: keymap_defs.h:152
 msgid "show the Mutt version number and date"
-msgstr "Zeige Versionsnummer"
+msgstr "Geef de datum en het versienummer van Mutt weer"
 
 #: keymap_defs.h:153
 msgid "view attachment using mailcap entry if necessary"
-msgstr "Zeige Anhang, wenn nötig via Mailcap"
+msgstr "Geef bijlage weer, zo nodig via mailcap"
 
 #: keymap_defs.h:154
 msgid "show MIME attachments"
-msgstr "Zeige MIME-Anhänge"
+msgstr "Geef MIME-bijlagen weer"
 
 #: keymap_defs.h:155
 msgid "show currently active limit pattern"
-msgstr "Zeige derzeit aktives Begrenzungsmuster"
+msgstr "Geef het momenteel actieve limietpatroon weer"
 
 #: keymap_defs.h:156
 msgid "collapse/uncollapse current thread"
-msgstr "Kollabiere/expandiere aktuellen Diskussionsfaden"
+msgstr "comprimeer/expandeer huidige thread"
 
 #: keymap_defs.h:157
 msgid "collapse/uncollapse all threads"
-msgstr "Kollabiere/expandiere alle Diskussionsfäden"
+msgstr "comprimeer/expandeer alle threads"
 
 #: keymap_defs.h:158
 msgid "attach a PGP public key"
-msgstr "Hänge öffentlichen PGP-Schlüssel an"
+msgstr "Voeg een PGP public key toe"
 
 #: keymap_defs.h:159
 msgid "show PGP options"
-msgstr "Zeige PGP-Optionen"
+msgstr "Geef PGP-opties weer"
 
 #: keymap_defs.h:160
 msgid "extract PGP public keys"
-msgstr "Extrahiere öffentliche PGP-Schlüssel"
+msgstr "Extraheer PGP public keys"
 
 #: keymap_defs.h:161
 msgid "wipe PGP passphrase from memory"
-msgstr "Entferne PGP-Mantra aus Speicher"
+msgstr "Verwijder PGP-passphrase uit geheugen"
 
 #: keymap_defs.h:162
 msgid "mail a PGP public key"
-msgstr "Verschicke öffentlichen PGP-Schlüssel"
+msgstr "Mail een PGP public key"
 
 #: keymap_defs.h:163
 msgid "verify a PGP public key"
-msgstr "Verifiziere öffentlichen PGP-Schlüssel"
+msgstr "Controleer een PGP public key"
 
 #: keymap_defs.h:164
 msgid "view the key's user id"
-msgstr "Zeige Nutzer-ID zu Schlüssel an"
+msgstr "Geef User-ID van een key weer"
 
 #: keymap_defs.h:165
 msgid "make decrypted copy and delete"
-msgstr "Erzeuge dechiffrierte Kopie und lösche"
+msgstr "Maak een gedecodeerde kopie en wis"
 
 #: keymap_defs.h:166
 msgid "make decrypted copy"
-msgstr "Erzeuge dechiffrierte Kopie"
+msgstr "Maak een gedecodeerde kopie"
 
 #: lib.c:277 lib.c:292 lib.c:323
 msgid "Out of memory!"
-msgstr "Kein Speicher!"
+msgstr "Onvoldoende geheugen!"
 
-#: lib.c:781
+#: lib.c:764
 msgid "File is a directory, save under it?"
-msgstr "Datei ist ein Verzeichnis, darin abspeichern?"
+msgstr "Bestand is een directory, daarin opslaan?"
 
-#: lib.c:786
+#: lib.c:769
 msgid "File under directory: "
-msgstr "Datei in diesem Verzeichnis: "
+msgstr "Bestandsnaam in directory: "
 
-#: lib.c:797
+#: lib.c:780
 msgid "File exists, overwrite?"
-msgstr "Datei existiert, überschreiben?"
+msgstr "Bestand bestaat, overschrijven?"
 
-#: lib.c:1170
+#: lib.c:1153
 #, c-format
 msgid "%s is not a mailbox!"
-msgstr "%s ist keine Mailbox"
+msgstr "%s is geen mailbox!"
 
-#: lib.c:1176
+#: lib.c:1159
 #, c-format
 msgid "Append messages to %s?"
-msgstr "Nachricht an %s anhängen?"
+msgstr "Bericht aan %s toevoegen?"
 
 #: main.c:40
 msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
-msgstr ""
-"Um die Entwickler zu kontaktieren, schicken Sie bitte\n"
-"eine Nachricht an <mutt-dev@mutt.org>.\n"
+msgstr "Om de autheurs te bereiken, stuur een bericht naar <mutt-dev@mutt.org>.\n"
 
 #: main.c:43
 msgid ""
@@ -1967,15 +1956,9 @@ msgid ""
 "  -h\t\tthis help message"
 msgstr ""
 
-#: main.c:152
-msgid ""
-"\n"
-"Compile options:"
-msgstr ""
-
 #: main.c:306
 msgid "Error initializing terminal."
-msgstr "Kann Termial nicht initialisieren"
+msgstr "Kan terminal niet initialiseren."
 
 #: main.c:404
 #, c-format
@@ -1984,98 +1967,98 @@ msgstr ""
 
 #: main.c:406
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
-msgstr "DEBUG war beim Kompilieren nicht definiert.  Ignoriert.\n"
+msgstr ""
 
 #: main.c:544
 msgid "No recipients specified.\n"
-msgstr "Keine Empfänger angegeben.\n"
+msgstr "Geen ontvangers opgegeven.\n"
 
 #: main.c:617
 #, c-format
 msgid "%s: unable to attach file.\n"
-msgstr "%s: Kann Datei nicht anhängen.\n"
+msgstr "%s: kan bestand niet toevoegen.\n"
 
 #: main.c:637
 msgid "No mailbox with new mail."
-msgstr "Keine Mailbox mit neuen Nachrichten."
+msgstr "Geen mailbox met nieuwe berichten."
 
 #: main.c:671
 msgid "Mailbox is empty."
-msgstr "Mailbox ist leer."
+msgstr "Mailbox is leeg."
 
 #: mbox.c:143 mbox.c:202
 msgid "Mailbox is corrupt!"
-msgstr "Mailbox fehlerhaft!"
+msgstr "Mailbox is beschadigd!"
 
 #: mbox.c:277
 msgid "Reading %s... %d (%d%%)"
-msgstr "Lese %s... %d (%d%%)"
+msgstr "Bezig met het lezen van %s... %d (%d%%)"
 
 #: mbox.c:650
 msgid "Mailbox was corrupted!"
-msgstr "Mailbox wurde zerstört!"
+msgstr "Mailbox was beschadigd!"
 
-#: mbox.c:687 mbox.c:930
+#: mbox.c:687 mbox.c:904
 msgid "Fatal error!  Could not reopen mailbox!"
-msgstr "Fataler Fehler, konnte Mailbox nicht erneut öffnen!"
+msgstr "Fatale fout! Kon mailbox niet opnieuw openen!"
 
 #: mbox.c:696
 msgid "Unable to lock mailbox!"
-msgstr "Kann Mailbox nicht für exklusiven Zugriff sperren!"
+msgstr "Kan mailbox niet claimen!"
 
 #. this means ctx->changed or ctx->deleted was set, but no
 #. * messages were found to be changed or deleted.  This should
 #. * never happen, is we presume it is a bug in mutt.
 #.
-#: mbox.c:740
+#: mbox.c:737
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr ""
 
-#: mbox.c:769
+#: mbox.c:765
 msgid "Writing messages... %d (%d%%)"
-msgstr "Schreibe Nachrichten... %d (%d%%)"
+msgstr "Berichten worden opgeslagen ... %d (%d%%)"
 
-#: mbox.c:915
+#: mbox.c:889
 #, c-format
 msgid "Write failed!  Saved partial mailbox to %s"
 msgstr "Konnte nicht schreiben! Speichere Teil-Mailbox in %s"
 
-#: mbox.c:967
+#: mbox.c:941
 msgid "Could not reopen mailbox!"
-msgstr "Konnte Mailbox nicht erneut öffnen!"
+msgstr "Kon mailbox niet opnieuw openen!"
 
 #: menu.c:309
 msgid "Jump to: "
-msgstr "Springe zu: "
+msgstr "Ga naar: "
 
 #: menu.c:318
 msgid "Invalid index number."
-msgstr "Ungültige Indexnummer."
+msgstr "Ongeldig Indexnummer."
 
 #: menu.c:322 menu.c:340 menu.c:376 menu.c:417 menu.c:433 menu.c:444
 #: menu.c:455 menu.c:497 menu.c:508 menu.c:521 menu.c:534 menu.c:813
 msgid "No entries."
-msgstr "Keine Einträge"
+msgstr "Geen items"
 
 #: menu.c:337
 msgid "You cannot scroll down farther."
-msgstr "Sie können nicht weiter nach unten gehen."
+msgstr "U kunt niet verder naar beneden gaan."
 
 #: menu.c:353
 msgid "You cannot scroll up farther."
-msgstr "Sie können nicht weiter nach oben gehen."
+msgstr "U kunt niet verder naar boven gaan."
 
 #: menu.c:373
 msgid "You are on the last page."
-msgstr "Sie sind auf der letzten Seite."
+msgstr "U bent op de laatste pagina."
 
 #: menu.c:395
 msgid "You are on the first page."
-msgstr "Sie sind auf der ersten Seite."
+msgstr "U bent op de eerste pagina."
 
 #: menu.c:474
 msgid "First entry is shown."
-msgstr "Der erste Eintrag wird angezeigt."
+msgstr "Het eerste item wordt weergegeven."
 
 #: menu.c:494
 msgid "Last entry is shown."
@@ -2083,280 +2066,276 @@ msgstr "Der letzte Eintrag wird angezeigt."
 
 #: menu.c:545
 msgid "You are on the last entry."
-msgstr "Sie sind auf dem letzten Eintrag."
+msgstr "U bent op het laatste item."
 
 #: menu.c:556
 msgid "You are on the first entry."
-msgstr "Sie sind auf dem ersten Eintrag"
+msgstr "U bent op het eerste item."
 
-#: menu.c:596 pattern.c:1060
+#: menu.c:596 pattern.c:1049
 msgid "Search for: "
-msgstr "Suche nach: "
+msgstr "Zoek naar: "
 
 #: menu.c:597
 msgid "Reverse search for: "
-msgstr "Suche rückwärts nach: "
+msgstr "Zoek achteruit naar: "
 
-#: menu.c:608 pattern.c:1093
+#: menu.c:608 pattern.c:1082
 msgid "No search pattern."
-msgstr "Kein Suchmuster."
+msgstr "Geen zoekpatroon."
 
-#: menu.c:638 pager.c:1829 pager.c:1845 pager.c:1932 pattern.c:1158
+#: menu.c:638 pager.c:1829 pager.c:1845 pager.c:1932 pattern.c:1147
 msgid "Not found."
-msgstr "Nicht gefunden."
+msgstr "Niet gevonden."
 
 #: menu.c:689
+#, fuzzy
 msgid "No tagged entries."
-msgstr "Keine markierten Einträge."
+msgstr "Geen geselecteerde items."
 
 #: menu.c:777
 msgid "Search is not implemented for this menu."
-msgstr "In diesem Menü kann nicht gesucht werden."
+msgstr "In dit menu kan niet worden gezocht."
 
 #: menu.c:816
 msgid "Tagging is not supported."
-msgstr "Markieren wird nicht unterstützt."
+msgstr "Markeren is niet ondersteund."
 
-#: mh.c:183
+#: mh.c:182
 #, c-format
 msgid "Reading %s... %d"
-msgstr "Lese %s... %d"
+msgstr "Bezig met het lezen van %s... %d"
 
 #: mx.c:114
 #, c-format
 msgid "Lock count exceeded, remove lock for %s?"
-msgstr "Lock-Datei für %s entfernen?"
+msgstr "Lock-bestand voor %s verwijderen?"
 
 #: mx.c:178
 msgid "Timeout exceeded while attempting fcntl lock!"
-msgstr "Konnte fcntl-Lock nicht innerhalb akzeptabler Zeit erhalten."
+msgstr "De fcntl-lock kon niet binnen de toegestane tijd worden verkregen."
 
 #: mx.c:184
 #, c-format
 msgid "Waiting for fcntl lock... %d"
-msgstr "Warte auf fcntl-Lock... %d"
+msgstr "Wacht op fcntl-Lock... %d"
 
 #: mx.c:212
 msgid "Timeout exceeded while attempting flock lock!"
-msgstr "Konnte flock-Lock nicht innerhalb akzeptabler Zeit erhalten."
+msgstr "de Flock-lock kon niet binnen de toegestane tijd worden verkregen."
 
 #: mx.c:219
 #, c-format
 msgid "Waiting for flock attempt... %d"
-msgstr "Warte auf flock-Versuch... %d"
+msgstr "Wacht op flock-poging... %d"
 
 #: mx.c:589
 #, c-format
 msgid "Reading %s..."
-msgstr "Lese %s..."
+msgstr "Bezig met het lezen van %s..."
 
-#: mx.c:679
+#: mx.c:676
 #, c-format
 msgid "Writing %s..."
-msgstr "Schreibe %s..."
+msgstr "Bezig met het schrijven van %s..."
 
-#: mx.c:704
-#, c-format
-msgid "Could not synchronize mailbox %s!"
-msgstr "Kann Mailbox %s nicht synchronisieren!"
-
-#: mx.c:767
+#: mx.c:758
 #, c-format
 msgid "Move read messages to %s?"
-msgstr "Verschiebe gelesene Nachrichten nach %s?"
+msgstr "Gelezen berichten naar %s verplaatsen?"
 
-#: mx.c:776 mx.c:964
+#: mx.c:767 mx.c:955
 #, c-format
 msgid "Purge %d deleted message?"
-msgstr "Entferne %d als gelöscht markierte Nachrichten?"
+msgstr "%d als gewist gemarkeerde berichten verwijderen?"
 
-#: mx.c:776 mx.c:964
+#: mx.c:767 mx.c:955
 #, c-format
 msgid "Purge %d deleted messages?"
-msgstr "Entferne %d als gelöscht markierte Nachrichten?"
+msgstr "%d als gewist gemarkeerde berichten verwijderen?"
 
-#: mx.c:796
+#: mx.c:787
 #, c-format
 msgid "Moving read messages to %s..."
-msgstr "Verschiebe gelesene Nachrichten nach %s..."
+msgstr "Gelezen berichten worden naar %s verplaatst..."
 
-#: mx.c:812 mx.c:955
+#: mx.c:803 mx.c:946
 msgid "Mailbox is unchanged."
-msgstr "Mailbox unverändert."
+msgstr "Mailbox is niet veranderd."
 
-#: mx.c:831
+#: mx.c:822
 #, c-format
 msgid "%d kept, %d moved, %d deleted."
-msgstr "%d behalten, %d verschoben, %d gelöscht."
+msgstr "%d bewaard, %d verschoven, %d gewist."
 
-#: mx.c:834 mx.c:980
+#: mx.c:825 mx.c:971
 #, c-format
 msgid "%d kept, %d deleted."
-msgstr "%d behalten, %d gelöscht."
+msgstr "%d bewaard, %d gewist."
 
-#: mx.c:940
+#: mx.c:931
 #, c-format
 msgid " Press '%s' to toggle write"
-msgstr " Drücken Sie '%s', um Schreib-Modus ein-/auszuschalten"
+msgstr "Druk '%s' om schrijfmode aan c.q. uit te schakelen"
 
-#: mx.c:942
+#: mx.c:933
 msgid "Use 'toggle-write' to re-enable write!"
-msgstr "Benutzen Sie 'toggle-write', um Schreib-Modus zu reaktivieren"
+msgstr "Gebruik 'toggle-write' om schrijven mogelijk te maken!"
 
-#: mx.c:944
+#: mx.c:935
 #, c-format
 msgid "Mailbox is marked unwritable. %s"
-msgstr "Mailbox ist als unschreibbar markiert. %s"
+msgstr "De mailbox is als niet-schrijfbaar gemarkeerd. %s"
 
-#: mx.c:949
+#: mx.c:940
 msgid "Mailbox is read-only."
-msgstr "Mailbox kann nicht geschrieben werden."
+msgstr "Mailbox is read-only."
 
 #: pager.c:1370
 msgid "PrevPg"
-msgstr "S.zurück"
+msgstr "Vorig.P"
 
 #: pager.c:1371
 msgid "NextPg"
-msgstr "S.vor"
+msgstr "Volg.P"
 
 #: pager.c:1375
 msgid "View Attachm."
-msgstr "Anhänge betr."
+msgstr "Bijlagen bek."
 
 #: pager.c:1378
 msgid "Next"
-msgstr "Nächste Nachr."
+msgstr "Volgend ber."
 
 #. emulate "less -q" and don't go on to the next message.
 #: pager.c:1741 pager.c:1772 pager.c:1801 pager.c:2020
 msgid "Bottom of message is shown."
-msgstr "Das Ende der Nachricht wird angezeigt."
+msgstr "Einde van bericht is weergegeven."
 
 #: pager.c:1757 pager.c:1779 pager.c:1790
 msgid "Top of message is shown."
-msgstr "Der Beginn der Nachricht wird angezeigt."
+msgstr "Begin van bericht is weergegeven."
 
 #: pager.c:1863
 msgid "Reverse search: "
-msgstr "Suche rückwärts: "
+msgstr "Achteruit zoeken: "
 
 #: pager.c:1864
 msgid "Search: "
-msgstr "Suche: "
+msgstr "Zoeken: "
 
 #: pager.c:1958
 msgid "Help is currently being shown."
-msgstr "Hilfe wird bereits angezeigt."
+msgstr "Hulp wordt al weergegeven."
 
 #: pager.c:1987
 msgid "No more quoted text."
-msgstr "Kein weiterer zitierter Text."
+msgstr "Geen verdere geciteerde text."
 
 #: pager.c:2000
 msgid "No more unquoted text after quoted text."
-msgstr "Kein weiterer eigener Text nach zitiertem Text"
+msgstr "Geen verdere eigen text na geciteerde text."
 
 #: parse.c:502
 msgid "multipart message has no boundary parameter!"
-msgstr "Mehrteilige Nachricht hat keinen \"boundary\"-Parameter!"
+msgstr "Multi-part bericht heeft geen \"boundary\" parameter."
 
 #: pattern.c:235
 #, c-format
 msgid "Error in expression: %s"
-msgstr "Fehler in Ausdruck: %s"
+msgstr "Fout in expressie: %s"
 
 #: pattern.c:331
 #, c-format
 msgid "Invalid day of month: %s"
-msgstr "Ungültiger Tag: %s"
+msgstr "Ongeldige dag van de maand: %s"
 
 #: pattern.c:345
 #, c-format
 msgid "Invalid month: %s"
-msgstr "Ungültiger Monat: %s"
+msgstr "Ongeldige maand: %s"
 
 #: pattern.c:399
 msgid "error in expression"
-msgstr "Fehler in Ausdruck."
+msgstr "Fout in expressie"
 
 #: pattern.c:584 pattern.c:692
 #, c-format
 msgid "error in pattern at: %s"
-msgstr "Fehler in Muster bei: %s"
+msgstr "Fout in expressie bij: %s"
 
 #: pattern.c:632
 #, c-format
 msgid "%c: invalid command"
-msgstr "%c: Ungültiges Kommando"
+msgstr "%c: Ongeldig commando"
 
 #: pattern.c:638
 #, c-format
 msgid "%c: not supported in this mode"
-msgstr "%c: Wird in diesem Modus nicht unterstützt."
+msgstr "%c: Niet ondersteund in deze mode"
 
 #: pattern.c:651
 msgid "missing parameter"
-msgstr "Fehlender Parameter"
+msgstr "Te weinig parameters"
 
 #: pattern.c:667
 #, c-format
 msgid "mismatched parenthesis: %s"
-msgstr "Unpassende Klammern: %s"
+msgstr "Haakjes kloppen niet: %s"
 
 #: pattern.c:699
 msgid "empty pattern"
-msgstr "Leeres Muster"
+msgstr "Leeg patroon"
 
 #: pattern.c:876
 #, c-format
 msgid "error: unknown op %d (report this error)."
 msgstr ""
 
-#: pattern.c:941 pattern.c:1079
+#: pattern.c:940 pattern.c:1068
 msgid "Compiling search pattern..."
-msgstr "Compiliere Suchmuster..."
+msgstr "Bezig met het compileren van patroon..."
 
-#: pattern.c:955
+#: pattern.c:954
 msgid "Executing command on matching messages..."
-msgstr "Führe Kommando aus..."
+msgstr "Commando wordt uitgevoerd..."
 
-#: pattern.c:1022
+#: pattern.c:1011
 msgid "No messages matched criteria."
-msgstr "Keine Nachrichten haben Kriterium erfüllt."
+msgstr "Geen berichten voldeden aan de criteria."
+
+#: pattern.c:1106
+msgid "Search hit bottom without finding match"
+msgstr "Zoeken heeft einde bereikt zonder iets te vinden"
 
 #: pattern.c:1117
-msgid "Search hit bottom without finding match"
-msgstr "Suche hat Ende erreicht, ohne Treffer zu erzielen."
-
-#: pattern.c:1128
 msgid "Search hit top without finding match"
-msgstr "Suche hat Anfang erreicht, ohne Treffer zu erzielen."
+msgstr "Zoeken heeft begin bereikt zonder iets te vinden"
 
-#: pattern.c:1150
+#: pattern.c:1139
 msgid "Search interrupted."
-msgstr "Suche unterbrochen."
+msgstr "Zoeken onderbroken."
 
 #: pgp.c:131
 msgid "Enter PGP passphrase:"
-msgstr "PGP-Mantra eingeben:"
+msgstr "Geef PGP-Mantra in:"
 
 #: pgp.c:147
 msgid "PGP passphrase forgotten."
-msgstr "PGP-Mantra vergessen."
+msgstr "PGP-Mantra is vergeten."
 
 #: pgp.c:175
 #, c-format
 msgid "Unknown PGP version \"%s\"."
-msgstr "Unbekannte PGP-Version \"%s\"."
+msgstr "Onbekende PGP-Versie \"%s\"."
 
 #: pgp.c:208
 msgid "[-- PGP output follows (current time: "
-msgstr "[-- PGP-Ausgabe folgt (aktuelle Zeit: "
+msgstr "[-- PGP uitvoer volgt (Huidige tijd: "
 
 #: pgp.c:321
 msgid "[-- Error: unable to create PGP subprocess! --]\n"
-msgstr "[-- Fehler: Kann keinen PGP-Prozeß erzeugen! --]\n"
+msgstr "[-- Fout: Kan geen PGP-proces aanleggen! --]\n"
 
 #: pgp.c:348
 msgid ""
@@ -2365,7 +2344,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"[-- Ende der PGP-Ausgabe --]\n"
+"[-- Einde van PGP uitvoer --]\n"
 "\n"
 
 #: pgp.c:354
@@ -2400,20 +2379,12 @@ msgstr ""
 msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
 msgstr "[-- END PGP PUBLIC KEY BLOCK --]\n"
 
-#: pgp.c:464
-msgid ""
-"\n"
-"[-- END PGP SIGNED MESSAGE --]\n"
-msgstr ""
-"[-- END PGP SIGNED MESSAGE --]\n"
-"\n"
-
 #: pgp.c:477
 msgid ""
 "[-- Error: could not find beginning of PGP message! --]\n"
 "\n"
 msgstr ""
-"[-- Fehler: Konnte Anfang der PGP-Nachricht nicht finden! --]\n"
+"[-- Fout: Kon begin van PGP-message niet vinden! --]\n"
 "\n"
 
 #: pgp.c:670 pgp.c:895
@@ -2421,7 +2392,7 @@ msgid ""
 "[-- End of PGP output --]\n"
 "\n"
 msgstr ""
-"[-- Ende der PGP-Ausgabe --]\n"
+"[-- Einde van PGP uitvoer --]\n"
 "\n"
 
 #. Now display the signed body
@@ -2430,7 +2401,7 @@ msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Die folgenden Daten sind PGP/MIME-signiert --]\n"
+"[-- De volgende gegevens zijn PGP/MIME ondertekend --]\n"
 "\n"
 
 #: pgp.c:683
@@ -2439,7 +2410,7 @@ msgid ""
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Ende der PGP/MIME-signierten Daten --]\n"
+"[-- Einde van PGP/MIME ondertekende gegevens --]\n"
 
 #: pgp.c:688
 msgid ""
@@ -2447,18 +2418,18 @@ msgid ""
 "--]\n"
 "\n"
 msgstr ""
-"[-- Fehler: Diese Nachricht verstößt gegen die PGP/MIME-Spezifikation! --]\n"
+"[-- Fout: Dit bericht komt niet overeen met de PGP/MIME specificatie! --]\n" 
 
 #: pgp.c:802
 msgid "Internal error. Inform <roessler@guug.de>."
-msgstr "Interner Fehler.  Bitte <roessler@guug.de> informieren."
+msgstr "Interne fout.  Informeer <roessler@guug.de>."
 
 #: pgp.c:866
 msgid ""
 "[-- Error: could not create a PGP subprocess! --]\n"
 "\n"
 msgstr ""
-"[-- Fehler: Konnte PGP-Subprozeß nicht erzeugen! --]\n"
+"[-- Fout: Kon PGP-subproces niet aanmaken! --]\n"
 "\n"
 
 #: pgp.c:959
@@ -2466,19 +2437,19 @@ msgid ""
 "[-- Error: malformed PGP/MIME message! --]\n"
 "\n"
 msgstr ""
-"[-- Fehler: Fehlerhafte PGP/MIME-Nachricht! --]\n"
+"[-- Fout: Foutief PGP/MIME bericht! --]\n"
 "\n"
 
 #: pgp.c:972
 msgid "[-- Error: could not create temporary file! --]\n"
-msgstr "[-- Fehler: Konnte Temporärdatei nicht anlegen! --]\n"
+msgstr "[-- Fout: Kon geen tijdelijk bestand aanleggen! --]\n"
 
 #: pgp.c:981
 msgid ""
 "[-- The following data is PGP/MIME encrypted --]\n"
 "\n"
 msgstr ""
-"[-- Die folgenden Daten sind PGP/MIME-verschlüsselt --]\n"
+"[-- De volgende gegevens zijn PGP/MIME versleuteld --]\n"
 "\n"
 
 #: pgp.c:989
@@ -2487,49 +2458,50 @@ msgid ""
 "[-- End of PGP/MIME encrypted data --]\n"
 msgstr ""
 "\n"
-"[-- Ende der PGP/MIME-verschlüsselten Daten --]\n"
+"[-- Einde van PGP/MIME versleutelde data --]\n"
 
 #: pgp.c:1071
 msgid "Can't open PGP subprocess!"
-msgstr "Kann PGP-Subprozeß nicht erzeugen!"
+msgstr "Kan PGP-Subprozes niet aanmaken!"
 
 #: pgp.c:1195
 #, c-format
 msgid "Use keyID = \"%s\" for %s?"
-msgstr "Benutze KeyID = \"%s\" für %s?"
+msgstr "KeyID = \"%s\" voor %s gebruiken?"
 
 #: pgp.c:1201
 #, c-format
 msgid "Enter keyID for %s: "
-msgstr "KeyID für %s: "
+msgstr "KeyID voor %s: "
 
 #: pgpkey.c:174
 msgid "Exit  "
-msgstr "Ende "
+msgstr "Einde "
 
 #: pgpkey.c:176
 msgid "Select  "
-msgstr "Auswählen  "
+msgstr "Selecteer  "
 
 #: pgpkey.c:179
 msgid "Check key  "
-msgstr "Schlüssel prüfen  "
+msgstr "Controleer key "
+
 
 #: pgpkey.c:192
 msgid "PGP keys matching "
-msgstr "PGP-Schlüssel für "
+msgstr "PGP-sleutel voor "
 
 #: pgpkey.c:211 pgpkey.c:388
 msgid "Can't open /dev/null"
-msgstr "Kann /dev/null nicht öffnen"
+msgstr "Kan /dev/null niet openen"
 
 #: pgpkey.c:217 pgpkey.c:382
 msgid "Can't create temporary file"
-msgstr "Kann temporäre Datei nicht erzeugen"
+msgstr "Kan tijdelijk bestand niet aanleggen"
 
 #: pgpkey.c:227 pgpkey.c:399
 msgid "Can't create filter"
-msgstr "Kann Filter nicht erzeugen"
+msgstr "Kan filter niet aanleggen"
 
 #: pgpkey.c:237
 #, c-format
@@ -2538,11 +2510,11 @@ msgstr ""
 
 #: pgpkey.c:258
 msgid "This ID's trust level is undefined."
-msgstr "Das Vertrauensniveau dieser Zuordnung ist undefiniert."
+msgstr "Het vertrouwensniveau van dit ID is niet gedefinieerd."
 
 #: pgpkey.c:259
 msgid "This ID is not trusted."
-msgstr "Diese Zuordnung ist nicht vertrauenswürdig."
+msgstr "Dit ID is niet vertrouwd."
 
 #: pgpkey.c:260
 msgid "This ID is only marginally trusted."
@@ -2551,16 +2523,16 @@ msgstr "Diese Zuordnung ist nur begrenzt vertrauenswürdig."
 #: pgpkey.c:263
 #, c-format
 msgid "%s Do you really want to use it?"
-msgstr "%s Wollen Sie sie wirklich benutzen?"
+msgstr "%s Wilt U dit echt gebruiken?"
 
 #: pgpkey.c:370
 msgid "Please enter the key ID: "
-msgstr "Bitte Schlüsselidentifikation eingeben: "
+msgstr "Geef Key-ID in."
 
 #: pgpkey.c:417
 #, c-format
 msgid "PGP Key 0x%s."
-msgstr "PGP Schlüssel 0x%s."
+msgstr "PGP-key 0x%s."
 
 #: pgppubring.c:59
 msgid "reserved"
@@ -2632,208 +2604,208 @@ msgstr ""
 
 #: pop.c:67
 msgid "POP Password: "
-msgstr "POP-Paßwort:"
+msgstr "POP-Paswoord:"
 
 #: pop.c:92
 msgid "POP host is not defined."
-msgstr "Es wurde kein POP-Server definiert."
+msgstr "Er is geen POP-host gespecificeerd."
 
 #: pop.c:98
 msgid "No POP username is defined."
-msgstr "Es wurde kein Nutzername für POP definiert."
+msgstr "Er is geen POP username gespecificeerd."
 
 #: pop.c:115
 #, c-format
 msgid "Could not find address for host %s."
-msgstr "Kann %s keine Adresse zuordnen."
+msgstr "Kan adres van host %s niet achterhalen."
 
 #: pop.c:123
 #, c-format
 msgid "Connecting to %s"
-msgstr "Verbinde zu %s"
+msgstr "Verbinding met %s wordt aangelegd."
 
 #: pop.c:167 pop.c:332
 msgid "Server closed connection!"
-msgstr "Server hat Verbindung geschlossen!"
+msgstr "Server heeft verbinding gesloten!"
 
 #: pop.c:188
 msgid "No new mail in POP mailbox."
-msgstr "Keine neuen Nachrichten auf dem POP-Server."
+msgstr "Geen nieuwe berichten in op de POP-server."
 
 #: pop.c:210
 #, c-format
 msgid "Reading %d new message (%d bytes)..."
-msgstr "Lese %d neue Nachricht (%d Bytes)..."
+msgstr "Bezig met het lezen van %d nieuw bericht (%d bytes)..."
 
 #: pop.c:211
 #, c-format
 msgid "Reading %d new messages (%d bytes)..."
-msgstr "Lese %d neue Nachrichten (%d Bytes)..."
+msgstr "Bezig met het lezen van %d berichten (%d bytes)..."
 
 #: pop.c:246
 msgid "Error reading message!"
-msgstr "Kann Nachricht nicht lesen!"
+msgstr "Kan bericht niet lezen!"
 
 #: pop.c:282
 msgid "Error while writing mailbox!"
-msgstr "Fehler beim Versuch, die Mailbox zu schreiben!"
+msgstr "Er is een fout opgetreden tijdens het wegschrijven van de mailbox!"
 
 #: pop.c:306
 #, c-format
 msgid "%s [%d messages read]"
-msgstr "%s [%d Nachrichten gelesen]"
+msgstr "%s [%d berichten gelezen]"
 
 #: postpone.c:112
 msgid "Postponed Messages"
-msgstr "Zurückgestelle Nachrichten"
+msgstr "Uitgestelde Berichten"
 
 #: postpone.c:185 postpone.c:194
 msgid "No postponed messages."
-msgstr "Keine zurückgestellten Nachrichten."
+msgstr "Geen uitgestelde berichten."
 
 #: postpone.c:339 postpone.c:359 postpone.c:368
 msgid "Illegal PGP header"
-msgstr "Unzulässiger PGP-Header"
+msgstr "Ongeldige PGP-Header"
 
 #: query.c:46
 msgid "New Query"
-msgstr "Neue Abfrage"
+msgstr "Nieuwe query"
 
 #: query.c:47
 msgid "Make Alias"
-msgstr "Kurznamen erzeugen"
+msgstr "Afkorting maken"
 
 #: query.c:48
 msgid "Search"
-msgstr "Suchen"
+msgstr "Zoeken"
 
 #: query.c:92
 msgid "Waiting for response..."
-msgstr "Warte auf Antwort..."
+msgstr "Wacht op antwoord.."
 
 #: query.c:193 query.c:218
 msgid "Query command not defined."
-msgstr "Kein Abfragekommando definiert."
+msgstr "Query-commando niet gedefinieerd."
 
 #: query.c:245
 msgid "Query"
-msgstr "Abfrage"
+msgstr ""
 
 #. Prompt for Query
 #: query.c:258 query.c:286
 msgid "Query: "
-msgstr "Abfrage: "
+msgstr ""
 
 #: query.c:269 query.c:295
 #, c-format
 msgid "Query '%s'"
-msgstr "Abfrage: '%s'"
+msgstr "Query: '%s'"
 
 #: recvattach.c:50
 msgid "Pipe"
-msgstr "Filtern"
+msgstr "Filteren"
 
 #: recvattach.c:51
 msgid "Print"
-msgstr "Drucke"
+msgstr "Druk af"
 
 #: recvattach.c:371
 msgid "Saving..."
-msgstr "Speichere..."
+msgstr "Bezig met opslaan..."
 
 #: recvattach.c:432
 msgid "Attachment saved"
-msgstr "Anhang gespeichert"
+msgstr "Bijlage opgeslagen."
 
 #: recvattach.c:444
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
-msgstr "WARNUNG!  Datei %s existiert, überschreiben?"
+msgstr "Waarschuwing! Bestand %s bestaat al. Doorgaan?"
 
 #: recvattach.c:462
 msgid "Attachment filtered."
-msgstr "Anhang gefiltert."
+msgstr "Bijlage gefilterd."
 
 #: recvattach.c:528
 msgid "Filter through: "
-msgstr "Filtere durch: "
+msgstr "Filter door: "
 
 #: recvattach.c:528
 msgid "Pipe to: "
-msgstr "Übergebe an (pipe): "
+msgstr "Doorgeven aan(pipe): "
 
 #: recvattach.c:563
 #, c-format
 msgid "I dont know how to print %s attachments!"
-msgstr "Kann %s Anhänge nicht drucken."
+msgstr "Kan %s bijlagen niet afdrukken!"
 
 #: recvattach.c:626
 msgid "Print tagged attachment(s)?"
-msgstr "Drucke markierte Anhänge?"
+msgstr "Gemarkeerde bericht(en) afdrukken?"
 
 #: recvattach.c:626
 msgid "Print attachment?"
-msgstr "Drucke Anhang?"
+msgstr "Bijlage afdrukken?"
 
 #: recvattach.c:654
 msgid "You may only bounce message/rfc822 parts."
-msgstr "Sie können nur message/rfc822-Anhänge erneut versenden."
+msgstr "U kunt alleen message/rfc882-gedeelten doorsturen!"
 
 #: recvattach.c:690
 #, c-format
 msgid "Bounce messages to %s...?"
-msgstr "Nachrichten an %s... erneut versenden?"
+msgstr "Berichten aan %s doorsturen ?"
 
 #: recvattach.c:691
 #, c-format
 msgid "Bounce message to %s...?"
-msgstr "Nachricht an %s... erneut versenden?"
+msgstr "Berichten aan %s doorsturen ?"
 
 #: recvattach.c:916
 msgid "Attachments"
-msgstr "Anhänge"
+msgstr "Bijlagen"
 
 #: recvattach.c:973
 msgid "Deletion of attachments from PGP messages is unsupported."
-msgstr "Kann keine Anhänge aus PGP-Nachrichten löschen."
+msgstr "Het wissen van bijlagen uit PGP-berichten is niet ondersteund."
 
 #: recvattach.c:993 recvattach.c:1010
 msgid "Only deletion of multipart attachments is supported."
-msgstr "Kann nur aus mehrteiligen Anhängen löschen."
+msgstr "Kan alleen multipart-bijlagen wissen."
 
 #: recvattach.c:1060
 msgid "This operation is not currently supported for PGP messages."
-msgstr "Diese Funktion wird nicht für PGP-Nachrichten unterstützt."
+msgstr "Deze operatie is op dit moment niet ondersteund voor PGP-berichten."
 
 #: rfc1524.c:158
 #, c-format
 msgid "Improperly formated entry for type %s in \"%s\" line %d"
-msgstr "Ungültiger Eintrag für Typ %s in \"%s\", Zeile %d."
+msgstr "Ongeldig geformuleerde entry voor type %s in \"%s\", regel %d."
 
 #: rfc1524.c:390
 msgid "No mailcap path specified"
-msgstr "Kein Mailcap-Pfad definiert."
+msgstr "Geen mailcap-path opgegeven"
 
 #: rfc1524.c:416
 #, c-format
 msgid "mailcap entry for type %s not found"
-msgstr "Kann keinen Mailcap-Eintrag für %s finden."
+msgstr "Kan geen mailcap-entry voor %s vinden."
 
 #: score.c:74
 msgid "score: too few arguments"
-msgstr "score: Zu wenige Parameter."
+msgstr "score: te weinig argumenten"
 
 #: score.c:83
 msgid "score: too many arguments"
-msgstr "score: Zu viele Parameter."
+msgstr "score: te veel argumenten"
 
 #: send.c:230
 msgid "No subject, abort?"
-msgstr "Kein Betreff, abbrechen?"
+msgstr "Geen onderwerp, afbreken?"
 
 #: send.c:232
 msgid "No subject, aborting."
-msgstr "Kein Betreff, breche ab."
+msgstr "Geen onderwerp. operatie afgebroken."
 
 #. There are quite a few mailing lists which set the Reply-To:
 #. * header field to the list address, which makes it quite impossible
@@ -2843,136 +2815,132 @@ msgstr "Kein Betreff, breche ab."
 #: send.c:433
 #, c-format
 msgid "Reply to %s%s?"
-msgstr "Antworte an %s%s?"
+msgstr "Reageren naar %s%s?"
 
 #. This could happen if the user tagged some messages and then did
 #. * a limit such that none of the tagged message are visible.
 #.
 #: send.c:517
 msgid "No tagged messages are visible!"
-msgstr "Keine markierten Nachrichten sichtbar!"
+msgstr "Geen gemarkeerde berichten zichtbaar!"
 
 #: send.c:542
 msgid "No mailing lists found!"
-msgstr "Keine Mailing-Listen gefunden!"
+msgstr "Geen mailing-lists gevonden!"
 
 #: send.c:629
 msgid "Include message in reply?"
-msgstr "Nachricht in Antwort zitieren?"
+msgstr "Bericht in antwoord citeren?"
 
 #: send.c:643
 msgid "Could not include all requested messages!"
-msgstr "Konnte nicht alle gewünschten Nachrichten zitieren!"
+msgstr "Kon niet alle berichten citeren!"
 
 #: send.c:656
 msgid "Forward MIME encapsulated?"
-msgstr "Zum Weiterleiten in MIME-Anhang einpacken?"
+msgstr "Doorsturen als MIME-bijlage?"
 
 #. If the user is composing a new message, check to see if there
 #. * are any postponed messages first.
 #.
 #: send.c:867
 msgid "Recall postponed message?"
-msgstr "Zurückgestellte Nachricht weiterbearbeiten?"
+msgstr "Uigesteld bericht hervatten?"
 
 #: send.c:1099
 msgid "Abort unmodified message?"
-msgstr "Unveränderte Nachricht verwerfen?"
+msgstr "Uitgesteld bericht afbreken?"
 
 #: send.c:1101
 msgid "Aborted unmodified message."
-msgstr "Unveränderte Nachricht verworfen."
+msgstr "Bericht werd niet veranderd. Operatie afgebroken."
 
 #. abort
 #: send.c:1140
 msgid "Mail not sent."
-msgstr "Nachricht nicht verschickt."
+msgstr "Bericht niet verstuurd."
 
 #: send.c:1153
 msgid "Message postponed."
-msgstr "Nachricht zurückgestellt."
+msgstr "Bericht uitgesteld."
 
 #: send.c:1162
 msgid "No recipients are specified!"
-msgstr "Es wurden keine Empfänger angegeben!"
+msgstr "Er zijn geen geadresseerden opgegeven!"
 
 #: send.c:1167
 msgid "No recipients were specified."
-msgstr "Es wurden keine Empfänger angegeben!"
+msgstr "Er werden geen geadresseerden opgegeven!"
 
 #: send.c:1173
 msgid "No subject, abort sending?"
-msgstr "Kein Betreff, Versand abbrechen?"
+msgstr "Geen onderwerp. Versturen afbreken?"
 
 #: send.c:1177
 msgid "No subject specified."
-msgstr "Kein Betreff."
+msgstr "Geen onderwerp."
 
 #: send.c:1216
 msgid "Message edited. Really send?"
-msgstr "Nachricht verändert.  Wirklich abschicken?"
+msgstr "Bericht veranderd. Werkelijk versturen?"
 
 #: send.c:1222
 msgid "Sending message..."
-msgstr "Verschicke Nachricht..."
+msgstr "Verstuur bericht..."
 
-#: send.c:1324
-msgid "Could not send the message."
-msgstr "Konnte Nachricht nicht verschicken."
-
-#: send.c:1330
+#: send.c:1322
 msgid "Mail sent."
-msgstr "Nachricht verschickt."
+msgstr "Bericht verstuurd."
 
 #: sendlib.c:475
 msgid "No boundary parameter found! [report this error]"
-msgstr ""
+msgstr "Geen 'boundary parameter' gevonden! [meldt deze fout!]"
 
 #: sendlib.c:509
 #, c-format
 msgid "%s no longer exists!"
-msgstr "%s existiert nicht mehr!"
+msgstr "%s bestaat niet meer!"
 
 #: sendlib.c:777
 #, c-format
 msgid "Could not open %s"
-msgstr "Konnte %s nicht öffnen."
+msgstr "Kan %s niet openen."
 
-#: sendlib.c:1695
+#: sendlib.c:1690
 #, c-format
 msgid "Error sending message, child exited %d (%s).\n"
-msgstr "Fehler %d beim Versand der Nachricht (%s).\n"
+msgstr "Fout %d opgetreden tijdens versturen van bericht.\n"
 
-#: sendlib.c:1697
+#: sendlib.c:1692
 #, c-format
 msgid "Saved output of child process to %s.\n"
-msgstr "Ausgabe des Unterprozesses in %s abgespeichert.\n"
+msgstr "Uitvoer van child proces opgeslagen in %s.\n"
 
-#: sendlib.c:1701
+#: sendlib.c:1696
 msgid "Error sending message."
-msgstr "Fehler beim Versand der Nachricht."
+msgstr "Fout opgetreden tijdens het verzenden van het bericht."
 
 #: signal.c:39 signal.c:42
 #, c-format
 msgid "Caught %s...  Exiting.\n"
-msgstr "Signal %s... Abbruch.\n"
+msgstr "Signal %s....\n"
 
 #: signal.c:44
 #, c-format
 msgid "Caught signal %d...  Exiting.\n"
-msgstr "Signal %d... Abbruch.\n"
+msgstr "Signal %d....\n"
 
 #: sort.c:199
 msgid "Sorting mailbox..."
-msgstr "Sortiere Mailbox..."
+msgstr "Mailbox wordt gesorteerd..."
 
 #: sort.c:227
 msgid "Could not find sorting function! [report this bug]"
-msgstr ""
+msgstr "Kan 'sorting function' niet vinden! [Meldt deze bug!]"
 
 #: status.c:102
 msgid "(no mailbox)"
-msgstr "(keine Mailbox)"
+msgstr "(geen Mailbox)"
 
 #~ msgid "This encoding is deprecated.  Really use it?"
 #~ msgstr "Diese Codierung sollte nicht genutzt werden.  Trotzdem setzen?"
