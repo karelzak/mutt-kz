@@ -3386,6 +3386,9 @@ Default: set
 
 If set, the PGP <em/+encrypttoself/ flag is used when encrypting messages.
 
+<bf/Note:/ This option only works with PGP but is ignored in
+combination with GnuPG.
+
 <sect2>pgp&lowbar;gpg<label id="pgp_gpg">
 <p>
 Type: string<newline>
