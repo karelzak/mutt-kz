@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.0i\n"
-"POT-Creation-Date: 1999-10-22 09:42+0200\n"
+"POT-Creation-Date: 2000-01-18 23:21+0100\n"
 "PO-Revision-Date: 1999-12-20 20:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -247,7 +247,7 @@ msgstr "太少參數"
 msgid "too many arguments"
 msgstr "太多參數"
 
-#: color.c:709
+#: color.c:711
 msgid "default colors not supported"
 msgstr "不支援預設的色彩"
 
@@ -306,13 +306,15 @@ msgstr "用管道輸出至命令："
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"反方向 d)日期,f)發信人,r)收信時間,s)標題,o)收信人,t)序列,u)不排,z)大小,c)分數:"
+"反方向 "
+"d)日期,f)發信人,r)收信時間,s)標題,o)收信人,t)序列,u)不排,z)大小,c)分數:"
 
 #: commands.c:339
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"排序 d)日期,f)發信人,r)收信時間,s)標題,o)收信人,t)序列,u)不排序,z)大小,c)分數:"
+"排序 "
+"d)日期,f)發信人,r)收信時間,s)標題,o)收信人,t)序列,u)不排序,z)大小,c)分數:"
 
 #: commands.c:340
 msgid "dfrsotuzc"
@@ -429,7 +431,8 @@ msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
 msgstr ""
-"(e)加密, (s)簽名, (a)用別的身份簽, (b)兩者皆要, 選擇 (m)ic 演算法 或 (f)放棄？"
+"(e)加密, (s)簽名, (a)用別的身份簽, (b)兩者皆要, 選擇 (m)ic 演算法 或 "
+"(f)放棄？"
 
 #: compose.c:135
 msgid "esabmf"
@@ -1912,8 +1915,9 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "要與研發人員連絡，請寄信給 <mutt-dev@mutt.org>。\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-2000 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -1924,11 +1928,12 @@ msgstr ""
 "若需要更詳細的資料, 請鍵入 `mutt -vv'\n"
 
 #: main.c:48
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-2000 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-2000 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-2000 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-2000 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -1967,9 +1972,11 @@ msgstr ""
 "    MA 02139, USA.\n"
 
 #: main.c:73
+#, fuzzy
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
+"<eay@cryptsoft.com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2748,7 +2755,7 @@ msgstr "找不到主機 %s 的位址。"
 msgid "Connecting to %s"
 msgstr "正連線到 %s"
 
-#: pop.c:166 pop.c:336
+#: pop.c:166 pop.c:340
 msgid "Server closed connection!"
 msgstr "與伺服器的聯結中斷了!"
 
@@ -2757,13 +2764,13 @@ msgid "No new mail in POP mailbox."
 msgstr "POP 信箱中沒有新的信件"
 
 #: pop.c:209
-#, c-format
-msgid "Reading %d new message (%d bytes)..."
+#, fuzzy, c-format
+msgid "Reading new messages (%d bytes)..."
 msgstr "讀取 %d 封新的信件 (%d 位元組)…"
 
 #: pop.c:210
-#, c-format
-msgid "Reading %d new messages (%d bytes)..."
+#, fuzzy, c-format
+msgid "Reading new message (%d bytes)..."
 msgstr "讀取 %d 封新的信件 (%d 位元組)…"
 
 #: pop.c:245
@@ -2774,9 +2781,14 @@ msgstr "讀取信件時發生錯誤！"
 msgid "Error while writing mailbox!"
 msgstr "寫入信箱時發生錯誤！"
 
-#: pop.c:307
-#, c-format
-msgid "%s [%d messages read]"
+#: pop.c:308
+#, fuzzy, c-format
+msgid "%s [%d of %d messages read]"
+msgstr "%s [%d 封被讀取]"
+
+#: pop.c:310
+#, fuzzy, c-format
+msgid "%s [%d message read]"
 msgstr "%s [%d 封被讀取]"
 
 #: postpone.c:112
@@ -3068,7 +3080,8 @@ msgid "Connecting to %s..."
 msgstr "正連接到 %s…"
 
 #: sort.c:198
-msgid "Sorting mailbox…"
+#, fuzzy
+msgid "Sorting mailbox..."
 msgstr "信箱排序中…"
 
 #: sort.c:226

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.0i\n"
-"POT-Creation-Date: 1999-10-22 09:42+0200\n"
+"POT-Creation-Date: 2000-01-18 23:21+0100\n"
 "PO-Revision-Date: 1999-10-27 14:05+0200\n"
 "Last-Translator: Roberto Suarez Soto <ask4it@bigfoot.com>\n"
 "Language-Team: Galician <gpul-traduccion@ceu.fi.udc.es>\n"
@@ -92,7 +92,8 @@ msgstr "Fallo ó abri-lo ficheiro para quitar as cabeceiras"
 #, c-format
 msgid "No mailcap compose entry for %s, creating empty file."
 msgstr ""
-"Non hai entrada \"compose\"  para %sno ficheiro Mailcap, creando\n ficheiro vacío."
+"Non hai entrada \"compose\"  para %sno ficheiro Mailcap, creando\n"
+" ficheiro vacío."
 
 #. For now, editing requires a file, no piping
 #: attach.c:251
@@ -153,8 +154,8 @@ msgstr "Buzóns [%d]"
 msgid "Directory [%s], File mask: %s"
 msgstr "Directorio [%s], máscara de ficheiro: %s"
 
-#: browser.c:519
 #
+#: browser.c:519
 msgid "IMAP folder browsing is not currently supported"
 msgstr "A navegación de carpetas IMAP non está soportada actualmente"
 
@@ -253,7 +254,7 @@ msgstr "parámetros insuficientes"
 msgid "too many arguments"
 msgstr "demasiados parámetros"
 
-#: color.c:709
+#: color.c:711
 msgid "default colors not supported"
 msgstr "colores por defecto non soportados"
 
@@ -381,8 +382,8 @@ msgstr "Mensaxe impresa"
 msgid "Messages printed"
 msgstr "Mensaxes impresas"
 
-#: compose.c:35
 #
+#: compose.c:35
 msgid "There are no attachments."
 msgstr "Non hai ficheiros adxuntos."
 
@@ -586,8 +587,8 @@ msgstr "('?' para lista): "
 msgid "No mailbox is open."
 msgstr "Non hai buzóns abertos."
 
-#: curs_main.c:51
 #
+#: curs_main.c:51
 msgid "There are no messages."
 msgstr "Non hai mensaxes."
 
@@ -595,8 +596,8 @@ msgstr "Non hai mensaxes."
 msgid "Mailbox is read-only."
 msgstr "O buzón é de só lectura."
 
-#: curs_main.c:53 pager.c:56 recvattach.c:874
 #
+#: curs_main.c:53 pager.c:56 recvattach.c:874
 msgid "Function not permitted in attach-message mode."
 msgstr "Función non permitida no modo \"adxuntar-mensaxe\"."
 
@@ -1062,9 +1063,9 @@ msgstr "¿Crear %s?"
 msgid "Fetching message..."
 msgstr "Recollendo mensaxe..."
 
+#
 #. hack from Nathan Neulinger
 #: imap.c:1736
-#
 msgid "Sending CREATE command ..."
 msgstr "Enviando comando CREATE..."
 
@@ -1926,8 +1927,9 @@ msgstr ""
 "<mutt-dev@mutt.org>.\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-2000 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -1939,11 +1941,12 @@ msgstr ""
 "baixo certas condicións; escriba `mutt -vv' para ve-losdetalles.\n"
 
 #: main.c:48
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-2000 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-2000 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-2000 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-2000 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -1980,9 +1983,11 @@ msgstr ""
 "    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
 
 #: main.c:73
+#, fuzzy
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
+"<eay@cryptsoft.com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2319,8 +2324,8 @@ msgstr "¡Use 'toggle-write' para restablece-lo modo escritura!"
 msgid "Mailbox is marked unwritable. %s"
 msgstr "O buzón está marcado como non escribible. %s"
 
-#: pager.c:54
 #
+#: pager.c:54
 msgid "Not available in this menu."
 msgstr "Non dispoñible neste menú."
 
@@ -2763,7 +2768,7 @@ msgstr "Non foi posible atopa-lo enderezo do servidor %s."
 msgid "Connecting to %s"
 msgstr "Conectando con %s"
 
-#: pop.c:166 pop.c:336
+#: pop.c:166 pop.c:340
 msgid "Server closed connection!"
 msgstr "¡O servidor pechou a conexión!"
 
@@ -2772,14 +2777,14 @@ msgid "No new mail in POP mailbox."
 msgstr "Non hai novo correo no buzón POP."
 
 #: pop.c:209
-#, c-format
-msgid "Reading %d new message (%d bytes)..."
-msgstr "Lendo %d nova mensaxe (%d butes)..."
+#, fuzzy, c-format
+msgid "Reading new messages (%d bytes)..."
+msgstr "Lendo %d novas mensaxes (%d bytes)..."
 
 #: pop.c:210
-#, c-format
-msgid "Reading %d new messages (%d bytes)..."
-msgstr "Lendo %d novas mensaxes (%d bytes)..."
+#, fuzzy, c-format
+msgid "Reading new message (%d bytes)..."
+msgstr "Lendo %d nova mensaxe (%d butes)..."
 
 #: pop.c:245
 msgid "Error reading message!"
@@ -2789,9 +2794,14 @@ msgstr "¡Erro lendo mensaxe!"
 msgid "Error while writing mailbox!"
 msgstr "¡Erro cando se estaba a escribi-lo buzón!"
 
-#: pop.c:307
-#, c-format
-msgid "%s [%d messages read]"
+#: pop.c:308
+#, fuzzy, c-format
+msgid "%s [%d of %d messages read]"
+msgstr "%s [%d mensaxes lidas]"
+
+#: pop.c:310
+#, fuzzy, c-format
+msgid "%s [%d message read]"
 msgstr "%s [%d mensaxes lidas]"
 
 #: postpone.c:112

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0pre4-1\n"
-"POT-Creation-Date: 1999-10-22 09:42+0200\n"
+"POT-Creation-Date: 2000-01-18 23:21+0100\n"
 "PO-Revision-Date: 1999-10-20 09:15-0500\n"
 "Last-Translator: Ronny Haryanto <giant@canada.com>\n"
 "Language-Team: Indonesia <i18n@linux.or.id>\n"
@@ -251,7 +251,7 @@ msgstr "parameternya kurang"
 msgid "too many arguments"
 msgstr "parameternya terlalu banyak"
 
-#: color.c:709
+#: color.c:711
 msgid "default colors not supported"
 msgstr "warna default tidak didukung"
 
@@ -1923,8 +1923,9 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "Untuk menghubungi developersnya, kirim email ke <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-2000 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -1937,11 +1938,12 @@ msgstr ""
 "dengan beberapa persyaratan; untuk lebih jelasnya lihat 'mutt -vv'.\n"
 
 #: main.c:48
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-2000 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-2000 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-2000 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-2000 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -1983,9 +1985,11 @@ msgstr ""
 "    Free Software Foundation, Inc, 675 Mass Ave, Cambridge, MA 02139, USA.\n"
 
 #: main.c:73
+#, fuzzy
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
+"<eay@cryptsoft.com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2768,7 +2772,7 @@ msgstr "Alamat tidak ditemukan untuk %s."
 msgid "Connecting to %s"
 msgstr "Menghubungi %s"
 
-#: pop.c:166 pop.c:336
+#: pop.c:166 pop.c:340
 msgid "Server closed connection!"
 msgstr "Server menutup hubungan!"
 
@@ -2777,13 +2781,13 @@ msgid "No new mail in POP mailbox."
 msgstr "Tidak ada surat baru di kotak surat POP."
 
 #: pop.c:209
-#, c-format
-msgid "Reading %d new message (%d bytes)..."
+#, fuzzy, c-format
+msgid "Reading new messages (%d bytes)..."
 msgstr "Membaca %d surat baru (%d bytes)..."
 
 #: pop.c:210
-#, c-format
-msgid "Reading %d new messages (%d bytes)..."
+#, fuzzy, c-format
+msgid "Reading new message (%d bytes)..."
 msgstr "Membaca %d surat baru (%d bytes)..."
 
 #: pop.c:245
@@ -2794,9 +2798,14 @@ msgstr "Gagal membaca surat!"
 msgid "Error while writing mailbox!"
 msgstr "Error sewaktu menulis ke kotak surat!"
 
-#: pop.c:307
-#, c-format
-msgid "%s [%d messages read]"
+#: pop.c:308
+#, fuzzy, c-format
+msgid "%s [%d of %d messages read]"
+msgstr "%s [%d surat dibaca]"
+
+#: pop.c:310
+#, fuzzy, c-format
+msgid "%s [%d message read]"
 msgstr "%s [%d surat dibaca]"
 
 #: postpone.c:112

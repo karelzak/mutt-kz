@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 1999-10-22 09:42+0200\n"
+"POT-Creation-Date: 2000-01-18 23:21+0100\n"
 "PO-Revision-Date: 1998-10-25 15:44+0200\n"
 "Last-Translator: Andrej N. Gritsenko <andrej@lucky.net>\n"
 "Language-Team: Ukrainian <uk@ua.net>\n"
@@ -251,7 +251,7 @@ msgstr "дуже мало аргумент╕в"
 msgid "too many arguments"
 msgstr "дуже багато аргумент╕в"
 
-#: color.c:709
+#: color.c:711
 msgid "default colors not supported"
 msgstr "кол╕р default не п╕дтриму╓ться"
 
@@ -1917,7 +1917,7 @@ msgstr "Для зв'язку з розробниками, шл╕ть лист до <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-2000 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -1925,10 +1925,10 @@ msgstr ""
 
 #: main.c:48
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-2000 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-2000 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-2000 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-2000 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -1951,7 +1951,8 @@ msgstr ""
 #: main.c:73
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
+"<eay@cryptsoft.com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2721,7 +2722,7 @@ msgstr "Не вийнло знайти адресу для %s."
 msgid "Connecting to %s"
 msgstr "З'╓днання з %s"
 
-#: pop.c:166 pop.c:336
+#: pop.c:166 pop.c:340
 msgid "Server closed connection!"
 msgstr "Сервер закрив з'╓днання!"
 
@@ -2730,13 +2731,13 @@ msgid "No new mail in POP mailbox."
 msgstr "В поштов╕й скриньц╕ POP нема╓ нових лист╕в."
 
 #: pop.c:209
-#, c-format
-msgid "Reading %d new message (%d bytes)..."
+#, fuzzy, c-format
+msgid "Reading new messages (%d bytes)..."
 msgstr "Читання %d нового пов╕домлення (%d байт)..."
 
 #: pop.c:210
 #, fuzzy, c-format
-msgid "Reading %d new messages (%d bytes)..."
+msgid "Reading new message (%d bytes)..."
 msgstr "Читання %d нового пов╕домлення (%d байт)..."
 
 #: pop.c:245
@@ -2747,9 +2748,14 @@ msgstr "Помилка читання листа!"
 msgid "Error while writing mailbox!"
 msgstr "Помилка п╕д час запису поштово╖ скриньки!"
 
-#: pop.c:307
-#, c-format
-msgid "%s [%d messages read]"
+#: pop.c:308
+#, fuzzy, c-format
+msgid "%s [%d of %d messages read]"
+msgstr "%s [%d лист╕в прочитано]"
+
+#: pop.c:310
+#, fuzzy, c-format
+msgid "%s [%d message read]"
 msgstr "%s [%d лист╕в прочитано]"
 
 #: postpone.c:112

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6pre1\n"
-"POT-Creation-Date: 1999-10-22 09:42+0200\n"
+"POT-Creation-Date: 2000-01-18 23:21+0100\n"
 "PO-Revision-Date: 1999-09-02 01:08+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarag.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -250,7 +250,7 @@ msgstr "인수가 부족함"
 msgid "too many arguments"
 msgstr "인수가 너무 많음"
 
-#: color.c:709
+#: color.c:711
 msgid "default colors not supported"
 msgstr "기본 색상들이 지원되지 않음"
 
@@ -1915,8 +1915,9 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "개발자와 연락하려면 <mutt-dev@mutt.org>로 메일을 보내십시오.\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-2000 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -1927,11 +1928,12 @@ msgstr ""
 "로이 배포할 수 있습니다. 자세한 사항은 'mutt -vv' 를 쳐보시기 바랍니다.\n"
 
 #: main.c:48
+#, fuzzy
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-2000 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-2000 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-2000 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-2000 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -1975,7 +1977,8 @@ msgstr ""
 #: main.c:73
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
+"<eay@cryptsoft.com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -2743,7 +2746,7 @@ msgstr "%s 호스트의 주소를 찾을 수가 없음."
 msgid "Connecting to %s"
 msgstr "%s에 연결 중"
 
-#: pop.c:166 pop.c:336
+#: pop.c:166 pop.c:340
 msgid "Server closed connection!"
 msgstr "서버와 연결이 끊어짐!"
 
@@ -2752,13 +2755,13 @@ msgid "No new mail in POP mailbox."
 msgstr "POP 편지함에 새 편지가 없음."
 
 #: pop.c:209
-#, c-format
-msgid "Reading %d new message (%d bytes)..."
+#, fuzzy, c-format
+msgid "Reading new messages (%d bytes)..."
 msgstr "새 메시지 %d개를 읽는 중 (%d 바이트) ..."
 
 #: pop.c:210
-#, c-format
-msgid "Reading %d new messages (%d bytes)..."
+#, fuzzy, c-format
+msgid "Reading new message (%d bytes)..."
 msgstr "새 메시지 %d개를 읽는 중 (%d 바이트) ..."
 
 #: pop.c:245
@@ -2769,9 +2772,14 @@ msgstr "메세지 읽는 중 오류!"
 msgid "Error while writing mailbox!"
 msgstr "편지함에 쓰는 중 오류!"
 
-#: pop.c:307
-#, c-format
-msgid "%s [%d messages read]"
+#: pop.c:308
+#, fuzzy, c-format
+msgid "%s [%d of %d messages read]"
+msgstr "%s [%d개 메세지 읽음]"
+
+#: pop.c:310
+#, fuzzy, c-format
+msgid "%s [%d message read]"
 msgstr "%s [%d개 메세지 읽음]"
 
 #: postpone.c:112

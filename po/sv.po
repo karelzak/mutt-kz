@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.0\n"
-"POT-Creation-Date: 1999-10-22 09:42+0200\n"
+"POT-Creation-Date: 2000-01-18 23:21+0100\n"
 "PO-Revision-Date: 1999-10-24 14:47+0200\n"
 "Last-Translator: Jörgen Tegnér <teg@post.netlink.se>\n"
 "Language-Team: \n"
@@ -170,7 +170,8 @@ msgstr "Filmask: "
 
 #: browser.c:751
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr "Omvänd sortering efter (d)atum, (a)lpha), (s)torlek eller i(n)te alls? "
+msgstr ""
+"Omvänd sortering efter (d)atum, (a)lpha), (s)torlek eller i(n)te alls? "
 
 #: browser.c:752
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
@@ -247,7 +248,7 @@ msgstr "För få argument"
 msgid "too many arguments"
 msgstr "För många argument"
 
-#: color.c:709
+#: color.c:711
 msgid "default colors not supported"
 msgstr "standardfärgerna stöds inte"
 
@@ -452,7 +453,8 @@ msgstr "Det här saknar relevans om du inte vill signera meddelandet."
 
 #: compose.c:198
 msgid "Unknown MIC algorithm, valid ones are: pgp-md5, pgp-sha1, pgp-rmd160"
-msgstr "Okänd MIC-algoritm, följande är kända: pgp-md5, pgp-sha1 och pgp-rmd160"
+msgstr ""
+"Okänd MIC-algoritm, följande är kända: pgp-md5, pgp-sha1 och pgp-rmd160"
 
 #: compose.c:234
 #, c-format
@@ -845,8 +847,7 @@ msgstr "[-- Fel: oväntat filslut! --]\n"
 #. didn't find anything that we could display!
 #: handler.c:971
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
-msgstr ""
-"[-- Fel : Kan inte visa någon del av 'Multipart/Alternative'! --]\n"
+msgstr "[-- Fel : Kan inte visa någon del av 'Multipart/Alternative'! --]\n"
 
 #: handler.c:1088
 #, c-format
@@ -1009,7 +1010,9 @@ msgstr "Öppnar brevlåda en gång till... %s"
 
 #: imap.c:1203
 msgid "This IMAP server is ancient. Mutt does not work with it."
-msgstr "Den här versionen av IMAP är uråldrig. Mutt fungerar inte tillsammans med den."
+msgstr ""
+"Den här versionen av IMAP är uråldrig. Mutt fungerar inte tillsammans med "
+"den."
 
 #: imap.c:1224
 msgid "IMAP Username: "
@@ -1117,7 +1120,6 @@ msgstr "prefix är inte tillåten med 'reset'"
 #: init.c:746
 msgid "value is illegal with reset"
 msgstr "värde är inte tillåten med 'reset'"
-
 
 #: init.c:785
 #, c-format
@@ -1413,7 +1415,6 @@ msgstr "ta bort alla brev i undertråd"
 #: keymap_defs.h:49
 msgid "delete all messages in thread"
 msgstr "ta bort alla brev i tråd"
-
 
 #: keymap_defs.h:50
 msgid "display full address of sender"
@@ -1911,11 +1912,13 @@ msgstr "lägg till brev till %s?"
 
 #: main.c:39
 msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
-msgstr "För att kontakta utvecklarna, var vänlig skicka ett brev till <mutt-dev@mutt.org>.\n"
+msgstr ""
+"För att kontakta utvecklarna, var vänlig skicka ett brev till "
+"<mutt-dev@mutt.org>.\n"
 
 #: main.c:42
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins and others.\n"
+"Copyright (C) 1996-2000 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
@@ -1923,10 +1926,10 @@ msgstr ""
 
 #: main.c:48
 msgid ""
-"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-2000 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-2000 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-2000 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-2000 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "Lots of others not mentioned here contributed lots of code,\n"
 "fixes, and suggestions.\n"
@@ -1949,7 +1952,8 @@ msgstr ""
 #: main.c:73
 msgid ""
 "\n"
-"SHA1 implementation Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"SHA1 implementation Copyright (C) 1995-1997 Eric A. Young "
+"<eay@cryptsoft.com>\n"
 "\n"
 "    Redistribution and use in source and binary forms, with or without\n"
 "    modification, are permitted under certain conditions.\n"
@@ -1997,7 +2001,9 @@ msgstr ""
 msgid ""
 "\n"
 "Compile options:"
-msgstr "\nInkompilerade val:"
+msgstr ""
+"\n"
+"Inkompilerade val:"
 
 #: main.c:309
 msgid "Error initializing terminal."
@@ -2055,7 +2061,9 @@ msgstr "Kan inte låsa brevlåda!"
 #.
 #: mbox.c:738
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr "sync: mbox är ändrad, men inga brev är ändrade. [Var vänlig rapportera det här felet]."
+msgstr ""
+"sync: mbox är ändrad, men inga brev är ändrade. [Var vänlig rapportera det "
+"här felet]."
 
 #: mbox.c:767
 msgid "Writing messages... %d (%d%%)"
@@ -2485,8 +2493,7 @@ msgid ""
 "[-- Error: this message does not comply with the PGP/MIME specification! "
 "--]\n"
 "\n"
-msgstr ""
-"[-- Fel: brevet följer inte specifikationen för PGP/MIME! --]\n"
+msgstr "[-- Fel: brevet följer inte specifikationen för PGP/MIME! --]\n"
 
 #: pgp.c:810
 msgid "Internal error. Inform <roessler@guug.de>."
@@ -2691,7 +2698,7 @@ msgstr "Kunde inte hitta adress till servern %s."
 msgid "Connecting to %s"
 msgstr "Ansluter till %s."
 
-#: pop.c:166 pop.c:336
+#: pop.c:166 pop.c:340
 msgid "Server closed connection!"
 msgstr "Servern stängde förbindelsen!"
 
@@ -2700,14 +2707,14 @@ msgid "No new mail in POP mailbox."
 msgstr "Inga nya brev i brevlådan på POP-servern."
 
 #: pop.c:209
-#, c-format
-msgid "Reading %d new message (%d bytes)..."
-msgstr "Läser %d nya brev (%d byte)..."
+#, fuzzy, c-format
+msgid "Reading new messages (%d bytes)..."
+msgstr "Bezig met het lezen van %d berichten (%d bytes)..."
 
 #: pop.c:210
-#, c-format
-msgid "Reading %d new messages (%d bytes)..."
-msgstr "Bezig met het lezen van %d berichten (%d bytes)..."
+#, fuzzy, c-format
+msgid "Reading new message (%d bytes)..."
+msgstr "Läser %d nya brev (%d byte)..."
 
 #: pop.c:245
 msgid "Error reading message!"
@@ -2717,9 +2724,14 @@ msgstr "Fel när brev lästed!"
 msgid "Error while writing mailbox!"
 msgstr "Fel när brevlådan skrevs!"
 
-#: pop.c:307
-#, c-format
-msgid "%s [%d messages read]"
+#: pop.c:308
+#, fuzzy, c-format
+msgid "%s [%d of %d messages read]"
+msgstr "%s [%d brev lästa]"
+
+#: pop.c:310
+#, fuzzy, c-format
+msgid "%s [%d message read]"
 msgstr "%s [%d brev lästa]"
 
 #: postpone.c:112
@@ -2743,8 +2755,9 @@ msgid "Make Alias"
 msgstr "Skapa alias"
 
 #: query.c:47
-msgid "Sök"
-msgstr "Zoeken"
+#, fuzzy
+msgid "Search"
+msgstr "Sök: "
 
 #: query.c:91
 msgid "Waiting for response..."
@@ -3017,8 +3030,12 @@ msgstr "Sorterar brevlåda..."
 
 #: sort.c:226
 msgid "Could not find sorting function! [report this bug]"
-msgstr "Kunde inte hitta sorteringsfunktion! [Var vänlig rapportera det här felet]"
+msgstr ""
+"Kunde inte hitta sorteringsfunktion! [Var vänlig rapportera det här felet]"
 
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(ingen brevlåda)"
+
+#~ msgid "Sök"
+#~ msgstr "Zoeken"
