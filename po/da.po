@@ -1,13 +1,13 @@
 # This Danish translation of Mutt was made by people on the 
-# sslug-locale mailing-list in the month of March 2000. The 
-# maling-list is archived at http://www.sslug.dk/emailarkiv/locale/
+# sslug-locale mailing list in the month of March 2000. The 
+# mailing list is archived at http://www.sslug.dk/emailarkiv/locale/
 # 
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mutt-1.2.4i \n"
+"Project-Id-Version: Mutt-1.2.5i \n"
 "POT-Creation-Date: 2000-07-28 20:51+0200\n"
-"PO-Revision-Date: 2000-07-09 10:46+02:00\n"
+"PO-Revision-Date: 2000-08-31 21:15+02:00\n"
 "Last-Translator: Byrial Jensen <Byrial@image.dk>, Morten Bo Johansen "
 "<mojo@image.dk>\n"
 "Language-Team: Danish <da@li.org>\n"
@@ -575,11 +575,11 @@ msgstr "Indkodning til UTF-8 er ikke muligt endnu"
 
 #: compose.c:775
 msgid "The current attachment won't be converted."
-msgstr "Den aktuelle del vil ikke blive konverteret"
+msgstr "Den aktuelle brevdel vil ikke blive konverteret"
 
 #: compose.c:777
 msgid "The current attachment will be converted."
-msgstr "Den aktuelle del vil blive konverteret"
+msgstr "Den aktuelle brevdel vil blive konverteret"
 
 #: compose.c:806
 msgid "Recoding successful."
@@ -1613,11 +1613,11 @@ msgstr "ret i Cc-listen"
 
 #: keymap_alldefs.h:23
 msgid "edit attachment description"
-msgstr "ret delens beskrivelse"
+msgstr "ret brevdelens beskrivelse"
 
 #: keymap_alldefs.h:24
 msgid "edit attachment transfer-encoding"
-msgstr "ret delens indkodning"
+msgstr "ret brevdelens indkodning"
 
 #: keymap_alldefs.h:25
 msgid "enter a file to save a copy of this message in"
@@ -1693,7 +1693,7 @@ msgstr "send brevet"
 
 #: keymap_alldefs.h:43
 msgid "toggle disposition between inline/attachment"
-msgstr "skift status mellem intregeret og bilagt"
+msgstr "skift status mellem integreret og bilagt"
 
 #: keymap_alldefs.h:44
 msgid "toggle whether to delete file after sending it"
@@ -2322,9 +2322,9 @@ msgstr ""
 "    underforstået garanti om SALGBARHED eller EGNETHED TIL NOGET BESTEMT\n"
 "    FORMÅL. Se GNU General Public License for yderligere detaljer\n"
 "\n"
-"    Du skulle have modtaget en kopi af GNU General Public License\n"
-"    sammen med dette program; skriv til Free Software Foundation, Inc.,\n"
-"    675 Mass Ave, Cambridge, MA 02139, USA, hvis det ikke er tilfældet.\n"
+"    Du bør have modtaget en kopi af GNU General Public License sammen med \n"
+"    dette program; hvis ikke, så skriv til The Free Software Foundation, Inc., \n"
+"    59 Temple Place - Suite 330, Boston, MA  02111, USA.\n"
 
 #: main.c:77
 msgid ""
@@ -2831,7 +2831,7 @@ msgstr "fejl: ukendt op %d (rapportér denne fejl)."
 
 #: pattern.c:959 pattern.c:1088
 msgid "Compiling search pattern..."
-msgstr "Klargører søgemønster..."
+msgstr "Klargør søgemønster..."
 
 #: pattern.c:973
 msgid "Executing command on matching messages..."
