@@ -33,10 +33,64 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <fcntl.h>
+
+#ifdef HAVE_SYSEXITS_H
 #include <sysexits.h>
+#endif
 
-
-
+static struct sysexits
+{
+  int v;
+  const char *str;
+} 
+sysexits_h[] = 
+{
+#ifdef EX_USAGE
+  { EX_USAGE, "The command was used incorrectly." },
+#endif
+#ifdef EX_DATAERR
+  { EX_DATAERR, "The input data was incorrect." },
+#endif
+#ifdef EX_NOINPUT
+  { EX_NOINPUT, "No input." },
+#endif
+#ifdef EX_NOUSER
+  { EX_NOUSER, "No such user." },
+#endif
+#ifdef EX_NOHOST
+  { EX_NOHOST, "Host not found." },
+#endif
+#ifdef EX_UNAVAILABLE
+  { EX_UNAVAILABLE, "Service unavailable." },
+#endif
+#ifdef EX_SOFTWARE
+  { EX_SOFTWARE, "Software error." },
+#endif
+#ifdef EX_OSERR
+  { EX_OSERR, "Operating system error." },
+#endif
+#ifdef EX_OSFILE
+  { EX_OSFILE, "System file is missing." },
+#endif
+#ifdef EX_CANTCREAT
+  { EX_CANTCREAT, "Can't create output." },
+#endif
+#ifdef EX_IOERR
+  { EX_IOERR, "I/O error." },
+#endif
+#ifdef EX_TEMPFAIL
+  { EX_TEMPFAIL, "Temporary failure." },
+#endif
+#ifdef EX_PROTOCOL
+  { EX_PROTOCOL, "Protocol error." },
+#endif
+#ifdef EX_NOPERM
+  { EX_NOPERM, "Permission denied." },
+#endif
+  { -1, NULL}
+};
+      
+    
 #ifdef _PGPPATH
 #include "pgp.h"
 #endif /* _PGPPATH */
@@ -1396,6 +1450,21 @@ add_option (char **args, size_t *argslen, size_t *argsmax, char *s)
   return (args);
 }
 
+static const char *
+strsysexit(int e)
+{
+  int i;
+  
+  for(i = 0; sysexits_h[i].str; i++)
+  {
+    if(e == sysexits_h[i].v)
+      break;
+  }
+  
+  return sysexits_h[i].str;
+}
+
+
 static int
 invoke_sendmail (ADDRESS *to, ADDRESS *cc, ADDRESS *bcc, /* recips */
 		 const char *msg, /* file containing message */
@@ -1453,7 +1522,7 @@ invoke_sendmail (ADDRESS *to, ADDRESS *cc, ADDRESS *bcc, /* recips */
     endwin ();
   if ((i = send_msg (path, args, msg, &childout)) != (EX_OK & 0xff))
   {
-    char *e = strerror (errno);
+    const char *e = strsysexit(i);
 
     fprintf (stderr, "Error sending message, child exited %d (%s).\n", i, NONULL (e));
     if (childout)
