@@ -1,4 +1,3 @@
-/* $Id$ */
 /*
  * Copyright (C) 1998 Ruslan Ermilov <ru@ucb.crimea.ua>
  *
