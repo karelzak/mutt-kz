@@ -1885,7 +1885,7 @@ struct option_t MuttVars[] = {
   ** ``$$score_threshold_delete'' variable and friends are used.
   **
   */
-  { "score_threshold_delete", DT_NUM, R_NONE, UL &ScoreThresholdDelete, -1 },
+  { "score_threshold_delete", DT_NUM, R_NONE, UL &ScoreThresholdDelete, UL -1 },
   /*
   ** .pp
   ** Messages which have been assigned a score equal to or lower than the value
@@ -1899,7 +1899,7 @@ struct option_t MuttVars[] = {
   ** Messages wich have been assigned a score greater than or equal to this 
   ** variable's value are automatically marked "flagged".
   */
-  { "score_threshold_read", DT_NUM, R_NONE, UL &ScoreThresholdRead, -1 },
+  { "score_threshold_read", DT_NUM, R_NONE, UL &ScoreThresholdRead, UL -1 },
   /*
   ** .pp
   ** Messages which have been assigned a score equal to or lower than the value
