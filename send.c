@@ -1017,7 +1017,7 @@ ci_send_message (int flags,		/* send mode */
     if (generate_body (tempfp, msg, flags, ctx, cur) == -1)
       goto cleanup;
 
-    if (! (flags & (SENDMAILX | SENDKEY)) && strcmp (Editor, "builtin") != 0)
+    if (! (flags & (SENDMAILX | SENDKEY)) && strcmp (NONULL(Editor), "builtin") != 0)
       append_signature (msg->env, tempfp);
   }
   /* wait until now to set the real name portion of our return address so

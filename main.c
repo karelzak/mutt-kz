@@ -607,7 +607,7 @@ int main (int argc, char **argv)
     }
 
     if (!folder[0])
-      strfcpy (folder, Spoolfile, sizeof (folder));
+      strfcpy (folder, NONULL(Spoolfile), sizeof (folder));
     mutt_expand_path (folder, sizeof (folder));
 
     if (flags & M_IGNORE)
