@@ -1,19 +1,15 @@
-# This file was translated by Velko Hristov
-# Copyright (C) 2002 Free Software Foundation, Inc.
+# Bulgarian translation of mutt
 # Velko Hristov <hristov@informatik.hu-berlin.de>, 2002.
+# Copyright (C) 2002 Free Software Foundation, Inc.
 #
-# todo: remove ambiguous translations: bounce - forward; record - save;
-# tag - flag
-#
-# todo: decide how to translate: status flag, view, remailer, mixmaster, entry,
-#	mailing list
+# todo: decide how to translate: mailing list
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.4\n"
 "POT-Creation-Date: 2002-05-30 20:51+0200\n"
-"PO-Revision-Date: 2002-06-16 14:41+0200\n"
+"PO-Revision-Date: 2002-06-29 19:50+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=windows-1251\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -116,18 +112,18 @@ msgstr "Грешка при отваряне на файла за изтриване на заглавна информация."
 #: attach.c:190
 #, c-format
 msgid "No mailcap compose entry for %s, creating empty file."
-msgstr "В mailcap липсва запис \"compose\" за %s. Създавам празен файл."
+msgstr "В mailcap липсва вписване \"compose\" за %s. Създавам празен файл."
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
 #, c-format
 msgid "Mailcap Edit entry requires %%s"
-msgstr "Записът \"edit\" в mailcap изисква %%s"
+msgstr "Вписването \"edit\" в mailcap изисква %%s"
 
 #: attach.c:269
 #, c-format
 msgid "No mailcap edit entry for %s"
-msgstr "В mailcap липсва запис \"edit\" за %s"
+msgstr "В mailcap липсва вписване \"edit\" за %s"
 
 #: attach.c:397
 msgid "No matching mailcap entry found.  Viewing as text."
@@ -188,7 +184,7 @@ msgstr "Директория [%s], Файлова маска: %s"
 
 #: browser.c:518
 msgid "Can't attach a directory!"
-msgstr "Не мога да прикача директория!"
+msgstr "Не може да прикачвате директория!"
 
 #: browser.c:649 browser.c:1030 browser.c:1123
 msgid "No files match the file mask"
@@ -196,7 +192,7 @@ msgstr "Няма файлове, отговарящи на маската"
 
 #: browser.c:855
 msgid "Create is only supported for IMAP mailboxes"
-msgstr "Създаването се поддържа само за IMAP пощенски кутии"
+msgstr "Само IMAP пощенски кутии могат да бъдат създавани"
 
 #: browser.c:875
 msgid "Delete is only supported for IMAP mailboxes"
@@ -205,7 +201,7 @@ msgstr "Само IMAP пощенски кутии могат да бъдат изтривани"
 #: browser.c:883
 #, c-format
 msgid "Really delete mailbox \"%s\"?"
-msgstr "Действително ли да изтрия пощенската кутия \"%s\"?"
+msgstr "Действително ли искате да изтриете пощенската кутия \"%s\"?"
 
 #: browser.c:897
 msgid "Mailbox deleted."
@@ -221,7 +217,7 @@ msgstr "Смяна на директорията: "
 
 #: browser.c:956 browser.c:1023
 msgid "Error scanning directory."
-msgstr "Грешка при четене на директорията."
+msgstr "Грешка при прочитене на директорията."
 
 #: browser.c:974
 msgid "File Mask: "
@@ -337,7 +333,7 @@ msgstr "PGP-подписът е потвърден успешно."
 
 #: commands.c:174
 msgid "PGP signature could NOT be verified."
-msgstr "PGP-подписът НЕ може да бъде потвърден."
+msgstr "PGP-подписът НЕ МОЖЕ да бъде потвърден."
 
 #: commands.c:197
 msgid "Command: "
@@ -345,11 +341,11 @@ msgstr "Команда: "
 
 #: commands.c:215 recvcmd.c:140
 msgid "Bounce message to: "
-msgstr "Препращане на писмата към: "
+msgstr "Изпращане на копие към алтернативен адрес: "
 
 #: commands.c:217 recvcmd.c:142
 msgid "Bounce tagged messages to: "
-msgstr "Препращане на маркираните писма към: "
+msgstr "Изпращане копие на маркираните писма до: "
 
 #: commands.c:232
 msgid "Error parsing address!"
@@ -358,20 +354,20 @@ msgstr "Грешка при разчитане на адреса!"
 #: commands.c:247
 #, c-format
 msgid "Bounce message to %s"
-msgstr "Препращане на писмото към %s"
+msgstr "Изпращане копие на писмото до %s"
 
 #: commands.c:247
 #, c-format
 msgid "Bounce messages to %s"
-msgstr "Препращане на писмото към %s"
+msgstr "Изпращане копие на писмото до %s"
 
 #: commands.c:261
 msgid "Message bounced."
-msgstr "Писмото е препратено."
+msgstr "Копие на писмото е изпратено."
 
 #: commands.c:261
 msgid "Messages bounced."
-msgstr "Писмата са препратени."
+msgstr "Копие на писмата е изпратено."
 
 #: commands.c:339 commands.c:378 commands.c:395
 msgid "Can't create filter process"
@@ -440,12 +436,12 @@ msgstr "Декодирано копие на%s в пощенска кутия"
 #: commands.c:654
 #, c-format
 msgid "Decrypt-save%s to mailbox"
-msgstr "Декриптиран запис на%s в пощенска кутия"
+msgstr "Дешифриран запис на%s в пощенска кутия"
 
 #: commands.c:655
 #, c-format
 msgid "Decrypt-copy%s to mailbox"
-msgstr "Декриптирано копие на%s в пощенска кутия"
+msgstr "Дешифрирано копие на%s в пощенска кутия"
 
 #: commands.c:656
 #, c-format
@@ -459,7 +455,7 @@ msgstr "Копиране на%s в пощенска кутия"
 
 #: commands.c:657
 msgid " tagged"
-msgstr " маркирано/и"
+msgstr " маркираните писма"
 
 #: commands.c:725
 #, c-format
@@ -469,7 +465,7 @@ msgstr "Копиране в %s..."
 #: commands.c:846
 #, c-format
 msgid "Convert to %s upon sending?"
-msgstr "Конвертиране до %s при изпращане?"
+msgstr "Прекодиране с %s при изпращане?"
 
 #: commands.c:854
 #, c-format
@@ -483,11 +479,11 @@ msgstr "Кодовата таблица е променена на %s; %s."
 
 #: commands.c:858
 msgid "not converting"
-msgstr "не конвертирам"
+msgstr "писмото няма да бъде прекодирано"
 
 #: commands.c:858
 msgid "converting"
-msgstr "конвертирам"
+msgstr "писмото ще бъде прекодирано"
 
 #: compose.c:41
 msgid "There are no attachments."
@@ -511,11 +507,11 @@ msgstr "Описание"
 
 #: compose.c:113
 msgid "Sign, Encrypt"
-msgstr "Подпис, Криптиране"
+msgstr "Подпис, Шифроване"
 
 #: compose.c:115
 msgid "Encrypt"
-msgstr "Криптиране"
+msgstr "Шифроване"
 
 #: compose.c:117
 msgid "Sign"
@@ -535,7 +531,7 @@ msgstr "<по подразбиране>"
 
 #: compose.c:133
 msgid "(e)ncrypt, (s)ign, sign (a)s, (b)oth, or (f)orget it? "
-msgstr "криптиране(e), подпис(s), подпис като(a), и двете(b) или забрави(f)? "
+msgstr "шифроване(e), подпис(s), подпис като(a), и двете(b) или забрави(f)? "
 
 #: compose.c:134
 msgid "esabf"
@@ -570,11 +566,11 @@ msgstr "Прикачване на избраните файлове..."
 #: compose.c:685
 #, c-format
 msgid "Unable to attach %s!"
-msgstr "Невъзможно прикачването на %s!"
+msgstr "Прикачването на %s е невъзможно!"
 
 #: compose.c:703
 msgid "Open mailbox to attach message from"
-msgstr "Пощенска кутия, от която да бъде прикачено писмото"
+msgstr "Пощенска кутия, от която да бъде прикачено писмо"
 
 #: compose.c:741
 msgid "No messages in that folder."
@@ -590,7 +586,7 @@ msgstr "Прикачването невъзможно!"
 
 #: compose.c:829
 msgid "Recoding only affects text attachments."
-msgstr "Записването засяга само текстови прикачени файлове."
+msgstr "Прекодирането засяга само текстови прикачени файлове."
 
 #: compose.c:834
 msgid "The current attachment won't be converted."
@@ -623,7 +619,7 @@ msgstr "Нов файл: "
 
 #: compose.c:1026
 msgid "Content-Type is of the form base/sub"
-msgstr "Полето Content-Type има формата \"базов тип\"/\"подтип\" (без кавичките)"
+msgstr "Полето Content-Type има формата базов-тип/подтип"
 
 #: compose.c:1032
 #, c-format
@@ -695,7 +691,7 @@ msgstr "Пощенската кутия е само за четене."
 
 #: curs_main.c:62 pager.c:66 recvattach.c:821
 msgid "Function not permitted in attach-message mode."
-msgstr "Тази функция не може да се изпълни при прикачване на писма."
+msgstr "Тази функция не е позволена при прикачване на писма."
 
 #: curs_main.c:63
 msgid "No visible messages."
@@ -707,7 +703,7 @@ msgstr "Режима на защитената от запис пощенска кутия не може да бъде променен!"
 
 #: curs_main.c:251
 msgid "Changes to folder will be written on folder exit."
-msgstr "Промените в тази пощенска кутия ще бъдат записани на излизане."
+msgstr "Промените в тази пощенска кутия ще бъдат записани при напускането й."
 
 #: curs_main.c:256
 msgid "Changes to folder will not be written."
@@ -850,7 +846,7 @@ msgstr " в този ограничен изглед"
 
 #: curs_main.c:1331 pager.c:2296
 msgid "Can't change 'important' flag on POP server."
-msgstr "Маркировката за важност не може да бъде променяна на POP сървър."
+msgstr "Индикаторът 'важно' не може да бъде променяна на POP сървър."
 
 #: curs_main.c:1446
 msgid "No more threads."
@@ -924,7 +920,7 @@ msgstr "%d: невалиден номер на писмо.\n"
 
 #: edit.c:312
 msgid "(End message with a . on a line by itself)\n"
-msgstr "(За край на писмото въведете точка - единствен символ на реда)\n"
+msgstr "(За край на писмото въведете . като единствен символ на реда)\n"
 
 #: edit.c:370
 msgid "No mailbox.\n"
@@ -986,11 +982,11 @@ msgstr "Грешка. Запазване на временния файл: %s"
 
 #: flags.c:280
 msgid "Set flag"
-msgstr "Поставяне на маркер"
+msgstr "Включване на индикатор"
 
 #: flags.c:280
 msgid "Clear flag"
-msgstr "Премахване на маркер"
+msgstr "Изключване на индикатор"
 
 #: handler.c:1330
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
@@ -1082,7 +1078,7 @@ msgstr "Грешка: multipart/encrypted без protocol параметър!"
 
 #: handler.c:1877
 msgid "Unable to open temporary file!"
-msgstr "Грешка при отварянето на временния файл!"
+msgstr "Грешка при отваряне на временния файл!"
 
 #: handler.c:1937
 #, c-format
@@ -1278,7 +1274,7 @@ msgstr "Създаване на %s?"
 
 #: imap/imap.c:765
 msgid "Closing connection to IMAP server..."
-msgstr "Затваряне на връзката към IMAP сървъра..."
+msgstr "Затваряне на връзката към IMAP сървър..."
 
 #: imap/imap.c:928 pop.c:465
 #, c-format
@@ -1626,7 +1622,7 @@ msgstr "редактиране темата на писмо"
 
 #: keymap_alldefs.h:33
 msgid "edit the TO list"
-msgstr "редактиране списъка на получателите"
+msgstr "редактиране списъка от получатели"
 
 #: keymap_alldefs.h:34
 msgid "create a new mailbox (IMAP only)"
@@ -1730,7 +1726,7 @@ msgstr "показване пълния адрес на подателя"
 
 #: keymap_alldefs.h:59
 msgid "display message and toggle header weeding"
-msgstr "показване на писмо и включване/изключване почистването на заглавната част"
+msgstr "показване на писмо и включване/изключване показването на всички заглавни части"
 
 #: keymap_alldefs.h:60
 msgid "display a message"
@@ -1758,7 +1754,7 @@ msgstr "скок към началото а реда"
 
 #: keymap_alldefs.h:66
 msgid "cycle among incoming mailboxes"
-msgstr "въртене между входните пощенски кутии"
+msgstr "цикъл между входните пощенски кутии"
 
 #: keymap_alldefs.h:67
 msgid "complete filename or alias"
@@ -1850,7 +1846,7 @@ msgstr "преместване към първият запис"
 
 #: keymap_alldefs.h:89
 msgid "toggle a message's 'important' flag"
-msgstr "включване/изключване на индикатора за важност на писмото"
+msgstr "включване/изключване на индикатора 'важно' на писмото"
 
 #: keymap_alldefs.h:90
 msgid "forward a message with comments"
@@ -1906,7 +1902,7 @@ msgstr "отваряне на друга пощенска кутия само за четене"
 
 #: keymap_alldefs.h:103
 msgid "clear a status flag from a message"
-msgstr "отстраняване на индикатора за статус от писмо"
+msgstr "изключване на индикатора за статус на писмо"
 
 #: keymap_alldefs.h:104
 msgid "delete messages matching a pattern"
@@ -1986,7 +1982,7 @@ msgstr "маркиране на текущата поднишка като прочетена"
 
 #: keymap_alldefs.h:123
 msgid "set a status flag on a message"
-msgstr "вдигане на индикатора за статус на писмо"
+msgstr "включване на индикатора за статус на писмо"
 
 #: keymap_alldefs.h:124
 msgid "save changes to mailbox"
@@ -2038,7 +2034,7 @@ msgstr "скок към началото на писмото"
 
 #: keymap_alldefs.h:136
 msgid "pipe message/attachment to a shell command"
-msgstr "изпращане на писмо или прикачен файл към команда на командния интерпретатор"
+msgstr "изпращане на писмо или прикачен файл към команда на командния интерпретатор (pipe)"
 
 #: keymap_alldefs.h:137
 msgid "move to the previous entry"
@@ -2130,7 +2126,7 @@ msgstr "маркиране на текущият запис"
 
 #: keymap_alldefs.h:159
 msgid "apply next function to tagged messages"
-msgstr "приложи следващата функция върху маркираните писма"
+msgstr "прилагане на следващата функция върху маркираните писма"
 
 #: keymap_alldefs.h:160
 msgid "tag the current subthread"
@@ -2142,7 +2138,7 @@ msgstr "маркиране на текущата нишка"
 
 #: keymap_alldefs.h:162
 msgid "toggle a message's 'new' flag"
-msgstr "включване/изключване на индикатора, дали писмото е ново"
+msgstr "включване/изключване на индикатора 'ново'"
 
 #: keymap_alldefs.h:163
 msgid "toggle whether the mailbox will be rewritten"
@@ -2206,7 +2202,7 @@ msgstr "извличане на PGP публичен ключ"
 
 #: keymap_alldefs.h:178
 msgid "wipe PGP passphrase from memory"
-msgstr "отстраняване на PGP passphrase от паметта"
+msgstr "отстраняване на фразата-парола за PGP от паметта"
 
 #: keymap_alldefs.h:179
 msgid "mail a PGP public key"
@@ -2222,11 +2218,11 @@ msgstr "показване на потребителския номер към ключ"
 
 #: keymap_alldefs.h:182
 msgid "make decrypted copy and delete"
-msgstr "създаване на декриптирано копие и изтриване"
+msgstr "създаване на разшифровано копие и изтриване"
 
 #: keymap_alldefs.h:183
 msgid "make decrypted copy"
-msgstr "създаване на декриптирано копие"
+msgstr "създаване на разшифровано копие"
 
 #: keymap_alldefs.h:184
 msgid "check for classic pgp"
@@ -2566,7 +2562,7 @@ msgstr "Няма маркирани записи."
 
 #: menu.c:974
 msgid "Search is not implemented for this menu."
-msgstr "За това меню не е имплементирано търсене."
+msgstr "В това меню не е имплементирано търсене."
 
 #: menu.c:979
 msgid "Jumping is not implemented for dialogs."
@@ -2647,7 +2643,7 @@ msgstr "Свързване с %s..."
 #: mutt_socket.c:482
 #, c-format
 msgid "Could not connect to %s (%s)."
-msgstr "Грешка при свързването с %s (%s)."
+msgstr "Грешка при свързване с %s (%s)."
 
 #: mutt_ssl.c:170
 msgid "Failed to find enough entropy on your system"
@@ -2669,7 +2665,7 @@ msgstr "SSL е изключен поради липса на достатъчно ентропия"
 
 #: mutt_ssl.c:315
 msgid "I/O error"
-msgstr "I/O грешка"
+msgstr "Входно-изходна грешка"
 
 #: mutt_ssl.c:318
 msgid "unspecified protocol error"
@@ -3009,11 +3005,11 @@ msgstr "Търсенето е прекъснато."
 
 #: pgp.c:93
 msgid "Enter PGP passphrase:"
-msgstr "Въвеждане на PGP passphrase:"
+msgstr "Въведете PGP фраза-парола:"
 
 #: pgp.c:109
 msgid "PGP passphrase forgotten."
-msgstr "PGP passphrase е забравена."
+msgstr "Фразата-парола за PGP е забравена."
 
 #: pgp.c:142
 #, c-format
@@ -3148,12 +3144,12 @@ msgid ""
 "[-- The following data is PGP/MIME encrypted --]\n"
 "\n"
 msgstr ""
-"[-- Следните данни са PGP/MIME криптирани --]\n"
+"[-- Следните данни са PGP/MIME шифровани --]\n"
 "\n"
 
 #: pgp.c:1160
 msgid "[-- End of PGP/MIME encrypted data --]\n"
-msgstr "[-- Край на PGP/MIME криптираните данни --]\n"
+msgstr "[-- Край на PGP/MIME шифрованите данни --]\n"
 
 #: pgp.c:1241
 msgid "Can't open PGP subprocess!"
@@ -3198,16 +3194,16 @@ msgstr "Проверка на ключ  "
 #: pgpkey.c:528
 #, c-format
 msgid "PGP keys matching <%s>."
-msgstr "PGP ключове, съвпадащи с <%s>."
+msgstr "PGP ключове, отговарящи на <%s>."
 
 #: pgpkey.c:530
 #, c-format
 msgid "PGP keys matching \"%s\"."
-msgstr "PGP ключове, съвпадащи с \"%s\"."
+msgstr "PGP ключове, отговарящи на \"%s\"."
 
 #: pgpkey.c:549 pgpkey.c:741
 msgid "Can't open /dev/null"
-msgstr "Грешка при отварянето на /dev/null"
+msgstr "Грешка при отваряне на /dev/null"
 
 #: pgpkey.c:555 pgpkey.c:735
 msgid "Can't create temporary file"
@@ -3414,7 +3410,7 @@ msgstr "Запис..."
 #: recvattach.c:491
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
-msgstr "ПРЕДУПРЕЖДЕНИЕ! На път сте да презапишете %s, да продължа ли?"
+msgstr "ПРЕДУПРЕЖДЕНИЕ! На път сте да презапишете %s. Наистина ли?"
 
 #: recvattach.c:509
 msgid "Attachment filtered."
@@ -3463,17 +3459,17 @@ msgstr "Поддържа се само изтриване на прикачени файлове от съставни писма."
 
 #: recvcmd.c:43
 msgid "You may only bounce message/rfc822 parts."
-msgstr "Може да изпращате отново само message/rfc822 части."
+msgstr "Може да изпращате копия само от message/rfc822 части."
 
 #: recvcmd.c:155
 #, c-format
 msgid "Bounce message to %s...?"
-msgstr "Повторно изпращане на писмото към %s...?"
+msgstr "Изпращане копие на писмото до %s...?"
 
 #: recvcmd.c:155
 #, c-format
 msgid "Bounce messages to %s...?"
-msgstr "Повторно изпращане на писмата към %s...?"
+msgstr "Изпращане копие на писмата до %s...?"
 
 #: recvcmd.c:374
 #, c-format
@@ -3563,7 +3559,7 @@ msgstr "mixmaster не приема \"Cc\" или \"Bcc\" заглавни полета."
 msgid ""
 "Please set the hostname variable to a proper value when using mixmaster!"
 msgstr ""
-"Моля, поставете валидна стойност в променливата \"hostname\" когато използвате mixmaster!"
+"Моля, поставете валидна стойност в \"hostname\" когато използвате mixmaster!"
 
 #: remailer.c:768
 #, c-format
@@ -3581,7 +3577,7 @@ msgstr "Невалидно форматирано вписване за типа %s в \"%s\" на ред %d"
 
 #: rfc1524.c:391
 msgid "No mailcap path specified"
-msgstr "Не е указан пътя към mailcap"
+msgstr "Не е указан път към mailcap"
 
 #: rfc1524.c:417
 #, c-format
@@ -3644,7 +3640,7 @@ msgstr "Препращане като прикачен файл?"
 
 #: send.c:758
 msgid "Preparing forwarded message..."
-msgstr "Подготовка за препращане..."
+msgstr "Подготовка на препращаното писмо..."
 
 #. If the user is composing a new message, check to see if there
 #. * are any postponed messages first.
@@ -3655,7 +3651,7 @@ msgstr "Редактиране на чернова?"
 
 #: send.c:1309
 msgid "Abort unmodified message?"
-msgstr "Да изтрия ли непромененото писмо?"
+msgstr "Изтриване на непромененото писмо?"
 
 #: send.c:1311
 msgid "Aborted unmodified message."
@@ -3719,7 +3715,7 @@ msgstr "%s не е обикновен файл."
 #: sendlib.c:1081
 #, c-format
 msgid "Could not open %s"
-msgstr "Грешка при отварянето на %s"
+msgstr "Грешка при отваряне на %s"
 
 #: sendlib.c:2033
 #, c-format
@@ -3759,7 +3755,7 @@ msgstr "(няма пощенска кутия)"
 
 #: thread.c:1077
 msgid "Parent message is not visible in this limited view."
-msgstr "Родителското писмо не е видимо в ограничения изглед"
+msgstr "Родителското писмо не е видимо в този ограничен изглед"
 
 #: thread.c:1083
 msgid "Parent message is not available."
