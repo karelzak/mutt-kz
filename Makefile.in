@@ -62,6 +62,7 @@ mutt: keymap_defs.h $(OBJS) $(REGEX)
 	$(CC) -o mutt $(OBJS) $(REGEX) $(LDFLAGS) $(LIBS)
 
 dotlock: dotlock.o @SNPRINTFOBJS@
+	$(CC) -o dotlock dotlock.o @SNPRINTFOBJS@
 
 keymap_defs.h: Makefile $(OPS)
 	rm -f keymap_defs.h
