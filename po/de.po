@@ -381,9 +381,8 @@ msgid "Messages printed"
 msgstr "Nachrichten gedruckt"
 
 #: compose.c:35
-#, fuzzy
 msgid "There are no attachments."
-msgstr "Es sind keine Nachrichten vorhanden."
+msgstr "Es sind keine Anhänge vorhanden."
 
 #: compose.c:78
 msgid "Send"
