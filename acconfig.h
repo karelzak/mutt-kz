@@ -111,3 +111,6 @@
 
 /* Does your system have the vsnprintf() call? */
 #undef HAVE_VSNPRINTF
+
+/* Does your system have the fchdir() call? */
+#undef HAVE_FCHDIR
