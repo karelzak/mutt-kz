@@ -877,7 +877,7 @@ void mutt_FormatString (char *dest,		/* output buffer */
 	cp = prefix;
 	count = 0;
 	while (count < sizeof (prefix) &&
-	       (isdigit ((int) *src) || *src == '.' || *src == '-'))
+	       (isdigit ((unsigned char) *src) || *src == '.' || *src == '-'))
 	{
 	  *cp++ = *src++;
 	  count++;

@@ -156,7 +156,7 @@ time_t is_from (const char *s, char *path, size_t pathlen)
   if (!*s) return 0;
 
   /* timezone? */
-  if (isalpha ((int) *s) || *s == '+' || *s == '-')
+  if (isalpha ((unsigned char) *s) || *s == '+' || *s == '-')
   {
     s = next_word (s);
     if (!*s) return 0;
@@ -165,7 +165,7 @@ time_t is_from (const char *s, char *path, size_t pathlen)
      * some places have two timezone fields after the time, e.g.
      *      From xxxx@yyyyyyy.fr Wed Aug  2 00:39:12 MET DST 1995
      */
-    if (isalpha ((int) *s))
+    if (isalpha ((unsigned char) *s))
     {
       s = next_word (s);
       if (!*s) return 0;

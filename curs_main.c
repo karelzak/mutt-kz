@@ -536,7 +536,7 @@ void mutt_index_menu (void)
 	    !buf[0])
 	  break;
 
-	if (! isdigit ((int) buf[0]))
+	if (! isdigit ((unsigned char) buf[0]))
 	{
 	  mutt_error ("Argument must be a message number.");
 	  break;

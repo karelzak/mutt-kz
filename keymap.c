@@ -97,10 +97,10 @@ static int parsekeys (char *s, keycode_t *d, int max)
       s += strlen (s);
       *d = n;
     }
-    else if (tolower (*s) == 'f' && isdigit ((int) s[1]))
+    else if (tolower (*s) == 'f' && isdigit ((unsigned char) s[1]))
     {
       n = 0;
-      for (s++; isdigit ((int) *s) ; s++)
+      for (s++; isdigit ((unsigned char) *s) ; s++)
       {
 	n *= 10;
 	n += *s - '0';

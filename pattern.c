@@ -108,7 +108,7 @@ int mutt_which_case (const char *s)
 {
   while (*s)
   {
-    if (isalpha ((int) *s) && isupper ((int) *s))
+    if (isalpha ((unsigned char) *s) && isupper ((int) *s))
       return 0; /* case-sensitive */
     s++;
   }
@@ -283,7 +283,7 @@ int eat_range (pattern_t *pat, BUFFER *s, BUFFER *err)
     tmp = s->dptr;
   }
   
-  if (isdigit ((int) *tmp))
+  if (isdigit ((unsigned char) *tmp))
   {
     /* range maximum */
     pat->max = strtol (tmp, &tmp, 0);
