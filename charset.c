@@ -846,7 +846,7 @@ void mutt_decode_utf8_string(char *str, CHARSET *chs)
     /* handle us-ascii characters directly */
     if (0 <= ch && ch < 128)
       *s = ch;
-    else if ((cd = repr2descr (ch, Unicode)) && (ch = translate_character (chs, cd->symbol)) != -1)
+    else if (chs && (cd = repr2descr (ch, Unicode)) && (ch = translate_character (chs, cd->symbol)) != -1)
       *s = ch;
     else
       *s = '?';
