@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.1.11i\n"
-"POT-Creation-Date: 2000-07-07 01:08+0200\n"
-"PO-Revision-Date: 2000-04-03 22:20+0200\n"
+"Project-Id-Version: 1.2.4i\n"
+"POT-Creation-Date: 2000-07-11 14:40+0200\n"
+"PO-Revision-Date: 2000-07-12 11:46+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -1512,18 +1512,16 @@ msgstr "[nelze spoèítat]"
 
 #
 #: imap/imap_ssl.c:292
-#, fuzzy
 msgid "[invalid date]"
-msgstr "Hodnota %s je nesprávná."
+msgstr "[chybné datum]"
 
 #: imap/imap_ssl.c:367
 msgid "Server certificate is not yet valid"
-msgstr ""
+msgstr "Certifikát serveru není zatím platný."
 
 #: imap/imap_ssl.c:374
-#, fuzzy
 msgid "Server certificate has expired"
-msgstr "Tento certifikát vydal:"
+msgstr "Platnost certifikátu serveru vypr¹ela."
 
 #: imap/imap_ssl.c:447
 msgid "This certificate belongs to:"
@@ -1534,19 +1532,18 @@ msgid "This certificate was issued by:"
 msgstr "Tento certifikát vydal:"
 
 #: imap/imap_ssl.c:467
-#, fuzzy
 msgid "This certificate is valid"
-msgstr "Tento certifikát vydal:"
+msgstr "Tento certifikát je platný."
 
 #: imap/imap_ssl.c:468
 #, c-format
 msgid "   from %s"
-msgstr ""
+msgstr "   od %s"
 
 #: imap/imap_ssl.c:470
 #, c-format
 msgid "     to %s"
-msgstr ""
+msgstr "     pro %s"
 
 #: imap/imap_ssl.c:476
 #, c-format
@@ -2152,7 +2149,7 @@ msgstr "posunout kurzor o jeden znak vpravo"
 #
 #: keymap_alldefs.h:71 keymap_alldefs.h:72
 msgid "scroll up through the history list"
-msgstr "rolovat seznamem provedených pøíkazù nahoru"
+msgstr "rolovat nahoru seznamem provedených pøíkazù"
 
 #
 #: keymap_alldefs.h:73
@@ -2222,12 +2219,12 @@ msgstr "odepsat v¹em pøíjemcùm"
 #
 #: keymap_alldefs.h:86
 msgid "scroll down 1/2 page"
-msgstr "rolovat o 1/2 stránky dolù"
+msgstr "rolovat dolù o 1/2 stránky"
 
 #
 #: keymap_alldefs.h:87
 msgid "scroll up 1/2 page"
-msgstr "rolovat o 1/2 stránky nahoru"
+msgstr "rolovat nahoru o 1/2 stránky"
 
 #
 #: keymap_alldefs.h:88
@@ -2247,7 +2244,7 @@ msgstr "pøeskoèit na poslední polo¾ku"
 #
 #: keymap_alldefs.h:91
 msgid "reply to specified mailing list"
-msgstr "odepsat do specifikovaných diskuzních skupin"
+msgstr "odepsat do specifikovaných po¹tovních konferencí"
 
 #
 #: keymap_alldefs.h:92
@@ -3973,7 +3970,7 @@ msgstr "®ádná zpráva není oznaèena."
 #
 #: recvcmd.c:697 send.c:647
 msgid "No mailing lists found!"
-msgstr "®ádné diskusní skupiny nebyly nalezeny!"
+msgstr "®ádné po¹tovní konference nebyly nalezeny!"
 
 #: recvcmd.c:776
 msgid "Can't decode all tagged attachments.  MIME-encapsulate the others?"
