@@ -349,14 +349,10 @@ int imap_fetch_message (MESSAGE *msg, CONTEXT *ctx, int msgno)
    * envelope into the old one. Also messy and lowlevel. */
   if (ctx->id_hash && h->env->message_id)
     hash_delete (ctx->id_hash, h->env->message_id, h, NULL);
-  if (ctx->subj_hash && h->env->real_subj)
-    hash_delete (ctx->subj_hash, h->env->real_subj, h, NULL);
   mutt_free_envelope (&h->env);
   h->env = mutt_read_rfc822_header (msg->fp, h, 0, 0);
   if (ctx->id_hash && h->env->message_id)
     hash_insert (ctx->id_hash, h->env->message_id, h, 0);
-  if (ctx->subj_hash && h->env->real_subj)
-    hash_insert (ctx->subj_hash, h->env->real_subj, h, 1);
 
   /* see above. We want the new status in h->read, so we unset it manually
    * and let mutt_set_flag set it correctly, updating context. */

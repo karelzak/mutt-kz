@@ -435,8 +435,9 @@ static void pseudo_threads (CONTEXT *ctx)
   THREAD *tree = ctx->tree, *top = tree;
   THREAD *tmp, *cur, *parent, *curchild, *nextchild;
 
-  if (!ctx->subj_hash)
-    ctx->subj_hash = mutt_make_subj_hash (ctx);
+  if (ctx->subj_hash)
+    hash_destroy (&ctx->subj_hash, NULL);
+  ctx->subj_hash = mutt_make_subj_hash (ctx);
 
   while (tree)
   {
@@ -504,6 +505,8 @@ void mutt_clear_threads (CONTEXT *ctx)
 
   if (ctx->thread_hash)
     hash_destroy (&ctx->thread_hash, *free);
+  if (ctx->subj_hash)
+    hash_destroy (&ctx->subj_hash, NULL);
 }
 
 int compare_threads (const void *a, const void *b)
