@@ -48,24 +48,19 @@
  * In addition, this function returns a 0 if the command works on a file,
  * and 1 if the command works on a pipe.
  */
-int rfc1524_expand_command (BODY *a, char *_filename, char *_type,
+int rfc1524_expand_command (BODY *a, char *filename, char *_type,
     char *command, int clen)
 {
   int x=0,y=0;
   int needspipe = TRUE;
   char buf[LONG_STRING];
-  char filename[_POSIX_PATH_MAX];
   char type[LONG_STRING];
   
-  strfcpy (filename, _filename, sizeof (filename));
   strfcpy (type, _type, sizeof (type));
   
   if (option (OPTMAILCAPSANITIZE))
-  {
-    mutt_sanitize_filename (filename);
-    mutt_sanitize_filename (type);
-  }
-  
+    mutt_sanitize_filename (type, 0);
+
   while (command[x] && x<clen && y<sizeof(buf)) 
   {
     if (command[x] == '\\') {
@@ -91,7 +86,7 @@ int rfc1524_expand_command (BODY *a, char *_filename, char *_type,
 	pv = mutt_get_parameter (param, a->parameter);
 	strfcpy (pvalue, NONULL(pv), sizeof (pvalue));
 	if (option (OPTMAILCAPSANITIZE)) 
-	  mutt_sanitize_filename (pvalue);
+	  mutt_sanitize_filename (pvalue, 0);
 	ret = mutt_quote_filename (pvalue);
 	dprint(2,(debugfile,"Parameter: %s  Returns: %s\n",param,ret));
 	z = 0;
