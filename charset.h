@@ -28,8 +28,9 @@ typedef void *iconv_t;
 #endif
 
 #ifndef HAVE_ICONV
+#define ICONV_CONST /**/
 iconv_t iconv_open (const char *, const char *);
-size_t iconv (iconv_t, const char **, size_t *, char **, size_t *);
+size_t iconv (iconv_t, ICONV_CONST char **, size_t *, char **, size_t *);
 int iconv_close (iconv_t);
 #endif
 
