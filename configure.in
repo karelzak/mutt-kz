@@ -205,6 +205,10 @@ AC_CHECK_FUNCS(ftruncate, break, [AC_CHECK_LIB(x, chsize)])
 dnl SCO has strftime() in libintl
 AC_CHECK_FUNCS(strftime, break, [AC_CHECK_LIB(intl, strftime)])
 
+dnl AIX may not have fchdir()
+AC_CHECK_FUNCS(fchdir, [AC_DEFINE(HAVE_FCHDIR)], [mutt_cv_fchdir=no])
+
+
 mutt_cv_regex=yes
 AC_ARG_WITH(rx, [  --with-rx[=DIR]            Use GNU rx ],
 	[if test $withval != yes; then
@@ -297,10 +301,8 @@ int main (int argc, char **argv)
 	fi
 fi
 
-DOTLOCK_TARGET=""
-DOTLOCK_INSTALL_TARGET=""
-
-if test "x$mutt_cv_setgid" = "xyes" ; then
+if test "x$mutt_cv_setgid" = "xyes" || test "x$mutt_cv_fchdir" = "xno"
+then
 	CPPFLAGS="$CPPFLAGS -DDL_STANDALONE"
 	DOTLOCK_TARGET="dotlock"
 	DOTLOCK_INSTALL_TARGET="install.dotlock"

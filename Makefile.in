@@ -32,7 +32,7 @@ VPATH=@srcdir@
 
 INSTALL=@INSTALL@
 CC=@CC@
-XCPPFLAGS=-I. @CPPFLAGS@ -DSHAREDIR=\"$(sharedir)\" -DDOTLOCK=\"$(libdir)/dotlock\"
+XCPPFLAGS=-I. @CPPFLAGS@ -DSHAREDIR=\"$(sharedir)\" -DDOTLOCK=\"$(bindir)/mutt.dotlock\"
 CFLAGS=@CFLAGS@  $(XCPPFLAGS)
 LDFLAGS=@LDFLAGS@
 LIBS=@LIBS@
@@ -80,15 +80,15 @@ install: mutt install.doc @DOTLOCK_INSTALL_TARGET@
 	fi
 
 install.dotlock: dotlock
-	$(srcdir)/mkinstalldirs $(libdir)
-	-mv -f $(libdir)/dotlock $(libdir)/dotlock.old
-	$(INSTALL) @DOTLOCK_GROUP@ -m @DOTLOCK_PERMISSION@ dotlock $(libdir)
+	$(srcdir)/mkinstalldirs $(bindir)
+	-mv -f $(bindir)/mutt.dotlock $(bindir)/mutt.dotlock.old
+	$(INSTALL) @DOTLOCK_GROUP@ -m @DOTLOCK_PERMISSION@ dotlock $(bindir)/mutt.dotlock
 
 install.doc: 
 	( cd $(srcdir)/doc &&  make install )
 
 uninstall: uninstall.doc
-	rm -f $(bindir)/mutt $(sharedir)/Muttrc $(libdir)/dotlock
+	rm -f $(bindir)/mutt $(sharedir)/Muttrc $(bindir)/mutt.dotlock
 
 uninstall.doc:
 	( cd $(srcdir)/doc/ && make uninstall )

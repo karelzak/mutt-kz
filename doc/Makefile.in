@@ -24,7 +24,7 @@ all: mutt.man dotlock.man manual.txt manual.html
 install: dotlock.man mutt.man manual.txt
 	../mkinstalldirs $(mandir)/man1
 	$(INSTALL) -m 644 mutt.man $(mandir)/man1/mutt.1
-	$(INSTALL) -m 644 dotlock.man $(mandir)/man1/dotlock.1
+	$(INSTALL) -m 644 dotlock.man $(mandir)/man1/mutt.dotlock.1
 	../mkinstalldirs $(docdir)
 	$(INSTALL) -m 644 manual.txt $(docdir)
 	$(INSTALL) -m 644 PGP-Notes.txt $(docdir)
