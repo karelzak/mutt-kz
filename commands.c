@@ -663,7 +663,7 @@ static void print_msg (FILE *fp, CONTEXT *ctx, HEADER *h)
 
 
   mutt_parse_mime_message (ctx, h);
-  mutt_copy_message (fp, ctx, h, M_CM_DECODE, CH_WEED | CH_DECODE);
+  mutt_copy_message (fp, ctx, h, M_CM_DECODE, CH_WEED | CH_DECODE | CH_REORDER);
 }
 
 void mutt_print_message (HEADER *h)
