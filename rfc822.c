@@ -236,7 +236,7 @@ parse_route_addr (const char *s,
 		  char *comment, size_t *commentlen, size_t commentmax,
 		  ADDRESS *addr)
 {
-  char token[128];
+  char token[STRING];
   size_t tokenlen = 0;
 
   SKIPWS (s);
@@ -281,7 +281,7 @@ parse_addr_spec (const char *s,
 		 char *comment, size_t *commentlen, size_t commentmax,
 		 ADDRESS *addr)
 {
-  char token[128];
+  char token[STRING];
   size_t tokenlen = 0;
 
   s = parse_address (s, token, &tokenlen, sizeof (token) - 1, comment, commentlen, commentmax, addr);
@@ -312,7 +312,7 @@ add_addrspec (ADDRESS **top, ADDRESS **last, const char *phrase,
 ADDRESS *rfc822_parse_adrlist (ADDRESS *top, const char *s)
 {
   const char *begin, *ps;
-  char comment[128], phrase[128];
+  char comment[STRING], phrase[STRING];
   size_t phraselen = 0, commentlen = 0;
   ADDRESS *cur, *last = NULL;
   
