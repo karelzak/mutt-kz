@@ -365,7 +365,7 @@ int mutt_write_mime_header (BODY *a, FILE *f)
   int len;
   int tmplen;
   
-  fprintf (f, "Content-Type: %s/%s", TYPE (a->type), a->subtype);
+  fprintf (f, "Content-Type: %s/%s", TYPE (a), a->subtype);
 
   if (a->parameter)
   {

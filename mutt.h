@@ -406,6 +406,7 @@ typedef struct content
 
 typedef struct body
 {
+  char *xtype;			/* content-type if x-unknown */
   char *subtype;                /* content-type subtype */
   PARAMETER *parameter;         /* parameters of the content-type */
   char *description;            /* content-description */

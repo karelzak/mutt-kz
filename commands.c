@@ -110,7 +110,7 @@ int mutt_display_message (HEADER *cur, const char *attach_msg_status)
   int cmflags = M_CM_DECODE | M_CM_DISPLAY;
   FILE *fpout;
 
-  snprintf (buf, sizeof (buf), "%s/%s", TYPE (cur->content->type),
+  snprintf (buf, sizeof (buf), "%s/%s", TYPE (cur->content),
 	    cur->content->subtype);
 
   if (cur->mailcap && !mutt_is_autoview (buf))

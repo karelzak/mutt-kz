@@ -766,7 +766,7 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
       case OP_COMPOSE_EDIT_TYPE:
 	CHECK_COUNT;
 	snprintf (buf, sizeof (buf), "%s/%s",
-		  TYPE (idx[menu->current]->content->type),
+		  TYPE (idx[menu->current]->content),
 		  idx[menu->current]->content->subtype);
 	if (mutt_get_field ("Content-Type: ", buf, sizeof (buf), 0) == 0 && buf[0])
 	{

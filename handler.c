@@ -753,14 +753,14 @@ void alternative_handler (BODY *a, STATE *s)
       if (!strchr(t->data, '/') || 
 	  (i > 0 && t->data[i-1] == '/' && t->data[i] == '*'))
       {
-	if (!strcasecmp(t->data, TYPE(b->type)))
+	if (!strcasecmp(t->data, TYPE(b)))
 	{
 	  choice = b;
 	}
       }
       else
       {
-	snprintf (buf, sizeof (buf), "%s/%s", TYPE (b->type), b->subtype);
+	snprintf (buf, sizeof (buf), "%s/%s", TYPE (b), b->subtype);
 	if (!strcasecmp(t->data, buf))
 	{
 	  choice = b;
@@ -777,7 +777,7 @@ void alternative_handler (BODY *a, STATE *s)
     b = a;
   while (b && !choice)
   {
-    snprintf (buf, sizeof (buf), "%s/%s", TYPE (b->type), b->subtype);
+    snprintf (buf, sizeof (buf), "%s/%s", TYPE (b), b->subtype);
     if (mutt_is_autoview (buf))
     {
       rfc1524_entry *entry = rfc1524_new_entry ();
@@ -897,7 +897,7 @@ int mutt_can_decode (BODY *a)
 {
   char type[STRING];
 
-  snprintf (type, sizeof (type), "%s/%s", TYPE (a->type), a->subtype);
+  snprintf (type, sizeof (type), "%s/%s", TYPE (a), a->subtype);
   if (mutt_is_autoview (type))
     return (rfc1524_mailcap_lookup (a, type, NULL, M_AUTOVIEW));
   else if (a->type == TYPETEXT)
@@ -985,7 +985,7 @@ void multipart_handler (BODY *a, STATE *s)
 
       snprintf (buffer, sizeof (buffer),
 		"[-- Type: %s/%s, Encoding: %s, Size: %s --]\n",
-	       TYPE (p->type), p->subtype, ENCODING (p->encoding), length);
+	       TYPE (p), p->subtype, ENCODING (p->encoding), length);
       state_puts (buffer, s);
       if (!option (OPTWEED))
       {
@@ -1031,7 +1031,7 @@ void autoview_handler (BODY *a, STATE *s)
   int piped = FALSE;
   pid_t thepid;
 
-  snprintf (type, sizeof (type), "%s/%s", TYPE (a->type), a->subtype);
+  snprintf (type, sizeof (type), "%s/%s", TYPE (a), a->subtype);
   rfc1524_mailcap_lookup (a, type, entry, M_AUTOVIEW);
 
   fname = safe_strdup (a->filename);
@@ -1161,7 +1161,7 @@ void mutt_body_handler (BODY *b, STATE *s)
 
   /* first determine which handler to use to process this part */
 
-  snprintf (type, sizeof (type), "%s/%s", TYPE (b->type), b->subtype);
+  snprintf (type, sizeof (type), "%s/%s", TYPE (b), b->subtype);
   if (mutt_is_autoview (type))
   {
     rfc1524_entry *entry = rfc1524_new_entry ();
@@ -1332,7 +1332,7 @@ void mutt_body_handler (BODY *b, STATE *s)
   }
   else if (s->flags & M_DISPLAY)
   {
-    fprintf (s->fpout, "[-- %s/%s is unsupported ", TYPE (b->type), b->subtype);
+    fprintf (s->fpout, "[-- %s/%s is unsupported ", TYPE (b), b->subtype);
     if (!option (OPTVIEWATTACH))
     {
       if (km_expand_key (type, sizeof(type),

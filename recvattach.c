@@ -205,7 +205,7 @@ const char *mutt_attach_fmt (char *dest,
       break;
     case 'm':
       snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
-      snprintf (dest, destlen, fmt, TYPE (aptr->content->type));
+      snprintf (dest, destlen, fmt, TYPE (aptr->content));
       break;
     case 'M':
       snprintf (fmt, sizeof (fmt), "%%%ss", prefix);

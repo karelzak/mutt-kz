@@ -47,7 +47,7 @@ int mutt_compose_attachment (BODY *a)
   char command[STRING];
   rfc1524_entry *entry = rfc1524_new_entry ();
 
-  snprintf (type, sizeof (type), "%s/%s", TYPE (a->type), a->subtype);
+  snprintf (type, sizeof (type), "%s/%s", TYPE (a), a->subtype);
   if (rfc1524_mailcap_lookup (a, type, entry, M_COMPOSE))
   {
     if (entry->composecommand || entry->composetypecommand)
@@ -165,7 +165,7 @@ int mutt_edit_attachment (BODY *a)
   char command[STRING];
   rfc1524_entry *entry = rfc1524_new_entry ();
 
-  snprintf (type, sizeof (type), "%s/%s", TYPE (a->type), a->subtype);
+  snprintf (type, sizeof (type), "%s/%s", TYPE (a), a->subtype);
   if (rfc1524_mailcap_lookup (a, type, entry, M_EDIT))
   {
     if (entry->editcommand)
@@ -261,7 +261,7 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
 #endif /* _PGPPATH */
   use_mailcap = (flag == M_MAILCAP ||
 		(flag == M_REGULAR && mutt_needs_mailcap (a)));
-  snprintf (type, sizeof (type), "%s/%s", TYPE (a->type), a->subtype);
+  snprintf (type, sizeof (type), "%s/%s", TYPE (a), a->subtype);
   
   if (use_mailcap)
   {
@@ -735,7 +735,7 @@ int mutt_print_attachment (FILE *fp, BODY *a)
   pid_t thepid;
   FILE *ifp, *fpout;
 
-  snprintf (type, sizeof (type), "%s/%s", TYPE (a->type), a->subtype);
+  snprintf (type, sizeof (type), "%s/%s", TYPE (a), a->subtype);
 
   if (rfc1524_mailcap_lookup (a, type, NULL, M_PRINT)) 
   {

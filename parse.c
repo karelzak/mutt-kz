@@ -276,6 +276,11 @@ static void parse_content_type (char *s, BODY *ct)
   /* Finally, get the major type */
   ct->type = mutt_check_mime_type (s);
 
+  if (ct->type == TYPEOTHER)
+  {
+    ct->xtype = safe_strdup (s);
+  }
+
   if (ct->subtype == NULL)
   {
     /* Some older non-MIME mailers (i.e., mailtool, elm) have a content-type
@@ -298,6 +303,7 @@ static void parse_content_type (char *s, BODY *ct)
     else
       ct->subtype = safe_strdup ("x-unknown");
   }
+
 }
 
 static void parse_content_disposition (char *s, BODY *ct)

@@ -65,6 +65,7 @@ void mutt_free_body (BODY **p)
       unlink (b->filename);
     safe_free ((void **) &b->filename);
     safe_free ((void **) &b->content);
+    safe_free ((void **) &b->xtype);
     safe_free ((void **) &b->subtype);
     safe_free ((void **) &b->description);
     safe_free ((void **) &b->form_name);
