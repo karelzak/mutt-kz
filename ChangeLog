@@ -1,3 +1,21 @@
+Thu Feb 12 08:46:17 2004  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/Makefile.am:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	(stable) Include regex.c and snprintf.c with the distribution.
+
+Wed Feb 11 14:03:38 2004  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* /cvs/mutt/mutt/po/zh_TW.po, /cvs/mutt/mutt/po/uk.po, /cvs/mutt/mutt/po/zh_CN.po, /cvs/mutt/mutt/po/tr.po, /cvs/mutt/mutt/po/sv.po, /cvs/mutt/mutt/po/ru.po, /cvs/mutt/mutt/po/sk.po, /cvs/mutt/mutt/po/pt_BR.po, /cvs/mutt/mutt/po/pl.po, /cvs/mutt/mutt/po/nl.po, /cvs/mutt/mutt/po/ko.po, /cvs/mutt/mutt/po/lt.po, /cvs/mutt/mutt/po/ja.po, /cvs/mutt/mutt/po/it.po, /cvs/mutt/mutt/po/id.po, /cvs/mutt/mutt/po/hu.po, /cvs/mutt/mutt/po/gl.po, /cvs/mutt/mutt/po/et.po, /cvs/mutt/mutt/po/fr.po, /cvs/mutt/mutt/po/eo.po, /cvs/mutt/mutt/po/es.po, /cvs/mutt/mutt/po/el.po, /cvs/mutt/mutt/po/de.po, /cvs/mutt/mutt/po/cs.po, /cvs/mutt/mutt/po/da.po, /cvs/mutt/mutt/po/ca.po, /cvs/mutt/mutt/po/bg.po, /cvs/mutt/mutt/reldate.h, /cvs/mutt/mutt/VERSION, /cvs/mutt/mutt/ChangeLog:
+	automatic post-release commit for mutt-1.4.2
+
+	* /cvs/mutt/mutt/configure.in, /cvs/mutt/mutt/menu.c:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Backport an old bug fix, and make sure configure can be created on
+	recent systems.
+
 Wed Feb 11 10:07:17 2004  Thomas Roessler  <roessler@does-not-exist.org>
 
 	* /cvs/mutt/mutt/configure.in, /cvs/mutt/mutt/menu.c:
