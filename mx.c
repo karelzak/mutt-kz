@@ -109,7 +109,7 @@ retry_lock:
   {
     char msg[LONG_STRING];
 
-    snprintf(msg, sizeof(msg), "Lock count exceedet, remove lock for %s?",
+    snprintf(msg, sizeof(msg), "Lock count exceeded, remove lock for %s?",
 	     path);
     if(retry && mutt_yesorno(msg, 1) == 1)
     {
