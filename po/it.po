@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mutt-1.0pre2\n"
+"Project-Id-Version: mutt-1.0\n"
 "POT-Creation-Date: 1999-10-22 09:42+0200\n"
-"PO-Revision-Date: 1999-09-09 08:24+02:00\n"
+"PO-Revision-Date: 1999-10-30 13:06+02:00\n"
 "Last-Translator: Marco d'Itri <md@linux.it>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -386,9 +386,8 @@ msgid "Messages printed"
 msgstr "Messaggi stampati"
 
 #: compose.c:35
-#, fuzzy
 msgid "There are no attachments."
-msgstr "Non ci sono messaggi."
+msgstr "Non ci sono allegati."
 
 #: compose.c:78
 msgid "Send"
