@@ -4,7 +4,7 @@
 
 <title>The Mutt E-Mail Client
 <author>by Michael Elkins <htmlurl url="mailto:me@cs.hmc.edu" name="&lt;me@cs.hmc.edu&gt;">
-<date>v0.92.2, 23 April 1998
+<date>v0.92.13, 30 June 1998
 <abstract>
 ``All mail clients suck.  This one just sucks less.'' -me, circa 1995
 </abstract>
@@ -1331,6 +1331,7 @@ messages:
 <tscreen><verb>
 ~A		all messages
 ~b PATTERN	messages which contain PATTERN in the message body
+~B PATTERN	messages which contain PATTERN in the whole message
 ~c USER		messages carbon-copied to USER
 ~C PATTERN	message is either to: or cc: PATTERN
 ~D		deleted messages
@@ -1358,6 +1359,7 @@ messages:
 ~t USER		messages addressed to USER
 ~U		unread messages
 ~x PATTERN	messages which contain PATTERN in the `References' field
+~z [MIN]-[MAX]	messages with a size in the range MIN to MAX
 </verb></tscreen>
 
 Where PATTERN, USER, ID, and SUBJECT are 
@@ -1688,6 +1690,26 @@ point, Mutt runs exactly as if the mail had always been local.
 and it's rather limited.  If you need more functionality you
 should consider using a specialized program, such as <htmlurl
 url="http://www.ccil.org/~esr/fetchmail" name="fetchmail">
+
+<sect1>IMAP Support (OPTIONAL)
+<p>
+
+If Mutt was compiled with IMAP support (by running the <em/configure/
+script with the <em/--enable-imap/ flag), it has the ability to work
+with folders located on a remote imap server.
+
+You can access the remote inbox by selecting the folder
+<tt/{imapserver}inbox/, where <tt/imapserver/ is the name of the IMAP
+server and <tt/inbox/ is the special name for your spool mailbox on
+the IMAP server. If you want to access another mail folder at the IMAP
+server, you should use <tt>{imapserver}path/to/folder</tt> where
+<tt>path/to/folder</tt> is the path of the folder you want to access
+relative to your home directory.
+
+<bf/Note:/ The IMAP support is in a very early state and quite
+unstable at the moment. If you need a more stable way to access your
+IMAP folder, consider using a specialized program, such as <htmlurl
+url="http://www.ccil.org/~esr/fetchmail" name="fetchmail">.
 
 <sect>Mutt's MIME Support
 <p>
@@ -2121,6 +2143,7 @@ application/x-gunzip;   gzcat; copiousoutput
 application/x-tar-gz; gunzip -c %s | tar -tf - ; copiousoutput
 application/postscript; ps2ascii %s; copiousoutput
 </verb></tscreen>
+
 <sect1>MIME Multipart/Alternative<label id="alternative_order">
 <p>
 Mutt has some heuristics for determining which attachment of a
@@ -2578,6 +2601,30 @@ Note that if you change this variable from the default value you need to
 make sure that the assignment occurs <em/before/ you use `+' or `=' for any
 other variables since expansion takes place during the `set' command.
 
+<sect2>folder&lowbar;format<label id="folder_format">
+<p>
+Type: format string<newline>
+Default: &dquot;&percnt;N &percnt;F &percnt;2l &percnt;-8.8u &percnt;-8.8g &percnt;8s &percnt;d &percnt;f&dquot;
+
+This variable allows you to customize the file browser display to 
+your personal taste.  This string is similar to <ref id="index_format"
+name="&dollar;index&lowbar;format">, but has its own set of printf()-like
+sequences:
+
+<tscreen><verb>
+%d	date/time folder was last modified
+%f	filename
+%F	file permissions
+%g	group name (or numeric gid, if missing)
+%l	number of hard links
+%N	N if folder has new mail, blank otherwise
+%s	size in bytes
+%u	owner name (or numeric uid, if missing)
+
+%>X	right justify the rest of the string and pad with character "X"
+%|X	pad to the end of the line with character "X"
+</verb></tscreen>
+
 <sect2>followup&lowbar;to<label id="followup_to">
 <p>
 Type: boolean<newline>
@@ -2619,7 +2666,7 @@ used instead.
 <sect2>forward&lowbar;format<label id="forward_format">
 <p>
 Type: format string<newline>
-Default: "&lsqb;&percnt;a: &percnt;s&rsqb;"
+Default: &dquot;&lsqb;&percnt;a: &percnt;s&rsqb;&dquot
 
 This variable controls the default subject when forwarding a message.  It
 uses the same format sequences as the <ref id="index_format"
@@ -2633,61 +2680,6 @@ Default: unset
 When <em/set/ forwarded messages included in the main body of the message
 (when <ref id="mime_forward" name="mime&lowbar;forward"> is <em/unset/) will be
 quoted using <ref id="indent_string" name="indent&lowbar;string">.
-
-<sect2>index&lowbar;format<label id="index_format">
-<p>
-Type: format string<newline>
-Default: &dquot;&percnt;4C &percnt;Z &percnt;{&percnt;b &percnt;d} &percnt;-15.15L (&percnt;4l) &percnt;s&dquot;
-
-This variable allows you to customize the message index display to your
-personal taste.
-
-``Format strings'' are similar to the strings used in the ``C'' function
-<tt/printf/ to format output (see the man page for more detail).  The
-following sequences are defined in Mutt:
-
-<tscreen><verb>
-%a	address of the author
-%b	filename of the original message folder (think mailBox)
-%B	the list to which the letter was sent, or else the folder name (%b).
-%c	number of characters (bytes) in the message
-%C	current message number
-%d	date and time of the message in the format specified by
-	``date_format''
-%f	entire From: line (address + real name)
-%F	author name, or recipient name if the message is from you
-%i	message-id of the current message
-%l	number of lines in the message
-%L	list-from function
-%m	total number of message in the mailbox
-%N      message score
-%n	author's real name (or address if missing)
-%O	 (_O_riginal save folder)  Where mutt would formerly have stashed the
-	message: list name or recipient name if no list
-%s	subject of the message
-%S	status of the message (N/D/d/!/*/r)
-%t	`to:' field (recipients)
-%T	the appropriate character from the $to_chars string
-%u	user (login) name of the author
-%Z	message status flags
-
-%{fmt}	the date and time of the message is converted to sender's 
-	time zone, and ``fmt'' is expanded by the system call 
-	``strftime''; a leading bang disables locales
-%[fmt]	the date and time of the message is converted to the local
-	time zone, and ``fmt'' is expanded by the system call
-	``strftime''; a leading bang disables locales
-%(fmt)	the local date and time when the message was received.
-	``fmt'' is expanded by the system call ``strftime'';
-	a leading bang disables locales
-%<fmt>	the current local time. ``fmt'' is expanded by the system
-	call ``strftime''; a leading bang disables locales.
-
-%>X	right justify the rest of the string and pad with character "X"
-%|X	pad to the end of the line with character "X"
-</verb></tscreen>
-
-See also: <ref id="to_chars" name="&dollar;to&lowbar;chars">.
 
 <sect2>hdrs<label id="hdrs">
 <p>
@@ -2752,6 +2744,32 @@ to the list, and will ignore this field.  To direct a response to the
 mailing list when this option is set, use the <em/list-reply/ function;
 <em/group-reply/ will reply to both the sender and the list.
 
+<sect2>imap&lowbar;checkinterval<label id="imap_checkinterval">
+<p>
+Type: number<newline>
+Default: 0
+
+This variable configures how often (in seconds) IMAP should look for
+new mail.
+
+<sect2>imap&lowbar;pass<label id="imap_pass">
+<p>
+Type: string<newline>
+Default: unset
+
+Specifies the password for your IMAP account.  If unset, Mutt will prompt you
+for your password when you invoke the fetch-mail function. <bf/Warning/:
+you should only use this option when you are on a fairly secure machine,
+because the superuser can read your muttrc even if you are the only one who
+can read the file.
+
+<sect2>imap&lowbar;user<label id="imap_user">
+<p>
+Type: string<newline>
+Default: login name on local system
+
+Your login name on the IMAP server.
+
 <sect2>in&lowbar;reply&lowbar;to
 <p>
 Type: format string<newline>
@@ -2773,11 +2791,66 @@ included in your reply.
 <sect2>indent&lowbar;string<label id="indent_string">
 <p>
 Type: format string<newline>
-Default: "&gt; "
+Default: &dquot;&gt; &dquot;
 
 Specifies the string to prepend to each line of text quoted in a message to
 which you are replying.  You are strongly encouraged not to change this
 value, as it tends to agitate the more fanatical netizens.
+
+<sect2>index&lowbar;format<label id="index_format">
+<p>
+Type: format string<newline>
+Default: &dquot;&percnt;4C &percnt;Z &percnt;{&percnt;b &percnt;d} &percnt;-15.15L (&percnt;4l) &percnt;s&dquot;
+
+This variable allows you to customize the message index display to your
+personal taste.
+
+``Format strings'' are similar to the strings used in the ``C'' function
+<tt/printf/ to format output (see the man page for more detail).  The
+following sequences are defined in Mutt:
+
+<tscreen><verb>
+%a	address of the author
+%b	filename of the original message folder (think mailBox)
+%B	the list to which the letter was sent, or else the folder name (%b).
+%c	number of characters (bytes) in the message
+%C	current message number
+%d	date and time of the message in the format specified by
+	``date_format''
+%f	entire From: line (address + real name)
+%F	author name, or recipient name if the message is from you
+%i	message-id of the current message
+%l	number of lines in the message
+%L	list-from function
+%m	total number of message in the mailbox
+%N      message score
+%n	author's real name (or address if missing)
+%O	 (_O_riginal save folder)  Where mutt would formerly have stashed the
+	message: list name or recipient name if no list
+%s	subject of the message
+%S	status of the message (N/D/d/!/*/r)
+%t	`to:' field (recipients)
+%T	the appropriate character from the $to_chars string
+%u	user (login) name of the author
+%Z	message status flags
+
+%{fmt}	the date and time of the message is converted to sender's 
+	time zone, and ``fmt'' is expanded by the system call 
+	``strftime''; a leading bang disables locales
+%[fmt]	the date and time of the message is converted to the local
+	time zone, and ``fmt'' is expanded by the system call
+	``strftime''; a leading bang disables locales
+%(fmt)	the local date and time when the message was received.
+	``fmt'' is expanded by the system call ``strftime'';
+	a leading bang disables locales
+%<fmt>	the current local time. ``fmt'' is expanded by the system
+	call ``strftime''; a leading bang disables locales.
+
+%>X	right justify the rest of the string and pad with character "X"
+%|X	pad to the end of the line with character "X"
+</verb></tscreen>
+
+See also: <ref id="to_chars" name="&dollar;to&lowbar;chars">.
 
 <sect2>ispell<label id="ispell">
 <p>
@@ -2802,9 +2875,17 @@ Default: &dollar;MAILCAPS or &tilde;/.mailcap:/usr/local/share/mailcap:/etc/mail
 This variable specifies which files to consult when attempting to display
 MIME bodies not directly supported by Mutt.
 
+<sect2>mail&lowbar;check<label id="mail_check">
+<p>
+Type: number<newline>
+Default: 5
+
+This variable configures how often (in seconds) mutt should look for
+new mail.
+
 <sect2>mark&lowbar;old
 <p>
-Type: Boolean<newline>
+Type: boolean<newline>
 Default: set
 
 Controls whether or not Mutt makes the distinction between <em/new/ messages
@@ -2869,7 +2950,7 @@ avoid many redraws).
 
 <sect2>meta&lowbar;key<label id="meta_key">
 <p>
-Type: Boolean<newline>
+Type: boolean<newline>
 Default: unset
 
 If set, forces Mutt to interpret keystrokes with the high bit (bit 8) set as
@@ -2881,13 +2962,14 @@ which is the ASCII character ``x''.
 
 <sect2>mime&lowbar;forward<label id="mime_forward">
 <p>
-Type: boolean<newline>
+Type: quadoption<newline>
 Default: unset
 
 When set, the message you are forwarding will be attached as a separate
 MIME part instead of included in the main body of the message.  This is
 useful for forwarding MIME messages so the receiver can properly view the
-message as it was delivered to you.
+message as it was delivered to you. If you like to switch between MIME
+and not MIME from mail to mail, set this variable to ask-no or ask-yes.
 
 Also see <ref id="forward_decode" name="forward&lowbar;decode"> and
 <ref id="mime_forward_decode"
@@ -2914,8 +2996,8 @@ result of a <ref id="mbox-hook" name="mbox-hook"> command.
 
 <sect2>message&lowbar;format<label id="message_format">
 <p>
-Type: string<newline>
-Default: &dquot&percnt;s&dquot;
+Type: format string<newline>
+Default: &dquot;&percnt;s&dquot;
 
 This is the string displayed in the <ref id="attach_menu"
 name="attachment"> menu for attachments of type <em>message/rfc822</em>.
@@ -3000,11 +3082,13 @@ when signing is not required or encryption is requested as well.
 <sect2>pgp&lowbar;default&lowbar;version<label id="pgp_default_version">
 <p>
 Type: string<newline>
-Default: pgp2 (or pgp5, if PGP 2.* is not installed)
+Default: pgp2 (or pgp5, if PGP 2.* is not installed, or gpg, if none
+of them is installed)
 
-Set this to pgp2 (PGP 2.*), or pgp5 (PGP 5.*) depending on the
-version, you are using primary. This variable is directly used, but it
-is the default for the variables <ref id="pgp_receive_version"
+Set this to pgp2 (PGP 2.*), pgp5 (PGP 5.*), or gpg (GNU privacy guard),
+depending on the version that you primarily use. This variable is
+not directly used, but it is the default for the variables <ref
+id="pgp_receive_version"
 name="&dollar;pgp&lowbar;receive&lowbar;version">, <ref
 id="pgp_send_version" name="&dollar;pgp&lowbar;send&lowbar;version">,
 and <ref id="pgp_key_version"
@@ -3017,18 +3101,26 @@ Default: set
 
 If set, the PGP <em/+encrypttoself/ flag is used when encrypting messages.
 
+<sect2>pgp&lowbar;gpg<label id="pgp_gpg">
+<p>
+Type: string<newline>
+Default: system dependent
+
+This variable allows you to override the compile time definition of
+where the gpg (GNU Privacy Guard) binary resides on your system.
+
 <sect2>pgp&lowbar;key&lowbar;version<label id="pgp_key_version">
 <p>
 Type: string<newline>
 Default: ``default''
 
-This variable determines, which PGP version used for key ring
+This variable determines which PGP version is used for key ring
 operations like extracting keys from messages and extracting keys from
 your keyring. If you set this to default, the default defined in <ref
 id="pgp_default_version"
 name="&dollar;pgp&lowbar;default&lowbar;version"> is used. Set this to
-pgp2 (PGP 2.*), or pgp5 (PGP 5.*) if you want a different PGP version
-for key operations.
+pgp2 (PGP 2.*), pgp5 (PGP 5.*), or gpg (GNU privacy guard) if you want
+to use a different PGP version for key operations.
 
 <sect2>pgp&lowbar;long&lowbar;ids<label id="pgp_long_ids">
 <p>
@@ -3042,12 +3134,12 @@ If set, use 64 bit PGP key IDs. Unset uses the normal 32 bit Key IDs.
 Type: string<newline>
 Default: ``default''
 
-This variable determines, which PGP version used for decrypting
+This variable determines which PGP version is used for decrypting
 messages and verifying signatures. If you set this to default, the
 default defined in <ref id="pgp_default_version"
 name="&dollar;pgp&lowbar;default&lowbar;version"> will be used. Set
-this to pgp2 (PGP 2.*), or pgp5 (PGP 5.*) if you want a different PGP
-version for receiving operations.
+this to pgp2 (PGP 2.*), pgp5 (PGP 5.*), or gpg (GNU privacy guard) if
+you want to use a different PGP version for receiving operations.
 
 <sect2>pgp&lowbar;replyencrypt<label id="pgp_replyencrypt">
 <p>
@@ -3071,12 +3163,12 @@ signed!
 Type: string<newline>
 Default: ``default''
 
-This variable determines, which PGP version used for composing new
+This variable determines which PGP version is used for composing new
 messages like encrypting and signing. If you set this to default, the
 default defined in <ref id="pgp_default_version"
 name="&dollar;pgp&lowbar;default&lowbar;version"> will be used. Set
-this to pgp2 (PGP 2.*), or pgp5 (PGP 5.*) if you want a different PGP
-version for sending operations.
+this to pgp2 (PGP 2.*), pgp5 (PGP 5.*), or gpg (GNU privacy guard) if
+you want to use a different PGP version for sending operations.
 
 <sect2>pgp&lowbar;sign&lowbar;as<label id="pgp_sign_as">
 <p>
@@ -3241,7 +3333,7 @@ The name or address of your POP3 server.
 Type: string<newline>
 Default: unset
 
-Specifies the password for you POP account.  If unset, Mutt will prompt you
+Specifies the password for your POP account.  If unset, Mutt will prompt you
 for your password when you invoke the fetch-mail function. <bf/Warning/:
 you should only use this option when you are on a fairly secure machine,
 because the superuser can read your muttrc even if you are the only one who
@@ -3752,6 +3844,14 @@ messages in a mailbox:
 
 <tscreen><verb>
 	%?n?%n new messages.?
+</verb></tscreen>
+
+Additionally you can switch between two strings, the first one, if a
+value is zero, the second one, if the value is nonzero, by using the
+following construct:
+
+<tscreen><verb>
+	%?<sequence_char>?<if_string>&<else_string>?
 </verb></tscreen>
 
 <sect2>status&lowbar;on&lowbar;top<label id="status_on_top">
