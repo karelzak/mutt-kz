@@ -553,19 +553,22 @@ CONTEXT *mx_open_mailbox (const char *path, int flags, CONTEXT *pctx)
     return ctx;
   }
 
-  switch (ctx->magic = mx_get_magic (path))
+  ctx->magic = mx_get_magic (path);
+  
+  if(ctx->magic == 0)
+    mutt_error ("%s is not a mailbox.", path);
+
+  if(ctx->magic == -1)
+    mutt_perror(path);
+  
+  if(ctx->magic <= 0)
   {
-    case 0:
-      mutt_error ("%s is not a mailbox.", path);
-      /* fall through */
-
-    case -1:
-      mx_fastclose_mailbox (ctx);
-      if (!pctx)
-	free (ctx);
-      return (NULL);
+    mx_fastclose_mailbox (ctx);
+    if (!pctx)
+      free (ctx);
+    return (NULL);
   }
-
+  
   /* if the user has a `push' command in their .muttrc, or in a folder-hook,
    * it will cause the progress messages not to be displayed because
    * mutt_refresh() will think we are in the middle of a macro.  so set a
