@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.2.2\n"
-"POT-Creation-Date: 2000-07-07 01:08+0200\n"
+"POT-Creation-Date: 2000-07-28 20:51+0200\n"
 "PO-Revision-Date: 2000-07-03 18:55+0200\n"
 "Last-Translator: Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre "
 "<vincent@vinc17.org>\n"
@@ -694,7 +694,7 @@ msgstr "Appuyez sur une touche pour continuer..."
 msgid " ('?' for list): "
 msgstr " ('?' pour avoir la liste) : "
 
-#: curs_main.c:55 curs_main.c:565
+#: curs_main.c:55 curs_main.c:568
 msgid "No mailbox is open."
 msgstr "Aucune boîte aux lettres n'est ouverte."
 
@@ -757,124 +757,124 @@ msgstr ""
 msgid "New mail in this mailbox."
 msgstr "Nouveau(x) message(s) dans cette boîte aux lettres."
 
-#: curs_main.c:571
+#: curs_main.c:574
 msgid "No tagged messages."
 msgstr "Pas de messages marqués."
 
-#: curs_main.c:651
+#: curs_main.c:654
 msgid "Jump to message: "
 msgstr "Aller au message : "
 
-#: curs_main.c:657
+#: curs_main.c:660
 msgid "Argument must be a message number."
 msgstr "L'argument doit être un numéro de message."
 
-#: curs_main.c:690
+#: curs_main.c:693
 msgid "That message is not visible."
 msgstr "Ce message n'est pas visible."
 
-#: curs_main.c:693
+#: curs_main.c:696
 msgid "Invalid message number."
 msgstr "Numéro de message invalide."
 
-#: curs_main.c:706
+#: curs_main.c:709
 msgid "Delete messages matching: "
 msgstr "Effacer les messages correspondant à : "
 
-#: curs_main.c:728
+#: curs_main.c:731
 msgid "No limit pattern is in effect."
 msgstr "Aucun motif de limite n'est en vigueur."
 
 # , c-format
 #. i18n: ask for a limit to apply
-#: curs_main.c:733
+#: curs_main.c:736
 #, c-format
 msgid "Limit: %s"
 msgstr "Limite : %s"
 
-#: curs_main.c:742
+#: curs_main.c:746
 msgid "Limit to messages matching: "
 msgstr "Limiter aux messages correspondant à : "
 
-#: curs_main.c:772
+#: curs_main.c:776
 msgid "Quit Mutt?"
 msgstr "Quitter Mutt ?"
 
-#: curs_main.c:895
+#: curs_main.c:899
 msgid "Tag messages matching: "
 msgstr "Marquer les messages correspondant à : "
 
-#: curs_main.c:903
+#: curs_main.c:907
 msgid "Undelete messages matching: "
 msgstr "Récupérer les messages correspondant à : "
 
-#: curs_main.c:910
+#: curs_main.c:914
 msgid "Untag messages matching: "
 msgstr "Démarquer les messages correspondant à : "
 
-#: curs_main.c:928
+#: curs_main.c:932
 msgid "Open mailbox in read-only mode"
 msgstr "Ouvre la boîte aux lettres en lecture seule"
 
-#: curs_main.c:930
+#: curs_main.c:934
 msgid "Open mailbox"
 msgstr "Ouvre la boîte aux lettres"
 
 # , c-format
-#: curs_main.c:946 mx.c:454 mx.c:600
+#: curs_main.c:950 mx.c:454 mx.c:600
 #, c-format
 msgid "%s is not a mailbox."
 msgstr "%s n'est pas une boîte aux lettres."
 
-#: curs_main.c:1031
+#: curs_main.c:1035
 msgid "Exit Mutt without saving?"
 msgstr "Quitter Mutt sans sauvegarder ?"
 
-#: curs_main.c:1067 curs_main.c:1091
+#: curs_main.c:1071 curs_main.c:1095
 msgid "You are on the last message."
 msgstr "Vous êtes sur le dernier message."
 
-#: curs_main.c:1074 curs_main.c:1116
+#: curs_main.c:1078 curs_main.c:1120
 msgid "No undeleted messages."
 msgstr "Pas de message non effacé."
 
-#: curs_main.c:1109 curs_main.c:1132
+#: curs_main.c:1113 curs_main.c:1136
 msgid "You are on the first message."
 msgstr "Vous êtes sur le premier message."
 
-#: curs_main.c:1204 pattern.c:1123
+#: curs_main.c:1208 pattern.c:1123
 msgid "Search wrapped to top."
 msgstr "La recherche est repartie du début."
 
-#: curs_main.c:1213 pattern.c:1134
+#: curs_main.c:1217 pattern.c:1134
 msgid "Search wrapped to bottom."
 msgstr "La recherche est repartie de la fin."
 
-#: curs_main.c:1246
+#: curs_main.c:1250
 msgid "No new messages"
 msgstr "Pas de nouveaux messages"
 
-#: curs_main.c:1246
+#: curs_main.c:1250
 msgid "No unread messages"
 msgstr "Pas de messages non lus"
 
-#: curs_main.c:1247
+#: curs_main.c:1251
 msgid " in this limited view"
 msgstr " dans cette vue limitée"
 
-#: curs_main.c:1371
+#: curs_main.c:1375
 msgid "No more threads."
 msgstr "Pas d'autres discussions."
 
-#: curs_main.c:1373
+#: curs_main.c:1377
 msgid "You are on the first thread."
 msgstr "Vous êtes sur la première discussion."
 
-#: curs_main.c:1443
+#: curs_main.c:1447
 msgid "Thread contains unread messages."
 msgstr "Cette discussion contient des messages non-lus."
 
-#: curs_main.c:1456 flags.c:228 thread.c:651 thread.c:702
+#: curs_main.c:1460 flags.c:228 thread.c:651 thread.c:702
 msgid "Threading is not enabled."
 msgstr "L'affichage des discussions n'est pas activé."
 
@@ -1236,17 +1236,17 @@ msgstr "Récupération de la liste des dossiers..."
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Erreur fatale. Le nombre de messages ne correspond pas !"
 
-#: imap/imap.c:213
+#: imap/imap.c:234
 #, c-format
 msgid "Reopening mailbox... %s"
 msgstr "Réouverture de la boîte aux lettres... %s"
 
-#: imap/imap.c:419
+#: imap/imap.c:440
 msgid "This IMAP server is ancient. Mutt does not work with it."
 msgstr "Ce serveur IMAP est trop ancien. Mutt ne marche pas avec."
 
 # , c-format
-#: imap/imap.c:585
+#: imap/imap.c:606
 #, c-format
 msgid "Selecting %s..."
 msgstr "Sélection de %s..."
@@ -1255,49 +1255,49 @@ msgstr "Sélection de %s..."
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap/imap.c:803
+#: imap/imap.c:824
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Impossible d'ajouter aux boîtes aux lettres IMAP sur ce serveur"
 
 # , c-format
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1055
+#: imap/imap.c:832 imap/message.c:631 muttlib.c:1055
 #, c-format
 msgid "Create %s?"
 msgstr "Créer %s ?"
 
-#: imap/imap.c:835
+#: imap/imap.c:856
 msgid "Closing connection to IMAP server..."
 msgstr "Fermeture de la connexion au serveur IMAP..."
 
 # , c-format
-#: imap/imap.c:989
+#: imap/imap.c:1010
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "Marquage de %d messages à effacer..."
 
 # , c-format
-#: imap/imap.c:1009
+#: imap/imap.c:1028
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Sauvegarde des indicateurs de statut du message... [%d/%d]"
 
-#: imap/imap.c:1068
+#: imap/imap.c:1085
 msgid "Closing mailbox..."
 msgstr "Fermeture de la boîte aux lettres..."
 
-#: imap/imap.c:1078
+#: imap/imap.c:1095
 msgid "Expunging messages from server..."
 msgstr "Effacement des messages sur le serveur..."
 
 # , c-format
-#: imap/imap.c:1408
+#: imap/imap.c:1425
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "Abonnement à %s..."
 
 # , c-format
-#: imap/imap.c:1410
+#: imap/imap.c:1427
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "Désabonnement de %s..."
@@ -1418,26 +1418,26 @@ msgstr ""
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Récupération des en-têtes des messages... [%d/%d]"
 
-#: imap/message.c:308
+#: imap/message.c:307
 msgid "Fetching message..."
 msgstr "Récupération du message..."
 
-#: imap/message.c:495
+#: imap/message.c:486
 msgid "Sending APPEND command ..."
 msgstr "Envoi de la commande APPEND ..."
 
-#: imap/message.c:534
+#: imap/message.c:525
 msgid "Uploading message ..."
 msgstr "Chargement du message ..."
 
 # , c-format
-#: imap/message.c:619
+#: imap/message.c:610
 #, c-format
 msgid "Copying %d messages to %s..."
 msgstr "Copie de %d messages dans %s..."
 
 # , c-format
-#: imap/message.c:623
+#: imap/message.c:614
 #, c-format
 msgid "Copying message %d to %s..."
 msgstr "Copie du message %d dans %s..."
@@ -3352,21 +3352,21 @@ msgstr "Rechercher"
 msgid "Waiting for response..."
 msgstr "Attente de la réponse..."
 
-#: query.c:192 query.c:217
+#: query.c:191 query.c:216
 msgid "Query command not defined."
 msgstr "Commande de requête non définie."
 
-#: query.c:244
+#: query.c:243
 msgid "Query"
 msgstr "Requête"
 
 #. Prompt for Query
-#: query.c:257 query.c:285
+#: query.c:256 query.c:284
 msgid "Query: "
 msgstr "Requête : "
 
 # , c-format
-#: query.c:268 query.c:294
+#: query.c:267 query.c:293
 #, c-format
 msgid "Query '%s'"
 msgstr "Requête '%s'"
@@ -3506,45 +3506,45 @@ msgstr "Impossible d'obtenir le type2.list du mixmaster !"
 msgid "Select a remailer chain."
 msgstr "Sélectionner une chaîne de redistributeurs de courrier."
 
-#: remailer.c:600
+#: remailer.c:598
 #, c-format
 msgid "Error: %s can't be used as the final remailer of a chain."
 msgstr "Erreur : %s ne peut pas être utilisé comme redistributeur final."
 
-#: remailer.c:633
+#: remailer.c:628
 #, c-format
 msgid "Mixmaster chains are limited to %d elements."
 msgstr "Les chaînes mixmaster sont limitées à %d éléments."
 
-#: remailer.c:658
+#: remailer.c:651
 msgid "The remailer chain is already empty."
 msgstr "La chaîne de redistributeurs de courrier est déjà vide."
 
-#: remailer.c:668
+#: remailer.c:661
 msgid "You already have the first chain element selected."
 msgstr "Le premier élément de la chaîne est déjà sélectionné."
 
-#: remailer.c:678
+#: remailer.c:671
 msgid "You already have the last chain element selected."
 msgstr "Le dernier élément de la chaîne est déjà sélectionné."
 
-#: remailer.c:717
+#: remailer.c:710
 msgid "Mixmaster doesn't accept Cc or Bcc headers."
 msgstr "Le mixmaster n'accepte pas les en-têtes Cc et Bcc."
 
-#: remailer.c:741
+#: remailer.c:734
 msgid ""
 "Please set the hostname variable to a proper value when using mixmaster!"
 msgstr ""
 "Donnez une valeur correcte à hostname quand vous utilisez le mixmaster !"
 
 # , c-format
-#: remailer.c:770
+#: remailer.c:763
 #, c-format
 msgid "Error sending message, child exited %d.\n"
 msgstr "Erreur en envoyant le message, fils terminé avec le code %d.\n"
 
-#: remailer.c:774
+#: remailer.c:767
 msgid "Error sending message."
 msgstr "Erreur en envoyant le message."
 

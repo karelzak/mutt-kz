@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.2\n"
-"POT-Creation-Date: 2000-07-07 01:08+0200\n"
+"POT-Creation-Date: 2000-07-28 20:51+0200\n"
 "PO-Revision-Date: $Date$\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
@@ -669,7 +669,7 @@ msgstr "Чтобы продолжить, нажмите любую клавишу..."
 msgid " ('?' for list): "
 msgstr " ('?' -- список): "
 
-#: curs_main.c:55 curs_main.c:565
+#: curs_main.c:55 curs_main.c:568
 msgid "No mailbox is open."
 msgstr "Нет открытого почтового ящика."
 
@@ -730,122 +730,122 @@ msgstr ""
 msgid "New mail in this mailbox."
 msgstr "Новая почта в этом ящике."
 
-#: curs_main.c:571
+#: curs_main.c:574
 msgid "No tagged messages."
 msgstr "Нет отмеченных сообщений."
 
-#: curs_main.c:651
+#: curs_main.c:654
 msgid "Jump to message: "
 msgstr "Перейти к сообщению: "
 
-#: curs_main.c:657
+#: curs_main.c:660
 msgid "Argument must be a message number."
 msgstr "Аргумент должен быть номером сообщения."
 
-#: curs_main.c:690
+#: curs_main.c:693
 msgid "That message is not visible."
 msgstr "Это сообщение невидимо."
 
-#: curs_main.c:693
+#: curs_main.c:696
 msgid "Invalid message number."
 msgstr "Неверный номер сообщения."
 
-#: curs_main.c:706
+#: curs_main.c:709
 msgid "Delete messages matching: "
 msgstr "Удалить сообщения по образцу: "
 
-#: curs_main.c:728
+#: curs_main.c:731
 msgid "No limit pattern is in effect."
 msgstr "Шаблон ограничения списка отсутствует."
 
 #. i18n: ask for a limit to apply
-#: curs_main.c:733
+#: curs_main.c:736
 #, c-format
 msgid "Limit: %s"
 msgstr "Шаблон ограничения: %s"
 
-#: curs_main.c:742
+#: curs_main.c:746
 msgid "Limit to messages matching: "
 msgstr "Ограничиться сообщениями, соответствующими: "
 
-#: curs_main.c:772
+#: curs_main.c:776
 msgid "Quit Mutt?"
 msgstr "Выйти из Mutt?"
 
-#: curs_main.c:895
+#: curs_main.c:899
 msgid "Tag messages matching: "
 msgstr "Пометить сообщения по образцу: "
 
-#: curs_main.c:903
+#: curs_main.c:907
 msgid "Undelete messages matching: "
 msgstr "Восстановить сообщения по образцу: "
 
-#: curs_main.c:910
+#: curs_main.c:914
 msgid "Untag messages matching: "
 msgstr "Снять пометку с сообщений по образцу: "
 
-#: curs_main.c:928
+#: curs_main.c:932
 msgid "Open mailbox in read-only mode"
 msgstr "Открыть почтовый ящик только для чтения"
 
-#: curs_main.c:930
+#: curs_main.c:934
 msgid "Open mailbox"
 msgstr "Открыть почтовый ящик"
 
-#: curs_main.c:946 mx.c:454 mx.c:600
+#: curs_main.c:950 mx.c:454 mx.c:600
 #, c-format
 msgid "%s is not a mailbox."
 msgstr "%s не является почтовым ящиком."
 
-#: curs_main.c:1031
+#: curs_main.c:1035
 msgid "Exit Mutt without saving?"
 msgstr "Выйти из Mutt без сохранения изменений?"
 
-#: curs_main.c:1067 curs_main.c:1091
+#: curs_main.c:1071 curs_main.c:1095
 msgid "You are on the last message."
 msgstr "Это последнее сообщение."
 
-#: curs_main.c:1074 curs_main.c:1116
+#: curs_main.c:1078 curs_main.c:1120
 msgid "No undeleted messages."
 msgstr "Нет восстановленных сообщений."
 
-#: curs_main.c:1109 curs_main.c:1132
+#: curs_main.c:1113 curs_main.c:1136
 msgid "You are on the first message."
 msgstr "Это первое сообщение."
 
-#: curs_main.c:1204 pattern.c:1123
+#: curs_main.c:1208 pattern.c:1123
 msgid "Search wrapped to top."
 msgstr "Достигнут конец; продолжаем поиск с начала."
 
-#: curs_main.c:1213 pattern.c:1134
+#: curs_main.c:1217 pattern.c:1134
 msgid "Search wrapped to bottom."
 msgstr "Достигнуто начало; продолжаем поиск с конца."
 
-#: curs_main.c:1246
+#: curs_main.c:1250
 msgid "No new messages"
 msgstr "Нет новых сообщений"
 
-#: curs_main.c:1246
+#: curs_main.c:1250
 msgid "No unread messages"
 msgstr "Нет непрочитанных сообщений"
 
-#: curs_main.c:1247
+#: curs_main.c:1251
 msgid " in this limited view"
 msgstr " при просмотре с ограничением"
 
-#: curs_main.c:1371
+#: curs_main.c:1375
 msgid "No more threads."
 msgstr "Нет больше дискуссий."
 
-#: curs_main.c:1373
+#: curs_main.c:1377
 msgid "You are on the first thread."
 msgstr "Это первая дискуссия"
 
-#: curs_main.c:1443
+#: curs_main.c:1447
 msgid "Thread contains unread messages."
 msgstr "В дискуссии присутствуют непрочитанные сообщения."
 
-#: curs_main.c:1456 flags.c:228 thread.c:651 thread.c:702
+#: curs_main.c:1460 flags.c:228 thread.c:651 thread.c:702
 msgid "Threading is not enabled."
 msgstr "Группировка по дискуссиям не включена."
 
@@ -1184,19 +1184,19 @@ msgstr "Получение списка почтовых ящиков..."
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Критическая ошибка.  Сбой синхронизации счетчика сообщений!"
 
-#: imap/imap.c:213
+#: imap/imap.c:234
 #, c-format
 msgid "Reopening mailbox... %s"
 msgstr "Повторное открытие почтового ящика... %s"
 
 # "mutt не поддерживает версию протокола, используемый на этом сервере"
-#: imap/imap.c:419
+#: imap/imap.c:440
 msgid "This IMAP server is ancient. Mutt does not work with it."
 msgstr ""
 "Этот IMAP-сервер использует устаревший протокол. Mutt не сможет работать с "
 "ним."
 
-#: imap/imap.c:585
+#: imap/imap.c:606
 #, c-format
 msgid "Selecting %s..."
 msgstr "Выбирается %s..."
@@ -1205,44 +1205,44 @@ msgstr "Выбирается %s..."
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap/imap.c:803
+#: imap/imap.c:824
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Не удалось добавить сообщение в IMAP-ящик на этом сервере!"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1055
+#: imap/imap.c:832 imap/message.c:631 muttlib.c:1055
 #, c-format
 msgid "Create %s?"
 msgstr "Создать %s?"
 
-#: imap/imap.c:835
+#: imap/imap.c:856
 msgid "Closing connection to IMAP server..."
 msgstr "Закрытие соединения с сервером IMAP..."
 
-#: imap/imap.c:989
+#: imap/imap.c:1010
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "%d сообщений помечаются как удаленные..."
 
-#: imap/imap.c:1009
+#: imap/imap.c:1028
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Сохранение флагов состояния сообщений... [%d из %d]"
 
-#: imap/imap.c:1068
+#: imap/imap.c:1085
 msgid "Closing mailbox..."
 msgstr "Закрытие почтового ящика..."
 
-#: imap/imap.c:1078
+#: imap/imap.c:1095
 msgid "Expunging messages from server..."
 msgstr "Удаление сообщений с сервера..."
 
-#: imap/imap.c:1408
+#: imap/imap.c:1425
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "Подключение к %s..."
 
-#: imap/imap.c:1410
+#: imap/imap.c:1427
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "Отключение от %s..."
@@ -1360,25 +1360,25 @@ msgstr "Получение списка заголовков не поддерживается этим IMAP-сервером."
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Получение заголовков сообщений... [%d/%d]"
 
-#: imap/message.c:308
+#: imap/message.c:307
 msgid "Fetching message..."
 msgstr "Получение сообщения..."
 
-#: imap/message.c:495
+#: imap/message.c:486
 msgid "Sending APPEND command ..."
 msgstr "Выполняется команда APPEND..."
 
 # или "на сервер" убрать??
-#: imap/message.c:534
+#: imap/message.c:525
 msgid "Uploading message ..."
 msgstr "Сообщение загружается на сервер..."
 
-#: imap/message.c:619
+#: imap/message.c:610
 #, c-format
 msgid "Copying %d messages to %s..."
 msgstr "%d сообщений копируются в %s..."
 
-#: imap/message.c:623
+#: imap/message.c:614
 #, c-format
 msgid "Copying message %d to %s..."
 msgstr "Сообщение %d копируется в %s..."
@@ -3247,20 +3247,20 @@ msgstr "Искать"
 msgid "Waiting for response..."
 msgstr "Ожидается ответ..."
 
-#: query.c:192 query.c:217
+#: query.c:191 query.c:216
 msgid "Query command not defined."
 msgstr "Команда запроса не определена."
 
-#: query.c:244
+#: query.c:243
 msgid "Query"
 msgstr "Запрос"
 
 #. Prompt for Query
-#: query.c:257 query.c:285
+#: query.c:256 query.c:284
 msgid "Query: "
 msgstr "Запрос: "
 
-#: query.c:268 query.c:294
+#: query.c:267 query.c:293
 #, c-format
 msgid "Query '%s'"
 msgstr "Запрос '%s'"
@@ -3393,43 +3393,43 @@ msgstr ""
 msgid "Select a remailer chain."
 msgstr ""
 
-#: remailer.c:600
+#: remailer.c:598
 #, c-format
 msgid "Error: %s can't be used as the final remailer of a chain."
 msgstr ""
 
-#: remailer.c:633
+#: remailer.c:628
 #, c-format
 msgid "Mixmaster chains are limited to %d elements."
 msgstr ""
 
-#: remailer.c:658
+#: remailer.c:651
 msgid "The remailer chain is already empty."
 msgstr ""
 
-#: remailer.c:668
+#: remailer.c:661
 msgid "You already have the first chain element selected."
 msgstr "Вы уже пометили первый элемент цепочки."
 
-#: remailer.c:678
+#: remailer.c:671
 msgid "You already have the last chain element selected."
 msgstr "Вы уже пометили последний элемент цепочки."
 
-#: remailer.c:717
+#: remailer.c:710
 msgid "Mixmaster doesn't accept Cc or Bcc headers."
 msgstr ""
 
-#: remailer.c:741
+#: remailer.c:734
 msgid ""
 "Please set the hostname variable to a proper value when using mixmaster!"
 msgstr ""
 
-#: remailer.c:770
+#: remailer.c:763
 #, c-format
 msgid "Error sending message, child exited %d.\n"
 msgstr "Сообщение отправить не удалось, процесс-потомок вернул %d.\n"
 
-#: remailer.c:774
+#: remailer.c:767
 msgid "Error sending message."
 msgstr "Ошибка отправки сообщения."
 

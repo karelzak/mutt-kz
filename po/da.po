@@ -6,9 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt-1.2.4i \n"
-"POT-Creation-Date: 2000-07-07 01:08+0200\n"
+"POT-Creation-Date: 2000-07-28 20:51+0200\n"
 "PO-Revision-Date: 2000-07-09 10:46+02:00\n"
-"Last-Translator: Byrial Jensen <Byrial@image.dk>, Morten Bo Johansen <mojo@image.dk>\n"
+"Last-Translator: Byrial Jensen <Byrial@image.dk>, Morten Bo Johansen "
+"<mojo@image.dk>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -665,7 +666,7 @@ msgstr "Tryk på en taste for at fortsætte."
 msgid " ('?' for list): "
 msgstr " ('?' for en liste): "
 
-#: curs_main.c:55 curs_main.c:565
+#: curs_main.c:55 curs_main.c:568
 msgid "No mailbox is open."
 msgstr "Ingen brevbakke er åben."
 
@@ -725,122 +726,122 @@ msgstr "Brevbakke ændret udefra. Status-indikatorer kan være forkerte."
 msgid "New mail in this mailbox."
 msgstr "Ny(e) brev(e) i denne brevbakke."
 
-#: curs_main.c:571
+#: curs_main.c:574
 msgid "No tagged messages."
 msgstr "Ingen breve er udvalgt."
 
-#: curs_main.c:651
+#: curs_main.c:654
 msgid "Jump to message: "
 msgstr "Hop til brev: "
 
-#: curs_main.c:657
+#: curs_main.c:660
 msgid "Argument must be a message number."
 msgstr "Parameter skal være nummeret på et brev."
 
-#: curs_main.c:690
+#: curs_main.c:693
 msgid "That message is not visible."
 msgstr "Brevet er ikke synligt."
 
-#: curs_main.c:693
+#: curs_main.c:696
 msgid "Invalid message number."
 msgstr "Ugyldigt brevnummer."
 
-#: curs_main.c:706
+#: curs_main.c:709
 msgid "Delete messages matching: "
 msgstr "Slet breve efter mønster: "
 
-#: curs_main.c:728
+#: curs_main.c:731
 msgid "No limit pattern is in effect."
 msgstr "Intet afgrænsnings-mønster er i brug."
 
 #. i18n: ask for a limit to apply
-#: curs_main.c:733
+#: curs_main.c:736
 #, c-format
 msgid "Limit: %s"
 msgstr "Afgrænsning: %s"
 
-#: curs_main.c:742
+#: curs_main.c:746
 msgid "Limit to messages matching: "
 msgstr "Afgræns til breve efter mønster: "
 
-#: curs_main.c:772
+#: curs_main.c:776
 msgid "Quit Mutt?"
 msgstr "Afslut Mutt?"
 
-#: curs_main.c:895
+#: curs_main.c:899
 msgid "Tag messages matching: "
 msgstr "Udvælg breve efter mønster: "
 
-#: curs_main.c:903
+#: curs_main.c:907
 msgid "Undelete messages matching: "
 msgstr "Behold breve efter mønster: "
 
-#: curs_main.c:910
+#: curs_main.c:914
 msgid "Untag messages matching: "
 msgstr "Fjern valg efter mønster: "
 
-#: curs_main.c:928
+#: curs_main.c:932
 msgid "Open mailbox in read-only mode"
 msgstr "Åbn brevbakke i skrivebeskyttet tilstand"
 
-#: curs_main.c:930
+#: curs_main.c:934
 msgid "Open mailbox"
 msgstr "Åbn brevbakke"
 
-#: curs_main.c:946 mx.c:454 mx.c:600
+#: curs_main.c:950 mx.c:454 mx.c:600
 #, c-format
 msgid "%s is not a mailbox."
 msgstr "%s er ikke en brevbakke."
 
-#: curs_main.c:1031
+#: curs_main.c:1035
 msgid "Exit Mutt without saving?"
 msgstr "Afslut Mutt uden at gemme?"
 
-#: curs_main.c:1067 curs_main.c:1091
+#: curs_main.c:1071 curs_main.c:1095
 msgid "You are on the last message."
 msgstr "Du er ved sidste brev."
 
-#: curs_main.c:1074 curs_main.c:1116
+#: curs_main.c:1078 curs_main.c:1120
 msgid "No undeleted messages."
 msgstr "Alle breve har slette-markering."
 
-#: curs_main.c:1109 curs_main.c:1132
+#: curs_main.c:1113 curs_main.c:1136
 msgid "You are on the first message."
 msgstr "Du er ved første brev."
 
-#: curs_main.c:1204 pattern.c:1123
+#: curs_main.c:1208 pattern.c:1123
 msgid "Search wrapped to top."
 msgstr "Søgning fortsat fra top."
 
-#: curs_main.c:1213 pattern.c:1134
+#: curs_main.c:1217 pattern.c:1134
 msgid "Search wrapped to bottom."
 msgstr "Søgning fortsat fra bund."
 
-#: curs_main.c:1246
+#: curs_main.c:1250
 msgid "No new messages"
 msgstr "Ingen nye breve"
 
-#: curs_main.c:1246
+#: curs_main.c:1250
 msgid "No unread messages"
 msgstr "Ingen ulæste breve"
 
-#: curs_main.c:1247
+#: curs_main.c:1251
 msgid " in this limited view"
 msgstr " i dette afgrænsede billede"
 
-#: curs_main.c:1371
+#: curs_main.c:1375
 msgid "No more threads."
 msgstr "Ikke flere tråde."
 
-#: curs_main.c:1373
+#: curs_main.c:1377
 msgid "You are on the first thread."
 msgstr "Du er ved den første tråd."
 
-#: curs_main.c:1443
+#: curs_main.c:1447
 msgid "Thread contains unread messages."
 msgstr "Tråden indeholder ulæste breve."
 
-#: curs_main.c:1456 flags.c:228 thread.c:651 thread.c:702
+#: curs_main.c:1460 flags.c:228 thread.c:651 thread.c:702
 msgid "Threading is not enabled."
 msgstr "Trådning er ikke i brug."
 
@@ -1177,16 +1178,16 @@ msgstr "Henter liste over brevbakker"
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Kritisk fejl. Antal breve er ikke som forventet!"
 
-#: imap/imap.c:213
+#: imap/imap.c:234
 #, c-format
 msgid "Reopening mailbox... %s"
 msgstr "Genåbner brevbakke ... %s"
 
-#: imap/imap.c:419
+#: imap/imap.c:440
 msgid "This IMAP server is ancient. Mutt does not work with it."
 msgstr "Forældet IMAP-tjener. Mutt kan ikke bruge den."
 
-#: imap/imap.c:585
+#: imap/imap.c:606
 #, c-format
 msgid "Selecting %s..."
 msgstr "Vælger %s ..."
@@ -1195,44 +1196,44 @@ msgstr "Vælger %s ..."
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap/imap.c:803
+#: imap/imap.c:824
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Kunne ikke føje til IMAP-brevbakker på denne tjener."
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1055
+#: imap/imap.c:832 imap/message.c:631 muttlib.c:1055
 #, c-format
 msgid "Create %s?"
 msgstr "Opret %s?"
 
-#: imap/imap.c:835
+#: imap/imap.c:856
 msgid "Closing connection to IMAP server..."
 msgstr "Lukker forbindelsen til IMAP-tjeneren ..."
 
-#: imap/imap.c:989
+#: imap/imap.c:1010
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "Markerer %d breve slettet"
 
-#: imap/imap.c:1009
+#: imap/imap.c:1028
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Gemmer brevstatus-indikatorer ... [%d/%d]"
 
-#: imap/imap.c:1068
+#: imap/imap.c:1085
 msgid "Closing mailbox..."
 msgstr "Lukker brevbakke ..."
 
-#: imap/imap.c:1078
+#: imap/imap.c:1095
 msgid "Expunging messages from server..."
 msgstr "Sletter breve på tjener ..."
 
-#: imap/imap.c:1408
+#: imap/imap.c:1425
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "Abonnerer på %s..."
 
-#: imap/imap.c:1410
+#: imap/imap.c:1427
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "Afmelder abonnement på %s..."
@@ -1347,24 +1348,24 @@ msgstr "Kan ikke hente brevhoveder fra denne version IMAP-tjener."
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Henter brevhoveder ... [%d/%d]"
 
-#: imap/message.c:308
+#: imap/message.c:307
 msgid "Fetching message..."
 msgstr "Henter brev ..."
 
-#: imap/message.c:495
+#: imap/message.c:486
 msgid "Sending APPEND command ..."
 msgstr "Sender APPEND-kommando ..."
 
-#: imap/message.c:534
+#: imap/message.c:525
 msgid "Uploading message ..."
 msgstr "Uploader brev ..."
 
-#: imap/message.c:619
+#: imap/message.c:610
 #, c-format
 msgid "Copying %d messages to %s..."
 msgstr "Kopierer %d breve til %s..."
 
-#: imap/message.c:623
+#: imap/message.c:614
 #, c-format
 msgid "Copying message %d to %s..."
 msgstr "Kopierer brev %d til %s..."
@@ -3206,20 +3207,20 @@ msgstr "Søg"
 msgid "Waiting for response..."
 msgstr "Venter på svar ..."
 
-#: query.c:192 query.c:217
+#: query.c:191 query.c:216
 msgid "Query command not defined."
 msgstr "Ingen forespørgsels-kommando defineret."
 
-#: query.c:244
+#: query.c:243
 msgid "Query"
 msgstr "Forespørgsel"
 
 #. Prompt for Query
-#: query.c:257 query.c:285
+#: query.c:256 query.c:284
 msgid "Query: "
 msgstr "Forespørgsel: "
 
-#: query.c:268 query.c:294
+#: query.c:267 query.c:293
 #, c-format
 msgid "Query '%s'"
 msgstr "Forespørgsel: '%s'"
@@ -3350,43 +3351,43 @@ msgstr "Kan ikke hente mixmasters type2.liste!"
 msgid "Select a remailer chain."
 msgstr "Vælg en genposterkæde"
 
-#: remailer.c:600
+#: remailer.c:598
 #, c-format
 msgid "Error: %s can't be used as the final remailer of a chain."
 msgstr "Fejl: %s kan ikke være sidste led i kæden."
 
-#: remailer.c:633
+#: remailer.c:628
 #, c-format
 msgid "Mixmaster chains are limited to %d elements."
 msgstr "Kæden må højst have %d led."
 
-#: remailer.c:658
+#: remailer.c:651
 msgid "The remailer chain is already empty."
 msgstr "Genposterkæden er allerede tom."
 
-#: remailer.c:668
+#: remailer.c:661
 msgid "You already have the first chain element selected."
 msgstr "Du har allerede valgt kædens første led."
 
-#: remailer.c:678
+#: remailer.c:671
 msgid "You already have the last chain element selected."
 msgstr "Du har allerede valgt kædens sidste led."
 
-#: remailer.c:717
+#: remailer.c:710
 msgid "Mixmaster doesn't accept Cc or Bcc headers."
 msgstr "Breve sendt med Mixmaster må ikke have Cc- eller Bcc-felter."
 
-#: remailer.c:741
+#: remailer.c:734
 msgid ""
 "Please set the hostname variable to a proper value when using mixmaster!"
 msgstr "Sæt hostname-variablen til en passende værdi ved brug af mixmaster!"
 
-#: remailer.c:770
+#: remailer.c:763
 #, c-format
 msgid "Error sending message, child exited %d.\n"
 msgstr "Fejl ved afsendelse af brev, afslutningskode fra barneproces: %d.\n"
 
-#: remailer.c:774
+#: remailer.c:767
 msgid "Error sending message."
 msgstr "Fejl ved afsendelse af brev."
 

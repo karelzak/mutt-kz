@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.2\n"
-"POT-Creation-Date: 2000-07-07 01:08+0200\n"
+"POT-Creation-Date: 2000-07-28 20:51+0200\n"
 "PO-Revision-Date: 1999-12-20 20:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -668,7 +668,7 @@ msgstr "按下任何一個鍵繼續…"
 msgid " ('?' for list): "
 msgstr " (用 '?' 顯示列表)："
 
-#: curs_main.c:55 curs_main.c:565
+#: curs_main.c:55 curs_main.c:568
 msgid "No mailbox is open."
 msgstr "沒有已開啟信箱。"
 
@@ -728,122 +728,122 @@ msgstr "信箱已被其他途徑改變過。旗標可能有錯誤。"
 msgid "New mail in this mailbox."
 msgstr "這個信箱中有新信件。"
 
-#: curs_main.c:571
+#: curs_main.c:574
 msgid "No tagged messages."
 msgstr "沒有標記了的信件。"
 
-#: curs_main.c:651
+#: curs_main.c:654
 msgid "Jump to message: "
 msgstr "跳到信件："
 
-#: curs_main.c:657
+#: curs_main.c:660
 msgid "Argument must be a message number."
 msgstr "需要一個信件編號的參數。"
 
-#: curs_main.c:690
+#: curs_main.c:693
 msgid "That message is not visible."
 msgstr "這封信件無法顯示。"
 
-#: curs_main.c:693
+#: curs_main.c:696
 msgid "Invalid message number."
 msgstr "無效的信件編號。"
 
-#: curs_main.c:706
+#: curs_main.c:709
 msgid "Delete messages matching: "
 msgstr "刪除符合這樣式的信件："
 
-#: curs_main.c:728
+#: curs_main.c:731
 msgid "No limit pattern is in effect."
 msgstr "沒有限制樣式是有效的。"
 
 #. i18n: ask for a limit to apply
-#: curs_main.c:733
+#: curs_main.c:736
 #, c-format
 msgid "Limit: %s"
 msgstr "限制: %s"
 
-#: curs_main.c:742
+#: curs_main.c:746
 msgid "Limit to messages matching: "
 msgstr "限制只符合這樣式的信件："
 
-#: curs_main.c:772
+#: curs_main.c:776
 msgid "Quit Mutt?"
 msgstr "離開 Mutt？"
 
-#: curs_main.c:895
+#: curs_main.c:899
 msgid "Tag messages matching: "
 msgstr "標記信件的條件："
 
-#: curs_main.c:903
+#: curs_main.c:907
 msgid "Undelete messages matching: "
 msgstr "反刪除信件的條件："
 
-#: curs_main.c:910
+#: curs_main.c:914
 msgid "Untag messages matching: "
 msgstr "反標記信件的條件："
 
-#: curs_main.c:928
+#: curs_main.c:932
 msgid "Open mailbox in read-only mode"
 msgstr "用唯讀模式開啟信箱"
 
-#: curs_main.c:930
+#: curs_main.c:934
 msgid "Open mailbox"
 msgstr "開啟信箱"
 
-#: curs_main.c:946 mx.c:454 mx.c:600
+#: curs_main.c:950 mx.c:454 mx.c:600
 #, c-format
 msgid "%s is not a mailbox."
 msgstr "%s 不是信箱。"
 
-#: curs_main.c:1031
+#: curs_main.c:1035
 msgid "Exit Mutt without saving?"
 msgstr "不儲存便離開 Mutt 嗎？"
 
-#: curs_main.c:1067 curs_main.c:1091
+#: curs_main.c:1071 curs_main.c:1095
 msgid "You are on the last message."
 msgstr "您已經在最後一封信了。"
 
-#: curs_main.c:1074 curs_main.c:1116
+#: curs_main.c:1078 curs_main.c:1120
 msgid "No undeleted messages."
 msgstr "沒有要反刪除的信件。"
 
-#: curs_main.c:1109 curs_main.c:1132
+#: curs_main.c:1113 curs_main.c:1136
 msgid "You are on the first message."
 msgstr "您已經在第一封信了。"
 
-#: curs_main.c:1204 pattern.c:1123
+#: curs_main.c:1208 pattern.c:1123
 msgid "Search wrapped to top."
 msgstr "搜尋至開頭。"
 
-#: curs_main.c:1213 pattern.c:1134
+#: curs_main.c:1217 pattern.c:1134
 msgid "Search wrapped to bottom."
 msgstr "搜尋至結尾。"
 
-#: curs_main.c:1246
+#: curs_main.c:1250
 msgid "No new messages"
 msgstr "沒有新信件"
 
-#: curs_main.c:1246
+#: curs_main.c:1250
 msgid "No unread messages"
 msgstr "沒有尚未讀取的信件"
 
-#: curs_main.c:1247
+#: curs_main.c:1251
 msgid " in this limited view"
 msgstr " 在這限定的瀏覽中"
 
-#: curs_main.c:1371
+#: curs_main.c:1375
 msgid "No more threads."
 msgstr "沒有更多的序列"
 
-#: curs_main.c:1373
+#: curs_main.c:1377
 msgid "You are on the first thread."
 msgstr "您已經在第一個序列上。"
 
-#: curs_main.c:1443
+#: curs_main.c:1447
 msgid "Thread contains unread messages."
 msgstr "序列中有尚未讀取的信件。"
 
-#: curs_main.c:1456 flags.c:228 thread.c:651 thread.c:702
+#: curs_main.c:1460 flags.c:228 thread.c:651 thread.c:702
 msgid "Threading is not enabled."
 msgstr "序列功\能尚未啟動。"
 
@@ -1183,16 +1183,16 @@ msgstr "已接觸伺服器，正拿取目錄表…"
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "嚴重錯誤。信件數量不協調！"
 
-#: imap/imap.c:213
+#: imap/imap.c:234
 #, c-format
 msgid "Reopening mailbox... %s"
 msgstr "重新開啟信箱中… %s"
 
-#: imap/imap.c:419
+#: imap/imap.c:440
 msgid "This IMAP server is ancient. Mutt does not work with it."
 msgstr "這個 IMAP 伺服器已過時，Mutt 無法使用它。"
 
-#: imap/imap.c:585
+#: imap/imap.c:606
 #, c-format
 msgid "Selecting %s..."
 msgstr "選擇 %s 中…"
@@ -1201,44 +1201,44 @@ msgstr "選擇 %s 中…"
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap/imap.c:803
+#: imap/imap.c:824
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "無法附加在這個伺服器上的 IMAP 信箱"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1055
+#: imap/imap.c:832 imap/message.c:631 muttlib.c:1055
 #, c-format
 msgid "Create %s?"
 msgstr "建立 %s？"
 
-#: imap/imap.c:835
+#: imap/imap.c:856
 msgid "Closing connection to IMAP server..."
 msgstr "正在關閉與 IMAP 伺服器的連線…"
 
-#: imap/imap.c:989
+#: imap/imap.c:1010
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "標簽了的 %d 封信件刪去了…"
 
-#: imap/imap.c:1009
+#: imap/imap.c:1028
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "正在儲存信件狀態旗標… [%d/%d]"
 
-#: imap/imap.c:1068
+#: imap/imap.c:1085
 msgid "Closing mailbox..."
 msgstr "關閉信箱中…"
 
-#: imap/imap.c:1078
+#: imap/imap.c:1095
 msgid "Expunging messages from server..."
 msgstr "正在刪除伺服器上的信件…"
 
-#: imap/imap.c:1408
+#: imap/imap.c:1425
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "訂閱\ %s…"
 
-#: imap/imap.c:1410
+#: imap/imap.c:1427
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "取消訂閱\ %s…"
@@ -1357,26 +1357,26 @@ msgstr "無法取回使用這個 IMAP 伺服器版本的郵件的標頭。"
 msgid "Fetching message headers... [%d/%d]"
 msgstr "正在取回信件標頭… [%d/%d]"
 
-#: imap/message.c:308
+#: imap/message.c:307
 #, fuzzy
 msgid "Fetching message..."
 msgstr "寄出信件中…"
 
-#: imap/message.c:495
+#: imap/message.c:486
 msgid "Sending APPEND command ..."
 msgstr "正在送出 APPEND 命令…"
 
-#: imap/message.c:534
+#: imap/message.c:525
 #, fuzzy
 msgid "Uploading message ..."
 msgstr "寄出信件中…"
 
-#: imap/message.c:619
+#: imap/message.c:610
 #, fuzzy, c-format
 msgid "Copying %d messages to %s..."
 msgstr "正在搬移已經讀取的信件到 %s …"
 
-#: imap/message.c:623
+#: imap/message.c:614
 #, fuzzy, c-format
 msgid "Copying message %d to %s..."
 msgstr "寫入信件到 %s …"
@@ -3234,20 +3234,20 @@ msgstr "搜尋"
 msgid "Waiting for response..."
 msgstr "等待回應中…"
 
-#: query.c:192 query.c:217
+#: query.c:191 query.c:216
 msgid "Query command not defined."
 msgstr "查詢指令尚未定義。"
 
-#: query.c:244
+#: query.c:243
 msgid "Query"
 msgstr "查詢"
 
 #. Prompt for Query
-#: query.c:257 query.c:285
+#: query.c:256 query.c:284
 msgid "Query: "
 msgstr "查詢："
 
-#: query.c:268 query.c:294
+#: query.c:267 query.c:293
 #, c-format
 msgid "Query '%s'"
 msgstr "查詢 '%s'"
@@ -3382,44 +3382,44 @@ msgstr ""
 msgid "Select a remailer chain."
 msgstr "刪除某行上所有的字母"
 
-#: remailer.c:600
+#: remailer.c:598
 #, c-format
 msgid "Error: %s can't be used as the final remailer of a chain."
 msgstr ""
 
-#: remailer.c:633
+#: remailer.c:628
 #, c-format
 msgid "Mixmaster chains are limited to %d elements."
 msgstr ""
 
-#: remailer.c:658
+#: remailer.c:651
 msgid "The remailer chain is already empty."
 msgstr ""
 
-#: remailer.c:668
+#: remailer.c:661
 #, fuzzy
 msgid "You already have the first chain element selected."
 msgstr "您已經在第一封信了。"
 
-#: remailer.c:678
+#: remailer.c:671
 msgid "You already have the last chain element selected."
 msgstr ""
 
-#: remailer.c:717
+#: remailer.c:710
 msgid "Mixmaster doesn't accept Cc or Bcc headers."
 msgstr ""
 
-#: remailer.c:741
+#: remailer.c:734
 msgid ""
 "Please set the hostname variable to a proper value when using mixmaster!"
 msgstr ""
 
-#: remailer.c:770
+#: remailer.c:763
 #, fuzzy, c-format
 msgid "Error sending message, child exited %d.\n"
 msgstr "寄送訊息出現錯誤，子程序已結束 %d (%s)。"
 
-#: remailer.c:774
+#: remailer.c:767
 msgid "Error sending message."
 msgstr "寄信途中發生錯誤。"
 
