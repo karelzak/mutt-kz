@@ -749,6 +749,12 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 	}
 	break;
 
+      case OP_COMPOSE_UPDATE_ENCODING:
+        CHECK_COUNT;
+        mutt_update_encoding(idx[menu->current]->content);
+        menu->redraw = REDRAW_CURRENT;
+        break;
+      
       case OP_COMPOSE_EDIT_TYPE:
 	CHECK_COUNT;
 	snprintf (buf, sizeof (buf), "%s/%s",
@@ -792,7 +798,10 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
       case OP_COMPOSE_SEND_MESSAGE:
       
         if(check_attachments(idx, idxlen) != 0)
+        {
+	  menu->redraw = REDRAW_FULL;
 	  break;
+	}
       
 	if (!fccSet && *fcc)
 	{
@@ -985,7 +994,10 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
       case OP_COMPOSE_POSTPONE_MESSAGE:
       
         if(check_attachments(idx, idxlen) != 0)
+        {
+	  menu->redraw = REDRAW_FULL;
 	  break;
+	}
       
 	loop = 0;
 	r = 1;

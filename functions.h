@@ -333,6 +333,7 @@ struct binding_t OpCompose[] = {
   { "edit-to",		OP_COMPOSE_EDIT_TO,		"t" },
   { "edit-type",	OP_COMPOSE_EDIT_TYPE,		"\024" },
   { "toggle-unlink",	OP_COMPOSE_TOGGLE_UNLINK,	"u" },
+  { "update-encoding",	OP_COMPOSE_UPDATE_ENCODING,	"U" },
   { "view-attach",	OP_VIEW_ATTACH,			M_ENTER_S },
   { "send-message",	OP_COMPOSE_SEND_MESSAGE,	"y" },
   { "pipe-entry",	OP_PIPE,			"|" },
