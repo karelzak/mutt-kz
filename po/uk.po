@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 1999-02-12 12:05+0100\n"
+"POT-Creation-Date: 1999-03-03 20:45+0100\n"
 "PO-Revision-Date: 1998-10-25 15:44+0200\n"
 "Last-Translator: Andrej N. Gritsenko <andrej@lucky.net>\n"
 "Language-Team: Ukrainian <uk@ua.net>\n"
@@ -66,7 +66,7 @@ msgstr "Внести до файлу: "
 msgid "Alias added."
 msgstr "Ал╕ас додано."
 
-#: attach.c:111 attach.c:234 attach.c:425 attach.c:864
+#: attach.c:111 attach.c:234 attach.c:425 attach.c:869
 msgid "Can't match nametemplate, continue?"
 msgstr "Нема╓ в╕дпов╕дного ╕м'я, дал╕?"
 
@@ -114,11 +114,11 @@ msgstr "Неможливо створити ф╕льтр"
 msgid "Attachment saved."
 msgstr "Додаток записано."
 
-#: attach.c:749
+#: attach.c:751
 msgid "Write fault!"
 msgstr "Зб╕й запису!"
 
-#: attach.c:948
+#: attach.c:953
 msgid "I don't know how to print that!"
 msgstr "Не знаю, як це друкувати!"
 
@@ -599,134 +599,134 @@ msgstr "В╕дп."
 msgid "Group"
 msgstr "Вс╕м"
 
-#: curs_main.c:422
+#: curs_main.c:429
 msgid "Mailbox was externally modified.  Flags may be wrong."
 msgstr "Поштову скриньку зм╕нила зовн╕шня програма. Флаги зм╕нено також."
 
-#: curs_main.c:425
+#: curs_main.c:432
 msgid "New mail in this mailbox."
 msgstr "Нова пошта у ц╕й поштов╕й скриньц╕."
 
-#: curs_main.c:525
+#: curs_main.c:532
 msgid "No mailbox is open."
 msgstr "Нема╓ в╕дкрито╖ поштово╖ скриньки."
 
-#: curs_main.c:531
+#: curs_main.c:538
 msgid "No tagged messages."
 msgstr "Жодного листа не вид╕лено."
 
-#: curs_main.c:611
+#: curs_main.c:618
 msgid "Jump to message: "
 msgstr "Перех╕д до листа: "
 
-#: curs_main.c:617
+#: curs_main.c:624
 msgid "Argument must be a message number."
 msgstr "Аргумент повинен бути номером листа."
 
-#: curs_main.c:650
+#: curs_main.c:657
 msgid "That message is not visible."
 msgstr "Цей лист не можна побачити."
 
-#: curs_main.c:653
+#: curs_main.c:660
 msgid "Invalid message number."
 msgstr "Нев╕рний номер листа."
 
-#: curs_main.c:666
+#: curs_main.c:673
 msgid "Delete messages matching: "
 msgstr "Видалити листи за шаблоном: "
 
-#: curs_main.c:688
+#: curs_main.c:695
 msgid "No limit pattern is in effect."
 msgstr ""
 
 #. i18n: ask for a limit to apply
-#: curs_main.c:693
+#: curs_main.c:700
 #, c-format
 msgid "Limit: %s"
 msgstr ""
 
-#: curs_main.c:702
+#: curs_main.c:709
 msgid "Limit to messages matching: "
 msgstr ""
 
-#: curs_main.c:732
+#: curs_main.c:739
 msgid "Quit Mutt?"
 msgstr "Вийти з Mutt?"
 
-#: curs_main.c:834
+#: curs_main.c:841
 msgid "Tag messages matching: "
 msgstr "Вид╕лити листи за шаблоном: "
 
-#: curs_main.c:842
+#: curs_main.c:849
 msgid "Undelete messages matching: "
 msgstr "В╕дновити листи за шаблоном: "
 
-#: curs_main.c:849
+#: curs_main.c:856
 msgid "Untag messages matching: "
 msgstr "Зняти вид╕лення з лист╕в за шаблоном: "
 
-#: curs_main.c:867
+#: curs_main.c:874
 msgid "Open mailbox"
 msgstr "В╕дкрити скриньку"
 
-#: curs_main.c:869
+#: curs_main.c:876
 msgid "Open mailbox in read-only mode"
 msgstr "В╕дкрити скриньку лише для читання"
 
-#: curs_main.c:885 mx.c:429 mx.c:570
+#: curs_main.c:892 mx.c:429 mx.c:570
 #, c-format
 msgid "%s is not a mailbox."
 msgstr "%s не ╓ поштовою скринькою."
 
-#: curs_main.c:972
+#: curs_main.c:974
 msgid "Exit Mutt without saving?"
 msgstr "Покинути Mutt без збереження?"
 
-#: curs_main.c:989 curs_main.c:1013
+#: curs_main.c:991 curs_main.c:1015
 msgid "You are on the last message."
 msgstr "Це останн╕й лист."
 
-#: curs_main.c:996 curs_main.c:1038
+#: curs_main.c:998 curs_main.c:1040
 msgid "No undeleted messages."
 msgstr "Вс╕ листи видалено."
 
-#: curs_main.c:1031 curs_main.c:1054
+#: curs_main.c:1033 curs_main.c:1056
 msgid "You are on the first message."
 msgstr "Це перший лист."
 
-#: curs_main.c:1126 pattern.c:1108
+#: curs_main.c:1128 pattern.c:1108
 msgid "Search wrapped to top."
 msgstr "Пошук з початку."
 
-#: curs_main.c:1135 pattern.c:1119
+#: curs_main.c:1137 pattern.c:1119
 msgid "Search wrapped to bottom."
 msgstr "Пошук в╕д к╕нця."
 
-#: curs_main.c:1168
+#: curs_main.c:1170
 msgid "No new messages"
 msgstr "Нових лист╕в нема╓"
 
-#: curs_main.c:1168
+#: curs_main.c:1170
 msgid "No unread messages"
 msgstr "Нечитаних лист╕в нема╓"
 
-#: curs_main.c:1169
+#: curs_main.c:1171
 msgid " in this limited view"
 msgstr " у цих межах огляду"
 
-#: curs_main.c:1279
+#: curs_main.c:1281
 msgid "No more threads."
 msgstr "Ниток б╕льш нема."
 
-#: curs_main.c:1281
+#: curs_main.c:1283
 msgid "You are on the first thread."
 msgstr "Це перша нитка."
 
-#: curs_main.c:1334
+#: curs_main.c:1336
 msgid "Thread contains unread messages."
 msgstr "Нитка ма╓ нечитан╕ листи."
 
-#: curs_main.c:1347 flags.c:219 thread.c:643
+#: curs_main.c:1349 flags.c:219 thread.c:651
 msgid "Threading is not enabled."
 msgstr "Сшивання недоступне."
 
@@ -915,7 +915,7 @@ msgstr "(використовуйте '%s' для ц╕╓╖ частини)"
 msgid "(need 'view-attachments' bound to key!)"
 msgstr "(треба призначити клав╕шу до 'view-attachments'!)"
 
-#: headers.c:201
+#: headers.c:202
 #, c-format
 msgid "%s: unable to attach file"
 msgstr "%s: неможливо додати файл"
@@ -1000,7 +1000,7 @@ msgstr "Ре╓страц╕я..."
 msgid "Selecting %s..."
 msgstr "Виб╕р %s..."
 
-#: imap.c:1109 lib.c:1204
+#: imap.c:1109 lib.c:1206
 #, c-format
 msgid "Create %s?"
 msgstr "Створити %s?"
@@ -1009,29 +1009,29 @@ msgstr "Створити %s?"
 msgid "Fetching message..."
 msgstr "Отримання листа..."
 
-#: imap.c:1268
+#: imap.c:1277
 msgid "Sending APPEND command ..."
 msgstr "Надсилання команди APPEND..."
 
-#: imap.c:1308
+#: imap.c:1317
 msgid "Uploading message ..."
 msgstr "Забирання листа..."
 
-#: imap.c:1363
+#: imap.c:1372
 msgid "Closing connection to IMAP server..."
 msgstr "Закриття з'╓днання з сервером IMAP..."
 
-#: imap.c:1393
+#: imap.c:1402
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Збереження флаг╕в статусу листа... [%d/%d]"
 
-#: imap.c:1419
+#: imap.c:1428
 msgid "Expunging messages from server..."
 msgstr ""
 
 #. tell the server to commit changes
-#: imap.c:1470
+#: imap.c:1479
 msgid "Closing mailbox..."
 msgstr "Закриття поштово╖ скриньки..."
 
@@ -1852,12 +1852,12 @@ msgstr "Файл ╕сну╓, знищити й записати цей?"
 msgid "oac"
 msgstr ""
 
-#: lib.c:1180
+#: lib.c:1182
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s не ╓ поштовою скринькою!"
 
-#: lib.c:1186
+#: lib.c:1188
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Додати листи до %s?"
@@ -2820,16 +2820,16 @@ msgstr "П╕дтриму╓ться т╕льки видалення в багаточастинних листах."
 msgid "This operation is not currently supported for PGP messages."
 msgstr "Ця операц╕я не п╕дтриму╓ться для лист╕в з PGP."
 
-#: rfc1524.c:173
+#: rfc1524.c:176
 #, c-format
 msgid "Improperly formated entry for type %s in \"%s\" line %d"
 msgstr "Нев╕рно форматований запис для типу %s в \"%s\", рядок %d"
 
-#: rfc1524.c:405
+#: rfc1524.c:408
 msgid "No mailcap path specified"
 msgstr "Шлях до mailcap не вказано"
 
-#: rfc1524.c:431
+#: rfc1524.c:434
 #, c-format
 msgid "mailcap entry for type %s not found"
 msgstr "запису для типу %s в mailcap не знайдено"
@@ -2940,31 +2940,31 @@ msgstr "в╕д╕слати лист"
 msgid "Mail sent."
 msgstr "Лист послано."
 
-#: sendlib.c:474
+#: sendlib.c:476
 msgid "No boundary parameter found! [report this error]"
 msgstr ""
 
-#: sendlib.c:508
+#: sendlib.c:510
 #, c-format
 msgid "%s no longer exists!"
 msgstr "%s б╕льше не ╕сну╓!"
 
-#: sendlib.c:776
+#: sendlib.c:778
 #, c-format
 msgid "Could not open %s"
 msgstr "Не вийшло в╕дкрити %s"
 
-#: sendlib.c:1682
+#: sendlib.c:1684
 #, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Помилка в╕дправки, код повернення %d (%s).\n"
 
-#: sendlib.c:1684
+#: sendlib.c:1686
 #, c-format
 msgid "Saved output of child process to %s.\n"
 msgstr "Вивод породженого процесу збережено в %s.\n"
 
-#: sendlib.c:1688
+#: sendlib.c:1690
 msgid "Error sending message."
 msgstr "Помилка при в╕дправц╕."
 

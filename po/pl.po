@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-0.95i\n"
-"POT-Creation-Date: 1999-02-12 12:05+0100\n"
+"POT-Creation-Date: 1999-03-03 20:45+0100\n"
 "PO-Revision-Date: 1998-12-17 13:12+0100\n"
 "Last-Translator: Pawe³ Dziekoñski <pdziekonski@pkmk486.ch.pwr.wroc.pl>\n"
 "Language-Team: POLISH <pl@li.org>\n"
@@ -67,7 +67,7 @@ msgstr "Zachowaj do pliku: "
 msgid "Alias added."
 msgstr "Alias dodany."
 
-#: attach.c:111 attach.c:234 attach.c:425 attach.c:864
+#: attach.c:111 attach.c:234 attach.c:425 attach.c:869
 msgid "Can't match nametemplate, continue?"
 msgstr "Nie pasuj±cy szablon nazwy, kontynuowaæ?"
 
@@ -115,11 +115,11 @@ msgstr "Nie mogê utworzyæ filtru"
 msgid "Attachment saved."
 msgstr "Za³±cznik zachowany."
 
-#: attach.c:749
+#: attach.c:751
 msgid "Write fault!"
 msgstr "B³±d zapisu!"
 
-#: attach.c:948
+#: attach.c:953
 msgid "I don't know how to print that!"
 msgstr "Nie wiem jak to wydrukowaæ!"
 
@@ -601,134 +601,134 @@ msgstr "Odpowiedz"
 msgid "Group"
 msgstr "Grupuj"
 
-#: curs_main.c:422
+#: curs_main.c:429
 msgid "Mailbox was externally modified.  Flags may be wrong."
 msgstr "Skrzynka zosta³a zmodyfikowana z zewn±trz. Flagi mog± byæ nieaktualne."
 
-#: curs_main.c:425
+#: curs_main.c:432
 msgid "New mail in this mailbox."
 msgstr "Nowa poczta w tej skrzynce."
 
-#: curs_main.c:525
+#: curs_main.c:532
 msgid "No mailbox is open."
 msgstr "Nie otwarto ¿adnej skrzynki."
 
-#: curs_main.c:531
+#: curs_main.c:538
 msgid "No tagged messages."
 msgstr "Brak zaznaczonych listów."
 
-#: curs_main.c:611
+#: curs_main.c:618
 msgid "Jump to message: "
 msgstr "Skocz do listu: "
 
-#: curs_main.c:617
+#: curs_main.c:624
 msgid "Argument must be a message number."
 msgstr "Argumentem musi byæ numer listu."
 
-#: curs_main.c:650
+#: curs_main.c:657
 msgid "That message is not visible."
 msgstr "Ten list nie jest widoczny."
 
-#: curs_main.c:653
+#: curs_main.c:660
 msgid "Invalid message number."
 msgstr "Z³y numer listu."
 
-#: curs_main.c:666
+#: curs_main.c:673
 msgid "Delete messages matching: "
 msgstr "Usuñ pasuj±ce listy: "
 
-#: curs_main.c:688
+#: curs_main.c:695
 msgid "No limit pattern is in effect."
 msgstr "Ograniczenie nie jest okre¶lone."
 
 #. i18n: ask for a limit to apply
-#: curs_main.c:693
+#: curs_main.c:700
 #, c-format
 msgid "Limit: %s"
 msgstr "Ograniczenie: %s"
 
-#: curs_main.c:702
+#: curs_main.c:709
 msgid "Limit to messages matching: "
 msgstr "Ogranicz do pasuj±cych listów: "
 
-#: curs_main.c:732
+#: curs_main.c:739
 msgid "Quit Mutt?"
 msgstr "Wyj¶æ z programu pocztowego?"
 
-#: curs_main.c:834
+#: curs_main.c:841
 msgid "Tag messages matching: "
 msgstr "Zaznacz pasuj±ce listy: "
 
-#: curs_main.c:842
+#: curs_main.c:849
 msgid "Undelete messages matching: "
 msgstr "Odtwórz pasuj±ce listy: "
 
-#: curs_main.c:849
+#: curs_main.c:856
 msgid "Untag messages matching: "
 msgstr "Odznacz pasuj±ce listy: "
 
-#: curs_main.c:867
+#: curs_main.c:874
 msgid "Open mailbox"
 msgstr "Otwórz skrzynkê"
 
-#: curs_main.c:869
+#: curs_main.c:876
 msgid "Open mailbox in read-only mode"
 msgstr "Otwórz skrzynkê tylko do odczytu"
 
-#: curs_main.c:885 mx.c:429 mx.c:570
+#: curs_main.c:892 mx.c:429 mx.c:570
 #, c-format
 msgid "%s is not a mailbox."
 msgstr "%s nie jest skrzynk±."
 
-#: curs_main.c:972
+#: curs_main.c:974
 msgid "Exit Mutt without saving?"
 msgstr "Wyj¶æ z programu pocztowego bez zapisywania?"
 
-#: curs_main.c:989 curs_main.c:1013
+#: curs_main.c:991 curs_main.c:1015
 msgid "You are on the last message."
 msgstr "To ostatnia wiadomo¶æ."
 
-#: curs_main.c:996 curs_main.c:1038
+#: curs_main.c:998 curs_main.c:1040
 msgid "No undeleted messages."
 msgstr "Brak odtworzonych listów."
 
-#: curs_main.c:1031 curs_main.c:1054
+#: curs_main.c:1033 curs_main.c:1056
 msgid "You are on the first message."
 msgstr "To pierwsza wiadomo¶æ."
 
-#: curs_main.c:1126 pattern.c:1108
+#: curs_main.c:1128 pattern.c:1108
 msgid "Search wrapped to top."
 msgstr "Poszukiwanie pod±¿y³o na pocz±tek."
 
-#: curs_main.c:1135 pattern.c:1119
+#: curs_main.c:1137 pattern.c:1119
 msgid "Search wrapped to bottom."
 msgstr "Poszukiwanie pod±¿y³o na koniec."
 
-#: curs_main.c:1168
+#: curs_main.c:1170
 msgid "No new messages"
 msgstr "Brak nowych listów"
 
-#: curs_main.c:1168
+#: curs_main.c:1170
 msgid "No unread messages"
 msgstr "Brak nie przeczytanych listów"
 
-#: curs_main.c:1169
+#: curs_main.c:1171
 msgid " in this limited view"
 msgstr " w trybie ograniczonego przegl±du"
 
-#: curs_main.c:1279
+#: curs_main.c:1281
 msgid "No more threads."
 msgstr "Nie ma wiêcej w±tków."
 
-#: curs_main.c:1281
+#: curs_main.c:1283
 msgid "You are on the first thread."
 msgstr "To pierwszy w±tek."
 
-#: curs_main.c:1334
+#: curs_main.c:1336
 msgid "Thread contains unread messages."
 msgstr "Watek zawiera nie przeczytane listy."
 
-#: curs_main.c:1347 flags.c:219 thread.c:643
+#: curs_main.c:1349 flags.c:219 thread.c:651
 msgid "Threading is not enabled."
 msgstr "W±tkowanie nie w³±czone."
 
@@ -923,7 +923,7 @@ msgstr "(u¿yæ '%s' do ogl±dania tego fragmentu)"
 msgid "(need 'view-attachments' bound to key!)"
 msgstr "(przypisz 'view-attachments' do klawisza!)"
 
-#: headers.c:201
+#: headers.c:202
 #, c-format
 msgid "%s: unable to attach file"
 msgstr "%s: nie mogê za³±czyæ pliku"
@@ -1010,7 +1010,7 @@ msgstr "Zalogowanie nie powiod³o siê."
 msgid "Selecting %s..."
 msgstr "Wybieram %s..."
 
-#: imap.c:1109 lib.c:1204
+#: imap.c:1109 lib.c:1206
 #, c-format
 msgid "Create %s?"
 msgstr "Utworzyæ %s?"
@@ -1019,29 +1019,29 @@ msgstr "Utworzyæ %s?"
 msgid "Fetching message..."
 msgstr "¦ci±gam list..."
 
-#: imap.c:1268
+#: imap.c:1277
 msgid "Sending APPEND command ..."
 msgstr "Wysy³am komendê APPEND..."
 
-#: imap.c:1308
+#: imap.c:1317
 msgid "Uploading message ..."
 msgstr "£adujê list ..."
 
-#: imap.c:1363
+#: imap.c:1372
 msgid "Closing connection to IMAP server..."
 msgstr "Zamykam po³±czenie do serwera IMAP..."
 
-#: imap.c:1393
+#: imap.c:1402
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Zachowujê stan flag listów... [%d/%d]"
 
-#: imap.c:1419
+#: imap.c:1428
 msgid "Expunging messages from server..."
 msgstr "Kompresujê listy z serwera... "
 
 #. tell the server to commit changes
-#: imap.c:1470
+#: imap.c:1479
 msgid "Closing mailbox..."
 msgstr "Zamykam skrzynkê..."
 
@@ -1862,12 +1862,12 @@ msgstr "Plik istnieje, zapisaæ zamiast niego?"
 msgid "oac"
 msgstr ""
 
-#: lib.c:1180
+#: lib.c:1182
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s nie jest folderem poczty"
 
-#: lib.c:1186
+#: lib.c:1188
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Dodaæ wiadomo¶ci do %s?"
@@ -2877,16 +2877,16 @@ msgstr "Mo¿liwe jest jedynie kasowanie wieloczê¶ciowych za³±czników."
 msgid "This operation is not currently supported for PGP messages."
 msgstr "ten rodzaj operacji nie jest obecnie mo¿liwy dla listów PGP."
 
-#: rfc1524.c:173
+#: rfc1524.c:176
 #, c-format
 msgid "Improperly formated entry for type %s in \"%s\" line %d"
 msgstr "B³êdnie sformatowane pole dla typu %s w \"%s\" linii %d"
 
-#: rfc1524.c:405
+#: rfc1524.c:408
 msgid "No mailcap path specified"
 msgstr "Brak ¶cie¿ki do pliku specjalnego 'mailcap'"
 
-#: rfc1524.c:431
+#: rfc1524.c:434
 #, c-format
 msgid "mailcap entry for type %s not found"
 msgstr "wpis w 'mailcap' dla typu %s nieznany"
@@ -2997,31 +2997,31 @@ msgstr "wy¶lij list"
 msgid "Mail sent."
 msgstr "Poczta wys³ana."
 
-#: sendlib.c:474
+#: sendlib.c:476
 msgid "No boundary parameter found! [report this error]"
 msgstr "Brak parametru granicznego! (zg³o¶ ten b³±d)"
 
-#: sendlib.c:508
+#: sendlib.c:510
 #, c-format
 msgid "%s no longer exists!"
 msgstr "%s ju¿ nie istnieje!"
 
-#: sendlib.c:776
+#: sendlib.c:778
 #, c-format
 msgid "Could not open %s"
 msgstr "Nie mogê otworzyæ %s"
 
-#: sendlib.c:1682
+#: sendlib.c:1684
 #, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "B³±d podczas wysy³ania listu, proces potomny opuszczony %d (%s).\n"
 
-#: sendlib.c:1684
+#: sendlib.c:1686
 #, c-format
 msgid "Saved output of child process to %s.\n"
 msgstr "Zapisa³em efekty dzia³ania procesu potomnego do %s.\n"
 
-#: sendlib.c:1688
+#: sendlib.c:1690
 msgid "Error sending message."
 msgstr "B³±d podczas wysy³ania wiadomo¶ci."
 

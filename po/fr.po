@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 0.94.14i\n"
-"POT-Creation-Date: 1999-02-12 12:05+0100\n"
+"POT-Creation-Date: 1999-03-03 20:45+0100\n"
 "PO-Revision-Date: 1999-02-15 21:37+0100\n"
 "Last-Translator: Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre "
 "<Vincent.Lefevre@ens-lyon.fr>\n"
@@ -68,7 +68,7 @@ msgstr "Sauver dans le fichier : "
 msgid "Alias added."
 msgstr "Alias ajouté."
 
-#: attach.c:111 attach.c:234 attach.c:425 attach.c:864
+#: attach.c:111 attach.c:234 attach.c:425 attach.c:869
 msgid "Can't match nametemplate, continue?"
 msgstr "Ne correspond pas au nametemplate, continuer ?"
 
@@ -118,11 +118,11 @@ msgstr "Impossible de créer le filtre"
 msgid "Attachment saved."
 msgstr "Attachement sauvé."
 
-#: attach.c:749
+#: attach.c:751
 msgid "Write fault!"
 msgstr "Erreur d'écriture !"
 
-#: attach.c:948
+#: attach.c:953
 msgid "I don't know how to print that!"
 msgstr "Je ne sais pas comment imprimer ceci !"
 
@@ -627,137 +627,137 @@ msgstr "Répondre"
 msgid "Group"
 msgstr "Groupe"
 
-#: curs_main.c:422
+#: curs_main.c:429
 msgid "Mailbox was externally modified.  Flags may be wrong."
 msgstr ""
 "Boîte aux lettres modifiée extérieurement. Les indicateurs peuvent être faux."
 
-#: curs_main.c:425
+#: curs_main.c:432
 msgid "New mail in this mailbox."
 msgstr "Nouveau(x) message(s) dans cette boîte aux lettres."
 
-#: curs_main.c:525
+#: curs_main.c:532
 msgid "No mailbox is open."
 msgstr "Aucune boîte aux lettres n'est ouverte."
 
-#: curs_main.c:531
+#: curs_main.c:538
 msgid "No tagged messages."
 msgstr "Pas de messages marqués."
 
-#: curs_main.c:611
+#: curs_main.c:618
 msgid "Jump to message: "
 msgstr "Aller au message : "
 
-#: curs_main.c:617
+#: curs_main.c:624
 msgid "Argument must be a message number."
 msgstr "L'argument doit être un numéro de message."
 
-#: curs_main.c:650
+#: curs_main.c:657
 msgid "That message is not visible."
 msgstr "Ce message n'est pas visible."
 
-#: curs_main.c:653
+#: curs_main.c:660
 msgid "Invalid message number."
 msgstr "Numéro de message invalide."
 
-#: curs_main.c:666
+#: curs_main.c:673
 msgid "Delete messages matching: "
 msgstr "Effacer les messages correspondant à : "
 
-#: curs_main.c:688
+#: curs_main.c:695
 msgid "No limit pattern is in effect."
 msgstr "Aucun motif de limite n'est en vigueur."
 
 # , c-format
 #. i18n: ask for a limit to apply
-#: curs_main.c:693
+#: curs_main.c:700
 #, c-format
 msgid "Limit: %s"
 msgstr "Limite : %s"
 
-#: curs_main.c:702
+#: curs_main.c:709
 msgid "Limit to messages matching: "
 msgstr "Limiter aux messages correspondant à : "
 
-#: curs_main.c:732
+#: curs_main.c:739
 msgid "Quit Mutt?"
 msgstr "Quitter Mutt ?"
 
-#: curs_main.c:834
+#: curs_main.c:841
 msgid "Tag messages matching: "
 msgstr "Marquer les messages correspondant à : "
 
-#: curs_main.c:842
+#: curs_main.c:849
 msgid "Undelete messages matching: "
 msgstr "Récupérer les messages correspondant à : "
 
-#: curs_main.c:849
+#: curs_main.c:856
 msgid "Untag messages matching: "
 msgstr "Démarquer les messages correspondant à : "
 
-#: curs_main.c:867
+#: curs_main.c:874
 msgid "Open mailbox"
 msgstr "Ouvre la boîte aux lettres"
 
-#: curs_main.c:869
+#: curs_main.c:876
 msgid "Open mailbox in read-only mode"
 msgstr "Ouvre la boîte aux lettres en lecture seule"
 
 # , c-format
-#: curs_main.c:885 mx.c:429 mx.c:570
+#: curs_main.c:892 mx.c:429 mx.c:570
 #, c-format
 msgid "%s is not a mailbox."
 msgstr "%s n'est pas une boîte aux lettres."
 
-#: curs_main.c:972
+#: curs_main.c:974
 msgid "Exit Mutt without saving?"
 msgstr "Quitter Mutt sans sauvegarder ?"
 
-#: curs_main.c:989 curs_main.c:1013
+#: curs_main.c:991 curs_main.c:1015
 msgid "You are on the last message."
 msgstr "Vous êtes sur le dernier message."
 
-#: curs_main.c:996 curs_main.c:1038
+#: curs_main.c:998 curs_main.c:1040
 msgid "No undeleted messages."
 msgstr "Aucun message récupéré."
 
-#: curs_main.c:1031 curs_main.c:1054
+#: curs_main.c:1033 curs_main.c:1056
 msgid "You are on the first message."
 msgstr "Vous êtes sur le premier message."
 
-#: curs_main.c:1126 pattern.c:1108
+#: curs_main.c:1128 pattern.c:1108
 msgid "Search wrapped to top."
 msgstr "La recherche est repartie du début."
 
-#: curs_main.c:1135 pattern.c:1119
+#: curs_main.c:1137 pattern.c:1119
 msgid "Search wrapped to bottom."
 msgstr "La recherche est repartie de la fin."
 
-#: curs_main.c:1168
+#: curs_main.c:1170
 msgid "No new messages"
 msgstr "Pas de nouveaux messages"
 
-#: curs_main.c:1168
+#: curs_main.c:1170
 msgid "No unread messages"
 msgstr "Pas de messages non lus"
 
-#: curs_main.c:1169
+#: curs_main.c:1171
 msgid " in this limited view"
 msgstr " dans cette vue limitée"
 
-#: curs_main.c:1279
+#: curs_main.c:1281
 msgid "No more threads."
 msgstr "Pas d'autres discussions."
 
-#: curs_main.c:1281
+#: curs_main.c:1283
 msgid "You are on the first thread."
 msgstr "Vous êtes sur la première discussion."
 
-#: curs_main.c:1334
+#: curs_main.c:1336
 msgid "Thread contains unread messages."
 msgstr "Cette discussion contient des messages non-lus."
 
-#: curs_main.c:1347 flags.c:219 thread.c:643
+#: curs_main.c:1349 flags.c:219 thread.c:651
 msgid "Threading is not enabled."
 msgstr "L'affichage des discussions n'est pas activé."
 
@@ -970,7 +970,7 @@ msgid "(need 'view-attachments' bound to key!)"
 msgstr "(la fonction 'view-attachments' doit être affectée à une touche !)"
 
 # , c-format
-#: headers.c:201
+#: headers.c:202
 #, c-format
 msgid "%s: unable to attach file"
 msgstr "%s : impossible d'attacher le fichier"
@@ -1064,7 +1064,7 @@ msgid "Selecting %s..."
 msgstr "Sélection de %s..."
 
 # , c-format
-#: imap.c:1109 lib.c:1204
+#: imap.c:1109 lib.c:1206
 #, c-format
 msgid "Create %s?"
 msgstr "Créer %s ?"
@@ -1073,30 +1073,30 @@ msgstr "Créer %s ?"
 msgid "Fetching message..."
 msgstr "Récupération du message..."
 
-#: imap.c:1268
+#: imap.c:1277
 msgid "Sending APPEND command ..."
 msgstr "Envoi de la commande APPEND ..."
 
-#: imap.c:1308
+#: imap.c:1317
 msgid "Uploading message ..."
 msgstr "Chargement du message ..."
 
-#: imap.c:1363
+#: imap.c:1372
 msgid "Closing connection to IMAP server..."
 msgstr "Fermeture de la connexion au serveur IMAP..."
 
 # , c-format
-#: imap.c:1393
+#: imap.c:1402
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Sauvegarde des indicateurs de statut du message... [%d/%d]"
 
-#: imap.c:1419
+#: imap.c:1428
 msgid "Expunging messages from server..."
 msgstr "Effacement des messages sur le serveur..."
 
 #. tell the server to commit changes
-#: imap.c:1470
+#: imap.c:1479
 msgid "Closing mailbox..."
 msgstr "Fermeture de la boîte aux lettres..."
 
@@ -1936,13 +1936,13 @@ msgid "oac"
 msgstr "eca"
 
 # , c-format
-#: lib.c:1180
+#: lib.c:1182
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s n'est pas une boîte aux lettres !"
 
 # , c-format
-#: lib.c:1186
+#: lib.c:1188
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Ajouter les messages à %s ?"
@@ -2996,17 +2996,17 @@ msgstr ""
 "Cette opération n'est pas actuellement supportée pour les messages PGP."
 
 # , c-format
-#: rfc1524.c:173
+#: rfc1524.c:176
 #, c-format
 msgid "Improperly formated entry for type %s in \"%s\" line %d"
 msgstr "Entrée incorrectement formatée pour le type %s dans \"%s\" ligne %d"
 
-#: rfc1524.c:405
+#: rfc1524.c:408
 msgid "No mailcap path specified"
 msgstr "Pas de chemin mailcap spécifié"
 
 # , c-format
-#: rfc1524.c:431
+#: rfc1524.c:434
 #, c-format
 msgid "mailcap entry for type %s not found"
 msgstr "Entrée mailcap pour le type %s non trouvée"
@@ -3118,35 +3118,35 @@ msgstr "Impossible d'envoyer le message."
 msgid "Mail sent."
 msgstr "Message envoyé."
 
-#: sendlib.c:474
+#: sendlib.c:476
 msgid "No boundary parameter found! [report this error]"
 msgstr "Pas de paramètre boundary trouvé !  [signalez cette erreur]"
 
 # , c-format
-#: sendlib.c:508
+#: sendlib.c:510
 #, c-format
 msgid "%s no longer exists!"
 msgstr "%s n'existe plus !"
 
 # , c-format
-#: sendlib.c:776
+#: sendlib.c:778
 #, c-format
 msgid "Could not open %s"
 msgstr "Impossible d'ouvrir %s"
 
 # , c-format
-#: sendlib.c:1682
+#: sendlib.c:1684
 #, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Erreur en envoyant le message, fils terminé avec le code %d (%s).\n"
 
 # , c-format
-#: sendlib.c:1684
+#: sendlib.c:1686
 #, c-format
 msgid "Saved output of child process to %s.\n"
 msgstr "Sortie du processus fils sauvée dans %s.\n"
 
-#: sendlib.c:1688
+#: sendlib.c:1690
 msgid "Error sending message."
 msgstr "Erreur en envoyant le message."
 

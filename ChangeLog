@@ -1,6 +1,7 @@
----
+Wed Mar  3 19:44:24 1999  Thomas Roessler  <roessler@guug.de>
 
-Wed Mar  3 19:37:21 1999  Thomas Roessler  <roessler@guug.de>
+	* reldate.h, regex.c, VERSION, Makefile.am, ChangeLog:
+	release preparations; back-port a couple of things from unstable.
 
 	* curs_main.c: Vikas' resort_index.3.
 
