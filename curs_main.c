@@ -85,7 +85,16 @@ void index_make_entry (char *s, size_t l, MUTTMENU *menu, int num)
       flag |= M_FORMAT_FORCESUBJ;
     else
     {
-      edgemsgno = Context->v2r[menu->top + (reverse ? menu->pagelen - 1 : 0)];
+      if (reverse)
+      {
+       if (menu->top + menu->pagelen > menu->max)
+         edgemsgno = Context->v2r[menu->max - 1];
+       else
+         edgemsgno = Context->v2r[menu->top + menu->pagelen - 1];
+      }
+      else
+       edgemsgno = Context->v2r[menu->top];
+
       for (tmp = h->parent; tmp; tmp = tmp->parent)
       {
 	if ((reverse && tmp->msgno > edgemsgno)
