@@ -27,6 +27,7 @@
 #include <stdlib.h>
 #include <dirent.h>
 #include <string.h>
+#include <ctype.h>
 #include <unistd.h>
 #include <sys/stat.h>
 #include <pwd.h>
@@ -365,7 +366,7 @@ static int examine_directory (MUTTMENU *menu, struct browser_state *state,
     
     if (prefix && *prefix && strncmp (prefix, de->d_name, strlen (prefix)) != 0)
       continue;
-    if (regexec (Mask.rx, de->d_name, 0, NULL, 0) != 0)
+    if (!((regexec (Mask.rx, de->d_name, 0, NULL, 0) == 0) ^ Mask.not))
       continue;
 
     snprintf (buffer, sizeof (buffer), "%s/%s", d, de->d_name);
@@ -678,14 +679,22 @@ void mutt_select_file (char *f, size_t flen, int buffy)
 	if (mutt_get_field ("File Mask: ", buf, sizeof (buf), 0) == 0)
 	{
 	  regex_t *rx = (regex_t *) safe_malloc (sizeof (regex_t));
-	  int err;
+	  char *s = buf;
+	  int not = 0, err;
 
 	  buffy = 0;
 	  /* assume that the user wants to see everything */
 	  if (!buf[0])
 	    strfcpy (buf, ".", sizeof (buf));
+	  SKIPWS (s);
+	  if (*s == '!')
+	  {
+	    s++;
+	    SKIPWS (s);
+	    not = 1;
+	  }
 
-	  if ((err = REGCOMP (rx, buf, REG_NOSUB | mutt_which_case (buf))) != 0)
+	  if ((err = REGCOMP (rx, s, REG_NOSUB)) != 0)
 	  {
 	    regerror (err, rx, buf, sizeof (buf));
 	    regfree (rx);
@@ -699,6 +708,7 @@ void mutt_select_file (char *f, size_t flen, int buffy)
 	    safe_free ((void **) &Mask.rx);
 	    Mask.pattern = safe_strdup (buf);
 	    Mask.rx = rx;
+	    Mask.not = not;
 
 	    destroy_state (&state);
 	    if (examine_directory (menu, &state, LastDir, NULL) == 0)

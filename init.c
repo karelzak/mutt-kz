@@ -630,6 +630,8 @@ static void mutt_restore_default (struct option_t *p)
     case DT_RX:
       {
 	REGEXP *pp = (REGEXP *) p->data;
+	int flags = 0;
+
 	FREE (&pp->pattern);
 	if (pp->rx)
 	{
@@ -638,9 +640,20 @@ static void mutt_restore_default (struct option_t *p)
 	}
 	if (p->init)
 	{
+	  char *s = (char *) p->init;
+
 	  pp->rx = safe_calloc (1, sizeof (regex_t));
 	  pp->pattern = safe_strdup ((char *) p->init);
-	  if (REGCOMP (pp->rx, pp->pattern, mutt_which_case (pp->pattern)) != 0)
+	  if (strcmp (p->option, "alternates") == 0)
+	    flags |= REG_ICASE;
+	  else if (strcmp (p->option, "mask") != 0)
+	    flags |= mutt_which_case ((const char *) p->init);
+	  if (strcmp (p->option, "mask") == 0 && *s == '!')
+	  {
+	    s++;
+	    pp->not = 1;
+	  }
+	  if (REGCOMP (pp->rx, s, flags) != 0)
 	  {
 	    fprintf (stderr, "mutt_restore_default: error in regexp: %s\n",
 		     pp->pattern);
@@ -800,15 +813,27 @@ static int parse_set (BUFFER *tmp, BUFFER *s, unsigned long data, BUFFER *err)
 
       if (!ptr->pattern || strcmp (ptr->pattern, tmp->data) != 0)
       {
+	int not = 0;
+
 	/* $alternates is case-insensitive,
 	   $mask is case-sensitive */
 	if (strcmp (MuttVars[idx].option, "alternates") == 0)
 	  flags |= REG_ICASE;
 	else if (strcmp (MuttVars[idx].option, "mask") != 0)
 	  flags |= mutt_which_case (tmp->data);
-	
+
+	p = tmp->data;
+	if (strcmp (MuttVars[idx].option, "mask") == 0)
+	{
+	  if (*p == '!')
+	  {
+	    not = 1;
+	    p++;
+	  }
+	}
+	  
 	rx = (regex_t *) safe_malloc (sizeof (regex_t));
-	if ((e = REGCOMP (rx, tmp->data, flags)) != 0)
+	if ((e = REGCOMP (rx, p, flags)) != 0)
 	{
 	  regerror (e, rx, err->data, err->dsize);
 	  regfree (rx);
@@ -826,6 +851,7 @@ static int parse_set (BUFFER *tmp, BUFFER *s, unsigned long data, BUFFER *err)
 
 	ptr->pattern = safe_strdup (tmp->data);
 	ptr->rx = rx;
+	ptr->not = not;
 
 	/* $reply_regexp requires special treatment */
 	if (Context && Context->msgcount &&

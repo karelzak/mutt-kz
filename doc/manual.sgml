@@ -2946,10 +2946,15 @@ the <ref id="smart_wrap" name="&dollar;smart&lowbar;wrap"> variable.
 <sect2>mask<label id="mask">
 <p>
 Type: string<newline>
-Default: "^(&bsol;.&bsol;.&dollar;|&lsqb;^.&rsqb;)"
+Default: "!^&bsol;.&lsqb;^.&rsqb;"
 
-A regular expression used in the file browser. Files whose names don't
-match this mask will not be shown.
+A regular expression used in the file browser, optionally preceded by
+the <em/not/ operator ``!''. Files whose names don't match this mask
+will not be shown. The match is always case-sensitive.
+
+<bf/Note:/ if you need ``!'' at the beginning of the regular expression
+you should enclose it in paranthesis, in order to distinguish it from
+the logical <em/not/ operator for the expression.
 
 <sect2>mbox<label id="mbox">
 <p>

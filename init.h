@@ -135,7 +135,7 @@ struct option_t MuttVars[] = {
   { "mailcap_path",	DT_STR,	 R_NONE, UL &MailcapPath, 0 },
   { "mark_old",		DT_BOOL, R_BOTH, OPTMARKOLD, 1 },
   { "markers",		DT_BOOL, R_PAGER, OPTMARKERS, 1 },
-  { "mask",		DT_RX,	 R_NONE, UL &Mask, UL "^(\\.\\.$|[^.])" },
+  { "mask",		DT_RX,	 R_NONE, UL &Mask, UL "!^\\.[^.]" },
   { "mbox",		DT_PATH, R_BOTH, UL &Inbox, UL "~/mbox" },
   { "mbox_type",	DT_MAGIC,R_NONE, UL &DefaultMagic, M_MBOX },
   { "metoo",		DT_BOOL, R_NONE, OPTMETOO, 0 },
