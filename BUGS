@@ -1,14 +1,6 @@
 			KNOWN BUGS
 
 
-
-- In the "compose" menu: attach a file, modify it from
-  another terminal, then send the message; Mutt won't
-  recompute the transfer encoding.
-
-  This needs to be fixed _without_ overwriting user-set
-  transfer encodings.
-
 - In the "compose" menu tag a few attachments, and pipe
   them to "less"; there's no way to convince Mutt to pipe
   them as a single file instead of doing that one by one

@@ -427,6 +427,10 @@ typedef struct body
   struct body *parts;           /* parts of a multipart or message/rfc822 */
   struct header *hdr;		/* header information for message/rfc822 */
 
+  time_t stamp;			/* time stamp of last
+				 * encoding update.
+				 */
+  
   unsigned int type : 3;        /* content-type primary type */
   unsigned int encoding : 3;    /* content-transfer-encoding */
   unsigned int disposition : 2; /* content-disposition */

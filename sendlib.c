@@ -899,7 +899,7 @@ void mutt_update_encoding (BODY *a)
 #endif
 
 
-
+  a->stamp = time(NULL);
   safe_free ((void **) &info);
 }
 

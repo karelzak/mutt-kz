@@ -181,7 +181,37 @@ static int pgp_send_menu (int bits)
 }
 #endif /* _PGPPATH */
 
+static int
+check_attachments(ATTACHPTR **idx, short idxlen)
+{
+  int i;
+  struct stat st;
+  char pretty[_POSIX_PATH_MAX], msg[_POSIX_PATH_MAX + SHORT_STRING];
 
+  for (i = 0; i < idxlen; i++)
+  {
+    strfcpy(pretty, idx[i]->content->filename, sizeof(pretty));
+    if(stat(pretty, &st) != 0)
+    {
+      mutt_pretty_mailbox(pretty);
+      mutt_error("%s [#%d] no longer exists!",
+		 pretty, i+1);
+      return -1;
+    }
+    
+    if(idx[i]->content->stamp < st.st_mtime)
+    {
+      mutt_pretty_mailbox(pretty);
+      snprintf(msg, sizeof(msg), "%s [#%d] modified. Update encoding?",
+	       pretty, i+1);
+      
+      if(mutt_yesorno(msg, M_YES) == M_YES)
+	mutt_update_encoding(idx[i]->content);
+    }
+  }
+
+  return 0;
+}
 
 static void draw_envelope (HEADER *msg, char *fcc)
 {
@@ -760,6 +790,10 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 	break;
 
       case OP_COMPOSE_SEND_MESSAGE:
+      
+        if(check_attachments(idx, idxlen) != 0)
+	  break;
+      
 	if (!fccSet && *fcc)
 	{
 	  if ((i = query_quadoption (OPT_COPY, "Save a copy of this message?"))
@@ -949,6 +983,10 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 	/* fall through to postpone! */
 
       case OP_COMPOSE_POSTPONE_MESSAGE:
+      
+        if(check_attachments(idx, idxlen) != 0)
+	  break;
+      
 	loop = 0;
 	r = 1;
 	break;
