@@ -20,6 +20,7 @@
 #include "mutt_curses.h"
 #include "mutt_menu.h"
 #include "mailbox.h"
+#include "mapping.h"
 #include "sort.h"
 #include "buffy.h"
 
@@ -229,9 +230,9 @@ struct mapping_t IndexHelp[] = {
 /* This function handles the message index window as well as commands returned
  * from the pager (MENU_PAGER).
  */
-void mutt_index_menu (void)
+int mutt_index_menu (int attach_msg /* invoked while attaching a message */)
 {
-  char buf[LONG_STRING], helpstr[SHORT_STRING];
+  char buf[LONG_STRING], attach_msg_status[LONG_STRING] = "", helpstr[SHORT_STRING];
   int op = OP_NULL;                 /* function to execute */
   int done = 0;                /* controls when to exit the "event" loop */
   int i = 0, j;
@@ -243,6 +244,7 @@ void mutt_index_menu (void)
   char *cp;                    /* temporary variable. */
   int index_hint;   /* used to restore cursor position */
   int do_buffy_notify = 1;
+  int close = 0; /* did we OP_QUIT or OP_EXIT out of this menu? */
 
   menu = mutt_new_menu ();
   menu->menu = MENU_MAIN;
@@ -253,7 +255,8 @@ void mutt_index_menu (void)
   menu->current = ci_first_message ();
   menu->help = mutt_compile_help (helpstr, sizeof (helpstr), MENU_MAIN, IndexHelp);
   
-  mutt_buffy_check(1); /* force the buffy check after we enter the folder */
+  if (!attach_msg) 
+    mutt_buffy_check(1); /* force the buffy check after we enter the folder */
 
   FOREVER
   {
@@ -262,7 +265,7 @@ void mutt_index_menu (void)
     menu->max = Context ? Context->vcount : 0;
     oldcount = Context ? Context->msgcount : 0;
 
-    if (Context)
+    if (Context && !attach_msg)
     {
       /* check for new mail in the mailbox.  If nonzero, then something has
        * changed about the file (either we got new mail or the file was
@@ -354,17 +357,20 @@ void mutt_index_menu (void)
       }
     }
 
-    /* check for new mail in the incoming folders */
-    oldcount = newcount;
-    if ((newcount = mutt_buffy_check (0)) != oldcount)
-      menu->redraw |= REDRAW_STATUS;
-    if (do_buffy_notify)
+    if (!attach_msg)
     {
-      if (mutt_buffy_notify () && option (OPTBEEPNEW))
-	beep ();
+     /* check for new mail in the incoming folders */
+     oldcount = newcount;
+     if ((newcount = mutt_buffy_check (0)) != oldcount)
+       menu->redraw |= REDRAW_STATUS;
+     if (do_buffy_notify)
+     {
+       if (mutt_buffy_notify () && option (OPTBEEPNEW))
+ 	beep ();
+     }
+     else
+       do_buffy_notify = 1;
     }
-    else
-      do_buffy_notify = 1;
 
     mutt_curs_set (0);
 
@@ -393,7 +399,19 @@ void mutt_index_menu (void)
 
       if (menu->redraw & REDRAW_STATUS) 
       {
-	menu_status_line (buf, sizeof (buf), menu, NONULL (Status));
+	if (attach_msg)
+	{
+	 char from_folder [STRING];
+	 strfcpy(from_folder, Context->path, sizeof (from_folder));
+	 mutt_pretty_mailbox (from_folder);
+	 snprintf (attach_msg_status, sizeof (attach_msg_status), 
+	           "Folder: %s Tagged messages will be attached upon exiting", 
+		   from_folder);
+	 snprintf (buf, sizeof (buf), M_MODEFMT, attach_msg_status);
+	}
+	else
+	 menu_status_line (buf, sizeof (buf), menu, NONULL (Status));
+
 	CLEARLINE (option (OPTSTATUSONTOP) ? 0 : LINES-2);
 	SETCOLOR (MT_COLOR_STATUS);
 	printw ("%-*.*s", COLS, COLS, buf);
@@ -643,6 +661,13 @@ void mutt_index_menu (void)
 
       case OP_QUIT:
 
+	close = op;
+	if (attach_msg)
+	{
+	 done = 1;
+	 break;
+	}
+
 	if (query_quadoption (OPT_QUIT, "Quit Mutt?") == M_YES)
 	{ 
 	  if (!Context || mx_close_mailbox (Context) == 0)
@@ -777,7 +802,7 @@ void mutt_index_menu (void)
 
       case OP_MAIN_CHANGE_FOLDER:
       
-	if (option (OPTREADONLY))
+	if (attach_msg || option (OPTREADONLY))
 	  op = OP_MAIN_CHANGE_FOLDER_READONLY;
 
 	/* fallback to the readonly case */
@@ -856,7 +881,7 @@ void mutt_index_menu (void)
 
 	unset_option (OPTNEEDRESORT);
 
-	if ((op = mutt_display_message (CURHDR)) == -1)
+	if ((op = mutt_display_message (CURHDR, attach_msg_status)) == -1)
 	{
 	  unset_option (OPTNEEDRESORT);
 	  break;
@@ -882,17 +907,17 @@ void mutt_index_menu (void)
 
       case OP_EXIT:
 
+	close = op;
+	if (menu->menu == MENU_MAIN && attach_msg)
+	{
+	 done = 1;
+	 break;
+	}
+
 	if ((menu->menu == MENU_MAIN)
 	    && (query_quadoption (OPT_QUIT, 
 				  "Exit Mutt without saving?") == M_YES))
-	{
-	  if (Context)
-	  {
-	    mx_fastclose_mailbox (Context);
-	    safe_free ((void **)&Context);
-	  }
 	  done = 1;
-	}
 	break;
 
       case OP_MAIN_NEXT_UNDELETED:
@@ -1520,6 +1545,7 @@ void mutt_index_menu (void)
   }
 
   mutt_menuDestroy (&menu);
+  return (close);
 }
 
 void mutt_set_header_color (CONTEXT *ctx, HEADER *curhdr)

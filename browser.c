@@ -20,6 +20,7 @@
 #include "mutt_curses.h"
 #include "mutt_menu.h"
 #include "buffy.h"
+#include "mapping.h"
 #include "sort.h"
 #include "mailbox.h"
 
@@ -741,7 +742,7 @@ void mutt_select_file (char *f, size_t flen, int buffy)
 
 	  snprintf (buf, sizeof (buf), "%s/%s", LastDir,
 		    state.entry[menu->current].name);
-	  b = mutt_make_attach (buf);
+	  b = mutt_make_file_attach (buf);
 	  if (b != NULL)
 	  {
 	    mutt_view_attachment (NULL, b, M_REGULAR);

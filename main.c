@@ -560,11 +560,11 @@ int main (int argc, char **argv)
       {
 	if (a)
 	{
-	  a->next = mutt_make_attach (t->data);
+	  a->next = mutt_make_file_attach (t->data);
 	  a = a->next;
 	}
 	else
-	  msg->content = a = mutt_make_attach (t->data);
+	  msg->content = a = mutt_make_file_attach (t->data);
 	if (!a)
 	{
 	  if (!option (OPTNOCURSES))
@@ -632,7 +632,17 @@ int main (int argc, char **argv)
 
     if ((Context = mx_open_mailbox (folder, ((flags & M_RO) || option (OPTREADONLY)) ? M_READONLY : 0, NULL)) != NULL)
     {
-      mutt_index_menu ();
+      int close = mutt_index_menu (0);
+
+      if (Context)
+      {
+	if (close == OP_QUIT) 
+	  mx_close_mailbox (Context);
+	else
+	  mx_fastclose_mailbox (Context);
+      }
+
+      safe_free ((void **)&Context);
       mutt_endwin (NULL);
     }
     else

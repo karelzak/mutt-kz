@@ -17,6 +17,7 @@
  */ 
 
 #include "mutt.h"
+#include "mapping.h"
 #include "mutt_curses.h"
 #include "mutt_regex.h"
 

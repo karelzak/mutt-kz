@@ -392,38 +392,6 @@ static int include_reply (CONTEXT *ctx, HEADER *cur, FILE *out)
   return 0;
 }
 
-static BODY *make_forward (CONTEXT *ctx, HEADER *hdr)
-{
-  char buffer[LONG_STRING];
-  BODY *body;
-  FILE *fpout;
-
-  mutt_mktemp (buffer);
-  if ((fpout = safe_fopen (buffer, "w")) == NULL)
-    return NULL;
-
-  body = mutt_new_body ();
-  body->type = TYPEMESSAGE;
-  body->subtype = safe_strdup ("rfc822");
-  body->filename = safe_strdup (buffer);
-  body->unlink = 1;
-  body->use_disp = 0;
-
-  /* this MUST come after setting ->filename because we reuse buffer[] */
-  strfcpy (buffer, "Forwarded message from ", sizeof (buffer));
-  rfc822_write_address (buffer + 23, sizeof (buffer) - 23, hdr->env->from);
-  body->description = safe_strdup (buffer);
-
-  mutt_parse_mime_message (ctx, hdr);
-  mutt_copy_message (fpout, ctx, hdr,
-		     option (OPTMIMEFORWDECODE) ? M_CM_DECODE : 0,
-		     CH_XMIT | (option (OPTMIMEFORWDECODE) ? (CH_MIME | CH_TXTPLAIN ) : 0));
-  
-  fclose (fpout);
-  mutt_update_encoding (body);
-  return (body);
-}
-
 static int default_to (ADDRESS **to, ENVELOPE *env, int group)
 {
   char prompt[STRING];
@@ -694,7 +662,7 @@ generate_body (FILE *tempfp,	/* stream for outgoing message */
 
       if (cur)
       {
-	tmp = make_forward (ctx, cur);
+	tmp = mutt_make_message_attach (ctx, cur, 0);
 	if (last)
 	  last->next = tmp;
 	else
@@ -706,7 +674,7 @@ generate_body (FILE *tempfp,	/* stream for outgoing message */
 	{
 	  if (ctx->hdrs[ctx->v2r[i]]->tagged)
 	  {
-	    tmp = make_forward (ctx, ctx->hdrs[ctx->v2r[i]]);
+	    tmp = mutt_make_message_attach (ctx, ctx->hdrs[ctx->v2r[i]], 0);
 	    if (last)
 	    {
 	      last->next = tmp;
