@@ -1,0 +1,36 @@
+			KNOWN BUGS
+
+
+
+- In the "compose" menu: attach a file, modify it from
+  another terminal, then send the message; Mutt won't
+  recompute the transfer encoding.
+
+  This needs to be fixed _without_ overwriting user-set
+  transfer encodings.
+
+- In the "compose" menu tag a few attachments, and pipe
+  them to "less"; there's no way to convince Mutt to pipe
+  them as a single file instead of doing that one by one
+  (the "attach_split" and "attach_sep" has disappeared).
+
+- In the "attachment" menu, assume this:
+
+	1 [text/plain, 7bit, 1.1K]           <no description>
+	2 [message/rfc822, 7bit, 6.1K]       A test message
+	3 [text/plain, 7bit, 0.1K]           |-><no description>
+	4 [message/rfc822, base64, 2.5K]     |-><no description>
+	5 [message/rfc822, base64, 2.7K]     `-><no description>
+
+   (please note the "message/rfc822" attachments encoded
+   as Base64; that's illegal, but Sun's Mailtool sends
+   that kind of messages); then go to, say, attachment
+   "4", delete it, and go to the main menu; you won't be
+   able to quit the mailbox (ok, 'x' works, but 'q'
+   doesn't).
+
+   The problem here lies in the fact that mutt uses
+   mailbox handling functions to access message/rfc822
+   type attachments.  We'd need to perform an additional
+   decoding step before using these functions to fix this
+   bug.
