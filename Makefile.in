@@ -78,13 +78,13 @@ install: mutt install.doc
 	fi
 
 install.doc: 
-	make -C  $(srcdir)/doc/ install
+	( cd $(srcdir)/doc &&  make install )
 
 uninstall: uninstall.doc
 	rm -f $(bindir)/mutt $(sharedir)/Muttrc
 
 uninstall.doc:
-	make -C $(srcdir)/doc/ uninstall
+	( cd $(srcdir)/doc/ && make uninstall )
 
 $(srcdir)/configure: $(srcdir)/configure.in
 	autoconf
