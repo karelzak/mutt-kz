@@ -22,15 +22,22 @@
 	4 [message/rfc822, base64, 2.5K]     |-><no description>
 	5 [message/rfc822, base64, 2.7K]     `-><no description>
 
-   (please note the "message/rfc822" attachments encoded
-   as Base64; that's illegal, but Sun's Mailtool sends
-   that kind of messages); then go to, say, attachment
-   "4", delete it, and go to the main menu; you won't be
-   able to quit the mailbox (ok, 'x' works, but 'q'
-   doesn't).
+  (please note the "message/rfc822" attachments encoded as
+  Base64; that's illegal, but Sun's Mailtool sends that
+  kind of messages); then go to, say, attachment "4",
+  delete it, and go to the main menu; you won't be able to
+  quit the mailbox (ok, 'x' works, but 'q' doesn't).
 
-   The problem here lies in the fact that mutt uses
-   mailbox handling functions to access message/rfc822
-   type attachments.  We'd need to perform an additional
-   decoding step before using these functions to fix this
-   bug.
+  The problem here lies in the fact that mutt uses mailbox
+  handling functions to access message/rfc822 type
+  attachments.  We'd need to perform an additional
+  decoding step before using these functions to fix this
+  bug.
+
+- In maildir folders, the cursor will jump to an
+  unpredictible message when new mail arrives.
+
+- When accessing maildir folders with two mutts in
+  parallel, messages which have been marked read (and thus
+  moved to the cur/ subdirectory) by one of the mutts
+  can't be read from the other one.
