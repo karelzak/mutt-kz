@@ -6,6 +6,8 @@
 AUTOMAKE_OPTIONS = foreign
 EXTRA_PROGRAMS = mutt_dotlock
 
+BUILT_SOURCES = keymap_defs.h
+
 bin_PROGRAMS = mutt @DOTLOCK_TARGET@
 mutt_SOURCES =	addrbook.c alias.c attach.c browser.c buffy.c color.c \
 	commands.c complete.c compose.c copy.c curs_lib.c curs_main.c date.c \
@@ -14,7 +16,8 @@ mutt_SOURCES =	addrbook.c alias.c attach.c browser.c buffy.c color.c \
 	main.c mbox.c menu.c mh.c mx.c pager.c parse.c pattern.c \
 	postpone.c query.c recvattach.c rfc822.c \
 	rfc1524.c rfc2047.c score.c send.c sendlib.c signal.c sort.c \
-	status.c system.c thread.c charset.c history.c lib.c
+	status.c system.c thread.c charset.c history.c lib.c \
+	$(BUILT_SOURCES)
 
 mutt_LDADD = @MUTT_LIB_OBJECTS@ @LIBOBJS@ $(INTLLIBS) 
 mutt_DEPENDENCIES = @MUTT_LIB_OBJECTS@ @LIBOBJS@ $(INTLDEPS)
@@ -38,7 +41,6 @@ EXTRA_DIST = COPYRIGHT GPL OPS OPS.PGP TODO configure acconfig.h attach.h \
 	reldate.h rfc1524.h rfc2047.h rfc822.h sha.h sha_locl.h	\
 	sort.h mime.types VERSION prepare _regex.h README.SECURITY
 
-BUILT_SOURCES = mutt_dotlock.c keymap_defs.h
 
 mutt_dotlock_SOURCES = mutt_dotlock.c
 mutt_dotlock_LDADD = @LIBOBJS@
