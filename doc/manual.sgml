@@ -1603,6 +1603,8 @@ path.
 <item>- -- refers to the file you've last visited
 <item>&tilde; -- refers to your home directory
 <item>= or + -- refers to your <ref id="folder" name="&dollar;folder"> directory
+<item>@<em/alias/ -- refers to the <ref id="save-hook" 
+name="default save folder"> as determined by the address of the alias
 </itemize>
 
 <sect1>Handling Mailing Lists<label id="using_lists">
