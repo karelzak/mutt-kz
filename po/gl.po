@@ -76,7 +76,7 @@ msgstr "A entrada \"compose\" no ficheiro Mailcap require %%s"
 
 #: attach.c:132 attach.c:257 commands.c:155 compose.c:1021 curs_lib.c:128
 #: curs_lib.c:323
-#, fuzzy, c-format
+#, c-format
 msgid "Error running \"%s\"!"
 msgstr "¡Erro executando \"%s\"!"
 
@@ -154,7 +154,7 @@ msgid "Directory [%s], File mask: %s"
 msgstr "Directorio [%s], máscara de ficheiro: %s"
 
 #: browser.c:519
-#, fuzzy
+#
 msgid "IMAP folder browsing is not currently supported"
 msgstr "A navegación de carpetas IMAP non está soportada actualmente"
 
@@ -382,7 +382,7 @@ msgid "Messages printed"
 msgstr "Mensaxes impresas"
 
 #: compose.c:35
-#, fuzzy
+#
 msgid "There are no attachments."
 msgstr "Non hai ficheiros adxuntos."
 
@@ -587,7 +587,7 @@ msgid "No mailbox is open."
 msgstr "Non hai buzóns abertos."
 
 #: curs_main.c:51
-#, fuzzy
+#
 msgid "There are no messages."
 msgstr "Non hai mensaxes."
 
@@ -596,7 +596,7 @@ msgid "Mailbox is read-only."
 msgstr "O buzón é de só lectura."
 
 #: curs_main.c:53 pager.c:56 recvattach.c:874
-#, fuzzy
+#
 msgid "Function not permitted in attach-message mode."
 msgstr "Función non permitida no modo \"adxuntar-mensaxe\"."
 
@@ -1064,7 +1064,7 @@ msgstr "Recollendo mensaxe..."
 
 #. hack from Nathan Neulinger
 #: imap.c:1736
-#, fuzzy
+#
 msgid "Sending CREATE command ..."
 msgstr "Enviando comando CREATE..."
 
@@ -2320,7 +2320,7 @@ msgid "Mailbox is marked unwritable. %s"
 msgstr "O buzón está marcado como non escribible. %s"
 
 #: pager.c:54
-#, fuzzy
+#
 msgid "Not available in this menu."
 msgstr "Non dispoñible neste menú."
 
@@ -3054,7 +3054,7 @@ msgid "Could not open %s"
 msgstr "Non foi posible abrir %s"
 
 #: sendlib.c:1690
-#, fuzzy, c-format
+#, c-format
 msgid "Error sending message, child exited %d (%s)."
 msgstr "Erro enviando mensaxe, o proceso fillo saíu con %d (%s).\n"
 
@@ -3063,7 +3063,7 @@ msgid "Output of the delivery process"
 msgstr "Saída do proceso de distribución"
 
 #: signal.c:39
-#, fuzzy, c-format
+#, c-format
 msgid "%s...  Exiting.\n"
 msgstr "Atrapado %s... Saíndo.\n"
 
