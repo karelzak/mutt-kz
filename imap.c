@@ -1728,7 +1728,13 @@ int imap_append_message (CONTEXT *ctx, MESSAGE *msg)
     len++;
   }
   rewind(fp);
-  
+
+  /* hack from Nathan Neulinger */
+  mutt_message _("Sending CREATE command ...");
+  imap_make_sequence (seq, sizeof (seq));
+  snprintf (buf, sizeof (buf), "%s CREATE %s\r\n", seq, mbox);
+  imap_exec (buf, sizeof (buf), idata, seq, buf, IMAP_OK_FAIL);
+
   mutt_message _("Sending APPEND command ...");
 
   imap_quote_string (mbox, sizeof (mbox), mailbox);
