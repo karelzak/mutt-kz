@@ -19,7 +19,7 @@
 /* @@ end of prolog @@ */
 
 #ifndef PARAMS
-# if __STDC__ || defined __GNUC__ || defined __SUNPRO_C || defined __cplusplus || __PROTOTYPES
+# if __STDC__
 #  define PARAMS(Args) Args
 # else
 #  define PARAMS(Args) ()

@@ -665,15 +665,18 @@ AC_SUBST(LIBIMAPDEPS)
 
 dnl -- iconv/gettext --
 
-AC_ARG_ENABLE(iconv, [  --disable-iconv           Disable iconv support],
-[       if test x$enableval = xno ; then
-                am_cv_func_iconv=no
-        fi
-])
-
 MUTT_AM_GNU_GETTEXT
+AC_CHECK_HEADERS(iconv.h,
+        [AC_MSG_CHECKING(whether iconv.h defines iconv_t)
+         AC_EGREP_HEADER([typedef.*iconv_t],iconv.h,
+                [AC_MSG_RESULT(yes)
+                 AC_DEFINE(HAVE_ICONV_T_DEF, 1,
+                        [Define if <iconv.h> defines iconv_t.])],
+                 AC_MSG_RESULT(no))])
+
 if test "$am_cv_func_iconv" != "yes"
 then
+#  AC_MSG_ERROR([Unable to find an iconv function. See INSTALL for help])
   AC_MSG_WARN([Unable to find an iconv function. See INSTALL for help])
 else
 
