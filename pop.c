@@ -133,7 +133,7 @@ void mutt_fetchPopMail (void)
   if (mutt_strncmp (buffer, "+OK", 3) != 0)
   {
     mutt_remove_trailing_ws (buffer);
-    mutt_error (buffer);
+    mutt_error ("%s", buffer);
     goto finish;
   }
 
@@ -146,7 +146,7 @@ void mutt_fetchPopMail (void)
   if (mutt_strncmp (buffer, "+OK", 3) != 0)
   {
     mutt_remove_trailing_ws (buffer);
-    mutt_error (buffer);
+    mutt_error ("%s", buffer);
     goto finish;
   }
   
@@ -163,7 +163,7 @@ void mutt_fetchPopMail (void)
     
     safe_free((void **) &PopPass); /* void the given password */
     mutt_remove_trailing_ws (buffer);
-    mutt_error (buffer[0] ? buffer : _("Server closed connection!"));
+    mutt_error ("%s", buffer[0] ? buffer : _("Server closed connection!"));
     goto finish;
   }
   
@@ -176,7 +176,7 @@ void mutt_fetchPopMail (void)
   if (mutt_strncmp (buffer, "+OK", 3) != 0)
   {
     mutt_remove_trailing_ws (buffer);
-    mutt_error (buffer);
+    mutt_error ("%s", buffer);
     goto finish;
   }
   
@@ -224,7 +224,7 @@ void mutt_fetchPopMail (void)
     if (mutt_strncmp (buffer, "+OK", 3) != 0)
     {
       mutt_remove_trailing_ws (buffer);
-      mutt_error (buffer);
+      mutt_error ("%s", buffer);
       break;
     }
 
@@ -299,16 +299,16 @@ void mutt_fetchPopMail (void)
       {
 	err = 1;
         mutt_remove_trailing_ws (buffer);
-	mutt_error (buffer);
+	mutt_error ("%s", buffer);
 	break;
       }
     }
+    
+    if ( msgs > 1)
+      mutt_message (_("%s [%d of %d messages read]"), msgbuf, i, msgs);
+    else
+      mutt_message (_("%s [%d message read]"), msgbuf, msgs);
 
-	if ( msgs > 1)
-		mutt_message (_("%s [%d of %d messages read]"), msgbuf, i, msgs);
-	else
-		mutt_message (_("%s [%d message read]"), msgbuf, msgs);
-  
   }
 
   if (msg)
