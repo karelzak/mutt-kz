@@ -382,7 +382,11 @@ int mutt_builtin_editor (const char *path, HEADER *msg, HEADER *cur)
 	  break;
 	case 'r':
 	  if (*p)
-	    buf = be_snarf_file (p, buf, &bufmax, &buflen, 1);
+          {
+	    strncpy(tmp, p, sizeof(tmp));
+	    mutt_expand_path(tmp, sizeof(tmp));
+	    buf = be_snarf_file (tmp, buf, &bufmax, &buflen, 1);
+          }
 	  else
 	    addstr ("missing filename.\n");
 	  break;
