@@ -153,9 +153,8 @@ msgid "Directory [%s], File mask: %s"
 msgstr "Каталог [%s], маска файла: %s"
 
 #: browser.c:519
-#, fuzzy
 msgid "IMAP folder browsing is not currently supported"
-msgstr "Для PGP-сообщений эта операция пока не поддерживается."
+msgstr "Просмотр почтовых ящиков на IMAP-сервере пока не поддерживается"
 
 #: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
@@ -179,11 +178,12 @@ msgstr "Обратный порядок по (д)ате, (и)мени, (р)азмеру или (н)е cортировать?"
 
 #: browser.c:752
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr "Упорядочить по (д)ате, (и)мени, (р)азмеру или (н)е сортировать?"
+msgstr "Упорядочить по (d)дате, (a)имени, (z)размеру или (n)не сортировать?"
 
 #: browser.c:753
+#, fuzzy
 msgid "dazn"
-msgstr "дирн"
+msgstr ""
 
 #: browser.c:805
 msgid "New file name: "
@@ -311,19 +311,18 @@ msgstr "Передать программе: "
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Обратный порядок: (в)ремя/(о)т "
-"кого/(п)олучено/(т)ема/(к)ому/(д)искуссия/(б)ез/(р)азмер/ко(н)текст? "
+"Обратный порядок: (d)время/(f)от кого/(r)получено/(s)тема/(o)кому/(t)дискуссия/(u)без/(z)размер/(c)контекст? "
 
 #: commands.c:339
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Порядок: (в)ремя/(о)т "
-"кого/(п)олучено/(т)ема/(к)ому/(д)искуссия/(б)ез/(р)азмер/ко(н)текст? "
+"Порядок: (d)время/(f)от кого/(r)получено/(s)тема/(o)кому/(t)дискуссия/(u)без/(z)размер/(c)контекст? "
 
 #: commands.c:340
+#, fuzzy
 msgid "dfrsotuzc"
-msgstr "вопткдбрн"
+msgstr ""
 
 #: commands.c:393
 msgid "Shell command: "
@@ -432,12 +431,12 @@ msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
 msgstr ""
-"(ш)ифровать, (п)одписать, подписать (к)ак, то (и) другое, выбрать "
-"MIC-(а)лгоритм, или (о)тказаться? "
+"(e)шифровать, (s)подписать, (a)подписать как, (b)то и другое, (m)выбрать MIC-алгоритм, (f)отказаться? "
 
 #: compose.c:133
+#, fuzzy
 msgid "esabmf"
-msgstr "шпкиао"
+msgstr ""
 
 #: compose.c:150
 msgid "Can't open your secret key ring!"
@@ -1901,11 +1900,12 @@ msgstr "Файл в каталоге: "
 
 #: lib.c:862
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "Файл существует, (п)ерезаписать, (д)обавить или (о)тказ?"
+msgstr "Файл существует, (o)перезаписать, (a)добавить или (c)отказ?"
 
 #: lib.c:862
+#, fuzzy
 msgid "oac"
-msgstr "пдо"
+msgstr ""
 
 #: lib.c:1246
 #, c-format
@@ -2069,7 +2069,7 @@ msgstr ""
 "пробелы)\n"
 "  -v\t\tвывести номер версии и параметры компиляции\n"
 "  -x\t\tэмулировать режим посылки команды mailx\n"
-"  -y\t\tвыбрать почтовый ящик из указанных командой `mailboxes'\n"
+"  -y\t\tвыбрать почтовый ящик из указанных в команде `mailboxes'\n"
 "  -z\t\tвыйти немедленно если в почтовом ящике отсутствует новая почта\n"
 "  -Z\t\tоткрыть первый почтовый ящик с новой почтой, выйти немедленно если "
 "таковая отсутствует\n"
