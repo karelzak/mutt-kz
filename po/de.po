@@ -74,9 +74,9 @@ msgstr "\"compose\"-Eintrag in der Mailcap-Datei erfordert %%s."
 
 #: attach.c:132 attach.c:257 commands.c:155 compose.c:1016 curs_lib.c:128
 #: curs_lib.c:323
-#, fuzzy, c-format
+#, c-format
 msgid "Error running \"%s\"!"
-msgstr "Unverständliche Adresse!"
+msgstr "Fehler beim Ausführen von %s!"
 
 #: attach.c:142
 msgid "Failure to open file to parse headers."
@@ -1055,9 +1055,8 @@ msgstr "Hole Nachricht..."
 
 #. hack from Nathan Neulinger
 #: imap.c:1736
-#, fuzzy
 msgid "Sending CREATE command ..."
-msgstr "Sende APPEND-Kommando..."
+msgstr "Sende CERATE Kommando..."
 
 #: imap.c:1741
 msgid "Sending APPEND command ..."
@@ -3009,18 +3008,18 @@ msgid "Could not open %s"
 msgstr "Konnte %s nicht öffnen."
 
 #: sendlib.c:1682
-#, fuzzy, c-format
+#, c-format
 msgid "Error sending message, child exited %d (%s)."
-msgstr "Fehler %d beim Versand der Nachricht (%s).\n"
+msgstr "Fehler %d beim Versand der Nachricht (%s)."
 
 #: sendlib.c:1688
 msgid "Output of the delivery process"
 msgstr ""
 
 #: signal.c:39
-#, fuzzy, c-format
+#, c-format
 msgid "%s...  Exiting.\n"
-msgstr "Signal %s... Abbruch.\n"
+msgstr "%s... Abbruch.\n"
 
 #: signal.c:42
 #, c-format
@@ -3055,38 +3054,6 @@ msgstr "(keine Mailbox)"
 #~ msgid "Error sending message."
 #~ msgstr "Fehler beim Versand der Nachricht."
 
-#, fuzzy
-#~ msgid "Subscribed [%s], File mask: %s"
-#~ msgstr "Verzeichnis [%s], Dateimaske: %s"
-
-#, fuzzy
-#~ msgid "Can't attach a directory!"
-#~ msgstr "Verzeichnisse können nicht angezeigt werden."
-
-#, fuzzy
-#~ msgid "Can't open %s: %s."
-#~ msgstr "Kann Verzeichniseintrag für Datei nicht lesen: %s"
-
-#, fuzzy
-#~ msgid "-- Attachments"
-#~ msgstr "Anhänge"
-
-#, fuzzy
-#~ msgid "Unable to attach %s!"
-#~ msgstr "Kann nicht anhängen!"
-
-#, fuzzy
-#~ msgid "Subscribing to %s..."
-#~ msgstr "Kopiere nach %s..."
-
-#, fuzzy
-#~ msgid "Unsubscribing to %s..."
-#~ msgstr "Verbinde zu %s..."
-
-#, fuzzy
-#~ msgid "Delete a remailer from the chain"
-#~ msgstr "Lösche Zeile"
-
 #~ msgid ""
 #~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
 #~ "\n"
@@ -3107,10 +3074,6 @@ msgstr "(keine Mailbox)"
 #~ msgstr ""
 #~ "\n"
 #~ "[-- Ende der signierten Daten --]\n"
-
-#, fuzzy
-#~ msgid "Invoking pgp..."
-#~ msgstr "Rufe PGP auf..."
 
 #~ msgid "Display message using mailcap?"
 #~ msgstr "Nachricht mittels Mailcap anzeigen?"

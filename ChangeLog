@@ -1,3 +1,11 @@
+Sun Aug 15 19:59:09 1999  Thomas Roessler  <roessler@guug.de>
+
+	* dotlock.c: [stable] take dotlock.c from unstable.
+
+	* dotlock.c, dotlock.h:
+	[stable] Fix $save_empty even when the dotlocking code is linked
+	into mutt.
+
 Mon Aug  9 19:01:42 1999  Thomas Roessler  <roessler@guug.de>
 
 	* po/sk.po, po/uk.po, po/zh_TW.Big5.po, po/ko.po, po/nl.po, po/pl.po, po/ru.po, po/de.po, po/el.po, po/es.po, po/fr.po, po/id.po, po/it.po, po/cs.po:
