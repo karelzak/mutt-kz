@@ -137,3 +137,6 @@
 
 /* Use the included regex.c? */
 #undef USE_GNU_REGEX
+
+/* Do we have gpgm installed? */
+#undef HAVE_GPGM

@@ -47,6 +47,10 @@ else
 		AC_DEFINE_UNQUOTED(_PGPGPGPATH, "$GPG")
 		PGPPATH="$GPG"
 		AC_DEFINE(HAVE_GPG)
+		AC_PATH_PROG(GPGM, gpgm, no)
+		if test $GPGM != no ; then
+			AC_DEFINE(HAVE_GPGM)
+		fi
 	fi
 
 	AC_PATH_PROG(PGPK, pgpk, no)
