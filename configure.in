@@ -191,6 +191,11 @@ AC_CHECK_HEADERS(stdarg.h sys/ioctl.h sysexits.h getopt.h)
 
 AC_TYPE_SIGNAL
 
+AC_MSG_CHECKING(for sig_atomic_t in signal.h)
+AC_EGREP_HEADER(sig_atomic_t,signal.h,dnl
+  [ ac_cv_type_sig_atomic_t=yes; AC_MSG_RESULT(yes) ],dnl
+  AC_MSG_RESULT(no); AC_CHECK_TYPE(sig_atomic_t, int))
+
 AC_DECL_SYS_SIGLIST
 
 dnl need this for DEC alpha

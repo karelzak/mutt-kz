@@ -140,3 +140,6 @@
 
 /* Do we have gpgm installed? */
 #undef HAVE_GPGM
+
+/* Define to `int' if <signal.h> doesn't define.  */
+#undef sig_atomic_t
