@@ -44,7 +44,8 @@
 
 #if !defined(HAVE_SNPRINTF) || !defined(HAVE_VSNPRINTF)
 
-#include <ctype.h>
+#include <string.h>
+# include <ctype.h>
 #include <sys/types.h>
 
 /* Define this as a fall through, HAVE_STDARG_H is probably already set */

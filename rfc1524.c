@@ -338,14 +338,9 @@ static int rfc1524_mailcap_parse (BODY *a,
   return found;
 }
 
-rfc1524_entry *rfc1524_new_entry()
+rfc1524_entry *rfc1524_new_entry(void)
 {
-  rfc1524_entry *tmp;
-
-  tmp = (rfc1524_entry *)safe_malloc(sizeof(rfc1524_entry));
-  memset(tmp,0,sizeof(rfc1524_entry));
-
-  return tmp;
+  return (rfc1524_entry *)safe_calloc(1, sizeof(rfc1524_entry));
 }
 
 void rfc1524_free_entry(rfc1524_entry **entry)
