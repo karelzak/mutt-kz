@@ -176,7 +176,7 @@ void rfc2047_encode_string (char *d, size_t dlen, const unsigned char *s)
   {
     if (*p & 0x80)
       count++;
-    else if (*p++ == '=' && *p == '?')
+    else if (*p == '=' && *(p+1) == '?')
     {
       count += 2;
       p++;
