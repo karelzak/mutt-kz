@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 1996-9 Brandon Long <blong@fiction.net>
- * Copyright (C) 1999 Brendan Cully <brendan@kublai.com>
+ * Copyright (C) 1999-2000 Brendan Cully <brendan@kublai.com>
  * 
  *     This program is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -167,7 +167,7 @@ int imap_open_connection (IMAP_DATA* idata, CONNECTION* conn);
 time_t imap_parse_date (char* s);
 int imap_parse_list_response(CONNECTION* conn, char* buf, int buflen,
   char** name, int* noselect, int* noinferiors, char* delim);
-int imap_read_bytes (FILE* fp, CONNECTION* conn, long bytes);
+int imap_read_literal (IMAP_DATA* idata, FILE* fp, long bytes);
 int imap_reopen_mailbox (CONTEXT *ctx, int *index_hint);
 
 /* auth.c */

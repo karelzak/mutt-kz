@@ -156,13 +156,13 @@ int imap_read_headers (CONTEXT *ctx, int msgbegin, int msgend)
             *fpc = '\0';
             pc=hdr;
             /* get some number of bytes */
-	    if (imap_get_literal_count(buf, &bytes) < 0)
+	    if (imap_get_literal_count(buf, &bytes) < 0 ||
+	      imap_read_literal (CTX_DATA, fp, bytes) < 0)
             {
               imap_error ("imap_read_headers()", buf);
 	      fclose (fp);
               return -1;
             }
-            imap_read_bytes (fp, CTX_DATA->conn, bytes);
 	    /* we may have other fields of the FETCH _after_ the literal
 	     * (eg Domino puts FLAGS here). Nothing wrong with that, either.
 	     * This all has to go - we should accept literals and nonliterals
@@ -279,7 +279,6 @@ int imap_fetch_message (MESSAGE *msg, CONTEXT *ctx, int msgno)
   char path[_POSIX_PATH_MAX];
   char *pc;
   long bytes;
-  int pos, len;
   IMAP_CACHE *cache;
 
   /* see if we already have the message in our cache */
@@ -346,19 +345,11 @@ int imap_fetch_message (MESSAGE *msg, CONTEXT *ctx, int msgno)
 	  if (strncasecmp ("RFC822", pc, 6) == 0)
 	  {
 	    pc = imap_next_word (pc);
-	    if (imap_get_literal_count(pc, &bytes) < 0)
+	    if (imap_get_literal_count(pc, &bytes) < 0 ||
+	      imap_read_literal (CTX_DATA, msg->fp, bytes) < 0)
 	    {
 	      imap_error ("imap_fetch_message()", buf);
 	      goto bail;
-	    }
-	    for (pos = 0; pos < bytes; )
-	    {
-	      len = mutt_socket_read_line (buf, sizeof (buf), CTX_DATA->conn);
-	      if (len < 0)
-		goto bail;
-	      pos += len;
-	      fputs (buf, msg->fp);
-	      fputs ("\n", msg->fp);
 	    }
 	    if (mutt_socket_read_line (buf, sizeof (buf), CTX_DATA->conn) < 0)
 	      goto bail;

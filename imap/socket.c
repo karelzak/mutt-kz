@@ -77,7 +77,7 @@ int mutt_socket_read_line (char *buf, size_t buflen, CONNECTION *conn)
   char ch;
   int i;
 
-  for (i = 0; i < buflen; i++)
+  for (i = 0; i < buflen-1; i++)
   {
     if (mutt_socket_readchar (conn, &ch) != 1)
       return (-1);
