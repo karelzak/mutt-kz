@@ -74,6 +74,9 @@
 /* Where is PGP 5 located on your system? */
 #undef _PGPV3PATH
 
+/* Where is PGP 6 located on your system? */
+#undef _PGPV6PATH
+
 /* Where is GNU Privacy Guard located on your system? */
 #undef _PGPGPGPATH
 
@@ -82,6 +85,9 @@
 
 /* Do we have PGP 5.0 or up? */
 #undef HAVE_PGP5
+
+/* Do we have PGP 6.0 */
+#undef HAVE_PGP6
 
 /* Do we have GPG? */
 #undef HAVE_GPG

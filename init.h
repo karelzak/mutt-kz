@@ -199,9 +199,13 @@ struct option_t MuttVars[] = {
 # else
 #  ifdef HAVE_PGP5
   { "pgp_default_version",	DT_STR, R_NONE, UL &PgpDefaultVersion, UL "pgp5" },
-#  else
+# else
+#   ifdef HAVE_PGP6
+  { "pgp_default_version",      DT_STR, R_NONE, UL &PgpDefaultVersion, UL "pgp6" },
+# else
 #   ifdef HAVE_GPG
   { "pgp_default_version",	DT_STR,	R_NONE, UL &PgpDefaultVersion, UL "gpg" },
+#     endif
 #   endif
 #  endif
 # endif
@@ -375,3 +379,4 @@ struct command_t Commands[] = {
   { "unset",		parse_set,		M_SET_UNSET },
   { NULL }
 };
+

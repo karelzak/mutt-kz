@@ -228,6 +228,9 @@ static void show_version (void)
 #ifdef HAVE_PGP2
 	"+HAVE_PGP2  "
 #endif
+#ifdef HAVE_PGP6
+       "+HAVE_PGP6  "
+#endif
 #ifdef HAVE_GPG
 	"+HAVE_GPG  "
 #endif
