@@ -188,7 +188,7 @@ static KEYINFO *read_ring(struct pgp_vinfo *pgp, int secret )
 	if( is_sub ) {
 	    k->flags |= KEYFLAG_SUBKEY;
 	    k->mainkey = mainkey;
-    }
+	}
 	else
 	    mainkey = k;
     }
