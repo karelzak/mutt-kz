@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mutt\n"
 "POT-Creation-Date: 1999-08-31 21:26+0200\n"
-"PO-Revision-Date: 1999-02-15 21:55+0100\n"
+"PO-Revision-Date: 1999-09-08 22:29+02:00\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
 "MIME-Version: 1.0\n"
@@ -72,9 +72,9 @@ msgstr "La entrada \"compose\" en el archivo Mailcap requiere %%s"
 
 #: attach.c:132 attach.c:257 commands.c:155 compose.c:1019 curs_lib.c:128
 #: curs_lib.c:323
-#, fuzzy, c-format
+#, c-format
 msgid "Error running \"%s\"!"
-msgstr "¡Dirección errónea!"
+msgstr "¡Error al ejecutar \"%s\"!"
 
 #: attach.c:142
 msgid "Failure to open file to parse headers."
@@ -573,18 +573,16 @@ msgid "No mailbox is open."
 msgstr "Ningún buzón esta abierto."
 
 #: curs_main.c:51
-#, fuzzy
 msgid "There are no messages."
-msgstr "El hilo contiene mensajes sin leer."
+msgstr "No hay mensajes."
 
 #: curs_main.c:52 mx.c:996 pager.c:55 recvattach.c:47
 msgid "Mailbox is read-only."
 msgstr "El buzón es de sólo lectura."
 
 #: curs_main.c:53 pager.c:56
-#, fuzzy
 msgid "Function not permitted in attach-message mode."
-msgstr "%c: no soportado en este modo"
+msgstr "Función no soportada en el modo de adjuntar-mensaje."
 
 #: curs_main.c:220
 msgid "Cannot toggle write on a readonly mailbox!"
@@ -997,16 +995,16 @@ msgstr "Consiguiendo cabeceras de mensajes... [%d/%d]"
 #. Unable to fetch headers for lower versions
 #: imap.c:659
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr ""
+msgstr "No se pueden conseguir cabeceras de mensajes de esta versión de servidor IMAP."
 
 #: imap.c:851
-#, fuzzy, c-format
+#, c-format
 msgid "Reopening mailbox... %s"
-msgstr "Reabriendo buzón..."
+msgstr "Reabriendo buzón... %s"
 
 #: imap.c:1203
 msgid "This IMAP server is ancient. Mutt does not work with it."
-msgstr ""
+msgstr "Este servidor IMAP es ancestral. Mutt no puede trabajar con el."
 
 #: imap.c:1224
 msgid "IMAP Username: "
@@ -1037,7 +1035,7 @@ msgstr "Seleccionando %s..."
 #. * error if the mailbox did not exist.
 #: imap.c:1532
 msgid "Unable to append to IMAP mailboxes at this server"
-msgstr ""
+msgstr "No es posible agregar a buzones IMAP en este servidor."
 
 #: imap.c:1542 lib.c:1270
 #, c-format
@@ -1050,9 +1048,8 @@ msgstr "Consiguiendo mensaje..."
 
 #. hack from Nathan Neulinger
 #: imap.c:1736
-#, fuzzy
 msgid "Sending CREATE command ..."
-msgstr "Mandando comando APPEND..."
+msgstr "Mandando comando CREATE..."
 
 #: imap.c:1741
 msgid "Sending APPEND command ..."
@@ -1796,7 +1793,6 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "cambiar si los cambios del buzón serán guardados"
 
 #: keymap_defs.h:147
-#, fuzzy
 msgid "toggle whether to browse mailboxes or all files"
 msgstr "cambiar entre ver buzones o todos los archivos al navegar"
 
@@ -1911,20 +1907,18 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "Para contactar los autores mande un mensaje a <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-9 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
-"Copyright (C) 1996-8 Michael R. Elkins y otros.\n"
-"Mutt viene con ABSOLUTAMENTE NINGUNA GARANTÍA; para obtener más detalles\n"
+"Copyright (C) 1996-9 Michael R. Elkins y otros.\n"
+"Mutt viene con ABSOLUTAMENTE NINGUNA GARANTÍA; para obtener detalles\n"
 "teclee `mutt -vv'. Mutt es software libre, puede redistribuirlo\n"
 "bajo ciertas condiciones; teclee `mutt -vv' para más detalles.\n"
 
 #: main.c:48
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
@@ -1950,8 +1944,8 @@ msgid ""
 msgstr ""
 "Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998   Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998   Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "Muchos otros no mencionados aqui contribuyeron mucho código,\n"
 "mejoras y sugerencias.\n"
@@ -2310,9 +2304,8 @@ msgid "Mailbox is marked unwritable. %s"
 msgstr "Buzón esta marcado inescribible. %s"
 
 #: pager.c:54
-#, fuzzy
 msgid "Not available in this menu."
-msgstr "Correo nuevo en este buzón."
+msgstr "No disponible en este menú."
 
 #: pager.c:1373
 msgid "PrevPg"
@@ -2539,7 +2532,6 @@ msgstr ""
 "\n"
 
 #: pgp.c:691
-#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
@@ -3033,7 +3025,7 @@ msgstr "Mensaje enviado."
 
 #: send.c:1325
 msgid "Sending in background."
-msgstr ""
+msgstr "Mandando en un proceso separado en el fondo."
 
 #: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
@@ -3050,18 +3042,18 @@ msgid "Could not open %s"
 msgstr "No se pudo abrir %s"
 
 #: sendlib.c:1690
-#, fuzzy, c-format
+#, c-format
 msgid "Error sending message, child exited %d (%s)."
-msgstr "Error al enviar mensaje, %d (%s).\n"
+msgstr "Error al enviar mensaje, proceso hijo terminó %d (%s)."
 
 #: sendlib.c:1696
 msgid "Output of the delivery process"
-msgstr ""
+msgstr "Salida del proceso de repartición de correo"
 
 #: signal.c:39
-#, fuzzy, c-format
+#, c-format
 msgid "%s...  Exiting.\n"
-msgstr "\"%s\" recibido...  Saliendo.\n"
+msgstr "%s...  Saliendo.\n"
 
 #: signal.c:42
 #, c-format
@@ -3089,63 +3081,3 @@ msgstr "¡No se pudo encontrar la función para ordenar! [reporte este error]"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(ningún buzón)"
-
-#~ msgid "Saved output of child process to %s.\n"
-#~ msgstr "Salida del subproceso guardada en %s.\n"
-
-#~ msgid "Error sending message."
-#~ msgstr "Error al enviar el mensaje."
-
-#, fuzzy
-#~ msgid "Subscribed [%s], File mask: %s"
-#~ msgstr "Directorio [%s], patrón de archivos: %s"
-
-#, fuzzy
-#~ msgid "Can't attach a directory!"
-#~ msgstr "No se puede mostrar el directorio"
-
-#, fuzzy
-#~ msgid "Can't open %s: %s."
-#~ msgstr "No se pudo probar: %s"
-
-#, fuzzy
-#~ msgid "-- Attachments"
-#~ msgstr "Archivos adjuntos"
-
-#, fuzzy
-#~ msgid "Unable to attach %s!"
-#~ msgstr "¡Imposible adjuntar!"
-
-#, fuzzy
-#~ msgid "Subscribing to %s..."
-#~ msgstr "Copiando a %s..."
-
-#, fuzzy
-#~ msgid "Unsubscribing to %s..."
-#~ msgstr "Desuscribiéndose de %s..."
-
-#, fuzzy
-#~ msgid ""
-#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
-#~ "\n"
-#~ msgstr "Error: multipart/signed no tiene protocolo."
-
-#, fuzzy
-#~ msgid ""
-#~ "[-- The following data is signed --]\n"
-#~ "\n"
-#~ msgstr ""
-#~ "[-- Lo siguiente esta firmado con PGP/MIME --]\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "[-- End of signed data --]\n"
-#~ msgstr ""
-#~ "\n"
-#~ "[-- Fin de datos firmados --]\n"
-
-#, fuzzy
-#~ msgid "Invoking pgp..."
-#~ msgstr "Invocando pgp..."
