@@ -325,7 +325,7 @@ static int rfc2047_decode_word (char *d, const char *s, size_t len)
     pd = d;
     while (*pd)
     {
-      if (!IsPrint ((unsigned char) *pd))
+      if (!IsPrint (*pd))
 	*pd = '?';
       pd++;
     }
