@@ -24,6 +24,10 @@
 #include <limits.h>
 #include <stdarg.h>
 
+#ifndef _POSIX_PATH_MAX
+#include <posix1_lim.h>
+#endif
+
 #include "rfc822.h"
 #include "hash.h"
 
