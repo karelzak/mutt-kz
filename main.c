@@ -219,7 +219,8 @@ static void show_version (void)
 	"-HAVE_COLOR  "
 #endif
 
-
+	);
+  puts (
 
 #ifdef _PGPPATH
 #ifdef HAVE_PGP5
