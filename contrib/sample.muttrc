@@ -267,9 +267,9 @@ save-hook ^judge +diplomacy
 
 #alias exam "\# to annoy michael" <user@host>
 #alias me Michael Elkins <michael> # me!
-alias mutt-dev Mutt Development List <mutt-dev@cs.hmc.edu> # power users
-alias mutt-users Mutt User List <mutt-users@cs.hmc.edu>
-alias mutt-announce Mutt Announcement List <mutt-announce@cs.hmc.edu>
+alias mutt-dev Mutt Development List <mutt-dev@mutt.org> # power users
+alias mutt-users Mutt User List <mutt-users@mutt.org>
+# alias mutt-announce Mutt Announcement List <mutt-announce@cs.hmc.edu>
 alias wmaker WindowMaker Mailing List <wmaker@eosys.com>
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
