@@ -104,8 +104,7 @@ static COLOR_LINE *mutt_new_color_line (void)
 }
 
 static void mutt_free_color_line(COLOR_LINE **l, 
-				 int free_colors,
-				 int free_rx)
+				 int free_colors)
 {
   COLOR_LINE *tmp;
  
@@ -123,9 +122,7 @@ static void mutt_free_color_line(COLOR_LINE **l,
    * type for regular expressions.
    */
   
-  if(free_rx)
-    regfree(&tmp->rx);
-  
+  regfree(&tmp->rx);
   mutt_pattern_free(&tmp->color_pattern);
   safe_free((void **)&tmp->pattern);
   safe_free((void **)l);
@@ -401,7 +398,7 @@ _mutt_parse_uncolor (BUFFER *buf, BUFFER *s, unsigned long data, BUFFER *err,
 	  do_cache = 1;
 	last = tmp;
 	tmp = tmp->next;
-	mutt_free_color_line(&last, parse_uncolor, 1);
+	mutt_free_color_line(&last, parse_uncolor);
       }
       ColorIndexList = NULL;
     }
@@ -419,7 +416,7 @@ _mutt_parse_uncolor (BUFFER *buf, BUFFER *s, unsigned long data, BUFFER *err,
 	    last->next = tmp->next;
 	  else
 	    ColorIndexList = tmp->next;
-	  mutt_free_color_line(&tmp, parse_uncolor, 1);
+	  mutt_free_color_line(&tmp, parse_uncolor);
 	  break;
 	}
       }
@@ -491,7 +488,7 @@ add_pattern (COLOR_LINE **top, const char *s, int sensitive,
     if ((r = REGCOMP (&tmp->rx, s, (sensitive ? mutt_which_case (s) : REG_ICASE))) != 0)
     {
       regerror (r, &tmp->rx, err->data, err->dsize);
-      mutt_free_color_line(&tmp, 1, 1);
+      mutt_free_color_line(&tmp, 1);
       return (-1);
     }
     tmp->next = *top;
@@ -510,7 +507,7 @@ add_pattern (COLOR_LINE **top, const char *s, int sensitive,
       mutt_check_simple (buf, sizeof (buf), NONULL(SimpleSearch));
       if((tmp->color_pattern = mutt_pattern_comp (buf, M_FULL_MSG, err)) == NULL)
       {
-	mutt_free_color_line(&tmp, 1, 1);
+	mutt_free_color_line(&tmp, 1);
 	return -1;
       }
     }
