@@ -2829,7 +2829,6 @@ to send messages from the command line as well.
 -m      specify a default mailbox type
 -n      do not read the system Muttrc
 -p      recall a postponed message
--Q      query a configuration variable
 -R      open mailbox in read-only mode
 -s      specify a subject (enclose in quotes if it contains spaces)
 -v      show version number and compile-time definitions
