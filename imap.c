@@ -661,6 +661,7 @@ static int imap_exec (char *buf, size_t buflen,
 
 static int imap_open_connection (CONTEXT *ctx, CONNECTION *conn)
 {
+  char *portnum, *hostname;
   struct sockaddr_in sin;
   struct hostent *he;
   char buf[LONG_STRING];
@@ -669,13 +670,18 @@ static int imap_open_connection (CONTEXT *ctx, CONNECTION *conn)
   char seq[16];
 
   memset (&sin, 0, sizeof (sin));
-  sin.sin_port = htons (IMAP_PORT);
+  hostname = safe_strdup(conn->server);
+  portnum = strrchr(hostname, ':');
+  if(portnum) { *portnum=0; portnum++; }
+  sin.sin_port = htons (portnum ? atoi(portnum) : IMAP_PORT);
   sin.sin_family = AF_INET;
-  if ((he = gethostbyname (conn->server)) == NULL)
+  if ((he = gethostbyname (hostname)) == NULL)
   {
+    safe_free((void*)&hostname);
     mutt_perror (conn->server);
     return (-1);
   }
+  safe_free((void*)&hostname);
   memcpy (&sin.sin_addr, he->h_addr_list[0], he->h_length);
 
   if ((conn->fd = socket (AF_INET, SOCK_STREAM, IPPROTO_IP)) < 0)
