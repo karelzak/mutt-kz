@@ -1,14 +1,14 @@
 # Ronny Haryanto <giant@canada.com>, 1999.
 #
-# http://www.linux.or.id
+# http://i18n.linux.or.id
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0pre1-1\n"
+"Project-Id-Version: 1.0pre4-1\n"
 "POT-Creation-Date: 1999-10-11 21:19+0200\n"
-"PO-Revision-Date: 1999-08-24 15:35-0500\n"
+"PO-Revision-Date: 1999-10-20 09:15-0500\n"
 "Last-Translator: Ronny Haryanto <giant@canada.com>\n"
-"Language-Team: Indonesia <id@li.org>\n"
+"Language-Team: Indonesia <i18n@linux.or.id>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 7bit\n"
@@ -594,7 +594,7 @@ msgstr "Kotak surat hanya bisa dibaca."
 
 #: curs_main.c:53 pager.c:56 recvattach.c:874
 msgid "Function not permitted in attach-message mode."
-msgstr "Fungsi tidak diperbolehkan dalam mode lampirkan-pesan."
+msgstr "Fungsi tidak diperbolehkan dalam mode lampirkan-surat."
 
 #: curs_main.c:220
 msgid "Cannot toggle write on a readonly mailbox!"
@@ -3069,14 +3069,17 @@ msgid "%s...  Exiting.\n"
 msgstr "%s... Keluar.\n"
 
 #: signal.c:42
+#, c-format
 msgid "Caught %s...  Exiting.\n"
 msgstr "%s tertangkap... Keluar.\n"
 
 #: signal.c:44
+#, c-format
 msgid "Caught signal %d...  Exiting.\n"
 msgstr "Sinyal %d tertangkap... Keluar.\n"
 
 #: socket.c:130
+#, c-format
 msgid "Connecting to %s..."
 msgstr "Menghubungi %s..."
 
@@ -3091,3 +3094,9 @@ msgstr "Tidak bisa menemukan fungsi pengurutan! [laporkan bug ini]"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(tidak ada kotak surat)"
+
+#~ msgid "Saved output of child process to %s.\n"
+#~ msgstr "Keluaran dari proses anak telah disimpan ke %s.\n"
+
+#~ msgid "Error sending message."
+#~ msgstr "Error dalam pengiriman surat."
