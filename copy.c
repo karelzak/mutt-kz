@@ -478,7 +478,7 @@ _mutt_append_message (CONTEXT *dest, FILE *fpin, CONTEXT *src, HEADER *hdr,
   MESSAGE *msg;
   int r;
 
-  if ((msg = mx_open_new_message (dest, hdr, (dest->magic == M_MBOX || dest->magic == M_MMDF) ? M_ADD_FROM : 0)) == NULL)
+  if ((msg = mx_open_new_message (dest, hdr, (src->magic == M_MBOX || src->magic == M_MMDF) ? 0 : M_ADD_FROM)) == NULL)
     return -1;
   if (dest->magic == M_MBOX || dest->magic == M_MMDF)
     chflags |= CH_FROM;
