@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.3.23\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2002-01-19 21:09+0100\n"
 "Last-Translator: Marco d'Itri <md@linux.it>\n"
 "Language-Team: none\n"
@@ -3315,7 +3315,7 @@ msgstr "Errore durante la scrittura della mailbox!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d messaggi letti su %d]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Il server ha chiuso la connessione!"
 
@@ -3340,15 +3340,15 @@ msgstr "Impossibile lasciare i messaggi sul server."
 msgid "Error connecting to server: %s"
 msgstr "Errore nella connessione al server: %s"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "Chiudo la connessione al server POP..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "Verifica degli indici dei messaggi..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Connessione persa. Mi riconnetto al server POP?"
 

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1.5i\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2000-03-05 01:14-0300\n"
 "Last-Translator: Marcus Brito <marcus@visaotec.com.br>\n"
 "Language-Team: LIE-BR (http://lie-br.conectiva.com.br)\n"
@@ -3396,7 +3396,7 @@ msgstr "Erro ao gravar a caixa!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d de %d mensagens lidas]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "O servidor fechou a conexão!"
 
@@ -3425,17 +3425,17 @@ msgstr "Apagando mensagens do servidor..."
 msgid "Error connecting to server: %s"
 msgstr "Conectando a %s"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 #, fuzzy
 msgid "Closing connection to POP server..."
 msgstr "Fechando a conexão com o servidor IMAP..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 #, fuzzy
 msgid "Verifying message indexes..."
 msgstr "Gravando mensagem em %s..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 #, fuzzy
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Fechando a conexão com o servidor IMAP..."

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6i\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 1999-07-29 00:00+0100\n"
 "Last-Translator: Miroslav Vasko <vasko@ies.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -3411,7 +3411,7 @@ msgstr "Chyba pri zapisovaní do schránky!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [preèítaných správ: %d]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Server uzavrel spojenie!"
 
@@ -3438,17 +3438,17 @@ msgstr "Vymazávam správy zo serveru..."
 msgid "Error connecting to server: %s"
 msgstr "Pripájam sa na %s"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 #, fuzzy
 msgid "Closing connection to POP server..."
 msgstr "Zatváram spojenie s IMAP serverom..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 #, fuzzy
 msgid "Verifying message indexes..."
 msgstr "Zapisujem správu do %s ..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 #, fuzzy
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Zatváram spojenie s IMAP serverom..."

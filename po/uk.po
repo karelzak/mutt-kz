@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.99/1.4\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2002-05-04 12:23+0200\n"
 "Last-Translator: Andriy N. Gritsenko <andrej@lucky.net>\n"
 "MIME-Version: 1.0\n"
@@ -3282,7 +3282,7 @@ msgstr "Помилка п╕д час запису поштово╖ скриньки!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d з %d лист╕в прочитано]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Сервер закрив з'╓днання!"
 
@@ -3307,15 +3307,15 @@ msgstr "Неможливо залишити пов╕домлення на сервер╕."
 msgid "Error connecting to server: %s"
 msgstr "Помилка з'╓днання з сервером: %s"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "Закриття з'╓днання з сервером POP..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "Перев╕рка ╕ндекс╕в пов╕домлень..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "З'╓днання загублено. В╕дновити зв'язок з сервером POP?"
 

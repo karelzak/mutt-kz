@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Johan van Selst <johans@stack.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3327,7 +3327,7 @@ msgstr "Er is een fout opgetreden tijdens het wegschrijven van de mailfolder!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d van de %d berichten gelezen]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Server heeft verbinding gesloten!"
 
@@ -3356,17 +3356,17 @@ msgstr "Berichten op de server worden gewist..."
 msgid "Error connecting to server: %s"
 msgstr "Verbinding met %s wordt aangelegd"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 #, fuzzy
 msgid "Closing connection to POP server..."
 msgstr "Verbinding met IMAP-server wordt gesloten.."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 #, fuzzy
 msgid "Verifying message indexes..."
 msgstr "Bericht wordt opgeslagen in %s ..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 #, fuzzy
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Verbinding met IMAP-server wordt gesloten.."

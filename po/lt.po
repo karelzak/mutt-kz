@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.3.12i\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2000-11-29 21:22+0200\n"
 "Last-Translator: Gediminas Paulauskas <menesis@delfi.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -3361,7 +3361,7 @@ msgstr "Klaida raðant á paðto dëþutæ!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d ið %d laiðkø perskaityti]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Serveris uþdarë jungtá!"
 
@@ -3386,15 +3386,15 @@ msgstr "Negaliu palikti laiðkø serveryje."
 msgid "Error connecting to server: %s"
 msgstr "Klaida jungiantis prie IMAP serverio: %s"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "Uþdarau jungtá su POP serveriu..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "Tikrinu laiðkø indeksus..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Jungtis prarasta. Vël prisijungti prie POP serverio?"
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.2\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 1999-12-20 20:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -3408,7 +3408,7 @@ msgstr "写入信箱时发生错误！"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [已阅读 %2d 封信件中的 %1d 封]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "与伺服器的联结中断了!"
 
@@ -3437,17 +3437,17 @@ msgstr "正在删除伺服器上的信件…"
 msgid "Error connecting to server: %s"
 msgstr "正连线到 %s"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 #, fuzzy
 msgid "Closing connection to POP server..."
 msgstr "正在关闭与 IMAP 伺服器的连线…"
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 #, fuzzy
 msgid "Verifying message indexes..."
 msgstr "写入信件到 %s …"
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 #, fuzzy
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "正在关闭与 IMAP 伺服器的连线…"

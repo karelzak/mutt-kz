@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.19\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2001-06-09 23:27+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -3991,7 +3991,7 @@ msgid "%s [%d of %d messages read]"
 msgstr "%s [poèet pøeètených zpráv: %d/%d]"
 
 #
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Server uzavøel spojení!"
 
@@ -4020,17 +4020,17 @@ msgid "Error connecting to server: %s"
 msgstr "Chyba pøi pøipojováno k serveru: %s"
 
 #
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "Konèím spojení s POP serverem..."
 
 #
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "Ukládám indexy zpráv..."
 
 #
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Spojení ztraceno. Navázat znovu spojení s POP serverem."
 

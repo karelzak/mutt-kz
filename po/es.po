@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.4\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2001-06-08 19:44+02:00\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
@@ -3352,7 +3352,7 @@ msgstr "¡Error al escribir el buzón!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d de %d mensajes leídos]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "¡El servidor cerró la conneción!"
 
@@ -3377,15 +3377,15 @@ msgstr "No es posible dejar los mensajes en el servidor."
 msgid "Error connecting to server: %s"
 msgstr "Error al conectar al servidor: %s"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "Cerrando conexión al servidor POP..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "Verificando índice de mensajes..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Conexión perdida. ¿Reconectar al servidor POP?"
 

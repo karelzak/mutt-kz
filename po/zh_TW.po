@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.22.1\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2001-09-06 18:25+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -3341,7 +3341,7 @@ msgstr "寫入信箱時發生錯誤！"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [已閱讀 %2d 封信件中的 %1d 封]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "與伺服器的聯結中斷了!"
 
@@ -3366,15 +3366,15 @@ msgstr "無法把信件留在伺服器上。"
 msgid "Error connecting to server: %s"
 msgstr "連線到 %s 時失敗"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "正在關閉與 POP 伺服器的連線…"
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "正在檢查信件的指引 …"
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "連線中斷。再與 POP 伺服器連線嗎？"
 

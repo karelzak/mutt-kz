@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.99\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2002-01-19 14:33+01:00\n"
 "Last-Translator: Jörgen Tegnér <jorgen.tegner@telia.com>\n"
 "Language-Team: Swedish <mutt-po@mutt.org>\n"
@@ -3324,7 +3324,7 @@ msgstr "Fel när brevlådan skrevs!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d utav %d meddelanden lästa]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Servern stängde förbindelsen!"
 
@@ -3349,15 +3349,15 @@ msgstr "Kunde inte lämna meddelanden på server."
 msgid "Error connecting to server: %s"
 msgstr "Ett fel uppstod när förbindelse till servern %s försöktes."
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "Stänger förbindelse till POP-servern..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "Verifierar meddelandeindex..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Förbindelse tappades. Kontakta POP-servern igen?"
 

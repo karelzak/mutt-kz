@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.4i\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2001-06-12 12:47+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gtranslator.org>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -3339,7 +3339,7 @@ msgstr "Eposta kutusunu yazarken hata oldu!"
 msgid "%s [%d of %d messages read]"
 msgstr "%1$s [ %3$d iletiden %2$d ileti okundu]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Sunucu baðlantýyý kesti!"
 
@@ -3364,15 +3364,15 @@ msgstr "Iletiler sunucuda býrakýlamýyor."
 msgid "Error connecting to server: %s"
 msgstr "%s'e baðlanýlýrken hata oldu"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "POP sunucuya varolan baðlantý kapatýlýyor..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "Ileti sayýsýný doðrula..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Baðlantý kayboldu. Yeniden POP sunucusuna baðlanýlsýn mý?"
 

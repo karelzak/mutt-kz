@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.99\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2002-05-19 13:27+0100\n"
 "Last-Translator: Edmund GRIMLEY EVANS <edmundo@rano.org>\n"
 "Language-Team: eo <translation-team-eo@lists.sourceforge.net>\n"
@@ -3314,7 +3314,7 @@ msgstr "Eraro dum skribado de poþtfako!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d el %d mesaøoj legitaj]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Servilo fermis la konekton!"
 
@@ -3339,15 +3339,15 @@ msgstr "Ne povas lasi mesaøojn æe la servilo."
 msgid "Error connecting to server: %s"
 msgstr "Eraro dum konektiøo al servilo: %s"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "Fermas la konekton al POP-servilo ..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "Kontrolas mesaøindeksojn ..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Konekto perdita. Æu rekonekti al POP-servilo?"
 

@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.4i\n"
-"POT-Creation-Date: 2002-05-02 01:08+0200\n"
+"POT-Creation-Date: 2002-05-29 11:31+0200\n"
 "PO-Revision-Date: 2002-05-03 22:53+0300\n"
 "Last-Translator: mutt-ru@woe.spb.ru\n"
 "Language-Team: RUSSIAN <mutt-ru@woe.spb.ru>\n"
@@ -3342,7 +3342,7 @@ msgstr "Ошибка записи почтового ящика!"
 msgid "%s [%d of %d messages read]"
 msgstr "%s [сообщений прочитано: %d из %d]"
 
-#: pop.c:688 pop_lib.c:276
+#: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
 msgstr "Сервер закрыл соединение!"
 
@@ -3367,15 +3367,15 @@ msgstr "Невозможно оставить сообщения на сарвере."
 msgid "Error connecting to server: %s"
 msgstr "Ошибка при установлении соединения: %s"
 
-#: pop_lib.c:290
+#: pop_lib.c:292
 msgid "Closing connection to POP server..."
 msgstr "Закрытие соединения с POP-сервером..."
 
-#: pop_lib.c:455
+#: pop_lib.c:458
 msgid "Verifying message indexes..."
 msgstr "Проверка номеров сообщений..."
 
-#: pop_lib.c:479
+#: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Соединение потеряно. Установить соединение повторно?"
 
