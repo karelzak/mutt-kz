@@ -540,7 +540,7 @@ int main (int argc, char **argv)
 	    mutt_endwin (NULL);
 	  perror (tempfile);
 	  fclose (fin);
-	  free (tempfile);
+	  FREE (&tempfile);
 	  exit (1);
 	}
 

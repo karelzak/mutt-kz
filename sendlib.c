@@ -1626,7 +1626,7 @@ char *mutt_quote_string (const char *s)
   size_t rlen;
 
   rlen = strlen (s) + 3;
-  pr = r = malloc (rlen);
+  pr = r = (char *) safe_malloc (rlen);
   *pr++ = '"';
   while (*s)
   {

@@ -392,7 +392,7 @@ BODY *mutt_read_mime_header (FILE *fp, int digest)
   else if (p->type == TYPEMESSAGE && !p->subtype)
     p->subtype = safe_strdup ("rfc822");
 
-  free (line);
+  FREE (&line);
 
   return (p);
 }
@@ -1165,7 +1165,7 @@ ENVELOPE *mutt_read_rfc822_header (FILE *f, HEADER *hdr)
     loc = ftell (f);
   }
 
-  free (line);
+  FREE (&line);
 
   if (hdr)
   {

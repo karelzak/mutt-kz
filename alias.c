@@ -91,8 +91,7 @@ static ADDRESS *mutt_expand_aliases_r (ADDRESS *a, LIST **expn)
 	    *p = 0;
 	  a->personal = safe_strdup (buffer);
 #ifdef EXACT_ADDRESS
-	  free (a->val);
-	  a->val = NULL;
+	  FREE (&a->val);
 #endif
 	}
       }

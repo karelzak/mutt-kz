@@ -290,7 +290,7 @@ static int rfc1524_mailcap_parse (BODY *a,
 	      /* a non-zero exit code means test failed */
 	      found = FALSE;
 	    }
-	    free (test_command);
+	    FREE (&test_command);
 	  }
 	}
       } /* while (ch) */

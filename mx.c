@@ -565,7 +565,7 @@ CONTEXT *mx_open_mailbox (const char *path, int flags, CONTEXT *pctx)
   {
     mx_fastclose_mailbox (ctx);
     if (!pctx)
-      free (ctx);
+      FREE (&ctx);
     return (NULL);
   }
   
@@ -1341,8 +1341,7 @@ MESSAGE *mx_open_message (CONTEXT *ctx, int msgno)
 	  mutt_perror (path);
 	  dprint (1, (debugfile, "mx_open_message: fopen: %s: %s (errno %d).\n",
 		      path, strerror (errno), errno));
-	  free (msg);
-	  msg = NULL;
+	  FREE (&msg);
 	}
       }
       break;
@@ -1350,17 +1349,14 @@ MESSAGE *mx_open_message (CONTEXT *ctx, int msgno)
 #ifdef USE_IMAP
     case M_IMAP:
       if (imap_fetch_message (msg, ctx, msgno) != 0)
-      {
-	free (msg);
-	msg = NULL;
-      }
+	FREE (&msg);
       break;
 #endif /* USE_IMAP */
 
     default:
 
       dprint (1, (debugfile, "mx_open_message(): function not implemented for mailbox type %d.\n", ctx->magic));
-      safe_free ((void **) &msg);
+      FREE (&msg);
       break;
   }
   return (msg);
@@ -1407,8 +1403,7 @@ int mx_close_message (MESSAGE **msg)
       break;
   }
 
-  free (*msg);
-  *msg = NULL;
+  FREE (msg);
   return (r);
 }
 

@@ -145,10 +145,9 @@ void km_bindkey (char *s, int menu, int op, char *macro)
       {
 	len = tmp->eq;
 	next = tmp->next;
-	if (tmp->macro)
-	  free (tmp->macro);
-	free (tmp->keys);
-	free (tmp);
+	FREE (&tmp->macro);
+	FREE (&tmp->keys);
+	FREE (&tmp);
 	tmp = next;
       }
       while (tmp && len >= pos);

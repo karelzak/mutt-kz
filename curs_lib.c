@@ -318,7 +318,7 @@ int mutt_enter_fname (const char *prompt, char *buf, size_t blen, int *redraw, i
 	!= 0)
       buf[0] = 0;
     MAYBE_REDRAW (*redraw);
-    free (pc);
+    FREE (&pc);
   }
 
   return 0;

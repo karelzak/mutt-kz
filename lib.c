@@ -512,7 +512,7 @@ void mutt_free_alias (ALIAS **p)
     *p = (*p)->next;
     safe_free ((void **) &t->name);
     rfc822_free_address (&t->addr);
-    free (t);
+    safe_free ((void **) &t);
   }
 }
 
@@ -816,7 +816,7 @@ char *mutt_read_line (char *s, size_t *size, FILE *fp, int *line)
   {
     if (fgets (s + offset, *size - offset, fp) == NULL)
     {
-      free (s);
+      safe_free ((void **) &s);
       return NULL;
     }
     if ((ch = strchr (s + offset, '\n')) != NULL)
@@ -1067,7 +1067,7 @@ FILE *mutt_open_read (const char *path, pid_t *thepid)
     s[len - 1] = 0;
     endwin ();
     *thepid = mutt_create_filter (s, NULL, &f, NULL);
-    free (s);
+    safe_free ((void **) &s);
   }
   else
   {

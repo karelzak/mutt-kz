@@ -719,10 +719,9 @@ void text_enriched_handler (BODY *a, STATE *s)
 
   state_putc ('\n', s); /* add a final newline */
 
-  if (stte.buffer)
-    free (stte.buffer);
-  free (stte.line);
-  free (stte.param);
+  FREE (&(stte.buffer));
+  FREE (&(stte.line));
+  FREE (&(stte.param));
 }                                                                              
 
 #define TXTPLAIN    1
