@@ -533,6 +533,7 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 	    safe_free ((void **) &idx[i]);
 	  idxlen = 0;
 	  idx = mutt_gen_attach_list (msg->content, idx, &idxlen, &idxmax, 0, 1);
+	  menu->data = idx;
 	  menu->max = idxlen;
 	}
 
