@@ -116,6 +116,11 @@ behavior:
 	when you press '!'.  Only use this option to solve the above problem,
 	and only specify one of the above shells as its argument.
 
+	(If you encounter this problem with your platform's native
+	Bourne shell, please send a short report to mutt-dev@cs.hmc.edu,
+	so a short note on this topic can be added to the Platform notes
+	section below.)
+
 --enable-exact-address
 	By default, Mutt will rewrite all addresses in the form
 		Personal Name <user@host.domain>
@@ -150,3 +155,28 @@ Linux
 	On recent Linux systems, flock() and fcntl() locks don't mix.  If
 	you use the --enable-flock switch on such systems, be sure to
 	give the --disable-fcntl argument as well.
+
+	The Linux libc 5.4.45 disables locale support in programs running
+	setgid mail.  You'll need to use the configure switch
+	"--enable-locales-fix".  If you're using a non-iso-8859 font, you
+	lose.  This is not an issue on glibc (libc 6) based systems.
+
+
+Digital Unix (OSF/1)
+
+	Don't try "--with-rx", because you won't be able to match
+	anything (using system's regex functions seems to work fine
+	though).
+
+	Also, the system curses library is said to be badly broken.  Use
+	GNU ncurses or SLang instead.
+
+
+FreeBSD 3.0
+
+	/bin/sh is broken on this platform.  You need the
+	"--with-exec-shell" configuration switch here; ksh
+	and bash are reported to be fine.
+
+	This may also be an issue with earlier FreeBSD
+	versions.
