@@ -1,704 +1,664 @@
-# Catalan messages for mutt.
-# Copyright (C) 2001 Free Software Foundation, Inc.
-# Ivan Vilata i Balaguer <ivan@selidor.net>, 2001
+# This file was translated by Velko Hristov
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Velko Hristov <hristov@informatik.hu-berlin.de>, 2002.
 #
-# ivb (2001/12/08)
-# ivb  Acн cal ajustar-se a voltes a ~80 columnes.  Les traduccions que
-# ivb  han hagut de ser «compactades» estan marcades amb «ABREUJAT!»,
-# ivb  i s'hi indica la traducciу completa.
+# todo: remove ambiguous translations: bounce - forward; record - save;
+# tag - flag
 #
+# todo: decide how to translate: status flag, view, remailer, mixmaster, entry,
+#	mailing list
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mutt 1.3.27i\n"
-"POT-Creation-Date: 2002-05-29 11:31+0200\n"
-"PO-Revision-Date: 2002-06-10 16:03+0200\n"
-"Last-Translator: Ivan Vilata i Balaguer <ivan@selidor.net>\n"
-"Language-Team: Catalan <ca@dodds.net>\n"
+"Project-Id-Version: Mutt 1.4\n"
+"POT-Creation-Date: 2002-05-30 20:51+0200\n"
+"PO-Revision-Date: 2002-06-16 14:41+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=windows-1251\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: account.c:144
 #, c-format
 msgid "Username at %s: "
-msgstr "Nom d'usuari en «%s»: "
+msgstr "Потребителско име за %s: "
 
 #: account.c:172
 #, c-format
 msgid "Password for %s@%s: "
-msgstr "Contrasenya per %s@%s: "
+msgstr "Парола за %s@%s: "
 
 #: addrbook.c:31 browser.c:40 pager.c:1435 postpone.c:37 query.c:43
 #: recvattach.c:57
 msgid "Exit"
-msgstr "Ix"
+msgstr "Изход"
 
-# ivb (2001/12/08)
-# ivb  Menъ superpoblat: mantenir _molt_ curt!
 #: addrbook.c:32 curs_main.c:398 pager.c:1442 postpone.c:38
 msgid "Del"
-msgstr "Esbrr"
+msgstr "Изтр."
 
 #: addrbook.c:33 curs_main.c:399 postpone.c:39
 msgid "Undel"
-msgstr "Recupera"
+msgstr "Възст."
 
 #: addrbook.c:34
 msgid "Select"
-msgstr "Selecciona"
+msgstr "Избор"
 
 #. __STRCAT_CHECKED__
 #: addrbook.c:35 browser.c:43 compose.c:93 curs_main.c:404 mutt_ssl.c:627
 #: pager.c:1534 pgpkey.c:517 postpone.c:40 query.c:48 recvattach.c:61
 msgid "Help"
-msgstr "Ajuda"
+msgstr "Помощ"
 
 #: addrbook.c:140
 msgid "You have no aliases!"
-msgstr "No teniu cap аlies!"
+msgstr "В адресната Ви книга няма записи!"
 
 #: addrbook.c:151
 msgid "Aliases"
-msgstr "Аlies"
+msgstr "Псевдоними"
 
 #. add a new alias
 #: alias.c:234
 msgid "Alias as: "
-msgstr "Nou аlies: "
+msgstr "Псевдоним за адресната книга: "
 
 #: alias.c:240
 msgid "You already have an alias defined with that name!"
-msgstr "Ja heu definit un аlies amb aquest nom!"
+msgstr "Вече има запис за този псевдоним!"
 
 #: alias.c:255
 msgid "Address: "
-msgstr "Adreзa: "
+msgstr "Адрес: "
 
 #: alias.c:271
 msgid "Personal name: "
-msgstr "Nom personal: "
+msgstr "Име: "
 
 #: alias.c:280
 #, c-format
 msgid "[%s = %s] Accept?"
-msgstr "[%s = %s] Voleu acceptar?"
+msgstr "[%s = %s] Запис?"
 
 #: alias.c:297 recvattach.c:391 recvattach.c:445
 msgid "Save to file: "
-msgstr "Guarda en el fitxer: "
+msgstr "Запис във файл: "
 
 #: alias.c:308
 msgid "Alias added."
-msgstr "S'ha afegit l'аlies."
+msgstr "Псевдонимът е добавен."
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  El nom de fitxer no concorda amb cap «nametemplate»; voleu continuar?
 #: attach.c:111 attach.c:238 attach.c:431 attach.c:915
 msgid "Can't match nametemplate, continue?"
-msgstr "El nom de fitxer no concorda amb cap «nametemplate»; continuar?"
+msgstr "Няма шаблон с това име. Да продължа ли?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:123
 #, c-format
 msgid "Mailcap compose entry requires %%s"
-msgstr "Cal que l'entrada «compose» de «mailcap» continga «%%s»."
+msgstr "Записът \"compose\" в mailcap изисква %%s"
 
 #: attach.c:131 attach.c:256 commands.c:190 compose.c:1154 curs_lib.c:145
 #: curs_lib.c:374
 #, c-format
 msgid "Error running \"%s\"!"
-msgstr "Error en executar «%s»!"
+msgstr "Грешка при изпълнение на \"%s\"!"
 
 #: attach.c:141
 msgid "Failure to open file to parse headers."
-msgstr "No s'ha pogut obrir el fitxer per interpretar-ne les capзaleres."
+msgstr "Грешка при отваряне на файла за прочитане на заглавната информация."
 
 #: attach.c:172
 msgid "Failure to open file to strip headers."
-msgstr "No s'ha pogut obrir el fitxer per eliminar-ne les capзaleres."
+msgstr "Грешка при отваряне на файла за изтриване на заглавна информация."
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  No hi ha cap entrada «compose» de «%s» en «mailcap»: es crea un fitxer buit.
 #: attach.c:190
 #, c-format
 msgid "No mailcap compose entry for %s, creating empty file."
-msgstr "«%s» no tй entrada «compose» en «mailcap»: cree fitxer buit."
+msgstr "В mailcap липсва запис \"compose\" за %s. Създавам празен файл."
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
 #, c-format
 msgid "Mailcap Edit entry requires %%s"
-msgstr "Cal que l'entrada «edit» de «mailcap» continga «%%s»."
+msgstr "Записът \"edit\" в mailcap изисква %%s"
 
 #: attach.c:269
 #, c-format
 msgid "No mailcap edit entry for %s"
-msgstr "No hi ha cap entrada «edit» de «%s» en «mailcap»."
+msgstr "В mailcap липсва запис \"edit\" за %s"
 
 #: attach.c:397
 msgid "No matching mailcap entry found.  Viewing as text."
-msgstr "No hi ha cap entrada adequada en «mailcap».  Es visualitza com a text."
+msgstr "Няма подходящо mailcap вписване. Показвам прикачения файл като текст."
 
 #: attach.c:410
 msgid "MIME type not defined.  Cannot view attachment."
-msgstr "No s'ha definit el tipus MIME.  No es pot veure el fitxer adjunt."
+msgstr "Недефиниран MIME тип. Прикаченият файл не може да бъде показан."
 
 #: attach.c:500
 msgid "Cannot create filter"
-msgstr "No s'ha pogut crear el filtre."
+msgstr "Грешка при създаване на филтър"
 
 #: attach.c:629 attach.c:661 attach.c:948 attach.c:1006 handler.c:1549
 #: pgpkey.c:566 pgpkey.c:755
 msgid "Can't create filter"
-msgstr "No s'ha pogut crear el filtre."
+msgstr "Грешка при създаване на филтър"
 
 #: attach.c:736 recvattach.c:419 recvattach.c:479
 msgid "Attachment saved."
-msgstr "S'ha desat el fitxer adjunt."
+msgstr "Прикаченият файл е записан на диска."
 
 #: attach.c:787
 msgid "Write fault!"
-msgstr "Error d'escriptura!"
+msgstr "Грешка при запис!"
 
 #: attach.c:1029
 msgid "I don't know how to print that!"
-msgstr "No sй com imprimir aixт!"
+msgstr "Не знам как да го отпечатам!"
 
 #: browser.c:41
 msgid "Chdir"
-msgstr "Canvia directori"
+msgstr "Директория"
 
 #: browser.c:42
 msgid "Mask"
-msgstr "Mаscara"
+msgstr "Маска"
 
 #: browser.c:375 browser.c:963
 #, c-format
 msgid "%s is not a directory."
-msgstr "«%s» no йs un directori."
+msgstr "%s не е директория."
 
-# ivb (2001/12/07)
-# ivb  Es refereix a les definides en «mailboxes».
 #: browser.c:495
 #, c-format
 msgid "Mailboxes [%d]"
-msgstr "Bъsties d'entrada [%d]"
+msgstr "Пощенски кутии [%d]"
 
 #: browser.c:502
 #, c-format
 msgid "Subscribed [%s], File mask: %s"
-msgstr "Subscrites [%s], mаscara de fitxers: %s"
+msgstr "Абонирани [%s], Файлова маска: %s"
 
 #: browser.c:506
 #, c-format
 msgid "Directory [%s], File mask: %s"
-msgstr "Directori [%s], mаscara de fitxers: %s"
+msgstr "Директория [%s], Файлова маска: %s"
 
 #: browser.c:518
 msgid "Can't attach a directory!"
-msgstr "No es pot adjuntar un directori!"
+msgstr "Не мога да прикача директория!"
 
 #: browser.c:649 browser.c:1030 browser.c:1123
 msgid "No files match the file mask"
-msgstr "No hi ha cap fitxer que concorde amb la mаscara de fitxers."
+msgstr "Няма файлове, отговарящи на маската"
 
 #: browser.c:855
 msgid "Create is only supported for IMAP mailboxes"
-msgstr "Nomйs es poden crear bъsties IMAP."
+msgstr "Създаването се поддържа само за IMAP пощенски кутии"
 
 #: browser.c:875
 msgid "Delete is only supported for IMAP mailboxes"
-msgstr "Nomйs es poden esborrar bъsties IMAP."
+msgstr "Само IMAP пощенски кутии могат да бъдат изтривани"
 
 #: browser.c:883
 #, c-format
 msgid "Really delete mailbox \"%s\"?"
-msgstr "Voleu realment esborrar la bъstia «%s»?"
+msgstr "Действително ли да изтрия пощенската кутия \"%s\"?"
 
 #: browser.c:897
 msgid "Mailbox deleted."
-msgstr "S'ha esborrat la bъstia."
+msgstr "Пощенската кутия е изтрита."
 
 #: browser.c:903
 msgid "Mailbox not deleted."
-msgstr "No s'ha esborrat la bъstia."
+msgstr "Пощенската кутия не е изтрита."
 
 #: browser.c:922
 msgid "Chdir to: "
-msgstr "Canvia al directori: "
+msgstr "Смяна на директорията: "
 
 #: browser.c:956 browser.c:1023
 msgid "Error scanning directory."
-msgstr "Error en llegir el directori."
+msgstr "Грешка при четене на директорията."
 
 #: browser.c:974
 msgid "File Mask: "
-msgstr "Mаscara de fitxers: "
+msgstr "Файлова маска: "
 
 #: browser.c:1046
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr "Ordena inversament per (d)ata, (a)lfabet, (t)amany, o (n)o ordenar? "
+msgstr "Обратно подреждане по: дата(d), азбучен ред(a), размер(z) или неподредени(n)? "
 
 #: browser.c:1047
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr "Ordena per (d)ata, (a)lfabet, (t)amany, o (n)o ordenar? "
+msgstr "Подреждане по: дата(d), азбучен ред(a), размер(z) или неподредени(n)? "
 
-# ivb (2001/11/18)
-# ivb  (d)ata, (a)lfabet, (t)amany, (n)o
 #: browser.c:1048
 msgid "dazn"
-msgstr "datn"
+msgstr "dazn"
 
 #: browser.c:1110
 msgid "New file name: "
-msgstr "Nom del nou fitxer: "
+msgstr "Ново име на файла: "
 
 #: browser.c:1141
 msgid "Can't view a directory"
-msgstr "No es pot veure un directori."
+msgstr "Директорията не може да бъде показана"
 
 #: browser.c:1159
 msgid "Error trying to view file"
-msgstr "Error en intentar veure el fitxer."
+msgstr "Грешка при показване на файла"
 
 #: buffy.c:413
 #, c-format
 msgid "New mail in %s."
-msgstr "Hi ha correu nou en «%s»."
+msgstr "Нова поща в %s."
 
 #: color.c:322
 #, c-format
 msgid "%s: color not supported by term"
-msgstr "%s: El terminal no suporta aquest color."
+msgstr "%s: терминалът не поддържа цветове"
 
 #: color.c:328
 #, c-format
 msgid "%s: no such color"
-msgstr "%s: El color no existeix."
+msgstr "%s: няма такъв цвят"
 
 #: color.c:374 color.c:569 color.c:580
 #, c-format
 msgid "%s: no such object"
-msgstr "%s: L'objecte no existeix."
+msgstr "%s: няма такъв обект"
 
-# ivb (2001/11/18)
-# ivb  «index» йs una paraula clau.
 #: color.c:381
 #, c-format
 msgid "%s: command valid only for index object"
-msgstr "%s: L'ordre nomйs йs vаlida per un objecte «index»."
+msgstr "%s: командата е валидна само за индексен обект"
 
 #: color.c:389
 #, c-format
 msgid "%s: too few arguments"
-msgstr "%s: Manquen arguments."
+msgstr "%s: недостатъчно аргументи"
 
 #: color.c:557
 msgid "Missing arguments."
-msgstr "Manquen arguments."
+msgstr "Липсващи аргументи."
 
 #: color.c:596 color.c:607
 msgid "color: too few arguments"
-msgstr "color: Manquen arguments."
+msgstr "color: недостатъчно аргументи"
 
 #: color.c:630
 msgid "mono: too few arguments"
-msgstr "mono: Manquen arguments."
+msgstr "mono: недостатъчно аргументи"
 
 #: color.c:650
 #, c-format
 msgid "%s: no such attribute"
-msgstr "%s: L'atribut no existeix."
+msgstr "%s: няма такъв атрибут"
 
-# ivb (2001/12/08)
-# ivb  Tambй apareix com a error aпllat.
 #: color.c:690 hook.c:64 hook.c:72 keymap.c:697
 msgid "too few arguments"
-msgstr "Manquen arguments."
+msgstr "недостатъчно аргументи"
 
-# ivb (2001/12/08)
-# ivb  Tambй apareix com a error aпllat.
 #: color.c:699 hook.c:78
 msgid "too many arguments"
-msgstr "Sobren arguments."
+msgstr "твърде много аргументи"
 
-# ivb (2001/12/08)
-# ivb  Tambй apareix com a error aпllat.
 #: color.c:715
 msgid "default colors not supported"
-msgstr "Els colors per defecte no estan suportats."
+msgstr "стандартните цветове не се поддържат"
 
 #. find out whether or not the verify signature
 #: commands.c:93
 msgid "Verify PGP signature?"
-msgstr "Voleu verificar la signatura PGP?"
+msgstr "Потвърждение на PGP-подпис?"
 
 #: commands.c:105 pgp.c:1713 pgpkey.c:559 postpone.c:519
 msgid "Invoking PGP..."
-msgstr "S'estа invocant PGP..."
+msgstr "Стартиране на PGP..."
 
 #: commands.c:113 mbox.c:740
 msgid "Could not create temporary file!"
-msgstr "No s'ha pogut crear un fitxer temporal!"
+msgstr "Грешка при създаване на временен файл!"
 
 #: commands.c:126
 msgid "Cannot create display filter"
-msgstr "No s'ha pogut crear el filtre de visualitzaciу."
+msgstr "Грешка при създаване на филтър за изобразяване"
 
 #: commands.c:146
 msgid "Could not copy message"
-msgstr "No s'ha pogut copiar el missatge."
+msgstr "Грешка при копиране на писмото"
 
 #: commands.c:173
 msgid "PGP signature successfully verified."
-msgstr "S'ha pogut verificar amb иxit la signatura PGP."
+msgstr "PGP-подписът е потвърден успешно."
 
 #: commands.c:174
 msgid "PGP signature could NOT be verified."
-msgstr "NO s'ha pogut verificar la signatura PGP."
+msgstr "PGP-подписът НЕ може да бъде потвърден."
 
 #: commands.c:197
 msgid "Command: "
-msgstr "Ordre: "
+msgstr "Команда: "
 
 #: commands.c:215 recvcmd.c:140
 msgid "Bounce message to: "
-msgstr "Redirigeix el missatge a: "
+msgstr "Препращане на писмата към: "
 
 #: commands.c:217 recvcmd.c:142
 msgid "Bounce tagged messages to: "
-msgstr "Redirigeix els missatges marcats a: "
+msgstr "Препращане на маркираните писма към: "
 
 #: commands.c:232
 msgid "Error parsing address!"
-msgstr "Error en interpretar l'adreзa!"
+msgstr "Грешка при разчитане на адреса!"
 
-# ivb (2001/12/02)
-# ivb  El programa posa l'interrogant.
 #: commands.c:247
 #, c-format
 msgid "Bounce message to %s"
-msgstr "Voleu redirigir el missatge a %s"
+msgstr "Препращане на писмото към %s"
 
-# ivb (2001/12/02)
-# ivb  El programa posa l'interrogant.
 #: commands.c:247
 #, c-format
 msgid "Bounce messages to %s"
-msgstr "Voleu redirigir els missatges a %s"
+msgstr "Препращане на писмото към %s"
 
 #: commands.c:261
 msgid "Message bounced."
-msgstr "S'ha redirigit el missatge."
+msgstr "Писмото е препратено."
 
 #: commands.c:261
 msgid "Messages bounced."
-msgstr "S'han redirigit els missatges."
+msgstr "Писмата са препратени."
 
 #: commands.c:339 commands.c:378 commands.c:395
 msgid "Can't create filter process"
-msgstr "No s'ha pogut crear el procйs filtre."
+msgstr "Грешка при създаване на процес за филтъра"
 
 #: commands.c:424
 msgid "Pipe to command: "
-msgstr "Redirigeix a l'ordre: "
+msgstr "Предаване (pipe) към команда: "
 
 #: commands.c:441
 msgid "No printing command has been defined."
-msgstr "No s'ha definit cap ordre d'impressiу."
+msgstr "Не е дефинирана команда за отпечатване."
 
 #: commands.c:446
 msgid "Print message?"
-msgstr "Voleu imprimir el missatge?"
+msgstr "Отпечатване на писмото?"
 
 #: commands.c:446
 msgid "Print tagged messages?"
-msgstr "Voleu imprimir els misatges marcats?"
+msgstr "Отпечатване на маркираните писма?"
 
 #: commands.c:455
 msgid "Message printed"
-msgstr "S'ha imprйs el missatge."
+msgstr "Писмото е отпечатано"
 
 #: commands.c:455
 msgid "Messages printed"
-msgstr "S'han imprйs els missatges."
+msgstr "Писмата са отпечатани"
 
 #: commands.c:457
 msgid "Message could not be printed"
-msgstr "No s'ha pogut imprimir el missatge."
+msgstr "Писмото не може да бъде отпечатано"
 
 #: commands.c:458
 msgid "Messages could not be printed"
-msgstr "No s'han pogut imprimir els missatges."
+msgstr "Писмата не могат да бъдат отпечатани"
 
 #: commands.c:467
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr ""
-"Ordre inv (d)ata/(o)rig/(r)ebut/(t)ema/de(s)t/(f)il/(c)ap/taman(y)/(p)unt?: "
+msgstr "Обратно подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател(o)/нишка(t)/неподредени(u)/размер(z)/стойност(c)? :"
 
 #: commands.c:468
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr ""
-"Ordre (d)ata/(o)rig/(r)ebut/(t)ema/de(s)t/(f)il/(c)ap/taman(y)/(p)unt?: "
+msgstr "Подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател(o)/нишка(t)/неподредени(u)/размер(z)/стойност(c)? :"
 
-# ivb (2001/11/18)
-# ivb  (d)ata/(o)rig/(r)ebut/(t)ema/de(s)t/(f)il/(c)ap/taman(y)/(p)unt
 #: commands.c:469
 msgid "dfrsotuzc"
-msgstr "dortsfcyp"
+msgstr "dfrscotuzc"
 
 #: commands.c:522
 msgid "Shell command: "
-msgstr "Ordre per l'intиrpret: "
+msgstr "Шел команда: "
 
 #: commands.c:652
 #, c-format
 msgid "Decode-save%s to mailbox"
-msgstr "Descodifica i desa%s en la bъstia"
+msgstr "Декодиран запис на%s в пощенска кутия"
 
 #: commands.c:653
 #, c-format
 msgid "Decode-copy%s to mailbox"
-msgstr "Descodifica i cтpia%s en la bъstia"
+msgstr "Декодирано копие на%s в пощенска кутия"
 
 #: commands.c:654
 #, c-format
 msgid "Decrypt-save%s to mailbox"
-msgstr "Desxifra i desa%s en la bъstia"
+msgstr "Декриптиран запис на%s в пощенска кутия"
 
 #: commands.c:655
 #, c-format
 msgid "Decrypt-copy%s to mailbox"
-msgstr "Desxifra i cтpia%s en la bъstia"
+msgstr "Декриптирано копие на%s в пощенска кутия"
 
 #: commands.c:656
 #, c-format
 msgid "Save%s to mailbox"
-msgstr "Desa%s en la bъstia"
+msgstr "Запис на%s в пощенска кутия"
 
 #: commands.c:656
 #, c-format
 msgid "Copy%s to mailbox"
-msgstr "Cтpia%s en la bъstia"
+msgstr "Копиране на%s в пощенска кутия"
 
 #: commands.c:657
 msgid " tagged"
-msgstr " els marcats"
+msgstr " маркирано/и"
 
 #: commands.c:725
 #, c-format
 msgid "Copying to %s..."
-msgstr "S'estа copiant en «%s»..."
+msgstr "Копиране в %s..."
 
 #: commands.c:846
 #, c-format
 msgid "Convert to %s upon sending?"
-msgstr "Voleu convertir en «%s» en enviar?"
+msgstr "Конвертиране до %s при изпращане?"
 
 #: commands.c:854
 #, c-format
 msgid "Content-Type changed to %s."
-msgstr "S'ha canviat «Content-Type» a «%s»."
+msgstr "Content-Type променен на %s."
 
 #: commands.c:856
 #, c-format
 msgid "Character set changed to %s; %s."
-msgstr "S'ha canviat el joc de carаcters a «%s»; %s."
+msgstr "Кодовата таблица е променена на %s; %s."
 
 #: commands.c:858
 msgid "not converting"
-msgstr "es farа conversiу"
+msgstr "не конвертирам"
 
 #: commands.c:858
 msgid "converting"
-msgstr "no es farа conversiу"
+msgstr "конвертирам"
 
 #: compose.c:41
 msgid "There are no attachments."
-msgstr "No hi ha cap fitxer adjunt."
+msgstr "Няма прикачени файлове."
 
 #: compose.c:86
 msgid "Send"
-msgstr "Envia"
+msgstr "Изпращане"
 
 #: compose.c:87 remailer.c:483
 msgid "Abort"
-msgstr "Avorta"
+msgstr "Отказ"
 
 #: compose.c:91 compose.c:658
 msgid "Attach file"
-msgstr "Ajunta fitxer"
+msgstr "Прикач. файл"
 
 #: compose.c:92
 msgid "Descrip"
-msgstr "Descriu"
+msgstr "Описание"
 
 #: compose.c:113
 msgid "Sign, Encrypt"
-msgstr "Signa i xifra"
+msgstr "Подпис, Криптиране"
 
 #: compose.c:115
 msgid "Encrypt"
-msgstr "Xifra"
+msgstr "Криптиране"
 
 #: compose.c:117
 msgid "Sign"
-msgstr "Signa"
+msgstr "Подпис"
 
 #: compose.c:119
 msgid "Clear"
-msgstr "En clar"
+msgstr "Обикновен текст"
 
-# ivb (2001/11/19)
-# ivb  L'espai de principi йs per alinear, perт no hi ha res a fer...
 #: compose.c:125
 msgid " sign as: "
-msgstr "  signa com a: "
+msgstr " подпиши като: "
 
 #: compose.c:125
 msgid "<default>"
-msgstr "<per defecte>"
+msgstr "<по подразбиране>"
 
 #: compose.c:133
 msgid "(e)ncrypt, (s)ign, sign (a)s, (b)oth, or (f)orget it? "
-msgstr "(x)ifra, (s)igna, s(i)gna com a, (a)mbdуs, o en (c)lar? "
+msgstr "криптиране(e), подпис(s), подпис като(a), и двете(b) или забрави(f)? "
 
-# ivb (2001/11/19)
-# ivb  (x)ifra, (s)igna, s(i)gna com a, (a)mbdуs, (c)lar
 #: compose.c:134
 msgid "esabf"
-msgstr "xsiac"
+msgstr "esabf"
 
 #: compose.c:148
 msgid "Sign as: "
-msgstr "Signa com a: "
+msgstr "Подпиши като: "
 
 #: compose.c:227
 #, c-format
 msgid "%s [#%d] no longer exists!"
-msgstr "«%s» [#%d] ja no existeix!"
+msgstr "%s [#%d] вече не съществува!"
 
-# ivb (2001/11/19)
-# ivb  ABREUJAR!
-# S'ha modificat «%s» [#%d].  Voleu actualitzar-ne la codificaciу?
 #: compose.c:235
 #, c-format
 msgid "%s [#%d] modified. Update encoding?"
-msgstr "Modificat «%s» [#%d].  Actualitzar codificaciу?"
+msgstr "%s [#%d] е променено. Актуализиране на кодирането?"
 
 #: compose.c:281
 msgid "-- Attachments"
-msgstr "-- Fitxers adjunts"
+msgstr "-- Прикачени файлове"
 
 #: compose.c:325
 msgid "You may not delete the only attachment."
-msgstr "No es pot esborrar l'ъnic fitxer adjunt."
+msgstr "Не може да изтриете единствения прикачен файл."
 
 #: compose.c:674
 msgid "Attaching selected files..."
-msgstr "S'estan adjuntant els fitxers seleccionats..."
+msgstr "Прикачване на избраните файлове..."
 
 #: compose.c:685
 #, c-format
 msgid "Unable to attach %s!"
-msgstr "No s'ha pogut adjuntar «%s»!"
+msgstr "Невъзможно прикачването на %s!"
 
 #: compose.c:703
 msgid "Open mailbox to attach message from"
-msgstr "Bъstia a obrir per adjuntar-ne missatges"
+msgstr "Пощенска кутия, от която да бъде прикачено писмото"
 
 #: compose.c:741
 msgid "No messages in that folder."
-msgstr "La carpeta no contй missatges."
+msgstr "В тази кутия няма писма."
 
 #: compose.c:750
 msgid "Tag the messages you want to attach!"
-msgstr "Marqueu els missatges que voleu adjuntar!"
+msgstr "Маркирайте писмото, което искате да прикачите!"
 
 #: compose.c:782
 msgid "Unable to attach!"
-msgstr "No s'ha pogut adjuntar!"
+msgstr "Прикачването невъзможно!"
 
 #: compose.c:829
 msgid "Recoding only affects text attachments."
-msgstr "La recodificaciу nomйs afecta els fitxers adjunts de tipus text."
+msgstr "Записването засяга само текстови прикачени файлове."
 
 #: compose.c:834
 msgid "The current attachment won't be converted."
-msgstr "No es convertirа el fitxer adjunt actual."
+msgstr "Този прикачен файл няма да бъде прекодиран."
 
 #: compose.c:836
 msgid "The current attachment will be converted."
-msgstr "Es convertirа el fitxer adjunt actual."
+msgstr "Текущио избрания прикачен файл ще бъде прекодиран."
 
 #: compose.c:907
 msgid "Invalid encoding."
-msgstr "La codificaciу no йs vаlida."
+msgstr "Невалидна кодова таблица."
 
 #: compose.c:928
 msgid "Save a copy of this message?"
-msgstr "Voleu guardar una cтpia d'aquest missatge?"
+msgstr "Запис на копие от това писмо?"
 
 #: compose.c:982
 msgid "Rename to: "
-msgstr "Reanomena a: "
+msgstr "Преименуване в: "
 
-# ivb (2001/11/19)
-# ivb  Cuidadнn: en «compose» la cadena йs el nom de fitxer i en
-# ivb  «editmsg» i «sendlib» йs la cadena d'error.
 #: compose.c:987 editmsg.c:96 sendlib.c:906
 #, c-format
 msgid "Can't stat %s: %s"
-msgstr "Ha fallat stat() sobre «%s»: %s"
+msgstr "Грешка при четене на записът за %s: %s"
 
 #: compose.c:1013
 msgid "New file: "
-msgstr "Nou fitxer: "
+msgstr "Нов файл: "
 
 #: compose.c:1026
 msgid "Content-Type is of the form base/sub"
-msgstr "«Content-Type» ha de tenir la forma «base/sub»."
+msgstr "Полето Content-Type има формата \"базов тип\"/\"подтип\" (без кавичките)"
 
 #: compose.c:1032
 #, c-format
 msgid "Unknown Content-Type %s"
-msgstr "El valor de «Content-Type» «%s» no йs conegut."
+msgstr "Непознат Content-Type %s"
 
 #: compose.c:1045
 #, c-format
 msgid "Can't create file %s"
-msgstr "No s'ha pogut crear el fitxer «%s»."
+msgstr "Грешка при създаване на файла %s"
 
-# ivb (2001/11/20)
-# ivb  Curiosa forma d'emetre un error...
 #: compose.c:1053
 msgid "What we have here is a failure to make an attachment"
-msgstr "El que ocorre acн йs que no s'ha pogut adjuntar un fitxer."
+msgstr "Грешка при създаване на прикачения файл"
 
 #: compose.c:1115
 msgid "Postpone this message?"
-msgstr "Voleu posposar aquest missatge?"
+msgstr "Запис на черновата?"
 
 #: compose.c:1172
 msgid "Write message to mailbox"
-msgstr "Escriu el missatge en la bъstia"
+msgstr "Запис на писмото в пощенска кутия"
 
 #: compose.c:1175
 #, c-format
 msgid "Writing message to %s ..."
-msgstr "S'estа escrivint el missatge en «%s»..."
+msgstr "Запис на писмото в %s ..."
 
 #: compose.c:1184
 msgid "Message written."
-msgstr "S'ha escrit el missatge."
+msgstr "Писмото е записано."
 
 #: curs_lib.c:153
 msgid "yes"
-msgstr "sн"
+msgstr "yes"
 
 #: curs_lib.c:154
 msgid "no"
@@ -707,223 +667,211 @@ msgstr "no"
 #. restore blocking operation
 #: curs_lib.c:236
 msgid "Exit Mutt?"
-msgstr "Voleu abandonar Mutt?"
+msgstr "Изход от Mutt?"
 
-# ivb (2001/12/08)
-# ivb  Apareix amb mйs coses al darrere (curs_lib) o entre parиntesis
-# ivb  (mutt_socket) -> sense punt.
 #: curs_lib.c:326 mutt_socket.c:483 mutt_ssl.c:321
 msgid "unknown error"
-msgstr "Error desconegut"
+msgstr "непозната грешка"
 
 #: curs_lib.c:346
 msgid "Press any key to continue..."
-msgstr "Premeu qualsevol tecla per continuar..."
+msgstr "Натиснете някой клавиш..."
 
 #: curs_lib.c:390
 msgid " ('?' for list): "
-msgstr " («?» llista): "
+msgstr "('?' за избор от списък): "
 
 #: curs_main.c:59 curs_main.c:598
 msgid "No mailbox is open."
-msgstr "No hi ha cap bъstia oberta."
+msgstr "Няма отворени пощенски кутии."
 
 #: curs_main.c:60
 msgid "There are no messages."
-msgstr "No hi ha cap missatge."
+msgstr "Няма писма."
 
 #: curs_main.c:61 mx.c:1128 pager.c:65 recvattach.c:47
 msgid "Mailbox is read-only."
-msgstr "La bъstia йs de nomйs lectura."
+msgstr "Пощенската кутия е само за четене."
 
 #: curs_main.c:62 pager.c:66 recvattach.c:821
 msgid "Function not permitted in attach-message mode."
-msgstr "No es permet aquesta funciу en el mode d'adjuntar missatges."
+msgstr "Тази функция не може да се изпълни при прикачване на писма."
 
 #: curs_main.c:63
 msgid "No visible messages."
-msgstr "No hi ha cap missatge visible."
+msgstr "Няма видими писма."
 
 #: curs_main.c:244
 msgid "Cannot toggle write on a readonly mailbox!"
-msgstr "No es pot establir si una bъstia de nomйs lectura pot ser modificada."
+msgstr "Режима на защитената от запис пощенска кутия не може да бъде променен!"
 
 #: curs_main.c:251
 msgid "Changes to folder will be written on folder exit."
-msgstr "S'escriuran els canvis a la carpeta en abandonar-la."
+msgstr "Промените в тази пощенска кутия ще бъдат записани на излизане."
 
 #: curs_main.c:256
 msgid "Changes to folder will not be written."
-msgstr "No s'escriuran els canvis a la carpeta."
+msgstr "Промените в тази пощенска кутия няма да бъдат записани."
 
 #: curs_main.c:397
 msgid "Quit"
-msgstr "Ix"
+msgstr "Изход"
 
 #: curs_main.c:400 recvattach.c:58
 msgid "Save"
-msgstr "Desa"
+msgstr "Запис"
 
 #: curs_main.c:401 query.c:44
 msgid "Mail"
-msgstr "Nou correu"
+msgstr "Ново"
 
-# ivb (2001/12/08)
-# ivb  Menъ superpoblat: mantenir _molt_ curt!
 #: curs_main.c:402 pager.c:1443
 msgid "Reply"
-msgstr "Respon"
+msgstr "Отговор"
 
 #: curs_main.c:403
 msgid "Group"
-msgstr "Grup"
+msgstr "Груп. отг."
 
 #: curs_main.c:485
 msgid "Mailbox was externally modified.  Flags may be wrong."
-msgstr ""
-"S'ha modificat la bъstia des de fora. Els senyaladors poden ser incorrectes."
+msgstr "Пощенската кутия е променена отвън. Маркировките може да са остарели."
 
 #: curs_main.c:488
 msgid "New mail in this mailbox."
-msgstr "Hi ha correu nou en aquesta bъstia."
+msgstr "Нови писма в тази пощенска кутия."
 
 #: curs_main.c:492
 msgid "Mailbox was externally modified."
-msgstr "S'ha modificat la bъstia des de fora."
+msgstr "Пощенската кутия е променена отвън."
 
 #: curs_main.c:604
 msgid "No tagged messages."
-msgstr "No hi ha cap missatge marcat."
+msgstr "Няма маркирани писма."
 
 #: curs_main.c:692
 msgid "Jump to message: "
-msgstr "Salta al missatge: "
+msgstr "Скок към писмо номер: "
 
 #: curs_main.c:698
 msgid "Argument must be a message number."
-msgstr "L'argument ha de ser un nъmero de missatge."
+msgstr "Аргументът трябва да бъде номер на писмо."
 
 #: curs_main.c:731
 msgid "That message is not visible."
-msgstr "Aqueix missatge no йs visible."
+msgstr "Това писмо не е видимо."
 
 #: curs_main.c:734
 msgid "Invalid message number."
-msgstr "El nъmero de missatge no йs vаlid."
+msgstr "Грешен номер на писмо."
 
 #: curs_main.c:748
 msgid "Delete messages matching: "
-msgstr "Esborra els missatges que concorden amb: "
+msgstr "Изтриване на писма по шаблон: "
 
 #: curs_main.c:770
 msgid "No limit pattern is in effect."
-msgstr "No hi ha cap patrу limitant en efecte."
+msgstr "Няма активен шаблон."
 
-# ivb (2001/12/08)
-# ivb  Nooop!  Nomйs mostra el lнmit actual.
 #. i18n: ask for a limit to apply
 #: curs_main.c:775
 #, c-format
 msgid "Limit: %s"
-msgstr "Lнmit: %s"
+msgstr "Ограничителен шаблон: %s"
 
 #: curs_main.c:785
 msgid "Limit to messages matching: "
-msgstr "Limita als missatges que concorden amb: "
+msgstr "Ограничаване до писмата, отговарящи на: "
 
 #: curs_main.c:816
 msgid "Quit Mutt?"
-msgstr "Voleu abandonar Mutt?"
+msgstr "Изход от Mutt?"
 
 #: curs_main.c:895
 msgid "Tag messages matching: "
-msgstr "Marca els missatges que concorden amb: "
+msgstr "Маркиране на писмата, отговарящи на: "
 
 #: curs_main.c:904
 msgid "Undelete messages matching: "
-msgstr "Restaura els missatges que concorden amb: "
+msgstr "Възстановяване на писмата, отговарящи на: "
 
 #: curs_main.c:912
 msgid "Untag messages matching: "
-msgstr "Desmarca els missatges que concorden amb: "
+msgstr "Премахване на маркировката от писмата, отговарящи на: "
 
 #: curs_main.c:987
 msgid "Open mailbox in read-only mode"
-msgstr "Obri en mode de nomйs lectura la bъstia"
+msgstr "Отваряне на пощенската кутия само за четене"
 
 #: curs_main.c:989
 msgid "Open mailbox"
-msgstr "Obri la bъstia"
+msgstr "Отваряне на пощенската кутия"
 
 #: curs_main.c:1005 mx.c:508 mx.c:654
 #, c-format
 msgid "%s is not a mailbox."
-msgstr "«%s» no йs una bъstia."
+msgstr "%s не е пощенска кутия."
 
 #: curs_main.c:1091
 msgid "Exit Mutt without saving?"
-msgstr "Voleu abandonar Mutt sense desar els canvis?"
+msgstr "Изход от Mutt без запис?"
 
 #: curs_main.c:1125 curs_main.c:1150
 msgid "You are on the last message."
-msgstr "Vos trobeu sobre l'ъltim missatge."
+msgstr "Това е последното писмо."
 
 #: curs_main.c:1132 curs_main.c:1176
 msgid "No undeleted messages."
-msgstr "No hi ha cap missatge no esborrat."
+msgstr "Няма възстановени писма."
 
 #: curs_main.c:1169 curs_main.c:1193
 msgid "You are on the first message."
-msgstr "Vos trobeu sobre el primer missatge."
+msgstr "Това е първото писмо."
 
 #: curs_main.c:1267 pattern.c:1290
 msgid "Search wrapped to top."
-msgstr "La recerca ha tornat al principi."
+msgstr "Търсенето е започнато отгоре."
 
 #: curs_main.c:1276 pattern.c:1301
 msgid "Search wrapped to bottom."
-msgstr "La recerca ha tornat al final."
+msgstr "Търсенето е започнато отдолу."
 
-# ivb (2001/12/08)
-# ivb  Acн no hi ha forma de posar el punt final de segur :(
 #: curs_main.c:1309
 msgid "No new messages"
-msgstr "No hi ha cap missatge nou"
+msgstr "Няма нови писма"
 
-# ivb (2001/12/08)
-# ivb  Acн no hi ha forma de posar el punt final de segur :(
 #: curs_main.c:1309
 msgid "No unread messages"
-msgstr "No hi ha cap missatge no llegit"
+msgstr "Няма непрочетени писма"
 
 #: curs_main.c:1310
 msgid " in this limited view"
-msgstr " en aquesta vista limitada."
+msgstr " в този ограничен изглед"
 
 #: curs_main.c:1331 pager.c:2296
 msgid "Can't change 'important' flag on POP server."
-msgstr "No es pot canviar el senyalador «important» en un servidor POP."
+msgstr "Маркировката за важност не може да бъде променяна на POP сървър."
 
 #: curs_main.c:1446
 msgid "No more threads."
-msgstr "No hi ha mйs fils."
+msgstr "Няма повече нишки."
 
 #: curs_main.c:1448
 msgid "You are on the first thread."
-msgstr "Vos trobeu en el primer fil."
+msgstr "Това е първата нишка."
 
 #: curs_main.c:1509 curs_main.c:1541 flags.c:237 thread.c:1010 thread.c:1065
 #: thread.c:1120
 msgid "Threading is not enabled."
-msgstr "No s'ha habilitat l'ъs de fils."
+msgstr "Показването на нишки не е включено."
 
 #: curs_main.c:1527
 msgid "Thread contains unread messages."
-msgstr "El fil contй missatges no llegits."
+msgstr "Нишката съдържа непрочетени писма."
 
 #: curs_main.c:1705
 msgid "Can't edit message on POP server."
-msgstr "No es pot editar un missatge en un servidor POP."
+msgstr "Не може да редактирате писмо на POP сървър."
 
 #.
 #. * SLcurses_waddnstr() can't take a "const char *", so this is only
@@ -950,236 +898,218 @@ msgid ""
 "~?\t\tthis message\n"
 ".\t\ton a line by itself ends input\n"
 msgstr ""
-"~~\t\tinsereix una lнnia que comenзa amb un sol ~\n"
-"~b usuaris\tafig els usuaris al camp Bcc:\n"
-"~c usuaris\tafig els usuaris al camp Cc:\n"
-"~f missatges\tinclou els missatges\n"
-"~F missatges\tel mateix que ~f, perт incloent tambй les capзaleres\n"
-"~h\t\tedita la capзalera del missatge\n"
-"~m missatges\tinclou i cita els missatges\n"
-"~M missatges\tel mateix que ~m, perт incloent tambй les capзaleres\n"
-"~p\t\timprimeix el missatge\n"
-"~q\t\tescriu el fitxer i abandona l'editor\n"
-"~r fitxer\tllig un fitxer en l'editor\n"
-"~t usuaris\tafig els usuaris al camp To:\n"
-"~u\t\tretorna a la lнnia anterior\n"
-"~v\t\tedita el missatge amb l'editor $visual\n"
-"~w fitxer\tescriu el missatge en el fitxer\n"
-"~x\t\tavorta els canvis i abandona l'editor\n"
-"~?\t\tmostra aquest missatge\n"
-".\t\ta soles en una lнnia termina l'entrada\n"
+"~~\t\tвмъкване на ред, започващ с един ~\n"
+"~b адрес\tдобавяне на адреси към полето Bcc:\n"
+"~c адреси\tдобавяне на адреси към полето Cc:\n"
+"~f писма\tвмъкване на писма\n"
+"~F писма\tсъщото като ~f, с изключение на това, че се вмъкват и заглавните части\n"
+"~h\t\tредактиране на заглавната част\n"
+"~m писма\tвмъкване и цитиране на писма\n"
+"~M писма\tсъщото като ~m, с изключение на това, че се вмъкват и заглавните части\n"
+"~p\t\tотпечатване на писмото\n"
+"~q\t\tзапис на файла и затваряне на редактора\n"
+"~r файл\t\tотваряне на файла в редактора\n"
+"~t адреси\tдобавяне на адреси към полето To:\n"
+"~u\t\tповторно редактиране на последния ред\n"
+"~v\t\tредактиране на писмото с редактора $visual\n"
+"~w файл\t\tзапис на писмото във файл\n"
+"~x\t\tизоставяне на промените и изход от редактора\n"
+"~?\t\tтова писмо\n"
+".\t\tсама на ред означава край на писмото\n"
 
 #: edit.c:181
 #, c-format
 msgid "%d: invalid message number.\n"
-msgstr "%d: el nъmero de missatge no йs vаlid.\n"
+msgstr "%d: невалиден номер на писмо.\n"
 
 #: edit.c:312
 msgid "(End message with a . on a line by itself)\n"
-msgstr "(Termineu el missatge amb . a soles en una lнnia)\n"
+msgstr "(За край на писмото въведете точка - единствен символ на реда)\n"
 
 #: edit.c:370
 msgid "No mailbox.\n"
-msgstr "No hi ha cap bъstia activa.\n"
+msgstr "Няма пощенска кутия.\n"
 
 #: edit.c:374
 msgid "Message contains:\n"
-msgstr "Contingut del missatge:\n"
+msgstr "Писмото съдържа:\n"
 
 #: edit.c:378 edit.c:429
 msgid "(continue)\n"
-msgstr "(continuar)\n"
+msgstr "(продължение)\n"
 
 #: edit.c:391
 msgid "missing filename.\n"
-msgstr "Manca un nom de fitxer.\n"
+msgstr "липсва име на файл.\n"
 
 #: edit.c:411
 msgid "No lines in message.\n"
-msgstr "El missatge no contй cap lнnia.\n"
+msgstr "В писмото няма редове.\n"
 
 #: edit.c:440
 #, c-format
 msgid "%s: unknown editor command (~? for help)\n"
-msgstr "%s: L'ordre de l'editor no йs coneguda (~? per ajuda).\n"
+msgstr "%s: непозната команда на редактора (~? за помощ)\n"
 
 #: editmsg.c:74
 #, c-format
 msgid "could not create temporary folder: %s"
-msgstr "No s'ha pogut crear una carpeta temporal: %s."
+msgstr "грешка при създаване на временна пощенска кутия: %s"
 
 #: editmsg.c:84
 #, c-format
 msgid "could not write temporary mail folder: %s"
-msgstr "No s'ha pogut escriure en una carpeta temporal: %s."
+msgstr "грешка при запис във временната пощенска кутия: %s"
 
 #: editmsg.c:102
 msgid "Message file is empty!"
-msgstr "El fitxer missatge йs buit!"
+msgstr "Файлът с писмото е празен!"
 
 #: editmsg.c:109
 msgid "Message not modified!"
-msgstr "El missatge no ha estat modificat!"
+msgstr "Писмото е непроменено!"
 
 #: editmsg.c:117
 #, c-format
 msgid "Can't open message file: %s"
-msgstr "No s'ha pogut obrir el fitxer missatge: %s."
+msgstr "Грешка при отваряне на файла: %s"
 
 #: editmsg.c:124 editmsg.c:152
 #, c-format
 msgid "Can't append to folder: %s"
-msgstr "No s'ha pogut afegir a la carpeta: %s."
+msgstr "Грешка при добавяне към пощенската кутия: %s"
 
 #: editmsg.c:183
 #, c-format
 msgid "Error. Preserving temporary file: %s"
-msgstr "Error.  Es mantй el fitxer temporal: %s"
+msgstr "Грешка. Запазване на временния файл: %s"
 
-# ivb (2001/12/08)
-# ivb  Aixн queda mйs clar.  El programa posa l'interrogant.
 #: flags.c:280
 msgid "Set flag"
-msgstr "Quin senyalador voleu activar"
+msgstr "Поставяне на маркер"
 
-# ivb (2001/12/08)
-# ivb  Aixн queda mйs clar.  El programa posa l'interrogant.
 #: flags.c:280
 msgid "Clear flag"
-msgstr "Quin senyalador voleu desactivar"
+msgstr "Премахване на маркер"
 
 #: handler.c:1330
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
-msgstr ""
-"[-- Error: No s'ha pogut mostrar cap part del «multipart/alternative»! --]\n"
+msgstr "[-- Грешка: Невъзможно е показването на която и да е от частите Multipart/Altermative! --]\n"
 
 #: handler.c:1448
 #, c-format
 msgid "[-- Attachment #%d"
-msgstr "[-- Fitxer adjunt #%d"
+msgstr "[-- Прикачен файл: #%d"
 
 #: handler.c:1460
 #, c-format
 msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
-msgstr "[-- Tipus: %s/%s, Codificaciу: %s, Tamany: %s --]\n"
+msgstr "[-- Тип: %s/%s, Кодиране: %s, Размер: %s --]\n"
 
 #: handler.c:1520
 #, c-format
 msgid "[-- Autoview using %s --]\n"
-msgstr ""
-"[-- Eixida de l'ordre de visualitzaciу automаtica --]\n"
-"[-- «%s» --]\n"
+msgstr "[-- Автоматично показване посредством %s --]\n"
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  S'estа invocant l'ordre de visualitzaciу automаtica: %s
 #: handler.c:1521
 #, c-format
 msgid "Invoking autoview command: %s"
-msgstr "Ordre de visualitzaciу automаtica: %s"
+msgstr "Извикване на autoview команда: %s"
 
 #: handler.c:1553
 #, c-format
 msgid "[-- Can't run %s. --]\n"
-msgstr "[-- No s'ha pogut executar «%s». --]\n"
+msgstr "[-- Грешка при стартиране на %s. --]\n"
 
 #: handler.c:1571 handler.c:1592
 #, c-format
 msgid "[-- Autoview stderr of %s --]\n"
-msgstr ""
-"[-- Errors de l'ordre de visualitzaciу automаtica --]\n"
-"[-- «%s» --]\n"
+msgstr "[-- Auto view stderr of %s --]\n"
 
 #: handler.c:1629
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
-msgstr ""
-"[-- Error: La part «message/external-body» --]\n"
-"[-- no tй parаmetre «access-type». --]\n"
+msgstr "[-- Грешка: message/external-body няма параметри за метод на достъп --]\n"
 
 #: handler.c:1648
 #, c-format
 msgid "[-- This %s/%s attachment "
-msgstr ""
-"[-- Aquest fitxer adjunt de tipus «%s/%s» --]\n"
-"[-- "
+msgstr "[-- Този %s/%s прикачен файл "
 
 #: handler.c:1655
 #, c-format
 msgid "(size %s bytes) "
-msgstr "(amb tamany %s octets) "
+msgstr "(размер %s байта) "
 
 #: handler.c:1657
 msgid "has been deleted --]\n"
-msgstr "ha estat esborrat --]\n"
+msgstr "бе изтрит --]\n"
 
 #: handler.c:1662
 #, c-format
 msgid "[-- on %s --]\n"
-msgstr "[-- amb data %s --]\n"
+msgstr "[-- на %s --]\n"
 
 #: handler.c:1667
 #, c-format
 msgid "[-- name: %s --]\n"
-msgstr "[-- nom: %s --]\n"
+msgstr "[-- име: %s --]\n"
 
 #: handler.c:1680 handler.c:1696
 #, c-format
 msgid "[-- This %s/%s attachment is not included, --]\n"
-msgstr "[-- Aquest fitxer adjunt de tipus «%s/%s» no s'inclou, --]\n"
+msgstr "[-- Този %s/%s прикачен файл не е включен, --]\n"
 
 #: handler.c:1682
 msgid ""
 "[-- and the indicated external source has --]\n"
 "[-- expired. --]\n"
-msgstr "[-- i la font externa indicada ha expirat. --]\n"
+msgstr ""
+"[-- и посоченият външен източник --]\n"
+"[-- не съществува. --]\n"
 
 #: handler.c:1700
 #, c-format
 msgid "[-- and the indicated access-type %s is unsupported --]\n"
-msgstr ""
-"[-- i el valor indicat d'«access-type» «%s» --]\n"
-"[-- no es suporta. --]\n"
+msgstr "[-- и посочения начин на достъп %s не се поддържа --]\n"
 
 #: handler.c:1817
 msgid "Error: multipart/signed has no protocol."
-msgstr "Error: la part «multipart/signed» no tй parаmetre «protocol»!"
+msgstr "Грешка: multipart/signed без protocol параметър."
 
 #: handler.c:1830
 msgid "Error: multipart/encrypted has no protocol parameter!"
-msgstr "Error: la part «multipart/encrypted» no tй parаmetre «protocol»!"
+msgstr "Грешка: multipart/encrypted без protocol параметър!"
 
 #: handler.c:1877
 msgid "Unable to open temporary file!"
-msgstr "No s'ha pogut obrir el fitxer temporal!"
+msgstr "Грешка при отварянето на временния файл!"
 
 #: handler.c:1937
 #, c-format
 msgid "[-- %s/%s is unsupported "
-msgstr "[-- No es suporta «%s/%s». "
+msgstr "[-- %s/%s не се поддържа директно "
 
 #: handler.c:1942
 #, c-format
 msgid "(use '%s' to view this part)"
-msgstr "(useu «%s» per veure aquesta part)"
+msgstr "(използвайте '%s' за да видите тази част)"
 
 #: handler.c:1944
 msgid "(need 'view-attachments' bound to key!)"
-msgstr "(vinculeu «view-attachents» a una tecla!)"
+msgstr "(за функцията 'view-attachments' не е дефинирана клавишна комбинация!)"
 
 #: headers.c:174
 #, c-format
 msgid "%s: unable to attach file"
-msgstr "%s: No s'ha pogut adjuntar el fitxer."
+msgstr "%s: грешка при прикачването на файл"
 
 #: help.c:278
 msgid "ERROR: please report this bug"
-msgstr "ERROR: Per favor, informeu d'aquest error."
+msgstr "ГРЕШКА: моля, съобщете ни за тази грешка"
 
-# ivb (2001/12/07)
-# ivb  Es refereix a un menъ -> masculн.
 #: help.c:320
 msgid "<UNKNOWN>"
-msgstr "<DESCONEGUT>"
+msgstr "<НЕИЗВЕСТНА>"
 
 #: help.c:332
 msgid ""
@@ -1188,7 +1118,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Vincles genиrics:\n"
+"Основни клавиатурни комбинации:\n"
 "\n"
 
 #: help.c:336
@@ -1198,1175 +1128,1149 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Funcions no vinculades:\n"
+"Функции без клавиатурна комбинация:\n"
 "\n"
 
-# ivb (2001/12/08)
-# ivb  El noms dels menъs no estan traduпts.
 #: help.c:344
 #, c-format
 msgid "Help for %s"
-msgstr "Ajuda de «%s»"
+msgstr "Помощ за %s"
 
 #: hook.c:240
 msgid "unhook: Can't do unhook * from within a hook."
-msgstr "unhook: No es pot fer «unhook *» des d'un «hook»."
+msgstr "unhook: Не мога да извърша unhook * при изпълнение на hook."
 
 #: hook.c:252
 #, c-format
 msgid "unhook: unknown hook type: %s"
-msgstr "unhook: El tipus de «hook» no йs conegut: %s"
+msgstr "unhook: непознат hook тип: %s"
 
 #: hook.c:258
 #, c-format
 msgid "unhook: Can't delete a %s from within a %s."
-msgstr "unhook: No es pot esborrar un «%s» des d'un «%s»."
+msgstr "unhook: Не мога да изтрия %s при изпълнение на %s."
 
 #: imap/auth.c:104 pop_auth.c:393
 msgid "No authenticators available"
-msgstr "No hi ha cap autenticador disponible."
+msgstr "Няма идентификатори"
 
 #: imap/auth_anon.c:39
 msgid "Authenticating (anonymous)..."
-msgstr "S'estа autenticant (anтnimament)..."
+msgstr "Идентификация (анонимна)..."
 
 #: imap/auth_anon.c:69
 msgid "Anonymous authentication failed."
-msgstr "L'autenticaciу anтnima ha fallat."
+msgstr "Грешка при анонимна идентификация."
 
 #: imap/auth_cram.c:44
 msgid "Authenticating (CRAM-MD5)..."
-msgstr "S'estа autenticant (CRAM-MD5)..."
+msgstr "Идентификация (CRAM-MD5)..."
 
 #: imap/auth_cram.c:124
 msgid "CRAM-MD5 authentication failed."
-msgstr "L'autenticaciу CRAM-MD5 ha fallat."
+msgstr "Грешка при CRAM-MD5 идентификация."
 
 #. now begin login
 #: imap/auth_gss.c:104
 msgid "Authenticating (GSSAPI)..."
-msgstr "S'estа autenticant (GSSAPI)..."
+msgstr "Идентификация (GSSAPI)..."
 
 #: imap/auth_gss.c:267
 msgid "GSSAPI authentication failed."
-msgstr "L'autenticaciу GSSAPI ha fallat."
+msgstr "Грешка при GSSAPI идентификация."
 
 #: imap/auth_login.c:34
 msgid "LOGIN disabled on this server."
-msgstr "L'ordre LOGIN no es troba habilitada en aquest servidor."
+msgstr "LOGIN е изключен на този сървър."
 
 #: imap/auth_login.c:43 pop_auth.c:226
 msgid "Logging in..."
-msgstr "S'estа entrant..."
+msgstr "Включване..."
 
 #: imap/auth_login.c:63 pop_auth.c:269
 msgid "Login failed."
-msgstr "L'entrada ha fallat."
+msgstr "Неуспешно включване."
 
 #: imap/auth_sasl.c:93 pop_auth.c:76
 msgid "Authenticating (SASL)..."
-msgstr "S'estа autenticant (SASL)..."
+msgstr "Идентификация (SASL)..."
 
 #: imap/auth_sasl.c:174 pop_auth.c:154
 msgid "SASL authentication failed."
-msgstr "L'autenticaciу SASL ha fallat."
+msgstr "Неуспешна SASL идентификация."
 
 #: imap/browse.c:64 imap/imap.c:516
 #, c-format
 msgid "%s is an invalid IMAP path"
-msgstr "«%s» no йs un camн IMAP vаlid."
+msgstr "%s не е валиден IMAP път"
 
 #: imap/browse.c:81
 msgid "Getting namespaces..."
-msgstr "S'estan obtenint els espais de noms..."
+msgstr "Запитване за namespaces..."
 
 #: imap/browse.c:90
 msgid "Getting folder list..."
-msgstr "S'estа obtenint la llista de carpetes..."
+msgstr "Получаване на списъка с директории..."
 
 #: imap/browse.c:219
 msgid "No such folder"
-msgstr "La carpeta no existeix."
+msgstr "Няма такава директория"
 
 #: imap/browse.c:277
 msgid "Create mailbox: "
-msgstr "Crea la bъstia: "
+msgstr "Създаване на пощенска кутия: "
 
 #: imap/browse.c:282
 msgid "Mailbox must have a name."
-msgstr "La bъstia ha de tenir un nom."
+msgstr "Пощенската кутия тряба да има име."
 
 #: imap/browse.c:290
 msgid "Mailbox created."
-msgstr "S'ha creat la bъstia."
+msgstr "Пощенската кутия е създадена."
 
 #: imap/command.c:288
 msgid "Mailbox closed"
-msgstr "S'ha tancat la bъstia."
+msgstr "Пощенската кутия е затворена"
 
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
 #: imap/command.c:325
 msgid "Fatal error.  Message count is out of sync!"
-msgstr "Error fatal.  El recompte de missatges no es troba sincronitzat!"
+msgstr "Непоправима грешка. Различен брой на съобщенията!"
 
 #: imap/imap.c:147
 #, c-format
 msgid "Closing connection to %s..."
-msgstr "S'estа tancant la connexiу amb «%s»..."
+msgstr "Затваряне на връзката към %s..."
 
 #: imap/imap.c:307
 msgid "This IMAP server is ancient. Mutt does not work with it."
-msgstr "Aquest servidor IMAP йs antic.  Mutt no pot funcionar amb ell."
+msgstr "Този IMAP-сървър е остарял. Mutt няма да работи с него."
 
 #: imap/imap.c:393
 msgid "Secure connection with TLS?"
-msgstr "Voleu protegir la connexiу usant TLS?"
+msgstr "Сигурна връзка с TLS?"
 
 #: imap/imap.c:402
 msgid "Could not negotiate TLS connection"
-msgstr "No s'ha pogut negociar la connexiу TLS."
+msgstr "Не мога да договоря TLS вързка"
 
 #: imap/imap.c:547
 #, c-format
 msgid "Selecting %s..."
-msgstr "S'estа seleccionant la bъstia «%s»..."
+msgstr "Избор на %s..."
 
 #: imap/imap.c:667
 msgid "Error opening mailbox"
-msgstr "Error en obrir la bъstia."
+msgstr "Грешка при отваряне на пощенската кутия"
 
 #. STATUS not supported
 #: imap/imap.c:720
 msgid "Unable to append to IMAP mailboxes at this server"
-msgstr "Aquest servidor no permet afegir a les bъsties IMAP."
+msgstr "Грешка при добавянето към IMAP пощенските кутии на този сървър"
 
 #. command failed cause folder doesn't exist
 #: imap/imap.c:729 imap/message.c:596 muttlib.c:1175
 #, c-format
 msgid "Create %s?"
-msgstr "Voleu crear «%s»?"
+msgstr "Създаване на %s?"
 
 #: imap/imap.c:765
 msgid "Closing connection to IMAP server..."
-msgstr "S'estа tancant la connexiу amb el servidor IMAP..."
+msgstr "Затваряне на връзката към IMAP сървъра..."
 
 #: imap/imap.c:928 pop.c:465
 #, c-format
 msgid "Marking %d messages deleted..."
-msgstr "S'estan marcant %d missatges com a esborrats..."
+msgstr "Маркиране на %d писма като изтрити..."
 
 #: imap/imap.c:937
 msgid "Expunge failed"
-msgstr "No s'han pogut eliminar els missatges."
+msgstr "Грешка при изтриване"
 
 #: imap/imap.c:952
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
-msgstr "S'estan guardant els senyaladors d'estat dels missatges... [%d/%d]"
+msgstr "Запис на индикаторите за статус на писмото... [%d/%d]"
 
 #: imap/imap.c:1036
 msgid "Expunging messages from server..."
-msgstr "S'estan eliminant missatges del servidor..."
+msgstr "Изтриване на писмата от сървъра..."
 
 #: imap/imap.c:1041
 msgid "imap_sync_mailbox: EXPUNGE failed"
-msgstr "imap_sync_mailbox: Ha fallat «EXPUNGE»."
+msgstr "imap_sync_mailbox: неуспешен EXPUNGE"
 
 #: imap/imap.c:1075
 msgid "CLOSE failed"
-msgstr "Ha fallat «CLOSE»."
+msgstr "неуспешен CLOSE"
 
 #: imap/imap.c:1324
 msgid "Bad mailbox name"
-msgstr "El nom de la bъstia no йs correcte."
+msgstr "Грешно име на пощенска кутия"
 
 #: imap/imap.c:1336
 #, c-format
 msgid "Subscribing to %s..."
-msgstr "S'estа subscrivint a «%s»..."
+msgstr "Абониране за %s..."
 
 #: imap/imap.c:1338
 #, c-format
 msgid "Unsubscribing to %s..."
-msgstr "S'estа dessubscrivint de «%s»..."
+msgstr "Отписване от %s..."
 
 #. Unable to fetch headers for lower versions
 #: imap/message.c:74
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr ""
-"No s'han pogut recollir les capзaleres d'aquesta versiу de servidor IMAP."
+msgstr "Грешка при получаване на заглавните части от тази версия на IMAP-сървъра."
 
 #: imap/message.c:84
 #, c-format
 msgid "Could not create temporary file %s"
-msgstr "No s'ha pogut crear el fitxer temporal «%s»."
+msgstr "Не мога да създам временен файл %s"
 
 #: imap/message.c:101 pop.c:209
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
-msgstr "S'estan recollint les capзaleres dels missatges... [%d/%d]"
+msgstr "Изтегляне на заглавните части... [%d/%d]"
 
 #: imap/message.c:250 pop.c:343
 msgid "Fetching message..."
-msgstr "S'estа recollint el missatge..."
+msgstr "Изтегляне на писмо..."
 
 #: imap/message.c:293 pop.c:380
 msgid "The message index is incorrect. Try reopening the mailbox."
-msgstr "L'нndex del missatge no йs correcte.  Proveu de reobrir la bъstia."
+msgstr "Грешен номер на писмо. Нов опит за отваряне на пощенската кутия."
 
 #: imap/message.c:462
 msgid "Uploading message ..."
-msgstr "S'estа penjant el missatge..."
+msgstr "Зареждане на писмо на сървъра ..."
 
 #: imap/message.c:572
 #, c-format
 msgid "Copying %d messages to %s..."
-msgstr "S'estan copiant %d missatges en «%s»..."
+msgstr "Копиране на %d съобщения в %s..."
 
 #: imap/message.c:576
 #, c-format
 msgid "Copying message %d to %s..."
-msgstr "S'estа copiant el missatge %d en «%s»..."
+msgstr "Копиране на писмо %s в %s..."
 
 #: imap/util.c:239
 msgid "Continue?"
-msgstr "Voleu continuar?"
+msgstr "Да продължа ли?"
 
 #: init.c:492
 msgid "alias: no address"
-msgstr "alias: No s'ha especificat cap adreзa."
+msgstr "alias: липсва адрес"
 
 #: init.c:592
 msgid "invalid header field"
-msgstr "El camp de capзalera no йs vаlid."
+msgstr "невалидно заглавно поле"
 
 #: init.c:645
 #, c-format
 msgid "%s: unknown sorting method"
-msgstr "%s: El mиtode d'ordenaciу no йs conegut."
+msgstr "%s: непознат метод за подреждане"
 
 #: init.c:757
 #, c-format
 msgid "mutt_restore_default(%s): error in regexp: %s\n"
-msgstr "mutt_restore_default(%s): Error en l'expressiу regular: %s\n"
+msgstr "mutt_restore_default(%s): грешка в регулярния израз: %s\n"
 
 #: init.c:820
 #, c-format
 msgid "%s: unknown variable"
-msgstr "%s: La variable no йs coneguda."
+msgstr "%s: непозната променлива"
 
 #: init.c:829
 msgid "prefix is illegal with reset"
-msgstr "El prefix usat en «reset» no йs permйs."
+msgstr "при \"reset\" не е позволен префикс"
 
 #: init.c:835
 msgid "value is illegal with reset"
-msgstr "El valor usat en «reset» no йs permйs."
+msgstr "стойността е непозволена с \"reset\""
 
-# ivb (2001/11/24)
-# ivb  Es refereix a una variable lтgica.
 #: init.c:874
 #, c-format
 msgid "%s is set"
-msgstr "«%s» estа activada."
+msgstr "%s е включен"
 
-# ivb (2001/11/24)
-# ivb  Es refereix a una variable lтgica.
 #: init.c:874
 #, c-format
 msgid "%s is unset"
-msgstr "«%s» no estа activada."
+msgstr "%s не е включен"
 
 #: init.c:1080
 #, c-format
 msgid "%s: invalid mailbox type"
-msgstr "%s: El tipus de bъstia no йs vаlid."
+msgstr "%s: невалиден тип на пощенската кутия"
 
 #: init.c:1105 init.c:1150
 #, c-format
 msgid "%s: invalid value"
-msgstr "%s: El valor no йs vаlid."
+msgstr "%s: невалидна стойност"
 
 #: init.c:1211
 #, c-format
 msgid "%s: unknown type"
-msgstr "%s: El tipus no йs conegut."
+msgstr "%s: непознат тип"
 
 #: init.c:1254
 #, c-format
 msgid "Error in %s, line %d: %s"
-msgstr "Error en «%s», lнnia %d: %s"
+msgstr "Грешка в %s, ред %d: %s"
 
 #. the muttrc source keyword
 #: init.c:1270
 #, c-format
 msgid "source: errors in %s"
-msgstr "source: Hi ha errors en «%s»."
+msgstr "source: грешки в %s"
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  source: S'avorta la lectura de «%s» perquи contй massa errors.
 #: init.c:1271
 #, c-format
 msgid "source: reading aborted due too many errors in %s"
-msgstr "source: «%s» contй massa errors: s'avorta la lectura."
+msgstr "source: вмъкването е прекъснато поради твърде много грешки в %s"
 
 #: init.c:1285
 #, c-format
 msgid "source: error at %s"
-msgstr "source: Error en «%s»."
+msgstr "source: грешка при %s"
 
 #: init.c:1290
 msgid "source: too many arguments"
-msgstr "source: Sobren arguments."
+msgstr "source: твърде много аргументи"
 
 #: init.c:1341
 #, c-format
 msgid "%s: unknown command"
-msgstr "%s: L'ordre no йs coneguda."
+msgstr "%s: непозната команда"
 
 #: init.c:1697
 #, c-format
 msgid "Error in command line: %s\n"
-msgstr "Error en la lнnia d'ordres: %s\n"
+msgstr "Грешка в командния ред: %s\n"
 
 #: init.c:1746
 msgid "unable to determine home directory"
-msgstr "No s'ha pogut determinar el directori de l'usuari."
+msgstr "не мога да установя коя директория е home"
 
 #: init.c:1754
 msgid "unable to determine username"
-msgstr "No s'ha pogut determinar el nom de l'usuari."
+msgstr "не мога да установя потребителското име"
 
 #: keymap.c:433
 msgid "Macro loop detected."
-msgstr "S'ha detectat un bucle entre macros."
+msgstr "Открит е цикъл от макроси."
 
 #: keymap.c:636 keymap.c:644
 msgid "Key is not bound."
-msgstr "La tecla no estа vinculada."
+msgstr "Недефинирана клавишна комбинация."
 
 #: keymap.c:648
 #, c-format
 msgid "Key is not bound.  Press '%s' for help."
-msgstr "La tecla no estа vinculada.  Premeu «%s» per obtenir ajuda."
+msgstr "Недефинирана клавишна комбинация. Използвайте '%s' за помощ."
 
 #: keymap.c:659
 msgid "push: too many arguments"
-msgstr "push: Sobren arguments."
+msgstr "push: твърде много аргументи"
 
 #: keymap.c:680
 #, c-format
 msgid "%s: no such menu"
-msgstr "%s: El menъ no existeix."
+msgstr "%s:  няма такова меню"
 
 #: keymap.c:689
 msgid "null key sequence"
-msgstr "La seqьиncia de tecles йs nul·la."
+msgstr "празна последователност от клавиши"
 
 #: keymap.c:773
 msgid "bind: too many arguments"
-msgstr "bind: Sobren arguments."
+msgstr "bind: твърде много аргументи"
 
 #: keymap.c:788
 #, c-format
 msgid "%s: no such function in map"
-msgstr "%s: La funciу no es troba en el mapa."
+msgstr "%s: непозната функция"
 
 #: keymap.c:811
 msgid "macro: empty key sequence"
-msgstr "macro: La seqьиncia de tecles йs buida."
+msgstr "macro: празна последователност от клавиши"
 
 #: keymap.c:822
 msgid "macro: too many arguments"
-msgstr "macro: Sobren arguments."
+msgstr "macro: твърде много аргументи"
 
 #: keymap.c:852
 msgid "exec: no arguments"
-msgstr "exec: Manquen arguments."
+msgstr "exec: няма аргументи"
 
 #: keymap.c:872
 #, c-format
 msgid "%s: no such function"
-msgstr "%s: La funciу no existeix."
+msgstr "%s: няма такава функция"
 
-# ivb (2001/11/24)
-# ivb  Totes aquestes cadenes sуn missatges d'ajuda.  No sembla haver
-# ivb  restriccions de longitud.
 #: keymap_alldefs.h:5
 msgid "null operation"
-msgstr "l'operaciу nul·la"
+msgstr "празна функция"
 
 #: keymap_alldefs.h:6
 msgid "force viewing of attachment using mailcap"
-msgstr "forзa la visualitzaciу d'un fitxer adjunt usant «mailcap»"
+msgstr "принудително показване на прикачения файл с mailcap"
 
 #: keymap_alldefs.h:7
 msgid "view attachment as text"
-msgstr "mostra un fitxer adjunt com a text"
+msgstr "показване на прикачения файл като текст"
 
 #: keymap_alldefs.h:8
 msgid "Toggle display of subparts"
-msgstr "activa o desactiva la visualitzaciу de les subparts"
+msgstr "Включване/изключване показването на отделните части"
 
 #: keymap_alldefs.h:9
 msgid "move to the bottom of the page"
-msgstr "va al final de la pаgina"
+msgstr "придвижване до края на страницата"
 
 #: keymap_alldefs.h:10
 msgid "remail a message to another user"
-msgstr "redirigeix un missatge a un altre destinatari"
+msgstr "препращане на писмото към друг адрес"
 
 #: keymap_alldefs.h:11
 msgid "select a new file in this directory"
-msgstr "selecciona un nou fitxer d'aquest directori"
+msgstr "избор на нов файл в тази директория"
 
 #: keymap_alldefs.h:12
 msgid "view file"
-msgstr "mostra un fitxer"
+msgstr "разглеждане на файла"
 
 #: keymap_alldefs.h:13
 msgid "display the currently selected file's name"
-msgstr "mostra el nom del fitxer seleccionat actualment"
+msgstr "показване името на текущо маркирания файл"
 
 #: keymap_alldefs.h:14
 msgid "subscribe to current mailbox (IMAP only)"
-msgstr "es subscriu a la bъstia actual (nomйs en IMAP)"
+msgstr "абониране на текущо избраната пощенска кутия (само IMAP)"
 
 #: keymap_alldefs.h:15
 msgid "unsubscribe to current mailbox (IMAP only)"
-msgstr "es dessubscriu de la bъstia actual (nomйs en IMAP)"
+msgstr "отписване от текущо избраната пощенска кутия (само IMAP)"
 
 #: keymap_alldefs.h:16
 msgid "toggle view all/subscribed mailboxes (IMAP only)"
-msgstr ""
-"canvia entre veure totes les bъsties o nomйs aquelles subscrites (nomйs en "
-"IMAP)"
+msgstr "включване/изключване показването на всички или само абонираните пощенски кутии (само IMAP)"
 
 #: keymap_alldefs.h:17
 msgid "change directories"
-msgstr "canvia de directori"
+msgstr "промяна на директориите"
 
 #: keymap_alldefs.h:18
 msgid "check mailboxes for new mail"
-msgstr "comprova si hi ha correu nou en les bъsties"
+msgstr "проверка на пощенските кутии за нови писма"
 
 #: keymap_alldefs.h:19
 msgid "attach a file(s) to this message"
-msgstr "adjunta fitxers a aquest missatge"
+msgstr "прикачване на файл(ове) към писмото"
 
 #: keymap_alldefs.h:20
 msgid "attach message(s) to this message"
-msgstr "adjunta missatges a aquest missatge"
+msgstr "прикачване на писмо(а) към това писмо"
 
 #: keymap_alldefs.h:21
 msgid "edit the BCC list"
-msgstr "edita la llista de cтpia cega (Bcc)"
+msgstr "редактиране на BCC списъка"
 
 #: keymap_alldefs.h:22
 msgid "edit the CC list"
-msgstr "edita la llista de cтpia (Cc)"
+msgstr "редактиране на CC списъка"
 
 #: keymap_alldefs.h:23
 msgid "edit attachment description"
-msgstr "edita la descripciу d'un fitxer adjunt"
+msgstr "редактиране описанието на прикачения файл"
 
 #: keymap_alldefs.h:24
 msgid "edit attachment transfer-encoding"
-msgstr "edita la codificaciу de la transferиncia d'un fitxer adjunt"
+msgstr "редактиране кодирането на прикачения файл"
 
 #: keymap_alldefs.h:25
 msgid "enter a file to save a copy of this message in"
-msgstr "demana un fitxer on desar una cтpia d'aquest missatge"
+msgstr "избор на файл, в който да бъде записано копие от това писмо"
 
 #: keymap_alldefs.h:26
 msgid "edit the file to be attached"
-msgstr "edita un fitxer adjunt"
+msgstr "избор на файл, който да бъде прикачен"
 
 #: keymap_alldefs.h:27
 msgid "edit the from field"
-msgstr "edita el camp de remitent (From)"
+msgstr "редактиране на полето From"
 
 #: keymap_alldefs.h:28
 msgid "edit the message with headers"
-msgstr "edita el missatge amb capзaleres"
+msgstr "редактиране на писмо + заглавните полета"
 
 #: keymap_alldefs.h:29
 msgid "edit the message"
-msgstr "edita el missatge"
+msgstr "редактиране на писмо"
 
 #: keymap_alldefs.h:30
 msgid "edit attachment using mailcap entry"
-msgstr "edita el fitxer adjunt usant l'entrada de «mailcap»"
+msgstr "редактиране на прикачен файл, посредством вписване в mailcap"
 
 #: keymap_alldefs.h:31
 msgid "edit the Reply-To field"
-msgstr "edita el camp de resposta (Reply-To)"
+msgstr "редактиране на полето Reply-To"
 
 #: keymap_alldefs.h:32
 msgid "edit the subject of this message"
-msgstr "edita l'assumpte del missatge (Subject)"
+msgstr "редактиране темата на писмо"
 
 #: keymap_alldefs.h:33
 msgid "edit the TO list"
-msgstr "edita la llista de destinataris (To)"
+msgstr "редактиране списъка на получателите"
 
 #: keymap_alldefs.h:34
 msgid "create a new mailbox (IMAP only)"
-msgstr "crea una nova bъstia (nomйs en IMAP)"
+msgstr "създаване на нова пощенска кутия (само IMAP)"
 
 #: keymap_alldefs.h:35
 msgid "edit attachment content type"
-msgstr "edita el tipus de contingut d'un fitxer adjunt"
+msgstr "редактиране типа на прикачения файл"
 
 #: keymap_alldefs.h:36
 msgid "get a temporary copy of an attachment"
-msgstr "crea una cтpia temporal d'un fitxer adjunt"
+msgstr "създаване временно копие на прикачения файл"
 
 #: keymap_alldefs.h:37
 msgid "run ispell on the message"
-msgstr "executa «ispell» (comprovaciу ortogrаfica) sobre el missatge"
+msgstr "извършване правописна проверка на писмото с ispell"
 
 #: keymap_alldefs.h:38
 msgid "compose new attachment using mailcap entry"
-msgstr "crea un nou fitxer adjunt usant l'entrada de «mailcap»"
+msgstr "създаване на нов прикачен файл, с използване на вписване в mailcap"
 
 #: keymap_alldefs.h:39
 msgid "toggle recoding of this attachment"
-msgstr "estableix si un fitxer adjunt serа recodificat"
+msgstr "включване/изключване прекодирането на този прикачен файл"
 
 #: keymap_alldefs.h:40
 msgid "save this message to send later"
-msgstr "desa aquest missatge per enviar-lo mйs endavant"
+msgstr "запис на писмото като чернова за по-късно изпращане"
 
 #: keymap_alldefs.h:41
 msgid "rename/move an attached file"
-msgstr "reanomena (o mou) un fitxer adjunt"
+msgstr "промяна на името/преместване на прикачения файл"
 
 #: keymap_alldefs.h:42
 msgid "send the message"
-msgstr "envia el missatge"
+msgstr "изпращане на писмото"
 
 #: keymap_alldefs.h:43
 msgid "toggle disposition between inline/attachment"
-msgstr "canvia la disposiciу entre en lнnia o adjunt"
+msgstr "превключване между вмъкнат в писмото или прикачен файл"
 
 #: keymap_alldefs.h:44
 msgid "toggle whether to delete file after sending it"
-msgstr "estableix si cal esborrar un fitxer una volta enviat"
+msgstr "включване/изключване изтриването на файла след изпращане"
 
 #: keymap_alldefs.h:45
 msgid "update an attachment's encoding info"
-msgstr "edita la informaciу de codificaciу d'un missatge"
+msgstr "актуализиране информацията за кодирането на прикачен файл"
 
 #: keymap_alldefs.h:46
 msgid "write the message to a folder"
-msgstr "escriu el missatge en una carpeta"
+msgstr "запис на писмо в пощенска кутия"
 
 #: keymap_alldefs.h:47
 msgid "copy a message to a file/mailbox"
-msgstr "cтpia un missatge en un fitxer o bъstia"
+msgstr "копиране на писмо във файл/пощенска кутия"
 
 #: keymap_alldefs.h:48
 msgid "create an alias from a message sender"
-msgstr "crea un аlies partint del remitent d'un missatge"
+msgstr "вписване на изпращача в адресната книга"
 
 #: keymap_alldefs.h:49
 msgid "move entry to bottom of screen"
-msgstr "mou l'indicador al final de la pantalla"
+msgstr "преместване на записа към долния край на екрана"
 
 #: keymap_alldefs.h:50
 msgid "move entry to middle of screen"
-msgstr "mou l'indicador al centre de la pantalla"
+msgstr "преместване на записа към средата на екрана"
 
 #: keymap_alldefs.h:51
 msgid "move entry to top of screen"
-msgstr "mou l'indicador al comenзament de la pantalla"
+msgstr "преместване на записa към горния край на екрана"
 
 #: keymap_alldefs.h:52
 msgid "make decoded (text/plain) copy"
-msgstr "crea una cтpia descodificada (text/plain) del missatge"
+msgstr "създаване на декодирано (text/plain) копие"
 
 #: keymap_alldefs.h:53
 msgid "make decoded copy (text/plain) and delete"
-msgstr "crea una cтpia descodificada (text/plain) del missatge i l'esborra"
+msgstr "създаване на декодирано (text/plain) копие и изтриване"
 
 #: keymap_alldefs.h:54
 msgid "delete the current entry"
-msgstr "esborra l'entrada actual"
+msgstr "изтриване на избрания запис"
 
 #: keymap_alldefs.h:55
 msgid "delete the current mailbox (IMAP only)"
-msgstr "esborra la bъstia actual (nomйs en IMAP)"
+msgstr "изтриване на текущата пощенска кутия (само IMAP)"
 
 #: keymap_alldefs.h:56
 msgid "delete all messages in subthread"
-msgstr "esborra tots els missatges d'un subfil"
+msgstr "изтриване на всички писма в поднишката"
 
 #: keymap_alldefs.h:57
 msgid "delete all messages in thread"
-msgstr "esborra tots els missatges d'un fil"
+msgstr "изтриване на всички писма в нишката"
 
 #: keymap_alldefs.h:58
 msgid "display full address of sender"
-msgstr "mostra l'adreзa completa del remitent"
+msgstr "показване пълния адрес на подателя"
 
 #: keymap_alldefs.h:59
 msgid "display message and toggle header weeding"
-msgstr "mostra un missatge i oculta o mostra certs camps de la capзalera"
+msgstr "показване на писмо и включване/изключване почистването на заглавната част"
 
 #: keymap_alldefs.h:60
 msgid "display a message"
-msgstr "mostra un missatge"
+msgstr "показване на писмо"
 
 #: keymap_alldefs.h:61
 msgid "edit the raw message"
-msgstr "edita un missatge en brut"
+msgstr "редактиране на \"суровото\" писмо"
 
 #: keymap_alldefs.h:62
 msgid "delete the char in front of the cursor"
-msgstr "esborra el carаcter anterior al cursor"
+msgstr "изтриване на символа пред курсора"
 
 #: keymap_alldefs.h:63
 msgid "move the cursor one character to the left"
-msgstr "mou el cursor un carаcter a l'esquerra"
+msgstr "преместване на курсора с един символ наляво"
 
 #: keymap_alldefs.h:64
 msgid "move the cursor to the beginning of the word"
-msgstr "mou el cursor al comenзament de la paraula"
+msgstr "преместване на курсора в началото на думата"
 
 #: keymap_alldefs.h:65
 msgid "jump to the beginning of the line"
-msgstr "salta al comenзament de la lнnia"
+msgstr "скок към началото а реда"
 
-# ivb (2001/12/07)
-# ivb  Es refereix a les definides en «mailboxes».
 #: keymap_alldefs.h:66
 msgid "cycle among incoming mailboxes"
-msgstr "canvia entre les bъsties d'entrada"
+msgstr "въртене между входните пощенски кутии"
 
 #: keymap_alldefs.h:67
 msgid "complete filename or alias"
-msgstr "completa el nom de fitxer o l'аlies"
+msgstr "допълване име на файл или на псевдоним"
 
 #: keymap_alldefs.h:68
 msgid "complete address with query"
-msgstr "completa una adreзa fent una consulta"
+msgstr "допълване адрес чрез запитване"
 
 #: keymap_alldefs.h:69
 msgid "delete the char under the cursor"
-msgstr "esborra el carаcter sota el cursor"
+msgstr "изтриване на символа под курсора"
 
 #: keymap_alldefs.h:70
 msgid "jump to the end of the line"
-msgstr "salta al final de la lнnia"
+msgstr "скок към края на реда"
 
 #: keymap_alldefs.h:71
 msgid "move the cursor one character to the right"
-msgstr "mou el cursor un carаcter a la dreta"
+msgstr "преместване на курсора с един символ надясно"
 
 #: keymap_alldefs.h:72
 msgid "move the cursor to the end of the word"
-msgstr "mou el cursor al final de la paraula"
+msgstr "преместване на курсора в края на думата"
 
 #: keymap_alldefs.h:73
 msgid "scroll down through the history list"
-msgstr "es desplaзa cap avall en la llista d'historial"
+msgstr "превъртане надолу на списъка с историята"
 
 #: keymap_alldefs.h:74
 msgid "scroll up through the history list"
-msgstr "es desplaзa cap amunt en la llista d'historial"
+msgstr "превъртане нагоре на списъка с историята"
 
 #: keymap_alldefs.h:75
 msgid "delete chars from cursor to end of line"
-msgstr "esborra els carаcters des del cursor fins el final de la lнnia"
+msgstr "изтриване на символите от курсора до края на реда"
 
 #: keymap_alldefs.h:76
 msgid "delete chars from the cursor to the end of the word"
-msgstr "esborra els carаcters des del cursor fins el final de la paraula"
+msgstr "изтриване на символите от курсора до края на думата"
 
 #: keymap_alldefs.h:77
 msgid "delete all chars on the line"
-msgstr "esborra tots els carаcters de la lнnia"
+msgstr "изтриване на всички символи на реда"
 
 #: keymap_alldefs.h:78
 msgid "delete the word in front of the cursor"
-msgstr "esborra la paraula a l'esquerra del cursor"
+msgstr "изтриване на думата преди курсора"
 
 #: keymap_alldefs.h:79
 msgid "quote the next typed key"
-msgstr "escriu tal qual la tecla pressa a continuaciу"
+msgstr "буквално приемане на следващия клавиш"
 
 #: keymap_alldefs.h:80
 msgid "transpose character under cursor with previous"
-msgstr "transposa el carаcter sota el cursor i l'anterior"
+msgstr "размяна на символът под курсора с предишния"
 
 #: keymap_alldefs.h:81
 msgid "capitalize the word"
-msgstr "posa la primera lletra de la paraula en majъscula"
+msgstr "започване на думата с главна буква"
 
 #: keymap_alldefs.h:82
 msgid "convert the word to lower case"
-msgstr "converteix la paraula a minъscules"
+msgstr "конвертиране на всички букви от думата в малки"
 
 #: keymap_alldefs.h:83
 msgid "convert the word to upper case"
-msgstr "converteix la paraula a majъscules"
+msgstr "конвертиране на всички букви от думата в големи"
 
 #: keymap_alldefs.h:84
 msgid "enter a muttrc command"
-msgstr "executa una ordre de «muttrc»"
+msgstr "въвеждане не muttrc команда"
 
 #: keymap_alldefs.h:85
 msgid "enter a file mask"
-msgstr "estableix una mаscara de fitxers"
+msgstr "въвеждане на файлова маска"
 
 #: keymap_alldefs.h:86
 msgid "exit this menu"
-msgstr "abandona aquest menъ"
+msgstr "изход от менюто"
 
 #: keymap_alldefs.h:87
 msgid "filter attachment through a shell command"
-msgstr "filtra un fitxer adjunt amb una ordre de l'intиrpret"
+msgstr "филтриране на прикачения файл през команда на командния интерпретатор"
 
 #: keymap_alldefs.h:88
 msgid "move to the first entry"
-msgstr "va a la primera entrada"
+msgstr "преместване към първият запис"
 
 #: keymap_alldefs.h:89
 msgid "toggle a message's 'important' flag"
-msgstr "canvia el senyalador «important» d'un missatge"
+msgstr "включване/изключване на индикатора за важност на писмото"
 
 #: keymap_alldefs.h:90
 msgid "forward a message with comments"
-msgstr "reenvia un missatge amb comentaris"
+msgstr "препращане на писмо с коментар"
 
 #: keymap_alldefs.h:91
 msgid "select the current entry"
-msgstr "selecciona l'entrada actual"
+msgstr "избор на текущия запис"
 
 #: keymap_alldefs.h:92
 msgid "reply to all recipients"
-msgstr "respon a tots els destinataris"
+msgstr "отговор на всички получатели"
 
 #: keymap_alldefs.h:93
 msgid "scroll down 1/2 page"
-msgstr "avanзa mitja pаgina"
+msgstr "превъртане на екрана надолу с 1/2 страница"
 
 #: keymap_alldefs.h:94
 msgid "scroll up 1/2 page"
-msgstr "endarrereix mitja pаgina"
+msgstr "превъртане на екрана нагоре с 1/2 страница"
 
 #: keymap_alldefs.h:95
 msgid "this screen"
-msgstr "mostra aquesta pantalla"
+msgstr "този екран"
 
 #: keymap_alldefs.h:96
 msgid "jump to an index number"
-msgstr "salta a un nъmero d'нndex"
+msgstr "скок към номер"
 
 #: keymap_alldefs.h:97
 msgid "move to the last entry"
-msgstr "va a l'ъltima entrada"
+msgstr "преместване към последният запис"
 
 #: keymap_alldefs.h:98
 msgid "reply to specified mailing list"
-msgstr "respon a la llista de correu especificada"
+msgstr "отговор на указания mailing list"
 
 #: keymap_alldefs.h:99
 msgid "execute a macro"
-msgstr "executa una macro"
+msgstr "изпълнение на макрос"
 
 #: keymap_alldefs.h:100
 msgid "compose a new mail message"
-msgstr "redacta un nou missatge de correu"
+msgstr "създаване на ново писмо"
 
 #: keymap_alldefs.h:101
 msgid "open a different folder"
-msgstr "obri una carpeta diferent"
+msgstr "отваряне на друга пощенска кутия"
 
 #: keymap_alldefs.h:102
 msgid "open a different folder in read only mode"
-msgstr "obri una carpeta diferent en mode de nomйs lectura"
+msgstr "отваряне на друга пощенска кутия само за четене"
 
 #: keymap_alldefs.h:103
 msgid "clear a status flag from a message"
-msgstr "elimina un senyalador d'estat d'un missatge"
+msgstr "отстраняване на индикатора за статус от писмо"
 
 #: keymap_alldefs.h:104
 msgid "delete messages matching a pattern"
-msgstr "esborra els missatges que concorden amb un patrу"
+msgstr "изтриване на писма, отговарящи на шаблон"
 
 #: keymap_alldefs.h:105
 msgid "force retrieval of mail from IMAP server"
-msgstr "forзa l'obtenciу del correu d'un servidor IMAP"
+msgstr "принудително получаване на поща от IMAP-сървър"
 
 #: keymap_alldefs.h:106
 msgid "retrieve mail from POP server"
-msgstr "obtй el correu d'un servidor POP"
+msgstr "изтегляне на писма от POP сървър"
 
 #: keymap_alldefs.h:107
 msgid "move to the first message"
-msgstr "va al primer missatge"
+msgstr "преместване към първото писмо"
 
 #: keymap_alldefs.h:108
 msgid "move to the last message"
-msgstr "va a l'ъltim missatge"
+msgstr "преместване към последното писмо"
 
 #: keymap_alldefs.h:109
 msgid "show only messages matching a pattern"
-msgstr "mostra nomйs els missatges que concorden amb un patrу"
+msgstr "показване само на писма, отговарящи на шаблон"
 
 #: keymap_alldefs.h:110
 msgid "jump to the next new message"
-msgstr "salta al segьent missatge nou"
+msgstr "скок към следващото ново писмо"
 
 #: keymap_alldefs.h:111
 msgid "jump to the next subthread"
-msgstr "salta al subfil segьent"
+msgstr "скок към следващата поднишка"
 
 #: keymap_alldefs.h:112
 msgid "jump to the next thread"
-msgstr "salta al fil segьent"
+msgstr "скок към следващата нишка"
 
 #: keymap_alldefs.h:113
 msgid "move to the next undeleted message"
-msgstr "va al segьent missatge no esborrat"
+msgstr "преместване към следващото възстановено писмо"
 
 #: keymap_alldefs.h:114
 msgid "jump to the next unread message"
-msgstr "salta al segьent missatge no llegit"
+msgstr "скок към следващото непрочетено писмо"
 
 #: keymap_alldefs.h:115
 msgid "jump to parent message in thread"
-msgstr "salta al missatge pare del fil"
+msgstr "скок към родителското писмо в нишката"
 
 #: keymap_alldefs.h:116
 msgid "jump to previous thread"
-msgstr "salta al fil anterior"
+msgstr "скок към предишната нишка"
 
 #: keymap_alldefs.h:117
 msgid "jump to previous subthread"
-msgstr "salta al subfil anterior"
+msgstr "скок към предишната поднишка"
 
 #: keymap_alldefs.h:118
 msgid "move to the previous undeleted message"
-msgstr "va a l'anterior missatge no llegit"
+msgstr "преместване към предишното възстановено писмо"
 
 #: keymap_alldefs.h:119
 msgid "jump to the previous new message"
-msgstr "salta a l'anterior missatge nou"
+msgstr "скок към предишното ново писмо"
 
 #: keymap_alldefs.h:120
 msgid "jump to the previous unread message"
-msgstr "salta a l'anterior missatge no llegit"
+msgstr "скок към предишното непрочетено писмо"
 
 #: keymap_alldefs.h:121
 msgid "mark the current thread as read"
-msgstr "marca el fil actual com a llegit"
+msgstr "маркиране на текущата нишка като прочетена"
 
 #: keymap_alldefs.h:122
 msgid "mark the current subthread as read"
-msgstr "marca el subfil actual com a llegit"
+msgstr "маркиране на текущата поднишка като прочетена"
 
 #: keymap_alldefs.h:123
 msgid "set a status flag on a message"
-msgstr "estableix un senyalador d'estat d'un missatge"
+msgstr "вдигане на индикатора за статус на писмо"
 
 #: keymap_alldefs.h:124
 msgid "save changes to mailbox"
-msgstr "desa els canvis realitzats a la bъstia"
+msgstr "запис на промените в пощенската кутия"
 
 #: keymap_alldefs.h:125
 msgid "tag messages matching a pattern"
-msgstr "marca els missatges que concorden amb un patrу"
+msgstr "маркиране на писма, отговарящи на шаблон"
 
 #: keymap_alldefs.h:126
 msgid "undelete messages matching a pattern"
-msgstr "restaura els missatges que concorden amb un patrу"
+msgstr "възстановяване на писма, отговарящи на шаблон"
 
 #: keymap_alldefs.h:127
 msgid "untag messages matching a pattern"
-msgstr "desmarca els missatges que concorden amb un patrу"
+msgstr "премахване маркировката от писма, отговарящи на шаблон"
 
 #: keymap_alldefs.h:128
 msgid "move to the middle of the page"
-msgstr "va al centre de la pаgina"
+msgstr "преместване към средата на страницата"
 
 #: keymap_alldefs.h:129
 msgid "move to the next entry"
-msgstr "va a l'entrada segьent"
+msgstr "преместване към следващия запис"
 
 #: keymap_alldefs.h:130
 msgid "scroll down one line"
-msgstr "avanзa una lнnia"
+msgstr "превъртане надолу с един ред"
 
 #: keymap_alldefs.h:131
 msgid "move to the next page"
-msgstr "va a la pаgina segьent"
+msgstr "преместване към следващата страница"
 
 #: keymap_alldefs.h:132
 msgid "jump to the bottom of the message"
-msgstr "salta al final del missatge"
+msgstr "скок към края на писмото"
 
 #: keymap_alldefs.h:133
 msgid "toggle display of quoted text"
-msgstr "oculta o mostra el text citat"
+msgstr "включване/изключване показването на цитиран текст"
 
 #: keymap_alldefs.h:134
 msgid "skip beyond quoted text"
-msgstr "avanзa fins el final del text citat"
+msgstr "прескачане на цитирания текст"
 
 #: keymap_alldefs.h:135
 msgid "jump to the top of the message"
-msgstr "salta a l'inici del missatge"
+msgstr "скок към началото на писмото"
 
 #: keymap_alldefs.h:136
 msgid "pipe message/attachment to a shell command"
-msgstr "redirigeix un missatge o fitxer adjunt a una ordre de l'intиrpret"
+msgstr "изпращане на писмо или прикачен файл към команда на командния интерпретатор"
 
 #: keymap_alldefs.h:137
 msgid "move to the previous entry"
-msgstr "va a l'entrada anterior"
+msgstr "преместване към предишния запис"
 
 #: keymap_alldefs.h:138
 msgid "scroll up one line"
-msgstr "endarrereix una lнnia"
+msgstr "превъртане нагоре с един ред"
 
 #: keymap_alldefs.h:139
 msgid "move to the previous page"
-msgstr "va a la pаgina anterior"
+msgstr "преместване към предишната страница"
 
 #: keymap_alldefs.h:140
 msgid "print the current entry"
-msgstr "imprimeix l'entrada actual"
+msgstr "отпечатване на текущото писмо"
 
 #: keymap_alldefs.h:141
 msgid "query external program for addresses"
-msgstr "pregunta a un programa extern per una adreзa"
+msgstr "запитване към външна програма за адрес"
 
 #: keymap_alldefs.h:142
 msgid "append new query results to current results"
-msgstr "afig els resultats d'una consulta nova als resultats actuals"
+msgstr "добавяне на резултатите от запитването към досегашните"
 
 #: keymap_alldefs.h:143
 msgid "save changes to mailbox and quit"
-msgstr "desa els canvis realitzats a la bъstia i ix"
+msgstr "запис на промените в пощенска кутия и изход"
 
 #: keymap_alldefs.h:144
 msgid "recall a postponed message"
-msgstr "recupera un missatge posposat"
+msgstr "редактиране на чернова"
 
 #: keymap_alldefs.h:145
 msgid "clear and redraw the screen"
-msgstr "neteja i redibuixa la pantalla"
+msgstr "изтриване и прерисуване на екрана"
 
-# ivb (2001/11/26)
-# ivb  Es refereix a una funciу -> femenн.
 #: keymap_alldefs.h:146
 msgid "{internal}"
-msgstr "{interna}"
+msgstr "{вътрешно}"
 
 #: keymap_alldefs.h:147
 msgid "reply to a message"
-msgstr "respon a un missatge"
+msgstr "отговор на писмо"
 
 #: keymap_alldefs.h:148
 msgid "use the current message as a template for a new one"
-msgstr "usa el missatge actual com a plantilla per un de nou"
+msgstr "използване на текущото писмо като шаблон за ново"
 
 #: keymap_alldefs.h:149
 msgid "save message/attachment to a file"
-msgstr "guarda un missatge o fitxer adjunt en un fitxer"
+msgstr "записване на писмо или прикачен файл във файл"
 
 #: keymap_alldefs.h:150
 msgid "search for a regular expression"
-msgstr "cerca una expressiу regular"
+msgstr "търсене на регулярен израз"
 
 #: keymap_alldefs.h:151
 msgid "search backwards for a regular expression"
-msgstr "cerca cap enrere una expressiу regular"
+msgstr "търсене назад на регулярен израз"
 
 #: keymap_alldefs.h:152
 msgid "search for next match"
-msgstr "cerca la concordanзa segьent"
+msgstr "търсене на следващото попадение"
 
 #: keymap_alldefs.h:153
 msgid "search for next match in opposite direction"
-msgstr "cerca la concordanзa anterior"
+msgstr "търсене на следващото попадение в обратната посока"
 
 #: keymap_alldefs.h:154
 msgid "toggle search pattern coloring"
-msgstr "estableix si cal resaltar les concordances trobades"
+msgstr "включване/изключване на оцветяването при търсене"
 
 #: keymap_alldefs.h:155
 msgid "invoke a command in a subshell"
-msgstr "invoca una ordre en un subintиrpret"
+msgstr "изпълняване на команда в командния интепретатор"
 
 #: keymap_alldefs.h:156
 msgid "sort messages"
-msgstr "ordena els missatges"
+msgstr "подреждане на писма"
 
 #: keymap_alldefs.h:157
 msgid "sort messages in reverse order"
-msgstr "ordena inversament els missatges"
+msgstr "подреждане на писма в обратен ред"
 
 #: keymap_alldefs.h:158
 msgid "tag the current entry"
-msgstr "marca l'entrada actual"
+msgstr "маркиране на текущият запис"
 
 #: keymap_alldefs.h:159
 msgid "apply next function to tagged messages"
-msgstr "aplica la funciу segьent als missatges marcats"
+msgstr "приложи следващата функция върху маркираните писма"
 
 #: keymap_alldefs.h:160
 msgid "tag the current subthread"
-msgstr "marca el subfil actual"
+msgstr "маркиране на текущата поднишка"
 
 #: keymap_alldefs.h:161
 msgid "tag the current thread"
-msgstr "marca el fil actual"
+msgstr "маркиране на текущата нишка"
 
 #: keymap_alldefs.h:162
 msgid "toggle a message's 'new' flag"
-msgstr "canvia el senyalador «nou» d'un missatge"
+msgstr "включване/изключване на индикатора, дали писмото е ново"
 
 #: keymap_alldefs.h:163
 msgid "toggle whether the mailbox will be rewritten"
-msgstr "estableix si s'escriuran els canvis a la bъstia"
+msgstr "включване/изключване презаписът на пощенската кутия"
 
-# ivb (2001/12/07)
-# ivb  Es refereix a les definides en «mailboxes».
 #: keymap_alldefs.h:164
 msgid "toggle whether to browse mailboxes or all files"
-msgstr ""
-"estableix si es navegarа nomйs per les bъsties d'entrada o per tots els "
-"fitxers"
+msgstr "превключване: показване само на пощенски кутии или всички файлове"
 
 #: keymap_alldefs.h:165
 msgid "move to the top of the page"
-msgstr "va a l'inici de la pаgina"
+msgstr "преместване към началото на страницата"
 
 #: keymap_alldefs.h:166
 msgid "undelete the current entry"
-msgstr "restaura l'entrada actual"
+msgstr "възстановяване на текущия запис"
 
 #: keymap_alldefs.h:167
 msgid "undelete all messages in thread"
-msgstr "restaura tots els missatges d'un fil"
+msgstr "възстановяване на всички писма в нишката"
 
 #: keymap_alldefs.h:168
 msgid "undelete all messages in subthread"
-msgstr "restaura tots els missatges d'un subfil"
+msgstr "възстановяване на всички писма в поднишката"
 
 #: keymap_alldefs.h:169
 msgid "show the Mutt version number and date"
-msgstr "mostra el nъmero de versiу i la data de Mutt"
+msgstr "показване версията и датата на Mutt"
 
 #: keymap_alldefs.h:170
 msgid "view attachment using mailcap entry if necessary"
-msgstr "mostra un fitxer adjunt usant l'entrada de «mailcap» si йs necessari"
+msgstr "показване на прикачен файл, с използване на mailcap вписване при необходимост"
 
 #: keymap_alldefs.h:171
 msgid "show MIME attachments"
-msgstr "mostra els fitxers adjunts MIME"
+msgstr "показване на MIME прикачени файлове"
 
 #: keymap_alldefs.h:172
 msgid "show currently active limit pattern"
-msgstr "mostra el patrу limitant actiu"
+msgstr "показване на активния ограничителен шаблон"
 
 #: keymap_alldefs.h:173
 msgid "collapse/uncollapse current thread"
-msgstr "plega o desplega el fil actual"
+msgstr "свиване/разтваряне на текущата нишка"
 
 #: keymap_alldefs.h:174
 msgid "collapse/uncollapse all threads"
-msgstr "plega o desplega tots els fils"
+msgstr "свиване/разтваряне на всички нишки"
 
 #: keymap_alldefs.h:175
 msgid "attach a PGP public key"
-msgstr "adjunta una clau pъblica PGP"
+msgstr "прикачване на PGP публичен ключ"
 
 #: keymap_alldefs.h:176
 msgid "show PGP options"
-msgstr "mostra les opcions de PGP"
+msgstr "показване на PGP настройките"
 
 #: keymap_alldefs.h:177
 msgid "extract PGP public keys"
-msgstr "extrau les claus pъbliques PGP"
+msgstr "извличане на PGP публичен ключ"
 
 #: keymap_alldefs.h:178
 msgid "wipe PGP passphrase from memory"
-msgstr "esborra de la memтria la frase clau de PGP"
+msgstr "отстраняване на PGP passphrase от паметта"
 
 #: keymap_alldefs.h:179
 msgid "mail a PGP public key"
-msgstr "envia una clau pъblica PGP"
+msgstr "изпращане на PGP публичен ключ"
 
 #: keymap_alldefs.h:180
 msgid "verify a PGP public key"
-msgstr "verifica una clau pъblica PGP"
+msgstr "потвърждаване на PGP публичен ключ"
 
 #: keymap_alldefs.h:181
 msgid "view the key's user id"
-msgstr "mostra l'identificador d'usuari d'una clau"
+msgstr "показване на потребителския номер към ключ"
 
 #: keymap_alldefs.h:182
 msgid "make decrypted copy and delete"
-msgstr "fa una cтpia desxifrada del missatge i esborra aquest"
+msgstr "създаване на декриптирано копие и изтриване"
 
 #: keymap_alldefs.h:183
 msgid "make decrypted copy"
-msgstr "fa una cтpia desxifrada del missatge"
+msgstr "създаване на декриптирано копие"
 
-# ivb (2001/12/02)
-# ivb  Es refereix al format del missatge.
 #: keymap_alldefs.h:184
 msgid "check for classic pgp"
-msgstr "comprova si s'ha usat el PGP clаssic"
+msgstr "проверка за класически pgp"
 
 #: keymap_alldefs.h:185
 msgid "Accept the chain constructed"
-msgstr "accepta la cadena construпda"
+msgstr "Одобряване на конструираната верига"
 
 #: keymap_alldefs.h:186
 msgid "Append a remailer to the chain"
-msgstr "afig un redistribuпdor a la cadena"
+msgstr "Добавяне на remailer към веригата"
 
 #: keymap_alldefs.h:187
 msgid "Insert a remailer into the chain"
-msgstr "inserta un redistribuпdor en la cadena"
+msgstr "Вмъкване на remailer във веригата"
 
 #: keymap_alldefs.h:188
 msgid "Delete a remailer from the chain"
-msgstr "esborra un redistribuпdor de la cadena"
+msgstr "Изтриване на remailer от веригата"
 
 #: keymap_alldefs.h:189
 msgid "Select the previous element of the chain"
-msgstr "selecciona l'element anterior de la cadena"
+msgstr "Избор на предишния елемент от веригата"
 
 #: keymap_alldefs.h:190
 msgid "Select the next element of the chain"
-msgstr "selecciona l'element segьent de la cadena"
+msgstr "Избор на следващия елемент от веригата"
 
 #: keymap_alldefs.h:191
 msgid "send the message through a mixmaster remailer chain"
-msgstr "envia el missatge per una cadena de redistribuпdors Mixmaster"
+msgstr "изпращане на писмо през mixmaster remailer верига"
 
 #: lib.c:59 lib.c:74 lib.c:105
 msgid "Out of memory!"
-msgstr "No resta memтria!"
+msgstr "Недостатъчно памет!"
 
 #: main.c:40
 msgid ""
 "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 "To report a bug, please use the flea(1) utility.\n"
 msgstr ""
-"Per contactar amb els desenvolupadors, per favor envieu un correu\n"
-"a <mutt-dev@mutt.org>.  Per informar d'un error, per favor useu\n"
-"la utilitat flea(1).\n"
+"За контакт с програмистите, моля изпратете писмо до <mutt-dev@mutt.org>.\n"
+"За да съобщите за грешка, моля използвайте скрипта flea(1).\n"
 
 #: main.c:44
 msgid ""
@@ -2375,10 +2279,10 @@ msgid ""
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
-"Copyright (C) 1996-2001 Michael R. Elkins i d'altres.\n"
-"Mutt s'ofereix SENSE CAP GARANTIA; useu «mutt -vv» per obtenir-ne mйs\n"
-"detalls.  Mutt йs programari lliure, i podeu, si voleu, redistribuir-lo\n"
-"sota certes condicions; useu «mutt -vv» per obtenir-ne mйs detalls.\n"
+"Авторско право (C) 1996-2000 Michael R. Elkins и други.\n"
+"Mutt няма АБСОЛЮТНО НИКАКВА ГАРАНЦИЯ; за подробности напишете `mutt -vv'.\n"
+"Mutt е свободен софтуер и Вие може да го разпространявате\n"
+"при определени условия; напишете `mutt -vv' за повече подробности.\n"
 
 #: main.c:50
 msgid ""
@@ -2407,31 +2311,29 @@ msgid ""
 "    along with this program; if not, write to the Free Software\n"
 "    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111, USA.\n"
 msgstr ""
-"Copyright (C) 1996-2001 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1996-2001 Brandon Long <blong@fiction.net>\n"
-"Copyright (C) 1997-2001 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998-2001 Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1999-2001 Brendan Cully <brendan@kublai.com>\n"
-"Copyright (C) 1999-2001 Tommi Komulainen <Tommi.Komulainen@iki.fi>\n"
-"Copyright (C) 2000-2001 Edmund Grimley Evans <edmundo@rano.org>\n"
+"Авторско право (C) 1996-2001 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Авторско право (C) 1996-2001 Brandon Long <blong@fiction.net>\n"
+"Авторско право (C) 1997-2001 Thomas Roessler <roessler@guug.de>\n"
+"Авторско право (C) 1998-2001 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Авторско право (C) 1999-2001 Brendan Cully <brendan@kublai.com>\n"
+"Авторско право (C) 1999-2001 Tommi Komulainen <Tommi.Komulainen@iki.fi>\n"
+"Авторско право (C) 2000-2001 Edmund Grimley Evans <edmundo@rano.org>\n"
 "\n"
-"Moltes altres persones que no s'hi mencionen han contribuпt amb gran\n"
-"quantitat de codi, solucions i suggeriments.\n"
+"Мнозина, неспоменати тук, съдействаха с много код, поправки и предложения\n"
 "\n"
-"    Aquest йs programari lliure; podeu redistribuir-lo i/o modificar-lo\n"
-"    sota els termes de la Llicиncia Pъblica General GNU tal i com ha estat\n"
-"    publicada per la Free Software Foundation; bй sota la versiу 2 de la\n"
-"    Llicиncia o bй (si ho preferiu) sota qualsevol versiу posterior.\n"
+"    Тази програма е свободен софтуер; можете да я разпространявате и/или\n"
+"    променяте съобразно правилата на GNU General Public License, публикувани\n"
+"    от Фондацията за свободен софтуер, използвайки версия 2 на лиценза или\n"
+"    (по Ваше желание) по-късна версия.\n"
 "\n"
-"    Aquest programa es distribueix amb l'expectativa de que serа ъtil,\n"
-"    perт SENSE CAP GARANTIA; ni tan sols la garantia implнcita de\n"
-"    COMERCIABILITAT o ADEQUACIУ PER UN PROPТSIT PARTICULAR.  Vegeu la\n"
-"    Llicиncia Pъblica General GNU per obtenir-ne mйs detalls.\n"
+"    Тази програма се разпространява с надеждата да бъде полезна,\n"
+"    но БЕЗ КАКВАТО И ДА БИЛО ГАРАНЦИЯ; без дори подразбиращата се гаранция\n"
+"    при ПОКУПКО-ПРОДАЖБА или ПРИГОДНОСТ ЗА КАКВОТО И ДА БИЛО ПРИЛОЖЕНИЕ.\n"
+"    Вижте GNU General Public License за повече подробности.\n"
 "\n"
-"    Haurнeu d'haver rebut una cтpia de la Llicиncia Pъblica General GNU\n"
-"    juntament amb aquest programa; en cas contrari, escriviu a la Free\n"
-"    Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,\n"
-"    MA  02111, USA.\n"
+"    Би трябвало да сте получили копие от GNU General Public License\n"
+"    заедно с тази програма; ако това не е така, моля пишете на Free Software\n"
+"    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111, USA.\n"
 
 #: main.c:88
 msgid ""
@@ -2463,33 +2365,33 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
-"Forma d'ъs: mutt [-nRyzZ] [-e <ord>] [-F <fitx>] [-m <tipus>] [-f <fitx>]\n"
-"            mutt [-nx] [-e <ord>] [-a <fitx>] [-F <fitx>] [-H <fitx>]\n"
-"                 [-i <fitx>] [-s <assmpt>] [-b <adr>] [-c <adr>] <adr> "
-"[...]\n"
-"            mutt [-n] [-e <ord>] [-F <fitx>] -p\n"
-"            mutt -v[v]\n"
+"Стартиране: mutt [ -nRyzZ ] [ -e <команда> ] [ -F <файл> ] [ -m <тип> ] [ -f "
+"<файл> ]\n"
+"       mutt [ -nx ] [ -e <команда> ] [ -a <файл> ] [ -F <файл> ] [ -H <файл> ] "
+"[ -i <файл> ] [ -s <тема> ] [ -b <адрес> ] [ -c <адрес> ] <адрес> [ ... ]\n"
+"       mutt [ -n ] [ -e <команда> ] [ -F <файл> ] -p\n"
+"       mutt -v[v]\n"
 "\n"
-"Opcions:\n"
-"  -a <fitxer>\tadjunta un fitxer al missatge\n"
-"  -b <adreзa>\tespecifica una adreзa per la cтpia cega (BCC)\n"
-"  -c <adreзa>\tespecifica una adreзa per la cтpia (CC)\n"
-"  -e <ordre>\tespecifica una ordre a executar abans de la inicialitzaciу\n"
-"  -f <fitxer>\tespecifica quina bъstia llegir\n"
-"  -F <fitxer>\tespecifica un fitxer «muttrc» alternatiu\n"
-"  -H <fitxer>\tespecifica un fitxer esborrany d'on llegir la capзalera\n"
-"  -i <fitxer>\tespecifica un fitxer que Mutt inclourа en la resposta\n"
-"  -m <tipus>\tespecifica un tipus de bъstia per defecte\n"
-"  -n\t\tfa que Mutt no llija el fitxer «Muttrc» del sistema\n"
-"  -p\t\trecupera un missatge posposat\n"
-"  -R\t\tobri la bъstia en mode de nomйs lectura\n"
-"  -s <assumpte>\tespecifica l'assumpte (entre cometes si porta espais)\n"
-"  -v\t\tmostra la versiу i les definicions de compil·laciу\n"
-"  -x\t\tsimula el mode d'enviament de «mailx»\n"
-"  -y\t\tselecciona una bъstia de la vostra llista «mailboxes»\n"
-"  -z\t\tix immediatament si no hi ha missatges en la bъstia\n"
-"  -Z\t\tobri la primera bъstia amb missatges nous, ix si no n'hi ha\n"
-"  -h\t\tmostra aquest missatge d'ajuda"
+"Настройки:\n"
+"  -a <име на файл>\tприкачване на файл към писмото\n"
+"  -b <адрес>\tизпращане на сляпо копие (BCC) към този адрес\n"
+"  -c <адрес>\tизпращане на копие (CC) към този адрес\n"
+"  -e <команда>\tкоманда, която да се изпълни след инициализацията\n"
+"  -f <име на файл>\tпощенска кутия, която да бъде заредена\n"
+"  -F <име на файл>\tалтернативен muttrc файл\n"
+"  -H <име на файл>\tфайл със заглавна информация\n"
+"  -i <име на файл>\tфайл, който Mutt да включи в отговора\n"
+"  -m <тип>\tтип на пощенската кутия по подразбиране\n"
+"  -n\t\tпринуждава Mutt да игнорира системния Muttrc\n"
+"  -p\t\tредактиране на чернова\n"
+"  -R\t\tотваряне на пощенската кутия само за четене\n"
+"  -s <тема>\tтема на писмото (трябва да е в кавички, ако съдържа интервали)\n"
+"  -v\t\tверсия и дефиниции, използвани при компилацията\n"
+"  -x\t\tсимулира mailx изпращане\n"
+"  -y\t\tизбор на пощенска кутия, указана във Вашия `mailboxes' списък\n"
+"  -z\t\tнезабавен изход от програмата, ако в пощенската кутия няма писма\n"
+"  -Z\t\tотваряне на първата пощенска кутия с нови писма или незабавен изход от програмата ако няма такава\n"
+"  -h\t\tпоказва този текст"
 
 #: main.c:142
 msgid ""
@@ -2497,678 +2399,637 @@ msgid ""
 "Compile options:"
 msgstr ""
 "\n"
-"Opcions de compil·laciу:"
+"Опции при компилация:"
 
 #: main.c:417
 msgid "Error initializing terminal."
-msgstr "Error en inicialitzar el terminal."
+msgstr "Грешка при инициализация на терминала."
 
 #: main.c:517
 #, c-format
 msgid "Debugging at level %d.\n"
-msgstr "S'activa la depuraciу a nivell %d.\n"
+msgstr "Debugging на ниво %d.\n"
 
 #: main.c:519
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
-msgstr "No es va definir «DEBUG» en la compil·laciу.  Es descarta l'opciу.\n"
+msgstr "DEBUG не е е дефиниран при компилация. Игнориран.\n"
 
-# ivb (2001/11/27)
-# ivb  Es refereix al directori «Maildir» -> masculн.
 #: main.c:636
 #, c-format
 msgid "%s does not exist. Create it?"
-msgstr "«%s» no existeix. Voleu crear-lo?"
+msgstr "%s не съществува. Да бъде ли създаден?"
 
 #: main.c:640
 #, c-format
 msgid "Can't create %s: %s."
-msgstr "No s'ha pogut crear «%s»: %s."
+msgstr "Грешка при създаване на %s: %s."
 
 #: main.c:685
 msgid "No recipients specified.\n"
-msgstr "No s'ha especificat cap dstinatari.\n"
+msgstr "Не са указани получатели.\n"
 
 #: main.c:771
 #, c-format
 msgid "%s: unable to attach file.\n"
-msgstr "%s: No s'ha pogut adjuntar el fitxer.\n"
+msgstr "%s: грешка при прикачване на файл.\n"
 
 #: main.c:791
 msgid "No mailbox with new mail."
-msgstr "No hi ha cap bъstia amb correu nou."
+msgstr "Няма пощенска кутия с нови писма."
 
 #: main.c:800
 msgid "No incoming mailboxes defined."
-msgstr "No s'ha definit cap bъstia d'entrada."
+msgstr "Не са дефинирани входни пощенски кутии."
 
 #: main.c:831
 msgid "Mailbox is empty."
-msgstr "La bъstia йs buida."
+msgstr "Пощенската кутия е празна."
 
 #: mbox.c:129 mbox.c:290
 #, c-format
 msgid "Reading %s... %d (%d%%)"
-msgstr "S'estа llegint «%s»... %d (%d%%)"
+msgstr "Зареждане на %s... %d (%d%%)"
 
 #: mbox.c:153 mbox.c:212
 msgid "Mailbox is corrupt!"
-msgstr "La bъstia йs corrupta!"
+msgstr "Пощенската кутия е повредена!"
 
 #: mbox.c:665
 msgid "Mailbox was corrupted!"
-msgstr "La bъstia ha estat corrompuda!"
+msgstr "Пощенската кутия биде разрушена!"
 
 #: mbox.c:702 mbox.c:978
 msgid "Fatal error!  Could not reopen mailbox!"
-msgstr "Error fatal!  No s'ha pogut reobrir la bъstia!"
+msgstr "Непоправима грешка! Грешка при повторното отваряне на пощенската кутия!"
 
 #: mbox.c:711
 msgid "Unable to lock mailbox!"
-msgstr "No s'ha pogut blocar la bъstia!"
+msgstr "Грешка при заключване на пощенската кутия!"
 
-# ivb (2001/11/27)
-# ivb  Cal mantenir el missatge curt.
-# ivb  ABREUJAT!
 #. this means ctx->changed or ctx->deleted was set, but no
 #. * messages were found to be changed or deleted.  This should
 #. * never happen, is we presume it is a bug in mutt.
 #.
 #: mbox.c:757
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr ""
-"sync: La bъstia йs modificada perт els missatges no! (informeu de l'error)"
+msgstr "sync: пощенската кутия е променена, но няма променени писма! (моля, съобщете за тази грешка)"
 
 #: mbox.c:798
 #, c-format
 msgid "Writing messages... %d (%d%%)"
-msgstr "S'estan escrivint els missatges... %d (%d%%)"
+msgstr "Запис на писмата... %d (%d%%)"
 
 #. copy the temp mailbox back into place starting at the first
 #. * change/deleted message
 #.
 #: mbox.c:931
 msgid "Committing changes..."
-msgstr "S'estan realitzant els canvis..."
+msgstr "Прилагане на промените..."
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  L'escriptura ha fallat!  S'ha desat la bъstia parcial en «%s».
 #: mbox.c:962
 #, c-format
 msgid "Write failed!  Saved partial mailbox to %s"
-msgstr "L'escriptura fallа!  Es desa la bъstia parcial en «%s»."
+msgstr "Грешка при запис! Пощенската кутия е записана частично в %s"
 
 #: mbox.c:1028
 msgid "Could not reopen mailbox!"
-msgstr "No s'ha pogut reobrir la bъstia!"
+msgstr "Грешка при повторното отваряне на пощенската кутия!"
 
 #: mbox.c:1066
 msgid "Reopening mailbox..."
-msgstr "S'estа reobrint la bъstia..."
+msgstr "Повторно отваряне на пощенската кутия..."
 
 #: menu.c:417
 msgid "Jump to: "
-msgstr "Salta a: "
+msgstr "Скок към: "
 
 #: menu.c:426
 msgid "Invalid index number."
-msgstr "El nъmero d'нndex no йs vаlid."
+msgstr "Невалиден номер."
 
 #: menu.c:430 menu.c:448 menu.c:484 menu.c:525 menu.c:541 menu.c:552
 #: menu.c:563 menu.c:605 menu.c:616 menu.c:629 menu.c:642 menu.c:1017
 msgid "No entries."
-msgstr "No hi ha cap entrada."
+msgstr "Няма вписвания."
 
 #: menu.c:445
 msgid "You cannot scroll down farther."
-msgstr "No podeu baixar mйs."
+msgstr "Не може да превъртате повече надолу."
 
 #: menu.c:461
 msgid "You cannot scroll up farther."
-msgstr "No podeu pujar mйs."
+msgstr "Не може да превъртате повече нагоре."
 
 #: menu.c:481
 msgid "You are on the last page."
-msgstr "Vos trobeu en l'ъltima pаgina."
+msgstr "Това е последната страница."
 
 #: menu.c:503
 msgid "You are on the first page."
-msgstr "Vos trobeu en la primera pаgina."
+msgstr "Това е първата страница."
 
 #: menu.c:582
 msgid "First entry is shown."
-msgstr "La primera entrada ja йs visible."
+msgstr "Първият запис е показан."
 
 #: menu.c:602
 msgid "Last entry is shown."
-msgstr "L'ъltima entrada ja йs visible."
+msgstr "Последният запис е показан."
 
 #: menu.c:653
 msgid "You are on the last entry."
-msgstr "Vos trobeu en l'ъltima entrada."
+msgstr "Това е последният запис."
 
 #: menu.c:664
 msgid "You are on the first entry."
-msgstr "Vos trobeu en la primera entrada."
+msgstr "Това е първият запис."
 
 #: menu.c:724 pattern.c:1236
 msgid "Search for: "
-msgstr "Cerca: "
+msgstr "Търсене: "
 
 #: menu.c:725 pattern.c:1237
 msgid "Reverse search for: "
-msgstr "Cerca cap enrere: "
+msgstr "Обратно търсене: "
 
 #: menu.c:735 pattern.c:1269
 msgid "No search pattern."
-msgstr "No s'ha especificat cap patrу de recerca."
+msgstr "Не е дефиниран шаблон за търсене."
 
 #: menu.c:765 pager.c:1913 pager.c:1929 pager.c:2017 pattern.c:1334
 msgid "Not found."
-msgstr "No s'ha trobat."
+msgstr "Текста не е намерен."
 
 #: menu.c:881
 msgid "No tagged entries."
-msgstr "No hi ha cap entrada marcada."
+msgstr "Няма маркирани записи."
 
 #: menu.c:974
 msgid "Search is not implemented for this menu."
-msgstr "No es pot cercar en aquest menъ."
+msgstr "За това меню не е имплементирано търсене."
 
 #: menu.c:979
 msgid "Jumping is not implemented for dialogs."
-msgstr "No es pot saltar en un diаleg."
+msgstr "Скоковете не са имплементирани за диалози."
 
 #: menu.c:1020
 msgid "Tagging is not supported."
-msgstr "No es pot marcar."
+msgstr "Маркирането не се поддържа."
 
 #: mh.c:603
 #, c-format
 msgid "Reading %s... %d"
-msgstr "S'estа llegint «%s»... %d"
+msgstr "Зареждане на %s... %d"
 
 #: muttlib.c:837
 msgid "File is a directory, save under it?"
-msgstr "El fitxer йs un directori; voleu desar-hi a sota?"
+msgstr "Файлът е директория. Запис в нея?"
 
 #: muttlib.c:842
 msgid "File under directory: "
-msgstr "Fitxer a sota del directori: "
+msgstr "Файл в тази директория: "
 
 #: muttlib.c:854
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "El fitxer ja existeix; (s)obreescriu, (a)fig o (c)ancel·la?"
+msgstr "Файлът съществува. Презапис(o), добавяне(a) или отказ(c)?"
 
-# ivb (2001/11/27)
-# ivb  (s)obreescriu, (a)fig, (c)ancel·la
 #: muttlib.c:854
 msgid "oac"
-msgstr "sac"
+msgstr ""
 
 #: muttlib.c:1142
 msgid "Can't save message to POP mailbox."
-msgstr "No es poden desar missatges en bъsties POP."
+msgstr "Не може да запишете писмо в POP пощенска кутия."
 
 #: muttlib.c:1151
 #, c-format
 msgid "%s is not a mailbox!"
-msgstr "«%s» no йs una bъstia!"
+msgstr "%s не е пощенска кутия!"
 
 #: muttlib.c:1157
 #, c-format
 msgid "Append messages to %s?"
-msgstr "Voleu afegir els missatges a «%s»?"
+msgstr "Добавяне на писмата към %s?"
 
 #: mutt_socket.c:85 mutt_socket.c:141
 #, c-format
 msgid "Connection to %s closed"
-msgstr "S'ha tancat la connexiу amb «%s»."
+msgstr "Връзката към %s е прекъсната"
 
 #: mutt_socket.c:259
 msgid "SSL is unavailable."
-msgstr "SSL no es troba disponible."
+msgstr "SSL е недостъпен."
 
 #: mutt_socket.c:290
 msgid "Preconnect command failed."
-msgstr "L'ordre de preconnexiу (preconnect) ha fallat."
+msgstr "Грешка при изпълнение на командата \"Preconnect\""
 
 #: mutt_socket.c:361 mutt_socket.c:375
 #, c-format
 msgid "Error talking to %s (%s)"
-msgstr "Error en parlar amb «%s» (%s)."
+msgstr "Грешка във връзката с %s (%s)"
 
 #: mutt_socket.c:409 mutt_socket.c:450
 #, c-format
 msgid "Looking up %s..."
-msgstr "S'estа cercant «%s»..."
+msgstr "Търсене на %s..."
 
 #: mutt_socket.c:414 mutt_socket.c:454
 #, c-format
 msgid "Could not find the host \"%s\""
-msgstr "No s'ha pogut trobar l'estaciу «%s»."
+msgstr "Хостът \"%s\" не може да бъде открит"
 
 #: mutt_socket.c:418 mutt_socket.c:459
 #, c-format
 msgid "Connecting to %s..."
-msgstr "S'estа connectant amb «%s»..."
+msgstr "Свързване с %s..."
 
 #: mutt_socket.c:482
 #, c-format
 msgid "Could not connect to %s (%s)."
-msgstr "No s'ha pogut connectar amb «%s» (%s)."
+msgstr "Грешка при свързването с %s (%s)."
 
 #: mutt_ssl.c:170
 msgid "Failed to find enough entropy on your system"
-msgstr "No s'ha pogut extraure l'entropia suficient del vostre sistema."
+msgstr "Недостатъчно ентропия в системата"
 
 #: mutt_ssl.c:194
 #, c-format
 msgid "Filling entropy pool: %s...\n"
-msgstr "S'estа plenant la piscina d'entropia «%s»...\n"
+msgstr "Събиране на ентропия за генератора на случайни събития: %s...\n"
 
 #: mutt_ssl.c:202
 #, c-format
 msgid "%s has insecure permissions!"
-msgstr "«%s» no tй uns permissos segurs!"
+msgstr "%s има несигурни права за достъп!"
 
 #: mutt_ssl.c:221
 msgid "SSL disabled due the lack of entropy"
-msgstr "S'ha inhabilitat l'SSL per manca d'entropia."
+msgstr "SSL е изключен поради липса на достатъчно ентропия"
 
 #: mutt_ssl.c:315
 msgid "I/O error"
-msgstr "Error d'E/S"
+msgstr "I/O грешка"
 
 #: mutt_ssl.c:318
 msgid "unspecified protocol error"
-msgstr "Error no especificat del protocol"
+msgstr "неспецифициран протокол"
 
 #: mutt_ssl.c:324
 #, c-format
 msgid "SSL failed: %s"
-msgstr "La negociaciу d'SSL ha fallat: %s."
+msgstr "SSL грешка: %s"
 
 #: mutt_ssl.c:333
 msgid "Unable to get certificate from peer"
-msgstr "No s'ha pogut obtenir el certificat del servidor."
+msgstr "Не мога да получа сертификат от сървъра"
 
 #: mutt_ssl.c:341
 #, c-format
 msgid "SSL connection using %s (%s)"
-msgstr "La connexiу SSL usa «%s» (%s)."
+msgstr "SSL връзка, използваща %s (%s)"
 
-# ivb (2001/12/02)
-# ivb  Es pot referir a nom, correu, organitzaciу, unitat organitzativa,
-# ivb  localitat, estat, paнs -> ni masculн ni femenн, sinт tot el contrari.
 #: mutt_ssl.c:381
 msgid "Unknown"
-msgstr "Desconegut/da"
+msgstr "неизвестно"
 
 #: mutt_ssl.c:406
 msgid "[unable to calculate]"
-msgstr "[no s'ha pogut calcular]"
+msgstr "[не може да бъде пресметнат]"
 
 #: mutt_ssl.c:424
 msgid "[invalid date]"
-msgstr "[la data no йs vаlida]"
+msgstr "[невалидна дата]"
 
 #: mutt_ssl.c:499
 msgid "Server certificate is not yet valid"
-msgstr "El certificat del servidor encara no йs vаlid."
+msgstr "Сертификатът на сървъра все още не е валиден"
 
 #: mutt_ssl.c:506
 msgid "Server certificate has expired"
-msgstr "El certificat del servidor ha expirat."
+msgstr "Сертификатът на сървъра е изтекъл"
 
 #: mutt_ssl.c:579
 msgid "This certificate belongs to:"
-msgstr "Aquest certificat pertany a:"
+msgstr "Този сертификат принадлежи на:"
 
 #: mutt_ssl.c:590
 msgid "This certificate was issued by:"
-msgstr "Aquest certificat ha estat lliurat per:"
+msgstr "Този сертификат е издаден от:"
 
-# ivb (2001/12/08)
-# ivb  A continuaciу ve el rang de validesa.
 #: mutt_ssl.c:601
 msgid "This certificate is valid"
-msgstr "Aquest certificat tй validesa"
+msgstr "Този сертификат е валиден"
 
 #: mutt_ssl.c:602
 #, c-format
 msgid "   from %s"
-msgstr "   des de %s"
+msgstr "   от %s"
 
 #: mutt_ssl.c:604
 #, c-format
 msgid "     to %s"
-msgstr "     fins %s"
+msgstr "    до %s"
 
 #: mutt_ssl.c:610
 #, c-format
 msgid "Fingerprint: %s"
-msgstr "Empremta digital: %s"
+msgstr "Пръстов отпечатък: %s"
 
 #: mutt_ssl.c:612
 msgid "SSL Certificate check"
-msgstr "Comprovaciу del certificat SSL"
+msgstr "Проверка на SSL сертификата"
 
 #: mutt_ssl.c:615
 msgid "(r)eject, accept (o)nce, (a)ccept always"
-msgstr "(r)ebutja, accepta (u)na sola volta, accepta (s)empre"
+msgstr "отхвърляне(r), еднократно приемане(o), приемане винаги(a)"
 
-# ivb (2001/11/27)
-# ivb  (r)ebutja, accepta (u)na sola volta, accepta (s)empre
 #: mutt_ssl.c:616
 msgid "roa"
-msgstr "rus"
+msgstr "roa"
 
 #: mutt_ssl.c:620
 msgid "(r)eject, accept (o)nce"
-msgstr "(r)ebutja, accepta (u)na sola volta"
+msgstr "отхвърляне(r), приемане винаги(o)"
 
-# ivb (2001/11/27)
-# ivb  (r)ebutja, accepta (u)na sola volta
 #: mutt_ssl.c:621
 msgid "ro"
-msgstr "ru"
+msgstr "ro"
 
 #: mutt_ssl.c:625 pgpkey.c:510
 msgid "Exit  "
-msgstr "Ix  "
+msgstr "Изход  "
 
 #: mutt_ssl.c:651
 msgid "Warning: Couldn't save certificate"
-msgstr "Avнs: No s'ha pogut desar el certificat."
+msgstr "Предупреждение: Сертификатът не може да бъде записан"
 
 #: mutt_ssl.c:656
 msgid "Certificate saved"
-msgstr "S'ha desat el certificat."
+msgstr "Сертификатът е записан"
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  Hi ha massa forrellats; voleu eliminar-ne un de «%s»?
 #: mx.c:118
 #, c-format
 msgid "Lock count exceeded, remove lock for %s?"
-msgstr "Voleu eliminar un forrellat sobrant de «%s»?"
+msgstr "Премахване на заключването за %s?"
 
-# ivb (2001/11/27)
-# ivb  «dotlock» йs el programa usat per blocar.
 #: mx.c:130
 #, c-format
 msgid "Can't dotlock %s.\n"
-msgstr "No s'ha pogut blocar «%s» amb «dotlock».\n"
+msgstr "Невъзможно dot-заключване за %s.\n"
 
 #: mx.c:188
 msgid "Timeout exceeded while attempting fcntl lock!"
-msgstr "S'ha excedit el temps d'espera en intentar blocar amb fcntl()!"
+msgstr "fcntl заключване не е получено в определеното време (timeout)!"
 
 #: mx.c:194
 #, c-format
 msgid "Waiting for fcntl lock... %d"
-msgstr "S'estа esperant el blocatge amb fcntl()... %d"
+msgstr "Чакане за fcntl заключване... %d"
 
 #: mx.c:222
 msgid "Timeout exceeded while attempting flock lock!"
-msgstr "S'ha excedit el temps d'espera en intentar blocar amb flock()!"
+msgstr "flock заключване не е получено в определеното време (timeout)!"
 
 #: mx.c:229
 #, c-format
 msgid "Waiting for flock attempt... %d"
-msgstr "S'estа esperant el blocatge amb flock()... %d"
+msgstr "Чакане за flock заключване... %d"
 
 #: mx.c:591
 #, c-format
 msgid "Couldn't lock %s\n"
-msgstr "No s'ha pogut blocar «%s».\n"
+msgstr "Невъзможно заключване на %s\n"
 
 #: mx.c:675
 #, c-format
 msgid "Reading %s..."
-msgstr "S'estа llegint «%s»..."
+msgstr "Зареждане на %s..."
 
 #: mx.c:773
 #, c-format
 msgid "Writing %s..."
-msgstr "S'estа escrivint «%s»..."
+msgstr "Запис на %s..."
 
 #: mx.c:806
 #, c-format
 msgid "Could not synchronize mailbox %s!"
-msgstr "No s'ha pogut sincronitzar la bъstia «%s»!"
+msgstr "Грешка при синхронизацията на %s!"
 
 #: mx.c:872
 #, c-format
 msgid "Move read messages to %s?"
-msgstr "Voleu moure els missatges a «%s»?"
+msgstr "Преместване на прочетените писма в %s?"
 
-# ivb (2001/12/08)
-# ivb  Acн «%d» sempre йs 1.
 #: mx.c:888 mx.c:1143
 #, c-format
 msgid "Purge %d deleted message?"
-msgstr "Voleu eliminar %d missatge esborrat?"
+msgstr "Изтриване на %d-то отбелязано за изтриване писмо?"
 
 #: mx.c:888 mx.c:1143
 #, c-format
 msgid "Purge %d deleted messages?"
-msgstr "Voleu eliminar %d missatges esborrats?"
+msgstr "Изтриване на %d отбелязани за изтриване писма?"
 
 #: mx.c:912
 #, c-format
 msgid "Moving read messages to %s..."
-msgstr "S'estan movent els missatges llegits a «%s»..."
+msgstr "Преместване на прочетените писма в %s..."
 
 #: mx.c:972 mx.c:1134
 msgid "Mailbox is unchanged."
-msgstr "No s'ha modificat la bъstia."
+msgstr "Пощенската кутия е непроменена."
 
 #: mx.c:1008
 #, c-format
 msgid "%d kept, %d moved, %d deleted."
-msgstr "%d mantinguts, %d moguts, %d esborrats."
+msgstr "запазени: %d; преместени: %d; изтрити: %d"
 
 #: mx.c:1011 mx.c:1181
 #, c-format
 msgid "%d kept, %d deleted."
-msgstr "%d mantinguts, %d esborrats."
+msgstr "запазени: %d; изтрити: %d"
 
-# ivb (2001/12/08)
-# ivb  Pot anar darrere de la segьent de la segьent.
 #: mx.c:1119
 #, c-format
 msgid " Press '%s' to toggle write"
-msgstr "Premeu «%s» per habilitar l'escriptura."
+msgstr "Използвайте '%s' за включване/изключване на режима за запис"
 
-# ivb (2001/12/08)
-# ivb  Pot anar darrere de la segьent.
 #: mx.c:1121
 msgid "Use 'toggle-write' to re-enable write!"
-msgstr "Habiliteu l'escriptura amb «toggle-write»!"
+msgstr "Използвайте 'toggle-write' за реактивиране на режима за запис!"
 
-# ivb (2001/12/08)
-# ivb  Pot precedir alguna de les anteriors.  Mantenir breu.
 #: mx.c:1123
 #, c-format
 msgid "Mailbox is marked unwritable. %s"
-msgstr "Bъstia en estat de nomйs lectura.  %s"
+msgstr "Пощенската кутия е маркирана само за четене. %s"
 
 #: mx.c:1178
 msgid "Mailbox checkpointed."
-msgstr "S'ha establert un punt de control en la bъstia."
+msgstr "В пощенската кутия е поставен check point."
 
 #: mx.c:1496
 msgid "Can't write message"
-msgstr "No s'ha pogut escriure el missatge."
+msgstr "Невъзможен запис на писмо"
 
 #: pager.c:64
 msgid "Not available in this menu."
-msgstr "No es troba disponible en aquest menъ."
+msgstr "Клавишната комбинация не е дефинирана в това меню."
 
-# ivb (2001/12/08)
-# ivb  Menъ superpoblat: mantenir _molt_ curt!
 #: pager.c:1436
 msgid "PrevPg"
-msgstr "RePаg"
+msgstr "Пред. стр."
 
-# ivb (2001/12/08)
-# ivb  Menъ superpoblat: mantenir _molt_ curt!
 #: pager.c:1437
 msgid "NextPg"
-msgstr "AvPаg"
+msgstr "Следв. стр."
 
-# ivb (2001/12/08)
-# ivb  Menъ superpoblat: mantenir _molt_ curt!
 #: pager.c:1441
 msgid "View Attachm."
-msgstr "VeuAdjnt"
+msgstr "Прикач. файл"
 
-# ivb (2001/12/08)
-# ivb  Menъ superpoblat: mantenir _molt_ curt!
 #: pager.c:1444
 msgid "Next"
-msgstr "Segnt"
+msgstr "Следващо"
 
 #. emulate "less -q" and don't go on to the next message.
 #: pager.c:1822 pager.c:1853 pager.c:1885 pager.c:2105
 msgid "Bottom of message is shown."
-msgstr "El final del missatge ja йs visible."
+msgstr "Това е краят на писмото."
 
 #: pager.c:1838 pager.c:1860 pager.c:1867 pager.c:1874
 msgid "Top of message is shown."
-msgstr "L'inici del missatge ja йs visible."
+msgstr "Това е началото на писмото."
 
 #: pager.c:1947
 msgid "Reverse search: "
-msgstr "Cerca cap enrere: "
+msgstr "Обратно търсене: "
 
 #: pager.c:1948
 msgid "Search: "
-msgstr "Cerca: "
+msgstr "Търсене: "
 
 #: pager.c:2043
 msgid "Help is currently being shown."
-msgstr "Ja s'estа mostrant l'ajuda."
+msgstr "Помощта вече е показана."
 
 #: pager.c:2072
 msgid "No more quoted text."
-msgstr "No hi ha mйs text citat."
+msgstr "Няма повече цитиран текст."
 
 #: pager.c:2085
 msgid "No more unquoted text after quoted text."
-msgstr "No hi ha mйs text sense citar desprйs del text citat."
+msgstr "Няма повече нецитиран текст след цитирания."
 
 #: parse.c:603
 msgid "multipart message has no boundary parameter!"
-msgstr "El missatge «multipart» no tй parаmetre «boundary»!"
+msgstr "съставното писмо няма \"boundary\" параметър!"
 
 #: pattern.c:252
 #, c-format
 msgid "Error in expression: %s"
-msgstr "Error en l'expressiу: %s"
+msgstr "Грешка в израза: %s"
 
 #: pattern.c:362
 #, c-format
 msgid "Invalid day of month: %s"
-msgstr "El dia del mes no йs vаlid: %s"
+msgstr "Невалиден ден от месеца: %s"
 
 #: pattern.c:376
 #, c-format
 msgid "Invalid month: %s"
-msgstr "El mes no йs vаlid: %s"
+msgstr "Невалиден месец: %s"
 
 #. getDate has its own error message, don't overwrite it here
 #: pattern.c:528
 #, c-format
 msgid "Invalid relative date: %s"
-msgstr "La data relativa no йs vаlida: %s"
+msgstr "Невалидна относителна дата: %s"
 
 #: pattern.c:542
 msgid "error in expression"
-msgstr "Error en l'expressiу."
+msgstr "грешка в израза"
 
 #: pattern.c:748 pattern.c:856
 #, c-format
 msgid "error in pattern at: %s"
-msgstr "Error en el patrу en: %s"
+msgstr "грешка в шаблона при: %s"
 
 #: pattern.c:796
 #, c-format
 msgid "%c: invalid command"
-msgstr "%c: L'ordre no йs vаlida."
+msgstr "%c: невалидна команда"
 
 #: pattern.c:802
 #, c-format
 msgid "%c: not supported in this mode"
-msgstr "%c: No es suporta en aquest mode."
+msgstr "%c: не се поддържа в този режим"
 
 #: pattern.c:815
 msgid "missing parameter"
-msgstr "Manca un parаmetre."
+msgstr "липсващ параметър"
 
 #: pattern.c:831
 #, c-format
 msgid "mismatched parenthesis: %s"
-msgstr "Els parиntesis no estan aparellats: %s"
+msgstr "неподходящо поставени скоби: %s"
 
 #: pattern.c:863
 msgid "empty pattern"
-msgstr "El patrу йs buit."
+msgstr "празен шаблон"
 
 #: pattern.c:1057
 #, c-format
 msgid "error: unknown op %d (report this error)."
-msgstr "error: L'operaciу %d йs desconeguda. (informeu d'aquest error)"
+msgstr "грешка: непознат оператор %d (моля, съобщете за тази грешка)."
 
 #: pattern.c:1126 pattern.c:1255
 msgid "Compiling search pattern..."
-msgstr "S'estа compil·lant el patrу de recerca..."
+msgstr "Компилиране на шаблона за търсене..."
 
 #: pattern.c:1140
 msgid "Executing command on matching messages..."
-msgstr "S'estа executant l'ordre sobre els missatges concordants..."
+msgstr "Изпълняване на команда върху писмата..."
 
 #: pattern.c:1203
 msgid "No messages matched criteria."
-msgstr "No hi ha cap missatge que concorde amb el criteri."
+msgstr "Няма писма, отговарящи на този критерий."
 
 #: pattern.c:1293
 msgid "Search hit bottom without finding match"
-msgstr "La recerca ha arribat al final sense trobar cap concordanзa."
+msgstr "Търсенето достигна до края, без да бъде намерено съвпадение"
 
 #: pattern.c:1304
 msgid "Search hit top without finding match"
-msgstr "La recerca ha arribat a l'inici sense trobar cap concordanзa."
+msgstr "Търсенето достигна до началото, без да бъде намерено съвпадение"
 
 #: pattern.c:1326
 msgid "Search interrupted."
-msgstr "S'ha interromput la recerca."
+msgstr "Търсенето е прекъснато."
 
 #: pgp.c:93
 msgid "Enter PGP passphrase:"
-msgstr "Entreu la frase clau de PGP:"
+msgstr "Въвеждане на PGP passphrase:"
 
 #: pgp.c:109
 msgid "PGP passphrase forgotten."
-msgstr "S'ha esborrat de la memтria la frase clau de PGP."
+msgstr "PGP passphrase е забравена."
 
 #: pgp.c:142
 #, c-format
 msgid "[-- PGP output follows (current time: %c) --]\n"
-msgstr "[-- Aquesta йs l'eixida de PGP (data actual: %c): --]\n"
+msgstr "[-- следва резултата от PGP (текущо веме: %c) --]\n"
 
 #: pgp.c:366
 msgid "[-- Error: unable to create PGP subprocess! --]\n"
-msgstr "[-- Error: no s'ha pogut crear el subprocйs PGP! --]\n"
+msgstr "[-- Грешка: не мога да стартирам PGP подпроцес! --]\n"
 
 #: pgp.c:402 pgp.c:749 pgp.c:1052
 msgid ""
 "[-- End of PGP output --]\n"
 "\n"
 msgstr ""
-"[-- Final de l'eixida de PGP. --]\n"
+"[-- Край на PGP-резултата --]\n"
 "\n"
 
 #: pgp.c:410
@@ -3176,39 +3037,39 @@ msgid ""
 "[-- BEGIN PGP MESSAGE --]\n"
 "\n"
 msgstr ""
-"[-- COMENЗA EL MISSATGE PGP --]\n"
+"[-- НАЧАЛО НА PGP-ПИСМОТО --]\n"
 "\n"
 
 #: pgp.c:412
 msgid "[-- BEGIN PGP PUBLIC KEY BLOCK --]\n"
-msgstr "[-- COMENЗA EL BLOC DE CLAU PЪBLICA PGP --]\n"
+msgstr "[-- НАЧАЛО НА БЛОКА С ПУБЛИЧНИЯ PGP-КЛЮЧ --]\n"
 
 #: pgp.c:414
 msgid ""
 "[-- BEGIN PGP SIGNED MESSAGE --]\n"
 "\n"
 msgstr ""
-"[-- COMENЗA EL MISSATGE PGP SIGNAT --]\n"
+"[-- НАЧАЛО НА PGP-ПОДПИСАНОТО ПИСМО --]\n"
 "\n"
 
 #: pgp.c:456
 msgid "[-- END PGP MESSAGE --]\n"
-msgstr "[-- TERMINA EL MISSATGE PGP --]\n"
+msgstr "[-- КРАЙ НА PGP-ПИСМОТО --]\n"
 
 #: pgp.c:458
 msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
-msgstr "[-- TERMINA EL BLOC DE CLAU PЪBLICA PGP --]\n"
+msgstr "[-- КРАЙ НА БЛОКА С ПУБЛИЧНИЯ PGP-КЛЮЧ --]\n"
 
 #: pgp.c:460
 msgid "[-- END PGP SIGNED MESSAGE --]\n"
-msgstr "[-- TERMINA EL MISSATGE PGP SIGNAT --]\n"
+msgstr "[-- КРАЙ НА PGP-ПОДПИСАНОТО ПИСМО --]\n"
 
 #: pgp.c:475
 msgid ""
 "[-- Error: could not find beginning of PGP message! --]\n"
 "\n"
 msgstr ""
-"[-- Error: no s'ha trobat l'inici del missatge PGP! --]\n"
+"[-- Грешка: не мога да намеря началото на PGP-писмото! --]\n"
 "\n"
 
 #: pgp.c:799
@@ -3216,7 +3077,7 @@ msgid ""
 "[-- Error: Inconsistent multipart/signed structure! --]\n"
 "\n"
 msgstr ""
-"[-- Error: l'estructura «multipart/signed» no йs consistent! --]\n"
+"[-- Грешка: Противоречива multipart/signed структура! --]\n"
 "\n"
 
 #: pgp.c:808
@@ -3225,8 +3086,7 @@ msgid ""
 "[-- Error: Unknown multipart/signed protocol %s! --]\n"
 "\n"
 msgstr ""
-"[-- Error: El protocol «%s» de «multipart/signed» --]\n"
-"[-- no йs conegut! --]\n"
+"[-- Грешка: Непознат multipart/signed протокол %s! --]\n"
 "\n"
 
 #: pgp.c:834
@@ -3235,7 +3095,7 @@ msgid ""
 "[-- Warning: We can't verify %s/%s signatures. --]\n"
 "\n"
 msgstr ""
-"[-- Avнs: no es poden verificar les signatures «%s/%s». --]\n"
+"[-- Предупреждение: Не можем да проверяваме %s/%s подписи. --]\n"
 "\n"
 
 #. Now display the signed body
@@ -3244,7 +3104,7 @@ msgid ""
 "[-- The following data is signed --]\n"
 "\n"
 msgstr ""
-"[-- Les dades segьents es troben signades: --]\n"
+"[-- Следните данни са подписани --]\n"
 "\n"
 
 #: pgp.c:853
@@ -3252,23 +3112,23 @@ msgid ""
 "[-- Warning: Can't find any signatures. --]\n"
 "\n"
 msgstr ""
-"[-- Avнs: no s'ha trobat cap signatura. --]\n"
+"[-- Предупреждение: Не мога да намеря подпис. --]\n"
 "\n"
 
 #: pgp.c:861
 msgid "[-- End of signed data --]\n"
-msgstr "[-- Final de les dades signades. --]\n"
+msgstr "[-- Край на подписаните данни --]\n"
 
 #: pgp.c:962
 msgid "Internal error. Inform <roessler@guug.de>."
-msgstr "Error intern. Informeu <roessler@guug.de>."
+msgstr "Вътрешна грешка. Моля, информирайте <roessler@guug.de>"
 
 #: pgp.c:1022
 msgid ""
 "[-- Error: could not create a PGP subprocess! --]\n"
 "\n"
 msgstr ""
-"[-- Error: no s'ha pogut crear el subprocйs PGP! --]\n"
+"[-- Грешка: не мога да създам PGP подпроцес! --]\n"
 "\n"
 
 #: pgp.c:1118
@@ -3276,520 +3136,479 @@ msgid ""
 "[-- Error: malformed PGP/MIME message! --]\n"
 "\n"
 msgstr ""
-"[-- Error: el missatge PGP/MIME йs malmйs! --]\n"
+"[-- Грешка: неправилно построено PGP/MIME съобщение! --]\n"
 "\n"
 
 #: pgp.c:1131
 msgid "[-- Error: could not create temporary file! --]\n"
-msgstr "[-- Error: No s'ha pogut crear un fitxer temporal! --]\n"
+msgstr "[-- Грешка: не мога да създам временен файл! --]\n"
 
 #: pgp.c:1140
 msgid ""
 "[-- The following data is PGP/MIME encrypted --]\n"
 "\n"
 msgstr ""
-"[-- Les dades segьents es troben xifrades amb PGP/MIME: --]\n"
+"[-- Следните данни са PGP/MIME криптирани --]\n"
 "\n"
 
 #: pgp.c:1160
 msgid "[-- End of PGP/MIME encrypted data --]\n"
-msgstr "[-- Final de les dades xifrades amb PGP/MIME. --]\n"
+msgstr "[-- Край на PGP/MIME криптираните данни --]\n"
 
 #: pgp.c:1241
 msgid "Can't open PGP subprocess!"
-msgstr "No s'ha pogut obrir el subprocйs PGP!"
+msgstr "Не мога да отворя PGP подпроцес!"
 
 #: pgp.c:1368
 #, c-format
 msgid "Use keyID = \"%s\" for %s?"
-msgstr "Voleu usar l'ID de clau «%s» per %s?"
+msgstr "Да използвам ли keyID = \"%s\" за %s?"
 
 #: pgp.c:1395
 #, c-format
 msgid "Enter keyID for %s: "
-msgstr "Entreu l'ID de clau per %s: "
+msgstr "Въведете keyID за %s: "
 
 #: pgp.c:1603
 msgid "Can't invoke PGP"
-msgstr "No s'ha pogut invocar PGP."
+msgstr "Не мога да стартирам PGP"
 
 #: pgp.c:1707
 msgid "Create an application/pgp message?"
-msgstr "Voleu crear un missatge «application/pgp»?"
+msgstr "Създаване на appication/pgp писмо (вместо RFC 2015)?"
 
 #: pgpinvoke.c:301
 msgid "Fetching PGP key..."
-msgstr "S'estа recollint la clau PGP..."
+msgstr "Получаване на PGP ключ..."
 
 #: pgpkey.c:486
 msgid "All matching keys are marked expired/revoked."
-msgstr ""
-"Totes les claus concordants estan marcades com a expirades o revocades."
+msgstr "Всички отговяращи ключове са маркирани като остарели/анулирани."
 
 #. __STRCAT_CHECKED__
 #: pgpkey.c:512
 msgid "Select  "
-msgstr "Selecciona  "
+msgstr "Избор "
 
 #. __STRCAT_CHECKED__
 #: pgpkey.c:515
 msgid "Check key  "
-msgstr "Comprova clau  "
+msgstr "Проверка на ключ  "
 
 #: pgpkey.c:528
 #, c-format
 msgid "PGP keys matching <%s>."
-msgstr "Claus PGP que concorden amb <%s>."
+msgstr "PGP ключове, съвпадащи с <%s>."
 
 #: pgpkey.c:530
 #, c-format
 msgid "PGP keys matching \"%s\"."
-msgstr "Claus PGP que concordem amb «%s»."
+msgstr "PGP ключове, съвпадащи с \"%s\"."
 
 #: pgpkey.c:549 pgpkey.c:741
 msgid "Can't open /dev/null"
-msgstr "No s'ha pogut obrir «/dev/null»."
+msgstr "Грешка при отварянето на /dev/null"
 
 #: pgpkey.c:555 pgpkey.c:735
 msgid "Can't create temporary file"
-msgstr "No s'ha pogut crear un fitxer temporal."
+msgstr "Грешка при създаване на временен файл"
 
 #: pgpkey.c:576
 #, c-format
 msgid "Key ID: 0x%s"
-msgstr "ID de la clau: 0x%s"
+msgstr "Ключов идентификатор: 0x%s"
 
 #: pgpkey.c:596
 msgid "This key can't be used: expired/disabled/revoked."
-msgstr ""
-"No es pot usar aquesta clau: es troba expirada, inhabilitada o revocada."
+msgstr "Този ключ не може да бъде използван: остарял/деактивиран/анулиран."
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  Aquest ID es troba expirat, inhabilitat o revocat.
 #: pgpkey.c:608
 msgid "ID is expired/disabled/revoked."
-msgstr "ID expirat/inhabilitat/revocat."
+msgstr "Идентификаторът е остарял/деактивиран/анулиран."
 
-# ivb (2002/02/02)
-# ivb  ABREUJAT! (Hei!  Hui йs 2/2/2!)
-# ivb  Aquest ID tй una validesa indefinida.
 #: pgpkey.c:612
 msgid "ID has undefined validity."
-msgstr "L'ID tй una validesa indefinida."
+msgstr "Идентификаторът е с недефинирана валидност."
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  Aquest ID no йs vаlid.
 #: pgpkey.c:615
 msgid "ID is not valid."
-msgstr "L'ID no йs vаlid."
+msgstr "Идентификаторът е невалиден."
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  Aquest ID nomйs йs lleugerament vаlid.
 #: pgpkey.c:618
 msgid "ID is only marginally valid."
-msgstr "L'ID йs lleugerament vаlid."
+msgstr "Идентификаторът е недостатъчно валиден."
 
-# ivb (2001/12/08)
-# ivb  Davant d'aзт pot anar una de les quatre anteriors.
 #: pgpkey.c:622
 #, c-format
 msgid "%s Do you really want to use the key?"
-msgstr "%s  Voleu realment usar la clau?"
+msgstr "%s Действително ли искате да използвате този ключ?"
 
 #: pgpkey.c:720
 msgid "Please enter the key ID: "
-msgstr "Per favor, entreu l'ID de la clau: "
+msgstr "Моля, въведете ключовия идентификатор: "
 
 #: pgpkey.c:748
 msgid "Invoking pgp..."
-msgstr "S'estа invocant «pgp»..."
+msgstr "Стартиране на pgp..."
 
 #: pgpkey.c:773
 #, c-format
 msgid "PGP Key %s."
-msgstr "Clau PGP %s."
+msgstr "PGP ключ %s."
 
 #: pgpkey.c:835 pgpkey.c:953
 #, c-format
 msgid "Looking for keys matching \"%s\"..."
-msgstr "S'estan cercant les claus que concorden amb «%s»..."
+msgstr "Търсене на ключове, отговарящи на \"%s\"..."
 
 #: pop.c:89 pop_lib.c:159
 msgid "Command TOP is not supported by server."
-msgstr "El servidor no suporta l'ordre «TOP»."
+msgstr "Командата \"TOP\" не се поддържа от сървъра."
 
 #: pop.c:116
 msgid "Can't write header to temporary file!"
-msgstr "No s'ha pogut escriure la capзalera en un fitxer temporal!"
+msgstr "Грешка при запис на заглавната информация във временен файл!"
 
 #: pop.c:197 pop_lib.c:161
 msgid "Command UIDL is not supported by server."
-msgstr "El servidor no suporta l'ordre «UIDL»."
+msgstr "Командата \"UIDL\" не се поддържа от сървъра."
 
 #: pop.c:246 pop.c:562
 #, c-format
 msgid "%s is an invalid POP path"
-msgstr "«%s» no йs un camн POP vаlid."
+msgstr "%s не е валиден POP път"
 
 #: pop.c:277
 msgid "Fetching list of messages..."
-msgstr "S'estа recollint la llista de missatges..."
+msgstr "Изтегляне на списък с писмата..."
 
 #: pop.c:414
 msgid "Can't write message to temporary file!"
-msgstr "No s'ha pogut escriure el missatge en un fitxer temporal!"
+msgstr "Грешка при запис на писмото във временен файл!"
 
 #: pop.c:517 pop.c:582
 msgid "Checking for new messages..."
-msgstr "S'estа comprovant si hi ha missatges nous..."
+msgstr "Проверка за нови писма..."
 
 #: pop.c:546
 msgid "POP host is not defined."
-msgstr "No s'ha definit el servidor POP (pop_host)."
+msgstr "Не е дефиниран POP хост."
 
 #: pop.c:610
 msgid "No new mail in POP mailbox."
-msgstr "No hi ha correu nou en la bъstia POP."
+msgstr "Няма нови писма в POP пощенската кутия."
 
-# ivb (2001/11/30)
-# ivb  Use «eliminar» pq en portar els missatges s'eliminen completament
-# ivb  del servidor POP.
 #: pop.c:617
 msgid "Delete messages from server?"
-msgstr "Voleu eliminar els missatges del servidor?"
+msgstr "Изтриванена писмата от този сървър?"
 
 #: pop.c:619
 #, c-format
 msgid "Reading new messages (%d bytes)..."
-msgstr "S'estan llegint els missatges nous (%d octets)..."
+msgstr "Прочитане на новите писма (%d байта)..."
 
 #: pop.c:661
 msgid "Error while writing mailbox!"
-msgstr "Error en escriure en la bъstia!"
+msgstr "Грешка при запис на пощенската кутия!"
 
 #: pop.c:665
 #, c-format
 msgid "%s [%d of %d messages read]"
-msgstr "%s [llegits %d de %d missatges]"
+msgstr "%s [%d от %d писма прочетени]"
 
 #: pop.c:688 pop_lib.c:278
 msgid "Server closed connection!"
-msgstr "El servidor ha tancat la connexiу!"
+msgstr "Сървърът затвори връзката!"
 
 #: pop_auth.c:187
 msgid "Authenticating (APOP)..."
-msgstr "S'estа autenticant (APOP)..."
+msgstr "Идентификация (APOP)..."
 
 #: pop_auth.c:211
 msgid "APOP authentication failed."
-msgstr "L'autenticaciу APOP ha fallat."
+msgstr "Грешка при APOP идентификация."
 
 #: pop_auth.c:246
 msgid "Command USER is not supported by server."
-msgstr "El servidor no suporta l'ordre «USER»."
+msgstr "Командата \"USER\" не се поддържа от сървъра."
 
 #: pop_lib.c:157
 msgid "Unable to leave messages on server."
-msgstr "No s'han pogut deixar els missatges en el servidor."
+msgstr "Невъзможно оставянето на писмата на този сървър."
 
 #: pop_lib.c:204
 #, c-format
 msgid "Error connecting to server: %s"
-msgstr "Error en connectar amb el servidor: %s"
+msgstr "Грешка при свързването със сървъра: %s"
 
 #: pop_lib.c:292
 msgid "Closing connection to POP server..."
-msgstr "S'estа tancant la connexiу amb el servidor POP..."
+msgstr "Затваряне на вързката с POP сървър..."
 
 #: pop_lib.c:458
 msgid "Verifying message indexes..."
-msgstr "S'estan verificant els нndexs dels missatges..."
+msgstr "Потвърждаване индексите на писмата..."
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  S'ha perdut la connexiу.  Voleu reconnectar amb el servidor POP?
 #: pop_lib.c:482
 msgid "Connection lost. Reconnect to POP server?"
-msgstr "S'ha perdut la connexiу.  Reconnectar amb el servidor POP?"
+msgstr "Връзката е изгубена. Повторно свъзване към POP-сървъра?"
 
 #: postpone.c:165
 msgid "Postponed Messages"
-msgstr "Missatges posposats"
+msgstr "Чернови"
 
 #: postpone.c:238 postpone.c:247
 msgid "No postponed messages."
-msgstr "No hi ha cap missatge posposat."
+msgstr "Няма запазени чернови."
 
 #: postpone.c:418 postpone.c:439 postpone.c:447
 msgid "Illegal PGP header"
-msgstr "La capзalera PGP no йs permesa."
+msgstr "Неправилни PGP заглавни редове"
 
 #: query.c:45
 msgid "New Query"
-msgstr "Nova consulta"
+msgstr "Ново запитване"
 
 #: query.c:46
 msgid "Make Alias"
-msgstr "Crea аlies"
+msgstr "Създаване на псевдоним"
 
 #: query.c:47
 msgid "Search"
-msgstr "Cerca"
+msgstr "Търсене"
 
 #: query.c:93
 msgid "Waiting for response..."
-msgstr "S'estа esperant una resposta..."
+msgstr "Чакане на отговор..."
 
 #: query.c:225 query.c:250
 msgid "Query command not defined."
-msgstr "No s'ha definit cap ordre de consulta."
+msgstr "Недефинирана команда за запитване."
 
 #: query.c:277
 msgid "Query"
-msgstr "Consulta"
+msgstr "Запитване"
 
 #. Prompt for Query
 #: query.c:290 query.c:315
 msgid "Query: "
-msgstr "Consulta: "
+msgstr "Запитване: "
 
 #: query.c:298 query.c:324
 #, c-format
 msgid "Query '%s'"
-msgstr "Consulta de «%s»"
+msgstr "Запитване '%s'"
 
 #: recvattach.c:59
 msgid "Pipe"
-msgstr "Redirigeix"
+msgstr "Pipe"
 
 #: recvattach.c:60
 msgid "Print"
-msgstr "Imprimeix"
+msgstr "Отпечатване"
 
 #: recvattach.c:416
 msgid "Saving..."
-msgstr "S'estа desant..."
+msgstr "Запис..."
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  AVНS!  Esteu a punt de sobreescriure «%s»; voleu continuar?
 #: recvattach.c:491
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
-msgstr "AVНS!  Aneu a sobreescriure «%s»; voleu continuar?"
+msgstr "ПРЕДУПРЕЖДЕНИЕ! На път сте да презапишете %s, да продължа ли?"
 
 #: recvattach.c:509
 msgid "Attachment filtered."
-msgstr "S'ha filtrat el fitxer adjunt."
+msgstr "Прикачения файл е филтриран."
 
 #: recvattach.c:576
 msgid "Filter through: "
-msgstr "Filtra amb: "
+msgstr "Филтриране през: "
 
 #: recvattach.c:576
 msgid "Pipe to: "
-msgstr "Redirigeix a: "
+msgstr "Предаване на команда (pipe): "
 
 #: recvattach.c:611
 #, c-format
 msgid "I dont know how to print %s attachments!"
-msgstr "No sй com imprimir els fitxers adjunts de tipus «%s»!"
+msgstr "Не знам как да отпечатвам %s прикачени файлове!"
 
 #: recvattach.c:676
 msgid "Print tagged attachment(s)?"
-msgstr "Voleu imprimir els fitxers adjunts seleccionats?"
+msgstr "Отпечатване на маркираните прикачени файлове?"
 
 #: recvattach.c:676
 msgid "Print attachment?"
-msgstr "Voleu imprimir el fitxer adjunt?"
+msgstr "Отпечатване на прикачения файл?"
 
 #: recvattach.c:890
 msgid "Attachments"
-msgstr "Fitxers adjunts"
+msgstr "Прикачени файлове"
 
 #: recvattach.c:926
 msgid "There are no subparts to show!"
-msgstr "No hi ha cap subpart a mostrar!"
+msgstr "Няма части за показване!"
 
 #: recvattach.c:987
 msgid "Can't delete attachment from POP server."
-msgstr "No es poden esborrar els fitxers adjunts en un servidor POP."
+msgstr "Грешка при изтриване на прикачен файл от POP-сървъра."
 
 #: recvattach.c:998
 msgid "Deletion of attachments from PGP messages is unsupported."
-msgstr "No es poden esborrar els fitxers adjunts en un missatge PGP."
+msgstr "Изтриването на прикачени файлове от PGP писма не се поддържа."
 
 #: recvattach.c:1018 recvattach.c:1035
 msgid "Only deletion of multipart attachments is supported."
-msgstr ""
-"Nomйs es poden esborrar els fitxers adjunts dels missatges «multipart»."
+msgstr "Поддържа се само изтриване на прикачени файлове от съставни писма."
 
 #: recvcmd.c:43
 msgid "You may only bounce message/rfc822 parts."
-msgstr "Nomйs es poden redirigir parts de tipus «message/rfc822»."
+msgstr "Може да изпращате отново само message/rfc822 части."
 
 #: recvcmd.c:155
 #, c-format
 msgid "Bounce message to %s...?"
-msgstr "Voleu redirigir el missatge a %s...?"
+msgstr "Повторно изпращане на писмото към %s...?"
 
 #: recvcmd.c:155
 #, c-format
 msgid "Bounce messages to %s...?"
-msgstr "Voleu redirigir els missatges a %s...?"
+msgstr "Повторно изпращане на писмата към %s...?"
 
 #: recvcmd.c:374
 #, c-format
 msgid "Can't open temporary file %s."
-msgstr "No s'ha pogut obrir el fitxer temporal «%s»."
+msgstr "Грешка при отваряне на временния файл %s."
 
 #: recvcmd.c:405
 msgid "Forward as attachments?"
-msgstr "Voleu reenviar com a fitxers adjunts?"
+msgstr "Препращане като прикачени файлове?"
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  No s'han pogut descodificar tots els fitxers adjunts marcats.  Voleu reenviar els altres usant MIME?
 #: recvcmd.c:419
 msgid "Can't decode all tagged attachments.  MIME-forward the others?"
-msgstr "Reenviar amb MIME fitxers adjunts marcats no descodificables?"
+msgstr "Невъзможно декодирането на всички маркирани прикачени файлове. MIME за останалите?"
 
 #: recvcmd.c:544
 msgid "Forward MIME encapsulated?"
-msgstr "Voleu reenviar amb encapsulament MIME?"
+msgstr "MIME капсулиране преди препращането?"
 
 #: recvcmd.c:552 recvcmd.c:802
 #, c-format
 msgid "Can't create %s."
-msgstr "No s'ha pogut crear «%s»."
+msgstr "Грешка при създаване на %s."
 
 #: recvcmd.c:685
 msgid "Can't find any tagged messages."
-msgstr "No s'ha trobat cap missatge marcat."
+msgstr "Няма маркирани писма."
 
 #: recvcmd.c:706 send.c:698
 msgid "No mailing lists found!"
-msgstr "No s'ha trobat cap llista de correu!"
+msgstr "Няма дефинирани mailing list-ове!"
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  No s'han pogut descodificar tots els fitxers adjunts marcats.  Voleu encapsular la resta usant MIME?
 #: recvcmd.c:781
 msgid "Can't decode all tagged attachments.  MIME-encapsulate the others?"
-msgstr "Encapsular amb MIME fitxers adjunts marcats no descodificables?"
+msgstr "Невъзможно декодирането на всички маркирани прикачени файлове. MIME за останалите?"
 
 #: remailer.c:480
 msgid "Append"
-msgstr "Afig"
+msgstr "Добавяне"
 
 #: remailer.c:481
 msgid "Insert"
-msgstr "Insereix"
+msgstr "Вмъкване"
 
 #: remailer.c:482
 msgid "Delete"
-msgstr "Esborra"
+msgstr "Изтриване"
 
 #: remailer.c:484
 msgid "OK"
-msgstr "Accepta"
+msgstr "ОК"
 
-# ivb (2001/12/07)
-# ivb  En aquest cas «mixmaster» йs un programa.
 #: remailer.c:512
 msgid "Can't get mixmaster's type2.list!"
-msgstr "No s'ha pogut obtenir «type2.list» de «mixmaster»!"
+msgstr "Невъзможно получаването на \"type2.list\" на mixmaster!"
 
 #: remailer.c:538
 msgid "Select a remailer chain."
-msgstr "Seleccioneu una cadena de redistribuпdors."
+msgstr "Избор на remailer верига."
 
 #: remailer.c:598
 #, c-format
 msgid "Error: %s can't be used as the final remailer of a chain."
-msgstr "Error: no es pot usar «%s» com a redistribuпdor final d'una cadena."
+msgstr "Грешка: %s не може да се използва като последен remailer във веригата."
 
 #: remailer.c:628
 #, c-format
 msgid "Mixmaster chains are limited to %d elements."
-msgstr "Les cadenes de Mixmaster estan limitades a %d elements."
+msgstr "mixmaster веригите са ограничени до %d елемента."
 
 #: remailer.c:651
 msgid "The remailer chain is already empty."
-msgstr "La cadena de redistribuпdors ja йs buida."
+msgstr "remailer веригата вече е празна."
 
 #: remailer.c:661
 msgid "You already have the first chain element selected."
-msgstr "Vos trobeu en el primer element de la cadena."
+msgstr "Първият елемент от веригата е вече избран."
 
 #: remailer.c:671
 msgid "You already have the last chain element selected."
-msgstr "Vos trobeu en l'ъltim element de la cadena."
+msgstr "Последният елемент от веригата е вече избран."
 
 #: remailer.c:710
 msgid "Mixmaster doesn't accept Cc or Bcc headers."
-msgstr "No es poden usar les capзaleres «Cc» i «Bcc» amb Mixmaster."
+msgstr "mixmaster не приема \"Cc\" или \"Bcc\" заглавни полета."
 
 #: remailer.c:734
 msgid ""
 "Please set the hostname variable to a proper value when using mixmaster!"
 msgstr ""
-"Per favor, establiu un valor adequat per «hostname» quan useu Mixmaster!"
+"Моля, поставете валидна стойност в променливата \"hostname\" когато използвате mixmaster!"
 
 #: remailer.c:768
 #, c-format
 msgid "Error sending message, child exited %d.\n"
-msgstr "Error en enviar el missatge, el procйs fill ha eixit amb codi %d.\n"
+msgstr "Грешка %d при изпращане на писмото.\n"
 
 #: remailer.c:772
 msgid "Error sending message."
-msgstr "Error en enviar el missatge."
+msgstr "Грешка при изпращане на писмото."
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  L'entrada del tipus «%s» en «%s», lнnia %d, no tй un format vаlid.
 #: rfc1524.c:159
 #, c-format
 msgid "Improperly formated entry for type %s in \"%s\" line %d"
-msgstr "Entrada de tipus «%s» en «%s», lнnia %d: format no vаlid."
+msgstr "Невалидно форматирано вписване за типа %s в \"%s\" на ред %d"
 
 #: rfc1524.c:391
 msgid "No mailcap path specified"
-msgstr "No s'ha especificat cap camн a «mailcap»."
+msgstr "Не е указан пътя към mailcap"
 
 #: rfc1524.c:417
 #, c-format
 msgid "mailcap entry for type %s not found"
-msgstr "No s'ha trobat cap entrada pel tipus «%s» en «mailcap»"
+msgstr "не е намерено mailcap-вписване за типа %s"
 
 #: score.c:71
 msgid "score: too few arguments"
-msgstr "score: Manquen arguments."
+msgstr "score: недостатъчно аргументи"
 
 #: score.c:80
 msgid "score: too many arguments"
-msgstr "score: Sobren arguments."
+msgstr "score: твърде много аргументи"
 
 #: send.c:235
 msgid "No subject, abort?"
-msgstr "No hi ha assumpte; voleu avortar el missatge?"
+msgstr "Писмото няма тема, прекъсване на изпращането?"
 
 #: send.c:237
 msgid "No subject, aborting."
-msgstr "S'avorta el missatge sense assumpte."
+msgstr "Прекъсване поради липса на тема."
 
-# ivb (2001/12/07)
-# ivb  El primer «%s» йs una adreзa de correu i el segon potser «,...».
 #: send.c:436
 #, c-format
 msgid "Follow-up to %s%s?"
-msgstr "Voleu escriure un seguiment a %s%s?"
+msgstr "Отговор на %s%s?"
 
-# ivb (2001/12/07)
-# ivb  El primer «%s» йs una adreзa de correu i el segon potser «,...».
 #. There are quite a few mailing lists which set the Reply-To:
 #. * header field to the list address, which makes it quite impossible
 #. * to send a message to only the sender of the message.  This
@@ -3798,153 +3617,150 @@ msgstr "Voleu escriure un seguiment a %s%s?"
 #: send.c:489
 #, c-format
 msgid "Reply to %s%s?"
-msgstr "Voleu escriure una resposta a %s%s?"
+msgstr "Отговор на %s%s?"
 
 #. This could happen if the user tagged some messages and then did
 #. * a limit such that none of the tagged message are visible.
 #.
 #: send.c:673
 msgid "No tagged messages are visible!"
-msgstr "Cap dels missatges marcats йs visible!"
+msgstr "Никое от маркираните писма не е видимо!"
 
 #: send.c:725
 msgid "Include message in reply?"
-msgstr "Voleu incloure el missatge en la resposta?"
+msgstr "Включване на писмото в отговора?"
 
 #: send.c:730
 msgid "Including quoted message..."
-msgstr "S'estа incloent el missatge citat..."
+msgstr "Включване на цитирано писмо..."
 
 #: send.c:740
 msgid "Could not include all requested messages!"
-msgstr "No s'han pogut incloure tots els missatges sol·licitats!"
+msgstr "Не мога да включа всички поискани писма!"
 
 #: send.c:754
 msgid "Forward as attachment?"
-msgstr "Voleu reenviar com a fitxer adjunt?"
+msgstr "Препращане като прикачен файл?"
 
 #: send.c:758
 msgid "Preparing forwarded message..."
-msgstr "S'estа preparant el missatge a reenviar..."
+msgstr "Подготовка за препращане..."
 
 #. If the user is composing a new message, check to see if there
 #. * are any postponed messages first.
 #.
 #: send.c:1093
 msgid "Recall postponed message?"
-msgstr "Voleu recuperar un missatge posposat?"
+msgstr "Редактиране на чернова?"
 
 #: send.c:1309
 msgid "Abort unmodified message?"
-msgstr "Voleu avortar el missatge no modificat?"
+msgstr "Да изтрия ли непромененото писмо?"
 
 #: send.c:1311
 msgid "Aborted unmodified message."
-msgstr "S'avorta el missatge no modificat."
+msgstr "Непромененото писмо е изтрито."
 
 #. abort
 #: send.c:1352
 msgid "Mail not sent."
-msgstr "No s'ha enviat el missatge."
+msgstr "Писмото не е изпратено."
 
 #: send.c:1378
 msgid "Message postponed."
-msgstr "S'ha posposat el missatge."
+msgstr "Писмото е записано като чернова."
 
 #: send.c:1387
 msgid "No recipients are specified!"
-msgstr "No s'ha especificat cap destinatari."
+msgstr "Не са указани получатели!"
 
 #: send.c:1392
 msgid "No recipients were specified."
-msgstr "No s'ha especificat cap destinatari."
+msgstr "Не са указани получатели."
 
 #: send.c:1398
 msgid "No subject, abort sending?"
-msgstr "No hi ha assumpte; voleu avortar l'enviament?"
+msgstr "Липсва тема на писмото. Прекъсване на изпращането?"
 
 #: send.c:1402
 msgid "No subject specified."
-msgstr "No s'ha especificat l'assumpte."
+msgstr "Липсва тема."
 
 #: send.c:1449
 msgid "Sending message..."
-msgstr "S'estа enviant el missatge..."
+msgstr "Изпращане на писмото..."
 
 #: send.c:1586
 msgid "Could not send the message."
-msgstr "No s'ha pogut enviar el missatge."
+msgstr "Не мога да изпратя писмото."
 
 #: send.c:1591
 msgid "Mail sent."
-msgstr "S'ha enviat el missatge."
+msgstr "Писмото е изпратено."
 
 #: send.c:1591
 msgid "Sending in background."
-msgstr "S'estа enviant en segon pla."
+msgstr "Изпращане на заден фон."
 
 #: sendlib.c:458
 msgid "No boundary parameter found! [report this error]"
-msgstr "No s'ha trobat el parаmetre «boundary»! (informeu d'aquest error)"
+msgstr "Не е намерен \"boundary\" параметър! [моля, съобщете за тази грешка]"
 
 #: sendlib.c:492
 #, c-format
 msgid "%s no longer exists!"
-msgstr "«%s» ja no existeix!"
+msgstr "%s вече не съществува!"
 
 #: sendlib.c:912
 #, c-format
 msgid "%s isn't a regular file."
-msgstr "«%s» no йs un fitxer ordinari."
+msgstr "%s не е обикновен файл."
 
 #: sendlib.c:1081
 #, c-format
 msgid "Could not open %s"
-msgstr "No s'ha pogut obrir «%s»."
+msgstr "Грешка при отварянето на %s"
 
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# ivb  Error en enviar el missatge, el procйs fill ha exit amb codi %d (%s).
 #: sendlib.c:2033
 #, c-format
 msgid "Error sending message, child exited %d (%s)."
-msgstr "Error en enviament, el fill isquй amb codi %d (%s)."
+msgstr "Грешка %d (%s) при изпращане на писмото."
 
 #: sendlib.c:2039
 msgid "Output of the delivery process"
-msgstr "Eixida del procйs de repartiment"
+msgstr "Изпращащ процес:"
 
 #: signal.c:39
 #, c-format
 msgid "%s...  Exiting.\n"
-msgstr "%s...  Eixint.\n"
+msgstr "%s... Изход.\n"
 
 #: signal.c:42
 #, c-format
 msgid "Caught %s...  Exiting.\n"
-msgstr "S'ha rebut «%s»...  Eixint.\n"
+msgstr "Получен сигнал %s... Изход.\n"
 
 #: signal.c:44
 #, c-format
 msgid "Caught signal %d...  Exiting.\n"
-msgstr "S'ha rebut el senyal %d...  Eixint.\n"
+msgstr "Получен сигнал %d... Изход.\n"
 
 #: sort.c:202
 msgid "Sorting mailbox..."
-msgstr "S'estа ordenant la bъstia."
+msgstr "Подреждане на пощенската кутия..."
 
 #: sort.c:239
 msgid "Could not find sorting function! [report this bug]"
-msgstr "No s'ha pogut trobar la funciу d'ordenaciу! (informeu d'aquest error)"
+msgstr "Не мога да намеря функция за подреждане! (Моля, съобщете за тази грешка)"
 
 #: status.c:102
 msgid "(no mailbox)"
-msgstr "(cap bъstia)"
+msgstr "(няма пощенска кутия)"
 
 #: thread.c:1077
 msgid "Parent message is not visible in this limited view."
-msgstr "El missatge pare no йs visible en aquesta vista limitada."
+msgstr "Родителското писмо не е видимо в ограничения изглед"
 
 #: thread.c:1083
 msgid "Parent message is not available."
-msgstr "El missatge pare no es troba disponible."
+msgstr "Родителското писмо не е налично."
