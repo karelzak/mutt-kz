@@ -244,7 +244,7 @@ int mutt_get_postponed (CONTEXT *ctx, HEADER *hdr, HEADER **cur)
       else
 	/* avoid Content-Disposition: header with temporary filename */
 	b->use_disp = 0;
-      mutt_adv_mktemp (file);
+      mutt_adv_mktemp (file, sizeof(file));
       if (mutt_save_attachment (msg->fp, b, file, 0, NULL) == -1)
       {
 	mutt_free_envelope (&hdr->env);

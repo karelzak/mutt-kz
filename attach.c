@@ -322,7 +322,7 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
     {
       /* recv case */
       strfcpy (pagerfile, a->filename, sizeof (pagerfile));
-      mutt_adv_mktemp (pagerfile);
+      mutt_adv_mktemp (pagerfile, sizeof(pagerfile));
     }
     else
       mutt_mktemp (pagerfile);
