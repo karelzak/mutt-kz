@@ -2051,7 +2051,7 @@ Content-Type: text/plain; charset=iso-8859-1
 then Mutt will expand &percnt;{charset} to iso-8859-1.  The default metamail
 mailcap file uses this feature to test the charset to spawn an xterm
 using the right charset to view the message.
-<tag>&setmn;&percnt;</tag>
+<tag>&bsol;&percnt;</tag>
 This will be replaced by a &percnt;
 </descrip>
 Mutt does not currently support the &percnt;F and &percnt;n keywords
