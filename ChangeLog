@@ -1,4 +1,206 @@
-Thu Aug 13 17:43:51 1998  Thomas Roessler  <roessler@guug.de>
+Mon Aug 24 09:24:28 1998  Thomas Roessler  <roessler@guug.de>
+
+	* doc/manual.txt, doc/manual.sgml: Documenting $hidden_host.
+
+	* thread.c, curs_main.c: Fix "previous-subthread"
+	in reverse-threads mode, allow next-(sub)thread
+	and previous-(sub)thread to work in limited mode.
+	(From: Liviu Daia)
+
+Sun Aug 23 10:05:41 1998  Thomas Roessler  <roessler@guug.de>
+
+	* sendlib.c, send.c, protos.h, mutt.h, main.c,
+	init.h, init.c, configure.in, configure,
+	config.h.in, alias.c, acconfig.h, INSTALL:
+	[patch-0.94.3i.tlr.hidden_host.1] Replace the
+	--enable-hidden-host configure switch by a
+	configuration variable $hidden_host which can be
+	changed at run-time. This variable will _not_
+	affect the generation of message-IDs since we'll
+	get into uniqueness problems if we just use the
+	domain here.
+
+	Needs to be documented.
+
+	* doc/manual.txt: Committing the latest manual
+	changes.
+
+	* Attic/socket.c, imap.c:
+	[patch-0.94.3.bl.imap_buffy.1-2] Fixing the
+	buffered read stuff.
+
+	* Attic/mutt_socket.h: Ups, this one was missing
+	from Brandon's IMAP patch.
+
+Sat Aug 22 14:24:18 1998  Thomas Roessler  <roessler@guug.de>
+
+	* help.c: [patch-0.94.3i.gt.beautify_help.1.gz]
+	General help beautification.  From Gero Treuner.
+
+	* doc/manual.sgml, keymap.h, keymap.c, help.c,
+	Muttrc.in: [patch-0.94.3i.gt.description.1]
+	Introduce macro descriptions.
+
+	* doc/manual.sgml, init.h, init.c, browser.c: Add
+	a negation operator "!" to $mask's syntax (as in
+	the *-hooks).  From Liviu.
+
+	* recvattach.c: Make Vikas' attach_split and
+	Brandon's other_type patches fit together.
+
+	* recvattach.c, mutt.h, init.h, globals.h,
+	compose.c: [patch-0.94.3.vikas.attach_split.3]
+	Re-introduce attach_split.
+
+	* Attic/socket.c: [patch-0.94.3.bl.imap_buffy.1]
+	Adding Brandon's IMAP buffy support.
+
+	* mx.c, mutt.h, mailbox.h, imap.h, imap.c,
+	curs_lib.c, configure.in, configure, buffy.c,
+	browser.c, Attic/BUGS:
+	[patch-0.94.3.bl.imap_buffy.1] Adding Brandon's
+	IMAP buffy support.
+
+Fri Aug 21 08:17:09 1998  Thomas Roessler  <roessler@guug.de>
+
+	* browser.c: Enter the file browser, type a mask
+	which doesn't match any file in the current
+	directory, clean the mask. Segfault.  Fix from
+	Liviu Daia.
+
+Thu Aug 20 22:32:46 1998  Thomas Roessler  <roessler@guug.de>
+
+	* sendlib.c, recvattach.c, parse.c, mutt.h,
+	mime.h, lib.c, handler.c, globals.h, compose.c,
+	commands.c, attach.c, Attic/BUGS:
+	[patch-0.94.3.bl.other_types.1] This patch adds
+	support for the model MIME type.  Additionally,
+	along the lines of "strict in what you generate,
+	accepting in what you receive", this patch will
+	keep the name of major mime types it doesn't
+	recognize (instead of using x-unknown).
+
+	* compose.c, Attic/BUGS:
+	[patch-0.94.3i.jmy.attachmessage-fix.1] This patch
+	fixes a bug in the allocation of space for new
+	pointers to the attachments, it would make mutt
+	seg-fault when attaching 5 or more messages at the
+	same time. (From: Jimmy Mäkelä
+	<jmy@flashback.net>)
+
+	* handler.c: [SECURITY] mutt_sanitize_filename()
+	should be called when creating temporary files for
+	autoview.  (From: Liviu Daia.)
+
+	* sendlib.c, send.c, attach.c: Try this: set
+	$mime_forward, forward a PGP-encrypted message,
+	then in the "compose" menu try to view the
+	forwarded message. If you didn't enter a
+	passphrase before, Mutt won't ask for it either.
+	(From: Liviu Daia)
+
+	* sendlib.c, attach.c: When you forward a message
+	with $mime_forward set, or when you attach a
+	message with the "attach-message" command from the
+	"compose" menu, there is a memory leak.  The real
+	reason for this leak is that multipart attachments
+	are not supported in the "compose" menu, so you
+	need to go through quite a few contortions in
+	order to handle message/rfc822 attachments.
+	Consequently, the patch below is just an ugly
+	hack.  (From: Liviu Daia)
+
+Sun Aug 16 06:22:51 1998  Thomas Roessler  <roessler@guug.de>
+
+	* rfc822.c: Bringing 128-byte strings to "STRING".
+
+	* sendlib.c: Use add_option, not add_arg, for
+	strings such as "--".
+
+	* sendlib.c: Pass an "--" argument to sendmail
+	before the address arguments, so addresses with a
+	leading dash don't lead to problems. (From Liviu.)
+
+	* sendlib.c, rfc822.c, rfc1524.c, parse.c, mx.c,
+	main.c, lib.c, keymap.c, hash.c, handler.c,
+	edit.c, curs_lib.c, alias.c: Replacing a bunch of
+	free() and malloc() calls by safe_free() and
+	safe_malloc().  (From Liviu.)
+
+Sat Aug 15 18:27:45 1998  Thomas Roessler  <roessler@guug.de>
+
+	* imap.c: read() can't read buffers larger than
+	SSIZE_MAX.
+
+	* hook.c: [patch-0.94.3i.tlr.empty_hook.1] Ignore
+	empty hooks instead of segfaulting.
+
+	* protos.h, init.c, Attic/history.h:
+	[patch-0.94.3i.tlr.history.1] Adding history class
+	support.
+
+	* Attic/history.c: [patch-0.94.3i.tlr.history.1]
+	Adding history class support.
+
+	* enter.c, TODO, Makefile.in:
+	[patch-0.94.3i.tlr.history.1] Adding history class
+	support.
+
+	* sendlib.c:
+	[patch-0.94.3i.tlr.attach_msg_fmt.1-2] When
+	generating a message/rfc822 type attachment, parse
+	its header so that the attachment format routines
+	can properly display the default description.
+
+	* init.h: Change attach_format's default to limit
+	the attachment description's length.
+
+Thu Aug 13 22:09:16 1998  Thomas Roessler  <roessler@guug.de>
+
+	* pgppubring.c: Fixing another memory leak in the
+	pubring parser.
+
+	* recvattach.c, Attic/BUGS:
+	[patch-0.94.3i.tlr.attach_msg_fmt.1] When parsing
+	the "%d" format option in the attachment format,
+	use the message format as a fall-back if no
+	explicit description is provided.  This fixes the
+	following bug:
+
+	  set mime_forward. Forward any mesage. The
+	  compose menu will show the description as
+	  "Forwarded message from ...." which is fine.
+	  Pressing 'd' to edit the description brings up
+	  the above string for editing.
+
+	  Now hit Enter on the message/rfc822 attachment
+	  to view it. Quit out of the pager.
+
+	  The description field has now changed to the
+	  Subject: of the forwarded message. Pressing 'd'
+	  still brings up the 'Forwarded message from....'
+	  string.
+
+	(Noted by Vikas.)
+
+	* doc/manual.txt, doc/manual.sgml, sendlib.c,
+	mutt.h, init.h: [patch-0.94.3i.tlr.write_bcc.1]
+	This patch adds an option $write_bcc which
+	controls whether the Bcc header is written out or
+	not.  This can be used to work around broken MTA's
+	(Exim seems to leave Bcc headers in).
+
+	The problem was noted independently by Peter
+	Radcliffe <pir@pir.net> and by Dave Holland
+	<dave@zenda.demon.co.uk> (Debian Bug #25687).
+
+	* pgppubring.c: [patch-0.94.3i.tlr.pubring_leak.1]
+	Fixing a memory leak. Bug noted by Liviu Daia.
+
+	* reldate.h: 0.94.3i.
+
+	* configure.in, configure, ChangeLog: Preparing
+	0.94.3i.
 
 	* compose.c: indentation cosmetics.
 
