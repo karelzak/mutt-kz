@@ -1009,6 +1009,7 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 	endwin ();
 	snprintf (buf, sizeof (buf), "%s -x %s", NONULL(Ispell), msg->content->filename);
 	mutt_system (buf);
+        mutt_update_encoding(msg->content);
 	break;
 
 
