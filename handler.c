@@ -1024,6 +1024,7 @@ void autoview_handler (BODY *a, STATE *s)
   char type[STRING];
   char command[LONG_STRING];
   char tempfile[_POSIX_PATH_MAX] = "";
+  char *fname;
   FILE *fpin = NULL;
   FILE *fpout = NULL;
   FILE *fperr = NULL;
@@ -1033,7 +1034,10 @@ void autoview_handler (BODY *a, STATE *s)
   snprintf (type, sizeof (type), "%s/%s", TYPE (a->type), a->subtype);
   rfc1524_mailcap_lookup (a, type, entry, M_AUTOVIEW);
 
-  rfc1524_expand_filename (entry->nametemplate, a->filename, tempfile, sizeof (tempfile));
+  fname = safe_strdup (a->filename);
+  mutt_sanitize_filename (fname);
+  rfc1524_expand_filename (entry->nametemplate, fname, tempfile, sizeof (tempfile));
+  FREE (&fname);
 
   if (entry->command)
   {
