@@ -397,36 +397,6 @@ static void imap_quote_string (char *dest, size_t slen, const char *src)
   *pt = 0;
 }
 
-static void imap_unquote_string (char *s)
-{
-  char *d = s;
-
-  if (*s == '\"')
-    s++;
-  else
-    return;
-
-  while (*s)
-  {
-    if (*s == '\"')
-    {
-      *d = '\0';
-      return;
-    }
-    if (*s == '\\')
-    {
-      s++;
-    }
-    if (*s)
-    {
-      *d = *s;
-      d++;
-      s++;
-    }
-  }
-  *d = '\0';
-}
-
 static int imap_read_bytes (FILE *fp, CONNECTION *conn, long bytes)
 {
   long pos;
@@ -2025,7 +1995,6 @@ int imap_check_mailbox (CONTEXT *ctx, int *index_hint)
   char seq[8];
   char buf[LONG_STRING];
   static time_t checktime=0;
-  int msgcount = ctx->msgcount;
 
   if (ImapCheckTime)
   {

@@ -64,7 +64,7 @@ int mutt_display_message (HEADER *cur)
 {
   char tempfile[_POSIX_PATH_MAX], buf[LONG_STRING];
   int rc = 0, builtin = 0;
-  int cmflags = M_CM_DECODE | M_CM_DISPLAY;
+  int cmflags = M_CM_DECODE | M_CM_DISPLAY | M_CM_CHARCONV;
   FILE *fpout;
 
   snprintf (buf, sizeof (buf), "%s/%s", TYPE (cur->content),
@@ -219,7 +219,7 @@ void mutt_pipe_message_to_state (HEADER *h, STATE *s)
   if (option (OPTPIPEDECODE))
     mutt_parse_mime_message (Context, h);
   mutt_copy_message (s->fpout, Context, h,
-		     option (OPTPIPEDECODE) ? M_CM_DECODE : 0,
+		     option (OPTPIPEDECODE) ? M_CM_DECODE | M_CM_CHARCONV: 0,
 		     option (OPTPIPEDECODE) ? CH_FROM | CH_WEED | CH_DECODE | CH_REORDER : CH_FROM);
 }
 
@@ -463,7 +463,7 @@ static void set_copy_flags(HEADER *hdr, int decode, int decrypt, int *cmflags, i
   if(decode)
   {
     *chflags = CH_XMIT | CH_MIME | CH_TXTPLAIN;
-    *cmflags = M_CM_DECODE;
+    *cmflags = M_CM_DECODE | M_CM_CHARCONV;
   }
 
 }
@@ -636,7 +636,7 @@ static void print_msg (FILE *fp, CONTEXT *ctx, HEADER *h)
 
 
   mutt_parse_mime_message (ctx, h);
-  mutt_copy_message (fp, ctx, h, M_CM_DECODE, CH_WEED | CH_DECODE | CH_REORDER);
+  mutt_copy_message (fp, ctx, h, M_CM_DECODE | M_CM_CHARCONV, CH_WEED | CH_DECODE | CH_REORDER);
 }
 
 void mutt_print_message (HEADER *h)

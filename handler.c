@@ -82,12 +82,15 @@ void mutt_decode_xbit (STATE *s, BODY *b, int istext)
     CHARSET_MAP *map = NULL;
     CHARSET *chs = NULL;
     char *charset = mutt_get_parameter("charset", b->parameter);
-    int is_utf8;
+    int is_utf8 = 0;
 
-    if((is_utf8 = (mutt_is_utf8(charset) && !mutt_is_utf8(Charset))))
-      chs = mutt_get_charset(Charset);
-    else
-      map = mutt_get_translation(charset, Charset);
+    if (s->flags & M_CHARCONV)
+    {
+      if((is_utf8 = (mutt_is_utf8(charset) && !mutt_is_utf8(Charset))))
+	chs = mutt_get_charset(Charset);
+      else
+	map = mutt_get_translation(charset, Charset);
+    }
 
     state_set_prefix(s);
     
@@ -138,7 +141,7 @@ void mutt_decode_quoted (STATE *s, BODY *b, int istext)
   CHARSET *chs = NULL;
   CHARSET_MAP *map = NULL;
   
-  if(istext)
+  if(istext && (s->flags & M_CHARCONV))
   {
     if((is_utf8 = (mutt_is_utf8(charset) && !mutt_is_utf8(Charset))))
       chs = mutt_get_charset(Charset);
@@ -220,7 +223,7 @@ void mutt_decode_base64 (STATE *s, BODY *b, int istext)
   CHARSET *chs = NULL;
   int is_utf8 = 0;
 
-  if(istext)
+  if(istext && (s->flags & M_CHARCONV))
   {
     if((is_utf8 = (mutt_is_utf8(charset) && !mutt_is_utf8(Charset))))
       chs = mutt_get_charset(Charset);
@@ -306,10 +309,13 @@ void mutt_decode_uuencoded (STATE *s, BODY *b, int istext)
   int is_utf8 = 0;
   long len = b->length;
   
-  if(istext && (is_utf8 = (mutt_is_utf8(charset) && !mutt_is_utf8(Charset))))
-    chs = mutt_get_charset(Charset);
-  else
-    map = mutt_get_translation(charset, Charset);
+  if(istext && (s->flags & M_CHARCONV))
+  {
+    if ((is_utf8 = (mutt_is_utf8(charset) && !mutt_is_utf8(Charset))))
+      chs = mutt_get_charset(Charset);
+    else
+      map = mutt_get_translation(charset, Charset);
+  }
 
   if(istext)
     state_set_prefix(s);

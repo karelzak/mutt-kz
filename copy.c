@@ -404,6 +404,7 @@ static int count_delete_lines (FILE *fp, BODY *b, long *length, size_t datelen)
  	M_CM_DISPLAY	displaying output to the user
 	M_CM_UPDATE	update structures in memory after syncing
 	M_CM_DECODE_PGP	used for decoding PGP messages
+        M_CM_CHARCONV	perform character set conversion
    chflags	flags to mutt_copy_header()
  */
 
@@ -498,6 +499,8 @@ _mutt_copy_message (FILE *fpout, FILE *fpin, HEADER *hdr, BODY *body,
       s.flags |= M_DISPLAY;
     if (flags & M_CM_WEED)
       s.flags |= M_WEED;
+    if (flags & M_CM_CHARCONV)
+      s.flags |= M_CHARCONV;
 
 #ifdef _PGPPATH
     if (flags & M_CM_VERIFY)

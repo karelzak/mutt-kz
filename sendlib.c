@@ -991,7 +991,7 @@ BODY *mutt_make_message_attach (CONTEXT *ctx, HEADER *hdr, int attach_msg)
   if (!attach_msg && option (OPTMIMEFORWDECODE))
   {
     chflags |= CH_MIME | CH_TXTPLAIN;
-    cmflags = M_CM_DECODE;
+    cmflags = M_CM_DECODE | M_CM_CHARCONV;
 #ifdef _PGPPATH
     pgp &= ~PGPENCRYPT;
 #endif
@@ -1010,7 +1010,7 @@ BODY *mutt_make_message_attach (CONTEXT *ctx, HEADER *hdr, int attach_msg)
     else if(mutt_is_application_pgp(hdr->content) & PGPENCRYPT)
     {
       chflags |= CH_MIME | CH_TXTPLAIN;
-      cmflags = M_CM_DECODE;
+      cmflags = M_CM_DECODE | M_CM_CHARCONV;
       pgp &= ~PGPENCRYPT;
     }
   }
