@@ -149,14 +149,16 @@ static pid_t gpg_invoke_list_keys(struct pgp_vinfo *pgp,
 #endif
 
 
-  keylist = safe_strdup(uids);
-  for(cp = strtok(keylist, " "); cp ; cp = strtok(NULL, " "))
+  if ((keylist = safe_strdup(uids)) != NULL)
   {
-    snprintf(tmpcmd, sizeof(tmpcmd), "%s %s",
-	     cmd, cp);
-    strcpy(cmd, tmpcmd);
+    for(cp = strtok(keylist, " "); cp ; cp = strtok(NULL, " "))
+    {
+      snprintf(tmpcmd, sizeof(tmpcmd), "%s %s",
+	       cmd, cp);
+      strcpy(cmd, tmpcmd);
+    }
+    safe_free((void **) &keylist);
   }
-  safe_free((void **) &keylist);
   return mutt_create_filter_fd(cmd, pgpin, pgpout, pgperr,
 			       pgpinfd, pgpoutfd, pgperrfd);
 }

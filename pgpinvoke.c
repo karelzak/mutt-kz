@@ -291,15 +291,16 @@ pid_t pgp_v3_invoke_encrypt(struct pgp_vinfo *pgp,
   
   FREE(&pubring); FREE(&secring); FREE(&binary); FREE(&_fname);
   
-  keylist = safe_strdup(uids);
-  
-  for(cp = strtok(keylist, " "); cp ; cp = strtok(NULL, " "))
+  if ((keylist = safe_strdup(uids)) != NULL)
   {
-    snprintf(tmpcmd, sizeof(tmpcmd), "%s -r %s", 
-	     cmd, cp);
-    strcpy(cmd, tmpcmd);
+    for(cp = strtok(keylist, " "); cp ; cp = strtok(NULL, " "))
+    {
+      snprintf(tmpcmd, sizeof(tmpcmd), "%s -r %s", 
+	       cmd, cp);
+      strcpy(cmd, tmpcmd);
+    }
+    safe_free((void **) &keylist);
   }
-  safe_free((void **) &keylist);
   
   return mutt_create_filter_fd(cmd, pgpin, pgpout, pgperr, 
 			       pgpinfd, pgpoutfd, pgperrfd);
@@ -613,14 +614,16 @@ pid_t pgp_gpg_invoke_encrypt(struct pgp_vinfo *pgp,
 	   PgpSignAs? "-u " : "",
 	   PgpSignAs? PgpSignAs : "" );
   
-  keylist = safe_strdup(uids);
-  for(cp = strtok(keylist, " "); cp ; cp = strtok(NULL, " "))
+  if ((keylist = safe_strdup(uids)) != NULL)
   {
-    snprintf(tmpcmd, sizeof(tmpcmd), "%s -r %s",
-	     cmd, cp);
-    strcpy(cmd, tmpcmd);
+    for(cp = strtok(keylist, " "); cp ; cp = strtok(NULL, " "))
+    {
+      snprintf(tmpcmd, sizeof(tmpcmd), "%s -r %s",
+	       cmd, cp);
+      strcpy(cmd, tmpcmd);
+    }
+    safe_free((void **) &keylist);
   }
-  safe_free((void **) &keylist);
 
   snprintf(tmpcmd, sizeof(tmpcmd), "%s %s", cmd, _fname);
   strcpy(cmd, tmpcmd);
