@@ -1130,7 +1130,7 @@ main_loop:
       /* postpone the message until later. */
       if (msg->content->next)
 	msg->content = mutt_make_multipart (msg->content);
-      if (mutt_write_fcc (NONULL (Postponed), msg, (cur && (flags & SENDREPLY)) ? cur->env->message_id : NULL, 1) < 0)
+      if (!Postponed || mutt_write_fcc (Postponed, msg, (cur && (flags & SENDREPLY)) ? cur->env->message_id : NULL, 1) < 0)
       {
 	msg->content = remove_multipart (msg->content);
 	goto main_loop;
