@@ -34,3 +34,6 @@
   moved to the cur/ subdirectory) by one of the mutts
   can't be read from the other one.
 
+- rfc1524_expand_filename() doesn't work as expected, as
+  it doesn't honor $tmpdir under some conditions if
+  matching nametemplates exist.

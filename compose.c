@@ -664,11 +664,16 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 	   }
 	  }
 	}
+        {
+	  int numtag = 0;
 
-	if (idxlen == idxmax)
+	  if (op == OP_COMPOSE_ATTACH_MESSAGE)
+	    numtag = Context->tagged;
+	  if (idxlen + numtag >= idxmax)
 	{
-	  safe_realloc ((void **) &idx, sizeof (ATTACHPTR *) * (idxmax += 5));
+	    safe_realloc ((void **) &idx, sizeof (ATTACHPTR *) * (idxmax += 5 + numtag));
 	  menu->data = idx;
+	}
 	}
 
 	if (op == OP_COMPOSE_ATTACH_FILE)
