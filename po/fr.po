@@ -5,9 +5,9 @@
 # , fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mutt 0.95.6i\n"
+"Project-Id-Version: Mutt 0.95.7i\n"
 "POT-Creation-Date: 1999-08-04 22:07+0200\n"
-"PO-Revision-Date: 1999-06-02 01:39+0200\n"
+"PO-Revision-Date: 1999-08-19 21:29+0200\n"
 "Last-Translator: Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre "
 "<vincent@vinc17.org>\n"
 "Language-Team: mutt-dev <mutt-dev@mutt.org>\n"
@@ -81,7 +81,7 @@ msgstr "L'entrée compose du fichier mailcap nécessite %%s"
 #: curs_lib.c:323
 #, fuzzy, c-format
 msgid "Error running \"%s\"!"
-msgstr "Erreur de décodage de l'adresse !"
+msgstr "Erreur en exécutant \"%s\" !"
 
 #: attach.c:142
 msgid "Failure to open file to parse headers."
@@ -603,7 +603,7 @@ msgstr "Aucune boîte aux lettres n'est ouverte."
 #: curs_main.c:51
 #, fuzzy
 msgid "There are no messages."
-msgstr "Cette discussion contient des messages non-lus."
+msgstr "Il n'y a pas de messages."
 
 #: curs_main.c:52 mx.c:992 pager.c:55 recvattach.c:47
 msgid "Mailbox is read-only."
@@ -613,7 +613,7 @@ msgstr "La boîte aux lettres est en lecture seule."
 #: curs_main.c:53 pager.c:56
 #, fuzzy
 msgid "Function not permitted in attach-message mode."
-msgstr "%c : non supporté dans ce mode"
+msgstr "Fonction non autorisée dans le mode pièce jointe."
 
 #: curs_main.c:220
 msgid "Cannot toggle write on a readonly mailbox!"
@@ -1112,7 +1112,7 @@ msgstr "Récupération du message..."
 #: imap.c:1736
 #, fuzzy
 msgid "Sending CREATE command ..."
-msgstr "Envoi de la commande APPEND ..."
+msgstr "Envoi de la commande CREATE ..."
 
 #: imap.c:1741
 msgid "Sending APPEND command ..."
@@ -2418,7 +2418,7 @@ msgstr "La boîte aux lettres est protégée contre l'écriture. %s"
 #: pager.c:54
 #, fuzzy
 msgid "Not available in this menu."
-msgstr "Nouveau(x) message(s) dans cette boîte aux lettres."
+msgstr "Non disponible dans ce menu."
 
 #: pager.c:1373
 msgid "PrevPg"
@@ -3166,7 +3166,7 @@ msgstr "Message envoyé."
 
 #: send.c:1325
 msgid "Sending in background."
-msgstr ""
+msgstr "Envoi en tâche de fond."
 
 #: sendlib.c:481
 msgid "No boundary parameter found! [report this error]"
@@ -3188,17 +3188,17 @@ msgstr "Impossible d'ouvrir %s"
 #: sendlib.c:1682
 #, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s)."
-msgstr "Erreur en envoyant le message, fils terminé avec le code %d (%s).\n"
+msgstr "Erreur en envoyant le message, fils terminé avec le code %d (%s)."
 
 #: sendlib.c:1688
 msgid "Output of the delivery process"
-msgstr ""
+msgstr "Sortie du processus de livraison"
 
 # , c-format
 #: signal.c:39
 #, fuzzy, c-format
 msgid "%s...  Exiting.\n"
-msgstr "Erreur %s... On quitte.\n"
+msgstr "%s... On quitte.\n"
 
 # , c-format
 #: signal.c:42
