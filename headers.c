@@ -141,6 +141,7 @@ void mutt_edit_headers (const char *editor,
   mutt_free_envelope (&msg->env);
   msg->env = n;
 
+  msg->env->from = mutt_expand_aliases (msg->env->from);
   msg->env->to = mutt_expand_aliases (msg->env->to);
   msg->env->cc = mutt_expand_aliases (msg->env->cc);
   msg->env->bcc = mutt_expand_aliases (msg->env->bcc);
