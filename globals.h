@@ -45,7 +45,6 @@ WHERE char *ImapUser INITVAL (NULL);
 WHERE char *ImapPass INITVAL (NULL);
 WHERE short ImapCheckTime;
 #endif
-WHERE char *InReplyTo;
 WHERE char *Inbox;
 WHERE char *Ispell;
 WHERE char *Locale;
