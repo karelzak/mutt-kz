@@ -226,13 +226,15 @@ int imap_auth_gss (IMAP_DATA* idata, const char* user)
   mutt_socket_write (idata->conn, buf1);
 
   /* Joy of victory or agony of defeat? */
-  if (mutt_socket_read_line_d (buf1, GSS_BUFSIZE, idata->conn) < 0)
-  {
-    dprint (1, (debugfile, "Error receiving server response.\n"));
-
-    mutt_socket_write(idata->conn, "*\r\n");
-    return -1;
-  }
+  do {
+    if (mutt_socket_read_line_d (buf1, GSS_BUFSIZE, idata->conn) < 0)
+    {
+      dprint (1, (debugfile, "Error receiving server response.\n"));
+      mutt_socket_write(idata->conn, "*\r\n");
+      return -1;
+    }
+  } while ((mutt_strncmp (buf1, seq, SEQLEN) != 0));
+ 
   if (imap_code (buf1))
   {
     /* flush the security context */
