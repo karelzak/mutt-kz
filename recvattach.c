@@ -238,34 +238,7 @@ const char *mutt_attach_fmt (char *dest,
 
 void attach_entry (char *b, size_t blen, MUTTMENU *menu, int num)
 {
-#if 1
   mutt_FormatString (b, blen, NONULL (AttachFormat), mutt_attach_fmt, (unsigned long) (((ATTACHPTR **)menu->data)[num]), 0);
-#else
-  char t[SHORT_STRING];
-  char s[SHORT_STRING];
-  char size[SHORT_STRING];
-  ATTACHPTR **idx = (ATTACHPTR **) menu->data;
-  BODY *m;
-
-  m = idx[num]->content;
-  s[0] = 0;
-  if (m->type == TYPEMESSAGE && (!strcasecmp ("rfc822", m->subtype) ||
-      !strcasecmp ("news", m->subtype)) && MsgFmt[0])
-    _mutt_make_string (s, sizeof (s), MsgFmt, NULL, m->hdr,
-		       M_FORMAT_FORCESUBJ | M_FORMAT_MAKEPRINT);
-
-  mutt_pretty_size (size, sizeof (size), m->length);
-  snprintf (t, sizeof (t), "[%.7s/%.10s, %.6s, %s]",
-	    TYPE (m->type), m->subtype, ENCODING (m->encoding), size);
-  snprintf (b, blen, " %c%c %2d %-34.34s %s%s",
-	    m->deleted ? 'D' : ' ',
-	    m->tagged ? '*' : ' ',
-	    num + 1,
-	    t,
-	    idx[num]->tree ? idx[num]->tree : "",
-	    s[0] ? s : (m->description ? m->description :
-			(m->filename ? m->filename : "<no description>")));
-#endif
 }
 
 int mutt_tag_attach (MUTTMENU *menu, int n)
