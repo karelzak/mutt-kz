@@ -246,6 +246,7 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
   char type[STRING];
   char command[STRING];
   char descrip[STRING];
+  char *fname;
   rfc1524_entry *entry = NULL;
   int rc = -1;
 
@@ -281,7 +282,15 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
     }
     strfcpy (command, entry->command, sizeof (command));
     
-    if (rfc1524_expand_filename (entry->nametemplate, a->filename,
+    if (fp)
+    {
+      fname = safe_strdup (a->filename);
+      mutt_sanitize_filename (fname);
+    }
+    else
+      fname = a->filename;
+
+    if (rfc1524_expand_filename (entry->nametemplate, fname,
 				 tempfile, sizeof (tempfile)))
     {
       if (fp == NULL)
@@ -303,12 +312,11 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
     }
     else if (fp == NULL) /* send case */
       strfcpy (tempfile, a->filename, sizeof (tempfile));
-
-    mutt_sanitize_filename(tempfile);
     
     if (fp)
     {
       /* recv case: we need to save the attachment to a file */
+      FREE (&fname);
       if (mutt_save_attachment (fp, a, tempfile, 0, NULL) == -1)
 	goto return_error;
     }
