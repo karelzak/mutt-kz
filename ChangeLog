@@ -1,3 +1,85 @@
+---
+
+Wed Mar  3 19:37:21 1999  Thomas Roessler  <roessler@guug.de>
+
+	* curs_main.c: Vikas' resort_index.3.
+
+	* sendlib.c, imap.c, from.c, curs_main.c:
+	from.c: Backport from unstable.
+	others: latest imap related patches.
+
+Tue Mar  2 22:13:30 1999  Thomas Roessler  <roessler@guug.de>
+
+	* parse.c: Latest IMAP-related fix from Brandon Long.
+
+	* thread.c: Properly handle messages which have themselves
+	in "References".
+
+Sun Feb 28 08:30:19 1999  Thomas Roessler  <roessler@guug.de>
+
+	* rfc822.c: Fix a memory leak. From Liviu.
+
+	* rfc1524.c, mutt.h, lib.c, attach.c: Fix a $TMPDIR race
+	condition.
+
+Thu Feb 25 06:58:01 1999  Thomas Roessler  <roessler@guug.de>
+
+	* from.c: parse some more from_ lines.  Before, there were
+	problems with cases like this:
+
+	>From <@x400host:"/G=Bob/S=Allinson/CN=Has embedded spaces/OU=X400HOST/
+	>OU=xxxx/O=xxx/PRMD=xxxxx/ADMD=XXXXXX/C=GB/"@x400host>
+	>Tue Feb 23 09:44:52 1999
+
+	Problem noted by johnm@sirius3.demon.co.uk
+	
+	[unstable; back-ported to stable on Mar 3.]
+
+Tue Feb 23 20:38:49 1999  Thomas Roessler  <roessler@guug.de>
+
+	* imap.c: fix a segfault. From Brandon.
+
+Mon Feb 22 12:37:43 1999  Thomas Roessler  <roessler@guug.de>
+
+	* curs_main.c: Vikas' latest collapse fix.
+
+	* mbox.c, imap.c: Avoid reading past the end of actual
+	headers when reopening folders. From Daniel Eisenbud.
+
+	* pgp.c: Don't override base64 by quoted-printable.
+
+Fri Feb 19 07:38:17 1999  Thomas Roessler  <roessler@guug.de>
+
+	* sendlib.c: Don't qp-encode multiparts. ugh.
+
+Thu Feb 18 23:14:36 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/uk.po, po/ru.po, po/pl.po, po/nl.po, po/it.po,
+	po/fr.po, po/es.po, po/de.po, po/cs.po: Updated
+	translations.
+
+	* contrib/sample.mailcap: Fix the text/html entry.
+
+Wed Feb 17 15:48:05 1999  Thomas Roessler  <roessler@guug.de>
+
+	* copy.h: Some of the M_CM flags erroneously had been
+	defined to have the same value.  _Very_ bad.
+
+	* contrib/sample.mailcap: Correct the netscape text/html entry.
+
+Fri Feb 12 11:23:17 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/uk.po, po/ru.po, po/pl.po, po/nl.po, po/it.po, po/fr.po, po/es.po, po/de.po, po/cs.po, reldate.h, ChangeLog:
+	post-release commit for 0.95.3.
+
+	* po/nl.po, reldate.h, ChangeLog: post-release commit for 0.96.
+
+Thu Feb 11 22:52:03 1999  Thomas Roessler  <roessler@guug.de>
+
+	* imap.c, VERSION: another imap-related fix.
+
+	* pattern.c: another signal fix from liviu.
+
 Thu Feb 11 22:52:03 1999  Thomas Roessler  <roessler@guug.de>
 
 	* imap.c, VERSION: another imap-related fix.
