@@ -92,7 +92,7 @@ When used with -f, causes Mutt not to start if there are no messages in the
 mailbox.
 .IP "-Z"
 Causes Mutt to open the first mailbox specified by the \fImailboxes\fP
-command which contains new mail.
+command which contains new mail, or exit immediately if none.
 .SH ENVIRONMENT
 .PP
 .IP "EDITOR"
@@ -131,7 +131,7 @@ Temporary files created by Mutt.
 .IP "~/.mailcap"
 User definition for handling non-text MIME types.
 .IP "/etc/mailcap"
-System definition for handing non-text MIME types.
+System definition for handling non-text MIME types.
 .IP "~/.mime.types"
 User's personal mapping between MIME types and file extensions.
 .IP "/etc/mime.types"
