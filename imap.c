@@ -83,6 +83,23 @@ typedef struct
 static CONNECTION *Connections = NULL;
 static int NumConnections = 0;
 
+/* Linked list to hold header information while downloading message
+ * headers
+ */
+typedef struct imap_header_info
+{
+  unsigned int read : 1;
+  unsigned int old : 1;
+  unsigned int deleted : 1;
+  unsigned int flagged : 1;
+  unsigned int replied : 1;
+  unsigned int changed : 1;
+
+  time_t received;
+  long content_length;
+  struct imap_header_info *next;
+} IMAP_HEADER_INFO;
+
 /* simple read buffering to speed things up. */
 static int imap_readchar (CONNECTION *conn, char *c)
 {
@@ -216,7 +233,7 @@ static time_t imap_parse_date (char *s)
   return (mutt_mktime (&t, 0) + tz);
 }
 
-static int imap_parse_fetch (HEADER *h, char *s)
+static int imap_parse_fetch (IMAP_HEADER_INFO *h, char *s)
 {
   char tmp[SHORT_STRING];
   char *ptmp;
@@ -278,11 +295,11 @@ static int imap_parse_fetch (HEADER *h, char *s)
 	  while (isdigit (*s))
 	    *ptmp++ = *s++;
 	  *ptmp = 0;
-	  h->content->length += atoi (tmp);
+	  h->content_length += atoi (tmp);
 	}
 	else if (*s == ')')
 	  s++; /* end of request */
-	else
+	else if (*s)
 	{
 	  /* got something i don't understand */
 	  imap_error ("imap_parse_fetch()", s);
@@ -426,102 +443,168 @@ static int imap_handle_untagged (CONTEXT *ctx, char *s)
   return 0;
 }
 
-static int imap_read_header (CONTEXT *ctx, int msgno)
+/*
+ * Changed to read many headers instead of just one. It will return the
+ * msgno of the last message read. It will return a value other than
+ * msgend if mail comes in while downloading headers (in theory).
+ */
+static int imap_read_headers (CONTEXT *ctx, int msgbegin, int msgend)
 {
-  char buf[LONG_STRING];
+  char buf[LONG_STRING],fetchbuf[LONG_STRING];
   FILE *fp;
   char tempfile[_POSIX_PATH_MAX];
   char seq[8];
-  char *pc;
+  char *pc,*fpc,*hdr;
   char *pn;
+  long ploc;
   long bytes = 0;
+  int msgno,fetchlast;
+  IMAP_HEADER_INFO *h0,*h,*htemp;
 
-  ctx->hdrs[ctx->msgcount]->index = ctx->msgcount;
+  fetchlast = 0;
 
+  /*
+   * We now download all of the headers into one file. This should be
+   * faster on most systems.
+   */
   mutt_mktemp (tempfile);
   if (!(fp = safe_fopen (tempfile, "w+")))
   {
     return (-1);
   }
 
-  imap_make_sequence (seq, sizeof (seq), ctx);
-  snprintf (buf, sizeof (buf), "%s FETCH %d RFC822.HEADER\r\n", seq, msgno + 1);
-  imap_write (CTX_DATA->conn, buf);
-
-  do
+  h0=safe_malloc(sizeof(IMAP_HEADER_INFO));
+  h=h0;
+  for (msgno=msgbegin; msgno <= msgend ; msgno++)
   {
-    if (imap_read_line_d (buf, sizeof (buf), CTX_DATA->conn) < 0)
+    snprintf (buf, sizeof (buf), "Fetching message headers... [%d/%d]", 
+      msgno + 1, msgend + 1);
+    mutt_message (buf);
+
+    if (msgno + 1 > fetchlast)
     {
+      imap_make_sequence (seq, sizeof (seq), ctx);
+      /*
+       * Make one request for everything. This makes fetching headers an
+       * order of magnitude faster if you have a large mailbox.
+       *
+       * If we get more messages while doing this, we make another
+       * request for all the new messages.
+       */
+      snprintf (buf, sizeof (buf), "%s FETCH %d:%d (FLAGS INTERNALDATE RFC822.SIZE BODY.PEEK[HEADER.FIELDS (DATE FROM SUBJECT TO CC REFERENCES CONTENT-TYPE IN-REPLY-TO)])\r\n", seq, msgno + 1, msgend + 1);
+      imap_write (CTX_DATA->conn, buf);
+      fetchlast = msgend + 1;
+    }
+
+    do
+    {
+      if (imap_read_line_d (buf, sizeof (buf), CTX_DATA->conn) < 0)
+      {
+        return (-1);
+      }
+
+      if (buf[0] == '*')
+      {
+        pc = buf;
+        pc = imap_next_word (pc);
+        pc = imap_next_word (pc);
+        if (strncasecmp ("FETCH", pc, 5) == 0)
+        {
+          if (!(pc = strchr (pc, '(')))
+          {
+            imap_error ("imap_read_headers()", buf);
+            return (-1);
+          }
+          pc++;
+          fpc=fetchbuf;
+          while (*pc != '\0' && *pc != ')')
+          {
+            hdr=strstr(pc,"BODY");
+            strncpy(fpc,pc,hdr-pc);
+            fpc += hdr-pc;
+            *fpc = '\0';
+            pc=hdr;
+            /* get some number of bytes */
+            if (!(pc = strchr (pc, '{')))
+            {
+              imap_error ("imap_read_headers()", buf);
+              return (-1);
+            }
+            pc++;
+            pn = pc;
+            while (isdigit (*pc))
+              pc++;
+            *pc = 0;
+            bytes = atoi (pn);
+
+            imap_read_bytes (fp, CTX_DATA->conn, bytes);
+            if (imap_read_line_d (buf, sizeof (buf), CTX_DATA->conn) < 0)
+            {
+              return (-1);
+            }
+            pc = buf;
+          }
+        }
+        else if (imap_handle_untagged (ctx, buf) != 0)
+          return (-1);
+      }
+    }
+    while ((msgno + 1) >= fetchlast && strncmp (seq, buf, SEQLEN) != 0);
+
+    h->content_length = -bytes;
+    if (imap_parse_fetch (h, fetchbuf) == -1)
       return (-1);
-    }
 
-    if (buf[0] == '*')
+    /* subtract the header length; the total message size will be
+       added to this */
+
+    /* in case we get new mail while fetching the headers */
+    if (((IMAP_DATA *) ctx->data)->status == IMAP_NEW_MAIL)
     {
-      pc = buf;
-      pc = imap_next_word (pc);
-      pc = imap_next_word (pc);
-      if (strncasecmp ("FETCH", pc, 5) == 0)
-      {
-	if (!(pc = strchr (pc, '{')))
-	{
-	  imap_error ("imap_read_header()", buf);
-	  return (-1);
-	}
-	pc++;
-	pn = pc;
-	while (isdigit (*pc))
-	  pc++;
-	*pc = 0;
-	bytes = atoi (pn);
-
-	imap_read_bytes (fp, CTX_DATA->conn, bytes);
-      }
-      else if (imap_handle_untagged (ctx, buf) != 0)
-	  return (-1);
+      msgend = ((IMAP_DATA *) ctx->data)->newMailCount - 1;
+      while ((msgend + 1) > ctx->hdrmax)
+        mx_alloc_memory (ctx);
+      ((IMAP_DATA *) ctx->data)->status = 0;
     }
+
+    h->next=safe_malloc(sizeof(IMAP_HEADER_INFO));
+    h=h->next;
   }
-  while (strncmp (seq, buf, SEQLEN) != 0);
 
-  rewind (fp);
-  ctx->hdrs[msgno]->env = mutt_read_rfc822_header (fp, ctx->hdrs[msgno]);
+  rewind(fp);
+  h=h0;
 
-/* subtract the header length; the total message size will be added to this */
-  ctx->hdrs[msgno]->content->length = -bytes;
-
-  fclose (fp);
-  unlink (tempfile);
-
-  /* get the status of this message */
-  imap_make_sequence (seq, sizeof (seq), ctx);
-  snprintf (buf, sizeof (buf), "%s FETCH %d FAST\r\n", seq, msgno + 1);
-  imap_write (CTX_DATA->conn, buf);
-  do
+  /*
+   * Now that we have all the header information, we can tell mutt about
+   * it.
+   */
+  ploc=0;
+  for (msgno = msgbegin; msgno <= msgend;msgno++)
   {
-    if (imap_read_line_d (buf, sizeof (buf), CTX_DATA->conn) < 0)
-      break;
-    if (buf[0] == '*')
-    {
-      pc = buf;
-      pc = imap_next_word (pc);
-      pc = imap_next_word (pc);
-      if (strncasecmp ("FETCH", pc, 5) == 0)
-      {
-	if (!(pc = strchr (pc, '(')))
-	{
-	  imap_error ("imap_read_header()", buf);
-	  return (-1);
-	}
-	if (imap_parse_fetch (ctx->hdrs[msgno], pc + 1) != 0)
-	  return (-1);
-      }
-      else if (imap_handle_untagged (ctx, buf) != 0)
-	return (-1);
-    }
-  }
-  while (strncmp (seq, buf, SEQLEN) != 0)
-    ;
+    ctx->hdrs[ctx->msgcount] = mutt_new_header ();
+    ctx->hdrs[ctx->msgcount]->index = ctx->msgcount;
 
-  return 0;
+    ctx->hdrs[msgno]->env = mutt_read_rfc822_header (fp, ctx->hdrs[msgno]);
+    ploc=ftell(fp);
+    ctx->hdrs[msgno]->read = h->read;
+    ctx->hdrs[msgno]->old = h->old;
+    ctx->hdrs[msgno]->deleted = h->deleted;
+    ctx->hdrs[msgno]->flagged = h->flagged;
+    ctx->hdrs[msgno]->replied = h->replied;
+    ctx->hdrs[msgno]->changed = h->changed;
+    ctx->hdrs[msgno]->received = h->received;
+    ctx->hdrs[msgno]->content->length = h->content_length;
+
+    mx_update_context(ctx); /* increments ->msgcount */
+
+    htemp=h;
+    h=h->next;
+    safe_free((void **) &htemp);
+  }
+  fclose(fp);
+  unlink(tempfile);
+
+  return (msgend);
 }
 
 static int imap_exec (char *buf, size_t buflen,
@@ -546,7 +629,6 @@ static int imap_exec (char *buf, size_t buflen,
     /* read new mail messages */
 
     dprint (1, (debugfile, "imap_exec(): new mail detected\n"));
-    mutt_message ("Fetching headers for new mail...");
 
     CTX_DATA->status = 0;
 
@@ -554,23 +636,7 @@ static int imap_exec (char *buf, size_t buflen,
     while (count > ctx->hdrmax)
       mx_alloc_memory (ctx);
 
-    while (ctx->msgcount < count)
-    {
-      ctx->hdrs[ctx->msgcount] = mutt_new_header ();
-      imap_read_header (ctx, ctx->msgcount);
-      mx_update_context (ctx); /* incremements ->msgcount */
-      
-      /* check to make sure that new mail hasn't arrived in the middle of
-       * checking for new mail (sigh)
-       */
-      if (CTX_DATA->status == IMAP_NEW_MAIL)
-      {
-	count = CTX_DATA->newMailCount;
-	while (count > ctx->hdrmax)
-	  mx_alloc_memory (ctx);
-	CTX_DATA->status = 0;
-      }
-    }
+    count=imap_read_headers (ctx, ctx->msgcount, count - 1) + 1;
 
     mutt_clear_error ();
   }
@@ -602,32 +668,6 @@ static int imap_open_connection (CONTEXT *ctx, CONNECTION *conn)
   char pass[SHORT_STRING];
   char seq[16];
 
-  if (!ImapUser)
-  {
-    strfcpy (user, Username, sizeof (user));
-    if (mutt_get_field ("IMAP Username: ", user, sizeof (user), 0) != 0 ||
-        !user[0])
-    {
-      user[0] = 0;
-      return (-1);
-    }
-  }
-  else
-    strfcpy (user, ImapUser, sizeof (user));
-
-  if (!ImapPass)
-  {
-    pass[0]=0;
-    snprintf (buf, sizeof (buf), "Password for %s@%s: ", user, conn->server);
-    if (mutt_get_field (buf, pass, sizeof (pass), M_PASS) != 0 ||
-        !pass[0])
-    {
-      return (-1);
-    }
-  }
-  else
-    strfcpy (pass, ImapPass, sizeof (pass));
-
   memset (&sin, 0, sizeof (sin));
   sin.sin_port = htons (IMAP_PORT);
   sin.sin_family = AF_INET;
@@ -658,28 +698,56 @@ static int imap_open_connection (CONTEXT *ctx, CONNECTION *conn)
     return (-1);
   }
 
-  if (strncmp ("* OK", buf, 4) != 0)
+  if (strncmp ("* OK", buf, 4) == 0)
+  {
+    if (!ImapUser)
+    {
+      strfcpy (user, Username, sizeof (user));
+      if (mutt_get_field ("IMAP Username: ", user, sizeof (user), 0) != 0 ||
+	  !user[0])
+      {
+	user[0] = 0;
+	return (-1);
+      }
+    }
+    else
+      strfcpy (user, ImapUser, sizeof (user));
+
+    if (!ImapPass)
+    {
+      pass[0]=0;
+      snprintf (buf, sizeof (buf), "Password for %s@%s: ", user, conn->server);
+      if (mutt_get_field (buf, pass, sizeof (pass), M_PASS) != 0 ||
+	  !pass[0])
+      {
+	return (-1);
+      }
+    }
+    else
+      strfcpy (pass, ImapPass, sizeof (pass));
+
+    mutt_message ("Logging in...");
+    /* sequence numbers are currently context dependent, so just make one
+     * up for this first access to the server */
+    strcpy (seq, "l0000");
+    snprintf (buf, sizeof (buf), "%s LOGIN %s %s\r\n", seq, user, pass);
+    if (imap_exec (buf, sizeof (buf), ctx, seq, buf, 0) != 0)
+      {
+	imap_error ("imap_open_connection()", buf);
+	return (-1);
+      }
+    /* If they have a successful login, we may as well cache the user/password. */
+    if (!ImapUser)
+      ImapUser = safe_strdup (user);
+    if (!ImapPass)
+      ImapPass = safe_strdup (pass);
+  }
+  else if (strncmp ("* PREAUTH", buf, 9) != 0)
   {
     imap_error ("imap_open_connection()", buf);
     close (conn->fd);
     return (-1);
   }
-
-  mutt_message ("Logging in...");
-  /* sequence numbers are currently context dependent, so just make one
-   * up for this first access to the server */
-  strcpy (seq, "l0000");
-  snprintf (buf, sizeof (buf), "%s LOGIN %s %s\r\n", seq, user, pass);
-  if (imap_exec (buf, sizeof (buf), ctx, seq, buf, 0) != 0)
-  {
-    imap_error ("imap_open_connection()", buf);
-    return (-1);
-  }
-  /* If they have a successful login, we may as well cache the user/password. */
-  if (!ImapUser)
-    ImapUser = safe_strdup (user);
-  if (!ImapPass)
-    ImapPass = safe_strdup (pass);
 
   return 0;
 }
@@ -756,32 +824,8 @@ int imap_open_mailbox (CONTEXT *ctx)
   ctx->hdrmax = count;
   ctx->hdrs = safe_malloc (count * sizeof (HEADER *));
   ctx->v2r = safe_malloc (count * sizeof (int));
-  for (ctx->msgcount = 0; ctx->msgcount < count; )
-  {
-    snprintf (buf, sizeof (buf), "Fetching message headers... [%d/%d]", 
-      ctx->msgcount + 1, count);
-    mutt_message (buf);
-    ctx->hdrs[ctx->msgcount] = mutt_new_header ();
-
-    /* `count' can get modified if new mail arrives while fetching the
-     * header for this message
-     */
-    if (imap_read_header (ctx, ctx->msgcount) != 0)
-    {
-      mx_fastclose_mailbox (ctx);
-      return (-1);
-    }
-    mx_update_context (ctx); /* increments ->msgcount */
-
-    /* in case we get new mail while fetching the headers */
-    if (CTX_DATA->status == IMAP_NEW_MAIL)
-    {
-      count = CTX_DATA->newMailCount;
-      while (count > ctx->hdrmax)
-	mx_alloc_memory (ctx);
-      CTX_DATA->status = 0;
-    }
-  }
+  ctx->msgcount = 0;
+  count=imap_read_headers (ctx, 0, count - 1) + 1;
 
   return 0;
 }
@@ -866,6 +910,7 @@ int imap_fetch_message (MESSAGE *msg, CONTEXT *ctx, int msgno)
   char *pc;
   char *pn;
   long bytes;
+  int pos,len,onbody=0;
   IMAP_CACHE *cache;
 
   /* see if we already have the message in our cache */
@@ -931,7 +976,25 @@ int imap_fetch_message (MESSAGE *msg, CONTEXT *ctx, int msgno)
 	  pc++;
 	*pc = 0;
 	bytes = atoi (pn);
-	imap_read_bytes (msg->fp, CTX_DATA->conn, bytes);
+	for (pos = 0; pos < bytes; )
+	{
+	  len = imap_read_line (buf, sizeof (buf), CTX_DATA->conn);
+	  if (len < 0)
+	    return (-1);
+	  pos += len;
+	  fputs (buf, msg->fp);
+	  fputs ("\n", msg->fp);
+	  if (! onbody && len == 2)
+	  {
+	    /*
+	     * This is the first time we really know how long the full
+	     * header is. We must set it now, or mutt will not display
+	     * the message properly
+	     */
+	    ctx->hdrs[msgno]->content->offset=ftell(msg->fp);
+	    onbody=1;
+	  }
+	}
       }
       else if (imap_handle_untagged (ctx, buf) != 0)
 	return (-1);
