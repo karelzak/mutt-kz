@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.2\n"
-"POT-Creation-Date: 2000-05-09 17:15+0200\n"
+"POT-Creation-Date: 2000-06-19 18:47+0200\n"
 "PO-Revision-Date: 1999-12-20 20:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -22,7 +22,7 @@ msgstr "離開"
 msgid "Select"
 msgstr "選擇"
 
-#: addrbook.c:33 browser.c:44 compose.c:92 curs_main.c:376 imap/imap_ssl.c:361
+#: addrbook.c:33 browser.c:44 compose.c:92 curs_main.c:376 imap/imap_ssl.c:493
 #: pager.c:1482 pgpkey.c:449 postpone.c:40 query.c:48 recvattach.c:61
 msgid "Help"
 msgstr "求助"
@@ -307,7 +307,7 @@ msgstr "檢查 PGP 簽名?"
 msgid "Invoking PGP..."
 msgstr "啟動 PGP…"
 
-#: commands.c:114 mbox.c:731
+#: commands.c:114 mbox.c:735
 msgid "Could not create temporary file!"
 msgstr "無法建立暫存檔！"
 
@@ -1206,7 +1206,7 @@ msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "無法附加在這個伺服器上的 IMAP 信箱"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:809 imap/message.c:640 muttlib.c:984
+#: imap/imap.c:809 imap/message.c:640 muttlib.c:1049
 #, c-format
 msgid "Create %s?"
 msgstr "建立 %s？"
@@ -1275,48 +1275,75 @@ msgstr "不明的錯誤"
 msgid "[unable to calculate]"
 msgstr "%s：無法附帶檔案"
 
-#: imap/imap_ssl.c:324
+#: imap/imap_ssl.c:292
+#, fuzzy
+msgid "[invalid date]"
+msgstr "%s：無效的值"
+
+#: imap/imap_ssl.c:367
+msgid "Server certificate is not yet valid"
+msgstr ""
+
+#: imap/imap_ssl.c:374
+msgid "Server certificate has expired"
+msgstr ""
+
+#: imap/imap_ssl.c:447
 msgid "This certificate belongs to:"
 msgstr ""
 
-#: imap/imap_ssl.c:333
+#: imap/imap_ssl.c:457
 msgid "This certificate was issued by:"
 msgstr ""
 
-#: imap/imap_ssl.c:344
+#: imap/imap_ssl.c:467
+msgid "This certificate is valid"
+msgstr ""
+
+#: imap/imap_ssl.c:468
+#, c-format
+msgid "   from %s"
+msgstr ""
+
+#: imap/imap_ssl.c:470
+#, c-format
+msgid "     to %s"
+msgstr ""
+
+#: imap/imap_ssl.c:476
 #, c-format
 msgid "Fingerprint: %s"
 msgstr ""
 
-#: imap/imap_ssl.c:346
+#: imap/imap_ssl.c:478
 msgid "SSL Certificate check"
 msgstr ""
 
-#: imap/imap_ssl.c:349
+#: imap/imap_ssl.c:481
 msgid "(r)eject, accept (o)nce, (a)ccept always"
 msgstr ""
 
-#: imap/imap_ssl.c:350
+#: imap/imap_ssl.c:482
 msgid "roa"
 msgstr ""
 
-#: imap/imap_ssl.c:354
+#: imap/imap_ssl.c:486
 msgid "(r)eject, accept (o)nce"
 msgstr ""
 
-#: imap/imap_ssl.c:355
+#: imap/imap_ssl.c:487
 msgid "ro"
 msgstr ""
 
-#: imap/imap_ssl.c:359 pgpkey.c:442
+#: imap/imap_ssl.c:491 pgpkey.c:442
 msgid "Exit  "
 msgstr "離開  "
 
-#: imap/imap_ssl.c:384
+#: imap/imap_ssl.c:516
 msgid "Warning: Couldn't save certificate"
 msgstr ""
 
-#: imap/imap_ssl.c:386
+#: imap/imap_ssl.c:518
 msgid "Certificate saved"
 msgstr ""
 
@@ -2459,23 +2486,23 @@ msgstr "圈選進入的郵筒"
 msgid "Mailbox is empty."
 msgstr "信箱內空無一物。"
 
-#: mbox.c:126 mbox.c:284
+#: mbox.c:129 mbox.c:287
 msgid "Reading %s... %d (%d%%)"
 msgstr "讀取 %s 中… %d (%d%%)"
 
-#: mbox.c:150 mbox.c:209
+#: mbox.c:153 mbox.c:212
 msgid "Mailbox is corrupt!"
 msgstr "信箱已損壞了！"
 
-#: mbox.c:657
+#: mbox.c:660
 msgid "Mailbox was corrupted!"
 msgstr "信箱已損壞!"
 
-#: mbox.c:693 mbox.c:937
+#: mbox.c:697 mbox.c:972
 msgid "Fatal error!  Could not reopen mailbox!"
 msgstr "嚴重錯誤！無法重新開啟信箱！"
 
-#: mbox.c:702
+#: mbox.c:706
 msgid "Unable to lock mailbox!"
 msgstr "無法鎖住信箱！"
 
@@ -2483,24 +2510,24 @@ msgstr "無法鎖住信箱！"
 #. * messages were found to be changed or deleted.  This should
 #. * never happen, is we presume it is a bug in mutt.
 #.
-#: mbox.c:747
+#: mbox.c:752
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr "同步：信箱已被修改，但沒有被修改過的信件！（請回報這個錯誤）"
 
-#: mbox.c:776
+#: mbox.c:782
 msgid "Writing messages... %d (%d%%)"
 msgstr "寫入信件中… %d (%d%%)"
 
-#: mbox.c:922
+#: mbox.c:956
 #, c-format
 msgid "Write failed!  Saved partial mailbox to %s"
 msgstr "寫入失敗！已把部分的信箱儲存至 %s"
 
-#: mbox.c:972
+#: mbox.c:1022
 msgid "Could not reopen mailbox!"
 msgstr "無法重開信箱！"
 
-#: mbox.c:1010
+#: mbox.c:1060
 msgid "Reopening mailbox..."
 msgstr "重新開啟信箱中…"
 
@@ -2586,28 +2613,28 @@ msgstr "不支援標記功\能。"
 msgid "Reading %s... %d"
 msgstr "讀取 %s… %d"
 
-#: muttlib.c:657
+#: muttlib.c:722
 msgid "File is a directory, save under it?"
 msgstr "檔案是一個目錄, 儲存在它下面 ?"
 
-#: muttlib.c:662
+#: muttlib.c:727
 msgid "File under directory: "
 msgstr "在目錄底下的檔案："
 
-#: muttlib.c:674
+#: muttlib.c:739
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
 msgstr "檔案已經存在, (o)覆蓋\, (a)附加, 或是 (c)取消 ?"
 
-#: muttlib.c:674
+#: muttlib.c:739
 msgid "oac"
 msgstr ""
 
-#: muttlib.c:960
+#: muttlib.c:1025
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s 不是信箱！"
 
-#: muttlib.c:966
+#: muttlib.c:1031
 #, c-format
 msgid "Append messages to %s?"
 msgstr "附加信件到 %s ?"
@@ -2713,7 +2740,7 @@ msgstr "信箱被標記成為無法寫入的. %s"
 msgid "%d kept."
 msgstr "%d 保留了。"
 
-#: mx.c:1363
+#: mx.c:1361
 #, fuzzy
 msgid "Can't write message"
 msgstr "編輯信件內容"
