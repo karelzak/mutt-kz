@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.95.7\n"
-"POT-Creation-Date: 1999-08-31 21:26+0200\n"
-"PO-Revision-Date: 1999-08-09 22:38+0200\n"
+"Project-Id-Version: 1.0pre2i\n"
+"POT-Creation-Date: 1999-09-02 01:31+0200\n"
+"PO-Revision-Date: 1999-09-02 01:38+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -2343,7 +2343,6 @@ msgstr ""
 
 #
 #: main.c:42
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-9 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
@@ -2353,13 +2352,12 @@ msgstr ""
 "Copyright (C) 1996-8 Michael R. Elkins a dal¹í.\n"
 "Mutt je roz¹iøován BEZ JAKÉKOLI ZÁRUKY; dal¹í informace získáte pøíkazem\n"
 "`mutt -vv'.\n"
-"Mutt je volné programové vybavení. Roz¹iøování tohoto programu je\n"
-"vítáno, musíte ov¹em dodr¾et urèitá pravidla; dal¹í informace\n"
-"získáte pøíkazem `mutt -vv'.\n"
+"Mutt je volné programové vybavení. Roz¹iøování tohoto programu je vítáno,\n"
+"musíte ov¹em dodr¾et urèitá pravidla; dal¹í informace získáte pøíkazem\n"
+"`mutt -vv'.\n"
 
 #
 #: main.c:48
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
@@ -2492,13 +2490,13 @@ msgstr ""
 "  -p\t\tvrátí se k odlo¾ené zprávì\n"
 "  -R\t\totevøe schránku pouze pro ètení\n"
 "  -s <vìc>\tspecifikuje vìc (pokud obsahuje mezery,\n"
-"              \tpak musí být v uvozovkách)\n"
+"              \ttak musí být v uvozovkách)\n"
 "  -v\t\tzobrazí oznaèení verze a parametry zadané pøi pøekladu\n"
 "  -x\t\tnapodobí odesílací re¾im programu mailx\n"
 "  -y\t\tzvolí schránku uvedenou v seznamu `mailboxes'\n"
 "  -z\t\tpokud ve schránce není po¹ta, pak okam¾itì skonèí\n"
-"  -Z\t\totevøe nejdøíve slo¾ku s novou po¹tou, pokud nová po¹ta\n"
-"    \t\tnení, pak skonèí\n"
+"  -Z\t\totevøe první slo¾ku s novou po¹tou; pokud není ¾ádná nová po¹ta,\n"
+"    \t\ttak okam¾itì skonèí\n"
 "  -h\t\tvypí¹e tuto nápovìdu"
 
 #
