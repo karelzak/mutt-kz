@@ -452,7 +452,7 @@ static void init_menu (struct browser_state *state, MUTTMENU *menu, char *title,
     strfcpy (path, LastDir, sizeof (path));
     mutt_pretty_mailbox (path);
     snprintf (title, titlelen, _("Directory [%s], File mask: %s"),
-	      path, Mask.pattern);
+	      path, NONULL (Mask.pattern));
   }
   menu->redraw = REDRAW_FULL;
 }
