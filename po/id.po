@@ -1,12 +1,12 @@
 # Ronny Haryanto <giant@canada.com>, 1999.
 #
-# http://i18n.linux.or.id
+# http://www.linux.or.id
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.95.4i-1\n"
+"Project-Id-Version: 1.0pre1-1\n"
 "POT-Creation-Date: 1999-08-24 18:04+0200\n"
-"PO-Revision-Date: 1999-04-02 15:40-0600\n"
+"PO-Revision-Date: 1999-08-24 15:35-0500\n"
 "Last-Translator: Ronny Haryanto <giant@canada.com>\n"
 "Language-Team: Indonesia <id@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -1005,7 +1005,7 @@ msgstr "Mengambil headers surat-surat... [%d/%d]"
 #. Unable to fetch headers for lower versions
 #: imap.c:659
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr ""
+msgstr "Gagal mengambil header dari IMAP server versi ini."
 
 #: imap.c:851
 #, fuzzy, c-format
@@ -1014,7 +1014,7 @@ msgstr "Membuka kembali kotak surat..."
 
 #: imap.c:1203
 msgid "This IMAP server is ancient. Mutt does not work with it."
-msgstr ""
+msgstr "IMAP server ini sudah kuno. Mutt tidak dapat berkomunikasi."
 
 #: imap.c:1224
 msgid "IMAP Username: "
@@ -1045,7 +1045,7 @@ msgstr "Memilih %s..."
 #. * error if the mailbox did not exist.
 #: imap.c:1532
 msgid "Unable to append to IMAP mailboxes at this server"
-msgstr ""
+msgstr "Gagal menambahkan ke kotak surat IMAP di server ini"
 
 #: imap.c:1542 lib.c:1270
 #, c-format
@@ -1924,6 +1924,11 @@ msgid ""
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
+"Hak cipta (c) 1996-9 Michael R. Elkins dan kawan-kawan.\n"
+"Mutt tidak menyertakan jaminan dalam bentuk apapun; untuk lebih jelasnya "
+"lihat 'mutt -vv'.\n"
+"Mutt adalah 'free software', anda diperbolehkan untuk mendistribusikan ulang\n"
+"dengan beberapa persyaratan; untuk lebih jelasnya lihat 'mutt -vv'.\n"
 
 #: main.c:48
 msgid ""
@@ -1949,6 +1954,27 @@ msgid ""
 "    along with this program; if not, write to the Free Software\n"
 "    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
 msgstr ""
+"Hak Cipta (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Hak Cipta (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
+"Hak Cipta (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Hak Cipta (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"\n"
+"Banyak orang lain yang tidak disebutkan di sini telah menyumbangkan\n"
+"banyak code, perbaikan, dan usul.\n"
+"\n"
+"    Program ini adalah 'free software'; anda boleh mendistribusikan ulang\n"
+"    dan/atau mengubahnya berdasarkan GNU General Public License seperti\n"
+"    yang dipublikasikan oleh Free Software Foundation; baik versi 2 dari\n"
+"    License tersebut atau (jika anda menghendaki) versi yang lebih tinggi.\n"
+"\n"
+"    Program ini didistribusikan dengan harapan akan berguna, tetapi\n"
+"    tidak diberikan jaminan apapun; bahkan tidak termasuk jaminan\n"
+"    MERCHANTIBILITY atau FITNESS FOR A PARTICULAR PURPOSE.\n"
+"    Silakan mengacu ke GNU General Public License untuk lebih jelasnya.\n"
+"\n"
+"    Anda seharusnya sudah menerima salinan dari GNU General Public License\n"
+"    beserta program ini; jika belum, silakan menulis surat ke:\n"
+"    Free Software Foundation, Inc, 675 Mass Ave, Cambridge, MA 02139, USA.\n"
 
 #: main.c:73
 msgid ""
@@ -1965,6 +1991,19 @@ msgid ""
 "    You should have received a copy of the full distribution terms\n"
 "    along with this program; if not, write to the program's developers.\n"
 msgstr ""
+"\n"
+"Implementasi SHA1 Hak Cipta (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"\n"
+"    Pendistribusian ulang dan penggunaan dari kode sumber dan bentuk biner,\n"
+"    dengan atau tanpa modifikasi, diperbolehkan dalam situasi dan kondisi\n"
+"    tertentu.\n"
+"\n"
+"    Implementasi SHA1 adalah apa adanya, tanpa jaminan secara langsung maupun\n"
+"    tidak langsung.\n"
+"\n"
+"    Anda seharusnya sudah menerima salinan dari persyaratan lengkap\n"
+"    pendistribusian beserta program ini; jika belum, silakan menulis ke\n"
+"    para pembuat program.\n"
 
 #: main.c:99
 msgid ""
@@ -2029,6 +2068,8 @@ msgid ""
 "\n"
 "Compile options:"
 msgstr ""
+"\n"
+"Pilihan waktu kompilasi:"
 
 #: main.c:305
 msgid "Error initializing terminal."
@@ -2037,7 +2078,7 @@ msgstr "Gagal menginisialisasi terminal."
 #: main.c:403
 #, c-format
 msgid "Debugging at level %d.\n"
-msgstr ""
+msgstr "Debugging pada tingkat %d.\n"
 
 #: main.c:405
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
@@ -2332,7 +2373,7 @@ msgstr "surat multi bagian tidak punya parameter batas!"
 #: pattern.c:236
 #, c-format
 msgid "Error in expression: %s"
-msgstr ""
+msgstr "Kesalahan pada ekspresi: %s"
 
 #: pattern.c:333
 #, c-format
@@ -2346,7 +2387,7 @@ msgstr "Tidak ada bulan: %s"
 
 #: pattern.c:401
 msgid "error in expression"
-msgstr ""
+msgstr "kesalahan pada ekspresi"
 
 #: pattern.c:586 pattern.c:694
 #, c-format
@@ -2441,32 +2482,40 @@ msgid ""
 "[-- BEGIN PGP MESSAGE --]\n"
 "\n"
 msgstr ""
+"[-- PERMULAAN SURAT PGP --]\n"
+"\n"
 
 #: pgp.c:364
 msgid "[-- BEGIN PGP PUBLIC KEY BLOCK --]\n"
-msgstr ""
+msgstr "[-- PERMULAAN BLOK KUNCI PUBLIK PGP --]\n"
 
 #: pgp.c:366
 msgid ""
 "[-- BEGIN PGP SIGNED MESSAGE --]\n"
 "\n"
 msgstr ""
+"[-- PERMULAAN SURAT BERTANDATANGAN PGP --]\n"
+"\n"
 
 #: pgp.c:468
 msgid ""
 "\n"
 "[-- END PGP MESSAGE --]\n"
 msgstr ""
+"\n"
+"[-- AKHIR SURAT PGP --]\n"
 
 #: pgp.c:470
 msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
-msgstr ""
+msgstr "[-- AKHIR BLOK KUNCI PUBLIK PGP --]\n"
 
 #: pgp.c:472
 msgid ""
 "\n"
 "[-- END PGP SIGNED MESSAGE --]\n"
 msgstr ""
+"\n"
+"[-- AKHIR SURAT BERTANDATANGAN PGP --]\n"
 
 #: pgp.c:485
 msgid ""
@@ -2627,7 +2676,7 @@ msgstr ""
 
 #: pgppubring.c:58
 msgid "reserved"
-msgstr ""
+msgstr "dibooking"
 
 #: pgppubring.c:59
 msgid "Encrypted Session Key"
@@ -2695,7 +2744,7 @@ msgstr ""
 
 #: pop.c:66
 msgid "POP Password: "
-msgstr ""
+msgstr "Password POP: "
 
 #: pop.c:91
 msgid "POP host is not defined."
@@ -2989,7 +3038,7 @@ msgstr "Surat telah dikirim."
 
 #: send.c:1325
 msgid "Sending in background."
-msgstr ""
+msgstr "Mengirim di background."
 
 #: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
@@ -3012,7 +3061,7 @@ msgstr "Error dalam pengiriman surat, proses anak mengembalikan %d (%s).\n"
 
 #: sendlib.c:1696
 msgid "Output of the delivery process"
-msgstr ""
+msgstr "Keluaran dari proses pengiriman"
 
 #: signal.c:39
 #, fuzzy, c-format
