@@ -453,6 +453,7 @@ _mutt_parse_uncolor (BUFFER *buf, BUFFER *s, unsigned long data, BUFFER *err,
 	if(parse_uncolor)
 	  mutt_free_color(last->fg,last->bg);
 #endif
+	safe_free ((void **) &last->pattern);
 	safe_free ((void **) &last);
       }
       ColorIndexList = NULL;
@@ -655,16 +656,6 @@ _mutt_parse_color (BUFFER *buf, BUFFER *s, unsigned long data,
       r = add_pattern (&ColorBodyList, buf->data, 1, fg, bg, attr, err, 0);
     else if (object == MT_COLOR_INDEX)
     {
-      pattern_t *pat;
-      char tempbuf[LONG_STRING];
-
-      strfcpy (tempbuf, buf->data, sizeof (tempbuf));
-      mutt_check_simple (tempbuf, sizeof (tempbuf), NONULL(SimpleSearch));
-      if ((pat = mutt_pattern_comp (tempbuf, M_FULL_MSG, err)) == NULL)
-      {
-	mutt_pattern_free (&pat);
-	return (-1);
-      }
       r = add_pattern (&ColorIndexList, buf->data, 1, fg, bg, attr, err, 1);
       mutt_cache_index_colors(Context);
       set_option (OPTFORCEREDRAWINDEX);
