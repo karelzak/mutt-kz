@@ -1,3 +1,149 @@
+Thu Aug 13 17:43:51 1998  Thomas Roessler  <roessler@guug.de>
+
+	* compose.c: indentation cosmetics.
+
+	* compose.c: Update menu->data when OP_COMPOSE_EDIT_HDRS is called.
+	From Vikas.
+
+	* compose.c: Update the encoding after using ispell from the compose
+	menu.  From Vikas.
+
+	* sendlib.c, send.c, protos.h, pgppubring.c,
+	pattern.c, lib.c, curs_main.c, compose.c,
+	attach.c: Various nits from Liviu; encoding fixes.
+
+	* rfc822.c: Fixing a buffer overflow in rfc822_cat().  tmplen could
+	underflow.
+
+Wed Aug 12 11:50:59 1998  Thomas Roessler  <roessler@guug.de>
+
+	* init.c: Yet another memory leak fix from Liviu.
+
+	* rfc2047.c: Fixing a stupid buffer overflow plus some flawed logic.
+
+	* functions.h, compose.c, OPS:
+	Adding an update-encoding function to the compose menu.
+	This is useful if the user has externally modified an
+	attachment and _wants_ to adjust the encoding afterwards.
+	Also, this patch fixes some redraw-related problems in the
+	compose menu.
+
+	* sendlib.c, mutt.h, compose.c, Attic/BUGS:
+	When changing or deleting attachments, the compose menu
+	now notices this and complains or asks accordingly.
+	Partially from Vikas.
+
+Tue Aug 11 08:14:38 1998  Thomas Roessler  <roessler@guug.de>
+
+	* Attic/BUGS: Yet another outstanding bug.
+
+	* doc/manual.txt: This now contains the latest changes to manual.sgml.
+
+	* sendlib.c, rfc2047.c, rfc1524.c, pgppubring.c, pager.c, hdrline.c:
+	Fixing various nits noted by Liviu and his colleagues.
+
+Mon Aug 10 15:30:02 1998  Thomas Roessler  <roessler@guug.de>
+
+	* sendlib.c: This patches makes the message-id persistant when
+	postponing messages.  (From: Janos Farkas)
+
+	* doc/manual.sgml, sample.muttrc, lib.c, init.h:
+	This patch introduces "unhdr_order" to reset the hdr_order
+	command's effect.  (From: Janos Farkas)
+
+	* color.c: Drop the free_rx parameter from muitt_free_color_line(),
+	as it's always 1.
+
+	* color.c: Adding mutt_free_color_line() and replacing varous
+	"manual" free()s of color lines by calls to this function.
+
+	* bind.c: Removing bind.c.  Pointed out by Gero Treuner
+	<gero@faveve.uni-stuttgart.de>.
+
+Sun Aug  9 18:43:45 1998  Thomas Roessler  <roessler@guug.de>
+
+	* color.c: With SLang, init_pair is (void), so we must not check its
+	return value.
+
+	* color.c: Restructuring color.c.  This patch fixes the "default"
+	problem from 0.94.2i and makes the code more
+	comprehensible than that version and more consie than
+	0.94.1i.
+
+Sat Aug  8 21:40:12 1998  Thomas Roessler  <roessler@guug.de>
+
+	* rfc2047.c: Fixing the "=?" detection in rfc2047_encode_string().  Bug
+	noted by David Jeske <jeske@home.chat.net>.
+
+	* compose.c: If you press t to add a recipient in the compose menu,
+	then press tab, q, and aborts with ctrl-g, mutt won't
+	redraw the menu.  Noted by Jimmy Mäkelä
+	<jmy@flashback.net>.
+
+	* alias.c: Entering an un-parsable address when creating an alias
+	would make mutt segfault.  Noted by brian moore
+	<bem@cmc.net>.
+
+	* browser.c: If you press tab in the file-browser to see the inboxes
+	and the current row is greater than the inbox-screens
+	max-rows then the screen gets garbled.
+	(From: Jimmy Mäkelä <jmy@flashback.net>)
+
+	* doc/manual.txt, doc/manual.sgml: I made the manual more up to date:
+
+	* new version
+	* new mailing list and home page addresses
+	* made the terminology a bit more consistent regarding
+	  'pattern' and 'regular expression'
+	* added a note about expanding UNIX environments
+	* added a note about <, >, in range patterns like ~m
+	* added a note about the urlview program
+	* changed tables to not use tabs, because it doesn't work
+	  right in my favourite web browsers lynx and netscape
+
+	(From: Gero Treuner <gero@faveve.uni-stuttgart.de>)
+
+	* pattern.c: This patch makes pattern ranges more logical. Before '~m
+	<5' would show message 1-5, with this patch it shows 1-4.
+	Inclusive ranges is still avaible if you use '~m -5'.
+	(From: Jimmy Mäkelä <jmy@flashback.net>)
+
+	* init.c: Various improvements to the mutt_command_complete
+	function.  From Stephen Hack <shack@rsn.hp.com>.
+
+	* browser.c: If you specify 'mailboxes ""' mutt will seg-fault. (From:
+	Jimmy Mäkelä <jmy@flashback.net>)
+
+	* color.c: Fixing a memory leak.  Thanks, Liviu.
+
+	* commands.c: When printing a message, headers are now sorted according
+	to hdr_order.  From Liviu.
+
+	* browser.c: Fixing an off-by-one buffer overflow in browser.c.  Noted
+	by Liviu.
+
+	* lib.c, attach.c: This patch adds some more "safe" characters to
+	mutt_sanitize_filename and fixes its usage in
+	mutt_view_attachment().  (From: Liviu Daia
+	<daia@stoilow.imar.ro>)
+
+	* status.c, sort.h, sendlib.c, send.c, query.c, protos.h, postpone.c, pager.h, pager.c, mutt_menu.h, menu.c, main.c, init.c, headers.c, functions.h, curs_main.c, curs_lib.c, compose.c, commands.c, browser.c, addrbook.c, OPS:
+	Adding the attach message patch.  From Vikas Agnihotri
+	<VikasA@att.com>.
+
+	* Makefile.in: There is no "compile" rule for dotlock in the Makefile.
+	(From: Dan Nelson <dnelson@emsphone.com>)
+
+	* imap.c: Thispatch to imap.c allows the user to specify a port
+	number in the folder name in the general form
+	{hostname:portnum}foldername. (From: Andy Sloane
+	<andude@guildsoftware.com>)
+
+	* imap.c: imap_close_connection() was being called even though the
+	client was using mulitple mailboxes over the same
+	connection.  (From: Brandon Long <blong@fiction.net>)
+
+
 Fri Jul 31 08:17:50 1998  Thomas Roessler  <roessler@guug.de>
 
 	* rfc1524.c: Changing an sprintf to an snprintf (which it was meant to
