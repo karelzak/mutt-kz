@@ -372,8 +372,6 @@ static void init_menu (struct browser_state *state, MUTTMENU *menu, char *title,
 {
   char path[_POSIX_PATH_MAX];
 
-  menu->current = 0;
-  menu->top = 0;
   menu->max = state->entrylen;
   if (buffy)
     snprintf (title, titlelen, "Mailboxes [%d]", mutt_buffy_check (0));
@@ -535,6 +533,8 @@ void mutt_select_file (char *f, size_t flen, int buffy)
 		return;
 	      }
 	    }
+	    menu->current = 0; 
+	    menu->top = 0; 
 	    init_menu (&state, menu, title, sizeof (title), buffy);
 	    break;
 	  }
@@ -559,6 +559,12 @@ void mutt_select_file (char *f, size_t flen, int buffy)
       case OP_CHANGE_DIRECTORY:
 
 	strfcpy (buf, LastDir, sizeof (buf));
+	{/* add '/' at the end of the directory name */
+	int len=strlen(LastDir);
+	if (sizeof (buf) > len)
+	  buf[len]='/';
+	}
+
 	if (mutt_get_field ("Chdir to: ", buf, sizeof (buf), M_FILE) == 0 &&
 	    buf[0])
 	{
@@ -571,7 +577,11 @@ void mutt_select_file (char *f, size_t flen, int buffy)
 	      strfcpy (LastDir, buf, sizeof (LastDir));
 	      destroy_state (&state);
 	      if (examine_directory (menu, &state, LastDir, prefix) == 0)
+	      {
+		menu->current = 0; 
+		menu->top = 0; 
 		init_menu (&state, menu, title, sizeof (title), buffy);
+	      }
 	      else
 	      {
 		mutt_error ("Error scanning directory.");
@@ -680,9 +690,10 @@ void mutt_select_file (char *f, size_t flen, int buffy)
 
 	break;
 
-      case OP_CHECK_NEW:
-
+      case OP_TOGGLE_MAILBOXES:
 	buffy = 1 - buffy;
+
+      case OP_CHECK_NEW:
 	destroy_state (&state);
 	prefix[0] = 0;
 	killPrefix = 0;

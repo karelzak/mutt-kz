@@ -358,7 +358,8 @@ struct binding_t OpBrowser[] = {
   { "sort",		OP_SORT,		"o" },
   { "sort-reverse",	OP_SORT_REVERSE,	"O" },
   { "select-new",	OP_BROWSER_NEW_FILE,	"N" },
-  { "check-new",	OP_CHECK_NEW,		"\t" },
+  { "check-new",	OP_CHECK_NEW,		NULL },
+  { "toggle-mailboxes", OP_TOGGLE_MAILBOXES, 	"\t" },
   { "view-file",	OP_BROWSER_VIEW_FILE,	" " },
   { NULL,		0,			NULL }
 };
