@@ -27,6 +27,10 @@
 #include "copy.h"
 #include "mx.h"
 
+#ifdef _PGPPATH
+#include "pgp.h"
+#endif
+
 #include <ctype.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -251,6 +255,10 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
   int rc = -1;
 
   is_message = mutt_is_message_type(a->type, a->subtype);
+#ifdef _PGPPATH
+  if (is_message && (a->hdr->pgp & PGPENCRYPT) && !pgp_valid_passphrase())
+    return (rc);
+#endif /* _PGPPATH */
   use_mailcap = (flag == M_MAILCAP ||
 		(flag == M_REGULAR && mutt_needs_mailcap (a)));
   snprintf (type, sizeof (type), "%s/%s", TYPE (a->type), a->subtype);

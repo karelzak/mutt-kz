@@ -323,13 +323,10 @@ static int include_forward (CONTEXT *ctx, HEADER *cur, FILE *out)
 
 
 #ifdef _PGPPATH
-  if (cur->pgp)
+  if ((cur->pgp & PGPENCRYPT) && option (OPTFORWDECODE))
   {
-    if (cur->pgp & PGPENCRYPT)
-    {
-      /* make sure we have the user's passphrase before proceeding... */
-      pgp_valid_passphrase ();
-    }
+    /* make sure we have the user's passphrase before proceeding... */
+    pgp_valid_passphrase ();
   }
 #endif /* _PGPPATH */
 
