@@ -2,12 +2,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mutt\n"
 "POT-Creation-Date: 1999-08-31 21:26+0200\n"
-"PO-Revision-Date: 1999-09-12 10:18+02:00\n"
+"PO-Revision-Date: 1999-09-19 18:27+02:00\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8-Bit\n"
 
 #: addrbook.c:31 browser.c:53 pager.c:1372 postpone.c:33 query.c:43
 #: recvattach.c:57
@@ -25,20 +25,20 @@ msgstr "Ayuda"
 
 #: addrbook.c:131
 msgid "You have no aliases!"
-msgstr "¡No tiene nombres en la libreta!"
+msgstr "¡No tiene aliases!"
 
 #: addrbook.c:143
 msgid "Aliases"
-msgstr "Libreta"
+msgstr "Aliases"
 
 #. add a new alias
 #: alias.c:192
 msgid "Alias as: "
-msgstr "Nombre corto: "
+msgstr "Nuevo alias: "
 
 #: alias.c:198
 msgid "You already have an alias defined with that name!"
-msgstr "Este nombre ya esta definido en la libreta."
+msgstr "¡Ya tiene definido un alias con ese nombre!"
 
 #: alias.c:212
 msgid "Address: "
@@ -59,7 +59,7 @@ msgstr "Guardar en archivo: "
 
 #: alias.c:265
 msgid "Alias added."
-msgstr "Dirección añadida."
+msgstr "Alias añadido."
 
 #: attach.c:112 attach.c:239 attach.c:431 attach.c:878
 msgid "Can't match nametemplate, continue?"
@@ -78,7 +78,7 @@ msgstr "¡Error al ejecutar \"%s\"!"
 
 #: attach.c:142
 msgid "Failure to open file to parse headers."
-msgstr "Error al abrir el archivo para leer las cabeceras."
+msgstr "Error al abrir el archivo para analizar las cabeceras."
 
 #: attach.c:173
 msgid "Failure to open file to strip headers."
@@ -102,8 +102,7 @@ msgstr "Falta la entrada \"edit\" para %s en el archivo Mailcap"
 
 #: attach.c:397
 msgid "No matching mailcap entry found.  Viewing as text."
-msgstr ""
-"No hay una entrada correspondiente en el archivo mailcap. Viendo como texto."
+msgstr "No hay entrada que concuerde en el mailcap.  Mostrando como texto."
 
 #: attach.c:410
 msgid "MIME type not defined.  Cannot view attachment."
@@ -179,7 +178,7 @@ msgstr "fats"
 
 #: browser.c:798
 msgid "New file name: "
-msgstr "Nombre del nuevo archivo: "
+msgstr "Nuevo nombre del archivo: "
 
 #: browser.c:819
 msgid "Can't view a directory"
@@ -212,7 +211,7 @@ msgstr "%s: objeto desconocido"
 #: color.c:381
 #, c-format
 msgid "%s: command valid only for index object"
-msgstr "%s: comando sólo válido para objetos en el índice"
+msgstr "%s: orden sólo válida para objetos en el índice"
 
 #: color.c:389
 #, c-format
@@ -263,7 +262,7 @@ msgstr "¡No se pudo crear el archivo temporal!"
 
 #: commands.c:162
 msgid "Command: "
-msgstr "Comando: "
+msgstr "Orden: "
 
 #: commands.c:180 recvattach.c:692
 msgid "Bounce message to: "
@@ -297,7 +296,7 @@ msgstr "Mensajes rebotados."
 
 #: commands.c:238
 msgid "Pipe to command: "
-msgstr "Redirigir el mensaje al comando:"
+msgstr "Redirigir el mensaje a la orden: "
 
 #: commands.c:338
 msgid ""
@@ -317,7 +316,7 @@ msgstr "fdraphntu"
 
 #: commands.c:393
 msgid "Shell command: "
-msgstr "Comando de shell: "
+msgstr "Orden de shell: "
 
 #: commands.c:509
 #, c-format
@@ -375,11 +374,11 @@ msgstr "Mensajes impresos"
 
 #: compose.c:76
 msgid "Send"
-msgstr "Mandar"
+msgstr "Enviar"
 
 #: compose.c:77
 msgid "Abort"
-msgstr "Abortar"
+msgstr "Desechar"
 
 #: compose.c:81 compose.c:538
 msgid "Attach file"
@@ -391,7 +390,7 @@ msgstr "Descrip"
 
 #: compose.c:103
 msgid "Sign, Encrypt"
-msgstr "Firmar, cifrar"
+msgstr "Firmar, Cifrar"
 
 #: compose.c:105
 msgid "Encrypt"
@@ -441,7 +440,7 @@ msgstr "Una versión desconocida de PGP fue definida para firmar."
 
 #: compose.c:185
 msgid "This doesn't make sense if you don't want to sign the message."
-msgstr "No tiene caso si no quiere firmar el mensaje."
+msgstr "No tiene sentido si no quiere firmar el mensaje."
 
 #: compose.c:196
 msgid "Unknown MIC algorithm, valid ones are: pgp-md5, pgp-sha1, pgp-rmd160"
@@ -456,7 +455,7 @@ msgstr "¡%s [#%d] ya no existe!"
 #: compose.c:240
 #, c-format
 msgid "%s [#%d] modified. Update encoding?"
-msgstr "%s [#%d] modificado. ¿Rehacer codificación?"
+msgstr "%s [#%d] modificado. ¿Actualizar codificación?"
 
 #: compose.c:281
 msgid "===== Attachments ====="
@@ -786,7 +785,7 @@ msgstr ""
 "~u\t\teditar el renglón anterior.\n"
 "~v\t\teditar mensaje con el editor definido en $visual .\n"
 "~w archivo\tescribir mensaje a un archivo.\n"
-"~x\t\tcancelar cambios y salir del editor.\n"
+"~x\t\tdesechar cambios y salir del editor.\n"
 "~?\t\teste mensaje.\n"
 ".\t\tsólo en un renglón finaliza la entrada.\n"
 
@@ -822,7 +821,7 @@ msgstr "No hay renglones en el mensaje.\n"
 #: edit.c:441
 #, c-format
 msgid "%s: unknown editor command (~? for help)\n"
-msgstr "%s: comando de editor deconocido (~? para ayuda)\n"
+msgstr "%s: orden de editor desconocida (~? para ayuda)\n"
 
 #: flags.c:257
 msgid "Set flag"
@@ -860,7 +859,7 @@ msgstr "[-- Automuestra usando %s --]\n"
 #: handler.c:1147
 #, c-format
 msgid "Invoking autoview command: %s"
-msgstr "Invocando comando de automuestra: %s"
+msgstr "Invocando orden de automuestra: %s"
 
 #: handler.c:1184 handler.c:1202
 #, c-format
@@ -942,7 +941,7 @@ msgstr "%s: imposible adjuntar archivo"
 
 #: help.c:273
 msgid "ERROR: please report this bug"
-msgstr "ERROR: por favor reporte esta falla"
+msgstr "ERROR: por favor reporte este fallo"
 
 #: help.c:315
 msgid "<UNKNOWN>"
@@ -983,17 +982,17 @@ msgstr "imap_error(): respuesta inesperada en %s: %s\n"
 #.
 #: imap.c:499
 msgid "Fatal error.  Message count is out of sync!"
-msgstr "¡Error fatal!  La cuenta de mensajes no coincide con la informada."
+msgstr "Error fatal.  ¡La cuenta de mensajes no esta sincronizada!"
 
 #: imap.c:632
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
-msgstr "Consiguiendo cabeceras de mensajes... [%d/%d]"
+msgstr "Recogiendo cabeceras de mensajes... [%d/%d]"
 
 #. Unable to fetch headers for lower versions
 #: imap.c:659
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr "No se pueden conseguir cabeceras de mensajes de esta versión de servidor IMAP."
+msgstr "No se pueden recoger cabeceras de mensajes de esta versión de servidor IMAP."
 
 #: imap.c:851
 #, c-format
@@ -1042,16 +1041,16 @@ msgstr "¿Crear %s?"
 
 #: imap.c:1594
 msgid "Fetching message..."
-msgstr "Consiguiendo mensaje..."
+msgstr "Recogiendo mensaje..."
 
 #. hack from Nathan Neulinger
 #: imap.c:1736
 msgid "Sending CREATE command ..."
-msgstr "Mandando comando CREATE..."
+msgstr "Enviando orden CREATE..."
 
 #: imap.c:1741
 msgid "Sending APPEND command ..."
-msgstr "Mandando comando APPEND..."
+msgstr "Enviando orden APPEND..."
 
 #: imap.c:1779
 msgid "Uploading message ..."
@@ -1159,12 +1158,12 @@ msgstr "source: demasiados parámetros"
 #: init.c:1182
 #, c-format
 msgid "%s: unknown command"
-msgstr "%s: comando desconocido"
+msgstr "%s: orden desconocida"
 
 #: init.c:1514
 #, c-format
 msgid "Error in command line: %s\n"
-msgstr "Error en línea de comando: %s\n"
+msgstr "Error en línea de órdenes: %s\n"
 
 #: init.c:1557
 msgid "unable to determine home directory"
@@ -1224,7 +1223,7 @@ msgstr "exec: faltan parámetros"
 #: keymap.c:866
 #, c-format
 msgid "%s: no such command"
-msgstr "%s: comando desconocido"
+msgstr "%s: orden desconocida"
 
 #: keymap_defs.h:5
 msgid "null operation"
@@ -1440,7 +1439,7 @@ msgstr "cambiar entre buzones de entrada"
 
 #: keymap_defs.h:58
 msgid "complete filename or alias"
-msgstr "completar nombres de archivos o nombres en libreta"
+msgstr "completar nombre de archivo o alias"
 
 #: keymap_defs.h:59
 msgid "complete address with query"
@@ -1460,7 +1459,7 @@ msgstr "mover el cursor un caracter a la derecha"
 
 #: keymap_defs.h:63 keymap_defs.h:64
 msgid "scroll up through the history list"
-msgstr "mover hacia atrás en el historial de comandos"
+msgstr "mover hacia atrás en el historial de órdenes"
 
 #: keymap_defs.h:65
 msgid "delete chars from cursor to end of line"
@@ -1480,7 +1479,7 @@ msgstr "marcar como cita la próxima tecla"
 
 #: keymap_defs.h:69
 msgid "enter a muttrc command"
-msgstr "entrar comando de muttrc"
+msgstr "entrar orden de muttrc"
 
 #: keymap_defs.h:70
 msgid "enter a file mask"
@@ -1492,7 +1491,7 @@ msgstr "salir de este menú"
 
 #: keymap_defs.h:72
 msgid "filter attachment through a shell command"
-msgstr "filtrar archivos adjuntos con un comando de shell"
+msgstr "filtrar archivos adjuntos con una orden de shell"
 
 #: keymap_defs.h:73
 msgid "move to the first entry"
@@ -1684,7 +1683,7 @@ msgstr "saltar al principio del mensaje"
 
 #: keymap_defs.h:120
 msgid "pipe message/attachment to a shell command"
-msgstr "filtrar mensaje/archivo adjunto via un comando de shell"
+msgstr "filtrar mensaje/archivo adjunto via una orden de shell"
 
 #: keymap_defs.h:121
 msgid "move to the previous entry"
@@ -1756,7 +1755,7 @@ msgstr "cambiar coloración de patrón de búsqueda"
 
 #: keymap_defs.h:138
 msgid "invoke a command in a subshell"
-msgstr "invocar comando en un subshell"
+msgstr "invocar orden en un subshell"
 
 #: keymap_defs.h:139
 msgid "sort messages"
@@ -1836,7 +1835,7 @@ msgstr "colapsar/expander todos los hilos"
 
 #: keymap_defs.h:158
 msgid "attach a PGP public key"
-msgstr "adjuntar llave PGP pública"
+msgstr "adjuntar clave PGP pública"
 
 #: keymap_defs.h:159
 msgid "show PGP options"
@@ -1844,7 +1843,7 @@ msgstr "mostrar opciones PGP"
 
 #: keymap_defs.h:160
 msgid "extract PGP public keys"
-msgstr "extraer llaves PGP públicas"
+msgstr "extraer claves PGP públicas"
 
 #: keymap_defs.h:161
 msgid "wipe PGP passphrase from memory"
@@ -1852,15 +1851,15 @@ msgstr "borrar contraseña PGP de la memoria"
 
 #: keymap_defs.h:162
 msgid "mail a PGP public key"
-msgstr "enviar llave PGP pública"
+msgstr "enviar clave PGP pública"
 
 #: keymap_defs.h:163
 msgid "verify a PGP public key"
-msgstr "verificar llave PGP pública"
+msgstr "verificar clave PGP pública"
 
 #: keymap_defs.h:164
 msgid "view the key's user id"
-msgstr "mostrar la identificación del usuario de la llave"
+msgstr "mostrar la identificación del usuario de la clave"
 
 #: keymap_defs.h:165
 msgid "make decrypted copy and delete"
@@ -1902,7 +1901,9 @@ msgstr "¿Agregar mensajes a %s?"
 
 #: main.c:39
 msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
-msgstr "Para contactar los autores mande un mensaje a <mutt-dev@mutt.org>.\n"
+msgstr ""
+"Para contactar a los autores mande un mensaje a <mutt-dev@mutt.org>,\n"
+"para comentarios sobre la traducción al español: <boris@wesslowski.com>.\n"
 
 #: main.c:42
 msgid ""
@@ -2021,8 +2022,7 @@ msgid ""
 "  -h\t\tthis help message"
 msgstr ""
 "uso: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <arch> ] [ -m <tipo> ] [ -f <arch> ]\n"
-"     mutt [ -nx ] [ -e <cmd> ] [ -a <arch> ] [ -F <arch> ] [ -H <arch> ] [ "
-"-i <arch> ] [ -s <asunto> ] [ -b <dir> ] [ -c <dir> ] <dir> [ ... ]\n"
+"     mutt [ -nx ] [ -e <cmd> ] [ -a <arch> ] [ -F <arch> ] [ -H <arch> ] [ -i <arch> ] [ -s <asunto> ] [ -b <dir> ] [ -c <dir> ] <dir> [ ... ]\n"
 "     mutt [ -n ] [ -e <cmd> ] [ -F <archivo> ] -p\n"
 "     mutt -v[v]\n"
 "\n"
@@ -2030,7 +2030,7 @@ msgstr ""
 "  -a <archivo>\tañadir un archivo al mensaje\n"
 "  -b <dirección>\tespecifica una dirección para enviar copia ciega (BCC)\n"
 "  -c <dirección>\tespecifica una dirección para enviar copia (CC)\n"
-"  -e <comando>\tespecifica un comando a ser ejecutado al empezar\n"
+"  -e <orden>\tespecifica una orden a ser ejecutada al empezar\n"
 "  -f <archivo>\tespecifica un buzón a leer\n"
 "  -F <archivo>\tespecifica un archivo muttrc alterno\n"
 "  -H <archivo>\tespecifica un archivo para obtener una cabecera\n"
@@ -2039,8 +2039,7 @@ msgstr ""
 "  -n\t\tproduce que Mutt no lea el archivo Muttrc del sistema\n"
 "  -p\t\tcontinuar un mensaje pospuesto\n"
 "  -R\t\tabrir un buzón en modo de solo-lectura\n"
-"  -s <asunto>\tespecifica el asunto (necesita comillas si contiene "
-"espacios)\n"
+"  -s <asunto>\tespecifica el asunto (necesita comillas si contiene espacios)\n"
 "  -v\t\tmuestra versión y opciones definidas al compilar\n"
 "  -x\t\tsimula el modo de envío mailx\n"
 "  -y\t\tselecciona un buzón especificado en su lista `mailboxes'\n"
@@ -2112,8 +2111,7 @@ msgstr "¡Imposible bloquear buzón!"
 #.
 #: mbox.c:738
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr ""
-"sync: buzón modificado, pero sin mensajes modificados (reporte este error)"
+msgstr "sync: buzón modificado, pero sin mensajes modificados (reporte este fallo)"
 
 #: mbox.c:767
 msgid "Writing messages... %d (%d%%)"
@@ -2382,7 +2380,7 @@ msgstr "error en patrón en: %s"
 #: pattern.c:634
 #, c-format
 msgid "%c: invalid command"
-msgstr "%c: comando inválido"
+msgstr "%c: orden inválida"
 
 #: pattern.c:640
 #, c-format
@@ -2405,7 +2403,7 @@ msgstr "patrón vacío"
 #: pattern.c:880
 #, c-format
 msgid "error: unknown op %d (report this error)."
-msgstr "error: op %d desconocida (reporte este error)."
+msgstr "error: op %d desconocida (reporte este fallo)."
 
 #: pattern.c:945 pattern.c:1074
 msgid "Compiling search pattern..."
@@ -2413,11 +2411,11 @@ msgstr "Compilando patrón de búsqueda..."
 
 #: pattern.c:959
 msgid "Executing command on matching messages..."
-msgstr "Ejecutando comando en mensajes que coinciden..."
+msgstr "Ejecutando orden en mensajes que coinciden..."
 
 #: pattern.c:1022
 msgid "No messages matched criteria."
-msgstr "Ningún mensaje responde al criterio dado."
+msgstr "Ningún mensaje corresponde al criterio dado."
 
 #: pattern.c:1112
 msgid "Search hit bottom without finding match"
@@ -2472,7 +2470,7 @@ msgstr ""
 
 #: pgp.c:364
 msgid "[-- BEGIN PGP PUBLIC KEY BLOCK --]\n"
-msgstr "[-- PRINCIPIO DEL BLOQUE DE LLAVES PÚBLICAS PGP --]\n"
+msgstr "[-- PRINCIPIO DEL BLOQUE DE CLAVES PÚBLICAS PGP --]\n"
 
 #: pgp.c:366
 msgid ""
@@ -2493,7 +2491,7 @@ msgstr ""
 
 #: pgp.c:470
 msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
-msgstr "[-- FIN DEL BLOQUE DE LLAVES PÚBLICAS PGP --]\n"
+msgstr "[-- FIN DEL BLOQUE DE CLAVES PÚBLICAS PGP --]\n"
 
 #: pgp.c:472
 msgid ""
@@ -2610,11 +2608,11 @@ msgstr "Seleccionar  "
 
 #: pgpkey.c:178
 msgid "Check key  "
-msgstr "Verificar llave  "
+msgstr "Verificar clave  "
 
 #: pgpkey.c:191
 msgid "PGP keys matching "
-msgstr "Llaves PGP para "
+msgstr "Claves PGP para "
 
 #: pgpkey.c:210 pgpkey.c:387
 msgid "Can't open /dev/null"
@@ -2652,12 +2650,12 @@ msgstr "%s ¿Realmente quiere utilizarla?"
 
 #: pgpkey.c:369
 msgid "Please enter the key ID: "
-msgstr "Por favor entre la identificación de la llave: "
+msgstr "Por favor entre la identificación de la clave: "
 
 #: pgpkey.c:416
 #, c-format
 msgid "PGP Key 0x%s."
-msgstr "Llave PGP 0x%s."
+msgstr "Clave PGP 0x%s."
 
 #: pgppubring.c:58
 msgid "reserved"
@@ -2665,7 +2663,7 @@ msgstr "reservado"
 
 #: pgppubring.c:59
 msgid "Encrypted Session Key"
-msgstr "Llave de sesión cifrada"
+msgstr "Clave de sesión cifrada"
 
 #: pgppubring.c:60
 msgid "Signature Packet"
@@ -2673,7 +2671,7 @@ msgstr "Paquete de firma"
 
 #: pgppubring.c:61
 msgid "Conventionally Encrypted Session Key Packet"
-msgstr "Paquete de llave de sesión con cifrado convencional"
+msgstr "Paquete de clave de sesión con cifrado convencional"
 
 #: pgppubring.c:62
 msgid "One-Pass Signature Packet"
@@ -2681,15 +2679,15 @@ msgstr "Paquete de firma one-pass"
 
 #: pgppubring.c:63
 msgid "Secret Key Packet"
-msgstr "Paquete de llave secreta"
+msgstr "Paquete de clave secreta"
 
 #: pgppubring.c:64
 msgid "Public Key Packet"
-msgstr "Paquete de llave pública"
+msgstr "Paquete de clave pública"
 
 #: pgppubring.c:65
 msgid "Secret Subkey Packet"
-msgstr "Paquete de subllave secreta"
+msgstr "Paquete de subclave secreta"
 
 #: pgppubring.c:66
 msgid "Compressed Data Packet"
@@ -2717,7 +2715,7 @@ msgstr "Paquete de nombre"
 
 #: pgppubring.c:72
 msgid "Subkey Packet"
-msgstr "Paquete de subllave"
+msgstr "Paquete de subclave"
 
 #: pgppubring.c:73
 msgid "Reserved"
@@ -2794,11 +2792,11 @@ msgstr "Cabecera PGP illegal"
 
 #: query.c:45
 msgid "New Query"
-msgstr "Nueva indagación"
+msgstr "Nueva consulta"
 
 #: query.c:46
 msgid "Make Alias"
-msgstr "Producir nombre corto"
+msgstr "Producir alias"
 
 #: query.c:47
 msgid "Search"
@@ -2810,21 +2808,21 @@ msgstr "Esperando respuesta..."
 
 #: query.c:192 query.c:217
 msgid "Query command not defined."
-msgstr "El comando de indagación no fue definido."
+msgstr "La orden de consulta no fue definida."
 
 #: query.c:244
 msgid "Query"
-msgstr "Indagación"
+msgstr "Consulta"
 
 #. Prompt for Query
 #: query.c:257 query.c:285
 msgid "Query: "
-msgstr "Indagar: "
+msgstr "Consultar: "
 
 #: query.c:268 query.c:294
 #, c-format
 msgid "Query '%s'"
-msgstr "Indagar '%s'"
+msgstr "Consultar '%s'"
 
 #: recvattach.c:59
 msgid "Pipe"
@@ -2974,11 +2972,11 @@ msgstr "¿Continuar mensaje pospuesto?"
 
 #: send.c:1097
 msgid "Abort unmodified message?"
-msgstr "¿Cancelar mensaje sin cambios?"
+msgstr "¿Desechar mensaje sin cambios?"
 
 #: send.c:1099
 msgid "Aborted unmodified message."
-msgstr "Mensaje sin cambios cancelado."
+msgstr "Mensaje sin cambios desechado."
 
 #. abort
 #: send.c:1138
@@ -3023,7 +3021,7 @@ msgstr "Mensaje enviado."
 
 #: send.c:1325
 msgid "Sending in background."
-msgstr "Mandando en un proceso en segundo plano."
+msgstr "Enviando en un proceso en segundo plano."
 
 #: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
@@ -3074,7 +3072,7 @@ msgstr "Ordenando buzón..."
 
 #: sort.c:226
 msgid "Could not find sorting function! [report this bug]"
-msgstr "¡No se pudo encontrar la función para ordenar! [reporte este error]"
+msgstr "¡No se pudo encontrar la función para ordenar! [reporte este fallo]"
 
 #: status.c:101
 msgid "(no mailbox)"
