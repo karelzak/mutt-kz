@@ -483,7 +483,7 @@ static int mx_open_mailbox_append (CONTEXT *ctx)
 
 #ifdef USE_IMAP
   
-  if(mx_is_imap(ctx))  
+  if(mx_is_imap(ctx->path))  
     return imap_open_mailbox_append (ctx);
 
 #endif
