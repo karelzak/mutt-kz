@@ -48,13 +48,24 @@
  * In addition, this function returns a 0 if the command works on a file,
  * and 1 if the command works on a pipe.
  */
-int rfc1524_expand_command (BODY *a, char *filename, char *type, 
+int rfc1524_expand_command (BODY *a, char *_filename, char *_type,
     char *command, int clen)
 {
   int x=0,y=0;
   int needspipe = TRUE;
   char buf[LONG_STRING];
-
+  char filename[_POSIX_PATH_MAX];
+  char type[LONG_STRING];
+  
+  strfcpy (filename, _filename, sizeof (filename));
+  strfcpy (type, _type, sizeof (type));
+  
+  if (option (OPTMAILCAPSANITIZE))
+  {
+    mutt_sanitize_filename (filename);
+    mutt_sanitize_filename (type);
+  }
+  
   while (command[x] && x<clen && y<sizeof(buf)) 
   {
     if (command[x] == '\\') {
@@ -67,15 +78,21 @@ int rfc1524_expand_command (BODY *a, char *filename, char *type,
       if (command[x] == '{') 
       {
 	char param[STRING];
+	char pvalue[LONG_STRING];
 	int z = 0;
 	char *ret = NULL;
+	char *pv;
 
 	x++;
 	while (command[x] && command[x] != '}' && z<sizeof(param))
 	  param[z++] = command[x++];
 	param[z] = '\0';
 	dprint(2,(debugfile,"Parameter: %s  Returns: %s\n",param,ret));
-	ret = mutt_quote_filename(mutt_get_parameter(param,a->parameter));
+	pv = mutt_get_parameter (param, a->parameter);
+	strfcpy (pvalue, NONULL(pv), sizeof (pvalue));
+	if (option (OPTMAILCAPSANITIZE)) 
+	  mutt_sanitize_filename (pvalue);
+	ret = mutt_quote_filename (pvalue);
 	dprint(2,(debugfile,"Parameter: %s  Returns: %s\n",param,ret));
 	z = 0;
 	while (ret && ret[z] && y<sizeof(buf))
@@ -95,8 +112,12 @@ int rfc1524_expand_command (BODY *a, char *filename, char *type,
       }
       else if (command[x] == 't')
       {
-	while (*type && y < sizeof (buf))
-	  buf[y++] = *type++;
+	char *t = mutt_quote_filename (type);
+	char *s;
+	
+	for (s = t; *s && y < sizeof (buf);)
+	  buf[y++] = *s++;
+	FREE (&t);
       }
       x++;
     }

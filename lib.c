@@ -1231,7 +1231,7 @@ char *mutt_quote_filename(const char *f)
   
   for(i = 0, l = 3; f[i]; i++, l++)
   {
-    if(f[i] == '\'')
+    if(f[i] == '\'' || f[i] == '`')
       l += 3;
   }
   
@@ -1242,11 +1242,11 @@ char *mutt_quote_filename(const char *f)
   
   for(i = 0; f[i]; i++)
   {
-    if(f[i] == '\'')
+    if(f[i] == '\'' || f[i] == '`')
     {
       d[l++] = '\'';
       d[l++] = '\\';
-      d[l++] = '\'';
+      d[l++] = f[i];
       d[l++] = '\'';
     }
     else
