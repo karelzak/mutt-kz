@@ -484,7 +484,7 @@ static int can_print (BODY *top, int tag)
 
   for (; top; top = top->next)
   {
-    snprintf (type, sizeof (type), "%s/%s", TYPE (top->type), top->subtype);
+    snprintf (type, sizeof (type), "%s/%s", TYPE (top), top->subtype);
     if (!tag || top->tagged)
     {
       if (!rfc1524_mailcap_lookup (top, type, NULL, M_PRINT))
@@ -517,7 +517,7 @@ static void print_attachment_list (FILE *fp, int tag, BODY *top)
   {
     if (!tag || top->tagged)
     {
-      snprintf (type, sizeof (type), "%s/%s", TYPE (top->type), top->subtype);
+      snprintf (type, sizeof (type), "%s/%s", TYPE (top), top->subtype);
       if (!option (OPTATTACHSPLIT) && !rfc1524_mailcap_lookup (top, type, NULL, M_PRINT))
       {
 	if (!strcasecmp ("text/plain", top->subtype) ||
