@@ -135,7 +135,7 @@ static int imap_write (CONNECTION *conn, const char *buf)
 
 static void imap_error (const char *where, const char *msg)
 {
-  dprint (1, (debugfile, "imap_error(): unexpected response in %s: %s\n", where, msg));
+  mutt_error ("imap_error(): unexpected response in %s: %s\n", where, msg);
 }
 
 static CONNECTION *imap_select_connection (char *host, int flags)
@@ -158,7 +158,7 @@ static CONNECTION *imap_select_connection (char *host, int flags)
   else
   {
     NumConnections++;
-    safe_realloc ((void *)Connections, sizeof (CONNECTION) * NumConnections);
+    safe_realloc ((void *)&Connections, sizeof (CONNECTION) * NumConnections);
   }
   Connections[NumConnections - 1].bufpos = 0;
   Connections[NumConnections - 1].available = 0;
@@ -695,10 +695,6 @@ int imap_open_mailbox (CONTEXT *ctx)
   int n;
   char *pc;
 
-  /* create IMAP-specific state struct */
-  ctx->data = safe_malloc (sizeof (IMAP_DATA));
-  memset (ctx->data, 0, sizeof (IMAP_DATA));
-
   pc = ctx->path;
   if (*pc != '{')
     return (-1);
@@ -710,6 +706,10 @@ int imap_open_mailbox (CONTEXT *ctx)
   if (!*pc)
     return (-1);
   pc++;
+
+  /* create IMAP-specific state struct */
+  ctx->data = safe_malloc (sizeof (IMAP_DATA));
+  memset (ctx->data, 0, sizeof (IMAP_DATA));
 
   CTX_DATA->mailbox = safe_strdup (pc);
 
@@ -811,10 +811,6 @@ int imap_open_mailbox_append (CONTEXT *ctx)
   int n;
   char *pc;
 
-  /* create IMAP-specific state struct */
-  ctx->data = safe_malloc (sizeof (IMAP_DATA));
-  memset (ctx->data, 0, sizeof (IMAP_DATA));
-
   pc = ctx->path;
   if (*pc != '{')
     return (-1);
@@ -826,6 +822,11 @@ int imap_open_mailbox_append (CONTEXT *ctx)
   if (!*pc)
     return (-1);
   pc++;
+
+  /* create IMAP-specific state struct */
+  ctx->data = safe_malloc (sizeof (IMAP_DATA));
+  memset (ctx->data, 0, sizeof (IMAP_DATA));
+  ctx->magic = M_IMAP;
 
   CTX_DATA->mailbox = pc;
 
