@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-10-11 21:19+0200\n"
+"POT-Creation-Date: 1999-10-22 09:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -722,11 +722,11 @@ msgstr "Alle Nachrichten gelöscht."
 msgid "You are on the first message."
 msgstr "Sie sind bereits auf der ersten Nachricht."
 
-#: curs_main.c:1134 pattern.c:1109
+#: curs_main.c:1134 pattern.c:1112
 msgid "Search wrapped to top."
 msgstr "Suche von vorne begonnen."
 
-#: curs_main.c:1143 pattern.c:1120
+#: curs_main.c:1143 pattern.c:1123
 msgid "Search wrapped to bottom."
 msgstr "Suche von hinten begonnen."
 
@@ -2156,7 +2156,7 @@ msgstr "Sie sind auf dem letzten Eintrag."
 msgid "You are on the first entry."
 msgstr "Sie sind auf dem ersten Eintrag"
 
-#: menu.c:601 pattern.c:1055
+#: menu.c:601 pattern.c:1058
 msgid "Search for: "
 msgstr "Suche nach: "
 
@@ -2164,11 +2164,11 @@ msgstr "Suche nach: "
 msgid "Reverse search for: "
 msgstr "Suche rückwärts nach: "
 
-#: menu.c:613 pattern.c:1088
+#: menu.c:613 pattern.c:1091
 msgid "No search pattern."
 msgstr "Kein Suchmuster."
 
-#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1153
+#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1156
 msgid "Not found."
 msgstr "Nicht gefunden."
 
@@ -2333,79 +2333,79 @@ msgstr "Kein weiterer eigener Text nach zitiertem Text"
 msgid "multipart message has no boundary parameter!"
 msgstr "Mehrteilige Nachricht hat keinen \"boundary\"-Parameter!"
 
-#: pattern.c:236
+#: pattern.c:239
 #, c-format
 msgid "Error in expression: %s"
 msgstr "Fehler in Ausdruck: %s"
 
-#: pattern.c:333
+#: pattern.c:336
 #, c-format
 msgid "Invalid day of month: %s"
 msgstr "Ungültiger Tag: %s"
 
-#: pattern.c:347
+#: pattern.c:350
 #, c-format
 msgid "Invalid month: %s"
 msgstr "Ungültiger Monat: %s"
 
-#: pattern.c:401
+#: pattern.c:404
 msgid "error in expression"
 msgstr "Fehler in Ausdruck."
 
-#: pattern.c:586 pattern.c:694
+#: pattern.c:589 pattern.c:697
 #, c-format
 msgid "error in pattern at: %s"
 msgstr "Fehler in Muster bei: %s"
 
-#: pattern.c:634
+#: pattern.c:637
 #, c-format
 msgid "%c: invalid command"
 msgstr "%c: Ungültiges Kommando"
 
-#: pattern.c:640
+#: pattern.c:643
 #, c-format
 msgid "%c: not supported in this mode"
 msgstr "%c: Wird in diesem Modus nicht unterstützt."
 
-#: pattern.c:653
+#: pattern.c:656
 msgid "missing parameter"
 msgstr "Fehlender Parameter"
 
-#: pattern.c:669
+#: pattern.c:672
 #, c-format
 msgid "mismatched parenthesis: %s"
 msgstr "Unpassende Klammern: %s"
 
-#: pattern.c:701
+#: pattern.c:704
 msgid "empty pattern"
 msgstr "Leeres Muster"
 
-#: pattern.c:880
+#: pattern.c:883
 #, c-format
 msgid "error: unknown op %d (report this error)."
 msgstr ""
 
-#: pattern.c:945 pattern.c:1074
+#: pattern.c:948 pattern.c:1077
 msgid "Compiling search pattern..."
 msgstr "Compiliere Suchmuster..."
 
-#: pattern.c:959
+#: pattern.c:962
 msgid "Executing command on matching messages..."
 msgstr "Führe Kommando aus..."
 
-#: pattern.c:1022
+#: pattern.c:1025
 msgid "No messages matched criteria."
 msgstr "Keine Nachrichten haben Kriterium erfüllt."
 
-#: pattern.c:1112
+#: pattern.c:1115
 msgid "Search hit bottom without finding match"
 msgstr "Suche hat Ende erreicht, ohne Treffer zu erzielen."
 
-#: pattern.c:1123
+#: pattern.c:1126
 msgid "Search hit top without finding match"
 msgstr "Suche hat Anfang erreicht, ohne Treffer zu erzielen."
 
-#: pattern.c:1145
+#: pattern.c:1148
 msgid "Search interrupted."
 msgstr "Suche unterbrochen."
 
@@ -2961,43 +2961,43 @@ msgstr "Unveränderte Nachricht verworfen."
 msgid "Mail not sent."
 msgstr "Nachricht nicht verschickt."
 
-#: send.c:1153
+#: send.c:1160
 msgid "Message postponed."
 msgstr "Nachricht zurückgestellt."
 
-#: send.c:1162
+#: send.c:1169
 msgid "No recipients are specified!"
 msgstr "Es wurden keine Empfänger angegeben!"
 
-#: send.c:1167
+#: send.c:1174
 msgid "No recipients were specified."
 msgstr "Es wurden keine Empfänger angegeben!"
 
-#: send.c:1173
+#: send.c:1180
 msgid "No subject, abort sending?"
 msgstr "Kein Betreff, Versand abbrechen?"
 
-#: send.c:1177
+#: send.c:1184
 msgid "No subject specified."
 msgstr "Kein Betreff."
 
-#: send.c:1214
+#: send.c:1221
 msgid "Message edited. Really send?"
 msgstr "Nachricht verändert.  Wirklich abschicken?"
 
-#: send.c:1220
+#: send.c:1227
 msgid "Sending message..."
 msgstr "Verschicke Nachricht..."
 
-#: send.c:1322
+#: send.c:1329
 msgid "Could not send the message."
 msgstr "Konnte Nachricht nicht verschicken."
 
-#: send.c:1327
+#: send.c:1334
 msgid "Mail sent."
 msgstr "Nachricht verschickt."
 
-#: send.c:1327
+#: send.c:1334
 msgid "Sending in background."
 msgstr "Verschicke Mail im Hintergrund."
 

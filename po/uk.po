@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 1999-10-11 21:19+0200\n"
+"POT-Creation-Date: 1999-10-22 09:42+0200\n"
 "PO-Revision-Date: 1998-10-25 15:44+0200\n"
 "Last-Translator: Andrej N. Gritsenko <andrej@lucky.net>\n"
 "Language-Team: Ukrainian <uk@ua.net>\n"
@@ -724,11 +724,11 @@ msgstr "Вс╕ листи видалено."
 msgid "You are on the first message."
 msgstr "Це перший лист."
 
-#: curs_main.c:1134 pattern.c:1109
+#: curs_main.c:1134 pattern.c:1112
 msgid "Search wrapped to top."
 msgstr "Пошук з початку."
 
-#: curs_main.c:1143 pattern.c:1120
+#: curs_main.c:1143 pattern.c:1123
 msgid "Search wrapped to bottom."
 msgstr "Пошук в╕д к╕нця."
 
@@ -2148,7 +2148,7 @@ msgstr "Це остання позиц╕я."
 msgid "You are on the first entry."
 msgstr "Це перша позиц╕я."
 
-#: menu.c:601 pattern.c:1055
+#: menu.c:601 pattern.c:1058
 msgid "Search for: "
 msgstr "Шукати вираз:"
 
@@ -2156,11 +2156,11 @@ msgstr "Шукати вираз:"
 msgid "Reverse search for: "
 msgstr "Зворотн╕й пошук виразу: "
 
-#: menu.c:613 pattern.c:1088
+#: menu.c:613 pattern.c:1091
 msgid "No search pattern."
 msgstr "Нема╓ виразу пошуку."
 
-#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1153
+#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1156
 msgid "Not found."
 msgstr "Не знайдено."
 
@@ -2327,79 +2327,79 @@ msgstr "П╕сля цитованого тексту н╕чого нема╓."
 msgid "multipart message has no boundary parameter!"
 msgstr "Багаточастинний лист не ма╓ параметру меж╕!"
 
-#: pattern.c:236
+#: pattern.c:239
 #, c-format
 msgid "Error in expression: %s"
 msgstr "Помилка у виразу: %s"
 
-#: pattern.c:333
+#: pattern.c:336
 #, c-format
 msgid "Invalid day of month: %s"
 msgstr "День '%s' в м╕сяц╕ не ╕сну╓"
 
-#: pattern.c:347
+#: pattern.c:350
 #, c-format
 msgid "Invalid month: %s"
 msgstr "М╕сяць '%s' не ╕сну╓"
 
-#: pattern.c:401
+#: pattern.c:404
 msgid "error in expression"
 msgstr "помилка у виразу"
 
-#: pattern.c:586 pattern.c:694
+#: pattern.c:589 pattern.c:697
 #, c-format
 msgid "error in pattern at: %s"
 msgstr "помилка у виразу: %s"
 
-#: pattern.c:634
+#: pattern.c:637
 #, c-format
 msgid "%c: invalid command"
 msgstr "%c: нев╕рна команда"
 
-#: pattern.c:640
+#: pattern.c:643
 #, c-format
 msgid "%c: not supported in this mode"
 msgstr "в цьому режимов╕ '%c' не п╕дтриму╓ться"
 
-#: pattern.c:653
+#: pattern.c:656
 msgid "missing parameter"
 msgstr "в╕дсутн╕й параметр"
 
-#: pattern.c:669
+#: pattern.c:672
 #, c-format
 msgid "mismatched parenthesis: %s"
 msgstr "в╕дсутня дужка: %s"
 
-#: pattern.c:701
+#: pattern.c:704
 msgid "empty pattern"
 msgstr "порожн╕й вираз"
 
-#: pattern.c:880
+#: pattern.c:883
 #, c-format
 msgid "error: unknown op %d (report this error)."
 msgstr ""
 
-#: pattern.c:945 pattern.c:1074
+#: pattern.c:948 pattern.c:1077
 msgid "Compiling search pattern..."
 msgstr "Комп╕ляц╕я виразу пошуку..."
 
-#: pattern.c:959
+#: pattern.c:962
 msgid "Executing command on matching messages..."
 msgstr "Виконання команди до в╕дпов╕дних лист╕в..."
 
-#: pattern.c:1022
+#: pattern.c:1025
 msgid "No messages matched criteria."
 msgstr "Лист╕в, що в╕дпов╕дають критер╕ю, не знайдено."
 
-#: pattern.c:1112
+#: pattern.c:1115
 msgid "Search hit bottom without finding match"
 msgstr "Пошук д╕йшов до к╕нця, але не знайдено н╕чого"
 
-#: pattern.c:1123
+#: pattern.c:1126
 msgid "Search hit top without finding match"
 msgstr "Пошук д╕йшов до початку, але не знайдено н╕чого"
 
-#: pattern.c:1145
+#: pattern.c:1148
 msgid "Search interrupted."
 msgstr "Пошук перервано."
 
@@ -2957,44 +2957,44 @@ msgstr "Лист не зм╕нено, тому в╕дправку в╕дм╕нено."
 msgid "Mail not sent."
 msgstr "Лист не в╕дправлено."
 
-#: send.c:1153
+#: send.c:1160
 msgid "Message postponed."
 msgstr "Лист залишено для подальшо╖ в╕дправки.."
 
-#: send.c:1162
+#: send.c:1169
 msgid "No recipients are specified!"
 msgstr "Отримувач╕в не вказано!"
 
-#: send.c:1167
+#: send.c:1174
 msgid "No recipients were specified."
 msgstr "Отримувач╕в не було вказано."
 
-#: send.c:1173
+#: send.c:1180
 msgid "No subject, abort sending?"
 msgstr "Теми нема╓, в╕дм╕нити в╕дправку?"
 
-#: send.c:1177
+#: send.c:1184
 msgid "No subject specified."
 msgstr "Теми не вказано."
 
-#: send.c:1214
+#: send.c:1221
 msgid "Message edited. Really send?"
 msgstr "Лист зм╕нено. Справд╕ в╕дсилати?"
 
-#: send.c:1220
+#: send.c:1227
 msgid "Sending message..."
 msgstr "Лист в╕дправля╓ться..."
 
-#: send.c:1322
+#: send.c:1329
 #, fuzzy
 msgid "Could not send the message."
 msgstr "в╕д╕слати лист"
 
-#: send.c:1327
+#: send.c:1334
 msgid "Mail sent."
 msgstr "Лист послано."
 
-#: send.c:1327
+#: send.c:1334
 msgid "Sending in background."
 msgstr ""
 

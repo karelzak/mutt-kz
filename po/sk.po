@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6i\n"
-"POT-Creation-Date: 1999-10-11 21:19+0200\n"
+"POT-Creation-Date: 1999-10-22 09:42+0200\n"
 "PO-Revision-Date: 1999-07-29 00:00+0100\n"
 "Last-Translator: Miroslav Vasko <vasko@ies.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -725,11 +725,11 @@ msgstr "®iadne odmazané správy."
 msgid "You are on the first message."
 msgstr "Ste na prvej správe."
 
-#: curs_main.c:1134 pattern.c:1109
+#: curs_main.c:1134 pattern.c:1112
 msgid "Search wrapped to top."
 msgstr "Vyhµadávanie pokraèuje z vrchu."
 
-#: curs_main.c:1143 pattern.c:1120
+#: curs_main.c:1143 pattern.c:1123
 msgid "Search wrapped to bottom."
 msgstr "Vyhµadávanie pokraèuje zo spodu."
 
@@ -2198,7 +2198,7 @@ msgstr "Ste na poslednej polo¾ke."
 msgid "You are on the first entry."
 msgstr "Ste na prvej polo¾ke."
 
-#: menu.c:601 pattern.c:1055
+#: menu.c:601 pattern.c:1058
 msgid "Search for: "
 msgstr "Hµada»: "
 
@@ -2206,11 +2206,11 @@ msgstr "Hµada»: "
 msgid "Reverse search for: "
 msgstr "Hµada» spätne: "
 
-#: menu.c:613 pattern.c:1088
+#: menu.c:613 pattern.c:1091
 msgid "No search pattern."
 msgstr "®iadny vzor pre hµadanie."
 
-#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1153
+#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1156
 msgid "Not found."
 msgstr "Nenájdené."
 
@@ -2376,79 +2376,79 @@ msgstr "®iadny ïaµ¹í necitovaný text za citátom."
 msgid "multipart message has no boundary parameter!"
 msgstr "viaczlo¾ková správa nemá parameter ohranièenia (boundary)!"
 
-#: pattern.c:236
+#: pattern.c:239
 #, c-format
 msgid "Error in expression: %s"
 msgstr "Chyba vo výraze: %s"
 
-#: pattern.c:333
+#: pattern.c:336
 #, c-format
 msgid "Invalid day of month: %s"
 msgstr "Neplatný deò v mesiaci: %s"
 
-#: pattern.c:347
+#: pattern.c:350
 #, c-format
 msgid "Invalid month: %s"
 msgstr "Neplatný mesiac: %s"
 
-#: pattern.c:401
+#: pattern.c:404
 msgid "error in expression"
 msgstr "chyba vo výraze"
 
-#: pattern.c:586 pattern.c:694
+#: pattern.c:589 pattern.c:697
 #, c-format
 msgid "error in pattern at: %s"
 msgstr "chyba vo vzore na: %s"
 
-#: pattern.c:634
+#: pattern.c:637
 #, c-format
 msgid "%c: invalid command"
 msgstr "%c: neplatný príkaz"
 
-#: pattern.c:640
+#: pattern.c:643
 #, c-format
 msgid "%c: not supported in this mode"
 msgstr "%c: nepodporovaný v tomto móde"
 
-#: pattern.c:653
+#: pattern.c:656
 msgid "missing parameter"
 msgstr "chýbajúci parameter"
 
-#: pattern.c:669
+#: pattern.c:672
 #, c-format
 msgid "mismatched parenthesis: %s"
 msgstr "nespárované zátvorky: %s"
 
-#: pattern.c:701
+#: pattern.c:704
 msgid "empty pattern"
 msgstr "prázdny vzor"
 
-#: pattern.c:880
+#: pattern.c:883
 #, c-format
 msgid "error: unknown op %d (report this error)."
 msgstr "chyba: neznámy operand %d (oznámte túto chybu)."
 
-#: pattern.c:945 pattern.c:1074
+#: pattern.c:948 pattern.c:1077
 msgid "Compiling search pattern..."
 msgstr "Kompilujem vyhµadávací vzor..."
 
-#: pattern.c:959
+#: pattern.c:962
 msgid "Executing command on matching messages..."
 msgstr "Vykonávam príkaz na nájdených správach..."
 
-#: pattern.c:1022
+#: pattern.c:1025
 msgid "No messages matched criteria."
 msgstr "®iadne správy nesplnili kritérium."
 
-#: pattern.c:1112
+#: pattern.c:1115
 msgid "Search hit bottom without finding match"
 msgstr "Hµadanie narazilo na spodok bez nájdenia zhody"
 
-#: pattern.c:1123
+#: pattern.c:1126
 msgid "Search hit top without finding match"
 msgstr "Hµadanie narazilo na vrchol bez nájdenia zhody"
 
-#: pattern.c:1145
+#: pattern.c:1148
 msgid "Search interrupted."
 msgstr "Hµadanie bolo preru¹ené."
 
@@ -3004,43 +3004,43 @@ msgstr "Nezmenená správa bola zru¹ená."
 msgid "Mail not sent."
 msgstr "Po¹ta nebola odoslaná."
 
-#: send.c:1153
+#: send.c:1160
 msgid "Message postponed."
 msgstr "Správa bola odlo¾ená."
 
-#: send.c:1162
+#: send.c:1169
 msgid "No recipients are specified!"
 msgstr "Nie sú uvedení ¾iadni príjemcovia!"
 
-#: send.c:1167
+#: send.c:1174
 msgid "No recipients were specified."
 msgstr "Neboli uvedení ¾iadni príjemcovia!"
 
-#: send.c:1173
+#: send.c:1180
 msgid "No subject, abort sending?"
 msgstr "®iadny predmet, zru¹i» posielanie?"
 
-#: send.c:1177
+#: send.c:1184
 msgid "No subject specified."
 msgstr "Nebol uvedený predmet."
 
-#: send.c:1214
+#: send.c:1221
 msgid "Message edited. Really send?"
 msgstr "Správa bola upravená. Naozaj posla»?"
 
-#: send.c:1220
+#: send.c:1227
 msgid "Sending message..."
 msgstr "Posielam správu..."
 
-#: send.c:1322
+#: send.c:1329
 msgid "Could not send the message."
 msgstr "Nemo¾no posla» správu."
 
-#: send.c:1327
+#: send.c:1334
 msgid "Mail sent."
 msgstr "Správa bola odoslaná."
 
-#: send.c:1327
+#: send.c:1334
 msgid "Sending in background."
 msgstr ""
 

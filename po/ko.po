@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6pre1\n"
-"POT-Creation-Date: 1999-10-11 21:19+0200\n"
+"POT-Creation-Date: 1999-10-22 09:42+0200\n"
 "PO-Revision-Date: 1999-09-02 01:08+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarag.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -723,11 +723,11 @@ msgstr "복구된 메세지 없음."
 msgid "You are on the first message."
 msgstr "첫번째 메세지입니다."
 
-#: curs_main.c:1134 pattern.c:1109
+#: curs_main.c:1134 pattern.c:1112
 msgid "Search wrapped to top."
 msgstr "위에서 부터 검색."
 
-#: curs_main.c:1143 pattern.c:1120
+#: curs_main.c:1143 pattern.c:1123
 msgid "Search wrapped to bottom."
 msgstr "아래에서 부터 검색."
 
@@ -2174,7 +2174,7 @@ msgstr "마지막 항목입니다."
 msgid "You are on the first entry."
 msgstr "첫번째 항목입니다."
 
-#: menu.c:601 pattern.c:1055
+#: menu.c:601 pattern.c:1058
 msgid "Search for: "
 msgstr "찾아보기: "
 
@@ -2182,11 +2182,11 @@ msgstr "찾아보기: "
 msgid "Reverse search for: "
 msgstr "거꾸로 찾아보기: "
 
-#: menu.c:613 pattern.c:1088
+#: menu.c:613 pattern.c:1091
 msgid "No search pattern."
 msgstr "패턴을 찾을 수 없음."
 
-#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1153
+#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1156
 msgid "Not found."
 msgstr "찾을 수 없음."
 
@@ -2351,79 +2351,79 @@ msgstr "인용문 이후에 더 이상의 비 인용문 없음."
 msgid "multipart message has no boundary parameter!"
 msgstr "멀티파트 메세지에 경계 변수가 없음!"
 
-#: pattern.c:236
+#: pattern.c:239
 #, c-format
 msgid "Error in expression: %s"
 msgstr "표현식에서 오류: %s"
 
-#: pattern.c:333
+#: pattern.c:336
 #, c-format
 msgid "Invalid day of month: %s"
 msgstr "잘못된 날짜 입력: %s."
 
-#: pattern.c:347
+#: pattern.c:350
 #, c-format
 msgid "Invalid month: %s"
 msgstr "잘못된 달 입력: %s"
 
-#: pattern.c:401
+#: pattern.c:404
 msgid "error in expression"
 msgstr "표현식에서 오류"
 
-#: pattern.c:586 pattern.c:694
+#: pattern.c:589 pattern.c:697
 #, c-format
 msgid "error in pattern at: %s"
 msgstr "패턴에서 오류: %s"
 
-#: pattern.c:634
+#: pattern.c:637
 #, c-format
 msgid "%c: invalid command"
 msgstr "%c: 잘못된 명령어"
 
-#: pattern.c:640
+#: pattern.c:643
 #, c-format
 msgid "%c: not supported in this mode"
 msgstr "%c: 현재 방식에서 지원되지 않음"
 
-#: pattern.c:653
+#: pattern.c:656
 msgid "missing parameter"
 msgstr "매개 변수가 빠짐"
 
-#: pattern.c:669
+#: pattern.c:672
 #, c-format
 msgid "mismatched parenthesis: %s"
 msgstr "삽입어구가 맞지 않음: %s"
 
-#: pattern.c:701
+#: pattern.c:704
 msgid "empty pattern"
 msgstr "패턴이 없음"
 
-#: pattern.c:880
+#: pattern.c:883
 #, c-format
 msgid "error: unknown op %d (report this error)."
 msgstr "오류: 알 수 없는 작동 %d (오류 보고 바람)."
 
-#: pattern.c:945 pattern.c:1074
+#: pattern.c:948 pattern.c:1077
 msgid "Compiling search pattern..."
 msgstr "검색 패턴 편집..."
 
-#: pattern.c:959
+#: pattern.c:962
 msgid "Executing command on matching messages..."
 msgstr "선택된 메세지에 명령 실행중..."
 
-#: pattern.c:1022
+#: pattern.c:1025
 msgid "No messages matched criteria."
 msgstr "일치하는 메세지가 없음."
 
-#: pattern.c:1112
+#: pattern.c:1115
 msgid "Search hit bottom without finding match"
 msgstr ""
 
-#: pattern.c:1123
+#: pattern.c:1126
 msgid "Search hit top without finding match"
 msgstr ""
 
-#: pattern.c:1145
+#: pattern.c:1148
 msgid "Search interrupted."
 msgstr "찾는 도중 중단됨."
 
@@ -2979,43 +2979,43 @@ msgstr "변경되지 않은 메시지 취소함."
 msgid "Mail not sent."
 msgstr "보내지 않았음."
 
-#: send.c:1153
+#: send.c:1160
 msgid "Message postponed."
 msgstr "발신 연기되었음."
 
-#: send.c:1162
+#: send.c:1169
 msgid "No recipients are specified!"
 msgstr "발신인 지정하지 않았음!"
 
-#: send.c:1167
+#: send.c:1174
 msgid "No recipients were specified."
 msgstr "발신인 지정하지 않았었음."
 
-#: send.c:1173
+#: send.c:1180
 msgid "No subject, abort sending?"
 msgstr "제목 없음, 발신을 취소할까요?"
 
-#: send.c:1177
+#: send.c:1184
 msgid "No subject specified."
 msgstr "제목이 지정되지 않음."
 
-#: send.c:1214
+#: send.c:1221
 msgid "Message edited. Really send?"
 msgstr "메세지가 수정됨. 정말 보낼까요?"
 
-#: send.c:1220
+#: send.c:1227
 msgid "Sending message..."
 msgstr "메세지 보내는 중..."
 
-#: send.c:1322
+#: send.c:1329
 msgid "Could not send the message."
 msgstr "메세지를 보낼 수 없음."
 
-#: send.c:1327
+#: send.c:1334
 msgid "Mail sent."
 msgstr "편지 보냄."
 
-#: send.c:1327
+#: send.c:1334
 msgid "Sending in background."
 msgstr "백그라운드로 보냄."
 

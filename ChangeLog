@@ -1,3 +1,68 @@
+Wed Oct 20 14:51:57 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/id.po: new indonesian translation.
+
+	* po/id.po, po/el.po: translation updates.
+
+	* configure.in: Don't use GNU grep specific options.
+
+Tue Oct 19 08:04:48 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/el.po: New greek translation.
+
+Sat Oct 16 15:19:29 1999  Thomas Roessler  <roessler@guug.de>
+
+	* Makefile.am: [stable] doc/PGP-Notes.txt has an extension. ups.
+
+	* send.c: [stable] Fix Debian bug #47408.
+
+	* send.c:
+	Fix Debian bug #47408: When the postponed folder is a maildir,
+	messages should only be written to the _new_ subdirectory.
+
+	* po/nl.po: New nl translation from Johan van Selst <johans@stack.nl>.
+
+	* po/cs.po:
+	New cs translation from Jiri Pavlovsky <pavlovsk@ff.cuni.cz>.
+
+	* po/zh_TW.Big5.po:
+	[stable] chinese translation fixes from Anthony Wong
+	<ypwong@debian.org>.
+
+	* init.h: scoring documentation fix.
+
+	* globals.h, init.h, mutt.h, mx.c, protos.h, score.c, sort.c:
+	Scoring improvements.
+
+Thu Oct 14 16:09:10 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/ru.po: New Russian tranlation for stable.
+
+	* contrib/gpg.rc: New gpg.rc from Roland Rosenfeld.
+
+	* po/fr.po: [stable] New french translation.
+
+	* po/de.po: [stable] Fixes to the German translation.
+
+	* pattern.c:
+	[stable] Fix a segmentation fault when attempting to search
+	pgp-encrypted messages.
+
+	* pattern.c:
+	Fix a segmentation fault when search PGP-encrypted messages.
+
+Mon Oct 11 20:26:41 1999  Thomas Roessler  <roessler@guug.de>
+
+	* VERSION, po/es.po, reldate.h, ChangeLog:
+	automatic post-release commit for mutt-0.96.8
+
+	* po/zh_TW.Big5.po, po/uk.po, po/sk.po, po/ru.po, po/pl.po, po/nl.po, po/ko.po, po/it.po, po/id.po, po/fr.po, po/es.po, po/el.po, po/de.po, po/cs.po, VERSION, reldate.h, ChangeLog:
+	post-release commit for 1.0pre4.
+
+	* po/zh_TW.Big5.po: New Chinese Translation.
+
+	* dotlock.c: [stable] Use dotlock.c from unstable.
+
 Mon Oct 11 19:16:13 1999  Thomas Roessler  <roessler@guug.de>
 
 	* po/zh_TW.Big5.po: New Chinese Translation.

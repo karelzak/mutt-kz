@@ -1,6 +1,8 @@
 Major changes since 0.95
 ------------------------
 
+- We call it 1.0 now.
+
 - Adding $in_reply_to, but with a different default which is safe
   and should not trigger rfc2047 encoding.  Please don't use %n,
   localized dates or similar things with this format.

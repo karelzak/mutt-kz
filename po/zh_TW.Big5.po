@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.0pre4\n"
-"POT-Creation-Date: 1999-10-11 21:19+0200\n"
+"POT-Creation-Date: 1999-10-22 09:42+0200\n"
 "PO-Revision-Date: 1999-10-15 00:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -721,11 +721,11 @@ msgstr "沒有要反刪除的信件。"
 msgid "You are on the first message."
 msgstr "您已經在第一封信了。"
 
-#: curs_main.c:1134 pattern.c:1109
+#: curs_main.c:1134 pattern.c:1112
 msgid "Search wrapped to top."
 msgstr "搜尋至開頭。"
 
-#: curs_main.c:1143 pattern.c:1120
+#: curs_main.c:1143 pattern.c:1123
 msgid "Search wrapped to bottom."
 msgstr "搜尋至結尾。"
 
@@ -2184,7 +2184,7 @@ msgstr "您已經在最後一筆記錄了。"
 msgid "You are on the first entry."
 msgstr "您已經在第一筆記錄了。"
 
-#: menu.c:601 pattern.c:1055
+#: menu.c:601 pattern.c:1058
 msgid "Search for: "
 msgstr "搜尋："
 
@@ -2192,11 +2192,11 @@ msgstr "搜尋："
 msgid "Reverse search for: "
 msgstr "向上搜尋："
 
-#: menu.c:613 pattern.c:1088
+#: menu.c:613 pattern.c:1091
 msgid "No search pattern."
 msgstr "沒有搜尋的格式。"
 
-#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1153
+#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1156
 msgid "Not found."
 msgstr "沒有找到。"
 
@@ -2361,79 +2361,79 @@ msgstr "在引言後有過多的非引言文字。"
 msgid "multipart message has no boundary parameter!"
 msgstr "郵件沒有分隔的變數!"
 
-#: pattern.c:236
+#: pattern.c:239
 #, c-format
 msgid "Error in expression: %s"
 msgstr "在語法上的錯誤: %s"
 
-#: pattern.c:333
+#: pattern.c:336
 #, c-format
 msgid "Invalid day of month: %s"
 msgstr "無效的日期：%s"
 
-#: pattern.c:347
+#: pattern.c:350
 #, c-format
 msgid "Invalid month: %s"
 msgstr "無效的月份：%s"
 
-#: pattern.c:401
+#: pattern.c:404
 msgid "error in expression"
 msgstr "語法上的錯誤"
 
-#: pattern.c:586 pattern.c:694
+#: pattern.c:589 pattern.c:697
 #, c-format
 msgid "error in pattern at: %s"
 msgstr "樣式上的錯誤: %s"
 
-#: pattern.c:634
+#: pattern.c:637
 #, c-format
 msgid "%c: invalid command"
 msgstr "%c: 無效的指令"
 
-#: pattern.c:640
+#: pattern.c:643
 #, c-format
 msgid "%c: not supported in this mode"
 msgstr "%c: 這個模式不支援"
 
-#: pattern.c:653
+#: pattern.c:656
 msgid "missing parameter"
 msgstr "錯失參數"
 
-#: pattern.c:669
+#: pattern.c:672
 #, c-format
 msgid "mismatched parenthesis: %s"
 msgstr "錯誤的附帶: %s"
 
-#: pattern.c:701
+#: pattern.c:704
 msgid "empty pattern"
 msgstr "空的格式"
 
-#: pattern.c:880
+#: pattern.c:883
 #, c-format
 msgid "error: unknown op %d (report this error)."
 msgstr "錯誤: 不明的 op %d (請回報這個錯誤)。"
 
-#: pattern.c:945 pattern.c:1074
+#: pattern.c:948 pattern.c:1077
 msgid "Compiling search pattern..."
 msgstr "編譯搜尋樣式中..."
 
-#: pattern.c:959
+#: pattern.c:962
 msgid "Executing command on matching messages..."
 msgstr "執行命令在合適的郵件中..."
 
-#: pattern.c:1022
+#: pattern.c:1025
 msgid "No messages matched criteria."
 msgstr "沒有郵件符合標準。"
 
-#: pattern.c:1112
+#: pattern.c:1115
 msgid "Search hit bottom without finding match"
 msgstr "已搜尋至結尾，並沒有發現任何符合"
 
-#: pattern.c:1123
+#: pattern.c:1126
 msgid "Search hit top without finding match"
 msgstr "已搜尋至開頭，並沒有發現任何符合"
 
-#: pattern.c:1145
+#: pattern.c:1148
 msgid "Search interrupted."
 msgstr "搜尋已被中斷。"
 
@@ -2989,43 +2989,43 @@ msgstr "中斷沒有修改過的信件"
 msgid "Mail not sent."
 msgstr "信件沒有寄出。"
 
-#: send.c:1153
+#: send.c:1160
 msgid "Message postponed."
 msgstr "信件被延遲寄出。"
 
-#: send.c:1162
+#: send.c:1169
 msgid "No recipients are specified!"
 msgstr "沒有指定接受者！"
 
-#: send.c:1167
+#: send.c:1174
 msgid "No recipients were specified."
 msgstr "沒有指定接受者。"
 
-#: send.c:1173
+#: send.c:1180
 msgid "No subject, abort sending?"
 msgstr "沒有信件標題，要中斷寄信的工作?"
 
-#: send.c:1177
+#: send.c:1184
 msgid "No subject specified."
 msgstr "沒有指定標題。"
 
-#: send.c:1214
+#: send.c:1221
 msgid "Message edited. Really send?"
 msgstr "信件已經編輯過。確定要寄出？"
 
-#: send.c:1220
+#: send.c:1227
 msgid "Sending message..."
 msgstr "正在寄出信件中..."
 
-#: send.c:1322
+#: send.c:1329
 msgid "Could not send the message."
 msgstr "無法寄出信件"
 
-#: send.c:1327
+#: send.c:1334
 msgid "Mail sent."
 msgstr "信件已經寄出。"
 
-#: send.c:1327
+#: send.c:1334
 msgid "Sending in background."
 msgstr ""
 
