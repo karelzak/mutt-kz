@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.0pre3i\n"
-"POT-Creation-Date: 1999-09-25 08:52+0200\n"
+"POT-Creation-Date: 1999-10-11 21:19+0200\n"
 "PO-Revision-Date: 1999-09-27\n"
 "Last-Translator: Pawe³ Dziekoñski <pdziekonski@mml.ch.pwr.wroc.pl>\n"
 "Language-Team: POLISH <pl@li.org>\n"
@@ -27,7 +27,7 @@ msgstr "Wyj¶cie"
 msgid "Select"
 msgstr "Wybierz"
 
-#: addrbook.c:33 browser.c:56 compose.c:83 curs_main.c:264 pager.c:1469
+#: addrbook.c:33 browser.c:56 compose.c:85 curs_main.c:264 pager.c:1469
 #: pgpkey.c:180 postpone.c:36 query.c:48 recvattach.c:61
 msgid "Help"
 msgstr "Pomoc"
@@ -79,7 +79,7 @@ msgstr "Nie pasuj±cy szablon nazwy, kontynuowaæ?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "Pole \"compose\" w pliku 'mailcap' wymaga %%s"
 
-#: attach.c:132 attach.c:257 commands.c:155 compose.c:1019 curs_lib.c:128
+#: attach.c:132 attach.c:257 commands.c:155 compose.c:1021 curs_lib.c:128
 #: curs_lib.c:323
 #, c-format
 msgid "Error running \"%s\"!"
@@ -96,7 +96,8 @@ msgstr "B³±d podczas próby otwarcia pliku w celu eliminacji nag³ówków."
 #: attach.c:191
 #, c-format
 msgid "No mailcap compose entry for %s, creating empty file."
-msgstr "Brak pola \"compose\" dla %s w pliku 'mailcap', tworzenie pustego pliku."
+msgstr ""
+"Brak pola \"compose\" dla %s w pliku 'mailcap', tworzenie pustego pliku."
 
 #. For now, editing requires a file, no piping
 #: attach.c:251
@@ -310,12 +311,17 @@ msgid "Pipe to command: "
 msgstr "Wy¶lij przez potok do polecenia: "
 
 #: commands.c:338
-msgid "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr "Odwr-Sort (d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)a?: "
+msgid ""
+"Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr ""
+"Odwr-Sort "
+"(d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)a?: "
 
 #: commands.c:339
-msgid "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr "Sortuj (d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)a?: "
+msgid ""
+"Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr ""
+"Sortuj (d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)a?: "
 
 #: commands.c:340
 msgid "dfrsotuzc"
@@ -379,172 +385,177 @@ msgstr "List wydrukowany"
 msgid "Messages printed"
 msgstr "Listy wydrukowane"
 
-#: compose.c:76
+#: compose.c:35
+#, fuzzy
+msgid "There are no attachments."
+msgstr "Brak listów."
+
+#: compose.c:78
 msgid "Send"
 msgstr "Wy¶lij"
 
-#: compose.c:77
+#: compose.c:79
 msgid "Abort"
 msgstr "Anuluj"
 
-#: compose.c:81 compose.c:538
+#: compose.c:83 compose.c:540
 msgid "Attach file"
 msgstr "Do³±cz plik"
 
-#: compose.c:82
+#: compose.c:84
 msgid "Descrip"
 msgstr "Opis"
 
-#: compose.c:103
+#: compose.c:105
 msgid "Sign, Encrypt"
 msgstr "Podpisz i zaszyfruj"
 
-#: compose.c:105
+#: compose.c:107
 msgid "Encrypt"
 msgstr "Zaszyfruj"
 
-#: compose.c:107
+#: compose.c:109
 msgid "Sign"
 msgstr "Podpisz"
 
-#: compose.c:109
+#: compose.c:111
 msgid "Clear"
 msgstr "Bez kodowania"
 
-#: compose.c:116
+#: compose.c:118
 msgid " sign as: "
 msgstr " podpisz jako: "
 
-#: compose.c:116
+#: compose.c:118
 msgid "<default>"
 msgstr "<domy¶lnie>"
 
-#: compose.c:117 compose.c:191
+#: compose.c:119 compose.c:193
 msgid "MIC algorithm: "
 msgstr "Algorytm MIC: "
 
-#: compose.c:132
+#: compose.c:134
 msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
 msgstr ""
 "(z)aszyfruj, podpi(s)z, podpisz j(a)ko, o(b)a, algoryt(m) MIC, b(e)z PGP? "
 
-#: compose.c:133
+#: compose.c:135
 msgid "esabmf"
 msgstr "zsabme"
 
-#: compose.c:150
+#: compose.c:152
 msgid "Can't open your secret key ring!"
 msgstr "Nie mo¿na otworzyæ twego tajnego breloczka kluczy!"
 
-#: compose.c:155
+#: compose.c:157
 msgid "Sign as: "
 msgstr "Podpisaæ jako: "
 
-#: compose.c:175
+#: compose.c:177
 msgid "An unkown PGP version was defined for signing."
 msgstr "Wybrana do podpisywania wersja PGP jest nieznana."
 
-#: compose.c:185
+#: compose.c:187
 msgid "This doesn't make sense if you don't want to sign the message."
 msgstr "To nie ma sensu, je¿eli nie chcesz podpisywaæ listu."
 
-#: compose.c:196
+#: compose.c:198
 msgid "Unknown MIC algorithm, valid ones are: pgp-md5, pgp-sha1, pgp-rmd160"
 msgstr "Nieznany algorytm MIC, dozwolone s±: pgp-md5, pgp-sha1, pgp-rmd160"
 
-#: compose.c:232
+#: compose.c:234
 #, c-format
 msgid "%s [#%d] no longer exists!"
 msgstr "%s [#%d] ju¿ nie istnieje!"
 
-#: compose.c:240
+#: compose.c:242
 #, c-format
 msgid "%s [#%d] modified. Update encoding?"
 msgstr "%s [#%d] zmieniony. Zaktualizowaæ kodowanie?"
 
-#: compose.c:281
+#: compose.c:283
 msgid "===== Attachments ====="
 msgstr "===== Za³±cznik ====="
 
-#: compose.c:319
+#: compose.c:321
 msgid "You may not delete the only attachment."
 msgstr "Nie mo¿esz skasowaæ jedynego za³±cznika."
 
-#: compose.c:393
+#: compose.c:395
 msgid "Compose"
 msgstr "Nowy list"
 
-#: compose.c:543
+#: compose.c:545
 msgid "Open mailbox to attach message from"
 msgstr "Otwórz skrzynkê w celu do³±czenia listu"
 
-#: compose.c:585
+#: compose.c:587
 msgid "No messages in that folder."
 msgstr "Brak listów w tym folderze."
 
-#: compose.c:592
+#: compose.c:594
 msgid "Tag the messages you want to attach!"
 msgstr "Zaznacz listy do do³±czenia!"
 
-#: compose.c:627 compose.c:647
+#: compose.c:629 compose.c:649
 msgid "Unable to attach!"
 msgstr "Nie mo¿na do³±czyæ!"
 
-#: compose.c:783
+#: compose.c:785
 msgid "Invalid encoding."
 msgstr "B³êdne kodowanie."
 
-#: compose.c:798
+#: compose.c:800
 msgid "Save a copy of this message?"
 msgstr "Zachowaæ kopiê tego listu?"
 
-#: compose.c:845
+#: compose.c:847
 msgid "Rename to: "
 msgstr "Zmieñ nazwê na: "
 
-#: compose.c:850
+#: compose.c:852
 #, c-format
 msgid "Can't stat: %s"
 msgstr "Nie mo¿na ustaliæ statusu: %s"
 
-#: compose.c:877
+#: compose.c:879
 msgid "New file: "
 msgstr "Nowy plik: "
 
-#: compose.c:890
+#: compose.c:892
 msgid "Content-Type is of the form base/sub"
 msgstr "Typ \"Content-Type\" musi byæ w postaci podstawowy/po¶ledni"
 
-#: compose.c:896
+#: compose.c:898
 #, c-format
 msgid "Unknown Content-Type %s"
 msgstr "Nieznany rodzaj \"Content-Type\" %s"
 
-#: compose.c:909
+#: compose.c:911
 #, c-format
 msgid "Can't create file %s"
 msgstr "Nie mo¿na utworzyæ %s"
 
-#: compose.c:917
+#: compose.c:919
 msgid "What we have here is a failure to make an attachment"
 msgstr "Mamy tu b³±d tworzenia za³±cznika"
 
-#: compose.c:980
+#: compose.c:982
 msgid "Postpone this message?"
 msgstr "Zachowaæ ten list do pó¼niejszej obróbki i ewentualnej wysy³ki?"
 
-#: compose.c:1034
+#: compose.c:1036
 msgid "Write message to mailbox"
 msgstr "Zapisz list do skrzynki"
 
-#: compose.c:1038
+#: compose.c:1040
 #, c-format
 msgid "Writing message to %s ..."
 msgstr "Zapisywanie listu do %s ..."
 
-#: compose.c:1049
+#: compose.c:1051
 msgid "Message written."
 msgstr "List zapisany."
 
@@ -573,7 +584,7 @@ msgstr "Naci¶nij dowolny klawisz by kontynuowaæ..."
 msgid " ('?' for list): "
 msgstr " ('?' wy¶wietla listê): "
 
-#: curs_main.c:50 curs_main.c:537
+#: curs_main.c:50 curs_main.c:538
 msgid "No mailbox is open."
 msgstr "Nie otwarto ¿adnej skrzynki."
 
@@ -585,7 +596,7 @@ msgstr "Brak listów."
 msgid "Mailbox is read-only."
 msgstr "Skrzynka jest tylko do odczytu."
 
-#: curs_main.c:53 pager.c:56
+#: curs_main.c:53 pager.c:56 recvattach.c:874
 msgid "Function not permitted in attach-message mode."
 msgstr ""
 
@@ -625,130 +636,130 @@ msgstr "Odpowiedz"
 msgid "Group"
 msgstr "Grupuj"
 
-#: curs_main.c:434
+#: curs_main.c:435
 msgid "Mailbox was externally modified.  Flags may be wrong."
 msgstr "Skrzynka zosta³a zmieniona z zewn±trz. Flagi mog± byæ nieaktualne."
 
-#: curs_main.c:437
+#: curs_main.c:438
 msgid "New mail in this mailbox."
 msgstr "Nowa poczta w tej skrzynce."
 
-#: curs_main.c:543
+#: curs_main.c:544
 msgid "No tagged messages."
 msgstr "Brak zaznaczonych listów."
 
-#: curs_main.c:623
+#: curs_main.c:624
 msgid "Jump to message: "
 msgstr "Skocz do listu: "
 
-#: curs_main.c:629
+#: curs_main.c:630
 msgid "Argument must be a message number."
 msgstr "Argumentem musi byæ numer listu."
 
-#: curs_main.c:662
+#: curs_main.c:663
 msgid "That message is not visible."
 msgstr "Ten list nie jest widoczny."
 
-#: curs_main.c:665
+#: curs_main.c:666
 msgid "Invalid message number."
 msgstr "B³êdny numer listu."
 
-#: curs_main.c:678
+#: curs_main.c:679
 msgid "Delete messages matching: "
 msgstr "Skasuj listy pasuj±ce do wzorca: "
 
-#: curs_main.c:700
+#: curs_main.c:701
 msgid "No limit pattern is in effect."
 msgstr "Wzorzec ograniczaj±cy nie zosta³ okre¶lony."
 
 #. i18n: ask for a limit to apply
-#: curs_main.c:705
+#: curs_main.c:706
 #, c-format
 msgid "Limit: %s"
 msgstr "Wzorzec ograniczaj±cy: %s"
 
-#: curs_main.c:714
+#: curs_main.c:715
 msgid "Limit to messages matching: "
 msgstr "Ogranicz do pasuj±cych listów: "
 
-#: curs_main.c:744
+#: curs_main.c:745
 msgid "Quit Mutt?"
 msgstr "Wyj¶æ z Mutta?"
 
-#: curs_main.c:846
+#: curs_main.c:847
 msgid "Tag messages matching: "
 msgstr "Zaznacz pasuj±ce listy: "
 
-#: curs_main.c:854
+#: curs_main.c:855
 msgid "Undelete messages matching: "
 msgstr "Odtwórz pasuj±ce listy: "
 
-#: curs_main.c:861
+#: curs_main.c:862
 msgid "Untag messages matching: "
 msgstr "Odznacz pasuj±ce listy: "
 
-#: curs_main.c:879
+#: curs_main.c:880
 msgid "Open mailbox in read-only mode"
 msgstr "Otwórz skrzynkê tylko do odczytu"
 
-#: curs_main.c:881
+#: curs_main.c:882
 msgid "Open mailbox"
 msgstr "Otwórz skrzynkê"
 
-#: curs_main.c:897 mx.c:457 mx.c:598
+#: curs_main.c:898 mx.c:457 mx.c:598
 #, c-format
 msgid "%s is not a mailbox."
 msgstr "%s nie jest skrzynk±."
 
-#: curs_main.c:979
+#: curs_main.c:980
 msgid "Exit Mutt without saving?"
 msgstr "Wyj¶æ z Mutta bez zapisywania?"
 
-#: curs_main.c:996 curs_main.c:1020
+#: curs_main.c:997 curs_main.c:1021
 msgid "You are on the last message."
 msgstr "To jest ostatni list."
 
-#: curs_main.c:1003 curs_main.c:1045
+#: curs_main.c:1004 curs_main.c:1046
 msgid "No undeleted messages."
 msgstr "Brak odtworzonych listów."
 
-#: curs_main.c:1038 curs_main.c:1061
+#: curs_main.c:1039 curs_main.c:1062
 msgid "You are on the first message."
 msgstr "To jest pierwszy list."
 
-#: curs_main.c:1133 pattern.c:1109
+#: curs_main.c:1134 pattern.c:1109
 msgid "Search wrapped to top."
 msgstr "Kontynuacja poszukiwania od pocz±tku."
 
-#: curs_main.c:1142 pattern.c:1120
+#: curs_main.c:1143 pattern.c:1120
 msgid "Search wrapped to bottom."
 msgstr "Kontynuacja poszukiwania od koñca."
 
-#: curs_main.c:1175
+#: curs_main.c:1176
 msgid "No new messages"
 msgstr "Brak nowych listów"
 
-#: curs_main.c:1175
+#: curs_main.c:1176
 msgid "No unread messages"
 msgstr "Brak nieprzeczytanych listów"
 
-#: curs_main.c:1176
+#: curs_main.c:1177
 msgid " in this limited view"
 msgstr " w trybie ograniczonego przegl±dania"
 
-#: curs_main.c:1286
+#: curs_main.c:1287
 msgid "No more threads."
 msgstr "Nie ma wiêcej w±tków."
 
-#: curs_main.c:1288
+#: curs_main.c:1289
 msgid "You are on the first thread."
 msgstr "To pierwszy w±tek."
 
-#: curs_main.c:1341
+#: curs_main.c:1342
 msgid "Thread contains unread messages."
 msgstr "Watek zawiera nieprzeczytane listy."
 
-#: curs_main.c:1354 flags.c:219 thread.c:661
+#: curs_main.c:1355 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
 msgstr "W±tkowanie nie w³±czone."
 
@@ -2070,33 +2081,33 @@ msgstr ""
 "\n"
 "Parametry kompilacji:"
 
-#: main.c:308
+#: main.c:309
 msgid "Error initializing terminal."
 msgstr "B³±d inicjalizacji terminala."
 
-#: main.c:406
+#: main.c:407
 #, c-format
 msgid "Debugging at level %d.\n"
 msgstr "Wykrywanie b³êdów na poziomie %d.\n"
 
-#: main.c:408
+#: main.c:409
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
 msgstr "Wykrywanie b³êdów nie zosta³o wkompilowane. Zignorowano.\n"
 
-#: main.c:546
+#: main.c:547
 msgid "No recipients specified.\n"
 msgstr "Nie wskazano adresatów listu.\n"
 
-#: main.c:619
+#: main.c:620
 #, c-format
 msgid "%s: unable to attach file.\n"
 msgstr "%s: nie mo¿na do³±czyæ pliku.\n"
 
-#: main.c:639
+#: main.c:640
 msgid "No mailbox with new mail."
 msgstr "Brak foldera z now± poczt±."
 
-#: main.c:673
+#: main.c:674
 msgid "Mailbox is empty."
 msgstr "Folder poczty jest pusty."
 
@@ -2363,7 +2374,7 @@ msgstr "Nie ma wiêcej cytowanego tekstu."
 msgid "No more unquoted text after quoted text."
 msgstr "Brak tekstu za cytowanym fragmentem."
 
-#: parse.c:503
+#: parse.c:505
 msgid "multipart message has no boundary parameter!"
 msgstr "wieloczê¶ciowy list nie ma warto¶ci granicznych!"
 
@@ -2896,19 +2907,19 @@ msgstr "Przekazaæ listy do %s...?"
 msgid "Bounce message to %s...?"
 msgstr "Przekazaæ list do %s...?"
 
-#: recvattach.c:941
+#: recvattach.c:943
 msgid "Attachments"
 msgstr "Za³±czniki"
 
-#: recvattach.c:999
+#: recvattach.c:1001
 msgid "Deletion of attachments from PGP messages is unsupported."
 msgstr "Kasowanie za³±czników z listów PGP nie jest mo¿liwe."
 
-#: recvattach.c:1019 recvattach.c:1036
+#: recvattach.c:1021 recvattach.c:1038
 msgid "Only deletion of multipart attachments is supported."
 msgstr "Mo¿liwe jest jedynie kasowanie wieloczê¶ciowych za³±czników."
 
-#: recvattach.c:1087
+#: recvattach.c:1089
 msgid "This operation is not currently supported for PGP messages."
 msgstr "Ten rodzaj operacji nie jest na razie wykonalny na listach PGP."
 
@@ -2963,75 +2974,75 @@ msgstr "Brak zaznaczonych listów!"
 msgid "No mailing lists found!"
 msgstr "Brak zdefiniowanych list pocztowych!"
 
-#: send.c:627
+#: send.c:629
 msgid "Include message in reply?"
 msgstr "Zacytowaæ oryginalny list w odpowiedzi?"
 
-#: send.c:641
+#: send.c:643
 msgid "Could not include all requested messages!"
 msgstr "Nie mo¿na do³±czyæ wszystkich wskazanych listów!"
 
-#: send.c:654
+#: send.c:656
 msgid "Forward MIME encapsulated?"
 msgstr "Przes³aæ dalej w trybie MIME?"
 
 #. If the user is composing a new message, check to see if there
 #. * are any postponed messages first.
 #.
-#: send.c:865
+#: send.c:867
 msgid "Recall postponed message?"
 msgstr "Wywo³aæ od³o¿ony list?"
 
-#: send.c:1097
+#: send.c:1099
 msgid "Abort unmodified message?"
 msgstr "List nie zosta³ zmieniony. Zaniechaæ wys³ania?"
 
-#: send.c:1099
+#: send.c:1101
 msgid "Aborted unmodified message."
 msgstr "List nie zosta³ zmieniony. Zaniechano wys³ania."
 
 #. abort
-#: send.c:1138
+#: send.c:1140
 msgid "Mail not sent."
 msgstr "List nie zosta³ wys³any."
 
-#: send.c:1151
+#: send.c:1153
 msgid "Message postponed."
 msgstr "List od³o¿ono."
 
-#: send.c:1160
+#: send.c:1162
 msgid "No recipients are specified!"
 msgstr "Nie wskazano adresatów!"
 
-#: send.c:1165
+#: send.c:1167
 msgid "No recipients were specified."
 msgstr "Nie wskazano adresatów."
 
-#: send.c:1171
+#: send.c:1173
 msgid "No subject, abort sending?"
 msgstr "Brak tematu, zaniechaæ wys³ania?"
 
-#: send.c:1175
+#: send.c:1177
 msgid "No subject specified."
 msgstr "Brak tematu."
 
-#: send.c:1212
+#: send.c:1214
 msgid "Message edited. Really send?"
 msgstr "Zmieniono tre¶æ listu. Czy na pewno wys³aæ?"
 
-#: send.c:1218
+#: send.c:1220
 msgid "Sending message..."
 msgstr "Wysy³anie listu..."
 
-#: send.c:1320
+#: send.c:1322
 msgid "Could not send the message."
 msgstr "Wys³anie listu nie powiod³o siê."
 
-#: send.c:1325
+#: send.c:1327
 msgid "Mail sent."
 msgstr "Poczta wys³ana."
 
-#: send.c:1325
+#: send.c:1327
 msgid "Sending in background."
 msgstr "Wysy³anie w tle."
 

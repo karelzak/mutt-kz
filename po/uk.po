@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 1999-09-25 08:52+0200\n"
+"POT-Creation-Date: 1999-10-11 21:19+0200\n"
 "PO-Revision-Date: 1998-10-25 15:44+0200\n"
 "Last-Translator: Andrej N. Gritsenko <andrej@lucky.net>\n"
 "Language-Team: Ukrainian <uk@ua.net>\n"
@@ -23,7 +23,7 @@ msgstr "Вих╕д"
 msgid "Select"
 msgstr "Виб╕р"
 
-#: addrbook.c:33 browser.c:56 compose.c:83 curs_main.c:264 pager.c:1469
+#: addrbook.c:33 browser.c:56 compose.c:85 curs_main.c:264 pager.c:1469
 #: pgpkey.c:180 postpone.c:36 query.c:48 recvattach.c:61
 msgid "Help"
 msgstr "П╕дказка"
@@ -75,7 +75,7 @@ msgstr "Нема╓ в╕дпов╕дного ╕м'я, дал╕?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "Компонування (mailcap) потребу╓ %%s"
 
-#: attach.c:132 attach.c:257 commands.c:155 compose.c:1019 curs_lib.c:128
+#: attach.c:132 attach.c:257 commands.c:155 compose.c:1021 curs_lib.c:128
 #: curs_lib.c:323
 #, fuzzy, c-format
 msgid "Error running \"%s\"!"
@@ -378,51 +378,56 @@ msgstr "Пов╕домлення надруковано"
 msgid "Messages printed"
 msgstr "Пов╕домлення надруковано"
 
-#: compose.c:76
+#: compose.c:35
+#, fuzzy
+msgid "There are no attachments."
+msgstr "Нитка ма╓ нечитан╕ листи."
+
+#: compose.c:78
 msgid "Send"
 msgstr "Слати"
 
-#: compose.c:77
+#: compose.c:79
 msgid "Abort"
 msgstr "В╕дм╕на"
 
-#: compose.c:81 compose.c:538
+#: compose.c:83 compose.c:540
 msgid "Attach file"
 msgstr "Додати файл"
 
-#: compose.c:82
+#: compose.c:84
 msgid "Descrip"
 msgstr "Поясн."
 
-#: compose.c:103
+#: compose.c:105
 msgid "Sign, Encrypt"
 msgstr "П╕дпис, шифрування"
 
-#: compose.c:105
+#: compose.c:107
 msgid "Encrypt"
 msgstr "Шифрування"
 
-#: compose.c:107
+#: compose.c:109
 msgid "Sign"
 msgstr "П╕дпис"
 
-#: compose.c:109
+#: compose.c:111
 msgid "Clear"
 msgstr "Ан╕чог╕с╕нько"
 
-#: compose.c:116
+#: compose.c:118
 msgid " sign as: "
 msgstr " п╕дпис як:"
 
-#: compose.c:116
+#: compose.c:118
 msgid "<default>"
 msgstr ""
 
-#: compose.c:117 compose.c:191
+#: compose.c:119 compose.c:193
 msgid "MIC algorithm: "
 msgstr "Алгор╕тм MIC: "
 
-#: compose.c:132
+#: compose.c:134
 msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
@@ -430,122 +435,122 @@ msgstr ""
 "шифр.(e), п╕дп.(s), п╕дп. як(a), усе(b), зм╕на (m)ic алгоритму чи "
 "в╕дм╕на(f)? "
 
-#: compose.c:133
+#: compose.c:135
 msgid "esabmf"
 msgstr ""
 
-#: compose.c:150
+#: compose.c:152
 msgid "Can't open your secret key ring!"
 msgstr "Не в╕дкрива╓тся секретний ключ!"
 
-#: compose.c:155
+#: compose.c:157
 msgid "Sign as: "
 msgstr "П╕дпис як: "
 
-#: compose.c:175
+#: compose.c:177
 msgid "An unkown PGP version was defined for signing."
 msgstr "Вказана верс╕я PGP для п╕дпису нев╕дома."
 
-#: compose.c:185
+#: compose.c:187
 msgid "This doesn't make sense if you don't want to sign the message."
 msgstr "Нема╓ сенсу це робити, якщо ви не п╕дпису╓те пов╕домлення."
 
-#: compose.c:196
+#: compose.c:198
 msgid "Unknown MIC algorithm, valid ones are: pgp-md5, pgp-sha1, pgp-rmd160"
 msgstr "Нев╕домий алгор╕тм MIC, можлив╕ лише: pgp-md5, pgp-sha1, pgp-rmd160"
 
-#: compose.c:232
+#: compose.c:234
 #, c-format
 msgid "%s [#%d] no longer exists!"
 msgstr "%s [#%d] б╕льше не ╕сну╓!"
 
-#: compose.c:240
+#: compose.c:242
 #, c-format
 msgid "%s [#%d] modified. Update encoding?"
 msgstr "%s [#%d] зм╕нено. Зм╕нити кодування?"
 
-#: compose.c:281
+#: compose.c:283
 #, fuzzy
 msgid "===== Attachments ====="
 msgstr "Додатки"
 
-#: compose.c:319
+#: compose.c:321
 msgid "You may not delete the only attachment."
 msgstr "Це ╓дина частина, ╖╖ не можна видаляти."
 
-#: compose.c:393
+#: compose.c:395
 msgid "Compose"
 msgstr "Компонування"
 
-#: compose.c:543
+#: compose.c:545
 msgid "Open mailbox to attach message from"
 msgstr "Скринька, з яко╖ додати пов╕домлення"
 
-#: compose.c:585
+#: compose.c:587
 msgid "No messages in that folder."
 msgstr "Ця скринька зовс╕м порожня."
 
-#: compose.c:592
+#: compose.c:594
 msgid "Tag the messages you want to attach!"
 msgstr "Вид╕л╕ть пов╕домлення, що дода╓те!"
 
-#: compose.c:627 compose.c:647
+#: compose.c:629 compose.c:649
 msgid "Unable to attach!"
 msgstr "Неможливо додати!"
 
-#: compose.c:783
+#: compose.c:785
 msgid "Invalid encoding."
 msgstr "Нев╕рне кодування."
 
-#: compose.c:798
+#: compose.c:800
 msgid "Save a copy of this message?"
 msgstr "Зберегти коп╕ю цього пов╕домлення?"
 
-#: compose.c:845
+#: compose.c:847
 msgid "Rename to: "
 msgstr "Перейменувати у: "
 
-#: compose.c:850
+#: compose.c:852
 #, c-format
 msgid "Can't stat: %s"
 msgstr ""
 
-#: compose.c:877
+#: compose.c:879
 msgid "New file: "
 msgstr "Новий файл: "
 
-#: compose.c:890
+#: compose.c:892
 msgid "Content-Type is of the form base/sub"
 msgstr "Content-Type по форм╕ base/sub"
 
-#: compose.c:896
+#: compose.c:898
 #, c-format
 msgid "Unknown Content-Type %s"
 msgstr "Нев╕домий Content-Type %s"
 
-#: compose.c:909
+#: compose.c:911
 #, c-format
 msgid "Can't create file %s"
 msgstr "Неможливо створити файл %s"
 
-#: compose.c:917
+#: compose.c:919
 msgid "What we have here is a failure to make an attachment"
 msgstr "Ми ма╓мо зараз в╕дмову зробити додаток"
 
-#: compose.c:980
+#: compose.c:982
 msgid "Postpone this message?"
 msgstr "Залишити лист до подальшого редагування та в╕дправки?"
 
-#: compose.c:1034
+#: compose.c:1036
 msgid "Write message to mailbox"
 msgstr "Записати лист до поштово╖ скриньки"
 
-#: compose.c:1038
+#: compose.c:1040
 #, c-format
 msgid "Writing message to %s ..."
 msgstr "Запис листа до %s..."
 
-#: compose.c:1049
+#: compose.c:1051
 msgid "Message written."
 msgstr "Лист записано."
 
@@ -574,7 +579,7 @@ msgstr "Натисн╕ть будь-яку клав╕шу..."
 msgid " ('?' for list): "
 msgstr " ('?' - перел╕к): "
 
-#: curs_main.c:50 curs_main.c:537
+#: curs_main.c:50 curs_main.c:538
 msgid "No mailbox is open."
 msgstr "Нема╓ в╕дкрито╖ поштово╖ скриньки."
 
@@ -587,7 +592,7 @@ msgstr "Нитка ма╓ нечитан╕ листи."
 msgid "Mailbox is read-only."
 msgstr "Поштова скринька т╕льки для читання"
 
-#: curs_main.c:53 pager.c:56
+#: curs_main.c:53 pager.c:56 recvattach.c:874
 #, fuzzy
 msgid "Function not permitted in attach-message mode."
 msgstr "в цьому режимов╕ '%c' не п╕дтриму╓ться"
@@ -628,130 +633,130 @@ msgstr "В╕дп."
 msgid "Group"
 msgstr "Вс╕м"
 
-#: curs_main.c:434
+#: curs_main.c:435
 msgid "Mailbox was externally modified.  Flags may be wrong."
 msgstr "Поштову скриньку зм╕нила зовн╕шня програма. Флаги зм╕нено також."
 
-#: curs_main.c:437
+#: curs_main.c:438
 msgid "New mail in this mailbox."
 msgstr "Нова пошта у ц╕й поштов╕й скриньц╕."
 
-#: curs_main.c:543
+#: curs_main.c:544
 msgid "No tagged messages."
 msgstr "Жодного листа не вид╕лено."
 
-#: curs_main.c:623
+#: curs_main.c:624
 msgid "Jump to message: "
 msgstr "Перех╕д до листа: "
 
-#: curs_main.c:629
+#: curs_main.c:630
 msgid "Argument must be a message number."
 msgstr "Аргумент повинен бути номером листа."
 
-#: curs_main.c:662
+#: curs_main.c:663
 msgid "That message is not visible."
 msgstr "Цей лист не можна побачити."
 
-#: curs_main.c:665
+#: curs_main.c:666
 msgid "Invalid message number."
 msgstr "Нев╕рний номер листа."
 
-#: curs_main.c:678
+#: curs_main.c:679
 msgid "Delete messages matching: "
 msgstr "Видалити листи за шаблоном: "
 
-#: curs_main.c:700
+#: curs_main.c:701
 msgid "No limit pattern is in effect."
 msgstr ""
 
 #. i18n: ask for a limit to apply
-#: curs_main.c:705
+#: curs_main.c:706
 #, c-format
 msgid "Limit: %s"
 msgstr ""
 
-#: curs_main.c:714
+#: curs_main.c:715
 msgid "Limit to messages matching: "
 msgstr ""
 
-#: curs_main.c:744
+#: curs_main.c:745
 msgid "Quit Mutt?"
 msgstr "Вийти з Mutt?"
 
-#: curs_main.c:846
+#: curs_main.c:847
 msgid "Tag messages matching: "
 msgstr "Вид╕лити листи за шаблоном: "
 
-#: curs_main.c:854
+#: curs_main.c:855
 msgid "Undelete messages matching: "
 msgstr "В╕дновити листи за шаблоном: "
 
-#: curs_main.c:861
+#: curs_main.c:862
 msgid "Untag messages matching: "
 msgstr "Зняти вид╕лення з лист╕в за шаблоном: "
 
-#: curs_main.c:879
+#: curs_main.c:880
 msgid "Open mailbox in read-only mode"
 msgstr "В╕дкрити скриньку лише для читання"
 
-#: curs_main.c:881
+#: curs_main.c:882
 msgid "Open mailbox"
 msgstr "В╕дкрити скриньку"
 
-#: curs_main.c:897 mx.c:457 mx.c:598
+#: curs_main.c:898 mx.c:457 mx.c:598
 #, c-format
 msgid "%s is not a mailbox."
 msgstr "%s не ╓ поштовою скринькою."
 
-#: curs_main.c:979
+#: curs_main.c:980
 msgid "Exit Mutt without saving?"
 msgstr "Покинути Mutt без збереження?"
 
-#: curs_main.c:996 curs_main.c:1020
+#: curs_main.c:997 curs_main.c:1021
 msgid "You are on the last message."
 msgstr "Це останн╕й лист."
 
-#: curs_main.c:1003 curs_main.c:1045
+#: curs_main.c:1004 curs_main.c:1046
 msgid "No undeleted messages."
 msgstr "Вс╕ листи видалено."
 
-#: curs_main.c:1038 curs_main.c:1061
+#: curs_main.c:1039 curs_main.c:1062
 msgid "You are on the first message."
 msgstr "Це перший лист."
 
-#: curs_main.c:1133 pattern.c:1109
+#: curs_main.c:1134 pattern.c:1109
 msgid "Search wrapped to top."
 msgstr "Пошук з початку."
 
-#: curs_main.c:1142 pattern.c:1120
+#: curs_main.c:1143 pattern.c:1120
 msgid "Search wrapped to bottom."
 msgstr "Пошук в╕д к╕нця."
 
-#: curs_main.c:1175
+#: curs_main.c:1176
 msgid "No new messages"
 msgstr "Нових лист╕в нема╓"
 
-#: curs_main.c:1175
+#: curs_main.c:1176
 msgid "No unread messages"
 msgstr "Нечитаних лист╕в нема╓"
 
-#: curs_main.c:1176
+#: curs_main.c:1177
 msgid " in this limited view"
 msgstr " у цих межах огляду"
 
-#: curs_main.c:1286
+#: curs_main.c:1287
 msgid "No more threads."
 msgstr "Ниток б╕льш нема."
 
-#: curs_main.c:1288
+#: curs_main.c:1289
 msgid "You are on the first thread."
 msgstr "Це перша нитка."
 
-#: curs_main.c:1341
+#: curs_main.c:1342
 msgid "Thread contains unread messages."
 msgstr "Нитка ма╓ нечитан╕ листи."
 
-#: curs_main.c:1354 flags.c:219 thread.c:661
+#: curs_main.c:1355 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
 msgstr "Сшивання недоступне."
 
@@ -2023,33 +2028,33 @@ msgid ""
 "Compile options:"
 msgstr ""
 
-#: main.c:308
+#: main.c:309
 msgid "Error initializing terminal."
 msgstr "Помилка ╕н╕ц╕ал╕зац╖╖ терм╕налу."
 
-#: main.c:406
+#: main.c:407
 #, c-format
 msgid "Debugging at level %d.\n"
 msgstr ""
 
-#: main.c:408
+#: main.c:409
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
 msgstr "DEBUG не вказано п╕д час комп╕ляц╖╖. ╤гнору╓ться.\n"
 
-#: main.c:546
+#: main.c:547
 msgid "No recipients specified.\n"
 msgstr "Отримувач╕в не вказано.\n"
 
-#: main.c:619
+#: main.c:620
 #, c-format
 msgid "%s: unable to attach file.\n"
 msgstr "%s: неможливо при╓днати файл.\n"
 
-#: main.c:639
+#: main.c:640
 msgid "No mailbox with new mail."
 msgstr "Нема╓ поштово╖ скриньки з новою поштою."
 
-#: main.c:673
+#: main.c:674
 msgid "Mailbox is empty."
 msgstr "Поштова скринька порожня."
 
@@ -2318,7 +2323,7 @@ msgstr "Цитованого тексту б╕льш нема╓."
 msgid "No more unquoted text after quoted text."
 msgstr "П╕сля цитованого тексту н╕чого нема╓."
 
-#: parse.c:503
+#: parse.c:505
 msgid "multipart message has no boundary parameter!"
 msgstr "Багаточастинний лист не ма╓ параметру меж╕!"
 
@@ -2853,19 +2858,19 @@ msgstr "Над╕слати коп╖╖ пов╕домлень %s...?"
 msgid "Bounce message to %s...?"
 msgstr "Над╕слати коп╖ю пов╕домлення %s...?"
 
-#: recvattach.c:941
+#: recvattach.c:943
 msgid "Attachments"
 msgstr "Додатки"
 
-#: recvattach.c:999
+#: recvattach.c:1001
 msgid "Deletion of attachments from PGP messages is unsupported."
 msgstr "Видалення додатк╕в з лист╕в з PGP не п╕дтриму╓ться."
 
-#: recvattach.c:1019 recvattach.c:1036
+#: recvattach.c:1021 recvattach.c:1038
 msgid "Only deletion of multipart attachments is supported."
 msgstr "П╕дтриму╓ться т╕льки видалення в багаточастинних листах."
 
-#: recvattach.c:1087
+#: recvattach.c:1089
 msgid "This operation is not currently supported for PGP messages."
 msgstr "Ця операц╕я не п╕дтриму╓ться для лист╕в з PGP."
 
@@ -2920,76 +2925,76 @@ msgstr "Не видно вид╕лених лист╕в!"
 msgid "No mailing lists found!"
 msgstr "Не знайдено списк╕в розсилки!"
 
-#: send.c:627
+#: send.c:629
 msgid "Include message in reply?"
 msgstr "Додати лист до в╕дпов╕д╕?"
 
-#: send.c:641
+#: send.c:643
 msgid "Could not include all requested messages!"
 msgstr "Не вийшло додати вс╕ бажан╕ листи!"
 
-#: send.c:654
+#: send.c:656
 msgid "Forward MIME encapsulated?"
 msgstr "Переслати енкапсульованим у в╕дпов╕дност╕ до MIME?"
 
 #. If the user is composing a new message, check to see if there
 #. * are any postponed messages first.
 #.
-#: send.c:865
+#: send.c:867
 msgid "Recall postponed message?"
 msgstr "Викликати залишений лист?"
 
-#: send.c:1097
+#: send.c:1099
 msgid "Abort unmodified message?"
 msgstr "В╕дм╕нити в╕дправку не зм╕неного листа?"
 
-#: send.c:1099
+#: send.c:1101
 msgid "Aborted unmodified message."
 msgstr "Лист не зм╕нено, тому в╕дправку в╕дм╕нено."
 
 #. abort
-#: send.c:1138
+#: send.c:1140
 msgid "Mail not sent."
 msgstr "Лист не в╕дправлено."
 
-#: send.c:1151
+#: send.c:1153
 msgid "Message postponed."
 msgstr "Лист залишено для подальшо╖ в╕дправки.."
 
-#: send.c:1160
+#: send.c:1162
 msgid "No recipients are specified!"
 msgstr "Отримувач╕в не вказано!"
 
-#: send.c:1165
+#: send.c:1167
 msgid "No recipients were specified."
 msgstr "Отримувач╕в не було вказано."
 
-#: send.c:1171
+#: send.c:1173
 msgid "No subject, abort sending?"
 msgstr "Теми нема╓, в╕дм╕нити в╕дправку?"
 
-#: send.c:1175
+#: send.c:1177
 msgid "No subject specified."
 msgstr "Теми не вказано."
 
-#: send.c:1212
+#: send.c:1214
 msgid "Message edited. Really send?"
 msgstr "Лист зм╕нено. Справд╕ в╕дсилати?"
 
-#: send.c:1218
+#: send.c:1220
 msgid "Sending message..."
 msgstr "Лист в╕дправля╓ться..."
 
-#: send.c:1320
+#: send.c:1322
 #, fuzzy
 msgid "Could not send the message."
 msgstr "в╕д╕слати лист"
 
-#: send.c:1325
+#: send.c:1327
 msgid "Mail sent."
 msgstr "Лист послано."
 
-#: send.c:1325
+#: send.c:1327
 msgid "Sending in background."
 msgstr ""
 
