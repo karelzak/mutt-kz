@@ -485,8 +485,9 @@ _mutt_parse_uncolor (BUFFER *buf, BUFFER *s, unsigned long data, BUFFER *err,
     }
   }
   while (MoreArgs (s));
-    
-  if (do_cache && !option (OPTNOCURSES) && has_colors ()) 
+
+
+  if (do_cache && !option (OPTNOCURSES))
   {
     mutt_cache_index_colors (Context);
     set_option (OPTFORCEREDRAWINDEX);
