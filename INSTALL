@@ -136,8 +136,17 @@ A_NORMAL or KEY_MIN, then you probably don't have a SysV compliant curses
 library.  You should install either ncurses or S-Lang (see above), and then
 run the ``configure'' script again.
 
+
 Platform Notes
 ==============
+
+All platforms
+
+	There is a bug in most (if not all) S-Lang versions which
+	prevents the Meta key from working with mutt.  A patch can be
+	found in the file patch.slang-1.2.2.keypad.1 in this mutt
+	distribution.
+
 
 Solaris 2.4
 
