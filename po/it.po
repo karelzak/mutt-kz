@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mutt-0.95.5\n"
-"POT-Creation-Date: 1999-09-25 08:52+0200\n"
-"PO-Revision-Date: 1999-05-24 22:24+02:00\n"
+"Project-Id-Version: mutt-1.0pre2\n"
+"POT-Creation-Date: 1999-08-31 21:26+0200\n"
+"PO-Revision-Date: 1999-09-09 08:24+02:00\n"
 "Last-Translator: Marco d'Itri <md@linux.it>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -79,9 +79,9 @@ msgstr "La voce compose di mailcap richiede %%s"
 
 #: attach.c:132 attach.c:257 commands.c:155 compose.c:1019 curs_lib.c:128
 #: curs_lib.c:323
-#, fuzzy, c-format
+#, c-format
 msgid "Error running \"%s\"!"
-msgstr "Errore nella lettura dell'indirizzo!"
+msgstr "Errore eseguendo \"%s\"!"
 
 #: attach.c:142
 msgid "Failure to open file to parse headers."
@@ -156,9 +156,8 @@ msgid "Directory [%s], File mask: %s"
 msgstr "Directory [%s], Maschera dei file: %s"
 
 #: browser.c:519
-#, fuzzy
 msgid "IMAP folder browsing is not currently supported"
-msgstr "Questa operazione attualmente non è gestita per i messaggi PGP."
+msgstr "Il browsing dei folder IMAP non è ancora gestito."
 
 #: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
@@ -315,14 +314,14 @@ msgstr "Apri una pipe con il comando: "
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"OrdContr (d)ata/(f)rom/(r)icev/(s)ogg/t(o)/(t)hread/n(u)lla/si(z)e/s(c)ore?: "
+"OrdContr (d)ata/(f)rom/(r)icev/(s)ubj/t(o)/(t)hread/n(u)lla/si(z)e/s(c)ore?: "
 
 #: commands.c:339
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Ordina per "
-"(d)ata/(f)rom/(r)icev/(s)ogg/t(o)/(t)hread/n(u)lla/si(z)e/s(c)ore?: "
+"(d)ata/(f)rom/(r)icev/(s)ubj/t(o)/(t)hread/n(u)lla/si(z)e/s(c)ore?: "
 
 #: commands.c:340
 msgid "dfrsotuzc"
@@ -585,18 +584,16 @@ msgid "No mailbox is open."
 msgstr "Nessuna mailbox aperta."
 
 #: curs_main.c:51
-#, fuzzy
 msgid "There are no messages."
-msgstr "Il thread contiene messaggi non letti."
+msgstr "Non ci sono messaggi."
 
 #: curs_main.c:52 mx.c:996 pager.c:55 recvattach.c:47
 msgid "Mailbox is read-only."
 msgstr "La mailbox è di sola lettura."
 
 #: curs_main.c:53 pager.c:56
-#, fuzzy
 msgid "Function not permitted in attach-message mode."
-msgstr "%c: non gestito in questa modalità"
+msgstr "Funzione non permessa nella modalità attach-message."
 
 #: curs_main.c:220
 msgid "Cannot toggle write on a readonly mailbox!"
@@ -1064,9 +1061,8 @@ msgstr "Prendo il messaggio..."
 
 #. hack from Nathan Neulinger
 #: imap.c:1736
-#, fuzzy
 msgid "Sending CREATE command ..."
-msgstr "Mando il comando APPEND ..."
+msgstr "Mando il comando CREATE ..."
 
 #: imap.c:1741
 msgid "Sending APPEND command ..."
@@ -1924,16 +1920,15 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "Per contattare gli sviluppatori scrivi a <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-9 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
-"Copyright (C) 1996-8 Michael R. Elkins e altri.\n"
-"Mutt non ha ALCUNA GARANZIA; usare `mutt -vv' per i dettagli.\n"
-"Mutt è software libero e sei invitato a ridistribuirlo\n"
+"Copyright (C) 1996-9 Michael R. Elkins e altri.\n"
+"Mutt non ha ASSOLUTAMENTE ALCUNA GARANZIA; usare `mutt -vv' per\n"
+"i dettagli. Mutt è software libero e sei invitato a ridistribuirlo\n"
 "sotto certe condizioni; scrivere `mutt -vv' per i dettagli.\n"
 
 #: main.c:48
@@ -2009,7 +2004,7 @@ msgid ""
 msgstr ""
 "uso: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <tipo> ] [ -f <file> ]\n"
 "\tmutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ -i "
-"<file> ] [ -s <sogg> ] [ -b <indir> ] [ -c <indir> ] <indir> [ ... ]\n"
+"<file> ] [ -s <subj> ] [ -b <indir> ] [ -c <indir> ] <indir> [ ... ]\n"
 "\tmutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
 "\tmutt -v[v]\n"
 "\n"
@@ -2026,7 +2021,7 @@ msgstr ""
 "  -n\t\tdisabilita la lettura del Muttrc di sistema\n"
 "  -p\t\trichiama un messaggio rimandato\n"
 "  -R\t\tapri la mailbox in sola lettura\n"
-"  -s <sogg>\tspecifica il Subject (deve essere tra apici se ha spazi)\n"
+"  -s <subj>\tspecifica il Subject (deve essere tra apici se ha spazi)\n"
 "  -v\t\tmostra la versione e le definizioni della compilazione\n"
 "  -x\t\tsimula la modalità invio di mailx\n"
 "  -y\t\tseleziona una mailbox specificata nella lista `mailboxes'\n"
@@ -2287,9 +2282,8 @@ msgid "Mailbox is marked unwritable. %s"
 msgstr "La mailbox è indicata non scrivibile. %s"
 
 #: pager.c:54
-#, fuzzy
 msgid "Not available in this menu."
-msgstr "C'è nuova posta in questa mailbox."
+msgstr "Non disponibile in questo menù."
 
 #: pager.c:1373
 msgid "PrevPg"
@@ -2903,11 +2897,11 @@ msgstr "score: troppi argomenti"
 
 #: send.c:229
 msgid "No subject, abort?"
-msgstr "Nessun soggetto, lo abbandono?"
+msgstr "Nessun Subject, lo abbandono?"
 
 #: send.c:231
 msgid "No subject, aborting."
-msgstr "Nessun soggetto, abbandonato."
+msgstr "Nessun Subject, abbandonato."
 
 #. There are quite a few mailing lists which set the Reply-To:
 #. * header field to the list address, which makes it quite impossible
@@ -2976,11 +2970,11 @@ msgstr "Non sono stati specificati destinatari."
 
 #: send.c:1171
 msgid "No subject, abort sending?"
-msgstr "Nessun soggetto, abbandono l'invio?"
+msgstr "Nessun Subject, abbandono l'invio?"
 
 #: send.c:1175
 msgid "No subject specified."
-msgstr "Non è stato specificato un soggetto."
+msgstr "Non è stato specificato un Subject."
 
 #: send.c:1212
 msgid "Message edited. Really send?"
@@ -3000,7 +2994,7 @@ msgstr "Messaggio spedito."
 
 #: send.c:1325
 msgid "Sending in background."
-msgstr ""
+msgstr "Spedizione in background."
 
 #: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
@@ -3017,19 +3011,18 @@ msgid "Could not open %s"
 msgstr "Impossibile aprire %s"
 
 #: sendlib.c:1690
-#, fuzzy, c-format
+#, c-format
 msgid "Error sending message, child exited %d (%s)."
-msgstr ""
-"Errore nella spedizione del messaggio, il figlio è uscito con %d (%s).\n"
+msgstr "Errore spedendo il messaggio, il figlio è uscito con %d (%s)."
 
 #: sendlib.c:1696
 msgid "Output of the delivery process"
-msgstr ""
+msgstr "Output del processo di consegna"
 
 #: signal.c:39
-#, fuzzy, c-format
+#, c-format
 msgid "%s...  Exiting.\n"
-msgstr "Preso %s...  Esco.\n"
+msgstr "%s...  Esco.\n"
 
 #: signal.c:42
 #, c-format
@@ -3057,9 +3050,3 @@ msgstr "Could not find sorting function! [segnala questo bug]"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(nessuna mailbox)"
-
-#~ msgid "Saved output of child process to %s.\n"
-#~ msgstr "Output del processo figlio salvato in %s.\n"
-
-#~ msgid "Error sending message."
-#~ msgstr "Errore nella spedizione del messaggio."
