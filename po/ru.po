@@ -181,6 +181,7 @@ msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "Упорядочить по (d)дате, (a)имени, (z)размеру или (n)не сортировать?"
 
 #: browser.c:753
+#, fuzzy
 msgid "dazn"
 msgstr ""
 
@@ -321,6 +322,7 @@ msgstr ""
 "кого/(r)получено/(s)тема/(o)кому/(t)дискуссия/(u)без/(z)размер/(c)контекст? "
 
 #: commands.c:340
+#, fuzzy
 msgid "dfrsotuzc"
 msgstr ""
 
@@ -383,9 +385,8 @@ msgid "Messages printed"
 msgstr "Сообщения напечатаны"
 
 #: compose.c:35
-#, fuzzy
 msgid "There are no attachments."
-msgstr "Сообщений нет."
+msgstr "Вложения отсутствуют."
 
 #: compose.c:78
 msgid "Send"
@@ -440,6 +441,7 @@ msgstr ""
 "MIC-алгоритм, (f)отказаться? "
 
 #: compose.c:135
+#, fuzzy
 msgid "esabmf"
 msgstr ""
 
@@ -559,11 +561,11 @@ msgstr "Сообщение записано."
 
 #: curs_lib.c:136
 msgid "yes"
-msgstr "да"
+msgstr ""
 
 #: curs_lib.c:137
 msgid "no"
-msgstr "нет"
+msgstr ""
 
 #. restore blocking operation
 #: curs_lib.c:176
@@ -1908,6 +1910,7 @@ msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
 msgstr "Файл существует, (o)перезаписать, (a)добавить или (c)отказ?"
 
 #: lib.c:862
+#, fuzzy
 msgid "oac"
 msgstr ""
 
