@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6i\n"
-"POT-Creation-Date: 2000-07-07 00:34+0200\n"
+"POT-Creation-Date: 2000-07-07 01:08+0200\n"
 "PO-Revision-Date: 1999-07-29 00:00+0100\n"
 "Last-Translator: Miroslav Vasko <vasko@ies.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -1212,7 +1212,7 @@ msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Nemo¾no pridáva» k IMAP schránkam na tomto serveri"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1053
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1055
 #, c-format
 msgid "Create %s?"
 msgstr "Vytvori» %s?"
@@ -2629,28 +2629,28 @@ msgstr "Oznaèovanie nie je podporované."
 msgid "Reading %s... %d"
 msgstr "Èítam %s... %d"
 
-#: muttlib.c:726
+#: muttlib.c:728
 msgid "File is a directory, save under it?"
 msgstr "Súbor je adresár, ulo¾i» v òom?"
 
-#: muttlib.c:731
+#: muttlib.c:733
 msgid "File under directory: "
 msgstr "Súbor v adresári: "
 
-#: muttlib.c:743
+#: muttlib.c:745
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
 msgstr "Súbor existuje, (o)-prepísa», prid(a)» alebo (c)-zru¹i»?"
 
-#: muttlib.c:743
+#: muttlib.c:745
 msgid "oac"
 msgstr "oac"
 
-#: muttlib.c:1029
+#: muttlib.c:1031
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s nie je schránka!"
 
-#: muttlib.c:1035
+#: muttlib.c:1037
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Prida» správy do %s?"

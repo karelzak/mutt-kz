@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.2.2\n"
-"POT-Creation-Date: 2000-07-07 00:34+0200\n"
+"POT-Creation-Date: 2000-07-07 01:08+0200\n"
 "PO-Revision-Date: 2000-07-03 14:44+02:00\n"
 "Last-Translator: Roland Rosenfeld <roland@spinnaker.de>\n"
 "Language-Team: German <mutt-po@mutt.org>\n"
@@ -1203,7 +1203,7 @@ msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Kann auf diesem IMAP-Server zu Mailboxen nichts hinzufügen."
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1053
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1055
 #, c-format
 msgid "Create %s?"
 msgstr "%s erstellen?"
@@ -2603,28 +2603,28 @@ msgstr "Markieren wird nicht unterstützt."
 msgid "Reading %s... %d"
 msgstr "Lese %s... %d"
 
-#: muttlib.c:726
+#: muttlib.c:728
 msgid "File is a directory, save under it?"
 msgstr "Datei ist ein Verzeichnis, darin abspeichern?"
 
-#: muttlib.c:731
+#: muttlib.c:733
 msgid "File under directory: "
 msgstr "Datei in diesem Verzeichnis: "
 
-#: muttlib.c:743
+#: muttlib.c:745
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
 msgstr "Datei existiert, (u)eberschreiben, (a)nhängen, a(b)brechen?"
 
-#: muttlib.c:743
+#: muttlib.c:745
 msgid "oac"
 msgstr "uab"
 
-#: muttlib.c:1029
+#: muttlib.c:1031
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s ist keine Mailbox!"
 
-#: muttlib.c:1035
+#: muttlib.c:1037
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Nachricht an %s anhängen?"
