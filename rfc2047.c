@@ -298,6 +298,8 @@ static int rfc2047_decode_word (char *d, const char *s, size_t len)
 	    }
 	    else if (*pp == '=')
 	    {
+	      if (pp[1] == 0 || pp[2] == 0)
+		break;	/* something wrong */
 	      *pd++ = (hexval(pp[1]) << 4) | hexval(pp[2]);
 	      len--;
 	      pp += 2;
@@ -315,19 +317,21 @@ static int rfc2047_decode_word (char *d, const char *s, size_t len)
 	{
 	  while (*pp && len > 0)
 	  {
+	    if (pp[0] == '=' || pp[1] == 0 || pp[1] == '=')
+	      break;  /* something wrong */
 	    c1 = base64val(pp[0]);
 	    c2 = base64val(pp[1]);
 	    *pd++ = (c1 << 2) | ((c2 >> 4) & 0x3);
 	    if (--len == 0) break;
 	    
-	    if (pp[2] == '=') break;
+	    if (pp[2] == 0 || pp[2] == '=') break;
 
 	    c3 = base64val(pp[2]);
 	    *pd++ = ((c2 & 0xf) << 4) | ((c3 >> 2) & 0xf);
 	    if (--len == 0)
 	      break;
 
-	    if (pp[3] == '=')
+	    if (pp[3] == 0 || pp[3] == '=')
 	      break;
 
 	    c4 = base64val(pp[3]);
