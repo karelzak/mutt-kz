@@ -966,8 +966,8 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
       case OP_FILTER:
         CHECK_COUNT;
 	mutt_pipe_attachment_list (NULL, menu->tagprefix, menu->tagprefix ? msg->content : idx[menu->current]->content, op == OP_FILTER);
-	if (op == OP_FILTER)
-	  menu->redraw = REDRAW_CURRENT; /* cte might have changed */
+	if (op == OP_FILTER) /* cte might have changed */
+	  menu->redraw = menu->tagprefix ? REDRAW_FULL : REDRAW_CURRENT; 
 	break;
 
 
