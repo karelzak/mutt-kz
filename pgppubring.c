@@ -155,7 +155,6 @@ short pgp_cansign(unsigned char type)
   {
     case 1:
     case 3:
-    case 16:
     case 17:
     case 20:
     	return 1;
