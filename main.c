@@ -277,7 +277,7 @@ static void show_version (void)
 # ifdef _PGPV3PATH
   printf ("_PGPV3PATH=\"%s\"\n", _PGPV3PATH);
 # endif
-# ifdef _PGPGPPATH
+# ifdef _PGPGPGPATH
   printf ("_PGPGPGPATH=\"%s\"\n", _PGPGPGPATH);
 # endif
 #endif
