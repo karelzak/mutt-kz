@@ -1107,6 +1107,7 @@ int imap_close_connection (CONTEXT *ctx)
   char buf[LONG_STRING];
   char seq[8];
 
+  dprint (1, (debugfile, "imap_close_connection(): closing connection\n"));
   /* if the server didn't shut down on us, close the connection gracefully */
   if (CTX_DATA->status != IMAP_BYE)
   {
@@ -1123,7 +1124,7 @@ int imap_close_connection (CONTEXT *ctx)
     mutt_clear_error ();
   }
   close (CTX_DATA->conn->fd);
-  CTX_DATA->conn->uses--;
+  CTX_DATA->conn->uses = 0;
   return 0;
 }
 
@@ -1195,7 +1196,9 @@ void imap_fastclose_mailbox (CONTEXT *ctx)
   /* Check to see if the mailbox is actually open */
   if (!ctx->data)
     return;
-  imap_close_connection (ctx);
+  CTX_DATA->conn->uses--;
+  if ((CTX_DATA->conn->uses == 0) || (CTX_DATA->status == IMAP_BYE))
+    imap_close_connection (ctx);
   for (i = 0; i < IMAP_CACHE_LEN; i++)
   {
     if (CTX_DATA->cache[i].path)
