@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 0.95.1i\n"
-"POT-Creation-Date: 1999-02-10 22:54+0100\n"
+"POT-Creation-Date: 1999-02-12 12:05+0100\n"
 "PO-Revision-Date: 1999-09-10 10:44 +0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
@@ -696,11 +696,11 @@ msgstr "Нет восстановленных сообщений."
 msgid "You are on the first message."
 msgstr "Это первое сообщение."
 
-#: curs_main.c:1126 pattern.c:1116
+#: curs_main.c:1126 pattern.c:1108
 msgid "Search wrapped to top."
 msgstr "Достигнут конец; продолжаем поиск с начала."
 
-#: curs_main.c:1135 pattern.c:1127
+#: curs_main.c:1135 pattern.c:1119
 msgid "Search wrapped to bottom."
 msgstr "Достигнуто начало; продолжаем поиск с конца."
 
@@ -1020,29 +1020,29 @@ msgstr "Создать %s?"
 msgid "Fetching message..."
 msgstr "Получение сообщения..."
 
-#: imap.c:1270
+#: imap.c:1268
 msgid "Sending APPEND command ..."
 msgstr "Отправка команды APPEND..."
 
-#: imap.c:1309
+#: imap.c:1308
 msgid "Uploading message ..."
 msgstr "Загрузка сообщения..."
 
-#: imap.c:1364
+#: imap.c:1363
 msgid "Closing connection to IMAP server..."
 msgstr "Закрытие соединения с сервером IMAP..."
 
-#: imap.c:1394
+#: imap.c:1393
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Сохранение флагов состояния сообщений... [%d из %d]"
 
-#: imap.c:1420
+#: imap.c:1419
 msgid "Expunging messages from server..."
 msgstr "Удаление сообщений с сервера..."
 
 #. tell the server to commit changes
-#: imap.c:1471
+#: imap.c:1470
 msgid "Closing mailbox..."
 msgstr "Закрытие почтового ящика..."
 
@@ -2165,7 +2165,7 @@ msgstr "Вы уже на последней записи."
 msgid "You are on the first entry."
 msgstr "Вы уже на первой записи."
 
-#: menu.c:595 pattern.c:1062
+#: menu.c:595 pattern.c:1054
 msgid "Search for: "
 msgstr "Поиск: "
 
@@ -2173,11 +2173,11 @@ msgstr "Поиск: "
 msgid "Reverse search for: "
 msgstr "Обратный поиск: "
 
-#: menu.c:607 pattern.c:1095
+#: menu.c:607 pattern.c:1087
 msgid "No search pattern."
 msgstr "Нет образца поиска."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1160
+#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Не найдено."
 
@@ -2349,74 +2349,74 @@ msgstr "Составное сообщение требует параметра boundary!"
 msgid "Error in expression: %s"
 msgstr "Ошибка в выражении: %s"
 
-#: pattern.c:331
+#: pattern.c:332
 #, c-format
 msgid "Invalid day of month: %s"
 msgstr "Неверный день месяца: %s"
 
-#: pattern.c:345
+#: pattern.c:346
 #, c-format
 msgid "Invalid month: %s"
 msgstr "Неверное название месяца: %s"
 
-#: pattern.c:399
+#: pattern.c:400
 msgid "error in expression"
 msgstr "ошибка в выражении"
 
-#: pattern.c:584 pattern.c:692
+#: pattern.c:585 pattern.c:693
 #, c-format
 msgid "error in pattern at: %s"
 msgstr "ошибка в образце: %s"
 
-#: pattern.c:632
+#: pattern.c:633
 #, c-format
 msgid "%c: invalid command"
 msgstr "%c: недопустимая команда"
 
-#: pattern.c:638
+#: pattern.c:639
 #, c-format
 msgid "%c: not supported in this mode"
 msgstr "%c: в этом режиме не поддерживается"
 
-#: pattern.c:651
+#: pattern.c:652
 msgid "missing parameter"
 msgstr "пропущен параметр"
 
-#: pattern.c:667
+#: pattern.c:668
 #, c-format
 msgid "mismatched parenthesis: %s"
 msgstr "пропущена скобка: %s"
 
-#: pattern.c:699
+#: pattern.c:700
 msgid "empty pattern"
 msgstr "пустой образец"
 
-#: pattern.c:878
+#: pattern.c:879
 #, c-format
 msgid "error: unknown op %d (report this error)."
 msgstr "ошибка: неизвестная операция %d (сообщите об этой ошибке)."
 
-#: pattern.c:943 pattern.c:1081
+#: pattern.c:944 pattern.c:1073
 msgid "Compiling search pattern..."
 msgstr "Образец поиска компилируется..."
 
-#: pattern.c:957
+#: pattern.c:958
 msgid "Executing command on matching messages..."
 msgstr "Исполняется команда для подходящих сообщений..."
 
-#: pattern.c:1024
+#: pattern.c:1021
 msgid "No messages matched criteria."
 msgstr "Ни одно сообщение не подходит под критерий."
 
-#: pattern.c:1119
+#: pattern.c:1111
 msgid "Search hit bottom without finding match"
 msgstr "Поиск дошел до конца, не найдя ничего подходящего"
 
-#: pattern.c:1130
+#: pattern.c:1122
 msgid "Search hit top without finding match"
 msgstr "Поиск дошел до начала, не найдя ничего подходящего"
 
-#: pattern.c:1152
+#: pattern.c:1144
 msgid "Search interrupted."
 msgstr "Поиск прерван."
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.1i\n"
-"POT-Creation-Date: 1999-02-10 22:54+0100\n"
+"POT-Creation-Date: 1999-02-12 12:05+0100\n"
 "PO-Revision-Date: 1999-01-06 21:43+0100\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -700,11 +700,11 @@ msgstr "Nejsou ¾ádné obnovené zprávy."
 msgid "You are on the first message."
 msgstr "Jste na první zprávì."
 
-#: curs_main.c:1126 pattern.c:1116
+#: curs_main.c:1126 pattern.c:1108
 msgid "Search wrapped to top."
 msgstr "Hledání pokraèuje od zaèátku."
 
-#: curs_main.c:1135 pattern.c:1127
+#: curs_main.c:1135 pattern.c:1119
 msgid "Search wrapped to bottom."
 msgstr "Hledání pokraèuje od konce."
 
@@ -1023,29 +1023,29 @@ msgstr "Vytvoøit %s?"
 msgid "Fetching message..."
 msgstr "Stahuji zprávu..."
 
-#: imap.c:1270
+#: imap.c:1268
 msgid "Sending APPEND command ..."
 msgstr "Posílám pøíkaz APPEND ..."
 
-#: imap.c:1309
+#: imap.c:1308
 msgid "Uploading message ..."
 msgstr "Posílám zprávu ..."
 
-#: imap.c:1364
+#: imap.c:1363
 msgid "Closing connection to IMAP server..."
 msgstr "Konèím spojení s IMAP serverem..."
 
-#: imap.c:1394
+#: imap.c:1393
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Ukládám pøíznaky stavu zprávy... [%d/%d]"
 
-#: imap.c:1420
+#: imap.c:1419
 msgid "Expunging messages from server..."
 msgstr "Odstraòuji zprávy ze serveru..."
 
 #. tell the server to commit changes
-#: imap.c:1471
+#: imap.c:1470
 msgid "Closing mailbox..."
 msgstr "Uzavírám schránku..."
 
@@ -2164,7 +2164,7 @@ msgstr "Jste na poslední polo¾ce."
 msgid "You are on the first entry."
 msgstr "Jste na první polo¾ce."
 
-#: menu.c:595 pattern.c:1062
+#: menu.c:595 pattern.c:1054
 msgid "Search for: "
 msgstr "Vyhledat: "
 
@@ -2172,11 +2172,11 @@ msgstr "Vyhledat: "
 msgid "Reverse search for: "
 msgstr "Vyhledat obráceným smìrem: "
 
-#: menu.c:607 pattern.c:1095
+#: menu.c:607 pattern.c:1087
 msgid "No search pattern."
 msgstr "Není ¾ádný vzor k vyhledání."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1160
+#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Nenalezeno."
 
@@ -2348,74 +2348,74 @@ msgstr "Zpráva o více èástech nemá urèeny hranice!"
 msgid "Error in expression: %s"
 msgstr "Výraz %s je chybný."
 
-#: pattern.c:331
+#: pattern.c:332
 #, c-format
 msgid "Invalid day of month: %s"
 msgstr "Nesprávné datum dne (%s)."
 
-#: pattern.c:345
+#: pattern.c:346
 #, c-format
 msgid "Invalid month: %s"
 msgstr "Mìsíc %s není správný."
 
-#: pattern.c:399
+#: pattern.c:400
 msgid "error in expression"
 msgstr "chyba ve výrazu"
 
-#: pattern.c:584 pattern.c:692
+#: pattern.c:585 pattern.c:693
 #, c-format
 msgid "error in pattern at: %s"
 msgstr "chyba ve vzoru na: %s"
 
-#: pattern.c:632
+#: pattern.c:633
 #, c-format
 msgid "%c: invalid command"
 msgstr "pøíkaz %c je nesprávný"
 
-#: pattern.c:638
+#: pattern.c:639
 #, c-format
 msgid "%c: not supported in this mode"
 msgstr "V tomto módu není %c podporováno."
 
-#: pattern.c:651
+#: pattern.c:652
 msgid "missing parameter"
 msgstr "chybí parametr"
 
-#: pattern.c:667
+#: pattern.c:668
 #, c-format
 msgid "mismatched parenthesis: %s"
 msgstr "neshodují se závorky: %s"
 
-#: pattern.c:699
+#: pattern.c:700
 msgid "empty pattern"
 msgstr "prázdný vzor"
 
-#: pattern.c:878
+#: pattern.c:879
 #, c-format
 msgid "error: unknown op %d (report this error)."
 msgstr "chyba: neznámý operand %d (ohla¹te tuto chybu)."
 
-#: pattern.c:943 pattern.c:1081
+#: pattern.c:944 pattern.c:1073
 msgid "Compiling search pattern..."
 msgstr "Pøekládám vzor k vyhledání..."
 
-#: pattern.c:957
+#: pattern.c:958
 msgid "Executing command on matching messages..."
 msgstr "Spou¹tím pøíkaz pro shodující se zprávy... "
 
-#: pattern.c:1024
+#: pattern.c:1021
 msgid "No messages matched criteria."
 msgstr "®ádná ze zpráv nesplòuje daná kritéria."
 
-#: pattern.c:1119
+#: pattern.c:1111
 msgid "Search hit bottom without finding match"
 msgstr "Pøi vyhledávání bylo dosa¾eno konce bez nalezení shody."
 
-#: pattern.c:1130
+#: pattern.c:1122
 msgid "Search hit top without finding match"
 msgstr "Pøi vyhledávání bylo dosa¾eno zaèátku bez nalezení shody."
 
-#: pattern.c:1152
+#: pattern.c:1144
 msgid "Search interrupted."
 msgstr "Hledání bylo pøeru¹eno."
 

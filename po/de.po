@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-02-10 22:54+0100\n"
+"POT-Creation-Date: 1999-02-12 12:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -696,11 +696,11 @@ msgstr "Alle Nachrichten gelöscht."
 msgid "You are on the first message."
 msgstr "Sie sind bereits auf der ersten Nachricht."
 
-#: curs_main.c:1126 pattern.c:1116
+#: curs_main.c:1126 pattern.c:1108
 msgid "Search wrapped to top."
 msgstr "Suche von vorne begonnen."
 
-#: curs_main.c:1135 pattern.c:1127
+#: curs_main.c:1135 pattern.c:1119
 msgid "Search wrapped to bottom."
 msgstr "Suche von hinten begonnen."
 
@@ -1021,29 +1021,29 @@ msgstr "%s erstellen?"
 msgid "Fetching message..."
 msgstr "Hole Nachricht..."
 
-#: imap.c:1270
+#: imap.c:1268
 msgid "Sending APPEND command ..."
 msgstr "Sende APPEND-Kommando..."
 
-#: imap.c:1309
+#: imap.c:1308
 msgid "Uploading message ..."
 msgstr "Lade Nachrichten auf den Server..."
 
-#: imap.c:1364
+#: imap.c:1363
 msgid "Closing connection to IMAP server..."
 msgstr "Schließe Verbindung zu IMAP-Server..."
 
-#: imap.c:1394
+#: imap.c:1393
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Speichere Nachrichten-Status-Indikatoren... [%d/%d]"
 
-#: imap.c:1420
+#: imap.c:1419
 msgid "Expunging messages from server..."
 msgstr "Lösche Nachrichten auf dem Server..."
 
 #. tell the server to commit changes
-#: imap.c:1471
+#: imap.c:1470
 msgid "Closing mailbox..."
 msgstr "Schließe Mailbox..."
 
@@ -2081,7 +2081,7 @@ msgstr "Sie sind auf dem letzten Eintrag."
 msgid "You are on the first entry."
 msgstr "Sie sind auf dem ersten Eintrag"
 
-#: menu.c:595 pattern.c:1062
+#: menu.c:595 pattern.c:1054
 msgid "Search for: "
 msgstr "Suche nach: "
 
@@ -2089,11 +2089,11 @@ msgstr "Suche nach: "
 msgid "Reverse search for: "
 msgstr "Suche rückwärts nach: "
 
-#: menu.c:607 pattern.c:1095
+#: menu.c:607 pattern.c:1087
 msgid "No search pattern."
 msgstr "Kein Suchmuster."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1160
+#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Nicht gefunden."
 
@@ -2263,74 +2263,74 @@ msgstr "Mehrteilige Nachricht hat keinen \"boundary\"-Parameter!"
 msgid "Error in expression: %s"
 msgstr "Fehler in Ausdruck: %s"
 
-#: pattern.c:331
+#: pattern.c:332
 #, c-format
 msgid "Invalid day of month: %s"
 msgstr "Ungültiger Tag: %s"
 
-#: pattern.c:345
+#: pattern.c:346
 #, c-format
 msgid "Invalid month: %s"
 msgstr "Ungültiger Monat: %s"
 
-#: pattern.c:399
+#: pattern.c:400
 msgid "error in expression"
 msgstr "Fehler in Ausdruck."
 
-#: pattern.c:584 pattern.c:692
+#: pattern.c:585 pattern.c:693
 #, c-format
 msgid "error in pattern at: %s"
 msgstr "Fehler in Muster bei: %s"
 
-#: pattern.c:632
+#: pattern.c:633
 #, c-format
 msgid "%c: invalid command"
 msgstr "%c: Ungültiges Kommando"
 
-#: pattern.c:638
+#: pattern.c:639
 #, c-format
 msgid "%c: not supported in this mode"
 msgstr "%c: Wird in diesem Modus nicht unterstützt."
 
-#: pattern.c:651
+#: pattern.c:652
 msgid "missing parameter"
 msgstr "Fehlender Parameter"
 
-#: pattern.c:667
+#: pattern.c:668
 #, c-format
 msgid "mismatched parenthesis: %s"
 msgstr "Unpassende Klammern: %s"
 
-#: pattern.c:699
+#: pattern.c:700
 msgid "empty pattern"
 msgstr "Leeres Muster"
 
-#: pattern.c:878
+#: pattern.c:879
 #, c-format
 msgid "error: unknown op %d (report this error)."
 msgstr ""
 
-#: pattern.c:943 pattern.c:1081
+#: pattern.c:944 pattern.c:1073
 msgid "Compiling search pattern..."
 msgstr "Compiliere Suchmuster..."
 
-#: pattern.c:957
+#: pattern.c:958
 msgid "Executing command on matching messages..."
 msgstr "Führe Kommando aus..."
 
-#: pattern.c:1024
+#: pattern.c:1021
 msgid "No messages matched criteria."
 msgstr "Keine Nachrichten haben Kriterium erfüllt."
 
-#: pattern.c:1119
+#: pattern.c:1111
 msgid "Search hit bottom without finding match"
 msgstr "Suche hat Ende erreicht, ohne Treffer zu erzielen."
 
-#: pattern.c:1130
+#: pattern.c:1122
 msgid "Search hit top without finding match"
 msgstr "Suche hat Anfang erreicht, ohne Treffer zu erzielen."
 
-#: pattern.c:1152
+#: pattern.c:1144
 msgid "Search interrupted."
 msgstr "Suche unterbrochen."
 

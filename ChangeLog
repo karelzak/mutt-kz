@@ -1,3 +1,36 @@
+Thu Feb 11 22:52:03 1999  Thomas Roessler  <roessler@guug.de>
+
+	* imap.c, VERSION: another imap-related fix.
+
+	* imap.c: ups, that one was bad.
+
+	* imap.c:
+	The HEADER structure doesn't have a mailcap component any more.
+	Noted by Johan van Selst <johans@stack.nl>.
+
+	* po/nl.po: new nl translation.
+
+	* pattern.c, curs_main.c:
+	curs_main.c: Check whether the user pressed a number before putting
+	it back onto the stack.  (OP_JUMP)
+	pattern.c: Vikas' latest fix.
+
+	* doc/manual.sgml.in, doc/Makefile.in:
+	Install README.SECURITY in the doc directory, document
+	mailcap_sanitize.
+
+	* po/uk.po, po/ru.po, po/pl.po, po/nl.po, po/it.po, po/fr.po, po/es.po, po/de.po, po/cs.po, doc/manual.sgml.in, doc/Makefile.in, reldate.h, VERSION, NEWS, Makefile.am, ChangeLog:
+	[stable] post-release commit for 0.95.2.
+
+	* README.SECURITY: Add a note on how to write mailcaps.
+
+Wed Feb 10 23:12:27 1999  Thomas Roessler  <roessler@guug.de>
+
+	* browser.c: Ups, this one needed a #ifdef USE_IMAP.
+
+	* imap.c, browser.c:
+	Some patches Brandon Long posted to comp.mail.mutt.
+
 Wed Feb 10 23:12:27 1999  Thomas Roessler  <roessler@guug.de>
 
 	* rfc1524.c, protos.h, lib.c, handler.c, attach.c:
