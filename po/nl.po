@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-03-19 23:12+0100\n"
+"POT-Creation-Date: 2004-02-11 15:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Johan van Selst <johans@stack.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2481,80 +2481,80 @@ msgstr "Kan mailfolder niet opnieuw openen!"
 msgid "Reopening mailbox..."
 msgstr "Mailfolder wordt heropend.."
 
-#: menu.c:417
+#: menu.c:400
 msgid "Jump to: "
 msgstr "Ga naar: "
 
-#: menu.c:426
+#: menu.c:409
 msgid "Invalid index number."
 msgstr "Ongeldig Indexnummer."
 
-#: menu.c:430 menu.c:448 menu.c:484 menu.c:525 menu.c:541 menu.c:552
-#: menu.c:563 menu.c:605 menu.c:616 menu.c:629 menu.c:642 menu.c:1017
+#: menu.c:413 menu.c:431 menu.c:467 menu.c:508 menu.c:524 menu.c:535
+#: menu.c:546 menu.c:588 menu.c:599 menu.c:612 menu.c:625 menu.c:1000
 msgid "No entries."
 msgstr "Geen items"
 
-#: menu.c:445
+#: menu.c:428
 msgid "You cannot scroll down farther."
 msgstr "U kunt niet verder naar beneden gaan."
 
-#: menu.c:461
+#: menu.c:444
 msgid "You cannot scroll up farther."
 msgstr "U kunt niet verder naar boven gaan."
 
-#: menu.c:481
+#: menu.c:464
 msgid "You are on the last page."
 msgstr "U bent op de laatste pagina."
 
-#: menu.c:503
+#: menu.c:486
 msgid "You are on the first page."
 msgstr "U bent op de eerste pagina."
 
-#: menu.c:582
+#: menu.c:565
 msgid "First entry is shown."
 msgstr "Het eerste item wordt weergegeven."
 
-#: menu.c:602
+#: menu.c:585
 msgid "Last entry is shown."
 msgstr "Het laatste item wordt weergegeven."
 
-#: menu.c:653
+#: menu.c:636
 msgid "You are on the last entry."
 msgstr "U bent op het laatste item."
 
-#: menu.c:664
+#: menu.c:647
 msgid "You are on the first entry."
 msgstr "U bent op het eerste item."
 
-#: menu.c:724 pattern.c:1236
+#: menu.c:707 pattern.c:1236
 msgid "Search for: "
 msgstr "Zoek naar: "
 
-#: menu.c:725 pattern.c:1237
+#: menu.c:708 pattern.c:1237
 msgid "Reverse search for: "
 msgstr "Zoek achteruit naar: "
 
-#: menu.c:735 pattern.c:1269
+#: menu.c:718 pattern.c:1269
 msgid "No search pattern."
 msgstr "Geen zoekpatroon."
 
-#: menu.c:765 pager.c:1913 pager.c:1929 pager.c:2017 pattern.c:1334
+#: menu.c:748 pager.c:1913 pager.c:1929 pager.c:2017 pattern.c:1334
 msgid "Not found."
 msgstr "Niet gevonden."
 
-#: menu.c:881
+#: menu.c:864
 msgid "No tagged entries."
 msgstr "Geen geselecteerde items."
 
-#: menu.c:974
+#: menu.c:957
 msgid "Search is not implemented for this menu."
 msgstr "In dit menu kan niet worden gezocht."
 
-#: menu.c:979
+#: menu.c:962
 msgid "Jumping is not implemented for dialogs."
 msgstr "Verspringen is niet mogelijk in menu."
 
-#: menu.c:1020
+#: menu.c:1003
 msgid "Tagging is not supported."
 msgstr "Markeren is niet ondersteund."
 

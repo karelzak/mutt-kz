@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.3.27i\n"
-"POT-Creation-Date: 2003-03-19 23:12+0100\n"
+"POT-Creation-Date: 2004-02-11 15:04+0100\n"
 "PO-Revision-Date: 2002-06-10 16:03+0200\n"
 "Last-Translator: Ivan Vilata i Balaguer <ivan@selidor.net>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -2608,80 +2608,80 @@ msgstr "No s'ha pogut reobrir la bústia!"
 msgid "Reopening mailbox..."
 msgstr "S'està reobrint la bústia..."
 
-#: menu.c:417
+#: menu.c:400
 msgid "Jump to: "
 msgstr "Salta a: "
 
-#: menu.c:426
+#: menu.c:409
 msgid "Invalid index number."
 msgstr "El número d'índex no és vàlid."
 
-#: menu.c:430 menu.c:448 menu.c:484 menu.c:525 menu.c:541 menu.c:552
-#: menu.c:563 menu.c:605 menu.c:616 menu.c:629 menu.c:642 menu.c:1017
+#: menu.c:413 menu.c:431 menu.c:467 menu.c:508 menu.c:524 menu.c:535
+#: menu.c:546 menu.c:588 menu.c:599 menu.c:612 menu.c:625 menu.c:1000
 msgid "No entries."
 msgstr "No hi ha cap entrada."
 
-#: menu.c:445
+#: menu.c:428
 msgid "You cannot scroll down farther."
 msgstr "No podeu baixar més."
 
-#: menu.c:461
+#: menu.c:444
 msgid "You cannot scroll up farther."
 msgstr "No podeu pujar més."
 
-#: menu.c:481
+#: menu.c:464
 msgid "You are on the last page."
 msgstr "Vos trobeu en l'última pàgina."
 
-#: menu.c:503
+#: menu.c:486
 msgid "You are on the first page."
 msgstr "Vos trobeu en la primera pàgina."
 
-#: menu.c:582
+#: menu.c:565
 msgid "First entry is shown."
 msgstr "La primera entrada ja és visible."
 
-#: menu.c:602
+#: menu.c:585
 msgid "Last entry is shown."
 msgstr "L'última entrada ja és visible."
 
-#: menu.c:653
+#: menu.c:636
 msgid "You are on the last entry."
 msgstr "Vos trobeu en l'última entrada."
 
-#: menu.c:664
+#: menu.c:647
 msgid "You are on the first entry."
 msgstr "Vos trobeu en la primera entrada."
 
-#: menu.c:724 pattern.c:1236
+#: menu.c:707 pattern.c:1236
 msgid "Search for: "
 msgstr "Cerca: "
 
-#: menu.c:725 pattern.c:1237
+#: menu.c:708 pattern.c:1237
 msgid "Reverse search for: "
 msgstr "Cerca cap enrere: "
 
-#: menu.c:735 pattern.c:1269
+#: menu.c:718 pattern.c:1269
 msgid "No search pattern."
 msgstr "No s'ha especificat cap patró de recerca."
 
-#: menu.c:765 pager.c:1913 pager.c:1929 pager.c:2017 pattern.c:1334
+#: menu.c:748 pager.c:1913 pager.c:1929 pager.c:2017 pattern.c:1334
 msgid "Not found."
 msgstr "No s'ha trobat."
 
-#: menu.c:881
+#: menu.c:864
 msgid "No tagged entries."
 msgstr "No hi ha cap entrada marcada."
 
-#: menu.c:974
+#: menu.c:957
 msgid "Search is not implemented for this menu."
 msgstr "No es pot cercar en aquest menú."
 
-#: menu.c:979
+#: menu.c:962
 msgid "Jumping is not implemented for dialogs."
 msgstr "No es pot saltar en un diàleg."
 
-#: menu.c:1020
+#: menu.c:1003
 msgid "Tagging is not supported."
 msgstr "No es pot marcar."
 

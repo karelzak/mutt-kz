@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.26\n"
-"POT-Creation-Date: 2003-03-19 23:12+0100\n"
+"POT-Creation-Date: 2004-02-11 15:04+0100\n"
 "PO-Revision-Date: 2002-05-02 17:33+0200\n"
 "Last-Translator: Roland Rosenfeld <roland@spinnaker.de>\n"
 "Language-Team: German <mutt-po@mutt.org>\n"
@@ -2511,80 +2511,80 @@ msgstr "Konnte Mailbox nicht erneut öffnen!"
 msgid "Reopening mailbox..."
 msgstr "Öffne Mailbox erneut..."
 
-#: menu.c:417
+#: menu.c:400
 msgid "Jump to: "
 msgstr "Springe zu: "
 
-#: menu.c:426
+#: menu.c:409
 msgid "Invalid index number."
 msgstr "Ungültige Indexnummer."
 
-#: menu.c:430 menu.c:448 menu.c:484 menu.c:525 menu.c:541 menu.c:552
-#: menu.c:563 menu.c:605 menu.c:616 menu.c:629 menu.c:642 menu.c:1017
+#: menu.c:413 menu.c:431 menu.c:467 menu.c:508 menu.c:524 menu.c:535
+#: menu.c:546 menu.c:588 menu.c:599 menu.c:612 menu.c:625 menu.c:1000
 msgid "No entries."
 msgstr "Keine Einträge"
 
-#: menu.c:445
+#: menu.c:428
 msgid "You cannot scroll down farther."
 msgstr "Sie können nicht weiter nach unten gehen."
 
-#: menu.c:461
+#: menu.c:444
 msgid "You cannot scroll up farther."
 msgstr "Sie können nicht weiter nach oben gehen."
 
-#: menu.c:481
+#: menu.c:464
 msgid "You are on the last page."
 msgstr "Sie sind auf der letzten Seite."
 
-#: menu.c:503
+#: menu.c:486
 msgid "You are on the first page."
 msgstr "Sie sind auf der ersten Seite."
 
-#: menu.c:582
+#: menu.c:565
 msgid "First entry is shown."
 msgstr "Der erste Eintrag wird angezeigt."
 
-#: menu.c:602
+#: menu.c:585
 msgid "Last entry is shown."
 msgstr "Der letzte Eintrag wird angezeigt."
 
-#: menu.c:653
+#: menu.c:636
 msgid "You are on the last entry."
 msgstr "Sie sind auf dem letzten Eintrag."
 
-#: menu.c:664
+#: menu.c:647
 msgid "You are on the first entry."
 msgstr "Sie sind auf dem ersten Eintrag"
 
-#: menu.c:724 pattern.c:1236
+#: menu.c:707 pattern.c:1236
 msgid "Search for: "
 msgstr "Suche nach: "
 
-#: menu.c:725 pattern.c:1237
+#: menu.c:708 pattern.c:1237
 msgid "Reverse search for: "
 msgstr "Suche rückwärts nach: "
 
-#: menu.c:735 pattern.c:1269
+#: menu.c:718 pattern.c:1269
 msgid "No search pattern."
 msgstr "Kein Suchmuster."
 
-#: menu.c:765 pager.c:1913 pager.c:1929 pager.c:2017 pattern.c:1334
+#: menu.c:748 pager.c:1913 pager.c:1929 pager.c:2017 pattern.c:1334
 msgid "Not found."
 msgstr "Nicht gefunden."
 
-#: menu.c:881
+#: menu.c:864
 msgid "No tagged entries."
 msgstr "Keine markierten Einträge."
 
-#: menu.c:974
+#: menu.c:957
 msgid "Search is not implemented for this menu."
 msgstr "In diesem Menü kann nicht gesucht werden."
 
-#: menu.c:979
+#: menu.c:962
 msgid "Jumping is not implemented for dialogs."
 msgstr "Springen in Dialogen ist nicht möglich."
 
-#: menu.c:1020
+#: menu.c:1003
 msgid "Tagging is not supported."
 msgstr "Markieren wird nicht unterstützt."
 

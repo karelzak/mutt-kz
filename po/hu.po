@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.17i\n"
-"POT-Creation-Date: 2003-03-19 23:12+0100\n"
+"POT-Creation-Date: 2004-02-11 15:04+0100\n"
 "PO-Revision-Date: 2001-04-13 18:03+0000\n"
 "Last-Translator: Szabolcs Horváth <horvaths@fi.inf.elte.hu>\n"
 "Language-Team: LME Magyaritasok Lista <magyar@lists.linux.hu>\n"
@@ -2615,80 +2615,80 @@ msgstr "Nem lehetett újra megnyitni a postafiókot!"
 msgid "Reopening mailbox..."
 msgstr "Postafiók újra megnyitása..."
 
-#: menu.c:417
+#: menu.c:400
 msgid "Jump to: "
 msgstr "Ugrás: "
 
-#: menu.c:426
+#: menu.c:409
 msgid "Invalid index number."
 msgstr "Érvénytelen indexszám."
 
-#: menu.c:430 menu.c:448 menu.c:484 menu.c:525 menu.c:541 menu.c:552
-#: menu.c:563 menu.c:605 menu.c:616 menu.c:629 menu.c:642 menu.c:1017
+#: menu.c:413 menu.c:431 menu.c:467 menu.c:508 menu.c:524 menu.c:535
+#: menu.c:546 menu.c:588 menu.c:599 menu.c:612 menu.c:625 menu.c:1000
 msgid "No entries."
 msgstr "Nincsenek bejegyzések."
 
-#: menu.c:445
+#: menu.c:428
 msgid "You cannot scroll down farther."
 msgstr "Nem lehet tovább lefelé scrollozni."
 
-#: menu.c:461
+#: menu.c:444
 msgid "You cannot scroll up farther."
 msgstr "Nem lehet tovább felfelé scrollozni."
 
-#: menu.c:481
+#: menu.c:464
 msgid "You are on the last page."
 msgstr "Ez az utolsó oldal."
 
-#: menu.c:503
+#: menu.c:486
 msgid "You are on the first page."
 msgstr "Ez az elsõ oldal."
 
-#: menu.c:582
+#: menu.c:565
 msgid "First entry is shown."
 msgstr "Az elsõ bejegyzés látható."
 
-#: menu.c:602
+#: menu.c:585
 msgid "Last entry is shown."
 msgstr "Az utolsó bejegyzés látható."
 
-#: menu.c:653
+#: menu.c:636
 msgid "You are on the last entry."
 msgstr "Az utolsó bejegyzésen vagy."
 
-#: menu.c:664
+#: menu.c:647
 msgid "You are on the first entry."
 msgstr "Az elsõ bejegyzésen vagy."
 
-#: menu.c:724 pattern.c:1236
+#: menu.c:707 pattern.c:1236
 msgid "Search for: "
 msgstr "Keresés: "
 
-#: menu.c:725 pattern.c:1237
+#: menu.c:708 pattern.c:1237
 msgid "Reverse search for: "
 msgstr "Keresés visszafelé: "
 
-#: menu.c:735 pattern.c:1269
+#: menu.c:718 pattern.c:1269
 msgid "No search pattern."
 msgstr "Nincs keresési minta."
 
-#: menu.c:765 pager.c:1913 pager.c:1929 pager.c:2017 pattern.c:1334
+#: menu.c:748 pager.c:1913 pager.c:1929 pager.c:2017 pattern.c:1334
 msgid "Not found."
 msgstr "Nem található."
 
-#: menu.c:881
+#: menu.c:864
 msgid "No tagged entries."
 msgstr "Nincsenek kijelölt bejegyzések."
 
-#: menu.c:974
+#: menu.c:957
 msgid "Search is not implemented for this menu."
 msgstr "A keresés nincs megírva ehhez a menühöz."
 
-#: menu.c:979
+#: menu.c:962
 msgid "Jumping is not implemented for dialogs."
 msgstr "Az ugrás funkció nincs megírva ehhez a menühöz."
 
-#: menu.c:1020
+#: menu.c:1003
 msgid "Tagging is not supported."
 msgstr "Kijelölés nem támogatott."
 
