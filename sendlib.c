@@ -1145,11 +1145,7 @@ int mutt_write_rfc822_header (FILE *fp, ENVELOPE *env, BODY *attach, int mode)
   LIST *tmp = env->userhdrs;
 
   if (mode == 0)
-  {
-    if (env->message_id)
-      fprintf (fp, "Message-ID: %s\n", env->message_id);
     fputs (mutt_make_date (buffer), fp);
-  }
 
   /* OPTUSEFROM is not consulted here so that we can still write a From:
    * field if the user sets it with the `my_hdr' command
@@ -1189,6 +1185,10 @@ int mutt_write_rfc822_header (FILE *fp, ENVELOPE *env, BODY *attach, int mode)
     fprintf (fp, "Subject: %s\n", env->subject);
   else if (mode == 1)
     fputs ("Subject: \n", fp);
+
+  /* save message id if the user has set it */
+  if (env->message_id)
+    fprintf (fp, "Message-ID: %s\n", env->message_id);
 
   if (env->reply_to)
   {
