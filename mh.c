@@ -528,7 +528,7 @@ int mh_commit_message (CONTEXT *ctx, MESSAGE *msg, HEADER *hdr)
   DIR *dirp;
   struct dirent *de;
   char *cp, *dep;
-  int n, hi = 0;
+  unsigned int n, hi = 0;
   char path[_POSIX_PATH_MAX];
   char tmp[16];
 
@@ -606,8 +606,10 @@ static int mh_sync_message (CONTEXT *ctx, int msgno)
   char newpath[_POSIX_PATH_MAX];
   char partpath[_POSIX_PATH_MAX];
 
-  FILE *f;
-  
+  long old_body_offset = h->content->offset;
+  long old_body_length = h->content->length;
+  long old_hdr_lines   = h->lines;
+
   if ((dest = mx_open_new_message (ctx, h, 0)) == NULL)
     return -1;
 
@@ -620,6 +622,9 @@ static int mh_sync_message (CONTEXT *ctx, int msgno)
       rc = maildir_commit_message (ctx, dest, h);
     else
       rc = mh_commit_message (ctx, dest, h);
+    
+    mx_close_message (&dest);
+
     if (rc == 0)
       unlink (oldpath);
 
@@ -641,29 +646,23 @@ static int mh_sync_message (CONTEXT *ctx, int msgno)
     if (ctx->magic == M_MH && rc == 0)
     {
       snprintf (newpath, _POSIX_PATH_MAX, "%s/%s", ctx->path, h->path);
-      if (safe_rename (newpath, oldpath) == 0)
+      if ((rc = safe_rename (newpath, oldpath)) == 0)
       {
 	FREE (&h->path);
 	h->path = safe_strdup (partpath);
       }
     }
   }
+  else mx_close_message (&dest);
 
-  mx_close_message (&dest);
-
-  /* 
-   * The message structure and offsets may have changed, so free it
-   * here.
-   */
-
-  mutt_free_body (&h->content);
-  if ((f = fopen (oldpath, "r")))
+  if (rc == -1)
   {
-    mutt_free_envelope (&h->env);
-    h->env = mutt_read_rfc822_header (f, h, 0);
-    fclose (f);
+    h->content->offset = old_body_offset;
+    h->content->length = old_body_length;
+    h->lines           = old_hdr_lines;
   }
 
+  mutt_free_body (&h->content->parts);
   return rc;
 }
 
