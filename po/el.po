@@ -340,12 +340,12 @@ msgstr "Εντολή: "
 #
 #: commands.c:180 recvattach.c:692
 msgid "Bounce message to: "
-msgstr "Αυτούσια Προώθηση μηνύματος στο: "
+msgstr "Διαβίβαση μηνύματος στο: "
 
 #
 #: commands.c:182 recvattach.c:694
 msgid "Bounce tagged messages to: "
-msgstr "Αυτούσια Προώθηση σημειωμένων μηνυμάτων στο: "
+msgstr "Διαβίβαση σημειωμένων μηνυμάτων στο: "
 
 #
 #: commands.c:197
@@ -356,23 +356,23 @@ msgstr "Σφάλμα κατά την ανάλυση της διεύθηνσης!"
 #: commands.c:207
 #, c-format
 msgid "Bounce message to %s"
-msgstr "Αυτούσια Προώθηση μηνύματος στο %s"
+msgstr "Διαβίβαση μηνύματος στο %s"
 
 #
 #: commands.c:207
 #, c-format
 msgid "Bounce messages to %s"
-msgstr "Αυτούσια Προώθηση μηνημάτων στο %s"
+msgstr "Διαβίβαση μηνημάτων στο %s"
 
 #
 #: commands.c:218
 msgid "Message bounced."
-msgstr "Το μήνυμα προωθήθηκε αυτούσιο."
+msgstr "Το μήνυμα διαβιβάστηκε."
 
 #
 #: commands.c:218
 msgid "Messages bounced."
-msgstr "Τα μηνύματα προωθήθηκαν αυτούσια."
+msgstr "Τα μηνύματα διαβιβάστηκαν."
 
 #
 #: commands.c:238
@@ -3597,19 +3597,19 @@ msgstr "Εκτύπωση προσαρτήσεων;"
 #
 #: recvattach.c:669
 msgid "You may only bounce message/rfc822 parts."
-msgstr "Μπορείς να προωθήσεις αυτούσια μόνο μήνυμα/μέρη rfc822"
+msgstr "Μπορείς να διαβιβάσεις μόνο μήνυμα/μέρη rfc822"
 
 #
 #: recvattach.c:705
 #, c-format
 msgid "Bounce messages to %s...?"
-msgstr "Αυτούσια Προώθηση μυνημάτων στο %s...?"
+msgstr "Διαβίβαση μυνημάτων στο %s...?"
 
 #
 #: recvattach.c:706
 #, c-format
 msgid "Bounce message to %s...?"
-msgstr "Αυτούσια Προώθηση μυνήματος στο %s...?"
+msgstr "Διαβίβαση μυνήματος στο %s...?"
 
 #
 #: recvattach.c:943

@@ -76,9 +76,8 @@ msgstr "'compose' di file mailcap membutuhkan %%s"
 
 #: attach.c:132 attach.c:257 commands.c:155 compose.c:1021 curs_lib.c:128
 #: curs_lib.c:323
-#, fuzzy, c-format
 msgid "Error running \"%s\"!"
-msgstr "Gagal menguraikan alamat!"
+msgstr "Gagal menjalankan \"%s\"!"
 
 #: attach.c:142
 msgid "Failure to open file to parse headers."
@@ -152,9 +151,8 @@ msgid "Directory [%s], File mask: %s"
 msgstr "Direktori [%s], File mask: %s"
 
 #: browser.c:519
-#, fuzzy
 msgid "IMAP folder browsing is not currently supported"
-msgstr "Operasi ini belum didukung untuk surat-surat PGP."
+msgstr "Melihat daftar folder IMAP saat ini tidak didukung"
 
 #: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
@@ -384,9 +382,8 @@ msgid "Messages printed"
 msgstr "Surat-surat telah dicetak"
 
 #: compose.c:35
-#, fuzzy
 msgid "There are no attachments."
-msgstr "Thread berisi surat yang belum dibaca."
+msgstr "Tidak ada lampiran."
 
 #: compose.c:78
 msgid "Send"
@@ -588,18 +585,16 @@ msgid "No mailbox is open."
 msgstr "Tidak ada kotak surat yang terbuka."
 
 #: curs_main.c:51
-#, fuzzy
 msgid "There are no messages."
-msgstr "Thread berisi surat yang belum dibaca."
+msgstr "Tidak ada surat."
 
 #: curs_main.c:52 mx.c:996 pager.c:55 recvattach.c:47
 msgid "Mailbox is read-only."
 msgstr "Kotak surat hanya bisa dibaca."
 
 #: curs_main.c:53 pager.c:56 recvattach.c:874
-#, fuzzy
 msgid "Function not permitted in attach-message mode."
-msgstr "%c: tidak didukung pada mode ini"
+msgstr "Fungsi tidak diperbolehkan dalam mode lampirkan-pesan."
 
 #: curs_main.c:220
 msgid "Cannot toggle write on a readonly mailbox!"
@@ -1018,9 +1013,8 @@ msgid "Unable to fetch headers from this IMAP server version."
 msgstr "Gagal mengambil header dari IMAP server versi ini."
 
 #: imap.c:851
-#, fuzzy, c-format
 msgid "Reopening mailbox... %s"
-msgstr "Membuka kembali kotak surat..."
+msgstr "Membuka kembali kotak surat... %s"
 
 #: imap.c:1203
 msgid "This IMAP server is ancient. Mutt does not work with it."
@@ -1068,9 +1062,8 @@ msgstr "Mengambil surat..."
 
 #. hack from Nathan Neulinger
 #: imap.c:1736
-#, fuzzy
 msgid "Sending CREATE command ..."
-msgstr "Mengirim perintah APPEND ..."
+msgstr "Mengirim perintah CREATE ..."
 
 #: imap.c:1741
 msgid "Sending APPEND command ..."
@@ -2329,9 +2322,8 @@ msgid "Mailbox is marked unwritable. %s"
 msgstr "Kotak surat ditandai tidak boleh ditulisi. %s"
 
 #: pager.c:54
-#, fuzzy
 msgid "Not available in this menu."
-msgstr "Surat baru di kotak ini."
+msgstr "Tidak ada di menu ini."
 
 #: pager.c:1373
 msgid "PrevPg"
@@ -2592,7 +2584,6 @@ msgstr ""
 "\n"
 
 #: pgp.c:980
-#, fuzzy
 msgid "[-- Error: could not create temporary file! --]\n"
 msgstr "[-- Error: tidak bisa membuat file sementara! --]\n"
 
@@ -2605,13 +2596,12 @@ msgstr ""
 "\n"
 
 #: pgp.c:997
-#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME encrypted data --]\n"
 msgstr ""
 "\n"
-"[-- Akhir data yang ditandatangani dg PGP/MIME --]\n"
+"[-- Akhir data yang di-encrypt dg PGP/MIME --]\n"
 
 #: pgp.c:1079
 msgid "Can't open PGP subprocess!"
@@ -3067,7 +3057,6 @@ msgid "Could not open %s"
 msgstr "Tidak bisa membuka %s"
 
 #: sendlib.c:1690
-#, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s)."
 msgstr "Error dalam pengiriman surat, proses anak mengembalikan %d (%s).\n"
 
@@ -3076,22 +3065,18 @@ msgid "Output of the delivery process"
 msgstr "Keluaran dari proses pengiriman"
 
 #: signal.c:39
-#, fuzzy, c-format
 msgid "%s...  Exiting.\n"
-msgstr "%s tertangkap... Keluar.\n"
+msgstr "%s... Keluar.\n"
 
 #: signal.c:42
-#, c-format
 msgid "Caught %s...  Exiting.\n"
 msgstr "%s tertangkap... Keluar.\n"
 
 #: signal.c:44
-#, c-format
 msgid "Caught signal %d...  Exiting.\n"
 msgstr "Sinyal %d tertangkap... Keluar.\n"
 
 #: socket.c:130
-#, c-format
 msgid "Connecting to %s..."
 msgstr "Menghubungi %s..."
 
@@ -3106,9 +3091,3 @@ msgstr "Tidak bisa menemukan fungsi pengurutan! [laporkan bug ini]"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(tidak ada kotak surat)"
-
-#~ msgid "Saved output of child process to %s.\n"
-#~ msgstr "Keluaran dari proses anak telah disimpan ke %s.\n"
-
-#~ msgid "Error sending message."
-#~ msgstr "Error dalam pengiriman surat."
