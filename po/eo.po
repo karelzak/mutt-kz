@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.99\n"
-"POT-Creation-Date: 2002-05-29 11:31+0200\n"
+"POT-Creation-Date: 2002-06-18 12:03+0200\n"
 "PO-Revision-Date: 2002-05-19 13:27+0100\n"
 "Last-Translator: Edmund GRIMLEY EVANS <edmundo@rano.org>\n"
 "Language-Team: eo <translation-team-eo@lists.sourceforge.net>\n"
@@ -1359,102 +1359,102 @@ msgstr "Kopias mesaøon %d al %s ..."
 msgid "Continue?"
 msgstr "Æu daýrigi?"
 
-#: init.c:492
+#: init.c:493
 msgid "alias: no address"
 msgstr "adresaro: mankas adreso"
 
-#: init.c:592
+#: init.c:593
 msgid "invalid header field"
 msgstr "nevalida æaplinio"
 
-#: init.c:645
+#: init.c:646
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: nekonata ordigmaniero"
 
-#: init.c:757
+#: init.c:758
 #, c-format
 msgid "mutt_restore_default(%s): error in regexp: %s\n"
 msgstr "mutt_restore_default(%s): eraro en regula esprimo: %s\n"
 
-#: init.c:820
+#: init.c:821
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: nekonata variablo"
 
-#: init.c:829
+#: init.c:830
 msgid "prefix is illegal with reset"
 msgstr "reset: prefikso ne permesata"
 
-#: init.c:835
+#: init.c:836
 msgid "value is illegal with reset"
 msgstr "reset: valoro ne permesata"
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is set"
 msgstr "%s estas þaltita"
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is unset"
 msgstr "%s estas malþaltita"
 
-#: init.c:1080
+#: init.c:1081
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: nevalida poþtfakospeco"
 
-#: init.c:1105 init.c:1150
+#: init.c:1106 init.c:1151
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: nevalida valoro"
 
-#: init.c:1211
+#: init.c:1212
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: nekonata speco"
 
-#: init.c:1254
+#: init.c:1255
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Eraro en %s, linio %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1270
+#: init.c:1271
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: eraroj en %s"
 
-#: init.c:1271
+#: init.c:1272
 #, c-format
 msgid "source: reading aborted due too many errors in %s"
 msgstr "source: legado æesis pro tro da eraroj en %s"
 
-#: init.c:1285
+#: init.c:1286
 #, c-format
 msgid "source: error at %s"
 msgstr "source: eraro æe %s"
 
-#: init.c:1290
+#: init.c:1291
 msgid "source: too many arguments"
 msgstr "source: tro da argumentoj"
 
-#: init.c:1341
+#: init.c:1342
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: nekonata komando"
 
-#: init.c:1697
+#: init.c:1698
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Eraro en komandlinio: %s\n"
 
-#: init.c:1746
+#: init.c:1747
 msgid "unable to determine home directory"
 msgstr "ne povas eltrovi la hejmdosierujon"
 
-#: init.c:1754
+#: init.c:1755
 msgid "unable to determine username"
 msgstr "ne povas eltrovi la uzantonomo"
 

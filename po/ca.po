@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.3.27i\n"
-"POT-Creation-Date: 2002-05-29 11:31+0200\n"
+"POT-Creation-Date: 2002-06-18 12:03+0200\n"
 "PO-Revision-Date: 2002-06-10 16:03+0200\n"
 "Last-Translator: Ivan Vilata i Balaguer <ivan@selidor.net>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -1434,73 +1434,73 @@ msgstr "S'està copiant el missatge %d en «%s»..."
 msgid "Continue?"
 msgstr "Voleu continuar?"
 
-#: init.c:492
+#: init.c:493
 msgid "alias: no address"
 msgstr "alias: No s'ha especificat cap adreça."
 
-#: init.c:592
+#: init.c:593
 msgid "invalid header field"
 msgstr "El camp de capçalera no és vàlid."
 
-#: init.c:645
+#: init.c:646
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: El mètode d'ordenació no és conegut."
 
-#: init.c:757
+#: init.c:758
 #, c-format
 msgid "mutt_restore_default(%s): error in regexp: %s\n"
 msgstr "mutt_restore_default(%s): Error en l'expressió regular: %s\n"
 
-#: init.c:820
+#: init.c:821
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: La variable no és coneguda."
 
-#: init.c:829
+#: init.c:830
 msgid "prefix is illegal with reset"
 msgstr "El prefix usat en «reset» no és permés."
 
-#: init.c:835
+#: init.c:836
 msgid "value is illegal with reset"
 msgstr "El valor usat en «reset» no és permés."
 
 # ivb (2001/11/24)
 # ivb  Es refereix a una variable lògica.
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is set"
 msgstr "«%s» està activada."
 
 # ivb (2001/11/24)
 # ivb  Es refereix a una variable lògica.
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is unset"
 msgstr "«%s» no està activada."
 
-#: init.c:1080
+#: init.c:1081
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: El tipus de bústia no és vàlid."
 
-#: init.c:1105 init.c:1150
+#: init.c:1106 init.c:1151
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: El valor no és vàlid."
 
-#: init.c:1211
+#: init.c:1212
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: El tipus no és conegut."
 
-#: init.c:1254
+#: init.c:1255
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Error en «%s», línia %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1270
+#: init.c:1271
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: Hi ha errors en «%s»."
@@ -1508,35 +1508,35 @@ msgstr "source: Hi ha errors en «%s»."
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
 # ivb  source: S'avorta la lectura de «%s» perquè conté massa errors.
-#: init.c:1271
+#: init.c:1272
 #, c-format
 msgid "source: reading aborted due too many errors in %s"
 msgstr "source: «%s» conté massa errors: s'avorta la lectura."
 
-#: init.c:1285
+#: init.c:1286
 #, c-format
 msgid "source: error at %s"
 msgstr "source: Error en «%s»."
 
-#: init.c:1290
+#: init.c:1291
 msgid "source: too many arguments"
 msgstr "source: Sobren arguments."
 
-#: init.c:1341
+#: init.c:1342
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: L'ordre no és coneguda."
 
-#: init.c:1697
+#: init.c:1698
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Error en la línia d'ordres: %s\n"
 
-#: init.c:1746
+#: init.c:1747
 msgid "unable to determine home directory"
 msgstr "No s'ha pogut determinar el directori de l'usuari."
 
-#: init.c:1754
+#: init.c:1755
 msgid "unable to determine username"
 msgstr "No s'ha pogut determinar el nom de l'usuari."
 

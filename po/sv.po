@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.99\n"
-"POT-Creation-Date: 2002-05-29 11:31+0200\n"
+"POT-Creation-Date: 2002-06-18 12:03+0200\n"
 "PO-Revision-Date: 2002-01-19 14:33+01:00\n"
 "Last-Translator: Jörgen Tegnér <jorgen.tegner@telia.com>\n"
 "Language-Team: Swedish <mutt-po@mutt.org>\n"
@@ -1357,102 +1357,102 @@ msgstr "Kopierar meddelande %d till %s...<"
 msgid "Continue?"
 msgstr "Fortsätt?"
 
-#: init.c:492
+#: init.c:493
 msgid "alias: no address"
 msgstr "alias: ingen adress"
 
-#: init.c:592
+#: init.c:593
 msgid "invalid header field"
 msgstr "ogiltigt fält i brevhuvud"
 
-#: init.c:645
+#: init.c:646
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: okänd metod för sortering"
 
-#: init.c:757
+#: init.c:758
 #, c-format
 msgid "mutt_restore_default(%s): error in regexp: %s\n"
 msgstr "mutt_restore_default(%s): fel i mönster: %s\n"
 
-#: init.c:820
+#: init.c:821
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: okänd variabel"
 
-#: init.c:829
+#: init.c:830
 msgid "prefix is illegal with reset"
 msgstr "prefix är inte tillåtet med 'reset'"
 
-#: init.c:835
+#: init.c:836
 msgid "value is illegal with reset"
 msgstr "värde är inte tillåtet med 'reset'"
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is set"
 msgstr "%s är satt"
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is unset"
 msgstr "%s är inte satt"
 
-#: init.c:1080
+#: init.c:1081
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: ogiltig typ av brevlåda"
 
-#: init.c:1105 init.c:1150
+#: init.c:1106 init.c:1151
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: ogiltigt värde"
 
-#: init.c:1211
+#: init.c:1212
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: okänd typ"
 
-#: init.c:1254
+#: init.c:1255
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Fel i %s, rad %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1270
+#: init.c:1271
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: fel i %s"
 
-#: init.c:1271
+#: init.c:1272
 #, c-format
 msgid "source: reading aborted due too many errors in %s"
 msgstr "source: läsningen avbruten pga för många fel i %s"
 
-#: init.c:1285
+#: init.c:1286
 #, c-format
 msgid "source: error at %s"
 msgstr "source: fel vid %s"
 
-#: init.c:1290
+#: init.c:1291
 msgid "source: too many arguments"
 msgstr "source: för många parametrar"
 
-#: init.c:1341
+#: init.c:1342
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: okänt kommando"
 
-#: init.c:1697
+#: init.c:1698
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Fel i kommandorad: %s\n"
 
-#: init.c:1746
+#: init.c:1747
 msgid "unable to determine home directory"
 msgstr "kan inte avgöra var hemkatalogen är"
 
-#: init.c:1754
+#: init.c:1755
 msgid "unable to determine username"
 msgstr "kan inte avgöra användarnamn"
 

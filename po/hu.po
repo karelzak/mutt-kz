@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.17i\n"
-"POT-Creation-Date: 2002-05-29 11:31+0200\n"
+"POT-Creation-Date: 2002-06-18 12:03+0200\n"
 "PO-Revision-Date: 2001-04-13 18:03+0000\n"
 "Last-Translator: Szabolcs Horváth <horvaths@fi.inf.elte.hu>\n"
 "Language-Team: LME Magyaritasok Lista <magyar@lists.linux.hu>\n"
@@ -1396,102 +1396,102 @@ msgstr "Levél mentése %s-ba ..."
 msgid "Continue?"
 msgstr "(tovább)\n"
 
-#: init.c:492
+#: init.c:493
 msgid "alias: no address"
 msgstr "címjegyzék: nincs cím"
 
-#: init.c:592
+#: init.c:593
 msgid "invalid header field"
 msgstr "érvénytelen mezõ a fejlécben"
 
-#: init.c:645
+#: init.c:646
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: ismeretlen rendezési mód"
 
-#: init.c:757
+#: init.c:758
 #, c-format
 msgid "mutt_restore_default(%s): error in regexp: %s\n"
 msgstr "mutt_restore_default(%s): hibás reguláris kifejezés: %s\n"
 
-#: init.c:820
+#: init.c:821
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: ismeretlen változó"
 
-#: init.c:829
+#: init.c:830
 msgid "prefix is illegal with reset"
 msgstr "\"reset\"-nél nem adható meg elõtag"
 
-#: init.c:835
+#: init.c:836
 msgid "value is illegal with reset"
 msgstr "\"reset\"-nél nem adható meg érték"
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is set"
 msgstr "%s beállítva"
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is unset"
 msgstr "%s beállítása törölve"
 
-#: init.c:1080
+#: init.c:1081
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: érvénytelen postafiók típus"
 
-#: init.c:1105 init.c:1150
+#: init.c:1106 init.c:1151
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: érvénytelen érték"
 
-#: init.c:1211
+#: init.c:1212
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: ismeretlen típus"
 
-#: init.c:1254
+#: init.c:1255
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Hiba a %s-ban, sor %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1270
+#: init.c:1271
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: hiba a %s fájlban"
 
-#: init.c:1271
+#: init.c:1272
 #, c-format
 msgid "source: reading aborted due too many errors in %s"
 msgstr "source: az olvasás megszakadt, a %s fájlban túl sok a hiba"
 
-#: init.c:1285
+#: init.c:1286
 #, c-format
 msgid "source: error at %s"
 msgstr "source: hiba a %s-nál"
 
-#: init.c:1290
+#: init.c:1291
 msgid "source: too many arguments"
 msgstr "source: túl sok paraméter"
 
-#: init.c:1341
+#: init.c:1342
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: ismeretlen parancs"
 
-#: init.c:1697
+#: init.c:1698
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Hibás parancssor: %s\n"
 
-#: init.c:1746
+#: init.c:1747
 msgid "unable to determine home directory"
 msgstr "meghatározhatatlan felhasználói könyvtár"
 
-#: init.c:1754
+#: init.c:1755
 msgid "unable to determine username"
 msgstr "meghatározhatatlan felhasználónév"
 

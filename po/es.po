@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.4\n"
-"POT-Creation-Date: 2002-05-29 11:31+0200\n"
+"POT-Creation-Date: 2002-06-18 12:03+0200\n"
 "PO-Revision-Date: 2001-06-08 19:44+02:00\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
@@ -1370,102 +1370,102 @@ msgstr "Copiando mensaje %d a %s..."
 msgid "Continue?"
 msgstr "¿Continuar?"
 
-#: init.c:492
+#: init.c:493
 msgid "alias: no address"
 msgstr "alias: sin dirección"
 
-#: init.c:592
+#: init.c:593
 msgid "invalid header field"
 msgstr "encabezado erróneo"
 
-#: init.c:645
+#: init.c:646
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: órden desconocido"
 
-#: init.c:757
+#: init.c:758
 #, c-format
 msgid "mutt_restore_default(%s): error in regexp: %s\n"
 msgstr "mutt_restore_default(%s): error en expresión regular: %s\n"
 
-#: init.c:820
+#: init.c:821
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: varibale desconocida"
 
-#: init.c:829
+#: init.c:830
 msgid "prefix is illegal with reset"
 msgstr "prefijo es ilegal con reset"
 
-#: init.c:835
+#: init.c:836
 msgid "value is illegal with reset"
 msgstr "valor es ilegal con reset"
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is set"
 msgstr "%s está activada"
 
-#: init.c:874
+#: init.c:875
 #, c-format
 msgid "%s is unset"
 msgstr "%s no está activada"
 
-#: init.c:1080
+#: init.c:1081
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: tipo de buzón inválido"
 
-#: init.c:1105 init.c:1150
+#: init.c:1106 init.c:1151
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: valor inválido"
 
-#: init.c:1211
+#: init.c:1212
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: tipo desconocido"
 
-#: init.c:1254
+#: init.c:1255
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Error en %s, renglón %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1270
+#: init.c:1271
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: errores en %s"
 
-#: init.c:1271
+#: init.c:1272
 #, c-format
 msgid "source: reading aborted due too many errors in %s"
 msgstr "source: lectura fue cancelada por demasiados errores en %s"
 
-#: init.c:1285
+#: init.c:1286
 #, c-format
 msgid "source: error at %s"
 msgstr "source: errores en %s"
 
-#: init.c:1290
+#: init.c:1291
 msgid "source: too many arguments"
 msgstr "source: demasiados parámetros"
 
-#: init.c:1341
+#: init.c:1342
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: comando desconocido"
 
-#: init.c:1697
+#: init.c:1698
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Error en línea de comando: %s\n"
 
-#: init.c:1746
+#: init.c:1747
 msgid "unable to determine home directory"
 msgstr "imposible determinar el directorio del usuario"
 
-#: init.c:1754
+#: init.c:1755
 msgid "unable to determine username"
 msgstr "imposible determinar nombre del usuario"
 
