@@ -393,6 +393,9 @@ AC_ARG_ENABLE(imap, [  --enable-imap              Enable IMAP support],
 	MUTT_LIB_OBJECTS="$MUTT_LIB_OBJECTS imap.o socket.o"
 ])
 
+AC_ARG_ENABLE(debug, [  --enable-debug            Enable debugging support],
+	[AC_DEFINE(DEBUG)])
+
 AC_ARG_ENABLE(flock, [  --enable-flock             Use flock() to lock files],
 	[if test $enableval = yes; then
 		AC_DEFINE(USE_FLOCK)

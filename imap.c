@@ -2077,9 +2077,9 @@ int imap_buffy_check (char *path)
    * command on a mailbox that you have selected 
    */
 
-  if (mutt_strcmp(mbox, idata->selected_mailbox) == 0
-      || (mutt_strcasecmp(mbox, "INBOX") == 0
-	  && mutt_strcasecmp(mbox, idata->selected_mailbox) == 0))
+  if (mutt_strcmp(mbox_unquoted, idata->selected_mailbox) == 0
+      || (mutt_strcasecmp(mbox_unquoted, "INBOX") == 0
+	  && mutt_strcasecmp(mbox_unquoted, idata->selected_mailbox) == 0))
   {
     snprintf (buf, sizeof (buf), "%s NOOP\r\n", seq);
   }
