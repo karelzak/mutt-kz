@@ -18,6 +18,7 @@
 
 #include "mutt.h"
 #include "mutt_regex.h"
+#include "mutt_curses.h"
 
 #include <pwd.h>
 #include <string.h>
@@ -205,13 +206,19 @@ void mutt_create_alias (ENVELOPE *cur, ADDRESS *iadr)
   else
     buf[0] = 0;
 
-  if (mutt_get_field ("Address: ", buf, sizeof (buf), 0) != 0 || !buf[0])
+  do
   {
-    mutt_free_alias (&new);
-    return;
+    if (mutt_get_field ("Address: ", buf, sizeof (buf), 0) != 0 || !buf[0])
+    {
+      mutt_free_alias (&new);
+      return;
+    }
+    
+    if((new->addr = rfc822_parse_adrlist (new->addr, buf)) == NULL)
+      BEEP ();
   }
-  new->addr = rfc822_parse_adrlist (new->addr, buf);
-
+  while(new->addr == NULL);
+  
   if (adr && adr->personal && !mutt_is_mail_list (adr))
     strfcpy (buf, adr->personal, sizeof (buf));
   else
