@@ -336,7 +336,10 @@ enum
   OPTHEADER,
   OPTHELP,
   OPTHIDDENHOST,
+  OPTHIDELIMITED,
   OPTHIDEMISSING,
+  OPTHIDETOPLIMITED,
+  OPTHIDETOPMISSING,
   OPTIGNORELISTREPLYTO,
 #ifdef USE_IMAP
   OPTIMAPLSUB,
@@ -687,6 +690,10 @@ typedef struct thread
   unsigned int duplicate_thread : 1;
   unsigned int sort_children : 1;
   unsigned int check_subject : 1;
+  unsigned int visible : 1;
+  unsigned int deep : 1;
+  unsigned int subtree_visible : 2;
+  unsigned int next_subtree_visible : 1;
   struct thread *parent;
   struct thread *child;
   struct thread *next;
