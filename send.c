@@ -482,6 +482,23 @@ static int default_to (ADDRESS **to, ENVELOPE *env, int group)
   return (0);
 }
 
+static LIST *make_references(ENVELOPE *e)
+{
+  LIST *t, *l;
+  
+  l = mutt_copy_list(e->references);
+  
+  if(e->message_id)
+  {
+    t = mutt_new_list();
+    t->data = safe_strdup(e->message_id);
+    t->next = l;
+    l = t;
+  }
+  
+  return l;
+}
+
 static int fetch_recips (ENVELOPE *out, ENVELOPE *in, int flags)
 {
   ADDRESS *tmp;
@@ -598,17 +615,25 @@ envelope_defaults (ENVELOPE *env, CONTEXT *ctx, HEADER *cur, int flags)
       tmp->data = safe_strdup (buffer);
     }
 
-    env->references = mutt_copy_list (curenv->references);
-
-    if (curenv->message_id)
+    if(tag)
     {
-      LIST *t;
+      HEADER *h;
+      LIST **p;
 
-      t = mutt_new_list ();
-      t->data = safe_strdup (curenv->message_id);
-      t->next = env->references;
-      env->references = t;
+      env->references = NULL;
+      p = &env->references;
+      
+      for(i = 0; i < ctx->vcount; i++)
+      {
+	while(*p) p = &(*p)->next;
+	h = ctx->hdrs[ctx->v2r[i]];
+	if(h->tagged)
+	  *p = make_references(h->env);
+      }
     }
+    else
+      env->references = make_references(curenv);
+
   }
   else if (flags & SENDFORWARD)
   {
