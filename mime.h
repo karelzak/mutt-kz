@@ -53,8 +53,8 @@ extern int Index_hex[];
 extern int Index_64[];
 extern char Base64_chars[];
 
-#define hexval(c) Index_hex[(int)(c)]
-#define base64val(c) Index_64[(int)(c)]
+#define hexval(c) Index_hex[(unsigned int)(c)]
+#define base64val(c) Index_64[(unsigned int)(c)]
 
 #define is_multipart(x) \
     ((x)->type == TYPEMULTIPART \

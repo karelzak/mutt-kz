@@ -291,14 +291,14 @@ static int rfc2047_decode_word (char *d, const char *s, size_t len)
 	{
 	  while (*pp && len > 0)
 	  {
-	    c1 = Index_64[(int) pp[0]];
-	    c2 = Index_64[(int) pp[1]];
+	    c1 = base64val(pp[0]);
+	    c2 = base64val(pp[1]);
 	    *pd++ = (c1 << 2) | ((c2 >> 4) & 0x3);
 	    if (--len == 0) break;
 	    
 	    if (pp[2] == '=') break;
 
-	    c3 = Index_64[(int) pp[2]];
+	    c3 = base64val(pp[2]);
 	    *pd++ = ((c2 & 0xf) << 4) | ((c3 >> 2) & 0xf);
 	    if (--len == 0)
 	      break;
@@ -306,7 +306,7 @@ static int rfc2047_decode_word (char *d, const char *s, size_t len)
 	    if (pp[3] == '=')
 	      break;
 
-	    c4 = Index_64[(int) pp[3]];   
+	    c4 = base64val(pp[3]);
 	    *pd++ = ((c3 & 0x3) << 6) | c4;
 	    if (--len == 0)
 	      break;

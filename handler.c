@@ -210,8 +210,8 @@ void mutt_decode_base64 (STATE *s, long len, int istext)
     if (i != 4)
       return; /* didn't get a multiple of four chars! */
 
-    c1 = base64val ((int) buf[0]);
-    c2 = base64val ((int) buf[1]);
+    c1 = base64val (buf[0]);
+    c2 = base64val (buf[1]);
     ch = (c1 << 2) | (c2 >> 4);
 
     if (cr && ch != '\n') state_putc ('\r', s);
@@ -227,7 +227,7 @@ void mutt_decode_base64 (STATE *s, long len, int istext)
 
     if (buf[2] == '=')
       break;
-    c3 = base64val ((int) buf[2]);
+    c3 = base64val (buf[2]);
     ch = ((c2 & 0xf) << 4) | (c3 >> 2);
 
     if (cr && ch != '\n')
@@ -244,7 +244,7 @@ void mutt_decode_base64 (STATE *s, long len, int istext)
     }
 
     if (buf[3] == '=') break;
-    c4 = base64val ((int) buf[3]);
+    c4 = base64val (buf[3]);
     ch = ((c3 & 0x3) << 6) | c4;
 
     if (cr && ch != '\n')
