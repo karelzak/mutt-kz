@@ -170,12 +170,20 @@ const char *mutt_attach_fmt (char *dest,
 	char s[SHORT_STRING];
 	_mutt_make_string (s, sizeof (s), MsgFmt, NULL, aptr->content->hdr,
 	    M_FORMAT_FORCESUBJ | M_FORMAT_MAKEPRINT);
-	snprintf (dest, destlen, fmt, s);
-	break;
+	if (*s)
+	{
+	  snprintf (dest, destlen, fmt, s);
+	  break;
+	}
       }
-      else if (aptr->content->description)
+      if (aptr->content->description)
       {
 	snprintf (dest, destlen, fmt, aptr->content->description);
+	break;
+      }
+      else if (!aptr->content->filename)
+      {
+	snprintf (dest, destlen, fmt, "<no description>");
 	break;
       }
       /* FALLS THROUGH TO 'f' */
