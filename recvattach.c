@@ -160,6 +160,11 @@ const char *mutt_attach_fmt (char *dest,
   {
     case 'd':
       snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
+      if (aptr->content->description)
+      {
+	snprintf (dest, destlen, fmt, aptr->content->description);
+	break;
+      }
       if (mutt_is_message_type(aptr->content->type, aptr->content->subtype) &&
 	  MsgFmt && aptr->content->hdr)
       {
@@ -172,12 +177,7 @@ const char *mutt_attach_fmt (char *dest,
 	  break;
 	}
       }
-      if (aptr->content->description)
-      {
-	snprintf (dest, destlen, fmt, aptr->content->description);
-	break;
-      }
-      else if (!aptr->content->filename)
+      if (!aptr->content->filename)
       {
 	snprintf (dest, destlen, fmt, "<no description>");
 	break;

@@ -34,15 +34,3 @@
   moved to the cur/ subdirectory) by one of the mutts
   can't be read from the other one.
 
-- set mime_forward. Forward any mesage. The compose menu
-  will show the description as "Forwarded message from
-  ...." which is fine. Pressing 'd' to edit the
-  description brings up the above string for editing.
-
-  Now hit Enter on the message/rfc822 attachment to view
-  it. Quit out of the pager.
-
-  The description field has now changed to the Subject: of
-  the forwarded message. Pressing 'd' still brings up the
-  'Forwarded message from....' string.
-
