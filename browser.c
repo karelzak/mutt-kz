@@ -513,6 +513,13 @@ void mutt_select_file (char *f, size_t flen, int buffy)
     if (examine_mailboxes (NULL, &state) == -1)
       return;
   }
+#ifdef USE_IMAP
+  else if (mx_is_imap (LastDir))
+  {
+    mutt_error _("IMAP folder browsing is not currently supported");
+    return;
+  }
+#endif
   else if (examine_directory (NULL, &state, LastDir, prefix) == -1)
     return;
 
