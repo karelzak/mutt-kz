@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2000-06-21 00:23+0200\n"
+"POT-Creation-Date: 2000-07-07 00:34+0200\n"
 "PO-Revision-Date: 2000-03-17 12:12+0200\n"
 "Last-Translator: Andrej N. Gritsenko <andrej@lucky.net>\n"
 "Language-Team: Ukrainian <uk@ua>\n"
@@ -1154,7 +1154,7 @@ msgid "Login failed."
 msgstr "Помилка ре╓страц╕╖."
 
 #. now begin login
-#: imap/auth_gss.c:82
+#: imap/auth_gss.c:83
 msgid "Authenticating (GSSAPI)..."
 msgstr "Аутентиф╕кац╕я (GSSAPI)..."
 
@@ -1196,7 +1196,7 @@ msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Неможливо додавати до скриньок IMAP на цьому сервер╕"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1049
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1053
 #, c-format
 msgid "Create %s?"
 msgstr "Створити %s?"
@@ -2419,7 +2419,7 @@ msgstr "Нема╓ поштово╖ скриньки з новою поштою."
 msgid "No incoming mailboxes defined."
 msgstr "Вх╕дних поштових скриньок не вказано."
 
-#: main.c:697
+#: main.c:699
 msgid "Mailbox is empty."
 msgstr "Поштова скринька порожня."
 
@@ -2451,7 +2451,7 @@ msgstr "Поштова скринька не блоку╓ться!"
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr "sync: скриньку зм╕нено, але нема╓ зм╕нених лист╕в! (пов╕домьте про це)"
 
-#: mbox.c:782
+#: mbox.c:793
 msgid "Writing messages... %d (%d%%)"
 msgstr "Запис лист╕в... %d (%d%%)"
 
@@ -2550,28 +2550,28 @@ msgstr "Вид╕лення не п╕дтриму╓ться."
 msgid "Reading %s... %d"
 msgstr "Читання %s... %d"
 
-#: muttlib.c:722
+#: muttlib.c:726
 msgid "File is a directory, save under it?"
 msgstr "Файл ╓ каталогом, зберегти у ньому?"
 
-#: muttlib.c:727
+#: muttlib.c:731
 msgid "File under directory: "
 msgstr "Файл у каталоз╕: "
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
 msgstr "Файл ╕сну╓, (o)переписати, (a)додати до нього чи (c)в╕дмовити?"
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "oac"
 msgstr ""
 
-#: muttlib.c:1025
+#: muttlib.c:1029
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s не ╓ поштовою скринькою!"
 
-#: muttlib.c:1031
+#: muttlib.c:1035
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Додати листи до %s?"

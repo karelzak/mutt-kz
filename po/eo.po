@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1\n"
-"POT-Creation-Date: 2000-06-21 00:23+0200\n"
+"POT-Creation-Date: 2000-07-07 00:34+0200\n"
 "PO-Revision-Date: 2000-03-30 10:30+01:00\n"
 "Last-Translator: Edmund GRIMLEY EVANS <edmundo@rano.org>\n"
 "Language-Team: eo <eo@li.org>\n"
@@ -1159,7 +1159,7 @@ msgid "Login failed."
 msgstr "Saluto malsukcesis."
 
 #. now begin login
-#: imap/auth_gss.c:82
+#: imap/auth_gss.c:83
 msgid "Authenticating (GSSAPI)..."
 msgstr "Rajtiøas (GSSAPI) ..."
 
@@ -1201,7 +1201,7 @@ msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Ne povas aldoni al IMAP-poþtfako æe æi tiu servilo"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1049
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1053
 #, c-format
 msgid "Create %s?"
 msgstr "Æu krei %s?"
@@ -2464,7 +2464,7 @@ msgstr "Mankas poþtfako kun nova poþto."
 msgid "No incoming mailboxes defined."
 msgstr "Neniu enir-poþtfako estas difinita."
 
-#: main.c:697
+#: main.c:699
 msgid "Mailbox is empty."
 msgstr "Poþtfako estas malplena."
 
@@ -2497,7 +2497,7 @@ msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr ""
 "sync: mbox modifita, sed mankas modifitaj mesaøoj! (Raportu æi tiun cimon.)"
 
-#: mbox.c:782
+#: mbox.c:793
 msgid "Writing messages... %d (%d%%)"
 msgstr "Skribas mesaøojn ... %d (%d%%)"
 
@@ -2596,28 +2596,28 @@ msgstr "Markado ne funkcias."
 msgid "Reading %s... %d"
 msgstr "Legas %s ... %d"
 
-#: muttlib.c:722
+#: muttlib.c:726
 msgid "File is a directory, save under it?"
 msgstr "Tio estas dosierujo; æu skribi dosieron en øi?"
 
-#: muttlib.c:727
+#: muttlib.c:731
 msgid "File under directory: "
 msgstr "Dosiero en dosierujo: "
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
 msgstr "Dosiero ekzistas; æu (s)urskribi, (a)ldoni, aý (n)uligi?"
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "oac"
 msgstr "san"
 
-#: muttlib.c:1025
+#: muttlib.c:1029
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s ne estas poþtfako!"
 
-#: muttlib.c:1031
+#: muttlib.c:1035
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Æu aldoni mesaøojn al %s?"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.11\n"
-"POT-Creation-Date: 2000-06-21 00:23+0200\n"
+"POT-Creation-Date: 2000-07-07 00:34+0200\n"
 "PO-Revision-Date: 2000-04-07 08:46+01:00\n"
 "Last-Translator: Jörgen Tegnér <teg@post.netlink.se>\n"
 "Language-Team: \n"
@@ -1154,7 +1154,7 @@ msgid "Login failed."
 msgstr "Anslutning misslyckades..."
 
 #. now begin login
-#: imap/auth_gss.c:82
+#: imap/auth_gss.c:83
 msgid "Authenticating (GSSAPI)..."
 msgstr "Verifierar (GSSAPI)..."
 
@@ -1198,7 +1198,7 @@ msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Kunde inte skriva till brevlådor i den här IMAP-servern"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1049
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1053
 #, c-format
 msgid "Create %s?"
 msgstr "Skapa %s?"
@@ -2474,7 +2474,7 @@ msgstr "Ingen brevlåda har nya brev."
 msgid "No incoming mailboxes defined."
 msgstr "Inga brevlådor för inkommande post är definierade."
 
-#: main.c:697
+#: main.c:699
 msgid "Mailbox is empty."
 msgstr "Brevlådan är tom."
 
@@ -2508,7 +2508,7 @@ msgstr ""
 "sync: mbox är ändrad, men inga meddelanden är ändrade. [Var vänlig "
 "rapportera det här felet]."
 
-#: mbox.c:782
+#: mbox.c:793
 msgid "Writing messages... %d (%d%%)"
 msgstr "Skriver meddelanden ... %d (%d%%)"
 
@@ -2607,28 +2607,28 @@ msgstr "Märkning stöds inte."
 msgid "Reading %s... %d"
 msgstr "Läser %s... %d"
 
-#: muttlib.c:722
+#: muttlib.c:726
 msgid "File is a directory, save under it?"
 msgstr "Filen är en katalog, spar i den?"
 
-#: muttlib.c:727
+#: muttlib.c:731
 msgid "File under directory: "
 msgstr "Fil i katalog: "
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
 msgstr "Filen finns, skriv (ö)ver, (l)ägg till, eller (a)vbryt?"
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "oac"
 msgstr "öla"
 
-#: muttlib.c:1025
+#: muttlib.c:1029
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s är inte en brevlåda!"
 
-#: muttlib.c:1031
+#: muttlib.c:1035
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Lägg till meddelanden till %s?"

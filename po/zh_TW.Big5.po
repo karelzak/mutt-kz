@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.2\n"
-"POT-Creation-Date: 2000-06-21 00:23+0200\n"
+"POT-Creation-Date: 2000-07-07 00:34+0200\n"
 "PO-Revision-Date: 1999-12-20 20:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -1162,7 +1162,7 @@ msgid "Login failed."
 msgstr "登入失敗。"
 
 #. now begin login
-#: imap/auth_gss.c:82
+#: imap/auth_gss.c:83
 msgid "Authenticating (GSSAPI)..."
 msgstr "驗證中 (GSSAPI)…"
 
@@ -1206,7 +1206,7 @@ msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "無法附加在這個伺服器上的 IMAP 信箱"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1049
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1053
 #, c-format
 msgid "Create %s?"
 msgstr "建立 %s？"
@@ -2482,7 +2482,7 @@ msgstr "沒有信箱有新信件。"
 msgid "No incoming mailboxes defined."
 msgstr "圈選進入的郵筒"
 
-#: main.c:697
+#: main.c:699
 msgid "Mailbox is empty."
 msgstr "信箱內空無一物。"
 
@@ -2514,7 +2514,7 @@ msgstr "無法鎖住信箱！"
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr "同步：信箱已被修改，但沒有被修改過的信件！（請回報這個錯誤）"
 
-#: mbox.c:782
+#: mbox.c:793
 msgid "Writing messages... %d (%d%%)"
 msgstr "寫入信件中… %d (%d%%)"
 
@@ -2613,28 +2613,28 @@ msgstr "不支援標記功\能。"
 msgid "Reading %s... %d"
 msgstr "讀取 %s… %d"
 
-#: muttlib.c:722
+#: muttlib.c:726
 msgid "File is a directory, save under it?"
 msgstr "檔案是一個目錄, 儲存在它下面 ?"
 
-#: muttlib.c:727
+#: muttlib.c:731
 msgid "File under directory: "
 msgstr "在目錄底下的檔案："
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
 msgstr "檔案已經存在, (o)覆蓋\, (a)附加, 或是 (c)取消 ?"
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "oac"
 msgstr ""
 
-#: muttlib.c:1025
+#: muttlib.c:1029
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s 不是信箱！"
 
-#: muttlib.c:1031
+#: muttlib.c:1035
 #, c-format
 msgid "Append messages to %s?"
 msgstr "附加信件到 %s ?"

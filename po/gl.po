@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.0i\n"
-"POT-Creation-Date: 2000-06-21 00:23+0200\n"
+"POT-Creation-Date: 2000-07-07 00:34+0200\n"
 "PO-Revision-Date: 1999-10-27 14:05+0200\n"
 "Last-Translator: Roberto Suarez Soto <ask4it@bigfoot.com>\n"
 "Language-Team: Galician <gpul-traduccion@ceu.fi.udc.es>\n"
@@ -1172,7 +1172,7 @@ msgid "Login failed."
 msgstr "O login fallou."
 
 #. now begin login
-#: imap/auth_gss.c:82
+#: imap/auth_gss.c:83
 msgid "Authenticating (GSSAPI)..."
 msgstr ""
 
@@ -1215,7 +1215,7 @@ msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Non é posible engadir ós buzóns IMAP deste servidor"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:811 imap/message.c:640 muttlib.c:1049
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1053
 #, c-format
 msgid "Create %s?"
 msgstr "¿Crear %s?"
@@ -2495,7 +2495,7 @@ msgstr "Non hai buzóns con novo correo."
 msgid "No incoming mailboxes defined."
 msgstr "cambiar entre buzóns de entrada"
 
-#: main.c:697
+#: main.c:699
 msgid "Mailbox is empty."
 msgstr "O buzón está valeiro."
 
@@ -2529,7 +2529,7 @@ msgstr ""
 "sync: ¡buzón modificado, mais non hai mensaxes modificadas! (informe deste "
 "fallo)"
 
-#: mbox.c:782
+#: mbox.c:793
 msgid "Writing messages... %d (%d%%)"
 msgstr "Escribindo mensaxes... %d (%d%%)"
 
@@ -2629,28 +2629,28 @@ msgstr "O marcado non está soportado."
 msgid "Reading %s... %d"
 msgstr "Lendo %s... %d"
 
-#: muttlib.c:722
+#: muttlib.c:726
 msgid "File is a directory, save under it?"
 msgstr "O ficheiro é un directorio, ¿gardar nel?"
 
-#: muttlib.c:727
+#: muttlib.c:731
 msgid "File under directory: "
 msgstr "Ficheiro no directorio: "
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
 msgstr "O ficheiro existe, ¿(s)obreescribir, (e)ngadir ou (c)ancelar?"
 
-#: muttlib.c:739
+#: muttlib.c:743
 msgid "oac"
 msgstr "sec"
 
-#: muttlib.c:1025
+#: muttlib.c:1029
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "¡%s non é un buzón!"
 
-#: muttlib.c:1031
+#: muttlib.c:1035
 #, c-format
 msgid "Append messages to %s?"
 msgstr "¿engadir mensaxes a %s?"
