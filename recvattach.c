@@ -44,6 +44,15 @@
 #include <string.h>
 #include <errno.h>
 
+static const char Mailbox_is_read_only[] = N_("Mailbox is read-only.");
+
+#define CHECK_READONLY if (Context->readonly) \
+{\
+    mutt_flushinp (); \
+    mutt_error _(Mailbox_is_read_only); \
+    break; \
+}
+
 static struct mapping_t AttachHelp[] = {
   { N_("Exit"),  OP_EXIT },
   { N_("Save"),  OP_SAVE },
@@ -981,6 +990,7 @@ void mutt_view_attachments (HEADER *hdr)
 	break;
 
       case OP_DELETE:
+	CHECK_READONLY;
 
 #ifdef _PGPPATH
         if (hdr->pgp)
@@ -1031,31 +1041,32 @@ void mutt_view_attachments (HEADER *hdr)
         break;
 
       case OP_UNDELETE:
-       if (!menu->tagprefix)
-       {
-	 idx[menu->current]->content->deleted = 0;
-	 if (option (OPTRESOLVE) && menu->current < menu->max - 1)
-	 {
-	   menu->current++;
-	   menu->redraw = REDRAW_MOTION_RESYNCH;
-	 }
-	 else
-	   menu->redraw = REDRAW_CURRENT;
-       }
-       else
-       {
-	 int x;
+	CHECK_READONLY;
+	if (!menu->tagprefix)
+	{
+	  idx[menu->current]->content->deleted = 0;
+	  if (option (OPTRESOLVE) && menu->current < menu->max - 1)
+	  {
+	    menu->current++;
+	    menu->redraw = REDRAW_MOTION_RESYNCH;
+	  }
+	  else
+	    menu->redraw = REDRAW_CURRENT;
+	}
+	else
+	{
+	  int x;
 
-	 for (x = 0; x < menu->max; x++)
-	 {
-	   if (idx[x]->content->tagged)
-	   {
-	     idx[x]->content->deleted = 0;
-	     menu->redraw = REDRAW_INDEX;
-	   }
-	 }
-       }
-       break;
+ 	  for (x = 0; x < menu->max; x++)
+	  {
+	    if (idx[x]->content->tagged)
+	    {
+	      idx[x]->content->deleted = 0;
+	      menu->redraw = REDRAW_INDEX;
+	    }
+	  }
+        }
+        break;
 
       case OP_BOUNCE_MESSAGE:
         CHECK_ATTACH;

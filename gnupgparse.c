@@ -138,10 +138,16 @@ static pid_t gpg_invoke_list_keys(struct pgp_vinfo *pgp,
   char *cp;
   char *keylist;
   
-  /* we use gpgm here */
+#ifdef HAVE_GPGM
   snprintf(cmd, sizeof(cmd),
 	   "%sm --no-verbose --batch --with-colons --list-%skeys ",
 	   NONULL(*pgp->binary), secret? "secret-":"");
+#else
+  snprintf(cmd, sizeof(cmd),
+	   "%s --no-verbose --batch --with-colons --list-%skeys ",
+	   NONULL(*pgp->binary), secret? "secret-":"");
+#endif
+
 
   keylist = safe_strdup(uids);
   for(cp = strtok(keylist, " "); cp ; cp = strtok(NULL, " "))

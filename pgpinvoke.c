@@ -557,9 +557,14 @@ void pgp_gpg_invoke_import(struct pgp_vinfo *pgp, const char *fname)
   char *binary  = mutt_quote_filename(*pgp->binary);
   char *_fname  = mutt_quote_filename(fname);
 
+#ifdef HAVE_GPGM
   snprintf(cmd, sizeof(cmd), "%sm --no-verbose --import -v %s",
 	   NONULL (binary), _fname);
-  
+#else
+  snprintf (cmd, sizeof (cmd), "%s --no-verbose --import -v %s",
+	    NONULL (binary), _fname);
+#endif
+
   FREE(&binary);
   FREE(&_fname);
   
@@ -573,8 +578,13 @@ pid_t pgp_gpg_invoke_export(struct pgp_vinfo *pgp,
   char cmd[HUGE_STRING];
   char *binary  = mutt_quote_filename(*pgp->binary);
 
+#ifdef HAVE_GPGM
   snprintf(cmd, sizeof(cmd), "%sm --no-verbose --export --armor 0x%8s",
 	   NONULL (binary), id);
+#else
+  snprintf (cmd, sizeof (cmd), "%s --no-verbose --export --armor 0x%8s",
+	    NONULL (binary), id);
+#endif
   
   FREE(&binary);
   
@@ -590,9 +600,15 @@ pid_t pgp_gpg_invoke_verify_key(struct pgp_vinfo *pgp,
   char cmd[HUGE_STRING];
   char *binary  = mutt_quote_filename(*pgp->binary);
 
+#ifdef HAVE_GPGM
   snprintf(cmd, sizeof(cmd),
 	   "%sm --no-verbose --batch --fingerprint --check-sigs %s%s",
 	   NONULL(binary), (mutt_strlen(id)==8 || mutt_strlen(id)==16)? "0x":"", id );
+#else
+  snprintf(cmd, sizeof(cmd),
+	   "%s --no-verbose --batch --fingerprint --check-sigs %s%s",
+	   NONULL(binary), (mutt_strlen(id)==8 || mutt_strlen(id)==16)? "0x":"", id );
+#endif
   
   FREE(&binary);
   
