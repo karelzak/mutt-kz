@@ -4,14 +4,14 @@
 #
 # ivb (2001/12/08)
 # ivb  Ací cal ajustar-se a voltes a ~80 columnes.  Les traduccions que
-# ivb  han hagut de ser «compactades» estan marcades amb «ABREUJADA!»,
+# ivb  han hagut de ser «compactades» estan marcades amb «ABREUJAT!»,
 # ivb  i s'hi indica la traducció completa.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mutt 1.3.24i\n"
+"Project-Id-Version: mutt 1.3.27i\n"
 "POT-Creation-Date: 2002-01-22 13:12+0100\n"
-"PO-Revision-Date: 2001-12-09 12:18+01:00\n"
+"PO-Revision-Date: 2002-02-02 11:29+01:00\n"
 "Last-Translator: Ivan Vilata i Balaguer <ivan@selidor.net>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
 "MIME-Version: 1.0\n"
@@ -93,7 +93,7 @@ msgstr "S'ha afegit l'àlies."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# El nom de fitxer no concorda amb cap «nametemplate»; voleu continuar?
+# ivb  El nom de fitxer no concorda amb cap «nametemplate»; voleu continuar?
 #: attach.c:111 attach.c:238 attach.c:431 attach.c:915
 msgid "Can't match nametemplate, continue?"
 msgstr "El nom de fitxer no concorda amb cap «nametemplate»; continuar?"
@@ -1072,7 +1072,7 @@ msgstr ""
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# S'està invocant l'ordre de visualització automàtica: %s
+# ivb  S'està invocant l'ordre de visualització automàtica: %s
 #: handler.c:1521
 #, c-format
 msgid "Invoking autoview command: %s"
@@ -1507,7 +1507,7 @@ msgstr "source: Hi ha errors en «%s»."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# source: S'avorta la lectura de «%s» perquè conté massa errors.
+# ivb  source: S'avorta la lectura de «%s» perquè conté massa errors.
 #: init.c:1268
 #, c-format
 msgid "source: reading aborted due too many errors in %s"
@@ -2588,7 +2588,7 @@ msgstr "S'estan realitzant els canvis..."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# L'escriptura ha fallat!  S'ha desat la bústia parcial en «%s».
+# ivb  L'escriptura ha fallat!  S'ha desat la bústia parcial en «%s».
 #: mbox.c:962
 #, c-format
 msgid "Write failed!  Saved partial mailbox to %s"
@@ -2884,7 +2884,7 @@ msgstr "S'ha desat el certificat."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# Hi ha massa forrellats; voleu eliminar-ne un de «%s»?
+# ivb  Hi ha massa forrellats; voleu eliminar-ne un de «%s»?
 #: mx.c:118
 #, c-format
 msgid "Lock count exceeded, remove lock for %s?"
@@ -3362,29 +3362,29 @@ msgstr ""
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# Aquest ID es troba expirat, inhabilitat o revocat.
+# ivb  Aquest ID es troba expirat, inhabilitat o revocat.
 #: pgpkey.c:608
-#, fuzzy
 msgid "ID is expired/disabled/revoked."
 msgstr "ID expirat/inhabilitat/revocat."
 
+# ivb (2002/02/02)
+# ivb  ABREUJAT! (Hei!  Hui és 2/2/2!)
+# ivb  Aquest ID té una validesa indefinida.
 #: pgpkey.c:612
 msgid "ID has undefined validity."
-msgstr ""
+msgstr "L'ID té una validesa indefinida."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# Aquest ID no és vàlid.
+# ivb  Aquest ID no és vàlid.
 #: pgpkey.c:615
-#, fuzzy
 msgid "ID is not valid."
 msgstr "L'ID no és vàlid."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# Aquest ID només és lleugerament vàlid.
+# ivb  Aquest ID només és lleugerament vàlid.
 #: pgpkey.c:618
-#, fuzzy
 msgid "ID is only marginally valid."
 msgstr "L'ID és lleugerament vàlid."
 
@@ -3506,7 +3506,7 @@ msgstr "S'estan verificant els índexs dels missatges..."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# S'ha perdut la connexió.  Voleu reconnectar amb el servidor POP?
+# ivb  S'ha perdut la connexió.  Voleu reconnectar amb el servidor POP?
 #: pop_lib.c:477
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "S'ha perdut la connexió.  Reconnectar amb el servidor POP?"
@@ -3571,7 +3571,7 @@ msgstr "S'està desant..."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# AVÍS!  Esteu a punt de sobreescriure «%s»; voleu continuar?
+# ivb  AVÍS!  Esteu a punt de sobreescriure «%s»; voleu continuar?
 #: recvattach.c:491
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
@@ -3648,7 +3648,7 @@ msgstr "Voleu reenviar com a fitxers adjunts?"
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# No s'han pogut descodificar tots els fitxers adjunts marcats.  Voleu reenviar els altres usant MIME?
+# ivb  No s'han pogut descodificar tots els fitxers adjunts marcats.  Voleu reenviar els altres usant MIME?
 #: recvcmd.c:419
 msgid "Can't decode all tagged attachments.  MIME-forward the others?"
 msgstr "Reenviar amb MIME fitxers adjunts marcats no descodificables?"
@@ -3672,7 +3672,7 @@ msgstr "No s'ha trobat cap llista de correu!"
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# No s'han pogut descodificar tots els fitxers adjunts marcats.  Voleu encapsular la resta usant MIME?
+# ivb  No s'han pogut descodificar tots els fitxers adjunts marcats.  Voleu encapsular la resta usant MIME?
 #: recvcmd.c:781
 msgid "Can't decode all tagged attachments.  MIME-encapsulate the others?"
 msgstr "Encapsular amb MIME fitxers adjunts marcats no descodificables?"
@@ -3746,7 +3746,7 @@ msgstr "Error en enviar el missatge."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# L'entrada del tipus «%s» en «%s», línia %d, no té un format vàlid.
+# ivb  L'entrada del tipus «%s» en «%s», línia %d, no té un format vàlid.
 #: rfc1524.c:159
 #, c-format
 msgid "Improperly formated entry for type %s in \"%s\" line %d"
@@ -3900,7 +3900,7 @@ msgstr "No s'ha pogut obrir «%s»."
 
 # ivb (2001/12/08)
 # ivb  ABREUJAT!
-# Error en enviar el missatge, el procés fill ha exit amb codi %d (%s).
+# ivb  Error en enviar el missatge, el procés fill ha exit amb codi %d (%s).
 #: sendlib.c:2029
 #, c-format
 msgid "Error sending message, child exited %d (%s)."
@@ -3944,9 +3944,3 @@ msgstr "El missatge pare no és visible en aquesta vista limitada."
 #: thread.c:1035
 msgid "Parent message is not available."
 msgstr "El missatge pare no es troba disponible."
-
-# ivb (2001/12/08)
-# ivb  ABREUJAT!
-# Es desconeix el nivell de validesa d'aquest ID.
-#~ msgid "This ID's validity level is undefined."
-#~ msgstr "No es sap com és de vàlid l'ID."
