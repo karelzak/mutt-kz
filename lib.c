@@ -996,10 +996,7 @@ void mutt_FormatString (char *dest,		/* output buffer */
 	src = callback (buf, sizeof (buf), ch, src, prefix, ifstring, elsestring, data, flags);
 
 	if ((len = strlen (buf)) + wlen > destlen)
-	{
-	  if ((len = destlen - wlen) < 0)
-	    len = 0;
-	}
+	  len = (destlen - wlen > 0) ? (destlen - wlen) : 0;
 	memcpy (wptr, buf, len);
 	wptr += len;
 	wlen += len;

@@ -604,7 +604,7 @@ int mutt_index_menu (int attach_msg /* invoked while attaching a message */)
 
 	CHECK_MSGCOUNT;
 	CHECK_READONLY;
-	mutt_pattern_func (M_DELETE, "Delete messages matching: ", CURHDR);
+	mutt_pattern_func (M_DELETE, "Delete messages matching: ");
 	menu->redraw = REDRAW_INDEX | REDRAW_STATUS;
 	break;
 
@@ -638,7 +638,7 @@ int mutt_index_menu (int attach_msg /* invoked while attaching a message */)
 
 	CHECK_MSGCOUNT;
 	menu->oldcurrent = Context->vcount ? CURHDR->index : -1;
-	if (mutt_pattern_func (M_LIMIT, "Limit to messages matching: ", CURHDR) == 0)
+	if (mutt_pattern_func (M_LIMIT, "Limit to messages matching: ") == 0)
 	{
 	  if (menu->oldcurrent >= 0)
 	  {
@@ -777,7 +777,7 @@ int mutt_index_menu (int attach_msg /* invoked while attaching a message */)
       case OP_MAIN_TAG_PATTERN:
 
 	CHECK_MSGCOUNT;
-	mutt_pattern_func (M_TAG, "Tag messages matching: ", CURHDR);
+	mutt_pattern_func (M_TAG, "Tag messages matching: ");
 	menu->redraw = REDRAW_INDEX | REDRAW_STATUS;
 	break;
 
@@ -785,14 +785,14 @@ int mutt_index_menu (int attach_msg /* invoked while attaching a message */)
 
 	CHECK_MSGCOUNT;
 	CHECK_READONLY;
-	if (mutt_pattern_func (M_UNDELETE, "Undelete messages matching: ", CURHDR) == 0)
+	if (mutt_pattern_func (M_UNDELETE, "Undelete messages matching: ") == 0)
 	  menu->redraw = REDRAW_INDEX | REDRAW_STATUS;
 	break;
 
       case OP_MAIN_UNTAG_PATTERN:
 
 	CHECK_MSGCOUNT;
-	if (mutt_pattern_func (M_UNTAG, "Untag messages matching: ", CURHDR) == 0)
+	if (mutt_pattern_func (M_UNTAG, "Untag messages matching: ") == 0)
 	  menu->redraw = REDRAW_INDEX | REDRAW_STATUS;
 	break;
 

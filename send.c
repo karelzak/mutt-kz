@@ -44,7 +44,7 @@ extern char RFC822Specials[];
 
 
 
-static void append_signature (ENVELOPE *env, FILE *f)
+static void append_signature (FILE *f)
 {
   FILE *tmpfp;
   pid_t thepid;
@@ -986,7 +986,7 @@ ci_send_message (int flags,		/* send mode */
       goto cleanup;
 
     if (! (flags & (SENDMAILX | SENDKEY)) && Editor && strcmp (Editor, "builtin") != 0)
-      append_signature (msg->env, tempfp);
+      append_signature (tempfp);
   }
   /* wait until now to set the real name portion of our return address so
      that $realname can be set in a send-hook */
@@ -1036,7 +1036,7 @@ ci_send_message (int flags,		/* send mode */
     if(! (flags & SENDKEY))
     {
       if (mutt_needs_mailcap (msg->content))
-	mutt_edit_attachment (msg->content, 0);
+	mutt_edit_attachment (msg->content);
       else if (!Editor || strcmp ("builtin", Editor) == 0)
 	mutt_builtin_editor (msg->content->filename, msg, cur);
       else if (option (OPTEDITHDRS))

@@ -870,7 +870,7 @@ void mutt_check_simple (char *s, size_t len, const char *simple)
   }
 }
 
-int mutt_pattern_func (int op, char *prompt, HEADER *hdr)
+int mutt_pattern_func (int op, char *prompt)
 {
   pattern_t *pat;
   char buf[LONG_STRING] = "", *simple, error[STRING];

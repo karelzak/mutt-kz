@@ -616,9 +616,9 @@ static int pgp_parse_pgp3_sig(unsigned char *buff, size_t l, KEYINFO *p)
 	if(!--ml) break;
       }
       
-      ml -= skl;
-      if(ml < 0)
+      if((int) ml - (int) skl < 0)
 	break;
+      ml -= skl;
       
       nextone = j + skl;
       skt = buff[j++];

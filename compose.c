@@ -184,14 +184,14 @@ static int pgp_send_menu (int bits)
 static int
 check_attachments(ATTACHPTR **idx, short idxlen)
 {
-  int i;
+  int i, r;
   struct stat st;
   char pretty[_POSIX_PATH_MAX], msg[_POSIX_PATH_MAX + SHORT_STRING];
 
   for (i = 0; i < idxlen; i++)
   {
     strfcpy(pretty, idx[i]->content->filename, sizeof(pretty));
-    if(stat(pretty, &st) != 0)
+    if(stat(idx[i]->content->filename, &st) != 0)
     {
       mutt_pretty_mailbox(pretty);
       mutt_error("%s [#%d] no longer exists!",
@@ -205,8 +205,10 @@ check_attachments(ATTACHPTR **idx, short idxlen)
       snprintf(msg, sizeof(msg), "%s [#%d] modified. Update encoding?",
 	       pretty, i+1);
       
-      if(mutt_yesorno(msg, M_YES) == M_YES)
+      if((r = mutt_yesorno(msg, M_YES)) == M_YES)
 	mutt_update_encoding(idx[i]->content);
+      else if(r == -1)
+	return -1;
     }
   }
 
@@ -929,7 +931,7 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 
       case OP_COMPOSE_EDIT_MIME:
 	CHECK_COUNT;
-	if (mutt_edit_attachment (idx[menu->current]->content, 0))
+	if (mutt_edit_attachment (idx[menu->current]->content))
 	{
 	  mutt_update_encoding (idx[menu->current]->content);
 	  menu->redraw = REDRAW_FULL;

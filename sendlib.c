@@ -863,6 +863,11 @@ static void mutt_set_encoding (BODY *b, CONTENT *info)
     b->encoding = ENC7BIT;
 }
 
+static void stamp_attachment(BODY *a)
+{
+  a->stamp = time(NULL);
+}
+
 /* Assumes called from send mode where BODY->filename points to actual file */
 void mutt_update_encoding (BODY *a)
 {
@@ -872,7 +877,8 @@ void mutt_update_encoding (BODY *a)
     return;
 
   mutt_set_encoding (a, info);
-
+  stamp_attachment(a);
+  
   if (a->type == TYPETEXT)
   {
     /* make sure the charset is valid */
@@ -899,7 +905,7 @@ void mutt_update_encoding (BODY *a)
 #endif
 
 
-  a->stamp = time(NULL);
+
   safe_free ((void **) &info);
 }
 
@@ -981,8 +987,7 @@ BODY *mutt_make_file_attach (const char *path)
   } 
 
   mutt_set_encoding (att, info);
-
-
+  stamp_attachment(att);
 
 #ifdef _PGPPATH
   /*

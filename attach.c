@@ -155,7 +155,7 @@ int mutt_compose_attachment (BODY *a)
  * Returns 1 if editor found, 0 if not (useful to tell calling menu to
  * redraw)
  */
-int mutt_edit_attachment (BODY *a, int opt)
+int mutt_edit_attachment (BODY *a)
 {
   char type[STRING];
   char command[STRING];
