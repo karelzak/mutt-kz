@@ -309,18 +309,18 @@ msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Umgekehrt "
-"(D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/(F)aden/(u)nsort/(G)röße/Be(w)ert?: "
+"(D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/Be(z)ug/(u)nsort/(G)röße/Be(w)ert?: "
 
 #: commands.c:339
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Sortieren "
-"(D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/(F)aden/(u)nsort/(G)röße/Be(w)ert?: "
+"(D)at/(A)bs/Ei(n)g/(B)etr/(E)mpf/Be(z)ug/(u)nsort/(G)röße/Be(w)ert?: "
 
 #: commands.c:340
 msgid "dfrsotuzc"
-msgstr "danbefugw"
+msgstr "danbezugw"
 
 #: commands.c:393
 msgid "Shell command: "
@@ -748,15 +748,15 @@ msgstr "Keine weiteren Diskussionsfäden."
 
 #: curs_main.c:1289
 msgid "You are on the first thread."
-msgstr "Sie haben bereits den ersten Diskussionsfaden ausgewählt."
+msgstr "Sie haben bereits den ersten Diskussionsstrang ausgewählt."
 
 #: curs_main.c:1342
 msgid "Thread contains unread messages."
-msgstr "Diskussionsfaden enthält ungelesene Nachrichten."
+msgstr "Diskussionsstrang enthält ungelesene Nachrichten."
 
 #: curs_main.c:1355 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
-msgstr "Darstellung von Diskussionsfäden ist nicht eingeschaltet."
+msgstr "Bezugsverkettung nicht eingeschaltet."
 
 #.
 #. * SLcurses_waddnstr() can't take a "const char *", so this is only
@@ -1417,11 +1417,11 @@ msgstr "Lösche"
 
 #: keymap_defs.h:48
 msgid "delete all messages in subthread"
-msgstr "Lösche alle Nachrichten im Diskussionsfadenteil"
+msgstr "Lösche alle Nachrichten im Teilstrang"
 
 #: keymap_defs.h:49
 msgid "delete all messages in thread"
-msgstr "Lösche alle Nachrichten im Diskussionsfaden"
+msgstr "Lösche alle Nachrichten im Diskussionsstrang"
 
 #: keymap_defs.h:50
 msgid "display full address of sender"
@@ -1601,11 +1601,11 @@ msgstr "Springe zur nächsten neuen Nachricht"
 
 #: keymap_defs.h:95
 msgid "jump to the next subthread"
-msgstr "Springe zum nächsten Diskussionsfadenteil"
+msgstr "Springe zum nächsten Teilstrang"
 
 #: keymap_defs.h:96
 msgid "jump to the next thread"
-msgstr "Springe zum nächsten Diskussionsfaden"
+msgstr "Springe zum nächsten Diskussionsstrang"
 
 #: keymap_defs.h:97
 msgid "move to the next undeleted message"
@@ -1617,11 +1617,11 @@ msgstr "Springe zur nächsten ungelesenen Nachricht"
 
 #: keymap_defs.h:99
 msgid "jump to previous thread"
-msgstr "Springe zum vorigen Diskussionsfaden"
+msgstr "Springe zum vorigen Diskussionsstrang"
 
 #: keymap_defs.h:100
 msgid "jump to previous subthread"
-msgstr "Springe zum vorigen Diskussionsfadenteil"
+msgstr "Springe zum vorigen Teilstrang"
 
 #: keymap_defs.h:101
 msgid "move to the last undelete message"
@@ -1637,11 +1637,11 @@ msgstr "Springe zur vorigen ungelesenen Nachricht"
 
 #: keymap_defs.h:104
 msgid "mark the current thread as read"
-msgstr "Markiere den aktuellen Diskussionsfaden als gelesen"
+msgstr "Markiere den aktuellen Diskussionsstrang als gelesen"
 
 #: keymap_defs.h:105
 msgid "mark the current subthread as read"
-msgstr "Markiere den aktuellen Diskussionsfadenteil als gelesen"
+msgstr "Markiere den aktuellen Teilstrang als gelesen"
 
 #: keymap_defs.h:106
 msgid "set a status flag on a message"
@@ -1793,11 +1793,11 @@ msgstr "Wende nächste Funktion auf markierte Nachrichten an"
 
 #: keymap_defs.h:143
 msgid "tag the current subthread"
-msgstr "Markiere aktuellen Diskussionsfadenteil"
+msgstr "Markiere aktuellen Teilstrang"
 
 #: keymap_defs.h:144
 msgid "tag the current thread"
-msgstr "Markiere aktuellen Diskussionsfaden"
+msgstr "Markiere aktuellen Diskussionsstrang"
 
 #: keymap_defs.h:145
 msgid "toggle a message's 'new' flag"
@@ -1821,11 +1821,11 @@ msgstr "Entferne Löschmarkierung vom aktuellen Eintrag"
 
 #: keymap_defs.h:150
 msgid "undelete all messages in thread"
-msgstr "Entferne Löschmarkierung von allen Nachrichten im Diskussionsfaden"
+msgstr "Entferne Löschmarkierung von allen Nachrichten im Diskussionsstrang"
 
 #: keymap_defs.h:151
 msgid "undelete all messages in subthread"
-msgstr "Entferne Löschmarkierung von allen Nachrichten im Diskussionsfadenteil"
+msgstr "Entferne Löschmarkierung von allen Nachrichten im Teilstrang"
 
 #: keymap_defs.h:152
 msgid "show the Mutt version number and date"
@@ -1845,11 +1845,11 @@ msgstr "Zeige derzeit aktives Begrenzungsmuster"
 
 #: keymap_defs.h:156
 msgid "collapse/uncollapse current thread"
-msgstr "Kollabiere/expandiere aktuellen Diskussionsfaden"
+msgstr "Kollabiere/expandiere aktuellen Diskussionsstrang"
 
 #: keymap_defs.h:157
 msgid "collapse/uncollapse all threads"
-msgstr "Kollabiere/expandiere alle Diskussionsfäden"
+msgstr "Kollabiere/expandiere alle Diskussionsstränge"
 
 #: keymap_defs.h:158
 msgid "attach a PGP public key"
