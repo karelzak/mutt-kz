@@ -1114,7 +1114,10 @@ static BODY *pgp_sign_message (BODY *a)
   }
 
   if (err)
+  {
     mutt_any_key_to_continue (NULL);
+    mutt_clear_error();
+  }
   if (empty)
   {
     unlink (sigfile);
@@ -1309,7 +1312,10 @@ static BODY *pgp_encrypt_message (BODY *a, char *keylist, int sign)
 
   /* pause if there is any error output from PGP */
   if (err)
+  {
     mutt_any_key_to_continue (NULL);
+    mutt_clear_error();
+  }
 
   if (empty)
   {
