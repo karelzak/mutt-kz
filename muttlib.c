@@ -128,6 +128,7 @@ int mutt_copy_body (FILE *fp, BODY **tgt, BODY *src)
   memcpy (b, src, sizeof (BODY));
   b->parts = NULL;
   b->next  = NULL;
+  b->hdr = NULL;
 
   b->filename = safe_strdup (tmp);
   b->use_disp = use_disp;
@@ -142,6 +143,7 @@ int mutt_copy_body (FILE *fp, BODY **tgt, BODY *src)
   b->filename = safe_strdup (b->filename);
   b->d_filename = safe_strdup (b->d_filename);
   b->description = safe_strdup (b->description);
+
   
   /* copy parameters */
   for (par = b->parameter, ppar = &b->parameter; par; ppar = &(*ppar)->next, par = par->next)
