@@ -105,7 +105,8 @@ static int imap_readchar (CONNECTION *conn, char *c)
 {
   if (conn->bufpos >= conn->available)
   {
-    conn->available = read (conn->fd, conn->inbuf, sizeof(LONG_STRING));
+    conn->available = read (conn->fd, conn->inbuf, 
+			    sizeof(LONG_STRING) > SSIZE_MAX ? SSIZE_MAX : sizeof(LONG_STRING));
     conn->bufpos = 0;
     if (conn->available <= 0)
       return conn->available; /* returns 0 for EOF or -1 for other error */
