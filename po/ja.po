@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2000 mutt-j ML members.
 # FIRST AUTHOR Kikutani Makoto <kikutani@Galaxy.net>, 1999.
-# 2nd AUTHOR OOTA,Toshiya <oota@mspd.mt.nec.co.jp>, 2002.
+# 2nd AUTHOR OOTA,Toshiya <oota@mspd.mt.nec.co.jp>, 2001-2002.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.27\n"
 "POT-Creation-Date: 2002-01-22 13:12+0100\n"
-"PO-Revision-Date: 2002-01-23 10:37+0900\n"
+"PO-Revision-Date: 2002-01-28 12:37+0900\n"
 "Last-Translator: oota toshiya <oota@mspd.mt.nec.co.jp>\n"
 "Language-Team: mutt-j <mutt-j@ns.ribbon.or.jp>\n"
 "MIME-Version: 1.0\n"
@@ -192,11 +192,11 @@ msgstr "ファイルマスクに一致するファイル無し"
 
 #: browser.c:855
 msgid "Create is only supported for IMAP mailboxes"
-msgstr "Create は IMAPメールボックスのみのサポート"
+msgstr "作成機能 は IMAPメールボックスのみのサポート"
 
 #: browser.c:875
 msgid "Delete is only supported for IMAP mailboxes"
-msgstr "Delete は IMAPメールボックスのみのサポート"
+msgstr "削除機能 は IMAPメールボックスのみのサポート"
 
 #: browser.c:883
 #, c-format
@@ -255,7 +255,7 @@ msgstr "%s に新着メール"
 #: color.c:322
 #, c-format
 msgid "%s: color not supported by term"
-msgstr "色 %s は termでは未サポート"
+msgstr "色 %s は 端末では未サポート"
 
 #: color.c:328
 #, c-format
@@ -1046,7 +1046,7 @@ msgstr "はすでに削除済み --]\n"
 #: handler.c:1662
 #, c-format
 msgid "[-- on %s --]\n"
-msgstr "[-- 上の %s --]\n"
+msgstr "[--  %s 上に --]\n"
 
 #: handler.c:1667
 #, c-format
@@ -1127,7 +1127,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"未バインディングの:機能\n"
+"未バインディングの機能:\n"
 "\n"
 
 #: help.c:344
@@ -1201,7 +1201,7 @@ msgstr "SASL認証失敗。"
 #: imap/browse.c:64 imap/imap.c:516
 #, c-format
 msgid "%s is an invalid IMAP path"
-msgstr ""
+msgstr "%s は不正なIMAPパス"
 
 #: imap/browse.c:81
 msgid "Getting namespaces..."
@@ -1213,7 +1213,7 @@ msgstr "フォルダリスト取得中..."
 
 #: imap/browse.c:219
 msgid "No such folder"
-msgstr "%s というフォルダはない"
+msgstr "そのようなフォルダはない"
 
 #: imap/browse.c:277
 msgid "Create mailbox: "
@@ -1299,7 +1299,7 @@ msgstr "サーバからメッセージを削除中..."
 
 #: imap/imap.c:1043
 msgid "imap_sync_mailbox: EXPUNGE failed"
-msgstr ""
+msgstr "imap_sync_mailbox: 削除失敗"
 
 #: imap/imap.c:1077
 msgid "CLOSE failed"
@@ -1376,7 +1376,7 @@ msgstr "%s: は未定義の整列方法"
 #: init.c:757
 #, c-format
 msgid "mutt_restore_default(%s): error in regexp: %s\n"
-msgstr "mutt_restore_default(%s): のregexp中でエラー: %s\n"
+msgstr "mutt_restore_default(%s): の正規表現でエラー: %s\n"
 
 #: init.c:820
 #, c-format
@@ -1949,7 +1949,7 @@ msgstr "次の未読メッセージへ移動"
 
 #: keymap_alldefs.h:115
 msgid "jump to parent message in thread"
-msgstr "前のスレッドへ移動"
+msgstr "スレッドの親メッセージへ移動"
 
 #: keymap_alldefs.h:116
 msgid "jump to previous thread"
@@ -2177,7 +2177,7 @@ msgstr "MIME添付ファイルを表示"
 
 #: keymap_alldefs.h:172
 msgid "show currently active limit pattern"
-msgstr "active limit patternの現在の値を表示"
+msgstr "有効な制限パターンの現在の値を表示"
 
 #: keymap_alldefs.h:173
 msgid "collapse/uncollapse current thread"
@@ -2640,11 +2640,11 @@ msgstr "エントロピー欠乏のためSSLは無効になった"
 
 #: mutt_ssl.c:315
 msgid "I/O error"
-msgstr ""
+msgstr "I/Oエラー"
 
 #: mutt_ssl.c:318
 msgid "unspecified protocol error"
-msgstr ""
+msgstr "未指定プロトコルエラー"
 
 #: mutt_ssl.c:324
 #, c-format
@@ -3199,7 +3199,7 @@ msgstr "IDは 期限切れ/使用不可/廃棄済み である。"
 
 #: pgpkey.c:612
 msgid "ID has undefined validity."
-msgstr ""
+msgstr "IDは未定義の信用度である"
 
 #: pgpkey.c:615
 msgid "ID is not valid."
@@ -3247,7 +3247,7 @@ msgstr "コマンド UIDL はサーバではサポートされていない。"
 #: pop.c:246 pop.c:562
 #, c-format
 msgid "%s is an invalid POP path"
-msgstr ""
+msgstr "%s は不正なPOPパス"
 
 #: pop.c:277
 msgid "Fetching list of messages..."
