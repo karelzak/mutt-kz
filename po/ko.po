@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6pre1\n"
-"POT-Creation-Date: 1999-08-31 21:26+0200\n"
-"PO-Revision-Date: 1999-06-01 03:06+0900\n"
+"POT-Creation-Date: 1999-09-02 01:07+0900\n"
+"PO-Revision-Date: 1999-09-02 01:08+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarag.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +67,7 @@ msgstr "별칭 추가됨."
 
 #: attach.c:112 attach.c:239 attach.c:431 attach.c:878
 msgid "Can't match nametemplate, continue?"
-msgstr "이름 보기판과 맞지 않음. 계속할까요?"
+msgstr "nametemplate와 맞지 않음. 계속할까요?"
 
 #. For now, editing requires a file, no piping
 #: attach.c:124
@@ -76,9 +76,9 @@ msgstr "Mailcap 작성 항목은 %%s가 필요함"
 
 #: attach.c:132 attach.c:257 commands.c:155 compose.c:1019 curs_lib.c:128
 #: curs_lib.c:323
-#, fuzzy, c-format
+#, c-format
 msgid "Error running \"%s\"!"
-msgstr "주소 분석 중 오류!"
+msgstr "\"%s\" 실행 중 오류!"
 
 #: attach.c:142
 msgid "Failure to open file to parse headers."
@@ -251,7 +251,7 @@ msgstr "기본 색상들이 지원되지 않음"
 
 #: commands.c:87 commands.c:95 pgp.c:1389 pgpkey.c:220
 msgid "Invoking PGP..."
-msgstr "PGP를 구동합니다..."
+msgstr "PGP 구동 중..."
 
 #. find out whether or not the verify signature
 #: commands.c:92
@@ -510,7 +510,7 @@ msgstr "새 파일: "
 
 #: compose.c:890
 msgid "Content-Type is of the form base/sub"
-msgstr ""
+msgstr "Content-Type base/sub 형식이어야 함"
 
 #: compose.c:896
 #, c-format
@@ -528,7 +528,7 @@ msgstr "여기에 있는 것들은 첨부 과정에서 실패한 것들입니다."
 
 #: compose.c:980
 msgid "Postpone this message?"
-msgstr "이 메세지는 나중에 보낼까요?"
+msgstr "메세지를 나중에 보낼까요?"
 
 #: compose.c:1034
 msgid "Write message to mailbox"
@@ -537,7 +537,7 @@ msgstr "편지함에 메세지 쓰기"
 #: compose.c:1038
 #, c-format
 msgid "Writing message to %s ..."
-msgstr "%s에 메세지 쓰기..."
+msgstr "%s에게 메세지 쓰기..."
 
 #: compose.c:1049
 msgid "Message written."
@@ -573,18 +573,16 @@ msgid "No mailbox is open."
 msgstr "열린 편지함이 없음."
 
 #: curs_main.c:51
-#, fuzzy
 msgid "There are no messages."
-msgstr "글타래에 읽지 않은 메세지 있음."
+msgstr "메시지가 없습니다."
 
 #: curs_main.c:52 mx.c:996 pager.c:55 recvattach.c:47
 msgid "Mailbox is read-only."
 msgstr "읽기 전용 편지함."
 
 #: curs_main.c:53 pager.c:56
-#, fuzzy
 msgid "Function not permitted in attach-message mode."
-msgstr "%c: 현재 방식에서 지원되지 않음"
+msgstr "첨부 메시지 모드에서 지원하지 않는 기능입니다."
 
 #: curs_main.c:220
 msgid "Cannot toggle write on a readonly mailbox!"
@@ -626,7 +624,7 @@ msgstr "그룹"
 
 #: curs_main.c:434
 msgid "Mailbox was externally modified.  Flags may be wrong."
-msgstr "외부에서 편지함 변경됨. 플래그가 틀릴 수 있음"
+msgstr "외부에서 편지함이 변경됨. 플래그가 틀릴 수 있음"
 
 #: curs_main.c:437
 msgid "New mail in this mailbox."
@@ -672,7 +670,7 @@ msgstr ""
 
 #: curs_main.c:744
 msgid "Quit Mutt?"
-msgstr "Mutt 를 종료할까요?"
+msgstr "Mutt을 종료할까요?"
 
 #: curs_main.c:846
 msgid "Tag messages matching: "
@@ -701,7 +699,7 @@ msgstr "%s는 편지함이 아님."
 
 #: curs_main.c:979
 msgid "Exit Mutt without saving?"
-msgstr "저장하지 않고 Mutt 을 끝낼까요?"
+msgstr "저장하지 않고 Mutt을 끝낼까요?"
 
 #: curs_main.c:996 curs_main.c:1020
 msgid "You are on the last message."
@@ -717,11 +715,11 @@ msgstr "첫번째 메세지입니다."
 
 #: curs_main.c:1133 pattern.c:1109
 msgid "Search wrapped to top."
-msgstr ""
+msgstr "위에서 부터 검색."
 
 #: curs_main.c:1142 pattern.c:1120
 msgid "Search wrapped to bottom."
-msgstr ""
+msgstr "아래에서 부터 검색."
 
 #: curs_main.c:1175
 msgid "No new messages"
@@ -877,7 +875,7 @@ msgstr "[-- 오류: message/external-body는 access-type 인자가 없음 --]\n"
 #: handler.c:1251
 #, c-format
 msgid "[-- This %s/%s attachment "
-msgstr ""
+msgstr "[-- %s/%s 첨부물 "
 
 #: handler.c:1258
 #, c-format
@@ -1045,9 +1043,8 @@ msgstr "편지 수신 중..."
 
 #. hack from Nathan Neulinger
 #: imap.c:1736
-#, fuzzy
 msgid "Sending CREATE command ..."
-msgstr "APPEND 명령 송신 ..."
+msgstr "CREATE 명령 송신 ..."
 
 #: imap.c:1741
 msgid "Sending APPEND command ..."
@@ -1236,7 +1233,7 @@ msgstr "mailcap을 사용해 첨부물을 강제로 봄"
 
 #: keymap_defs.h:7
 msgid "view attachment as text"
-msgstr "첨부물 text로 보기"
+msgstr "첨부물을 텍스트로 보기"
 
 #: keymap_defs.h:8
 msgid "move to the bottom of the page"
@@ -1727,7 +1724,7 @@ msgstr "화면 정리하고 다시 그리기"
 
 #: keymap_defs.h:130
 msgid "{internal}"
-msgstr ""
+msgstr "{내부}"
 
 #: keymap_defs.h:131
 msgid "reply to a message"
@@ -1827,7 +1824,7 @@ msgstr "MIME 첨부물 보여줌"
 
 #: keymap_defs.h:155
 msgid "show currently active limit pattern"
-msgstr ""
+msgstr "현재 사용중인 리미트 패턴 보이기"
 
 #: keymap_defs.h:156
 msgid "collapse/uncollapse current thread"
@@ -1908,20 +1905,18 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "개발자와 연락하려면 <mutt-dev@mutt.org>로 메일을 보내십시오.\n"
 
 #: main.c:42
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-9 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
-"Copyright (C) 1996-8 Michael R. Elkins 외.\n"
+"Copyright (C) 1996-9 Michael R. Elkins 외.\n"
 "Mutt은 어떠한 책임도 지지 않습니다; 자세한 사항은 'mutt -vv' 를 치시기 바\n"
 "랍니다. Mutt은 공개 소프트웨어이며, 일정 사항만 지킨다면 여러분께서  자유\n"
 "로이 배포할 수 있습니다. 자세한 사항은 'mutt -vv' 를 쳐보시기 바랍니다.\n"
 
 #: main.c:48
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
@@ -1945,10 +1940,10 @@ msgid ""
 "    along with this program; if not, write to the Free Software\n"
 "    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
 msgstr ""
-"Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
-"Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998   Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998   Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
 "\n"
 "이 글에 언급되지 않은 많은 분들께서도 수 많은 소스 코드, 수정,  그리고\n"
 "기능제안에 도움을 주셨습니다.\n"
@@ -2064,7 +2059,7 @@ msgstr "DEBUG가 컴파일시 정의되지 않음. 무시함\n"
 
 #: main.c:543
 msgid "No recipients specified.\n"
-msgstr "수신자 지정되지 않음.\n"
+msgstr "수신자가 지정되지 않음.\n"
 
 #: main.c:616
 #, c-format
@@ -2291,12 +2286,11 @@ msgstr "'toggle-write'를 사용해 쓰기를 허가합니다!"
 #: mx.c:991
 #, c-format
 msgid "Mailbox is marked unwritable. %s"
-msgstr "편지함이 쓰기 불가능으로 표기되었음. %s"
+msgstr "편지함이 쓰기 불가능으로 마크됨. %s"
 
 #: pager.c:54
-#, fuzzy
 msgid "Not available in this menu."
-msgstr "현재 편지함에 새 편지 도착."
+msgstr "현재 메뉴에선 사용하지 못함."
 
 #: pager.c:1373
 msgid "PrevPg"
@@ -2308,7 +2302,7 @@ msgstr "다음장"
 
 #: pager.c:1378
 msgid "View Attachm."
-msgstr "첨부물보기"
+msgstr "첨부물 보기"
 
 #: pager.c:1381
 msgid "Next"
@@ -2337,7 +2331,7 @@ msgstr "현재 도움말을 보고 있습니다."
 
 #: pager.c:1991
 msgid "No more quoted text."
-msgstr "더이상의 인용문 없음."
+msgstr "더 이상의 인용문 없음."
 
 #: pager.c:2004
 msgid "No more unquoted text after quoted text."
@@ -2459,7 +2453,7 @@ msgid ""
 "[-- BEGIN PGP MESSAGE --]\n"
 "\n"
 msgstr ""
-"[-- PGP 편지 시작 --]\n"
+"[-- PGP 메시지 시작 --]\n"
 "\n"
 
 #: pgp.c:364
@@ -2471,7 +2465,7 @@ msgid ""
 "[-- BEGIN PGP SIGNED MESSAGE --]\n"
 "\n"
 msgstr ""
-"[-- PGP 서명 편지 시작 --]\n"
+"[-- PGP 서명 메시지 시작 --]\n"
 "\n"
 
 #: pgp.c:468
@@ -2480,7 +2474,7 @@ msgid ""
 "[-- END PGP MESSAGE --]\n"
 msgstr ""
 "\n"
-"[-- PGP 편지 끝 --]\n"
+"[-- PGP 메시지 끝 --]\n"
 
 #: pgp.c:470
 msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
@@ -2492,14 +2486,14 @@ msgid ""
 "[-- END PGP SIGNED MESSAGE --]\n"
 msgstr ""
 "\n"
-"[-- PGP 서명 편지 끝 --]\n"
+"[-- PGP 서명 메시지 끝 --]\n"
 
 #: pgp.c:485
 msgid ""
 "[-- Error: could not find beginning of PGP message! --]\n"
 "\n"
 msgstr ""
-"[-- 오류: PGP 편지의 시작을 찾을 수 없음! --]\n"
+"[-- 오류: PGP 메시지의 처음을 찾을 수 없음! --]\n"
 "\n"
 
 #: pgp.c:678 pgp.c:903
@@ -2533,7 +2527,7 @@ msgid ""
 "--]\n"
 "\n"
 msgstr ""
-"[-- 오류: 이 편지는 PGP/MIME 의 기준을 준수하지 않음! --]\n"
+"[-- 오류: 이  메시지는 PGP/MIME의 기준을 준수하지 않음! --]\n"
 "\n"
 
 #: pgp.c:810
@@ -2553,7 +2547,7 @@ msgid ""
 "[-- Error: malformed PGP/MIME message! --]\n"
 "\n"
 msgstr ""
-"[-- 오류: 잘못 만들어진 PGP/MIME 형식의 편지! --]\n"
+"[-- 오류: 잘못 만들어진 PGP/MIME 형식의 메시지! --]\n"
 "\n"
 
 #: pgp.c:980
@@ -2750,12 +2744,12 @@ msgstr "POP 편지함에 새 편지가 없음."
 #: pop.c:209
 #, c-format
 msgid "Reading %d new message (%d bytes)..."
-msgstr "새 편지 %d개를 읽는 중 (%d 바이트) ..."
+msgstr "새 메시지 %d개를 읽는 중 (%d 바이트) ..."
 
 #: pop.c:210
 #, c-format
 msgid "Reading %d new messages (%d bytes)..."
-msgstr "새 편지 %d개를 읽는 중 (%d 바이트) ..."
+msgstr "새 메시지 %d개를 읽는 중 (%d 바이트) ..."
 
 #: pop.c:245
 msgid "Error reading message!"
@@ -3013,7 +3007,7 @@ msgstr "편지 보냄."
 
 #: send.c:1325
 msgid "Sending in background."
-msgstr ""
+msgstr "백그라운드로 보냄."
 
 #: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
@@ -3030,18 +3024,18 @@ msgid "Could not open %s"
 msgstr "%s을 열 수 없음"
 
 #: sendlib.c:1690
-#, fuzzy, c-format
+#, c-format
 msgid "Error sending message, child exited %d (%s)."
-msgstr "메세지 보내는 중 오류, 자식이 종료됨 %d (%s).\n"
+msgstr "메세지 보내는 중 오류, 자식이 종료됨 %d (%s)."
 
 #: sendlib.c:1696
 msgid "Output of the delivery process"
-msgstr ""
+msgstr "배달 프로세스의 출력"
 
 #: signal.c:39
-#, fuzzy, c-format
+#, c-format
 msgid "%s...  Exiting.\n"
-msgstr "%s 발견... 종료함.\n"
+msgstr "%s... 종료함.\n"
 
 #: signal.c:42
 #, c-format
@@ -3069,6 +3063,3 @@ msgstr "정렬 함수 찾을 수 없음! [버그 보고 바람]"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(편지함 없음)"
-
-#~ msgid "Error sending message."
-#~ msgstr "메세지를 보내는 중 오류."
