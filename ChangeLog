@@ -1,11 +1,163 @@
-Thu Jul 16 08:57:00 1998  Thomas Roessler  <roessler@guug.de>
+Wed Jul 22 08:26:16 1998  Thomas Roessler  <roessler@guug.de>
+
+	* send.c: Correct an error message in send.c.
+	(From: Byrial Jensen <byrial@post3.tele.dk>)
+
+	* sendlib.c, recvattach.c, protos.h, postpone.c,
+	pager.c, mx.c, mutt.h, lib.c, keymap.c, handler.c,
+	compose.c, commands.c, attach.h, attach.c:
+
+	These changes fix some of the bugs which were
+	recently reported to mutt-dev.  To be more specific,
+	message-type attachments are saved to mail folders
+	from the receive attachment menu, some of the
+	sending code has been made more robust against
+	disappearing attachments, and "tag" is rebound to
+	"T" on the compose menu.
+
+	(Some part of this patch comes from Vikas Agnihotri
+	<VikasA@att.com>.)
+
+	* send.c: Avoid a potential segmentation fault when
+	trying to postpone, but Postponed equals NULL.
+
+	* Attic/BUGS: This file is intended to contain known
+	bugs which still have to be fixed.
+
+	* doc/manual.txt:
+	Committing the changes previously made to manual.sgml.
+
+	* imap.c: Include Message-ID and Reply-To headers
+	when fetching a message's headers from an IMAP
+	server. (From: Andy Sloane <andude@incarnate.net>)
+
+Tue Jul 21 07:54:03 1998  Thomas Roessler  <roessler@guug.de>
+
+	* recvattach.c:
+	The old behaviour of the %d (for description) specifier is
+	recreated by this patch.
+	(From: Byrial Jensen <byrial@post3.tele.dk>)
+
+	* protos.h, lib.c, attach.c:
+	You should never _ever_ do something like this:
+
+	       [process A]  ---[piped write until EOF]---> [process B]
+	       [process A]  <---[piped read until EOF]--- [process B]
+
+	Basically, what happens is something like this: A
+	feeds data to B; B processes the data, and feeds it
+	to the pipe until the pipe buffer is full; at this
+	point, A writes to its pipe until its buffer is full
+	too, and if it still has more data to write, that's
+	it, it never gets to the read part to flush B's
+	buffer --- both processes are blocked on write.
+
+	This patch fixes such a situation in the compose menu.
+
+	(From: Liviu Daia <daia@stoilow.imar.ro>)
+
+Mon Jul 20 21:01:05 1998  Thomas Roessler  <roessler@guug.de>
+
+	* reap.pl: Perl lies in /usr/bin on my machines.
+
+	* pop.c: It seems that if you don't enter any
+	password at all when prompted for the POP password,
+	Mutt will die with a segmentation fault also. (Bug
+	reported by Steve Mayer <smayer@rtd.com> via the
+	Debian bug tracking system, fix from Thomas
+	Roessler.)
+
+	* postpone.c: When you send a message which have
+	been postponed before sending, then all its
+	attachments (if there are more than one) will have a
+	content-disposition header which includes a
+	filename, even if there isn't a real filename but
+	only random choosen temporary one. (From: Byrial
+	Jensen <byrial@post3.tele.dk>)
+
+Sat Jul 18 09:18:31 1998  Thomas Roessler  <roessler@guug.de>
+
+	* recvattach.c: "Set mime_forward, and forward a
+	message --- Mutt will segfault." The obvious fix for
+	this is to check for aptr->content->hdr in
+	mutt_attach_fmt() before invoking
+	_mutt_make_string().  Anyway, I suspect that the
+	real fix may involve something like parsing the
+	rfc822 attachment in question.
+
+	* sendlib.c: Postponing messages behaves funny when the $postponed
+	folder is in Maildir format; I traced this down to the
+	fact that postponed messages are saved in "cur" while
+	mutt_num_postponed() is looking at "new".
+	(From: Liviu Daia <daia@stoilow.imar.ro>)
+
+Fri Jul 17 08:37:02 1998  Thomas Roessler  <roessler@guug.de>
+
+	* compose.c: Removing the old snd_entry() code.
+
+	* doc/manual.sgml, protos.h, pgp.c, mutt.h, init.h, hook.c:
+	When sending encrypted messages, it may arrive that Mutt
+	can't determine the PGP key of the recipient (presumably
+	because her address has changed, but she hasn't updated
+	her PGP key yet). In this situation it's convenient to be
+	able to associate a keyID with an address automatically.
+	The attached patch is an attempt to implement this idea
+	using a "pgp-hook". (From: Liviu Daia <daia@stoilow.imar.ro>).
+
+	* recvattach.c: Removing the old attach_entry() code.
+
+	* recvattach.c, protos.h, mutt.h, init.h, globals.h, compose.c:
+	This patch adds a string variable $attach_format which
+	controls the look of the compose and attach menus.
+	Unfortunately, I was not able to make things so that it
+	would look exactly the same as the hardcoded versions, so
+	the default format is a bit different, but I think it is
+	quite usable.  (From Michael Elkins <me@cs.hmc.edu>).
+
+	* functions.h, browser.c, OPS:
+	This patch allows you to view files from the browser
+	window, useful if you are searching for a file to attach
+	to your message. It uses the standard mailcap stuff (and
+	the lookup mime types) to use the correct "viewer" for the
+	file.  (From Brandon Long <blong@fiction.net>)
+
+	* doc/Attic/dotlock.man.in, doc/Makefile.in, configure.in, configure, Makefile.in:
+	Dotlock-related changes: We call it mutt.dotlock to avoid
+	conflicts with certain NFS versions' dotlocking utilities
+	(pointed out by Liviu Daia).  Additionally, we need to
+	compile it as an external utility on systems which don't
+	have an fchdir(2) system call.
+
+Thu Jul 16 16:39:53 1998  Thomas Roessler  <roessler@guug.de>
+
+	* mx.c: Fixing a small typographic error.
+
+	* mx.c: Mutt doesn't retry locking if it doesn't succeed at once.
+	The code in mx_lock_file is supposed to retry but it
+	doesn't work because of a mistake in operator precedence.
+	(From: Petri Kaukasoina <kaukasoi@elektroni.ee.tut.fi>)
+
+	* Attic/dotlock.c:
+	The dotlock.c file tries to include <posix1_lim.h> if
+	_POSIX_PATH_MAX isn't defined but it doesn't include
+	<limits.h>, where this symbol should be defined.  (From
+	Marc.Baudoin@solsoft.com)
+
+	* send.c: When several messages are tagged and the user applies
+	reply, group-reply, or list-reply to these messages, the
+	reply's references and in-reply-to headers are constructed
+	from the tagged message which comes last in the current
+	index.  This patch constructs the references header from
+	_all_ messages' message-id and references headers. (tlr)
+
+	* reldate.h, configure.in, configure, Changes, ChangeLog:
+	Preparing mutt 0.94.
 
 	* imap.c: "My two remaining issues are the speed at which it
 	downloads the headers, and support of PREAUTH. I'm
 	enclosing a patch (to stock mutt-0.92.13i) which addresses
-	these issues." 
-	
-	(From Brian Marcotte <marcotte@panix7.panix.com>)
+	these issues." (From Brian Marcotte
+	<marcotte@panix7.panix.com>)
 
 	* color.c: This patch fixes two problems reported on mutt-users.
 
