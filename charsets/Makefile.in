@@ -37,7 +37,7 @@ DISTFILES = parse_i18n.c Makefile.in charsets.list charsets.alias gen_charsets
 all: charsets.list
 
 parse_i18n: parse_i18n.o $(LIBOBJS)
-	$(CC) -o parse_i18n parse_i18n.o $(LIBOBJS) @LIBS@
+	$(CC) -o parse_i18n parse_i18n.o $(LIBOBJS) $(LDFLAGS) @LIBS@
 
 strcasecmp.o $(LIBOBJS):
 	cd .. && $(MAKE) $(LIBOBJS)
