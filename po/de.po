@@ -983,16 +983,16 @@ msgstr "Hole Nachrichten-Köpfe... [%d/%d]"
 #. Unable to fetch headers for lower versions
 #: imap.c:689
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr ""
+msgstr "Kann von dieser Version des IMAP-Servers keine Nachrichtenköpfe erhalten."
 
 #: imap.c:881
-#, fuzzy, c-format
+#, c-format
 msgid "Reopening mailbox... %s"
-msgstr "Öffne Mailbox erneut..."
+msgstr "Öffne Mailbox erneut... %s"
 
 #: imap.c:1233
 msgid "This IMAP server is ancient. Mutt does not work with it."
-msgstr ""
+msgstr "Veralteter IMAP-Server."
 
 #: imap.c:1254
 msgid "IMAP Username: "
@@ -1023,7 +1023,7 @@ msgstr "Wähle %s aus..."
 #. * error if the mailbox did not exist.
 #: imap.c:1562
 msgid "Unable to append to IMAP mailboxes at this server"
-msgstr ""
+msgstr "Kann auf diesem IMAP-Server zu Mailboxen nichts hinzufügen."
 
 #: imap.c:1572 lib.c:1206
 #, c-format

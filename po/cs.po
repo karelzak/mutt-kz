@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.95.5i\n"
-"POT-Creation-Date: 1999-05-31 12:50+0200\n"
-"PO-Revision-Date: 1999-04-20 23:26+0200\n"
+"Project-Id-Version: 0.95.6i\n"
+"POT-Creation-Date: 1999-06-01 04:02+0200\n"
+"PO-Revision-Date: 1999-06-03 19:52+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -262,11 +262,11 @@ msgstr "Pøíkaz: "
 
 #: commands.c:176 recvattach.c:682
 msgid "Bounce message to: "
-msgstr "Pøeposlat zprávu na: "
+msgstr "Zaslat kopii zprávy na: "
 
 #: commands.c:178 recvattach.c:684
 msgid "Bounce tagged messages to: "
-msgstr "Pøeposlat oznaèené zprávy na: "
+msgstr "Zaslat kopii oznaèených zpráv na: "
 
 #: commands.c:193
 msgid "Error parsing address!"
@@ -275,20 +275,20 @@ msgstr "Chyba pøi zpracování adresy!"
 #: commands.c:203
 #, c-format
 msgid "Bounce message to %s"
-msgstr "Pøeposlat zprávu na %s"
+msgstr "Zaslat kopii zprávy na %s"
 
 #: commands.c:203
 #, c-format
 msgid "Bounce messages to %s"
-msgstr "Pøeposlat zprávy na %s"
+msgstr "Zaslat kopii zpráv na %s"
 
 #: commands.c:214
 msgid "Message bounced."
-msgstr "Zpráva byla pøeposlána."
+msgstr "Kopie zprávy byla odeslána."
 
 #: commands.c:214
 msgid "Messages bounced."
-msgstr "Zprávy byly pøeposlány."
+msgstr "Kopie zpráv byly odeslány."
 
 #: commands.c:234
 msgid "Pipe to command: "
@@ -785,7 +785,7 @@ msgstr "Èíslo zprávy (%d) není správné.\n"
 
 #: edit.c:312
 msgid "(End message with a . on a line by itself)\n"
-msgstr "(Zprávu ukonèete zapsáním samotného znaku '.' na novou øádku)\n"
+msgstr "(Zprávu ukonèíte zapsáním samotného znaku '.' na novou øádku)\n"
 
 #: edit.c:370
 msgid "No mailbox.\n"
@@ -983,16 +983,16 @@ msgstr "Stahuji hlavièky zpráv... [%d/%d]"
 #. Unable to fetch headers for lower versions
 #: imap.c:689
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr ""
+msgstr "Z této verze IMAP serveru nelze stáhnout hlavièky."
 
 #: imap.c:881
-#, fuzzy, c-format
+#, c-format
 msgid "Reopening mailbox... %s"
-msgstr "Znovu otevírám schránku..."
+msgstr "Znovu otevírám schránku... %s"
 
 #: imap.c:1233
 msgid "This IMAP server is ancient. Mutt does not work with it."
-msgstr ""
+msgstr "Tento IMAP server je zastaralý. Mutt s ním nebude fungovat."
 
 #: imap.c:1254
 msgid "IMAP Username: "
@@ -1023,7 +1023,7 @@ msgstr "Volím %s..."
 #. * error if the mailbox did not exist.
 #: imap.c:1562
 msgid "Unable to append to IMAP mailboxes at this server"
-msgstr ""
+msgstr "Ke schránkám na tomto IMAP serveru nelze pøipojovat."
 
 #: imap.c:1572 lib.c:1206
 #, c-format
@@ -1490,7 +1490,7 @@ msgstr "pøepnout zprávì pøíznak dùle¾itosti"
 
 #: keymap_defs.h:75
 msgid "forward a message with comments"
-msgstr "pøeposlat zprávu s komentáøem"
+msgstr "pøeposlat zprávu jinému u¾ivateli s komentáøem"
 
 #: keymap_defs.h:76
 msgid "select the current entry"
@@ -1792,11 +1792,11 @@ msgstr "obnovit aktuální polo¾ku"
 
 #: keymap_defs.h:150
 msgid "undelete all messages in thread"
-msgstr "obnovit v¹echny zprávy ve vláknì"
+msgstr "obnovit v¹echny zprávy ve vláknu"
 
 #: keymap_defs.h:151
 msgid "undelete all messages in subthread"
-msgstr "obnovit v¹echny zprávy v podvláknì"
+msgstr "obnovit v¹echny zprávy v podvláknu"
 
 #: keymap_defs.h:152
 msgid "show the Mutt version number and date"
@@ -1903,7 +1903,7 @@ msgid ""
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
 "Copyright (C) 1996-8 Michael R. Elkins a dal¹í.\n"
-"Mutt je roz¹iøovám BEZ JAKÉKOLI ZÁRUKY; dal¹í informace získáte pøíkazem\n"
+"Mutt je roz¹iøován BEZ JAKÉKOLI ZÁRUKY; dal¹í informace získáte pøíkazem\n"
 "`mutt -vv'.\n"
 "Mutt je volné programové vybavení. Roz¹iøování tohoto programu je\n"
 "vítáno, musíte ov¹em dodr¾et urèitá pravidla; dal¹í informace\n"
@@ -2064,7 +2064,7 @@ msgstr "Chyba pøi inicializaci terminálu."
 #: main.c:403
 #, c-format
 msgid "Debugging at level %d.\n"
-msgstr "Ùroveò ladìní je %d.\n"
+msgstr "Úroveò ladìní je %d.\n"
 
 #: main.c:405
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
@@ -2867,7 +2867,7 @@ msgstr "Poslat rourou do: "
 #: recvattach.c:568
 #, c-format
 msgid "I dont know how to print %s attachments!"
-msgstr "Nevím, jak vytisknout tento poèet (%s) pøíloh."
+msgstr "Nevím, jak vytisknout pøílohy typu %s!."
 
 #: recvattach.c:631
 msgid "Print tagged attachment(s)?"
@@ -2879,17 +2879,17 @@ msgstr "Vytisknout pøílohu?"
 
 #: recvattach.c:659
 msgid "You may only bounce message/rfc822 parts."
-msgstr "Pøeposlat lze pouze èásti typu 'message/rfc822'."
+msgstr "Lze posílat pouze kopie èástí typu 'message/rfc822'."
 
 #: recvattach.c:695
 #, c-format
 msgid "Bounce messages to %s...?"
-msgstr "Pøeposlat zprávy na %s...?"
+msgstr "Zaslat kopii zpráv na %s...?"
 
 #: recvattach.c:696
 #, c-format
 msgid "Bounce message to %s...?"
-msgstr "Pøeposlat zprávu na %s...?"
+msgstr "Zaslat kopii zprávy na %s...?"
 
 #: recvattach.c:921
 msgid "Attachments"
@@ -2968,7 +2968,7 @@ msgstr "V¹echny po¾adované zprávy nelze vlo¾it!"
 
 #: send.c:657
 msgid "Forward MIME encapsulated?"
-msgstr "Pøeposlat v MIME formátu?"
+msgstr "Pøeposlat zprávu zapouzdøenu v MIME formátu?"
 
 #. If the user is composing a new message, check to see if there
 #. * are any postponed messages first.
@@ -3088,4 +3088,5 @@ msgstr "(¾ádná schránka)"
 #~ msgstr "Ohlaste, prosím, tuto chybu ve funkci mutt_mktime."
 
 #~ msgid "%s is a boolean var!"
+#~ msgstr "Promìnná %s je typu boolean!"
 #~ msgstr "Promìnná %s je typu boolean!"

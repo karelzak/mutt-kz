@@ -1,15 +1,15 @@
 # French messages for Mutt.
-# Copyright (C) 1998 Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre <Vincent.Lefevre@ens-lyon.fr>
-# Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre <Vincent.Lefevre@ens-lyon.fr>, 1998
+# Copyright (C) 1998 Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre <vincent@vinc17.org>
+# Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre <vincent@vinc17.org>, 1998
 #
 # , fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mutt 0.94.14i\n"
+"Project-Id-Version: Mutt 0.95.6i\n"
 "POT-Creation-Date: 1999-05-31 12:50+0200\n"
-"PO-Revision-Date: 1999-02-15 21:37+0100\n"
+"PO-Revision-Date: 1999-06-02 01:39+0200\n"
 "Last-Translator: Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre "
-"<Vincent.Lefevre@ens-lyon.fr>\n"
+"<vincent@vinc17.org>\n"
 "Language-Team: mutt-dev <mutt-dev@mutt.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -1031,7 +1031,7 @@ msgstr "Récupération des en-têtes du message... [%d/%d]"
 #. Unable to fetch headers for lower versions
 #: imap.c:689
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr ""
+msgstr "Impossible de récupérer les en-têtes à partir de cette version du serveur IMAP."
 
 #: imap.c:881
 #, fuzzy, c-format
@@ -1040,7 +1040,7 @@ msgstr "Réouverture de la boîte aux lettres..."
 
 #: imap.c:1233
 msgid "This IMAP server is ancient. Mutt does not work with it."
-msgstr ""
+msgstr "Ce serveur IMAP est trop ancien. Mutt ne marche pas avec."
 
 #: imap.c:1254
 msgid "IMAP Username: "
@@ -1073,7 +1073,7 @@ msgstr "Sélection de %s..."
 #. * error if the mailbox did not exist.
 #: imap.c:1562
 msgid "Unable to append to IMAP mailboxes at this server"
-msgstr ""
+msgstr "Impossible d'ajouter aux boîtes aux lettres IMAP sur ce serveur"
 
 # , c-format
 #: imap.c:1572 lib.c:1206
