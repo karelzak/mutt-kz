@@ -1,13 +1,13 @@
-# Ronny Haryanto <ronny@haryan.to>, 1999.
+# Ronny Haryanto <ronny-mutt-po-file@haryan.to>, 1999-2000.
 #
 # http://i18n.linux.or.id
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.1.5i\n"
+"Project-Id-Version: 1.2.2i\n"
 "POT-Creation-Date: 2000-06-21 00:23+0200\n"
-"PO-Revision-Date: 2000-02-27 09:00-0600\n"
-"Last-Translator: Ronny Haryanto <ronny@haryan.to>\n"
+"PO-Revision-Date: 2000-07-03 12:15-0600\n"
+"Last-Translator: Ronny Haryanto <ronny-mutt-po-file@haryan.to>\n"
 "Language-Team: Indonesia <i18n@linux.or.id>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -1274,18 +1274,16 @@ msgid "[unable to calculate]"
 msgstr "%s: tidak bisa melampirkan file"
 
 #: imap/imap_ssl.c:292
-#, fuzzy
 msgid "[invalid date]"
-msgstr "%s: nilai tidak betul"
+msgstr "[tanggal tidak betul]"
 
 #: imap/imap_ssl.c:367
 msgid "Server certificate is not yet valid"
-msgstr ""
+msgstr "Sertifikat server belum sah"
 
 #: imap/imap_ssl.c:374
-#, fuzzy
 msgid "Server certificate has expired"
-msgstr "Sertifikat ini dikeluarkan oleh:"
+msgstr "Sertifikat server sudah kadaluwarsa"
 
 #: imap/imap_ssl.c:447
 msgid "This certificate belongs to:"
@@ -1296,19 +1294,18 @@ msgid "This certificate was issued by:"
 msgstr "Sertifikat ini dikeluarkan oleh:"
 
 #: imap/imap_ssl.c:467
-#, fuzzy
 msgid "This certificate is valid"
-msgstr "Sertifikat ini dikeluarkan oleh:"
+msgstr "Sertifikat ini sah"
 
 #: imap/imap_ssl.c:468
 #, c-format
 msgid "   from %s"
-msgstr ""
+msgstr "   dari %s"
 
 #: imap/imap_ssl.c:470
 #, c-format
 msgid "     to %s"
-msgstr ""
+msgstr "     ke %s"
 
 #: imap/imap_ssl.c:476
 #, c-format
