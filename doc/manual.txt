@@ -864,7 +864,7 @@
 
   33..55..  KKeeyybbooaarrdd mmaaccrrooss
 
-  Usage: macro _m_e_n_u _k_e_y _s_e_q_u_e_n_c_e
+  Usage: macro _m_e_n_u _k_e_y _s_e_q_u_e_n_c_e [ _d_e_s_c_r_i_p_t_i_o_n ]
 
   Macros are useful when you would like a single key to perform a series
   of actions.  When you press _k_e_y in menu _m_e_n_u, Mutt will behave as if
@@ -876,6 +876,9 @@
   bindings'', with the addition that control characters in _s_e_q_u_e_n_c_e can
   also be specified as _^_x.  In order to get a caret (``^'') you need to
   use _^_^.
+
+  Optionally you can specify a descriptive text, which is shown in the
+  help screens.
 
   NNoottee:: Macro definitions (if any) listed in the help screen(s), are
   silently truncated at the screen width, and are not wrapped.
@@ -917,6 +920,7 @@
      pager)
 
   +o  message (informational messages)
+
 
   +o  normal
 
@@ -1116,9 +1120,9 @@
 
   The ``my_hdr'' command allows you to create your own header fields
   which will be added to every message you send.
-
   For example, if you would like to add an ``Organization:'' header
   field to all of your outgoing messages, you can put the command
+
 
        my_hdr Organization: A Really Big Company, Anytown, USA
 
@@ -1181,10 +1185,6 @@
 
        save-hook me@(turing\\.)?cs\\.hmc\\.edu$ +elkins
        save-hook aol\\.com$ +spam
-
-
-
-
 
   Also see the ``fcc-save-hook'' command.
 
