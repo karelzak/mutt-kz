@@ -31,6 +31,8 @@
 #include <unistd.h>
 #include <errno.h>
 
+#include <iconv.h>
+
 #include "mutt.h"
 #include "charset.h"
 
