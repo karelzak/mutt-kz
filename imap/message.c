@@ -280,6 +280,7 @@ int imap_fetch_message (MESSAGE *msg, CONTEXT *ctx, int msgno)
   char *pc;
   long bytes;
   IMAP_CACHE *cache;
+  HEADER* h;
 
   /* see if we already have the message in our cache */
   cache = &CTX_DATA->cache[ctx->hdrs[msgno]->index % IMAP_CACHE_LEN];
@@ -363,9 +364,9 @@ int imap_fetch_message (MESSAGE *msg, CONTEXT *ctx, int msgno)
             !ctx->hdrs[msgno]->changed)
           {
 	    IMAP_HEADER* newh;
-            HEADER* h = ctx->hdrs[msgno];
 	    unsigned char readonly;
 
+            h = ctx->hdrs[msgno];
             newh = msg_new_header ();
 
             dprint (2, (debugfile, "imap_fetch_message: parsing FLAGS\n"));
@@ -413,28 +414,41 @@ int imap_fetch_message (MESSAGE *msg, CONTEXT *ctx, int msgno)
 
   if (!imap_code (buf))
     goto bail;
-    
   
   /* Update the header information.  Previously, we only downloaded a
    * portion of the headers, those required for the main display.
    */
+  h = ctx->hdrs[msgno];
   rewind (msg->fp);
-  mutt_free_envelope (&ctx->hdrs[msgno]->env);
-  ctx->hdrs[msgno]->env = mutt_read_rfc822_header (msg->fp, ctx->hdrs[msgno],0, 0);
-  ctx->hdrs[msgno]->lines = 0;
+  /* I hate do this here, since it's so low-level, but I'm not sure where
+   * I can abstract it. Problem: the id and subj hashes lose their keys when
+   * mutt_free_envelope gets called, but keep their spots in the hash. This
+   * confuses threading. Alternatively we could try to merge the new
+   * envelope into the old one. Also messy and lowlevel. */
+  if (h->env->message_id)
+    hash_delete (ctx->id_hash, h->env->message_id, h, NULL);
+  if (h->env->real_subj)
+    hash_delete (ctx->subj_hash, h->env->real_subj, h, NULL);
+  mutt_free_envelope (&h->env);
+  h->env = mutt_read_rfc822_header (msg->fp, h, 0, 0);
+  if (h->env->message_id)
+    hash_insert (ctx->id_hash, h->env->message_id, h, 0);
+  if (h->env->real_subj)
+    hash_insert (ctx->subj_hash, h->env->real_subj, h, 1);
+
+  h->lines = 0;
   fgets (buf, sizeof (buf), msg->fp);
   while (!feof (msg->fp))
   {
-    ctx->hdrs[msgno]->lines++;
+    h->lines++;
     fgets (buf, sizeof (buf), msg->fp);
   }
 
-  ctx->hdrs[msgno]->content->length = ftell (msg->fp) - 
-                                        ctx->hdrs[msgno]->content->offset;
+  h->content->length = ftell (msg->fp) - h->content->offset;
 
   /* This needs to be done in case this is a multipart message */
 #ifdef HAVE_PGP
-  ctx->hdrs[msgno]->pgp = pgp_query (ctx->hdrs[msgno]->content);
+  h->pgp = pgp_query (h->content);
 #endif /* HAVE_PGP */
 
   mutt_clear_error();
