@@ -263,6 +263,7 @@ int mutt_is_message_type (int type, const char *subtype)
 static int mutt_query_save_attachment (FILE *fp, BODY *body, HEADER *hdr)
 {
   char buf[_POSIX_PATH_MAX], tfile[_POSIX_PATH_MAX];
+  int is_message;
   
   if (body->filename)
     strfcpy (buf, body->filename, sizeof (buf));
@@ -280,11 +281,13 @@ static int mutt_query_save_attachment (FILE *fp, BODY *body, HEADER *hdr)
 
   mutt_expand_path (buf, sizeof (buf));
 
-  if(fp && 
+  is_message = (fp && 
       body->hdr && 
       body->encoding != ENCBASE64 && 
       body->encoding != ENCQUOTEDPRINTABLE && 
-      mutt_is_message_type (body->type, body->subtype))
+      mutt_is_message_type (body->type, body->subtype));
+  
+  if (is_message)
   {
     struct stat st;
     
@@ -300,7 +303,7 @@ static int mutt_query_save_attachment (FILE *fp, BODY *body, HEADER *hdr)
     return -1;
   
   mutt_message ("Saving...");
-  if (mutt_save_attachment (fp, body, tfile, 0, hdr ? hdr : body->hdr) == 0)
+  if (mutt_save_attachment (fp, body, tfile, 0, (hdr || !is_message) ? hdr : body->hdr) == 0)
   {
     mutt_message ("Attachment saved.");
     return 0;
