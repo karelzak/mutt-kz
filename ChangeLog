@@ -1916,3 +1916,15 @@ Thu Jun 25 22:31:46 1998  Thomas Roessler  <roessler@guug.de>
 
 	* Makefile.in: Don't use GNU make specific features.
 
+Thu Jul  2 19:47:12 1998  Thomas Roessler  <roessler@guug.de>
+
+	* hdrline.c: Adding the %O expansion.
+
+	* doc/manual.sgml: Applying the various manual_nits patches.
+
+Wed Jul  1 17:01:50 1998  Thomas Roessler  <roessler@guug.de>
+
+	* curs_main.c: Fixing a reverse-threading problem.
+
+	* imap.c: Fixing an imap-related segmentation fault.
+

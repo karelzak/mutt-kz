@@ -1,12 +1,46 @@
-Thu Jul  2 19:47:12 1998  Thomas Roessler  <roessler@guug.de>
+Fri Jul 10 09:38:55 1998  Thomas Roessler  <roessler@guug.de>
 
-	* hdrline.c: Adding the %O expansion.
+	* doc/PGP-Notes.txt: Adding a notice about core dumps.
 
-	* doc/manual.sgml: Applying the various manual_nits patches.
+	* reldate.h, README, INSTALL: Preparing 0.93i.
 
-Wed Jul  1 17:01:50 1998  Thomas Roessler  <roessler@guug.de>
+	* handler.c: Fix text/enriched decoding: if there's a tag mismatch in
+	the last paragraph in the attachment, the whole paragraph
+	wouldn't be displayed.
 
-	* curs_main.c: Fixing a reverse-threading problem.
+Thu Jul  9 19:51:36 1998  Thomas Roessler  <roessler@guug.de>
 
-	* imap.c: Fixing an imap-related segmentation fault.
+	* configure.in, configure, Attic/config.sub:
+	Use CC -Ae -D_HPUX_SOURCE on HP/UX.
+
+	* Attic/config.sub:
+	file config.sub was initially added on branch mutt-0-93.
+
+	* Attic/config.guess: Use CC -Ae -D_HPUX_SOURCE on HP/UX.
+
+	* Attic/config.guess:
+	file config.guess was initially added on branch mutt-0-93.
+
+Wed Jul  8 21:59:43 1998  Thomas Roessler  <roessler@guug.de>
+
+	* snprintf.c, pattern.c, parse.c, mx.c, mh.c, lib.c, keymap.c, init.c, from.c, edit.c, curs_main.c:
+	Changing (int) casts in is* arguments to (unsigned char)
+	casts to avoid mis-casting of signed chars.  (From Michael
+	Elkins.)
+
+Tue Jul  7 09:22:40 1998  Thomas Roessler  <roessler@guug.de>
+
+	* rfc822.c: Change one int to size_t in rfc822.c.
+
+	* rfc822.c: Fix the parsing of route addresses a la RFC 822.  Patch
+	from Michael Elkins.
+
+	* snprintf.c, sendlib.c, pattern.c, parse.c, mx.c, mh.c, lib.c, keymap.c, init.c, from.c, edit.c, curs_main.c:
+	Cast the arguments of the is* functions to int.  Patch
+	from Michael Elkins.
+
+Thu Jul  2 21:15:18 1998  Thomas Roessler  <roessler@guug.de>
+
+	* hdrline.c:
+	Using the correct version of O'Shaughnessy Evans' %O patch.
 
