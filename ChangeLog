@@ -1,3 +1,421 @@
+Wed Mar 13 12:31:02 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* doc/smime-notes.txt, smime.c: Assorted patches from Mike Schiraldi.
+
+Sat Mar  2 12:11:35 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* contrib/smime.rc, compose.c, init.h, mutt.h, sendlib.c, smime.c, smime.h:
+	Introduce smime_default_key.  From Oliver Ehli.
+
+	* contrib/smime.rc, smime.c, smime.h, smime_keys.pl, init.h, mutt.h:
+	smime.c:
+	 - the getkeys() function was broken and deleted the last char
+	   of the certfilename
+	 - it now lets me use more than one key for the same mailbox
+	   ie select these.
+	 - some display output was garbled when the email didn't match.
+	   i posted some fix to mutt-users, but i don't like that sleep()
+	   so i dropped the first error message, which basically repeated
+	   the from/sender field only. so now there's just the message: they
+	   don't match.
+
+	smime_keys:
+	 - i modified the add_chain to continue even if no roo-cert
+	   is present (david collantes received som chain that got
+	   exported from outlook. obiously they don't (always ?)
+	   include the root cert) it will now abort if neither root
+	   nor intermediate certs are present.
+	 - add_cert created index entries with '-' as issuer cert, when
+	   it should have been '?'. thus verify would fail. (obviously
+	   nobody ever used that command (add_cert, that is) :)
+
+	the feature above obsoletes the hash_cert and fingerprint_cert commands,
+	adds import_cert command and ask_cert_label bool. i modified the output
+	of smime_keys (a little) so it doesn't look too garbled when supplying
+	the label (it is actually interactive :) furthermore, i do a verify
+	after the cert was added and modified the verify routine to make the
+	cerificate trusted in case of success. (we discussed this in another
+	message) that is ok so far, but perhaps this requires some better root
+	certificate handling, ie the trust should be somehow connected to the
+	root certificate, that maybe added (if the user trusts it and its not
+	present already) to the ca-file. i'll think about that some more ... but
+	then, there already is the add_root command. hmmm... (btw, you'll now
+	never get asked to trust a certificate)
+
+	i have not yet deleted the email handling from the import key stuff (in
+	smime.c/crypt.c), for i'm thinking about smime_keys using it as an
+	additional arg. otoh i don't think users would press ^k if verification
+	failed...hmmm... but still, smime_keys does extract the email from the
+	certificate either way and does verify it by itself, so the only thing
+	that would happen is to have some invalid certificates, that mutt'll
+	refuse to use anyways, left in the database....
+
+	(From Oliver Ehli.)
+
+Thu Feb 28 23:28:51 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* sort.c: Turn on incremental threading again.
+
+	* smime_keys.pl:
+	The script will try to pick out the end-user cert and pass that to
+	openssl. The code which tells the difference may not be perfect. It
+	works with all the certs in my collection, though. I won't be at all
+	surprised if someone comes across a cert chain which confuses it,
+	but it should print out an error in that case. Hopefully they will
+	send us the chain so we can adjust our code.
+
+	(From Mike Schiraldi.)
+
+	* init.h, mutt.h, thread.c:
+	Threading enhancements from Daniel Eisenbud.
+
+	* curs_main.c, init.c, init.h, mutt.h, thread.c:
+	$narrow_tree; fater redrawing when changing tree options.  From
+	Daniel Eisenbud.
+
+	* imap/message.c, mbox.c, mx.c, thread.c:
+	A possible work-around for #939.  From Daniel Eisenbud.
+
+	* init.h, mutt.h, thread.c:
+	Threading enhancements from Daniel Eisenbud.
+
+Tue Feb 26 10:58:56 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/ru.po: update
+
+	* init.h: Fix a typo.
+
+	* init.h: Fix a typo.  #1069.
+
+	* imap/browse.c, imap/message.c, configure.in, mutt_sasl.c:
+	Brendan Cully sent a patch.
+
+	* install-sh: Fix a typo.  From Edmund Grimley Evans.
+
+	* po/ru.po: ru.po update.
+
+	* pop_lib.c:
+	CAPA response tags are case-insensitive.  Noted by Michael Vore,
+	patch from Vsevolod Volkov.
+
+Mon Feb 18 14:55:31 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* alias.c, send.c: Fix for #1047.  From Michael Elkins.
+
+Thu Feb 14 11:22:51 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* charset.c, gnupgparse.c, init.h, rfc2047.c:
+	Iconv patch from Lars Hecking.  MAY NEED TO BE BACKPORTED.
+
+Wed Feb 13 12:04:52 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* smime.c: mutt_any_key() shouldn't be used in curses mode.
+
+	* hdrline.c, init.h, parse.c:
+	Change the default format to be more friendly to "0-line messages",
+	and fix optional expansion for %l - it was the wrong way around.
+	Also, add a hack to parse.c so we ignore negative values in Lines
+	headers.
+
+	* hdrline.c, muttlib.c, protos.h: Undo the %l fix.  It broke things.
+
+	* menu.c:
+	Fix mutt_pad_string; from Edmund Grimley Evans.  (MAY NEED TO BE
+	BACKPORTED.)
+
+	* main.c: Report libiconv version.
+
+Tue Feb 12 21:54:41 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* hdrline.c, muttlib.c, protos.h: Improve %l's behaviour.
+
+	* extlib.c, main.c, pattern.c, smime_keys.pl:
+	Mike Schiraldi's daily S/MIME patch.
+
+Mon Feb 11 17:31:53 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* smime.c:
+	This patch gets rid of an ugly static variable in smime.c. (From
+	Mike Schiraldi.)
+
+	* smime_keys.pl:
+	This patch lets smime_keys.pl automagically handle both formats of
+	x509 certificate -- PEM (text) and DER (binary). This lets Outlook
+	users (and probably others) directly import the certs without first
+	converting them manually.  (From Mike Schiraldi.)
+
+	* configure.in:
+	Honor current values of $LIBS and $CPPFLAGS.  From Thomas Dickey.
+
+	* configure.in: Honor $LIBS and $CPPFLAGS.  From Thomas Dickey.
+
+	* init.c: patch-1.3.27.me.initsort.1
+
+Thu Feb  7 21:48:42 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* smime_keys.pl: Another S/MIME patch from Mike Schiraldi.
+
+	* smime_keys.pl: Fix smime_keys.
+
+	* smime.c: S/MIME fixes from Mike Schiraldi.
+
+	* po/zh_CN.po, po/zh_TW.po, po/sk.po, po/sv.po, po/tr.po, po/uk.po, po/ja.po, po/ko.po, po/lt.po, po/nl.po, po/pl.po, po/pt_BR.po, po/ru.po, po/el.po, po/eo.po, po/es.po, po/et.po, po/fr.po, po/gl.po, po/hu.po, po/id.po, po/it.po, po/ca.po, po/cs.po, po/da.po, po/de.po, po/POTFILES.in, Makefile.am:
+	Make S/MIME messages translatable.
+
+Wed Feb  6 19:14:47 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* lib.h: Avoid a warning on some machines.
+
+	* lib.h, smime.c: Make some scanf formats safe.
+
+Tue Feb  5 22:01:06 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* ascii.c: The previous fix was complete nonsense.  What a day. :-(
+
+	* ascii.c: The previous fix was complete nonsense.
+
+	* browser.c, lib.c, lib.h:
+	Use strcoll for the file browser.  From David Champion.
+
+	* hook.c: Fix crypt-hook.  From Dale Woolridge
+	<dale-list-mutt-dev@woolridge.org>.
+
+	* smime_keys.pl: Clean-up from Mike Schiraldi.
+
+	* imap/browse.c: Fix.
+
+	* imap/browse.c: Fix another IMAP browsing bug.
+
+	* po/ru.po, po/fr.po, po/ko.po: update
+
+	* smime.c:
+	Don't put garbage onto the screen when trying to decrypt messages.
+
+	* contrib/smime.rc, init.h, smime.c, smime.h, smime_keys.pl:
+	S/MIME fixes from Oliver Ehli:
+
+	- smime_keys.pl:
+
+	  support for multiple email adrresses in cert: will add one entry
+	  to {keys, cetrificates}/.index now (for each mailbox)
+
+	  support for certificates without intermediate certs (e.g. for
+	  people who are their own CA: use root as intermediate, for it
+	  probably wouldn't be known to anyone...)
+
+	  bugfix in handle_pem: the checks if some type of cert is present;
+	  die() could never be reached, as the variables checked wouldn't
+	  have been set in that case, so it would break because of undefined
+	  value or some such thing.... (so it has to check $iter instead)
+
+	- smime.c (init.h, ....)
+
+	  support for importing certificates issued for multiple addresses.
+
+	  introduced smime_fingerprint_cert_command, so finally certs can
+	  get compared ... (so the above works..)
+
+	  cleaned up some error messages, that would mess up the terminal.
+
+	  fixed typos (init.h)
+
+	* ascii.c: Fix.
+
+	* ascii.c: Fix ascii_*cmp functions.  Problem noted by Brad Thompson.
+
+Mon Feb  4 09:59:02 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* smime.c, crypt.c: Some S/MIME fixes from Oliver Ehli <elmy@acm.org>.
+
+Sun Feb  3 09:58:45 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* doc/manual.sgml.head, doc/muttrc.man.head, init.h:
+	Add unauto_view.  From Jeremy Blosser.
+
+	* Makefile.am, pgplib.h, pgppubring.c:
+	Add a "-f" flag which helps to dump fingerprints.  Contributed by
+	Jason Harris <jharris@widomaker.com>, and not strictly needed for
+	mutt.
+
+	* pgppubring.c:
+	Correctly calculate fingerprints for type 20 ElGamal keys.  Noted by
+	Jason Harris <jharris@widomaker.com>.
+
+	* pgppubring.c:
+	Fix calculation of fingerprints (and key IDs) for type 20 ElGamal
+	keys.  Noted by Jason Harris <jharris@widowmaker.com>.
+
+Sat Feb  2 16:52:27 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/ca.po: update
+
+	* po/ca.po: update.
+
+	* mh.c: Don't forget deletions when a folder is changed.  Ups.
+
+Fri Feb  1 17:23:20 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* smime_keys.pl:
+	Fix some possible leaks of the private key (encrypted, but
+	still...).  (yow_security_holes.patch from Mike Schiraldi.)
+
+Thu Jan 31 22:05:58 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* doc/smime-notes.txt:
+	Document %C, and other updates.  From Mike Schiraldi.
+
+	* smime.c: Remove some unnecessary quotation marks.
+
+	* contrib/smime.rc, init.h, smime.c, smime.h, smime_keys.pl:
+	Use mutt -Q from smime_keys.
+
+	* po/zh_TW.po, po/pt_BR.po, po/ru.po, po/sk.po, po/sv.po, po/tr.po, po/uk.po, po/zh_CN.po, po/it.po, po/ja.po, po/ko.po, po/lt.po, po/nl.po, po/pl.po, po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/et.po, po/fr.po, po/gl.po, po/hu.po, po/id.po, po/ca.po, po/cs.po:
+	update-po
+
+	* main.c: fix a string.
+
+	* doc/mutt.man: Document -Q.
+
+	* init.c, main.c, protos.h:
+	Add a -Q option to query configuration variables.  This is needed to
+	avoid a separate mutt configuration parser in smime_keys.pl.
+
+Wed Jan 30 22:51:12 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* send.c: patch-1.3.27.me.postpone_date.2
+
+	* smime.c: Mike Schiraldi's daily S/MIME patch, as he puts it.
+
+Tue Jan 29 21:08:10 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* smime.c: Improved certificate handling.  Suggested by Oliver Ehli,
+	implemented by Mike Schiraldi.
+
+	* smime.c:
+	Properly handle certain signatures generated by Outlook.  From Mike
+	Schiraldi.
+
+	* parse.c:
+	Fix a segmentation fault in debugging code.  From Daniel Eisenbud.
+
+Mon Jan 28 23:29:05 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* crypt.c, init.h, mutt.h:
+	Add a new crypt_timestamp option.  The timestamps aren't really
+	needed any more.
+
+	* commands.c, menu.c, mutt_curses.h, mutt.h, pattern.c:
+	Add ~V to match successfully verified messages.
+
+	* contrib/smime.rc: Add a comment. From Mike Schiraldi.
+
+	* init.h: Fix list-from documentation.  From Michael Elkins.
+
+	* doc/smime-notes.txt:
+	Add more information on S/MIME.  Adapted from Oliver Ehli's notes by
+	Mike Schiraldi.
+
+	* send.c: Avoid C99 comments.  Noted by Vincent Lefevre.
+
+	* po/ja.po, po/sv.po: updates
+
+	* menu.c: Wide character fix from TAKIZAWA Takashi.
+
+	* hook.c, Makefile.am: S/MIME-related bug fixes from Brendan Cully.
+
+Fri Jan 25 00:08:30 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* smime.c: ups
+
+	* commands.c, recvattach.c, smime.c, smime.h:
+	More decryption key detection fixes.
+
+	* commands.c, smime.c:
+	Make some prompts look nicer, and add sensible selection of the
+	decryption key.
+
+Thu Jan 24 23:53:19 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* commands.c, crypt.c, smime.c, smime.h: More S/MIME nit-picking.
+
+	* mh.c: Fix.
+
+	* mh.c: Still more code clean-up.
+
+	* doc/smime-notes.txt: Update.
+
+	* mx.c: little fix.
+
+	* mh.c: Ups, don't use the wrong check function...
+
+	* mh.c: Clean up the mh code, too.
+
+	* mh.c: indentation
+
+	* mh.c, mx.c, mx.h:
+	Maildir efficiency improvements, from Michael Elkins and Thomas
+	Roessler.
+
+	* crypt.c, curs_lib.c, smime.c: S/MIME nits.
+
+	* Attic/reap.pl: We don't need this any more.
+
+	* imap/message.c, doc/Makefile.in, doc/smime-notes.txt, contrib/ca-bundle.crt, contrib/Makefile.in, contrib/smime.rc, attach.c, commands.c, compose.c, configure.in, copy.c, copy.h, crypt.c, crypt.h, curs_main.c, functions.h, globals.h, handler.c, hdrline.c, headers.c, hook.c, init.c, init.h, keymap.c, keymap.h, main.c, Makefile.am, mutt.h, muttlib.c, mx.c, OPS.CRYPT, OPS.PGP, OPS.SMIME, pager.c, parse.c, pattern.c, pgp.c, pgp.h, pgplib.h, pop.c, postpone.c, protos.h, recvattach.c, send.c, sendlib.c, smime.c, smime.h, smime_keys.pl:
+	S/MIME support.  From Oliver Ehli <elmy@acm.org> and Mike Schiraldi
+	<raldi@research.netsol.com>.
+
+	* po/pt_BR.po: update
+
+	* doc/manual.sgml.head, doc/muttrc.man.head, attach.c, globals.h, init.h, protos.h, rfc1524.c, sendlib.c:
+	Introduce mime_lookup.  From Brian Foley and Ulf Erikson.
+
+	* po/ru.po: update
+
+	* mh.c: Make reading maildirs more efficient.
+
+	* VERSION: Pseudo-revision for mutt-1.5.
+
+	* m4/glibc21.m4, m4/gssapi.m4, m4/iconv.m4, m4/lcmessage.m4, m4/progtest.m4, m4/funcdecl.m4, m4/gettext.m4, m4/codeset.m4, m4/curslib.m4, m4/README, m4/.cvsignore, m4/Makefile.am.in:
+	version bump
+
+	* po/sk.po, po/sv.po, po/tr.po, po/uk.po, po/zh_CN.po, po/zh_TW.po, po/pl.po, po/pt_BR.po, po/ru.po, po/id.po, po/it.po, po/ja.po, po/ko.po, po/lt.po, po/nl.po, po/fr.po, po/gl.po, po/hu.po, po/el.po, po/eo.po, po/es.po, po/et.po, po/ca.po, po/cs.po, po/.cvsignore, po/da.po, po/de.po, po/Makefile.in.in, po/POTFILES.in, imap/auth_anon.c, imap/auth.c, imap/auth_cram.c, imap/auth_gss.c, imap/auth.h, imap/auth_login.c, imap/auth_sasl.c, imap/browse.c, imap/BUGS, imap/command.c, imap/.cvsignore, imap/imap.c, imap/imap.h, imap/imap_private.h, imap/Makefile.am, imap/message.c, imap/message.h, imap/README, imap/TODO, imap/utf7.c, imap/util.c:
+	more version bumps.
+
+	* intl/bindtextdom.c, intl/cat-compat.c, intl/ChangeLog, intl/config.charset, intl/COPYING.LIB-2.1, intl/COPYING.LIB-2, intl/.cvsignore, intl/dcgettext.c, intl/dcigettext.c, intl/dcngettext.c, intl/dgettext.c, intl/dngettext.c, intl/explodename.c, intl/finddomain.c, intl/gettext.c, intl/gettext.h, intl/gettextP.h, intl/hash-string.h, intl/intl-compat.c, intl/l10nflist.c, intl/libgettext.h, intl/libgnuintl.h, intl/libintl.glibc, intl/linux-msg.sed, intl/loadinfo.h, intl/loadmsgcat.c, intl/localcharset.c, intl/locale.alias, intl/localealias.c, intl/Makefile.in, intl/ngettext.c, intl/plural.c, intl/plural.y, intl/po2tbl.sed.in, intl/ref-add.sin, intl/ref-del.sin, intl/textdomain.c, intl/VERSION, intl/xopen-msg.sed:
+	more version number updates.
+
+	* doc/applying-patches.txt, doc/.cvsignore, doc/devel-notes.txt, doc/dotlock.man, doc/instdoc.sh.in, doc/Makefile.in, doc/manual.sgml.head, doc/manual.sgml.tail, doc/mbox.man, doc/muttbug.man, doc/mutt.man, doc/muttrc.man.head, doc/muttrc.man.tail, doc/patch-notes.txt, doc/PGP-Notes.txt:
+	more version number updates
+
+	* contrib/iconv/iconv.aix-3.2.5.rc, contrib/iconv/iconv.aix-4.1.5.rc, contrib/iconv/iconv.aix-4.2.0.rc, contrib/iconv/iconv.aix-4.3.2.rc, contrib/iconv/iconv.freebsd-3.3.rc, contrib/iconv/iconv.glibc-2.1.3.rc, contrib/iconv/iconv.glibc-2.1.90.rc, contrib/iconv/iconv.hpux-10.01.rc, contrib/iconv/iconv.hpux-10.20.rc, contrib/iconv/iconv.hpux-11.00.rc, contrib/iconv/iconv.irix-6.5.rc, contrib/iconv/iconv.osf1-4.0a.rc, contrib/iconv/iconv.osf1-4.0d.rc, contrib/iconv/iconv.solaris-2.4.rc, contrib/iconv/iconv.solaris-2.5.1.rc, contrib/iconv/iconv.solaris-2.6-cjk.rc, contrib/iconv/iconv.solaris-2.6.rc, contrib/iconv/iconv.solaris-2.7.rc, contrib/iconv/make.sh, contrib/iconv/README, contrib/.cvsignore, contrib/gpg.rc, contrib/language50.txt, contrib/language.txt, contrib/Makefile.in, contrib/Mush.rc, contrib/patch.slang-1.2.2.keypad.1, contrib/pgp2.rc, contrib/pgp5.rc, contrib/pgp6.rc, contrib/Pine.rc, contrib/sample.mailcap, contrib/sample.muttrc, contrib/sample.muttrc-tlr, contrib/Tin.rc:
+	Bumping more version numbers.
+
+	* snprintf.c, sort.c, sort.h, stamp-h.in, status.c, strcasecmp.c, strdup.c, system.c, thread.c, url.c, url.h, utf8.c, wcwidth.c, Attic/reap.pl, pgpkey.c, pgplib.c, pgplib.h, pgpmicalg.c, pgppacket.c, pgppacket.h, pgppubring.c, pop_auth.c, pop.c, pop.h, pop_lib.c, postpone.c, prepare, protos.h, query.c, recvattach.c, recvcmd.c, regex.c, reldate.h, remailer.c, remailer.h, resize.c, rfc1524.c, rfc1524.h, rfc2047.c, rfc2047.h, rfc2231.c, rfc2231.h, rfc822.c, rfc822.h, score.c, send.c, sendlib.c, sha1.c, sha1.h, signal.c, md5c.c, md5.h, menu.c, mh.c, mime.h, mime.types, missing, mkinstalldirs, mkjtags.c, muttbug, muttbug.sh.in, mutt_curses.h, mutt.h, muttlib.c, mutt_menu.h, mutt_regex.h, mutt_sasl.c, mutt_sasl.h, mutt_socket.c, mutt_socket.h, mutt_ssl.c, mutt_ssl.h, mutt_ssl_nss.c, mutt_tunnel.c, mutt_tunnel.h, mx.c, mx.h, pager.c, pager.h, parse.c, patchlist.sh, pattern.c, pgp.c, pgpewrap.c, pgp.h, pgpinvoke.c, editmsg.c, enter.c, extlib.c, filter.c, flags.c, from.c, functions.h, gen_defs, getdomain.c, gettext.c, globals.h, gnupgparse.c, handler.c, hash.c, hash.h, hdrline.c, headers.c, help.c, history.c, history.h, hook.c, init.c, init.h, install-sh, keymap.c, keymap.h, lib.c, lib.h, mailbox.h, main.c, makedoc.c, mapping.h, mbox.c, mbyte.c, mbyte.h, attach.c, attach.h, base64.c, browser.c, browser.h, buffy.c, buffy.h, build-release, charset.c, charset.h, check_sec.sh, color.c, commands.c, complete.c, compose.c, config.guess, config.sub, configure.in, copy.c, copy.h, curs_lib.c, curs_main.c, date.c, depcomp, dotlock.c, dotlock.h, edit.c, acconfig.h, account.c, account.h, addrbook.c, alias.c, ascii.c, ascii.h, GPL, INSTALL, Makefile.am, Muttrc.head.in, NEWS, OPS, OPS.MIX, OPS.PGP, PATCHES, README, README.SECURITY, README.SSL, _regex.h, TODO, VERSION, ABOUT-NLS, BEWARE, ChangeLog, COPYRIGHT, .cvsignore:
+	Bumping version numbers to 3.0, for the new unstable branch.
+
+	* send.c: Set default Fcc when resending a message.
+
+	* po/ja.po: update
+
+Wed Jan 23 22:37:12 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/da.po, po/el.po, po/et.po, po/ko.po, po/pl.po: updates
+
+	* po/uk.po, po/id.po: update
+
+	* charset.c: Fix #999.  A single missing comma.
+
+Tue Jan 22 12:12:45 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/pt_BR.po, po/ru.po, po/sk.po, po/sv.po, po/tr.po, po/uk.po, po/zh_CN.po, po/zh_TW.po, po/hu.po, po/id.po, po/it.po, po/ja.po, po/ko.po, po/lt.po, po/nl.po, po/pl.po, po/ca.po, po/cs.po, po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/et.po, po/fr.po, po/gl.po, ChangeLog, reldate.h, VERSION:
+	automatic post-release commit for mutt-1.3.27
+
+Mon Jan 21 17:43:19 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/it.po: update
+
+	* po/sv.po, po/de.po, po/eo.po: updates
+
 Mon Jan 21 17:43:19 2002  Thomas Roessler  <roessler@does-not-exist.org>
 
 	* po/it.po: update

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.3.12i\n"
-"POT-Creation-Date: 2002-01-22 13:12+0100\n"
+"POT-Creation-Date: 2002-03-13 13:50+0100\n"
 "PO-Revision-Date: 2000-11-29 21:22+0200\n"
 "Last-Translator: Gediminas Paulauskas <menesis@delfi.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -693,7 +693,7 @@ msgstr "Jokia dëþutë neatidaryta."
 msgid "There are no messages."
 msgstr "Ten nëra laiðkø."
 
-#: curs_main.c:61 mx.c:1132 pager.c:65 recvattach.c:47
+#: curs_main.c:61 mx.c:1128 pager.c:65 recvattach.c:47
 msgid "Mailbox is read-only."
 msgstr "Dëþutë yra tik skaitoma."
 
@@ -867,8 +867,8 @@ msgstr "Daugiau gijø nëra."
 msgid "You are on the first thread."
 msgstr "Tu esi ties pirma gija."
 
-#: curs_main.c:1509 curs_main.c:1541 flags.c:237 thread.c:962 thread.c:1017
-#: thread.c:1072
+#: curs_main.c:1509 curs_main.c:1541 flags.c:237 thread.c:1010 thread.c:1065
+#: thread.c:1120
 msgid "Threading is not enabled."
 msgstr "Skirstymas gijomis neleidþiamas."
 
@@ -1286,7 +1286,7 @@ msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Nepavyko pridurti prie IMAP dëþuèiø ðiame serveryje"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:731 imap/message.c:600 muttlib.c:1174
+#: imap/imap.c:731 imap/message.c:595 muttlib.c:1174
 #, c-format
 msgid "Create %s?"
 msgstr "Sukurti %s?"
@@ -1353,24 +1353,24 @@ msgstr "Negaliu sukurti laikinos bylos!"
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Paimu laiðkø antraðtes... [%d/%d]"
 
-#: imap/message.c:250 pop.c:343
+#: imap/message.c:249 pop.c:343
 msgid "Fetching message..."
 msgstr "Paimu laiðkà..."
 
-#: imap/message.c:293 pop.c:380
+#: imap/message.c:292 pop.c:380
 msgid "The message index is incorrect. Try reopening the mailbox."
 msgstr "Laiðkø indeksas yra neteisingas. Bandyk ið naujo atidaryti dëþutæ."
 
-#: imap/message.c:466
+#: imap/message.c:461
 msgid "Uploading message ..."
 msgstr "Nusiunèiu laiðkà..."
 
-#: imap/message.c:576
+#: imap/message.c:571
 #, c-format
 msgid "Copying %d messages to %s..."
 msgstr "Kopijuoju %d laiðkus á %s..."
 
-#: imap/message.c:580
+#: imap/message.c:575
 #, c-format
 msgid "Copying message %d to %s..."
 msgstr "Kopijuoju laiðkà %d á %s..."
@@ -1430,51 +1430,51 @@ msgstr "%s: blogas paðto dëþutës tipas"
 msgid "%s: invalid value"
 msgstr "%s: bloga reikðmë"
 
-#: init.c:1208
+#: init.c:1211
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: neþinomas tipas"
 
-#: init.c:1251
+#: init.c:1254
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Klaida %s, eilutë %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1267
+#: init.c:1270
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: klaidos %s"
 
-#: init.c:1268
+#: init.c:1271
 #, c-format
 msgid "source: reading aborted due too many errors in %s"
 msgstr "source: skaitymas nutrauktas, nes %s yra per daug klaidø."
 
-#: init.c:1282
+#: init.c:1285
 #, c-format
 msgid "source: error at %s"
 msgstr "source: klaida %s"
 
-#: init.c:1287
+#: init.c:1290
 msgid "source: too many arguments"
 msgstr "source: per daug argumentø"
 
-#: init.c:1338
+#: init.c:1341
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: neþinoma komanda"
 
-#: init.c:1694
+#: init.c:1697
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Klaida komandinëje eilutëje: %s\n"
 
-#: init.c:1743
+#: init.c:1746
 msgid "unable to determine home directory"
 msgstr "negaliu nustatyti namø katalogo"
 
-#: init.c:1751
+#: init.c:1754
 msgid "unable to determine username"
 msgstr "negaliu nustatyti vartotojo vardo"
 
@@ -2830,69 +2830,69 @@ msgstr "Nepavyko uþrakinti %s\n"
 msgid "Reading %s..."
 msgstr "Skaitau %s..."
 
-#: mx.c:775
+#: mx.c:773
 #, c-format
 msgid "Writing %s..."
 msgstr "Raðau %s..."
 
-#: mx.c:808
+#: mx.c:806
 #, c-format
 msgid "Could not synchronize mailbox %s!"
 msgstr "Nepavyko sinchronizuoti dëþutës %s!"
 
-#: mx.c:874
+#: mx.c:872
 #, c-format
 msgid "Move read messages to %s?"
 msgstr "Perkelti skaitytus laiðkus á %s?"
 
-#: mx.c:890 mx.c:1147
+#: mx.c:888 mx.c:1143
 #, c-format
 msgid "Purge %d deleted message?"
 msgstr "Sunaikinti %d iðtrintà laiðkà?"
 
-#: mx.c:890 mx.c:1147
+#: mx.c:888 mx.c:1143
 #, c-format
 msgid "Purge %d deleted messages?"
 msgstr "Sunaikinti %d iðtrintus laiðkus?"
 
-#: mx.c:914
+#: mx.c:912
 #, c-format
 msgid "Moving read messages to %s..."
 msgstr "Perkeliu skaitytus laiðkus á %s..."
 
-#: mx.c:974 mx.c:1138
+#: mx.c:972 mx.c:1134
 msgid "Mailbox is unchanged."
 msgstr "Dëþutë yra nepakeista."
 
-#: mx.c:1010
+#: mx.c:1008
 #, c-format
 msgid "%d kept, %d moved, %d deleted."
 msgstr "%d palikti, %d perkelti, %d iðtrinti."
 
-#: mx.c:1013 mx.c:1185
+#: mx.c:1011 mx.c:1181
 #, c-format
 msgid "%d kept, %d deleted."
 msgstr "%d palikti, %d iðtrinti."
 
-#: mx.c:1123
+#: mx.c:1119
 #, c-format
 msgid " Press '%s' to toggle write"
 msgstr "Spausk '%s', kad perjungtum raðymà"
 
-#: mx.c:1125
+#: mx.c:1121
 msgid "Use 'toggle-write' to re-enable write!"
 msgstr "Naudok 'toggle-write', kad vël galëtum raðyti!"
 
-#: mx.c:1127
+#: mx.c:1123
 #, c-format
 msgid "Mailbox is marked unwritable. %s"
 msgstr "Dëþutë yra padaryta neáraðoma. %s"
 
-#: mx.c:1182
+#: mx.c:1178
 msgid "Mailbox checkpointed."
 msgstr "Dëþutë sutikrinta."
 
-#: mx.c:1500
+#: mx.c:1496
 msgid "Can't write message"
 msgstr "Negaliu áraðyti laiðko"
 
@@ -2945,7 +2945,7 @@ msgstr "Cituojamo teksto nebëra."
 msgid "No more unquoted text after quoted text."
 msgstr "Nëra daugiau necituojamo teksto uþ cituojamo."
 
-#: parse.c:601
+#: parse.c:603
 msgid "multipart message has no boundary parameter!"
 msgstr "keliø daliø laiðkas neturi boundary parametro!"
 
@@ -3734,15 +3734,15 @@ msgstr "Nenurodyta jokia tema."
 msgid "Sending message..."
 msgstr "Siunèiu laiðkà..."
 
-#: send.c:1579
+#: send.c:1586
 msgid "Could not send the message."
 msgstr "Negalëjau iðsiøsti laiðko."
 
-#: send.c:1584
+#: send.c:1591
 msgid "Mail sent."
 msgstr "Laiðkas iðsiøstas."
 
-#: send.c:1584
+#: send.c:1591
 msgid "Sending in background."
 msgstr "Siunèiu fone."
 
@@ -3801,12 +3801,12 @@ msgstr "Negalëjau rasti rikiavimo funkcijos! [praneðk ðià klaidà]"
 msgid "(no mailbox)"
 msgstr "(nëra dëþutës)"
 
-#: thread.c:1029
+#: thread.c:1077
 #, fuzzy
 msgid "Parent message is not visible in this limited view."
 msgstr "Tëvinis laiðkas nematomas ribotame vaizde"
 
-#: thread.c:1035
+#: thread.c:1083
 msgid "Parent message is not available."
 msgstr "Nëra prieinamo tëvinio laiðko."
 
