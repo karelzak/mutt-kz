@@ -27,6 +27,7 @@
 #include <time.h>
 #include <limits.h>
 #include <stdarg.h>
+#include <signal.h>
 
 #ifndef _POSIX_PATH_MAX
 #include <posix1_lim.h>
@@ -370,6 +371,7 @@ enum
   OPTMSGERR,		/* (pseudo) used by mutt_error/mutt_message */
   OPTSEARCHINVALID,	/* (pseudo) used to invalidate the search pat */
   OPTSIGNALSBLOCKED,	/* (pseudo) using by mutt_block_signals () */
+  OPTSYSSIGNALSBLOCKED,	/* (pseudo) using by mutt_block_signals_system () */
   OPTNEEDRESORT,	/* (pseudo) used to force a re-sort */
   OPTVIEWATTACH,	/* (pseudo) signals that we are viewing attachments */
   OPTFORCEREDRAWINDEX,	/* (pseudo) used to force a redraw in the main index */
@@ -401,10 +403,9 @@ enum
 #define toggle_option(x) mutt_bit_toggle(Options,x)
 #define option(x) mutt_bit_isset(Options,x)
 
-/* Bit fields for ``Signals'' */
-#define S_INTERRUPT (1<<1)
-#define S_SIGWINCH  (1<<2)
-#define S_ALARM     (1<<3)
+/* Exit values used in send_msg() */
+#define S_ERR 127
+#define S_BKG 126
 
 typedef struct list_t
 {
