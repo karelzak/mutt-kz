@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt\n"
-"POT-Creation-Date: 1999-08-24 18:04+0200\n"
+"POT-Creation-Date: 1999-08-31 21:26+0200\n"
 "PO-Revision-Date: 1999-02-15 21:55+0100\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
@@ -70,7 +70,7 @@ msgstr "No se pudo encontrar el nombre, ¿continuar?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "La entrada \"compose\" en el archivo Mailcap requiere %%s"
 
-#: attach.c:132 attach.c:257 commands.c:155 compose.c:1016 curs_lib.c:128
+#: attach.c:132 attach.c:257 commands.c:155 compose.c:1019 curs_lib.c:128
 #: curs_lib.c:323
 #, fuzzy, c-format
 msgid "Error running \"%s\"!"
@@ -189,7 +189,7 @@ msgstr "No se puede mostrar el directorio"
 msgid "Error trying to view file"
 msgstr "Error al tratar de mostrar el archivo"
 
-#: buffy.c:364
+#: buffy.c:393
 #, c-format
 msgid "New mail in %s."
 msgstr "Correo nuevo en %s."
@@ -236,7 +236,7 @@ msgstr "mono: faltan parámetros"
 msgid "%s: no such attribute"
 msgstr "%s: atributo desconocido"
 
-#: color.c:686 hook.c:61 hook.c:69 keymap.c:687
+#: color.c:686 hook.c:61 hook.c:69 keymap.c:697
 msgid "too few arguments"
 msgstr "Faltan parámetros"
 
@@ -475,71 +475,71 @@ msgstr "Crear mensaje"
 msgid "Open mailbox to attach message from"
 msgstr "Abrir buzón para adjuntar mensaje de"
 
-#: compose.c:582
+#: compose.c:585
 msgid "No messages in that folder."
 msgstr "No hay mensajes en esa carpeta."
 
-#: compose.c:589
+#: compose.c:592
 msgid "Tag the messages you want to attach!"
 msgstr "Marque el mensaje que quiere adjuntar."
 
-#: compose.c:624 compose.c:644
+#: compose.c:627 compose.c:647
 msgid "Unable to attach!"
 msgstr "¡Imposible adjuntar!"
 
-#: compose.c:780
+#: compose.c:783
 msgid "Invalid encoding."
 msgstr "La codificación no es válida."
 
-#: compose.c:795
+#: compose.c:798
 msgid "Save a copy of this message?"
 msgstr "¿Guardar una copia de este mensaje?"
 
-#: compose.c:842
+#: compose.c:845
 msgid "Rename to: "
 msgstr "Renombrar a: "
 
-#: compose.c:847
+#: compose.c:850
 #, c-format
 msgid "Can't stat: %s"
 msgstr "No se pudo encontrar en disco: %s"
 
-#: compose.c:874
+#: compose.c:877
 msgid "New file: "
 msgstr "Archivo nuevo: "
 
-#: compose.c:887
+#: compose.c:890
 msgid "Content-Type is of the form base/sub"
 msgstr "Content-Type es de la forma base/subtipo"
 
-#: compose.c:893
+#: compose.c:896
 #, c-format
 msgid "Unknown Content-Type %s"
 msgstr "Content-Type %s desconocido"
 
-#: compose.c:906
+#: compose.c:909
 #, c-format
 msgid "Can't create file %s"
 msgstr "No se pudo creal el archivo %s"
 
-#: compose.c:914
+#: compose.c:917
 msgid "What we have here is a failure to make an attachment"
 msgstr "Lo que tenemos aquí es una falla al producir el archivo a adjuntar"
 
-#: compose.c:977
+#: compose.c:980
 msgid "Postpone this message?"
 msgstr "¿Posponer el mensaje?"
 
-#: compose.c:1031
+#: compose.c:1034
 msgid "Write message to mailbox"
 msgstr "Guardar mensaje en el buzón"
 
-#: compose.c:1035
+#: compose.c:1038
 #, c-format
 msgid "Writing message to %s ..."
 msgstr "Escribiendo mensaje en %s ..."
 
-#: compose.c:1046
+#: compose.c:1049
 msgid "Message written."
 msgstr "Mensaje escrito."
 
@@ -577,7 +577,7 @@ msgstr "Ningún buzón esta abierto."
 msgid "There are no messages."
 msgstr "El hilo contiene mensajes sin leer."
 
-#: curs_main.c:52 mx.c:992 pager.c:55 recvattach.c:47
+#: curs_main.c:52 mx.c:996 pager.c:55 recvattach.c:47
 msgid "Mailbox is read-only."
 msgstr "El buzón es de sólo lectura."
 
@@ -1183,50 +1183,50 @@ msgstr "imposible determinar nombre del usuario"
 msgid "Macro loop detected."
 msgstr "Bucle de macros detectado."
 
-#: keymap.c:626 keymap.c:634
+#: keymap.c:636 keymap.c:644
 msgid "Key is not bound."
 msgstr "La tecla no tiene enlace a una función."
 
-#: keymap.c:638
+#: keymap.c:648
 #, c-format
 msgid "Key is not bound.  Press '%s' for help."
 msgstr "Tecla sin enlace. Presione '%s' para obtener ayuda."
 
-#: keymap.c:649
+#: keymap.c:659
 msgid "push: too many arguments"
 msgstr "push: demasiados parámetros"
 
-#: keymap.c:670
+#: keymap.c:680
 #, c-format
 msgid "%s: no such menu"
 msgstr "%s: menú desconocido"
 
-#: keymap.c:679
+#: keymap.c:689
 msgid "null key sequence"
 msgstr "sequencia de teclas vacía"
 
-#: keymap.c:757
+#: keymap.c:767
 msgid "bind: too many arguments"
 msgstr "bind: demasiados parámetros"
 
-#: keymap.c:772
+#: keymap.c:782
 #, c-format
 msgid "%s: no such function in map"
 msgstr "%s: función deconocida"
 
-#: keymap.c:795
+#: keymap.c:805
 msgid "macro: empty key sequence"
 msgstr "macro: sequencia de teclas vacía"
 
-#: keymap.c:806
+#: keymap.c:816
 msgid "macro: too many arguments"
 msgstr "macro: demasiados parámetros"
 
-#: keymap.c:836
+#: keymap.c:846
 msgid "exec: too few arguments"
 msgstr "exec: faltan parámetros"
 
-#: keymap.c:856
+#: keymap.c:866
 #, c-format
 msgid "%s: no such command"
 msgstr "%s: comando desconocido"
@@ -2266,45 +2266,45 @@ msgstr "¡No se pudo sincronizar el buzón %s!"
 msgid "Move read messages to %s?"
 msgstr "¿Mover mensajes leidos a %s?"
 
-#: mx.c:812 mx.c:1007
+#: mx.c:812 mx.c:1011
 #, c-format
 msgid "Purge %d deleted message?"
 msgstr "¿Expulsar %d mensaje suprimido?"
 
-#: mx.c:812 mx.c:1007
+#: mx.c:812 mx.c:1011
 #, c-format
 msgid "Purge %d deleted messages?"
 msgstr "¿Expulsar %d mensajes suprimidos?"
 
-#: mx.c:832
+#: mx.c:836
 #, c-format
 msgid "Moving read messages to %s..."
 msgstr "Moviendo mensajes leídos a %s..."
 
-#: mx.c:855 mx.c:998
+#: mx.c:859 mx.c:1002
 msgid "Mailbox is unchanged."
 msgstr "Buzón sin cambios."
 
-#: mx.c:874
+#: mx.c:878
 #, c-format
 msgid "%d kept, %d moved, %d deleted."
 msgstr "quedan %d, %d movidos, %d suprimidos."
 
-#: mx.c:877 mx.c:1023
+#: mx.c:881 mx.c:1027
 #, c-format
 msgid "%d kept, %d deleted."
 msgstr "quedan %d, %d suprimidos."
 
-#: mx.c:983
+#: mx.c:987
 #, c-format
 msgid " Press '%s' to toggle write"
 msgstr "Presione '%s' para cambiar escritura"
 
-#: mx.c:985
+#: mx.c:989
 msgid "Use 'toggle-write' to re-enable write!"
 msgstr "¡Use 'toggle-write' para activar escritura!"
 
-#: mx.c:987
+#: mx.c:991
 #, c-format
 msgid "Mailbox is marked unwritable. %s"
 msgstr "Buzón esta marcado inescribible. %s"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0pre1-1\n"
-"POT-Creation-Date: 1999-08-24 18:04+0200\n"
+"POT-Creation-Date: 1999-08-31 21:26+0200\n"
 "PO-Revision-Date: 1999-08-24 15:35-0500\n"
 "Last-Translator: Ronny Haryanto <giant@canada.com>\n"
 "Language-Team: Indonesia <id@li.org>\n"
@@ -74,7 +74,7 @@ msgstr "Tidak cocok dengan nametemplate, lanjutkan?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "'compose' di file mailcap membutuhkan %%s"
 
-#: attach.c:132 attach.c:257 commands.c:155 compose.c:1016 curs_lib.c:128
+#: attach.c:132 attach.c:257 commands.c:155 compose.c:1019 curs_lib.c:128
 #: curs_lib.c:323
 #, fuzzy, c-format
 msgid "Error running \"%s\"!"
@@ -192,7 +192,7 @@ msgstr "Tidak bisa menampilkan sebuah direktori"
 msgid "Error trying to view file"
 msgstr "Gagal menampilkan file"
 
-#: buffy.c:364
+#: buffy.c:393
 #, c-format
 msgid "New mail in %s."
 msgstr "Surat baru di %s."
@@ -239,7 +239,7 @@ msgstr "mono: parameternya kurang"
 msgid "%s: no such attribute"
 msgstr "%s: tidak ada atribut begitu"
 
-#: color.c:686 hook.c:61 hook.c:69 keymap.c:687
+#: color.c:686 hook.c:61 hook.c:69 keymap.c:697
 msgid "too few arguments"
 msgstr "parameternya kurang"
 
@@ -480,71 +480,71 @@ msgstr "Tulis surat"
 msgid "Open mailbox to attach message from"
 msgstr "Buka kotak surat untuk mengambil lampiran"
 
-#: compose.c:582
+#: compose.c:585
 msgid "No messages in that folder."
 msgstr "Tidak ada surat di kotak tersebut."
 
-#: compose.c:589
+#: compose.c:592
 msgid "Tag the messages you want to attach!"
 msgstr "Tandai surat-surat yang mau dilampirkan!"
 
-#: compose.c:624 compose.c:644
+#: compose.c:627 compose.c:647
 msgid "Unable to attach!"
 msgstr "Tidak bisa dilampirkan!"
 
-#: compose.c:780
+#: compose.c:783
 msgid "Invalid encoding."
 msgstr "Encoding tidak betul."
 
-#: compose.c:795
+#: compose.c:798
 msgid "Save a copy of this message?"
 msgstr "Simpan salinan dari surat ini?"
 
-#: compose.c:842
+#: compose.c:845
 msgid "Rename to: "
 msgstr "Ganti nama ke: "
 
-#: compose.c:847
+#: compose.c:850
 #, c-format
 msgid "Can't stat: %s"
 msgstr "Tidak bisa stat: %s"
 
-#: compose.c:874
+#: compose.c:877
 msgid "New file: "
 msgstr "File baru: "
 
-#: compose.c:887
+#: compose.c:890
 msgid "Content-Type is of the form base/sub"
 msgstr "Content-Type harus dalam format jenis-dasar/sub-jenis"
 
-#: compose.c:893
+#: compose.c:896
 #, c-format
 msgid "Unknown Content-Type %s"
 msgstr "Content-Type %s tak dikenali"
 
-#: compose.c:906
+#: compose.c:909
 #, c-format
 msgid "Can't create file %s"
 msgstr "Tidak bisa membuat file %s"
 
-#: compose.c:914
+#: compose.c:917
 msgid "What we have here is a failure to make an attachment"
 msgstr "Gagal membuat lampiran, nih..."
 
-#: compose.c:977
+#: compose.c:980
 msgid "Postpone this message?"
 msgstr "Tunda surat ini?"
 
-#: compose.c:1031
+#: compose.c:1034
 msgid "Write message to mailbox"
 msgstr "Simpan surat ke kotak surat"
 
-#: compose.c:1035
+#: compose.c:1038
 #, c-format
 msgid "Writing message to %s ..."
 msgstr "Menyimpan surat ke %s ..."
 
-#: compose.c:1046
+#: compose.c:1049
 msgid "Message written."
 msgstr "Surat telah disimpan."
 
@@ -582,7 +582,7 @@ msgstr "Tidak ada kotak surat yang terbuka."
 msgid "There are no messages."
 msgstr "Thread berisi surat yang belum dibaca."
 
-#: curs_main.c:52 mx.c:992 pager.c:55 recvattach.c:47
+#: curs_main.c:52 mx.c:996 pager.c:55 recvattach.c:47
 msgid "Mailbox is read-only."
 msgstr "Kotak surat hanya bisa dibaca."
 
@@ -1191,50 +1191,50 @@ msgstr "tidak bisa menentukan username"
 msgid "Macro loop detected."
 msgstr "Loop macro terdeteksi."
 
-#: keymap.c:626 keymap.c:634
+#: keymap.c:636 keymap.c:644
 msgid "Key is not bound."
 msgstr "Tombol itu tidak ditentukan untuk apa."
 
-#: keymap.c:638
+#: keymap.c:648
 #, c-format
 msgid "Key is not bound.  Press '%s' for help."
 msgstr "Tombol itu tidak ditentukan untuk apa. Tekan '%s' utk bantuan."
 
-#: keymap.c:649
+#: keymap.c:659
 msgid "push: too many arguments"
 msgstr "push: parameter terlalu banyak"
 
-#: keymap.c:670
+#: keymap.c:680
 #, c-format
 msgid "%s: no such menu"
 msgstr "%s: tidak ada menu begitu"
 
-#: keymap.c:679
+#: keymap.c:689
 msgid "null key sequence"
 msgstr "urutan tombol kosong"
 
-#: keymap.c:757
+#: keymap.c:767
 msgid "bind: too many arguments"
 msgstr "bind: parameter terlalu banyak"
 
-#: keymap.c:772
+#: keymap.c:782
 #, c-format
 msgid "%s: no such function in map"
 msgstr "%s: tidak ada fungsi begitu di map"
 
-#: keymap.c:795
+#: keymap.c:805
 msgid "macro: empty key sequence"
 msgstr "macro: urutan tombol kosong"
 
-#: keymap.c:806
+#: keymap.c:816
 msgid "macro: too many arguments"
 msgstr "macro: parameter terlalu banyak"
 
-#: keymap.c:836
+#: keymap.c:846
 msgid "exec: too few arguments"
 msgstr "exec: parameter terlalu banyak"
 
-#: keymap.c:856
+#: keymap.c:866
 #, c-format
 msgid "%s: no such command"
 msgstr "%s: tidak ada perintah begitu"
@@ -1927,7 +1927,8 @@ msgstr ""
 "Hak cipta (c) 1996-9 Michael R. Elkins dan kawan-kawan.\n"
 "Mutt tidak menyertakan jaminan dalam bentuk apapun; untuk lebih jelasnya "
 "lihat 'mutt -vv'.\n"
-"Mutt adalah 'free software', anda diperbolehkan untuk mendistribusikan ulang\n"
+"Mutt adalah 'free software', anda diperbolehkan untuk mendistribusikan "
+"ulang\n"
 "dengan beberapa persyaratan; untuk lebih jelasnya lihat 'mutt -vv'.\n"
 
 #: main.c:48
@@ -1998,7 +1999,8 @@ msgstr ""
 "    dengan atau tanpa modifikasi, diperbolehkan dalam situasi dan kondisi\n"
 "    tertentu.\n"
 "\n"
-"    Implementasi SHA1 adalah apa adanya, tanpa jaminan secara langsung maupun\n"
+"    Implementasi SHA1 adalah apa adanya, tanpa jaminan secara langsung "
+"maupun\n"
 "    tidak langsung.\n"
 "\n"
 "    Anda seharusnya sudah menerima salinan dari persyaratan lengkap\n"
@@ -2273,45 +2275,45 @@ msgstr "Tidak bisa mensinkronisasi kotak surat %s!"
 msgid "Move read messages to %s?"
 msgstr "Pindahkan surat-surat yang sudah dibaca ke %s?"
 
-#: mx.c:812 mx.c:1007
+#: mx.c:812 mx.c:1011
 #, c-format
 msgid "Purge %d deleted message?"
 msgstr "Benar-benar hapus %d surat yang ditandai akan dihapus?"
 
-#: mx.c:812 mx.c:1007
+#: mx.c:812 mx.c:1011
 #, c-format
 msgid "Purge %d deleted messages?"
 msgstr "Benar-benar hapus %d surat yang ditandai akan dihapus?"
 
-#: mx.c:832
+#: mx.c:836
 #, c-format
 msgid "Moving read messages to %s..."
 msgstr "Pindahkan surat-surat yang sudah dibaca ke %s..."
 
-#: mx.c:855 mx.c:998
+#: mx.c:859 mx.c:1002
 msgid "Mailbox is unchanged."
 msgstr "Kotak surat tidak berubah."
 
-#: mx.c:874
+#: mx.c:878
 #, c-format
 msgid "%d kept, %d moved, %d deleted."
 msgstr "%d disimpan, %d dipindahkan, %d dihapus."
 
-#: mx.c:877 mx.c:1023
+#: mx.c:881 mx.c:1027
 #, c-format
 msgid "%d kept, %d deleted."
 msgstr "%d disimpan, %d dihapus."
 
-#: mx.c:983
+#: mx.c:987
 #, c-format
 msgid " Press '%s' to toggle write"
 msgstr "Tekan '%s' untuk mengeset bisa/tidak menulis"
 
-#: mx.c:985
+#: mx.c:989
 msgid "Use 'toggle-write' to re-enable write!"
 msgstr "Gunakan 'toggle-write' supaya bisa menulis lagi!"
 
-#: mx.c:987
+#: mx.c:991
 #, c-format
 msgid "Mailbox is marked unwritable. %s"
 msgstr "Kotak surat ditandai tidak boleh ditulisi. %s"

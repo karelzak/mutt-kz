@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6i\n"
-"POT-Creation-Date: 1999-08-24 18:04+0200\n"
+"POT-Creation-Date: 1999-08-31 21:26+0200\n"
 "PO-Revision-Date: 1999-07-29 00:00+0100\n"
 "Last-Translator: Miroslav Vasko <vasko@ies.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -74,7 +74,7 @@ msgstr "Nena¹iel som ¹ablónu názvu, pokraèova»?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "Zostavovacia polo¾ka mailcap-u vy¾aduje %%s"
 
-#: attach.c:132 attach.c:257 commands.c:155 compose.c:1016 curs_lib.c:128
+#: attach.c:132 attach.c:257 commands.c:155 compose.c:1019 curs_lib.c:128
 #: curs_lib.c:323
 #, fuzzy, c-format
 msgid "Error running \"%s\"!"
@@ -190,7 +190,7 @@ msgstr "Nemo¾no prezera» adresár"
 msgid "Error trying to view file"
 msgstr "Chyba pri prezeraní súboru"
 
-#: buffy.c:364
+#: buffy.c:393
 #, c-format
 msgid "New mail in %s."
 msgstr "Nová po¹ta v %s."
@@ -237,7 +237,7 @@ msgstr "mono: príli¹ málo parametrov"
 msgid "%s: no such attribute"
 msgstr "%s: vlastnos» nenájdená"
 
-#: color.c:686 hook.c:61 hook.c:69 keymap.c:687
+#: color.c:686 hook.c:61 hook.c:69 keymap.c:697
 msgid "too few arguments"
 msgstr "príli¹ málo argumentov"
 
@@ -477,71 +477,71 @@ msgstr "Zlo¾i»"
 msgid "Open mailbox to attach message from"
 msgstr "Otvor schránku, z ktorej sa bude pridáva» správa"
 
-#: compose.c:582
+#: compose.c:585
 msgid "No messages in that folder."
 msgstr "V tejto zlo¾ke nie sú správy."
 
-#: compose.c:589
+#: compose.c:592
 msgid "Tag the messages you want to attach!"
 msgstr "Oznaète správy, ktoré chcete prida»!"
 
-#: compose.c:624 compose.c:644
+#: compose.c:627 compose.c:647
 msgid "Unable to attach!"
 msgstr "Nemo¾no pripoji»!"
 
-#: compose.c:780
+#: compose.c:783
 msgid "Invalid encoding."
 msgstr "Neplatné kódovanie."
 
-#: compose.c:795
+#: compose.c:798
 msgid "Save a copy of this message?"
 msgstr "Ulo¾i» kópiu tejto správy?"
 
-#: compose.c:842
+#: compose.c:845
 msgid "Rename to: "
 msgstr "Premenova» na: "
 
-#: compose.c:847
+#: compose.c:850
 #, c-format
 msgid "Can't stat: %s"
 msgstr "Nemo¾no zisti» stav: %s"
 
-#: compose.c:874
+#: compose.c:877
 msgid "New file: "
 msgstr "Nový súbor: "
 
-#: compose.c:887
+#: compose.c:890
 msgid "Content-Type is of the form base/sub"
 msgstr "Content-Type je formy základ/pod"
 
-#: compose.c:893
+#: compose.c:896
 #, c-format
 msgid "Unknown Content-Type %s"
 msgstr "Neznáme Content-Type %s"
 
-#: compose.c:906
+#: compose.c:909
 #, c-format
 msgid "Can't create file %s"
 msgstr "Nemo¾no vytvori» súbor %s"
 
-#: compose.c:914
+#: compose.c:917
 msgid "What we have here is a failure to make an attachment"
 msgstr "Nemo¾no vytvori» pripojené dáta"
 
-#: compose.c:977
+#: compose.c:980
 msgid "Postpone this message?"
 msgstr "Odlo¾i» túto správu?"
 
-#: compose.c:1031
+#: compose.c:1034
 msgid "Write message to mailbox"
 msgstr "Zapísa» správu do schránky"
 
-#: compose.c:1035
+#: compose.c:1038
 #, c-format
 msgid "Writing message to %s ..."
 msgstr "Zapisujem správu do %s ..."
 
-#: compose.c:1046
+#: compose.c:1049
 msgid "Message written."
 msgstr "Správa bola zapísaná."
 
@@ -579,7 +579,7 @@ msgstr "Nie je otvorená ¾iadna schránka."
 msgid "There are no messages."
 msgstr "Vlákno obsahuje neèítané správy."
 
-#: curs_main.c:52 mx.c:992 pager.c:55 recvattach.c:47
+#: curs_main.c:52 mx.c:996 pager.c:55 recvattach.c:47
 msgid "Mailbox is read-only."
 msgstr "Schránka je iba na èítanie."
 
@@ -1185,50 +1185,50 @@ msgstr "nemo¾no urèi» meno pou¾ívateµa"
 msgid "Macro loop detected."
 msgstr "Bola zistená sluèka v makre."
 
-#: keymap.c:626 keymap.c:634
+#: keymap.c:636 keymap.c:644
 msgid "Key is not bound."
 msgstr "Klávesa nie je viazaná."
 
-#: keymap.c:638
+#: keymap.c:648
 #, c-format
 msgid "Key is not bound.  Press '%s' for help."
 msgstr "Klávesa nie je viazaná. Stlaète '%s' pre nápovedu."
 
-#: keymap.c:649
+#: keymap.c:659
 msgid "push: too many arguments"
 msgstr "push: príli¹ veµa parametrov"
 
-#: keymap.c:670
+#: keymap.c:680
 #, c-format
 msgid "%s: no such menu"
 msgstr "%s: také menu neexistuje"
 
-#: keymap.c:679
+#: keymap.c:689
 msgid "null key sequence"
 msgstr "prázdna postupnos» kláves"
 
-#: keymap.c:757
+#: keymap.c:767
 msgid "bind: too many arguments"
 msgstr "bind: príli¹ veµa parametrov"
 
-#: keymap.c:772
+#: keymap.c:782
 #, c-format
 msgid "%s: no such function in map"
 msgstr "%s: v tabuµke neexistuje taká funkcia"
 
-#: keymap.c:795
+#: keymap.c:805
 msgid "macro: empty key sequence"
 msgstr "macro: prázdna postupnos» kláves"
 
-#: keymap.c:806
+#: keymap.c:816
 msgid "macro: too many arguments"
 msgstr "makro: príli¹ veµa parametrov"
 
-#: keymap.c:836
+#: keymap.c:846
 msgid "exec: too few arguments"
 msgstr "exec: príli¹ málo parametrov"
 
-#: keymap.c:856
+#: keymap.c:866
 #, c-format
 msgid "%s: no such command"
 msgstr "%s: príkaz nenájdený"
@@ -2269,45 +2269,45 @@ msgstr "Nemo¾no zosynchronizova» schránku %s!"
 msgid "Move read messages to %s?"
 msgstr "Presunú» preèítané správy do %s?"
 
-#: mx.c:812 mx.c:1007
+#: mx.c:812 mx.c:1011
 #, c-format
 msgid "Purge %d deleted message?"
 msgstr "Odstráni» %d zmazané správy?"
 
-#: mx.c:812 mx.c:1007
+#: mx.c:812 mx.c:1011
 #, c-format
 msgid "Purge %d deleted messages?"
 msgstr "Odstráni» %d zmazaných správ?"
 
-#: mx.c:832
+#: mx.c:836
 #, c-format
 msgid "Moving read messages to %s..."
 msgstr "Presúvam preèítané správy do %s..."
 
-#: mx.c:855 mx.c:998
+#: mx.c:859 mx.c:1002
 msgid "Mailbox is unchanged."
 msgstr "Schránka nie je zmenená."
 
-#: mx.c:874
+#: mx.c:878
 #, c-format
 msgid "%d kept, %d moved, %d deleted."
 msgstr "%d ostalo, %d presunutých, %d vymazaných."
 
-#: mx.c:877 mx.c:1023
+#: mx.c:881 mx.c:1027
 #, c-format
 msgid "%d kept, %d deleted."
 msgstr "%d ostalo, %d vymazaných."
 
-#: mx.c:983
+#: mx.c:987
 #, c-format
 msgid " Press '%s' to toggle write"
 msgstr " Stlaète '%s' na prepnutie zápisu"
 
-#: mx.c:985
+#: mx.c:989
 msgid "Use 'toggle-write' to re-enable write!"
 msgstr "Pou¾ite 'prepnú»-zápis' na povolenie zápisu!"
 
-#: mx.c:987
+#: mx.c:991
 #, c-format
 msgid "Mailbox is marked unwritable. %s"
 msgstr "Schránka je oznaèená len na èítanie. %s"
