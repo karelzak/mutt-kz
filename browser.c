@@ -318,7 +318,7 @@ static int examine_directory (MUTTMENU *menu, struct browser_state *state,
       continue;
     
     tmp = Incoming;
-    while (tmp && strcmp (buffer, tmp->path))
+    while (tmp && strcmp (buffer, NONULL(tmp->path)))
       tmp = tmp->next;
     add_folder (menu, state, de->d_name, &s, (tmp) ? tmp->new : 0);
   }
@@ -348,7 +348,7 @@ static int examine_mailboxes (MUTTMENU *menu, struct browser_state *state)
 	(! S_ISLNK (s.st_mode)))
       continue;
     
-    strfcpy (buffer, tmp->path, sizeof (buffer));
+    strfcpy (buffer, NONULL(tmp->path), sizeof (buffer));
     mutt_pretty_mailbox (buffer);
 
     add_folder (menu, state, buffer, &s, tmp->new);
