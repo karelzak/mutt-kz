@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0pre2i\n"
-"POT-Creation-Date: 1999-10-11 21:19+0200\n"
-"PO-Revision-Date: 1999-09-02 01:38+0200\n"
+"Project-Id-Version: 1.0pre4i\n"
+"POT-Creation-Date: 1999-10-12 20:44+0200\n"
+"PO-Revision-Date: 1999-10-12 20:48+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr "Volba"
 #: addrbook.c:33 browser.c:56 compose.c:85 curs_main.c:264 pager.c:1469
 #: pgpkey.c:180 postpone.c:36 query.c:48 recvattach.c:61
 msgid "Help"
-msgstr "Pomoc"
+msgstr "Nápovìda"
 
 #
 #: addrbook.c:131
@@ -179,9 +179,8 @@ msgstr "Adresáø [%s], Souborová maska: %s"
 
 #
 #: browser.c:519
-#, fuzzy
 msgid "IMAP folder browsing is not currently supported"
-msgstr "Tento pøíkaz není u PGP zpráv podporován."
+msgstr "Procházení IMAP slo¾ek není v souèasné dobì podporováno."
 
 #
 #: browser.c:545 browser.c:735 browser.c:818
@@ -462,9 +461,8 @@ msgstr "Zprávy byly vytisknuty"
 
 #
 #: compose.c:35
-#, fuzzy
 msgid "There are no attachments."
-msgstr "Nejsou ¾ádné zprávy."
+msgstr "Nejsou ¾ádné pøílohy."
 
 #
 #: compose.c:78
@@ -586,7 +584,7 @@ msgstr "Nemù¾ete smazat jedinou pøílohu."
 #
 #: compose.c:395
 msgid "Compose"
-msgstr "Sestavit"
+msgstr "Sestavení"
 
 #
 #: compose.c:545
@@ -766,12 +764,12 @@ msgstr "Psát"
 #
 #: curs_main.c:262 pager.c:1380
 msgid "Reply"
-msgstr "Odpovìdìt"
+msgstr "Odepsat"
 
 #
 #: curs_main.c:263
 msgid "Group"
-msgstr "Skupina"
+msgstr "Skupinì"
 
 #
 #: curs_main.c:435
@@ -1194,7 +1192,7 @@ msgstr ""
 #: help.c:339
 #, c-format
 msgid "Help for %s"
-msgstr "Pomoc pro %s"
+msgstr "Nápovìda pro %s"
 
 #
 #: imap.c:206
@@ -1861,7 +1859,7 @@ msgstr "zvolit aktuální polo¾ku"
 #
 #: keymap_defs.h:77
 msgid "reply to all recipients"
-msgstr "odpovìdìt v¹em pøíjemcùm"
+msgstr "odepsat v¹em pøíjemcùm"
 
 #
 #: keymap_defs.h:78
@@ -1891,7 +1889,7 @@ msgstr "pøeskoèit na poslední polo¾ku"
 #
 #: keymap_defs.h:83
 msgid "reply to specified mailing list"
-msgstr "odpovìdìt do specifikovaných diskuzních skupin"
+msgstr "odepsat do specifikovaných diskuzních skupin"
 
 #
 #: keymap_defs.h:84
@@ -2131,7 +2129,7 @@ msgstr "<vnitøní>"
 #
 #: keymap_defs.h:131
 msgid "reply to a message"
-msgstr "odpovìdìt na zprávu"
+msgstr "odepsat na zprávu"
 
 #
 #: keymap_defs.h:132
@@ -2869,7 +2867,7 @@ msgstr "Hledat: "
 #
 #: pager.c:1962
 msgid "Help is currently being shown."
-msgstr "Pomoc je právì zobrazena."
+msgstr "Nápovìda je právì zobrazena."
 
 #
 #: pager.c:1991
@@ -3592,7 +3590,7 @@ msgstr "Vìc není specifikována, zru¹eno."
 #: send.c:433
 #, c-format
 msgid "Reply to %s%s?"
-msgstr "Odpovìdìt %s%s?"
+msgstr "Odepsat %s%s?"
 
 #
 #. This could happen if the user tagged some messages and then did
