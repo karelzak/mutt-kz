@@ -1760,7 +1760,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "prepnú» príznak mo¾nosti prepísania schránky"
 
 #: keymap_defs.h:147
-msgid "toggle wether to browse mailboxes or all files"
+msgid "toggle whether to browse mailboxes or all files"
 msgstr "prepnú», èi prezera» schránky alebo v¹etky súbory"
 
 #: keymap_defs.h:148

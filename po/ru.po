@@ -1763,7 +1763,7 @@ msgstr "разрешить/запретить перезапись почтового ящика"
 
 #: keymap_defs.h:147
 #, fuzzy
-msgid "toggle wether to browse mailboxes or all files"
+msgid "toggle whether to browse mailboxes or all files"
 msgstr ""
 "переключиться между режимами просмотра всех файлов и просмотра почтовых "
 "ящиков"

@@ -7,8 +7,8 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: addrbook.c:31 browser.c:53 pager.c:1368 postpone.c:32 query.c:43
 #: recvattach.c:47
@@ -1763,9 +1763,8 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "Schalte Sichern von Änderungen ein/aus"
 
 #: keymap_defs.h:147
-#, fuzzy
-msgid "toggle wether to browse mailboxes or all files"
-msgstr "Wähle zwischen Mailboxen und allen Dateien"
+msgid "toggle whether to browse mailboxes or all files"
+msgstr "Schalte zwischen Mailboxen und allen Dateien um"
 
 #: keymap_defs.h:148
 msgid "move to the top of the page"
@@ -1856,13 +1855,12 @@ msgid "File under directory: "
 msgstr "Datei in diesem Verzeichnis: "
 
 #: lib.c:798
-#, fuzzy
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "Datei existiert, überschreiben?"
+msgstr "Datei existiert, (u)eberschreiben, (a)nhängen, a(b)brechen?"
 
 #: lib.c:798
 msgid "oac"
-msgstr ""
+msgstr "uab"
 
 #: lib.c:1182
 #, c-format
@@ -1995,7 +1993,7 @@ msgstr ""
 
 #: main.c:305
 msgid "Error initializing terminal."
-msgstr "Kann Termial nicht initialisieren"
+msgstr "Kann Terminal nicht initialisieren."
 
 #: main.c:403
 #, c-format
@@ -2148,9 +2146,9 @@ msgid "Lock count exceeded, remove lock for %s?"
 msgstr "Lock-Datei für %s entfernen?"
 
 #: mx.c:126
-#, fuzzy, c-format
+#, c-format
 msgid "Can't dotlock %s.\n"
-msgstr "Kann Verzeichniseintrag für Datei nicht lesen: %s"
+msgstr "Kann %s nicht locken.\n"
 
 #: mx.c:184
 msgid "Timeout exceeded while attempting fcntl lock!"
@@ -2452,22 +2450,20 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
-#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Die folgenden Daten sind PGP/MIME-verschlüsselt --]\n"
+"[-- Die folgenden Daten sind PGP/MIME-signiert --]\n"
 "\n"
 
 #: pgp.c:682
-#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Ende der PGP/MIME-verschlüsselten Daten --]\n"
+"[-- Ende der PGP/MIME-signierten Daten --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -2967,7 +2963,7 @@ msgid "Could not open %s"
 msgstr "Konnte %s nicht öffnen."
 
 #: sendlib.c:1684
-#, fuzzy, c-format
+#, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Fehler %d beim Versand der Nachricht (%s).\n"
 

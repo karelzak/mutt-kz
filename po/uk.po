@@ -1752,7 +1752,7 @@ msgstr "перемкнути, чи перезаписувати скриньку"
 
 #: keymap_defs.h:147
 #, fuzzy
-msgid "toggle wether to browse mailboxes or all files"
+msgid "toggle whether to browse mailboxes or all files"
 msgstr "перемкнути проглядання скриньок/вс╕х файл╕в"
 
 #: keymap_defs.h:148

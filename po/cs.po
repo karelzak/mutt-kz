@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.95.3i\n"
+"Project-Id-Version: 0.95.5i\n"
 "POT-Creation-Date: 1999-04-20 17:55+0200\n"
-"PO-Revision-Date: 1999-02-13 01:12+0100\n"
+"PO-Revision-Date: 1999-04-20 23:26+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -1766,8 +1766,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "pøepnout, zda bude schránka pøepsána"
 
 #: keymap_defs.h:147
-#, fuzzy
-msgid "toggle wether to browse mailboxes or all files"
+msgid "toggle whether to browse mailboxes or all files"
 msgstr "pøepnout, zda procházet schránky nebo v¹echny soubory"
 
 #: keymap_defs.h:148
@@ -1884,7 +1883,6 @@ msgstr ""
 "Pøipomínky k pøekladu zasílejte na adresu <cs@li.org> (èesky).\n"
 
 #: main.c:42
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
@@ -1899,7 +1897,6 @@ msgstr ""
 "získáte pøíkazem `mutt -vv'.\n"
 
 #: main.c:48
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
@@ -2510,22 +2507,20 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
-#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Následující data jsou za¹ifrována ve formátu PGP/MIME --]\n"
+"[-- Následují podepsaná data ve formátu PGP/MIME --]\n"
 "\n"
 
 #: pgp.c:682
-#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Konec dat za¹ifrovaných ve formátu PGP/MIME --]\n"
+"[-- Konec podepsaných dat ve formátu PGP/MIME --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -3029,7 +3024,7 @@ msgid "Could not open %s"
 msgstr "%s nelze otevøít"
 
 #: sendlib.c:1684
-#, fuzzy, c-format
+#, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Chyba pøi zasílání zprávy, potomek ukonèen %d (%s).\n"
 
@@ -3063,76 +3058,6 @@ msgstr "Øadící funkci nelze nalézt! [ohlaste tutu chybu]"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(¾ádná schránka)"
-
-#, fuzzy
-#~ msgid "Error running \"%s\"!"
-#~ msgstr "Chyba pøi zpracování adresy!"
-
-#, fuzzy
-#~ msgid "Subscribed [%s], File mask: %s"
-#~ msgstr "Adresáø [%s], Souborová maska: %s"
-
-#, fuzzy
-#~ msgid "Can't attach a directory!"
-#~ msgstr "Adresáø nelze zobrazit"
-
-#, fuzzy
-#~ msgid "Can't open %s: %s."
-#~ msgstr "Chyba pøi volání funkce stat pro %s"
-
-#, fuzzy
-#~ msgid "-- Attachments"
-#~ msgstr "Pøílohy"
-
-#, fuzzy
-#~ msgid "Unable to attach %s!"
-#~ msgstr "Nelze pøipojit!"
-
-#, fuzzy
-#~ msgid "Reopening mailbox... %s"
-#~ msgstr "Znovu otevírám schránku..."
-
-#, fuzzy
-#~ msgid "Subscribing to %s..."
-#~ msgstr "Kopíruji do %s..."
-
-#, fuzzy
-#~ msgid "Unsubscribing to %s..."
-#~ msgstr "Pøipojuji se k %s..."
-
-#, fuzzy
-#~ msgid "Delete a remailer from the chain"
-#~ msgstr "smazat v¹echny znaky na øádku"
-
-#, fuzzy
-#~ msgid ""
-#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
-#~ "\n"
-#~ msgstr "Chyba: typ 'multipart/signed' bez informace o protokolu"
-
-#, fuzzy
-#~ msgid ""
-#~ "[-- The following data is signed --]\n"
-#~ "\n"
-#~ msgstr ""
-#~ "[-- Následují podepsaná data ve formátu PGP/MIME --]\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "[-- End of signed data --]\n"
-#~ msgstr ""
-#~ "\n"
-#~ "[-- Konec podepsaných dat ve formátu PGP/MIME --]\n"
-
-#, fuzzy
-#~ msgid "Invoking pgp..."
-#~ msgstr "Spou¹tím PGP..."
-
-#, fuzzy
-#~ msgid "%s...  Exiting.\n"
-#~ msgstr "Zachycen %s... Konèím.\n"
 
 #~ msgid "Display message using mailcap?"
 #~ msgstr "Zobrazit zprávu pomocí mailcapu?"

@@ -1767,7 +1767,7 @@ msgstr "(dis)attiva se la mailbox sarà riscritta"
 
 #: keymap_defs.h:147
 #, fuzzy
-msgid "toggle wether to browse mailboxes or all files"
+msgid "toggle whether to browse mailboxes or all files"
 msgstr "(dis)attiva se visualizzare le mailbox o tutti i file"
 
 #: keymap_defs.h:148

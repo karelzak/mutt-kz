@@ -1758,7 +1758,7 @@ msgstr "cambiar si los cambios del buzón serán guardados"
 
 #: keymap_defs.h:147
 #, fuzzy
-msgid "toggle wether to browse mailboxes or all files"
+msgid "toggle whether to browse mailboxes or all files"
 msgstr "cambiar la navegación de buzones o todos los archivos"
 
 #: keymap_defs.h:148

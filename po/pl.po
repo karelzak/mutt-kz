@@ -1762,7 +1762,7 @@ msgstr "ustala czy skrzynka bêdzie ponownie zapisana"
 
 #: keymap_defs.h:147
 #, fuzzy
-msgid "toggle wether to browse mailboxes or all files"
+msgid "toggle whether to browse mailboxes or all files"
 msgstr "ustal czy przegl±daæ skrzynki pocztowe, czy wszystkie pliki"
 
 #: keymap_defs.h:148

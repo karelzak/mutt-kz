@@ -1765,7 +1765,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "apakah kotak surat akan ditulis ulang"
 
 #: keymap_defs.h:147
-msgid "toggle wether to browse mailboxes or all files"
+msgid "toggle whether to browse mailboxes or all files"
 msgstr "apakah menjelajahi kotak-kotak surat saja atau semua file"
 
 #: keymap_defs.h:148
