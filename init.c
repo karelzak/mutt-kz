@@ -631,17 +631,22 @@ static void mutt_restore_default (struct option_t *p)
       {
 	REGEXP *pp = (REGEXP *) p->data;
 	FREE (&pp->pattern);
+	if (pp->rx)
+	{
+	  regfree (pp->rx);
+	  FREE (&pp->rx);
+	}
 	if (p->init)
 	{
-	  if (pp->rx)
-	    regfree (pp->rx);
-	  else
-	    pp->rx = safe_calloc (1, sizeof (regex_t));
+	  pp->rx = safe_calloc (1, sizeof (regex_t));
 	  pp->pattern = safe_strdup ((char *) p->init);
 	  if (REGCOMP (pp->rx, pp->pattern, mutt_which_case (pp->pattern)) != 0)
 	  {
 	    fprintf (stderr, "mutt_restore_default: error in regexp: %s\n",
 		     pp->pattern);
+	    FREE (&pp->pattern);
+	    regfree (pp->rx);
+	    FREE (&pp->rx);
 	  }
 	}
       }
