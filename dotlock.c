@@ -36,6 +36,7 @@
 #include <errno.h>
 #include <time.h>
 #include <fcntl.h>
+#include <limits.h>
 
 #ifndef _POSIX_PATH_MAX
 #include <posix1_lim.h>
