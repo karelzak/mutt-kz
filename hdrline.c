@@ -52,8 +52,8 @@ check_for_mailing_list (ADDRESS *adr, char *pfx, char *buf, int buflen)
   {
     if (mutt_is_mail_list (adr))
     {
-      if (pfx && buf && buflen)
-	snprintf (buf, buflen, "%s%s", pfx, mutt_get_name (adr));
+      if (buf && buflen)
+	snprintf (buf, buflen, "%s%s", NONULL(pfx), mutt_get_name (adr));
       return 1;
     }
   }
@@ -93,6 +93,30 @@ static void make_from (ENVELOPE *hdr, char *buf, size_t len, int do_lists)
     snprintf (buf, len, "Cc %s", mutt_get_name (hdr->cc));
   else if (hdr->from)
     strfcpy (buf, mutt_get_name (hdr->from), len);
+  else
+    *buf = 0;
+}
+
+static void make_from_addr (ENVELOPE *hdr, char *buf, size_t len, int do_lists)
+{
+  int me;
+
+  me = mutt_addr_is_user (hdr->from);
+
+  if (do_lists || me)
+  {
+    if (check_for_mailing_list (hdr->to, NULL, buf, len))
+      return;
+    if (check_for_mailing_list (hdr->cc, NULL, buf, len))
+      return;
+  }
+
+  if (me && hdr->to)
+    snprintf (buf, len, "%s", hdr->to->mailbox);
+  else if (me && hdr->cc)
+    snprintf (buf, len, "%s", hdr->cc->mailbox);
+  else if (hdr->from)
+    strfcpy (buf, hdr->from->mailbox, len);
   else
     *buf = 0;
 }
@@ -145,6 +169,7 @@ static int user_is_recipient (ENVELOPE *hdr)
  * %m = number of messages in the mailbox
  * %n = name of author
  * %N = score
+ * %O = like %L, except using address instead of name
  * %s = subject
  * %S = short message status (e.g., N/O/D/!/r/-)
  * %t = `to:' field (recipients)
@@ -378,6 +403,22 @@ hdr_format_str (char *dest,
     case 'N':
       snprintf (fmt, sizeof (fmt), "%%%sd", prefix);
       snprintf (dest, destlen, fmt, hdr->score);
+      break;
+
+    case 'O':
+      if (!optional)
+      {
+	make_from_addr (hdr->env, buf2, sizeof (buf2), 1);
+	if (!option (OPTSAVEADDRESS) && (p = strpbrk (buf2, "%@")))
+	  *p = 0;
+	snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
+	snprintf (dest, destlen, fmt, buf2);
+      }
+      else if (!check_for_mailing_list (hdr->env->to, NULL, NULL, 0) &&
+	       !check_for_mailing_list (hdr->env->cc, NULL, NULL, 0))
+      {
+	optional = 0;
+      }
       break;
 
     case 's':
