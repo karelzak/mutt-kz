@@ -47,3 +47,6 @@
 
 - add a preserved flag to messages
 
+- use an external lockfile(1) look-alike for dotlocking.
+  This would remove the requirement for certain sites to
+  install mutt setgid mail.
