@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 0.95.1i\n"
-"POT-Creation-Date: 1999-04-23 10:50+0200\n"
+"POT-Creation-Date: 1999-05-31 12:50+0200\n"
 "PO-Revision-Date: 1999-09-10 10:44 +0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
@@ -231,7 +231,7 @@ msgstr "mono: слишком мало аргументов"
 msgid "%s: no such attribute"
 msgstr "%s: нет такого атрибута"
 
-#: color.c:670 hook.c:61 hook.c:69 keymap.c:680
+#: color.c:670 hook.c:61 hook.c:69 keymap.c:687
 msgid "too few arguments"
 msgstr "слишком мало аргументов"
 
@@ -243,7 +243,7 @@ msgstr "слишком много аргументов"
 msgid "default colors not supported"
 msgstr "цвета по умолчанию не поддерживаются"
 
-#: commands.c:87 commands.c:95 pgpkey.c:220
+#: commands.c:87 commands.c:95 pgp.c:1373 pgpkey.c:220
 msgid "Invoking PGP..."
 msgstr "Запускается PGP..."
 
@@ -962,7 +962,7 @@ msgstr ""
 msgid "Help for %s"
 msgstr "Справка для %s"
 
-#: imap.c:204
+#: imap.c:206
 #, c-format
 msgid "imap_error(): unexpected response in %s: %s\n"
 msgstr "imap_error(): неожиданный ответ в %s: %s\n"
@@ -970,48 +970,48 @@ msgstr "imap_error(): неожиданный ответ в %s: %s\n"
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap.c:527
+#: imap.c:529
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Критическая ошибка.  Нарушена синхронизация счетчика сообщений!"
 
-#: imap.c:660
+#: imap.c:662
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Получение заголовков сообщений... [%d из %d]"
 
 #. Unable to fetch headers for lower versions
-#: imap.c:687
+#: imap.c:689
 msgid "Unable to fetch headers from this IMAP server version."
 msgstr ""
 
-#: imap.c:879
+#: imap.c:881
 #, fuzzy, c-format
 msgid "Reopening mailbox... %s"
 msgstr "Повторное открытие почтового ящика..."
 
-#: imap.c:1229
+#: imap.c:1233
 msgid "This IMAP server is ancient. Mutt does not work with it."
 msgstr ""
 
-#: imap.c:1250
+#: imap.c:1254
 msgid "IMAP Username: "
 msgstr "Имя пользователя IMAP: "
 
-#: imap.c:1263
+#: imap.c:1267
 #, c-format
 msgid "Password for %s@%s: "
 msgstr "Пароль для %s@%s: "
 
-#: imap.c:1276
+#: imap.c:1280
 msgid "Logging in..."
 msgstr "Регистрация..."
 
 #. Login failed, try again
-#: imap.c:1289
+#: imap.c:1293
 msgid "Login failed."
 msgstr "Регистрация не удалась."
 
-#: imap.c:1400
+#: imap.c:1413
 #, c-format
 msgid "Selecting %s..."
 msgstr "Выбирается %s..."
@@ -1020,42 +1020,42 @@ msgstr "Выбирается %s..."
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap.c:1549
+#: imap.c:1562
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr ""
 
-#: imap.c:1559 lib.c:1206
+#: imap.c:1572 lib.c:1206
 #, c-format
 msgid "Create %s?"
 msgstr "Создать %s?"
 
-#: imap.c:1611
+#: imap.c:1624
 msgid "Fetching message..."
 msgstr "Получение сообщения..."
 
-#: imap.c:1733
+#: imap.c:1762
 msgid "Sending APPEND command ..."
 msgstr "Отправка команды APPEND..."
 
-#: imap.c:1772
+#: imap.c:1801
 msgid "Uploading message ..."
 msgstr "Загрузка сообщения..."
 
-#: imap.c:1827
+#: imap.c:1856
 msgid "Closing connection to IMAP server..."
 msgstr "Закрытие соединения с сервером IMAP..."
 
-#: imap.c:1858
+#: imap.c:1900
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Сохранение флагов состояния сообщений... [%d из %d]"
 
-#: imap.c:1890
+#: imap.c:1943
 msgid "Expunging messages from server..."
 msgstr "Удаление сообщений с сервера..."
 
 #. tell the server to commit changes
-#: imap.c:1921
+#: imap.c:1974
 msgid "Closing mailbox..."
 msgstr "Закрытие почтового ящика..."
 
@@ -1158,54 +1158,54 @@ msgstr "не удалось определить домашний каталог"
 msgid "unable to determine username"
 msgstr "не удалось определить имя пользователя"
 
-#: keymap.c:433
+#: keymap.c:440
 msgid "Macro loop detected."
 msgstr "Обнаружен цикл в определении макроса."
 
-#: keymap.c:619 keymap.c:627
+#: keymap.c:626 keymap.c:634
 msgid "Key is not bound."
 msgstr "Клавише не назначена никакая функция."
 
-#: keymap.c:631
+#: keymap.c:638
 #, c-format
 msgid "Key is not bound.  Press '%s' for help."
 msgstr "Клавише не назначена никакая функция. Используйте '%s' для справки."
 
-#: keymap.c:642
+#: keymap.c:649
 msgid "push: too many arguments"
 msgstr "push: слишком много аргументов"
 
-#: keymap.c:663
+#: keymap.c:670
 #, c-format
 msgid "%s: no such menu"
 msgstr "%s: нет такого меню"
 
-#: keymap.c:672
+#: keymap.c:679
 msgid "null key sequence"
 msgstr "последовательность клавиш пуста"
 
-#: keymap.c:750
+#: keymap.c:757
 msgid "bind: too many arguments"
 msgstr "bind: слишком много аргументов"
 
-#: keymap.c:765
+#: keymap.c:772
 #, c-format
 msgid "%s: no such function in map"
 msgstr "%s: нет такой функции"
 
-#: keymap.c:788
+#: keymap.c:795
 msgid "macro: empty key sequence"
 msgstr "macro: пустая последовательность клавиш"
 
-#: keymap.c:799
+#: keymap.c:806
 msgid "macro: too many arguments"
 msgstr "macro: слишком много аргументов"
 
-#: keymap.c:829
+#: keymap.c:836
 msgid "exec: too few arguments"
 msgstr "exec: слишком мало аргументов"
 
-#: keymap.c:849
+#: keymap.c:856
 #, c-format
 msgid "%s: no such command"
 msgstr "%s: нет такой команды"
@@ -2140,76 +2140,76 @@ msgstr "Не удалось заново открыть почтовый ящик!"
 msgid "Reopening mailbox..."
 msgstr "Повторное открытие почтового ящика..."
 
-#: menu.c:312
+#: menu.c:314
 msgid "Jump to: "
 msgstr "Перейти к: "
 
-#: menu.c:321
+#: menu.c:323
 msgid "Invalid index number."
 msgstr "Неверный индекс."
 
-#: menu.c:325 menu.c:343 menu.c:379 menu.c:420 menu.c:436 menu.c:447
-#: menu.c:458 menu.c:500 menu.c:511 menu.c:524 menu.c:537 menu.c:816
+#: menu.c:327 menu.c:345 menu.c:381 menu.c:422 menu.c:438 menu.c:449
+#: menu.c:460 menu.c:502 menu.c:513 menu.c:526 menu.c:539 menu.c:818
 msgid "No entries."
 msgstr "Записи отсутствуют."
 
-#: menu.c:340
+#: menu.c:342
 msgid "You cannot scroll down farther."
 msgstr "Прокрутка дальше невозможна."
 
-#: menu.c:356
+#: menu.c:358
 msgid "You cannot scroll up farther."
 msgstr "Прокрутка дальше невозможна."
 
-#: menu.c:376
+#: menu.c:378
 msgid "You are on the last page."
 msgstr "Вы уже на последней странице."
 
-#: menu.c:398
+#: menu.c:400
 msgid "You are on the first page."
 msgstr "Вы уже на первой странице."
 
-#: menu.c:477
+#: menu.c:479
 msgid "First entry is shown."
 msgstr "Первая запись уже на экране."
 
-#: menu.c:497
+#: menu.c:499
 msgid "Last entry is shown."
 msgstr "Последняя запись уже на экране."
 
-#: menu.c:548
+#: menu.c:550
 msgid "You are on the last entry."
 msgstr "Вы уже на последней записи."
 
-#: menu.c:559
+#: menu.c:561
 msgid "You are on the first entry."
 msgstr "Вы уже на первой записи."
 
-#: menu.c:599 pattern.c:1054
+#: menu.c:601 pattern.c:1054
 msgid "Search for: "
 msgstr "Поиск: "
 
-#: menu.c:600
+#: menu.c:602
 msgid "Reverse search for: "
 msgstr "Обратный поиск: "
 
-#: menu.c:611 pattern.c:1087
+#: menu.c:613 pattern.c:1087
 msgid "No search pattern."
 msgstr "Нет образца поиска."
 
-#: menu.c:641 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:643 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Не найдено."
 
-#: menu.c:692
+#: menu.c:694
 msgid "No tagged entries."
 msgstr "Нет отмеченных записей."
 
-#: menu.c:780
+#: menu.c:782
 msgid "Search is not implemented for this menu."
 msgstr "Поиск не реализован в этом меню."
 
-#: menu.c:819
+#: menu.c:821
 msgid "Tagging is not supported."
 msgstr "Возможность пометки не поддерживается."
 
@@ -3014,19 +3014,19 @@ msgstr "Нет темы сообщения, прервать посылку?"
 msgid "No subject specified."
 msgstr "Тема сообщения не указана."
 
-#: send.c:1217
+#: send.c:1215
 msgid "Message edited. Really send?"
 msgstr "Сообщение отредактировано.  На самом деле посылать?"
 
-#: send.c:1223
+#: send.c:1221
 msgid "Sending message..."
 msgstr "Сообщение посылается..."
 
-#: send.c:1335
+#: send.c:1323
 msgid "Could not send the message."
 msgstr "Не удалось отправить сообщение"
 
-#: send.c:1341
+#: send.c:1329
 msgid "Mail sent."
 msgstr "Сообщение послано."
 

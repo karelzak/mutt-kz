@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-04-23 10:50+0200\n"
+"POT-Creation-Date: 1999-05-31 12:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -231,7 +231,7 @@ msgstr "mono: Zu wenige Parameter."
 msgid "%s: no such attribute"
 msgstr "%s: Attribut unbekannt."
 
-#: color.c:670 hook.c:61 hook.c:69 keymap.c:680
+#: color.c:670 hook.c:61 hook.c:69 keymap.c:687
 msgid "too few arguments"
 msgstr "Zu wenige Parameter."
 
@@ -243,7 +243,7 @@ msgstr "Zu viele Parameter."
 msgid "default colors not supported"
 msgstr "Standard-Farben werden nicht unterstützt."
 
-#: commands.c:87 commands.c:95 pgpkey.c:220
+#: commands.c:87 commands.c:95 pgp.c:1373 pgpkey.c:220
 msgid "Invoking PGP..."
 msgstr "Rufe PGP auf..."
 
@@ -963,7 +963,7 @@ msgstr ""
 msgid "Help for %s"
 msgstr "Hilfe für %s"
 
-#: imap.c:204
+#: imap.c:206
 #, c-format
 msgid "imap_error(): unexpected response in %s: %s\n"
 msgstr "imap_error(): Unerwartete Reaktion in %s: %s\n"
@@ -971,48 +971,48 @@ msgstr "imap_error(): Unerwartete Reaktion in %s: %s\n"
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap.c:527
+#: imap.c:529
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Kritischer Fehler.  Nachrichtenzähler weicht ab!"
 
-#: imap.c:660
+#: imap.c:662
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Hole Nachrichten-Köpfe... [%d/%d]"
 
 #. Unable to fetch headers for lower versions
-#: imap.c:687
+#: imap.c:689
 msgid "Unable to fetch headers from this IMAP server version."
 msgstr ""
 
-#: imap.c:879
+#: imap.c:881
 #, fuzzy, c-format
 msgid "Reopening mailbox... %s"
 msgstr "Öffne Mailbox erneut..."
 
-#: imap.c:1229
+#: imap.c:1233
 msgid "This IMAP server is ancient. Mutt does not work with it."
 msgstr ""
 
-#: imap.c:1250
+#: imap.c:1254
 msgid "IMAP Username: "
 msgstr "IMAP-Nutzername: "
 
-#: imap.c:1263
+#: imap.c:1267
 #, c-format
 msgid "Password for %s@%s: "
 msgstr "Paßwort für %s@%s: "
 
-#: imap.c:1276
+#: imap.c:1280
 msgid "Logging in..."
 msgstr "Anmeldung..."
 
 #. Login failed, try again
-#: imap.c:1289
+#: imap.c:1293
 msgid "Login failed."
 msgstr "Anmeldung gescheitert..."
 
-#: imap.c:1400
+#: imap.c:1413
 #, c-format
 msgid "Selecting %s..."
 msgstr "Wähle %s aus..."
@@ -1021,42 +1021,42 @@ msgstr "Wähle %s aus..."
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap.c:1549
+#: imap.c:1562
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr ""
 
-#: imap.c:1559 lib.c:1206
+#: imap.c:1572 lib.c:1206
 #, c-format
 msgid "Create %s?"
 msgstr "%s erstellen?"
 
-#: imap.c:1611
+#: imap.c:1624
 msgid "Fetching message..."
 msgstr "Hole Nachricht..."
 
-#: imap.c:1733
+#: imap.c:1762
 msgid "Sending APPEND command ..."
 msgstr "Sende APPEND-Kommando..."
 
-#: imap.c:1772
+#: imap.c:1801
 msgid "Uploading message ..."
 msgstr "Lade Nachrichten auf den Server..."
 
-#: imap.c:1827
+#: imap.c:1856
 msgid "Closing connection to IMAP server..."
 msgstr "Schließe Verbindung zu IMAP-Server..."
 
-#: imap.c:1858
+#: imap.c:1900
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Speichere Nachrichten-Status-Indikatoren... [%d/%d]"
 
-#: imap.c:1890
+#: imap.c:1943
 msgid "Expunging messages from server..."
 msgstr "Lösche Nachrichten auf dem Server..."
 
 #. tell the server to commit changes
-#: imap.c:1921
+#: imap.c:1974
 msgid "Closing mailbox..."
 msgstr "Schließe Mailbox..."
 
@@ -1159,54 +1159,54 @@ msgstr "Kann Home-Verzeichnis nicht bestimmen."
 msgid "unable to determine username"
 msgstr "Kann Nutzernamen nicht bestimmen."
 
-#: keymap.c:433
+#: keymap.c:440
 msgid "Macro loop detected."
 msgstr "Makro-Schleife!"
 
-#: keymap.c:619 keymap.c:627
+#: keymap.c:626 keymap.c:634
 msgid "Key is not bound."
 msgstr "Taste ist nicht belegt."
 
-#: keymap.c:631
+#: keymap.c:638
 #, c-format
 msgid "Key is not bound.  Press '%s' for help."
 msgstr "Taste ist nicht belegt.  Drücken Sie '%s' für Hilfe."
 
-#: keymap.c:642
+#: keymap.c:649
 msgid "push: too many arguments"
 msgstr "push: Zu viele Argumente"
 
-#: keymap.c:663
+#: keymap.c:670
 #, c-format
 msgid "%s: no such menu"
 msgstr "%s: Menü unbekannt."
 
-#: keymap.c:672
+#: keymap.c:679
 msgid "null key sequence"
 msgstr "Leere Tastenfolge"
 
-#: keymap.c:750
+#: keymap.c:757
 msgid "bind: too many arguments"
 msgstr "bind: Zu viele Argumente"
 
-#: keymap.c:765
+#: keymap.c:772
 #, c-format
 msgid "%s: no such function in map"
 msgstr "%s: Funktion unbekannt"
 
-#: keymap.c:788
+#: keymap.c:795
 msgid "macro: empty key sequence"
 msgstr "macro: Leere Tastenfolge"
 
-#: keymap.c:799
+#: keymap.c:806
 msgid "macro: too many arguments"
 msgstr "macro: Zu viele Parameter"
 
-#: keymap.c:829
+#: keymap.c:836
 msgid "exec: too few arguments"
 msgstr "%s: Zu wenige Parameter."
 
-#: keymap.c:849
+#: keymap.c:856
 #, c-format
 msgid "%s: no such command"
 msgstr "%s: Menü unbekannt."
@@ -2079,76 +2079,76 @@ msgstr "Konnte Mailbox nicht erneut öffnen!"
 msgid "Reopening mailbox..."
 msgstr "Öffne Mailbox erneut..."
 
-#: menu.c:312
+#: menu.c:314
 msgid "Jump to: "
 msgstr "Springe zu: "
 
-#: menu.c:321
+#: menu.c:323
 msgid "Invalid index number."
 msgstr "Ungültige Indexnummer."
 
-#: menu.c:325 menu.c:343 menu.c:379 menu.c:420 menu.c:436 menu.c:447
-#: menu.c:458 menu.c:500 menu.c:511 menu.c:524 menu.c:537 menu.c:816
+#: menu.c:327 menu.c:345 menu.c:381 menu.c:422 menu.c:438 menu.c:449
+#: menu.c:460 menu.c:502 menu.c:513 menu.c:526 menu.c:539 menu.c:818
 msgid "No entries."
 msgstr "Keine Einträge"
 
-#: menu.c:340
+#: menu.c:342
 msgid "You cannot scroll down farther."
 msgstr "Sie können nicht weiter nach unten gehen."
 
-#: menu.c:356
+#: menu.c:358
 msgid "You cannot scroll up farther."
 msgstr "Sie können nicht weiter nach oben gehen."
 
-#: menu.c:376
+#: menu.c:378
 msgid "You are on the last page."
 msgstr "Sie sind auf der letzten Seite."
 
-#: menu.c:398
+#: menu.c:400
 msgid "You are on the first page."
 msgstr "Sie sind auf der ersten Seite."
 
-#: menu.c:477
+#: menu.c:479
 msgid "First entry is shown."
 msgstr "Der erste Eintrag wird angezeigt."
 
-#: menu.c:497
+#: menu.c:499
 msgid "Last entry is shown."
 msgstr "Der letzte Eintrag wird angezeigt."
 
-#: menu.c:548
+#: menu.c:550
 msgid "You are on the last entry."
 msgstr "Sie sind auf dem letzten Eintrag."
 
-#: menu.c:559
+#: menu.c:561
 msgid "You are on the first entry."
 msgstr "Sie sind auf dem ersten Eintrag"
 
-#: menu.c:599 pattern.c:1054
+#: menu.c:601 pattern.c:1054
 msgid "Search for: "
 msgstr "Suche nach: "
 
-#: menu.c:600
+#: menu.c:602
 msgid "Reverse search for: "
 msgstr "Suche rückwärts nach: "
 
-#: menu.c:611 pattern.c:1087
+#: menu.c:613 pattern.c:1087
 msgid "No search pattern."
 msgstr "Kein Suchmuster."
 
-#: menu.c:641 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:643 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Nicht gefunden."
 
-#: menu.c:692
+#: menu.c:694
 msgid "No tagged entries."
 msgstr "Keine markierten Einträge."
 
-#: menu.c:780
+#: menu.c:782
 msgid "Search is not implemented for this menu."
 msgstr "In diesem Menü kann nicht gesucht werden."
 
-#: menu.c:819
+#: menu.c:821
 msgid "Tagging is not supported."
 msgstr "Markieren wird nicht unterstützt."
 
@@ -2949,19 +2949,19 @@ msgstr "Kein Betreff, Versand abbrechen?"
 msgid "No subject specified."
 msgstr "Kein Betreff."
 
-#: send.c:1217
+#: send.c:1215
 msgid "Message edited. Really send?"
 msgstr "Nachricht verändert.  Wirklich abschicken?"
 
-#: send.c:1223
+#: send.c:1221
 msgid "Sending message..."
 msgstr "Verschicke Nachricht..."
 
-#: send.c:1335
+#: send.c:1323
 msgid "Could not send the message."
 msgstr "Konnte Nachricht nicht verschicken."
 
-#: send.c:1341
+#: send.c:1329
 msgid "Mail sent."
 msgstr "Nachricht verschickt."
 
