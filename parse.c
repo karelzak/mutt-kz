@@ -665,7 +665,7 @@ static time_t parse_date (char *s, HEADER *h)
     switch (count)
     {
       case 0: /* day of the month */
-	if (!isdigit (*t))
+	if (!isdigit ((int) *t))
 	  return (-1);
 	tm.tm_mday = atoi (t);
 	if (tm.tm_mday > 31)
@@ -708,8 +708,8 @@ static time_t parse_date (char *s, HEADER *h)
 	if (*ptz == '+' || *ptz == '-')
 	{
 	  if (ptz[1] && ptz[2] && ptz[3] && ptz[4]
-	      && isdigit (ptz[1]) && isdigit (ptz[2])
-	      && isdigit (ptz[3]) && isdigit (ptz[4]))
+	      && isdigit ((int) ptz[1]) && isdigit ((int) ptz[2])
+	      && isdigit ((int) ptz[3]) && isdigit ((int) ptz[4]))
 	  {
 	    zhours = (ptz[1] - '0') * 10 + (ptz[2] - '0');
 	    zminutes = (ptz[3] - '0') * 10 + (ptz[4] - '0');

@@ -1056,7 +1056,7 @@ int mh_open_new_message (MESSAGE *msg, CONTEXT *dest, HEADER *hdr)
       cp = de->d_name;
       while (*cp)
       {
-	if (!isdigit (*cp))
+	if (!isdigit ((int) *cp))
 	  break;
 	cp++;
       }

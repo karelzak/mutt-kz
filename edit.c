@@ -364,7 +364,7 @@ int mutt_builtin_editor (const char *path, HEADER *msg, HEADER *cur)
 	    }
 	    buf = be_include_messages (p, buf, &bufmax, &buflen,
 				       (tolower (tmp[1]) == 'm'),
-				       (isupper (tmp[1])));
+				       (isupper ((int) tmp[1])));
 	  }
 	  else
 	    addstr ("No mailbox.\n");

@@ -324,7 +324,7 @@ int mh_valid_message (const char *s)
 {
   for (; *s; s++)
   {
-    if (!isdigit (*s))
+    if (!isdigit ((int) *s))
       return 0;
   }
   return 1;

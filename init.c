@@ -168,9 +168,9 @@ int mutt_extract_token (BUFFER *dest, BUFFER *tok, int flags)
 	  add_char (dest, '\033');
 	  break;
 	default:
-	  if (isdigit (ch) &&
-	      isdigit (*tok->dptr) &&
-	      isdigit (*(tok->dptr + 1)))
+	  if (isdigit ((int) ch) &&
+	      isdigit ((int) *tok->dptr) &&
+	      isdigit ((int) *(tok->dptr + 1)))
 	  {
 
 	    add_char (dest, (ch << 6) + (*tok->dptr << 3) + *(tok->dptr + 1) - 3504);
@@ -187,7 +187,7 @@ int mutt_extract_token (BUFFER *dest, BUFFER *tok, int flags)
 	add_char (dest, ch);
       else if (ch == '[')
 	add_char (dest, '\033');
-      else if (isalpha (ch))
+      else if (isalpha ((int) ch))
 	add_char (dest, toupper (ch) - '@');
       else
       {
@@ -252,7 +252,7 @@ int mutt_extract_token (BUFFER *dest, BUFFER *tok, int flags)
 	FREE (&expn.data);
       }
     }
-    else if (ch == '$' && (!qc || qc == '"') && (*tok->dptr == '{' || isalpha (*tok->dptr)))
+    else if (ch == '$' && (!qc || qc == '"') && (*tok->dptr == '{' || isalpha ((int) *tok->dptr)))
     {
       char *env, *var;
 
@@ -267,7 +267,7 @@ int mutt_extract_token (BUFFER *dest, BUFFER *tok, int flags)
       }
       else
       {
-	for (pc = tok->dptr; isalpha (*pc) || *pc == '_'; pc++)
+	for (pc = tok->dptr; isalpha ((int) *pc) || *pc == '_'; pc++)
 	  ;
 	var = mutt_substrdup (tok->dptr, pc);
 	tok->dptr = pc;
@@ -1158,12 +1158,12 @@ int mutt_command_complete (char *buffer, size_t len, int pos)
   strncpy (cmd, buffer, pos);
   pt = cmd;
   pt[pos] = 0;
-  while (!isspace (*pt))
+  while (!isspace ((int) *pt))
     pt++;
   *pt = 0;
 
   pt = buffer + pos;
-  while ((pt > buffer) && !isspace (*pt))
+  while ((pt > buffer) && !isspace ((int) *pt))
     pt--;
   if (pt == buffer) /* complete cmd */
   {

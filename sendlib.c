@@ -1352,9 +1352,13 @@ send_msg (const char *path, char **args, const char *msg, char **tempfile)
   {
 #ifdef DEBUG
     if (WIFEXITED (st))
+    {
       dprint (1, (debugfile, "send_msg(): child exited %d\n", WEXITSTATUS (st)));
+    }
     else
+    {
       dprint (1, (debugfile, "send_msg(): child did not exit\n"));
+    }
 #endif /* DEBUG */
     st = WIFEXITED (st) ? WEXITSTATUS (st) : -1; /* return child status */
   }
