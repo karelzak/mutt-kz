@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.2\n"
-"POT-Creation-Date: 2000-06-19 18:47+0200\n"
+"POT-Creation-Date: 2000-06-21 00:23+0200\n"
 "PO-Revision-Date: 1999-12-20 20:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -1201,44 +1201,44 @@ msgstr "選擇 %s 中…"
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap/imap.c:801
+#: imap/imap.c:803
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "無法附加在這個伺服器上的 IMAP 信箱"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:809 imap/message.c:640 muttlib.c:1049
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1049
 #, c-format
 msgid "Create %s?"
 msgstr "建立 %s？"
 
-#: imap/imap.c:833
+#: imap/imap.c:835
 msgid "Closing connection to IMAP server..."
 msgstr "正在關閉與 IMAP 伺服器的連線…"
 
-#: imap/imap.c:987
+#: imap/imap.c:989
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "標簽了的 %d 封信件刪去了…"
 
-#: imap/imap.c:1007
+#: imap/imap.c:1009
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "正在儲存信件狀態旗標… [%d/%d]"
 
-#: imap/imap.c:1066
+#: imap/imap.c:1068
 msgid "Closing mailbox..."
 msgstr "關閉信箱中…"
 
-#: imap/imap.c:1076
+#: imap/imap.c:1078
 msgid "Expunging messages from server..."
 msgstr "正在刪除伺服器上的信件…"
 
-#: imap/imap.c:1406
+#: imap/imap.c:1408
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "訂閱\ %s…"
 
-#: imap/imap.c:1408
+#: imap/imap.c:1410
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "取消訂閱\ %s…"

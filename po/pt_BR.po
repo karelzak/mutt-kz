@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1.5i\n"
-"POT-Creation-Date: 2000-06-19 18:47+0200\n"
+"POT-Creation-Date: 2000-06-21 00:23+0200\n"
 "PO-Revision-Date: 2000-03-05 01:14-0300\n"
 "Last-Translator: Marcus Brito <marcus@visaotec.com.br>\n"
 "Language-Team: LIE-BR (http://lie-br.conectiva.com.br)\n"
@@ -1192,44 +1192,44 @@ msgstr "Selecionando %s..."
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap/imap.c:801
+#: imap/imap.c:803
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Não é possível anexar a caixas IMAP neste servidor"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:809 imap/message.c:640 muttlib.c:1049
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1049
 #, c-format
 msgid "Create %s?"
 msgstr "Criar %s?"
 
-#: imap/imap.c:833
+#: imap/imap.c:835
 msgid "Closing connection to IMAP server..."
 msgstr "Fechando a conexão com o servidor IMAP..."
 
-#: imap/imap.c:987
+#: imap/imap.c:989
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "Marcando %d mensagens como removidas..."
 
-#: imap/imap.c:1007
+#: imap/imap.c:1009
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Salvando marcas de estado das mensagens... [%d de %d]"
 
-#: imap/imap.c:1066
+#: imap/imap.c:1068
 msgid "Closing mailbox..."
 msgstr "Fechando caixa de mensagens..."
 
-#: imap/imap.c:1076
+#: imap/imap.c:1078
 msgid "Expunging messages from server..."
 msgstr "Apagando mensagens do servidor..."
 
-#: imap/imap.c:1406
+#: imap/imap.c:1408
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "Assinando %s..."
 
-#: imap/imap.c:1408
+#: imap/imap.c:1410
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "Cancelando assinatura de %s..."

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1.11i\n"
-"POT-Creation-Date: 2000-06-19 18:47+0200\n"
+"POT-Creation-Date: 2000-06-21 00:23+0200\n"
 "PO-Revision-Date: 2000-04-03 22:20+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -1427,52 +1427,52 @@ msgstr "Volím %s..."
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap/imap.c:801
+#: imap/imap.c:803
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Ke schránkám na tomto IMAP serveru nelze pøipojovat."
 
 #
 #. command failed cause folder doesn't exist
-#: imap/imap.c:809 imap/message.c:640 muttlib.c:1049
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1049
 #, c-format
 msgid "Create %s?"
 msgstr "Vytvoøit %s?"
 
 #
-#: imap/imap.c:833
+#: imap/imap.c:835
 msgid "Closing connection to IMAP server..."
 msgstr "Konèím spojení s IMAP serverem..."
 
 #
-#: imap/imap.c:987
+#: imap/imap.c:989
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "Ma¾u zprávy (poèet: %d)..."
 
 #
-#: imap/imap.c:1007
+#: imap/imap.c:1009
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Ukládám pøíznaky stavu zprávy... [%d/%d]"
 
 #
-#: imap/imap.c:1066
+#: imap/imap.c:1068
 msgid "Closing mailbox..."
 msgstr "Uzavírám schránku..."
 
 #
-#: imap/imap.c:1076
+#: imap/imap.c:1078
 msgid "Expunging messages from server..."
 msgstr "Odstraòuji zprávy ze serveru..."
 
 #
-#: imap/imap.c:1406
+#: imap/imap.c:1408
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "Pøihla¹uji %s..."
 
 #
-#: imap/imap.c:1408
+#: imap/imap.c:1410
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "Odhla¹uji %s..."

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt\n"
-"POT-Creation-Date: 2000-06-19 18:47+0200\n"
+"POT-Creation-Date: 2000-06-21 00:23+0200\n"
 "PO-Revision-Date: 2000-04-01 14:19+02:00\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
@@ -1194,44 +1194,44 @@ msgstr "Seleccionando %s..."
 #. * The thing to do seems to be:
 #. *  - Open a *new* IMAP session, select, and then close it. Report the
 #. * error if the mailbox did not exist.
-#: imap/imap.c:801
+#: imap/imap.c:803
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "No es posible agregar a buzones IMAP en este servidor."
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:809 imap/message.c:640 muttlib.c:1049
+#: imap/imap.c:811 imap/message.c:640 muttlib.c:1049
 #, c-format
 msgid "Create %s?"
 msgstr "¿Crear %s?"
 
-#: imap/imap.c:833
+#: imap/imap.c:835
 msgid "Closing connection to IMAP server..."
 msgstr "Cerrando conexión al servidor IMAP..."
 
-#: imap/imap.c:987
+#: imap/imap.c:989
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "Marcando %d mensajes como suprimidos..."
 
-#: imap/imap.c:1007
+#: imap/imap.c:1009
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Guardando indicadores de estado de mensajes... [%d/%d]"
 
-#: imap/imap.c:1066
+#: imap/imap.c:1068
 msgid "Closing mailbox..."
 msgstr "Cerrando buzón..."
 
-#: imap/imap.c:1076
+#: imap/imap.c:1078
 msgid "Expunging messages from server..."
 msgstr "Eliminando mensajes del servidor..."
 
-#: imap/imap.c:1406
+#: imap/imap.c:1408
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "Suscribiendo a %s..."
 
-#: imap/imap.c:1408
+#: imap/imap.c:1410
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "Desuscribiendo de %s..."
