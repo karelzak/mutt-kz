@@ -377,7 +377,9 @@ static void init_menu (struct browser_state *state, MUTTMENU *menu, char *title,
 
   if(menu->current >= menu->max)
     menu->current = menu->max - 1;
-  
+  if (menu->current < 0)
+    menu->current = 0;
+
   if (buffy)
     snprintf (title, titlelen, "Mailboxes [%d]", mutt_buffy_check (0));
   else
@@ -642,6 +644,11 @@ void mutt_select_file (char *f, size_t flen, int buffy)
 	      return;
 	    }
 	    killPrefix = 0;
+	    if (!state.entrylen)
+	    {
+	      mutt_error ("No files match the file mask");
+	      break;
+	    }
 	  }
 	}
 	MAYBE_REDRAW (menu->redraw);
