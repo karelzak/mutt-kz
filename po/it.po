@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.1.9\n"
 "POT-Creation-Date: 2000-07-28 20:51+0200\n"
-"PO-Revision-Date: 2000-04-24 20:39+02:00\n"
+"PO-Revision-Date: 2000-08-01 18:12+02:00\n"
 "Last-Translator: Marco d'Itri <md@linux.it>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -1274,18 +1274,16 @@ msgid "[unable to calculate]"
 msgstr "[impossibile da calcolare]"
 
 #: imap/imap_ssl.c:292
-#, fuzzy
 msgid "[invalid date]"
-msgstr "%s: valore non valido"
+msgstr "[data non valida]"
 
 #: imap/imap_ssl.c:367
 msgid "Server certificate is not yet valid"
-msgstr ""
+msgstr "Il certificato del server non è ancora valido"
 
 #: imap/imap_ssl.c:374
-#, fuzzy
 msgid "Server certificate has expired"
-msgstr "Questo certificato è stato emesso da:"
+msgstr "Il certificato del server è scaduto"
 
 #: imap/imap_ssl.c:447
 msgid "This certificate belongs to:"
@@ -1296,19 +1294,18 @@ msgid "This certificate was issued by:"
 msgstr "Questo certificato è stato emesso da:"
 
 #: imap/imap_ssl.c:467
-#, fuzzy
 msgid "This certificate is valid"
-msgstr "Questo certificato è stato emesso da:"
+msgstr "Questo certificato è valido"
 
 #: imap/imap_ssl.c:468
 #, c-format
 msgid "   from %s"
-msgstr ""
+msgstr "   da %s"
 
 #: imap/imap_ssl.c:470
 #, c-format
 msgid "     to %s"
-msgstr ""
+msgstr "     a %s"
 
 #: imap/imap_ssl.c:476
 #, c-format
