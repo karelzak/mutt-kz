@@ -1,0 +1,3054 @@
+# Czech messages fot mutt.
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Jiøí Pavlovský <pavlovsk@ff.cuni.cz>, 1998, 1999.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.95.1i\n"
+"POT-Creation-Date: 1999-01-04 13:55+0100\n"
+"PO-Revision-Date: 1999-01-06 21:43+0100\n"
+"Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: addrbook.c:32 browser.c:54 pager.c:1369 postpone.c:33 query.c:44
+#: recvattach.c:48
+msgid "Exit"
+msgstr "Konec"
+
+#: addrbook.c:33
+msgid "Select"
+msgstr "Volba"
+
+#: addrbook.c:34 browser.c:57 compose.c:84 curs_main.c:259 pager.c:1466
+#: pgpkey.c:181 postpone.c:36 query.c:49 recvattach.c:52
+msgid "Help"
+msgstr "Pomoc"
+
+#: addrbook.c:132
+msgid "You have no aliases!"
+msgstr "Nejsou definovány ¾ádné pøezdívky!"
+
+#: addrbook.c:144
+msgid "Aliases"
+msgstr "Pøezdívky"
+
+#. add a new alias
+#: alias.c:193
+msgid "Alias as: "
+msgstr "Pøezdívat jako: "
+
+#: alias.c:199
+msgid "You already have an alias defined with that name!"
+msgstr "Pro toto jméno je ji¾ pøezdívka definována!"
+
+#: alias.c:213
+msgid "Address: "
+msgstr "Adresa: "
+
+#: alias.c:229
+msgid "Personal name: "
+msgstr "Vlastní jméno: "
+
+#: alias.c:238
+#, c-format
+msgid "[%s = %s] Accept?"
+msgstr "[%s = %s] Pøijmout?"
+
+#: alias.c:255 recvattach.c:344 recvattach.c:399
+msgid "Save to file: "
+msgstr "Ulo¾it jako: "
+
+#: alias.c:266
+msgid "Alias added."
+msgstr "Pøezdívka zavedena."
+
+#: attach.c:112 attach.c:235 attach.c:367 attach.c:806
+msgid "Can't match nametemplate, continue?"
+msgstr "Shodu pro jmenný vzor nelze nalézt, pokraèovat?"
+
+#. For now, editing requires a file, no piping
+#: attach.c:124
+msgid "Mailcap compose entry requires %%s"
+msgstr "Polo¾ka mailcapu 'compose' vy¾aduje %%s."
+
+#: attach.c:138
+msgid "Failure to open file to parse headers."
+msgstr "Soubor nutný pro zpracování hlavièek se nepodaøilo otevøít."
+
+#: attach.c:169
+msgid "Failure to open file to strip headers."
+msgstr "Soubor nutný pro odstranìní hlavièek se nepodaøilo otevøít."
+
+#: attach.c:187
+#, c-format
+msgid "No mailcap compose entry for %s, creating empty file."
+msgstr ""
+"Pro %s neexistuje polo¾ka mailcapu 'compose', vytváøím prázdný "
+"soubor."
+
+#. For now, editing requires a file, no piping
+#: attach.c:247
+msgid "Mailcap Edit entry requires %%s"
+msgstr "Polo¾ka mailcapu 'edit' vy¾aduje %%s."
+
+#: attach.c:265
+#, c-format
+msgid "No mailcap edit entry for %s"
+msgstr "Pro %s neexistuje polo¾ka mailcapu 'edit'."
+
+#: attach.c:333
+msgid "No matching mailcap entry found.  Viewing as text."
+msgstr "Odpovídající polo¾ka v mailcapu nebyla nalezena. Zobrazuji jako text."
+
+#: attach.c:346
+msgid "MIME type not defined.  Cannot view attachment."
+msgstr "MIME typ není definován, nelze zobrazit pøílohu."
+
+#: attach.c:436
+msgid "Cannot create filter"
+msgstr "Nelze vytvoøit filtr"
+
+#: attach.c:638 recvattach.c:374
+msgid "Attachment saved."
+msgstr "Pøíloha ulo¾ena."
+
+#: attach.c:691
+msgid "Write fault!"
+msgstr "Chyba pøi zápisu!"
+
+#: attach.c:890
+msgid "I don't know how to print that!"
+msgstr "Nevím, jak mám toto vytisknout!"
+
+#: browser.c:55
+msgid "Chdir"
+msgstr "Zmìnit adresáø"
+
+#: browser.c:56
+msgid "Mask"
+msgstr "Maska"
+
+#: browser.c:345 browser.c:672
+#, c-format
+msgid "%s is not a directory."
+msgstr "%s není adresáøem."
+
+#: browser.c:450
+#, c-format
+msgid "Mailboxes [%d]"
+msgstr "Schránky [%d]"
+
+#: browser.c:455
+#, c-format
+msgid "Directory [%s], File mask: %s"
+msgstr "Adresáø [%s], Souborová maska: %s"
+
+#: browser.c:539 browser.c:729 browser.c:812
+msgid "No files match the file mask"
+msgstr "Souborové masce nevyhovuje ¾ádný soubor."
+
+#: browser.c:646
+msgid "Chdir to: "
+msgstr "Nastavit pracovní adresáø na: "
+
+#: browser.c:665 browser.c:722
+msgid "Error scanning directory."
+msgstr "Chyba pøi naèítání adresáøe."
+
+#: browser.c:683
+msgid "File Mask: "
+msgstr "Souborová maska: "
+
+#: browser.c:745
+msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
+msgstr "Obrácené øazení dle (d)ata, písmen(a), ro(z)mìru nebo (n)eøadit?"
+
+#: browser.c:746
+msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
+msgstr "Øadit dle (d)ata, (p)ísmena, (v)elikosti nebo (n)eøadit?"
+
+#: browser.c:747
+msgid "dazn"
+msgstr "dpvn"
+
+#: browser.c:799
+msgid "New file name: "
+msgstr "Nové jméno souboru: "
+
+#: browser.c:820
+msgid "Can't view a directory"
+msgstr "Adresáø nelze zobrazit"
+
+#: browser.c:838
+msgid "Error trying to view file"
+msgstr "Chyba pøi zobrazování souboru"
+
+#: buffy.c:364
+#, c-format
+msgid "New mail in %s."
+msgstr "V %s je nová po¹ta."
+
+#: color.c:307
+#, c-format
+msgid "%s: color not supported by term"
+msgstr "Barvu %s terminál nepodporuje."
+
+#: color.c:313
+#, c-format
+msgid "%s: no such color"
+msgstr "Barva %s není definována."
+
+#: color.c:359 color.c:550 color.c:561
+#, c-format
+msgid "%s: no such object"
+msgstr "Objekt %s není definován"
+
+#: color.c:366
+#, c-format
+msgid "%s: command valid only for index object"
+msgstr "Pøíkaz %s je definován pouze pro objekt typu index."
+
+#: color.c:374
+#, c-format
+msgid "%s: too few arguments"
+msgstr "pøíli¹ málo argumentù pro %s"
+
+#: color.c:538
+msgid "Missing arguments."
+msgstr "Chybí argumenty."
+
+#: color.c:577 color.c:588
+msgid "color: too few arguments"
+msgstr "color: pøíl¹ málo argumentù"
+
+#: color.c:611
+msgid "mono: too few arguments"
+msgstr "mono: pøíli¹ málo argumentú"
+
+#: color.c:631
+#, c-format
+msgid "%s: no such attribute"
+msgstr "Atribut %s není definován."
+
+#: color.c:671 hook.c:62 hook.c:70 keymap.c:681
+msgid "too few arguments"
+msgstr "pøíli¹ málo argumentù"
+
+#: color.c:680 hook.c:76
+msgid "too many arguments"
+msgstr "pøíli¹ mnoho argumentú"
+
+#: color.c:694
+msgid "default colors not supported"
+msgstr "implicitní barvy nejsou podporovány"
+
+#: commands.c:123
+msgid "Display message using mailcap?"
+msgstr "Zobrazit zprávu pomocí mailcapu?"
+
+#: commands.c:154 commands.c:162 pgpkey.c:221
+msgid "Invoking PGP..."
+msgstr "Spou¹tím PGP..."
+
+#. find out whether or not the verify signature
+#: commands.c:159
+msgid "Verify PGP signature?"
+msgstr "Ovìøit PGP podpis?"
+
+#: commands.c:177 mbox.c:724
+msgid "Could not create temporary file!"
+msgstr "Doèasný soubor nelze vytvoøit!"
+
+#: commands.c:225
+msgid "Command: "
+msgstr "Pøíkaz: "
+
+#: commands.c:243 recvattach.c:677
+msgid "Bounce message to: "
+msgstr "Pøeposlat zprávu na: "
+
+#: commands.c:245 recvattach.c:679
+msgid "Bounce tagged messages to: "
+msgstr "Pøeposlat oznaèené zprávy na: "
+
+#: commands.c:260
+msgid "Error parsing address!"
+msgstr "Chyba pøi zpracování adresy!"
+
+#: commands.c:270
+#, c-format
+msgid "Bounce message to %s"
+msgstr "Pøeposlat zprávu na %s"
+
+#: commands.c:270
+#, c-format
+msgid "Bounce messages to %s"
+msgstr "Pøeposlat zprávy na %s"
+
+#: commands.c:281
+msgid "Message bounced."
+msgstr "Zpráva byla pøeposlána."
+
+#: commands.c:281
+msgid "Messages bounced."
+msgstr "Zprávy byly pøeposlány."
+
+#: commands.c:301
+msgid "Pipe to command: "
+msgstr "Poslat rourou do pøíkazu: "
+
+# opìt psí kusy abychom se ve¹li do 80 nakù
+#: commands.c:401
+msgid ""
+"Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr ""
+"Øadit opaènì "
+"(d)at/(o)d/pøí(j)/(v)ìc/(p)ro/v(l)ákno/(n)eseø/veli(k)/s(k)óre?: "
+
+#: commands.c:402
+msgid ""
+"Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr ""
+"Øadit (d)at/(o)d/pøí(j)/(v)ìc/(p)ro/v(l)ákno/(n)eseø/veli(k)/s(k)óre?: "
+
+#: commands.c:403
+msgid "dfrsotuzc"
+msgstr "dojvplnks"
+
+#: commands.c:456
+msgid "Shell command: "
+msgstr "Pøíkaz pro shell: "
+
+#: commands.c:572
+#, c-format
+msgid "%s%s to mailbox"
+msgstr "%s%s do schránky"
+
+#: commands.c:573
+msgid "Decode-save"
+msgstr "Dekódovat-ulo¾it"
+
+#: commands.c:573
+msgid "Decode-copy"
+msgstr "Dekódovat-kopírovat"
+
+#: commands.c:574
+msgid "Decrypt-save"
+msgstr "De¹ifrovat-ulo¾it"
+
+#: commands.c:574
+msgid "Decrypt-copy"
+msgstr "De¹ifrovat-kopírovat"
+
+#: commands.c:575 curs_main.c:255 recvattach.c:49
+msgid "Save"
+msgstr "Ulo¾it"
+
+#: commands.c:575
+msgid "Copy"
+msgstr "Kopírovat"
+
+#: commands.c:575
+msgid " tagged"
+msgstr " oznaèeno"
+
+#: commands.c:644
+#, c-format
+msgid "Copying to %s..."
+msgstr "Kopíruji do %s..."
+
+#: commands.c:716
+msgid "Print message?"
+msgstr "Vytisknout zprávu?"
+
+#: commands.c:716
+msgid "Print tagged messages?"
+msgstr "Vytisknout oznaèené zprávy?"
+
+#: commands.c:743
+msgid "Message printed"
+msgstr "Zpráva byla vytisknuta"
+
+#: commands.c:743
+msgid "Messages printed"
+msgstr "Zprávy byly vytisknuty"
+
+#: compose.c:77
+msgid "Send"
+msgstr "Odeslat"
+
+#: compose.c:78
+msgid "Abort"
+msgstr "Zru¹it"
+
+#: compose.c:82 compose.c:539
+msgid "Attach file"
+msgstr "Pøipojit soubor"
+
+#: compose.c:83
+msgid "Descrip"
+msgstr "Popis"
+
+#: compose.c:104
+msgid "Sign, Encrypt"
+msgstr "Podepsat, za¹ifrovat"
+
+#: compose.c:106
+msgid "Encrypt"
+msgstr "Za¹ifrovat"
+
+#: compose.c:108
+msgid "Sign"
+msgstr "Podepsat"
+
+#: compose.c:110
+msgid "Clear"
+msgstr "Smazat"
+
+#: compose.c:117
+msgid " sign as: "
+msgstr " podepsat jako: "
+
+#: compose.c:117
+msgid "<default>"
+msgstr "<implicitní>"
+
+#: compose.c:118 compose.c:192
+msgid "MIC algorithm: "
+msgstr "MIC algoritmus: "
+
+#: compose.c:133
+msgid ""
+"(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
+"it? "
+msgstr ""
+"(¹)ifrovat, (p)odepsat, podepsat (j)ako, (o)bojí, (m)ic algoritmus, èi "
+"(n)ic?"
+
+#: compose.c:134
+msgid "esabmf"
+msgstr "¹pjomn"
+
+#: compose.c:151
+msgid "Can't open your secret key ring!"
+msgstr "Vá¹ seznam tajných klíèù nelze otevøít!"
+
+#: compose.c:156
+msgid "Sign as: "
+msgstr "Podepsat jako: "
+
+#: compose.c:176
+msgid "An unkown PGP version was defined for signing."
+msgstr "Pro podepisování byla specifikována neznámá verze PGP."
+
+#: compose.c:186
+msgid "This doesn't make sense if you don't want to sign the message."
+msgstr "To nedává smysl, kdy¾ nechcete zprávu podepsat."
+
+#: compose.c:197
+msgid "Unknown MIC algorithm, valid ones are: pgp-md5, pgp-sha1, pgp-rmd160"
+msgstr ""
+"Neznámý MIC algoritmus. Platnými algoritmy jsou: pgp-md5, pgp-sha1, "
+"pgp-rmd160"
+
+#: compose.c:233
+#, c-format
+msgid "%s [#%d] no longer exists!"
+msgstr "%s [#%d] ji¾ neexistuje!"
+
+#: compose.c:241
+#, c-format
+msgid "%s [#%d] modified. Update encoding?"
+msgstr "Zmìna v %s [#%d]. Zmìnit kódování?"
+
+#: compose.c:282
+msgid "===== Attachments ====="
+msgstr "==== Pøílohy ===="
+
+#: compose.c:320
+msgid "You may not delete the only attachment."
+msgstr "Nemù¾ete smazat jedinou pøílohu."
+
+#: compose.c:394
+msgid "Compose"
+msgstr "Sestavit"
+
+#: compose.c:544
+msgid "Open mailbox to attach message from"
+msgstr "Otevøít schránku, z ní¾ se pøipojí zpráva"
+
+#: compose.c:583
+msgid "No messages in that folder."
+msgstr "V této slo¾ce nejsou ¾ádné zprávy."
+
+#: compose.c:590
+msgid "Tag the messages you want to attach!"
+msgstr "Oznaète zprávy, které chcete pøipojit!"
+#: compose.c:625 compose.c:645
+msgid "Unable to attach!"
+msgstr "Nelze pøipojit!"
+
+#: compose.c:772
+msgid "Invalid encoding."
+msgstr "Nesprávné kódování."
+
+#: compose.c:787
+msgid "Save a copy of this message?"
+msgstr "Ulo¾it kopii této zprávy?"
+
+#: compose.c:832
+msgid "Rename to: "
+msgstr "Pøejmenovat na: "
+
+#: compose.c:837
+#, c-format
+msgid "Can't stat: %s"
+msgstr "Chyba pøi volání funkce stat pro %s"
+
+#: compose.c:864
+msgid "New file: "
+msgstr "Nový soubor: "
+
+#: compose.c:877
+msgid "Content-Type is of the form base/sub"
+msgstr "Polo¾ka 'Content-Type' je tvaru tøída/podtøída"
+
+#: compose.c:883
+#, c-format
+msgid "Unknown Content-Type %s"
+msgstr "Hodnota %s polo¾ky 'Content-Type' je neznámá."
+
+#: compose.c:896
+#, c-format
+msgid "Can't create file %s"
+msgstr "Soubor %s nelze vytvoøit."
+
+#: compose.c:904
+msgid "What we have here is a failure to make an attachment"
+msgstr "Vytvoøení pøílohy se nezdaøilo."
+
+#: compose.c:967
+msgid "Postpone this message?"
+msgstr "Odlo¾it tuto zprávu?"
+
+#: compose.c:1019
+msgid "Write message to mailbox"
+msgstr "Ulo¾it zprávu do schránky"
+
+#: compose.c:1023
+#, c-format
+msgid "Writing message to %s ..."
+msgstr "Ukládám zprávu do %s ..."
+
+#: compose.c:1034
+msgid "Message written."
+msgstr "Zpráva ulo¾ena."
+
+#: curs_lib.c:136
+msgid "yes"
+msgstr "ano"
+
+#: curs_lib.c:137
+msgid "no"
+msgstr "ne"
+
+#. restore blocking operation
+#: curs_lib.c:176
+msgid "Exit Mutt?"
+msgstr "Ukonèit Mutt?"
+
+#: curs_lib.c:275
+msgid "unknown error"
+msgstr "neznámá chyba"
+
+#: curs_lib.c:295
+msgid "Press any key to continue..."
+msgstr "Stisknìte libovolnou klávesu..."
+
+#: curs_lib.c:333
+msgid " ('?' for list): "
+msgstr " ('?' pro seznam): "
+
+#: curs_main.c:215
+msgid "Cannot toggle write on a readonly mailbox!"
+msgstr "Schránka je urèena pouze pro ètení, zápis nelze zapnout!"
+
+#: curs_main.c:222
+msgid "Changes to folder will be written on folder exit."
+msgstr "Zmìny obsahu slo¾ky budou ulo¾eny po jejím uzavøení."
+
+#: curs_main.c:227
+msgid "Changes to folder will not be written."
+msgstr "Zmìny obsahu slo¾ky nebudou ulo¾eny."
+
+#: curs_main.c:252
+msgid "Quit"
+msgstr "Konec"
+
+#: curs_main.c:253 pager.c:1376 postpone.c:34
+msgid "Del"
+msgstr "Smazat"
+
+#: curs_main.c:254 postpone.c:35
+msgid "Undel"
+msgstr "Obnovit"
+
+# potøeba u¹etøit 2 písmena, abychom
+# se ve¹li do 80 znakù.
+#: curs_main.c:256 query.c:45
+msgid "Mail"
+msgstr "Psát"
+
+#: curs_main.c:257 pager.c:1377
+msgid "Reply"
+msgstr "Odpovìdìt"
+
+#: curs_main.c:258
+msgid "Group"
+msgstr "Skupina"
+
+#: curs_main.c:423
+msgid "Mailbox was externally modified.  Flags may be wrong."
+msgstr "Obsah schránky byl zmìnìn zvenèí. Atributy mohou být nesprávné."
+
+#: curs_main.c:426
+msgid "New mail in this mailbox."
+msgstr "V této schránce je nová po¹ta."
+
+#: curs_main.c:526
+msgid "No mailbox is open."
+msgstr "®ádná schránka není otevøena."
+
+#: curs_main.c:532
+msgid "No tagged messages."
+msgstr "®ádné zprávy nejsou oznaèeny."
+
+#: curs_main.c:612
+msgid "Jump to message: "
+msgstr "Pøejít na zprávu: "
+
+#: curs_main.c:618
+msgid "Argument must be a message number."
+msgstr "Argumentem musí být èíslo zprávy."
+
+#: curs_main.c:651
+msgid "That message is not visible."
+msgstr "Tato zpráva není viditelná."
+
+#: curs_main.c:654
+msgid "Invalid message number."
+msgstr "Èíslo zprávy není správné."
+
+#: curs_main.c:667
+msgid "Dølete messages matching: "
+msgstr "Smazat zprávy shodující se s: "
+
+#: curs_main.c:689
+msgid "No limit pattern is in effect."
+msgstr "®ádné omezení není zavedeno."
+
+#. i18n: ask for a limit to apply
+#: curs_main.c:694
+#, c-format
+msgid "Limit: %s"
+msgstr "Omezení: %s"
+
+#: curs_main.c:703
+msgid "Limit to messages matching: "
+msgstr "Omezit na zprávy shodující se s: "
+
+#: curs_main.c:733
+msgid "Quit Mutt?"
+msgstr "Ukonèit Mutt?"
+
+#: curs_main.c:835
+msgid "Tag messages matching: "
+msgstr "Oznaèit zprávy shodující se s: "
+
+#: curs_main.c:843
+msgid "Undelete messages matching: "
+msgstr "Obnovit zprávy shodující se s: "
+
+#: curs_main.c:850
+msgid "Untag messages matching: "
+msgstr "Odznaèit zprávy shodující se s: "
+
+#: curs_main.c:868
+msgid "Open mailbox"
+msgstr "Otevøít schránku"
+
+#: curs_main.c:870
+msgid "Open mailbox in read-only mode"
+msgstr "Otevøít schránku pouze pro ètení"
+
+#: curs_main.c:886 mx.c:423 mx.c:564
+#, c-format
+msgid "%s is not a mailbox."
+msgstr "%s není schránkou."
+
+#: curs_main.c:973
+msgid "Exit Mutt without saving?"
+msgstr "Ukonèit Mutt bez ulo¾ení zmìn?"
+
+#: curs_main.c:990 curs_main.c:1014
+msgid "You are on the last message."
+msgstr "Jste na poslední zprávì."
+
+#: curs_main.c:997 curs_main.c:1039
+msgid "No undeleted messages."
+msgstr "Nejsou ¾ádné obnovené zprávy."
+
+#: curs_main.c:1032 curs_main.c:1055
+msgid "You are on the first message."
+msgstr "Jste na první zprávì."
+
+#: curs_main.c:1127 pattern.c:1114
+msgid "Search wrapped to top."
+msgstr "Hledání pokraèuje od zaèátku."
+
+#: curs_main.c:1136 pattern.c:1125
+msgid "Search wrapped to bottom."
+msgstr "Hledání pokraèuje od konce."
+
+#: curs_main.c:1162
+msgid "No new messages"
+msgstr "Nejsou ¾ádné nové zprávy"
+
+#: curs_main.c:1162
+msgid "No unread messages"
+msgstr "Nejsou ¾ádné nepøeètené zprávy"
+
+#: curs_main.c:1163
+msgid " in this limited view"
+msgstr " v tomto omezeném zobrazení"
+
+#: curs_main.c:1273
+msgid "No more threads."
+msgstr "Nejsou dal¹í vlákna."
+
+#: curs_main.c:1275
+msgid "You are on the first thread."
+msgstr "Jste na prvním vláknu."
+
+#: curs_main.c:1328
+msgid "Thread contains unread messages."
+msgstr "Vlákno obsahuje nepøeètené zprávy."
+
+#: curs_main.c:1341 flags.c:220 thread.c:635
+msgid "Threading is not enabled."
+msgstr "Vlákna nejsou podporována."
+
+#: date.c:49
+msgid "Please report this program error in the function mutt_mktime."
+msgstr "Ohla¹te, prosím, tuto chybu ve funkci mutt_mktime."
+
+#.
+#. * SLcurses_waddnstr() can't take a "const char *", so this is only
+#. * declared "static" (sigh)
+#.
+#: edit.c:37
+msgid ""
+"~~\t\tinsert a line begining with a single ~\n"
+"~b users\tadd users to the Bcc: field\n"
+"~c users\tadd users to the Cc: field\n"
+"~f messages\tinclude messages\n"
+"~F messages\tsame as ~f, except also include headers\n"
+"~h\t\tedit the message header\n"
+"~m messages\tinclude and quote messages\n"
+"~M messages\tsame as ~m, except include headers\n"
+"~p\t\tprint the message\n"
+"~q\t\twrite file and quit editor\n"
+"~r file\t\tread a file into the editor\n"
+"~t users\tadd users to the To: field\n"
+"~u\t\trecall the previous line\n"
+"~v\t\tedit message with the $visual editor\n"
+"~w file\t\twrite message to file\n"
+"~x\t\tabort changes and quit editor\n"
+"~?\t\tthis message\n"
+".\t\ton a line by itself ends input\n"
+msgstr ""
+"~~\t\tvlo¾í øádku zaèínající znakem ~\n"
+"~b u¾ivatelé\tpøidá u¾ivatele do polo¾ky Bcc:\n"
+"~c u¾ivatelé\tpøidá u¾ivatele do polo¾ky Cc:\n"
+"~f zprávy\tvlo¾í zprávy\n"
+"~F zprávy\tstejné jako ~f a navíc vlo¾í i hlavièky zpráv\n"
+"~h\t\teditace hlavièky zprávy\n"
+"~m zprávy\tvlo¾í zprávy a uzavøe je do uvozovek\n"
+"~M zprávy\tstejné jako ~m a navíc vlo¾í i hlavièky zpráv\n"
+"~p\t\tvytiskne zprávu\n"
+"~q\t\tulo¾í soubor a ukonèí editor\n"
+"~t u¾ivatelé\tpøidá u¾ivatele do polo¾ky To:\n"
+"~u\t\teditace pøedchozí øádky\n"
+"~v\t\teditace zprávy $visual editorem\n"
+"~w soubor\t\tzapí¹e zprávu do souboru\n"
+"~x\t\tukonèí editaci bez ulo¾ení jakýchkoli zmìn\n"
+"~?\t\tvypí¹e tuto nápovìdu\n"
+".\t\tpokud je tento znak na øádce samotný, znamená ukonèení vstupu\n"
+
+#: edit.c:179
+#, c-format
+msgid "%d: invalid message number.\n"
+msgstr "Èíslo zprávy (%d) není správné.\n"
+
+#: edit.c:313
+msgid "(End message with a . on a line by itself)\n"
+msgstr "(Zprávu ukonèete zapsáním samotného znaku '.' na novou øádku)\n"
+
+#: edit.c:371
+msgid "No mailbox.\n"
+msgstr "®ádná schránka.\n"
+
+#: edit.c:375
+msgid "Message contains:\n"
+msgstr "Zpráva obsahuje:\n"
+
+#: edit.c:379 edit.c:431
+msgid "(continue)\n"
+msgstr "(pokraèovat)\n"
+
+#: edit.c:392
+msgid "missing filename.\n"
+msgstr "Chybí jméno souboru.\n"
+
+#: edit.c:413
+msgid "No lines in message.\n"
+msgstr "Zpráva neobsahuje ¾ádné øádky.\n"
+
+#: edit.c:442
+#, c-format
+msgid "%s: unknown editor command (~? for help)\n"
+msgstr "Pøíkaz %s je neznámý (~? pro nápovìdu)\n"
+
+#: flags.c:258
+msgid "Set flag"
+msgstr "Nastavit pøíznak"
+
+#: flags.c:258
+msgid "Clear flag"
+msgstr "Vypnout pøíznak"
+
+#: handler.c:128
+msgid "[-- Error: unexpected end of file! --]\n"
+msgstr "[-- Chyba: neoèekávaný konec souboru! --]\n"
+
+#. didn't find anything that we could display!
+#: handler.c:954
+msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
+msgstr ""
+"[-- Chyba: ®ádnou z èástí 'Multipart/Alternative' nelze zobrazit! --]\n"
+
+#: handler.c:1071
+#, c-format
+msgid "[-- Attachment #%d"
+msgstr "[-- Pøíloha #%d"
+
+#: handler.c:1082
+#, c-format
+msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
+msgstr "[-- Typ: %s%s, Kódování: %s, Velikost: %s --]\n"
+
+#: handler.c:1141
+#, c-format
+msgid "[-- Autoview using %s --]\n"
+msgstr "[-- Zobrazuji automaticky pomocí %s --]\n"
+
+#: handler.c:1142
+#, c-format
+msgid "Invoking autoview command: %s"
+msgstr "Vyvolávám pøíkaz %s pro automatické zobrazování"
+
+#: handler.c:1179 handler.c:1197
+#, c-format
+msgid "[-- Autoview stderr of %s --]\n"
+msgstr "[-- Automaticky zobrazuji standardní chybový výstup %s --]\n"
+
+#: handler.c:1229
+msgid "[-- Error: message/external-body has no taccess-type parameter --]\n"
+msgstr ""
+"[-- Chyba: typ 'message/external-body' nemá parametr 'access-type' --]\n"
+
+#: handler.c:1246
+#, c-format
+msgid "[-- This %s/%s attachment "
+msgstr "[-- Tato pøíloha typu '%s/%s' "
+
+#: handler.c:1253
+#, c-format
+msgid "(size %s bytes) "
+msgstr "(o velikosti v bajtech: %s) "
+
+#: handler.c:1255
+msgid "has been deleted --]\n"
+msgstr "byla smazána --]\n"
+
+#: handler.c:1258
+#, c-format
+msgid "[-- on %s --]\n"
+msgstr "[-- %s --]\n"
+
+#: handler.c:1268
+#, c-format
+msgid ""
+"[-- This %s/%s attachment is not included, --]\n"
+"[-- and the indicated external source has --]\n"
+"[-- expired. --]\n"
+msgstr ""
+"[-- Tato pøíloha typu '%s/%s' není pøítomna --]\n"
+"[-- a udaný externí zdroj ji¾ není platný --]\n"
+
+#: handler.c:1282
+#, c-format
+msgid ""
+"[-- This %s/%s attachment is not included, --]\n"
+"[-- and the indicated access-type %s is unsupported --]\n"
+msgstr ""
+"[-- Tato pøíloha typu '%s/%s' není pøítomna --]\n"
+"[-- a udaná hodnota parametru 'access-type %s' --]\n"
+"[-- není podporována --]\n"
+
+#: handler.c:1379
+msgid "Error: multipart/signed has no protocol."
+msgstr "Chyba: typ 'multipart/signed' bez informace o protokolu"
+
+#: handler.c:1391
+msgid "Error: multipart/encrypted has no protocol parameter!"
+msgstr "Chyba: typ 'multipart/encrypted' bez informace o protokolu"
+
+#: handler.c:1433
+msgid "Unable to open temporary file!"
+msgstr "Doèasný soubor nelze otevøít!"
+
+#: handler.c:1492
+#, c-format
+msgid "[-- %s/%s is unsupported "
+msgstr "[-- typ '%s/%s' není podporován "
+
+#: handler.c:1497
+#, c-format
+msgid "(use '%s' to view this part)"
+msgstr "(pro zobrazení této èásti pou¾ijte '%s')"
+
+#: handler.c:1499
+msgid "(need 'view-attachments' bound to key!)"
+msgstr "(je tøeba svázat funkci 'view-attachments' s nìjakou klávesou!)"
+
+#: headers.c:202
+#, c-format
+msgid "%s: unable to attach file"
+msgstr "soubor %s nelze pøipojit"
+
+#: help.c:274
+msgid "ERROR: please report this bug"
+msgstr "CHYBA: ohla¹te, prosím, tuto chybu"
+
+#: help.c:316
+msgid "<UNKNOWN>"
+msgstr "<NEZNÁMÝ>"
+
+#: help.c:328
+msgid ""
+"\n"
+"Generic bindings:\n"
+"\n"
+msgstr ""
+"\n"
+"Obecnì platné:\n"
+"\n"
+
+#: help.c:332
+msgid ""
+"\n"
+"Unbound functions:\n"
+"\n"
+msgstr ""
+"\n"
+"Nesvázané funkce:\n"
+"\n"
+
+#: help.c:340
+#, c-format
+msgid "Help for %s"
+msgstr "Pomoc pro %s"
+
+#: imap.c:103
+#, c-format
+msgid "imap_error(): unexpected response in %s: %s\n"
+msgstr "imap_error(): neèekávaná odpovìï v %s: %s\n"
+
+#. something is wrong because the server reported fewer messages
+#. * than we previously saw
+#.
+#: imap.c:355
+msgid "Fatal error.  Message count is out of sync!"
+msgstr "Kritická chyba. Poèet zpráv nesouhlasí!"
+
+#: imap.c:425
+#, c-format
+msgid "Fetching message headers... [%d/%d]"
+msgstr "Stahuji hlavièky zpráv... [%d/%d]"
+
+#: imap.c:623 mbox.c:1007
+msgid "Reopening mailbox..."
+msgstr "Znovu otevírám schránku..."
+
+#: imap.c:865
+#, c-format
+msgid "Connecting to %s..."
+msgstr "Pøipojuji se k %s..."
+
+#: imap.c:888
+msgid "IMAP Username: "
+msgstr "U¾ivatelské jméno na IMAP serveru: "
+
+#: imap.c:901
+#, c-format
+msgid "Password for %s@%s: "
+msgstr "Heslo pro %s@%s: "
+
+#: imap.c:914
+msgid "Logging in..."
+msgstr "Probíhá pøihla¹ování..."
+
+#. Login failed, try again
+#: imap.c:927
+msgid "Login failed."
+msgstr "Pøihlá¹ení se nezdaøilo."
+
+#: imap.c:984
+#, c-format
+msgid "Selecting %s..."
+msgstr "Volím %s..."
+
+#: imap.c:1083 lib.c:1194
+#, c-format
+msgid "Create %s?"
+msgstr "Vytvoøit %s?"
+
+#: imap.c:1132
+msgid "Fetching message..."
+msgstr "Stahuji zprávu..."
+
+#: imap.c:1240
+msgid "Sending APPEND command ..."
+msgstr "Posílám pøíkaz APPEND ..."
+
+#: imap.c:1279
+msgid "Uploading message ..."
+msgstr "Posílám zprávu ..."
+
+#: imap.c:1334
+msgid "Closing connection to IMAP server..."
+msgstr "Konèím spojení s IMAP serverem..."
+
+#: imap.c:1364
+#, c-format
+msgid "Saving message status flags... [%d/%d]"
+msgstr "Ukládám pøíznaky stavu zprávy... [%d/%d]"
+
+#: imap.c:1390
+msgid "Expunging messages from server..."
+msgstr "Odstraòuji zprávy ze serveru..."
+
+#. tell the server to commit changes
+#: imap.c:1441
+msgid "Closing mailbox..."
+msgstr "Uzavírám schránku..."
+
+#: init.c:433
+msgid "alias: no address"
+msgstr "pøezdívka: ¾ádná adresa"
+
+#: init.c:527
+msgid "invalid header field"
+msgstr "neplatná hlavièka"
+
+#: init.c:535
+#, c-format
+msgid "ignoring empty header field: %s"
+msgstr "ignoruji prázdnou hlavièku: %s"
+
+#: init.c:587
+#, c-format
+msgid "%s: unknown sorting method"
+msgstr "metoda %s pro øazení není známa"
+
+#: init.c:660
+#, c-format
+msgid "mutt_restore_default: error in regexp: %s\n"
+msgstr "mutt_restore_default: chybný regulární výraz %s\n"
+
+#: init.c:720
+#, c-format
+msgid "%s: unknown variable"
+msgstr "Promìnná %s není známa."
+
+#: init.c:729
+msgid "prefix is illegal with reset"
+msgstr "Prefix není s 'reset' povolen."
+
+#: init.c:735
+msgid "value is illegal with reset"
+msgstr "Hodnota není s 'reset' povolena."
+
+#: init.c:752
+#, c-format
+msgid "%s is a boolean var!"
+msgstr "Promìnná %s je typu boolean!"
+
+#: init.c:759
+#, c-format
+msgid "%s is set"
+msgstr "%s je nastaveno"
+
+#: init.c:759
+#, c-format
+msgid "%s is unset"
+msgstr "%s není nastaveno"
+
+#: init.c:933
+#, c-format
+msgid "%s: invalid mailbox type"
+msgstr "%s je nesprávný typ schránky."
+
+#: init.c:992
+#, c-format
+msgid "%s: invalid value"
+msgstr "Hodnota %s je nesprávná."
+
+#: init.c:1042
+#, c-format
+msgid "%s: unknown type"
+msgstr "neznámý typ %s"
+
+#: init.c:1091
+#, c-format
+msgid "Error in %s, line %d: %s"
+msgstr "Chyba v %s na øádku %d: %s"
+
+#. the muttrc source keyword
+#: init.c:1102
+#, c-format
+msgid "source: errors in %s"
+msgstr "source: chyby v %s"
+
+#: init.c:1112
+#, c-format
+msgid "source: error at %s"
+msgstr "source: chyba na %s"
+
+#: init.c:1117
+msgid "source: too many arguments"
+msgstr "source: pøíli¹ mnoho argumentù"
+
+#: init.c:1168
+#, c-format
+msgid "%s: unknown command"
+msgstr "Pøíkaz %s není znám."
+
+#: init.c:1497
+#, c-format
+msgid "Error in command line: %s\n"
+msgstr "Chyba %s na pøíkazovém øádku\n"
+
+#: init.c:1540
+msgid "unable to determine home directory"
+msgstr "domovský adresáø nelze urèit"
+
+#: init.c:1548
+msgid "unable to determine username"
+msgstr "u¾ivatelské jméno nelze urèit"
+
+#: keymap.c:434
+msgid "Macro loop detected."
+msgstr "Detekována smyèka v makru."
+
+#: keymap.c:620 keymap.c:628
+msgid "Key is not bound."
+msgstr "Klávesa není svázána s ¾ádnou funkcí."
+
+#: keymap.c:632
+#, c-format
+msgid "Key is not bound.  Press '%s' for help."
+msgstr "Klávesa není svázána. Stisknìte '%s' pro nápovìdu."
+
+#: keymap.c:643
+msgid "push: too many arguments"
+msgstr "push: pøíli¹ mnoho argumentù"
+
+#: keymap.c:664
+#, c-format
+msgid "%s: no such menu"
+msgstr "menu %s neexistuje"
+
+#: keymap.c:673
+msgid "null key sequence"
+msgstr "prázdný sled kláves"
+
+#: keymap.c:751
+msgid "bind: too many arguments"
+msgstr "bind: pøíli¹ mnoho argumentù"
+
+#: keymap.c:766
+#, c-format
+msgid "%s: no such function in map"
+msgstr "funkce %s není v mapì"
+
+#: keymap.c:789
+msgid "macro: empty key sequence"
+msgstr "macro: sled kláves je prázdný"
+
+#: keymap.c:800
+msgid "macro: too many arguments"
+msgstr "macro: pøíli¹ mnoho argumentù"
+
+#: keymap.c:830
+msgid "exec: too few arguments"
+msgstr "exec: pøíli¹ málo argumentù"
+
+#: keymap.c:850
+#, c-format
+msgid "%s: no such command"
+msgstr "pøíkaz %s neexistuje"
+
+#: keymap_defs.h:5
+msgid "null operation"
+msgstr "nulová operace"
+
+#: keymap_defs.h:6
+msgid "force viewing of attachment using mailcap"
+msgstr "pro zobrazení pøíloh vynucenì pou¾ít mailcap"
+
+#: keymap_defs.h:7
+msgid "view attachment as text"
+msgstr "zobrazit pøílohu jako text"
+
+#: keymap_defs.h:8
+msgid "move to the bottom of the page"
+msgstr "pøeskoèit na zaèátek stránky"
+
+#: keymap_defs.h:9
+msgid "remail a message to another user"
+msgstr "pøeposlat zprávu jinému u¾ivateli"
+
+#: keymap_defs.h:10
+msgid "select a new file in this directory"
+msgstr "zvolit jiný soubor v tomto adresáøi"
+
+#: keymap_defs.h:11
+msgid "view file"
+msgstr "zobrazit soubor"
+
+#: keymap_defs.h:12
+msgid "display the currently selected file's name"
+msgstr "zobrazit jméno zvoleného souboru"
+
+#: keymap_defs.h:13
+msgid "change directories"
+msgstr "zmìnit adresáøe"
+
+#: keymap_defs.h:14
+msgid "check mailboxes for new mail"
+msgstr "zjistit zda schránky obsahují novou po¹tu"
+
+#: keymap_defs.h:15
+msgid "attach a file(s) to this message"
+msgstr "pøipojit pøílohy k této zprávì"
+
+#: keymap_defs.h:16
+msgid "attach message(s) to this message"
+msgstr "pøipojit zprávy k této zprávì"
+
+#: keymap_defs.h:17
+msgid "edit the BCC list"
+msgstr "editovat BCC seznam"
+
+#: keymap_defs.h:18
+msgid "edit the CC list"
+msgstr "editovat CC seznam"
+
+#: keymap_defs.h:19
+msgid "edit attachment description"
+msgstr "editovat popis pøílohy"
+
+#: keymap_defs.h:20
+msgid "edit attachment transfer-encoding"
+msgstr "editovat polo¾ku 'transfer-encoding' pøílohy"
+
+#: keymap_defs.h:21
+msgid "enter a file to save a copy of this message in"
+msgstr "zadejte soubor pro ulo¾ení kopie této zprávy"
+
+#: keymap_defs.h:22
+msgid "edit the file to be attached"
+msgstr "editovat soubor, který bude pøipojen"
+
+#: keymap_defs.h:23
+msgid "edit the from field"
+msgstr "editovat polo¾ku 'from'"
+
+#: keymap_defs.h:24
+msgid "edit the message with headers"
+msgstr "editovat zprávu i s hlavièkami"
+
+#: keymap_defs.h:25
+msgid "edit the message"
+msgstr "editovat zprávu"
+
+#: keymap_defs.h:26
+msgid "edit attachment using mailcap entry"
+msgstr "editovat pøílohu za pou¾ití polo¾ky mailcap"
+
+#: keymap_defs.h:27
+msgid "edit the Reply-To field"
+msgstr "editovat polo¾ku 'Reply-To'"
+
+#: keymap_defs.h:28
+msgid "edit the subject of this message"
+msgstr "editovat vìc této zprávy"
+
+#: keymap_defs.h:29
+msgid "edit the TO list"
+msgstr "editovat seznam 'TO'"
+
+#: keymap_defs.h:30
+msgid "edit attachment type"
+msgstr "editovat typ pøílohy"
+
+#: keymap_defs.h:31
+msgid "get a temporary copy of an attachment"
+msgstr "pracovat s doèasnou kopií pøílohy"
+
+#: keymap_defs.h:32
+msgid "run ispell on the message"
+msgstr "zkontrolovat pravopis zprávy programem ispell"
+
+#: keymap_defs.h:33
+msgid "compose new attachment using mailcap entry"
+msgstr "sestavit novou pøílohu dle polo¾ky mailcapu"
+
+#: keymap_defs.h:34
+msgid "save this message to send later"
+msgstr "odlo¾it zprávu pro pozdìj¹í pou¾ití"
+
+#: keymap_defs.h:35
+msgid "rename/move an attached file"
+msgstr "pøejmenovat/pøesunout pøilo¾ený soubor"
+
+#: keymap_defs.h:36
+msgid "send the message"
+msgstr "odeslat zprávu"
+
+#: keymap_defs.h:37
+msgid "toggle whether to delete file after sending it"
+msgstr "pøepnout, zda má být soubor po odeslání smazán"
+
+#: keymap_defs.h:38
+msgid "update an attachment's encoding info"
+msgstr "upravit informaci o kódování pøílohy"
+
+#: keymap_defs.h:39
+msgid "write the message to a folder"
+msgstr "ulo¾it zprávu do slo¾ky"
+
+#: keymap_defs.h:40
+msgid "copy a message to a file/mailbox"
+msgstr "ulo¾it kopii zprávy do souboru/schránky"
+
+#: keymap_defs.h:41
+msgid "create an alias from a message sender"
+msgstr "vytvoøit pøezdívku z odesílatele dopisu"
+
+#: keymap_defs.h:42
+msgid "move entry to bottom of screen"
+msgstr "pøesunout polo¾ku na konec obrazovky"
+
+#: keymap_defs.h:43
+msgid "move entry to middle of screen"
+msgstr "pøesunout polo¾ku do støedu obrazovky"
+
+#: keymap_defs.h:44
+msgid "move entry to top of screen"
+msgstr "pøesunout polo¾ku na zaèátek obrazovky"
+
+#: keymap_defs.h:45
+msgid "make decoded (text/plain) copy"
+msgstr "vytvoøit kopii ve formátu 'text/plain'"
+
+#: keymap_defs.h:46
+msgid "make decoded copy (text/plain) and delete"
+msgstr "vytvoøit kopii ve formátu 'text/plain' a smazat"
+
+#: keymap_defs.h:47
+msgid "delete the current entry"
+msgstr "smazat aktuální polo¾ku"
+
+#: keymap_defs.h:48
+msgid "delete all messages in subthread"
+msgstr "smazat v¹echny zprávy v podvláknu"
+
+#: keymap_defs.h:49
+msgid "delete all messages in thread"
+msgstr "smazat v¹echny zprávy ve vláknu"
+
+#: keymap_defs.h:50
+msgid "display full address of sender"
+msgstr "zobrazit úplnou adresu odesílatele"
+
+#: keymap_defs.h:51
+msgid "display message with full headers"
+msgstr "zobrazit v¹echny hlavièky zprávy"
+
+#: keymap_defs.h:52
+msgid "display a message"
+msgstr "zobrazit zprávu"
+
+#: keymap_defs.h:53
+msgid "edit the current message for resending"
+msgstr "editovat aktuální zprávu za úèelem pøeposlání"
+
+#: keymap_defs.h:54
+msgid "delete the char in front of the cursor"
+msgstr "smazat znak pøed kurzorem"
+
+#: keymap_defs.h:55
+msgid "move the cursor one character to the left"
+msgstr "posunout kurzor o jeden znak vlevo"
+
+#: keymap_defs.h:56
+msgid "jump to the beginning of the line"
+msgstr "pøeskoèit na zaèátek øádku"
+
+#: keymap_defs.h:57
+msgid "cycle among incoming mailboxes"
+msgstr "procházet schránkami, pøijímajícími novou po¹tu"
+
+#: keymap_defs.h:58
+msgid "complete filename or alias"
+msgstr "doplnit jméno souboru nebo pøezdívku"
+
+# query = dotaz dle slovníku
+#: keymap_defs.h:59
+msgid "complete address with query"
+msgstr "doplnit adresu výsledkem dotazu"
+
+#: keymap_defs.h:60
+msgid "delete the char under the cursor"
+msgstr "smazat znak pod kurzorem"
+
+#: keymap_defs.h:61
+msgid "jump to the end of the line"
+msgstr "pøeskoèit na konec øádku"
+
+#: keymap_defs.h:62
+msgid "move the cursor one character to the right"
+msgstr "posunout kurzor o jeden znak vpravo"
+
+#: keymap_defs.h:63 keymap_defs.h:64
+msgid "scroll up through the history list"
+msgstr "rolovat seznamem provedených pøíkazù nahoru"
+
+#: keymap_defs.h:65
+msgid "delete chars from cursor to end of line"
+msgstr "smazat znaky od kurzoru do konce øádku"
+
+#: keymap_defs.h:66
+msgid "delete all chars on the line"
+msgstr "smazat v¹echny znaky na øádku"
+
+#: keymap_defs.h:67
+msgid "delete the word in front of the cursor"
+msgstr "smazat slovo pøed kurzorem"
+
+#: keymap_defs.h:68
+msgid "quote the next typed key"
+msgstr "pøí¹tí napsaný znak uzavøít do uvozovek"
+
+#: keymap_defs.h:69
+msgid "enter a muttrc command"
+msgstr "zadat muttrc pøíkaz"
+
+#: keymap_defs.h:70
+msgid "enter a file mask"
+msgstr "zadejte souborovou masku"
+
+#: keymap_defs.h:71
+msgid "exit this menu"
+msgstr "odejít z tohoto menu"
+
+#: keymap_defs.h:72
+msgid "filter attachment through a shell command"
+msgstr "filtrovat pøílohu pøíkazem shellu"
+
+#: keymap_defs.h:73
+msgid "move to the first entry"
+msgstr "pøeskoèit na první polo¾ku"
+
+#: keymap_defs.h:74
+msgid "toggle a message's 'important' flag"
+msgstr "pøepnout zprávì pøíznak dùle¾itosti"
+
+#: keymap_defs.h:75
+msgid "forward a message with comments"
+msgstr "pøeposlat zprávu s komentáøem"
+
+#: keymap_defs.h:76
+msgid "select the current entry"
+msgstr "zvolit aktuální polo¾ku"
+
+#: keymap_defs.h:77
+msgid "reply to all recipients"
+msgstr "odpovìïet v¹em pøíjemcùm"
+
+#: keymap_defs.h:78
+msgid "scroll down 1/2 page"
+msgstr "rolovat o 1/2 stránky dolù"
+
+#: keymap_defs.h:79
+msgid "scroll up 1/2 page"
+msgstr "rolovat o 1/2 stránky nahoru"
+
+#: keymap_defs.h:80
+msgid "this screen"
+msgstr "tato obrazovka"
+
+#: keymap_defs.h:81
+msgid "jump to an index number"
+msgstr "pøeskoèit na indexové èíslo"
+
+#: keymap_defs.h:82
+msgid "move to the last entry"
+msgstr "pøeskoèit na poslední polo¾ku"
+
+#: keymap_defs.h:83
+msgid "reply to specified mailing list"
+msgstr "odpovìdìt do specifikovaných diskuzních skupin"
+
+#: keymap_defs.h:84
+msgid "execute a macro"
+msgstr "spustit makro"
+
+#: keymap_defs.h:85
+msgid "compose a new mail message"
+msgstr "sestavit novou zprávu"
+
+#: keymap_defs.h:86
+msgid "open a different folder"
+msgstr "otevøít jinou slo¾ku"
+
+#: keymap_defs.h:87
+msgid "open a different folder in read only mode"
+msgstr "otevøít jinou slo¾ku pouze pro ètení"
+
+#: keymap_defs.h:88
+msgid "clear a status flag from a message"
+msgstr "odstranit zprávì pøíznak stavu"
+
+#: keymap_defs.h:89
+msgid "delete messages matching a pattern"
+msgstr "smazat zprávy shodující se se vzorem"
+
+#: keymap_defs.h:90
+msgid "retrieve mail from POP server"
+msgstr "stáhnout po¹tu z POP serveru"
+
+#: keymap_defs.h:91
+msgid "move to the first message"
+msgstr "pøeskoèit na první zprávu"
+
+#: keymap_defs.h:92
+msgid "move to the last message"
+msgstr "pøeskoèit na poslední zprávu"
+
+#: keymap_defs.h:93
+msgid "show only messages matching a pattern"
+msgstr "zobrazovat pouze zprávy shodující se se vzorem"
+
+#: keymap_defs.h:94
+msgid "jump to the next new message"
+msgstr "pøeskoèit na následující novou zprávu"
+
+#: keymap_defs.h:95
+msgid "jump to the next subthread"
+msgstr "pøeskoèit na následující podvlákno"
+
+#: keymap_defs.h:96
+msgid "jump to the next thread"
+msgstr "pøeskoèit na následující vlákno"
+
+#: keymap_defs.h:97
+msgid "move to the next undeleted message"
+msgstr "pøeskoèit na následující obnovenou zprávu"
+
+#: keymap_defs.h:98
+msgid "jump to the next unread message"
+msgstr "pøeskoèit na následující nepøeètenou zprávu"
+
+#: keymap_defs.h:99
+msgid "jump to previous thread"
+msgstr "pøeskoèit na pøedchozí vlákno"
+
+#: keymap_defs.h:100
+msgid "jump to previous subthread"
+msgstr "pøeskoèit na pøedchozí podvlákno"
+
+#: keymap_defs.h:101
+msgid "move to the last undelete message"
+msgstr "pøeskoèit na poslední obnovenou zprávu"
+
+#: keymap_defs.h:102
+msgid "jump to the previous new message"
+msgstr "pøeskoèit na pøedchozí novou zprávu"
+
+#: keymap_defs.h:103
+msgid "jump to the previous unread message"
+msgstr "pøeskoèit na pøedchozí nepøeètenou zprávu"
+
+#: keymap_defs.h:104
+msgid "mark the current thread as read"
+msgstr "oznaèit toto vlákno jako pøeètené"
+
+#: keymap_defs.h:105
+msgid "mark the current subthread as read"
+msgstr "oznaèit toto podvlákno jako pøeètené"
+
+#: keymap_defs.h:106
+msgid "set a status flag on a message"
+msgstr "nastavit zprávì pøíznak stavu"
+
+#: keymap_defs.h:107
+msgid "save changes to mailbox"
+msgstr "ulo¾it zmìny do schránky"
+
+#: keymap_defs.h:108
+msgid "tag messages matching a pattern"
+msgstr "oznaèit zprávy shodující se se vzorem"
+
+#: keymap_defs.h:109
+msgid "undelete messages matching a pattern"
+msgstr "obnovit zprávy shodující se se vzorem"
+
+#: keymap_defs.h:110
+msgid "untag messages matching a pattern"
+msgstr "odznaèit zprávy shodující se se vzorem"
+
+#: keymap_defs.h:111
+msgid "move to the middle of the page"
+msgstr "preskoèit do støedu stránky"
+
+#: keymap_defs.h:112
+msgid "move to the next entry"
+msgstr "pøeskoèit na dal¹í polo¾ku"
+
+#: keymap_defs.h:113
+msgid "scroll down one line"
+msgstr "rolovat o øádek dolù"
+
+#: keymap_defs.h:114
+msgid "move to the next page"
+msgstr "pøeskoèit na dal¹í stránku"
+
+#: keymap_defs.h:115
+msgid "jump to the bottom of the message"
+msgstr "pøeskoèit na konec zprávy"
+
+#: keymap_defs.h:116
+msgid "return to the main-menu"
+msgstr "návrat do hlavního menu"
+
+#: keymap_defs.h:117
+msgid "toggle display of quoted text"
+msgstr "pøepnout zobrazování citovaného textu"
+
+#: keymap_defs.h:118
+msgid "skip beyond quoted text"
+msgstr "pøeskoèit za citovaný text"
+
+#: keymap_defs.h:119
+msgid "jump to the top of the message"
+msgstr "pøeskoèit na zaèátek zprávy"
+
+#: keymap_defs.h:120
+msgid "pipe message/attachment to a shell command"
+msgstr "poslat zprávu/pøílohu rourou do pøíkazu shellu"
+
+#: keymap_defs.h:121
+msgid "move to the previous entry"
+msgstr "pøeskoèit na pøedchozí polo¾ku"
+
+#: keymap_defs.h:122
+msgid "scroll up one line"
+msgstr "rolovat o øádek nahoru"
+
+#: keymap_defs.h:123
+msgid "move to the previous page"
+msgstr "pøeskoèit na pøedchozí stránku"
+
+#: keymap_defs.h:124
+msgid "print the current entry"
+msgstr "vytisknout aktuální polo¾ku"
+
+#: keymap_defs.h:125
+msgid "query external program for addresses"
+msgstr "dotázat se externího programu na adresy"
+
+#: keymap_defs.h:126
+msgid "append new query results to current results"
+msgstr "pøidat výsledky nového dotazu k ji¾ existujícím"
+
+#: keymap_defs.h:127
+msgid "save changes to mailbox and quit"
+msgstr "ulo¾it zmìny do schránky a skonèit"
+
+#: keymap_defs.h:128
+msgid "recall a postponed message"
+msgstr "vrátit se k odlo¾ené zprávì"
+
+# vyèistit dle slovníku z www.inf.upol.cz/~michlv
+# To snad ale bylo my¹leno pro zcela jiný kontext?!
+#: keymap_defs.h:129
+msgid "clear and redraw the screen"
+msgstr "smazat a pøekreslit obrazovku"
+
+#: keymap_defs.h:130
+msgid "{internal}"
+msgstr "<vnitøní>"
+
+#: keymap_defs.h:131
+msgid "reply to a message"
+msgstr "odpovìdìt na zprávu"
+
+#: keymap_defs.h:132
+msgid "save message/attachment to a file"
+msgstr "ulo¾it zprávu/pøílohu do souboru"
+
+#: keymap_defs.h:133
+msgid "search for a regular expression"
+msgstr "vyhledat regulární výraz"
+
+#: keymap_defs.h:134
+msgid "search backwards for a regular expression"
+msgstr "vyhledat regulární výraz opaèným smìrem"
+
+#: keymap_defs.h:135
+msgid "search for next match"
+msgstr "vyhledat následující shodu"
+
+#: keymap_defs.h:136
+msgid "search for next match in opposite direction"
+msgstr "vyhledat následující shodu opaèným smìrem"
+
+#: keymap_defs.h:137
+msgid "toggle search pattern coloring"
+msgstr "pøepnout obarvování hledaných vzorú"
+
+#: keymap_defs.h:138
+msgid "invoke a command in a subshell"
+msgstr "spustit pøíkaz v podshellu"
+
+#: keymap_defs.h:139
+msgid "sort messages"
+msgstr "seøadit zprávy"
+
+#: keymap_defs.h:140
+msgid "sort messages in reverse order"
+msgstr "seøadit zprávy v opaèném poøadí"
+
+#: keymap_defs.h:141
+msgid "tag the current entry"
+msgstr "oznaèit aktuální polo¾ku"
+
+#: keymap_defs.h:142
+msgid "apply next function to tagged messages"
+msgstr "prefix funkce, která má být pou¾ita pouze pro oznaèené zprávy"
+
+#: keymap_defs.h:143
+msgid "tag the current subthread"
+msgstr "oznaèit toto podvlákno"
+
+#: keymap_defs.h:144
+msgid "tag the current thread"
+msgstr "oznaèit toto vlákno"
+
+#: keymap_defs.h:145
+msgid "toggle a message's 'new' flag"
+msgstr "pøepnout zprávì pøíznak 'nová'"
+
+#: keymap_defs.h:146
+msgid "toggle whether the mailbox will be rewritten"
+msgstr "pøepnout, zda bude schránka pøepsána"
+
+#: keymap_defs.h:147
+msgid "toggle wether to browse mailboxes or all files"
+msgstr "pøepnout, zda procházet schránky nebo v¹echny soubory"
+
+#: keymap_defs.h:148
+msgid "move to the top of the page"
+msgstr "pøeskoèit na zaèátek stránky"
+
+#: keymap_defs.h:149
+msgid "undelete the current entry"
+msgstr "obnovit aktuální polo¾ku"
+
+#: keymap_defs.h:150
+msgid "undelete all messages in thread"
+msgstr "obnovit vèechny zprávy ve vláknì"
+
+#: keymap_defs.h:151
+msgid "undelete all messages in subthread"
+msgstr "obnovit v¹echny zprávy v podvláknì"
+
+#: keymap_defs.h:152
+msgid "show the Mutt version number and date"
+msgstr "Vypí¹e oznaèení verze a datum"
+
+#: keymap_defs.h:153
+msgid "view attachment using mailcap entry if necessary"
+msgstr "pokud je to nezbytné, zobrazit pøílohy pomocí mailcapu"
+
+#: keymap_defs.h:154
+msgid "show MIME attachments"
+msgstr "zobrazit MIME pøílohy"
+
+#: keymap_defs.h:155
+msgid "show currently active limit pattern"
+msgstr "zobrazit aktivní omezující vzor"
+
+#: keymap_defs.h:156
+msgid "collapse/uncollapse current thread"
+msgstr "zavinout/rozvinout toto vlákno"
+
+#: keymap_defs.h:157
+msgid "collapse/uncollapse all threads"
+msgstr "zavinout/rozvinout v¹echna vlákna"
+
+#: keymap_defs.h:158
+msgid "attach a PGP public key"
+msgstr "pøipojit veøejný PGP klíè"
+
+#: keymap_defs.h:159
+msgid "show PGP options"
+msgstr "zobrazit menu PGP"
+
+#: keymap_defs.h:160
+msgid "extract PGP public keys"
+msgstr "vypsat veøejné klíèe PGP"
+
+#: keymap_defs.h:161
+msgid "wipe PGP passphrase from memory"
+msgstr "odstranit v¹echna PGP hesla z pamìti"
+
+#: keymap_defs.h:162
+msgid "mail a PGP public key"
+msgstr "odeslat veøejný klíè PGP"
+
+#: keymap_defs.h:163
+msgid "verify a PGP public key"
+msgstr "ovìøit veøejný klíè PGP"
+
+#: keymap_defs.h:164
+msgid "view the key's user id"
+msgstr "zobrazit u¾ivatelské ID klíèe"
+
+#: keymap_defs.h:165
+msgid "make decrypted copy and delete"
+msgstr "vytvoøit de¹ifrovanou kopii a smazat"
+
+#: keymap_defs.h:166
+msgid "make decrypted copy"
+msgstr "vytvoøit de¹ifrovanou kopii"
+
+#: lib.c:277 lib.c:292 lib.c:323
+msgid "Out of memory!"
+msgstr "Pamì» vyèerpána!"
+
+#: lib.c:781
+msgid "File is a directory, save under it?"
+msgstr "Soubor je adresáøem, ulo¾it v tomto adresáøi?"
+
+#: lib.c:786
+msgid "File under directory: "
+msgstr "Soubor v adresáøi: "
+
+#: lib.c:797
+msgid "File exists, overwrite?"
+msgstr "Soubor ji¾ existuje, mám jej pøepsat?"
+
+#: lib.c:1170
+#, c-format
+msgid "%s is not a mailbox!"
+msgstr "%s není schránkou!"
+
+#: lib.c:1176
+#, c-format
+msgid "Append messages to %s?"
+msgstr "Pøipojit zprávy k %s?"
+
+#: main.c:40
+msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
+msgstr ""
+"Vývojáøe programu mù¾ete kontaktovat na adrese <mutt-dev@mutt.org> "
+"(anglicky).\n"
+"Pøipomínky k pøekladu zasílejte na adresu <cs@li.org> (èwsky).\n"
+
+#: main.c:43
+msgid ""
+"Copyright (C) 1996-8 Michael R. Elkins and others.\n"
+"Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
+"Mutt is free software, and you are welcome to redistribute it\n"
+"under certain conditions; type `mutt -vv' for details.\n"
+msgstr ""
+"Copyright (C) 1996-8 Michael R. Elkins a dal¹í.\n"
+"Mutt je roz¹iøovám BEZ JAKÉKOLI ZÁRUKY; dal¹í informace získáte pøíkazem\n"
+"`mutt -vv'.\n"
+"Mutt je volné programové vybavení. Roz¹iøování tohoto programu je\n"
+"vítáno, musíte ov¹em dodr¾et urèitá pravidla; dal¹í informace\n"
+"získáte pøíkazem `mutt -vv'.\n"
+
+#: main.c:49
+msgid ""
+"Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998   Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998   Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"\n"
+"Lots of others not mentioned here contributed lots of code,\n"
+"fixes, and suggestions.\n"
+"\n"
+"    This program is free software; you can redistribute it and/or modify\n"
+"    it under the terms of the GNU General Public License as published by\n"
+"    the Free Software Foundation; either version 2 of the License, or\n"
+"    (at your option) any later version.\n"
+"\n"
+"    This program is distributed in the hope that it will be useful,\n"
+"    but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"    GNU General Public License for more details.\n"
+"\n"
+"    You should have received a copy of the GNU General Public License\n"
+"    along with this program; if not, write to the Free Software\n"
+"    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
+msgstr ""
+"Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998   Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998   Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"\n"
+"Mnoho dal¹ích lidí, kteøí zde nejsou zmínìni, pøispìlo zdrojovým kódem,\n"
+"opravami a pøipomínkami.\n"
+"\n"
+"  Tento program je volné programové vybavení; mù¾ete jej ¹íøit a "
+"modifikovat\n"
+"podle ustanovení Obecné veøejné licence GNU, vydávané Free Software "
+"Foundation;\n"
+"a to buï verze 2 této licence anebo (podle va¹eho uvá¾ení), kterékoli "
+"pozdìj¹í\n"
+"verze.\n"
+"\n"
+"  Tento program je roz¹iøován v nadìji, ¾e bude u¾iteèný, av¹ak BEZ "
+"JAKÉKOLI\n"
+"ZÁRUKY; neposkytují se ani odvozené záruky PRODEJNOSTI anebo VHODNOSTI PRO\n"
+"NÌJAKÝ KONKRÉTNÍ ÚÈEL. Dal¹í podrobnosti najdete v Obecné veøené licenci "
+"GNU.\n"
+"\n"
+"  Kopie Obecné veøejné licence GNU mìla být dodána spolu s tímto programem;\n"
+"pokud se tak nestalo, napi¹te o ni Free Software Foundation, Inc.,\n"
+"675 Mass Ave, Cambridge, MA 02139, USA.\n"
+"\n"
+
+#: main.c:74
+msgid ""
+"\n"
+"SHA1 implementation Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"\n"
+"    Redistribution and use in source and binary forms, with or without\n"
+"    modification, are permitted under certain conditions.\n"
+"\n"
+"    The SHA1 implementation comes AS IS, and ANY EXPRESS OR IMPLIED\n"
+"    WARRANTIES, including, but not limited to, the implied warranties of\n"
+"    merchantability and fitness for a particular purpose ARE DISCLAIMED.\n"
+"\n"
+"    You should have received a copy of the full distribution terms\n"
+"    along with this program; if not, write to the program's developers.\n"
+msgstr ""
+
+#: main.c:100
+msgid ""
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
+"]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
+"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
+"       mutt -v[v]\n"
+"\n"
+"options:\n"
+"  -a <file>\tattach a file to the message\n"
+"  -b <address>\tspecify a blind carbon-copy (BCC) address\n"
+"  -c <address>\tspecify a carbon-copy (CC) address\n"
+"  -e <command>\tspecify a command to be executed after initialization\n"
+"  -f <file>\tspecify which mailbox to read\n"
+"  -F <file>\tspecify an alternate muttrc file\n"
+"  -H <file>\tspecify a draft file to read header from\n"
+"  -i <file>\tspecify a file which Mutt should include in the reply\n"
+"  -m <type>\tspecify a default mailbox type\n"
+"  -n\t\tcauses Mutt not to read the system Muttrc\n"
+"  -p\t\trecall a postponed message\n"
+"  -R\t\topen mailbox in read-only mode\n"
+"  -s <subj>\tspecify a subject (must be in quotes if it has spaces)\n"
+"  -v\t\tshow version and compile-time definitions\n"
+"  -x\t\tsimulate the mailx send mode\n"
+"  -y\t\tselect a mailbox specified in your `mailboxes' list\n"
+"  -z\t\texit immediately if there are no messages in the mailbox\n"
+"  -Z\t\topen the first folder with new message, exit immediately if none\n"
+"  -h\t\tthis help message"
+msgstr ""
+"Pou¾ití: mutt [ -nRzZ ] [ -e <pøíkaz> ] [ -F <soubor> ] [ -m <typ> ] [ -f <\n"
+"       soubor> ]\n"
+"       mutt [ -nx ] [ -e <pøíkaz> ] [ -a <soubor> ] [ -F <soubor> ] [ -H <\n"
+"       soubor> ] [ -i <soubor> ] [ -s <vìc> ] [ -b <adr> ] [ -c <adr> ]\n"
+"\t<adr>  [ ... ]\n"
+"       mutt [ -n ] [ -e <pøíkaz> ] [ -F <soubor> ] -p\n"
+"       mutt -v[v]\n"
+"\n"
+"pøepínaèe:\n"
+"  -a <soubor>\tpøipojí soubor ke zprávì\n"
+"  -b <adresa>\tspecifikuje adresu pro utajenou kopii (BCC)\n"
+"  -c <adresa>\tspecifikuje adresu pro kopii (CC)\n"
+"  -e <pøíkaz>\tpøíkaz bude vykonán po inicializaci\n"
+"  -f <soubor>\tète z této schránky\n"
+"  -F <soubor>\talternativní soubor muttrc\n"
+"  -H <soubor>\tsoubor z nìho¾ budou naèteny vzory hlavièek\n"
+"  -i <soubor>\ttento soubor Mutt vlo¾í do odpovìdi\n"
+"  -m <soubor>\timplicitní typ schránky\n"
+"  -n\t\tMutt nebude èíst systémvý soubor Muttrc\n"
+"  -p\t\tvrátí se k odlo¾ené zprávì\n"
+"  -R\t\totevøe schránku pouze pro ètení\n"
+"  -s <vìc>\tspecifikuje vìc (pokud obsahuje mezery,\n"
+"              \tpak musí být v uvozovkách)\n"
+"  -v\t\tzobrazí oznaèení verze a parametry zadané pøi pøekladu\n"
+"  -x\t\tnapodobí odesílací mód programu mailx\n"
+"  -y\t\tzvolí schránku uvedenou v seznamu `mailboxes'\n"
+"  -z\t\tpokud ve schránce není po¹ta, pak okam¾itì skonèí\n"
+"  -Z\t\totevøe nejdøíve slo¾ku s novou po¹tou, pokud nová po¹ta\n"
+"    \t\tnení, pak skonèí\n"
+"  -h\t\tvypí¹e tuto nápovìdu"
+
+#: main.c:152
+msgid ""
+"\n"
+"Compile options:"
+msgstr ""
+"\n"
+"Pøelo¾eno s volbami:"
+
+#: main.c:306
+msgid "Error initializing terminal."
+msgstr "Chyba pøi inicializaci terminálu."
+
+#: main.c:404
+#, c-format
+msgid "Debugging at level %d.\n"
+msgstr "Ùroveò ladìní je %d.\n"
+
+#: main.c:406
+msgid "DEBUG was not defined during compilation.  Ignored.\n"
+msgstr "pøi pøekladu programu nebylo 'DEBUG' definováno. Ignoruji.\n"
+
+#: main.c:544
+msgid "No recipients specified.\n"
+msgstr "Nejsou specifikováni ¾ádní pøíjemci.\n"
+
+#: main.c:617
+#, c-format
+msgid "%s: unable to attach file.\n"
+msgstr "Soubor %s nelze pøipojit.\n"
+
+#: main.c:637
+msgid "No mailbox with new mail."
+msgstr "V ¾ádné schránce není nová po¹ta."
+
+#: main.c:671
+msgid "Mailbox is empty."
+msgstr "Schránka je prázdná."
+
+#: mbox.c:143 mbox.c:202
+msgid "Mailbox is corrupt!"
+msgstr "Schránka je po¹kozena!"
+
+#: mbox.c:277
+msgid "Reading %s... %d (%d%%)"
+msgstr "Ètu %s... %d (%d%%)"
+
+#: mbox.c:650
+msgid "Mailbox was corrupted!"
+msgstr "Schránka byla po¹kozena!"
+
+#: mbox.c:687 mbox.c:930
+msgid "Fatal error!  Could not reopen mailbox!"
+msgstr "Kritická chyba! Schránku nelze znovu otevøít!"
+
+#: mbox.c:696
+msgid "Unable to lock mailbox!"
+msgstr "Schránku nelze zamknout!"
+
+#. this means ctx->changed or ctx->deleted was set, but no
+#. * messages were found to be changed or deleted.  This should
+#. * never happen, is we presume it is a bug in mutt.
+#.
+#: mbox.c:740
+msgid "sync: mbox modified, but no modified messages! (report this bug)"
+msgstr ""
+"sync: mbox byl zmìnìn, ale nebyly zmìnìny ¾ádné zprávy! (ohla¹te tuto chybu)"
+
+#: mbox.c:769
+msgid "Writing messages... %d (%d%%)"
+msgstr "Zapisuji zprávy... %d (%d%%)"
+
+#: mbox.c:915
+#, c-format
+msgid "Write failed!  Saved partial mailbox to %s"
+msgstr "Ulo¾ení se nezdaøilo! Èást schránky byla ulo¾ena do %s"
+
+#: mbox.c:967
+msgid "Could not reopen mailbox!"
+msgstr "Schránku nelze znovu otevøít!"
+
+#: menu.c:309
+msgid "Jump to: "
+msgstr "Pøeskoèit na: "
+
+#: menu.c:318
+msgid "Invalid index number."
+msgstr "Nesprávné indexové èíslo."
+
+#: menu.c:322 menu.c:340 menu.c:376 menu.c:417 menu.c:433 menu.c:444
+#: menu.c:455 menu.c:497 menu.c:508 menu.c:521 menu.c:534 menu.c:813
+msgid "No entries."
+msgstr "®ádné polo¾ky."
+
+#: menu.c:337
+msgid "You cannot scroll down farther."
+msgstr "Dolù ji¾ rolovat nemù¾ete."
+
+#: menu.c:353
+msgid "You cannot scroll up farther."
+msgstr "Nahoru ji¾ rolovat nemù¾ete."
+
+#: menu.c:373
+msgid "You are on the last page."
+msgstr "Jste na poslední stránce."
+
+#: menu.c:395
+msgid "You are on the first page."
+msgstr "Jste na první stránce."
+
+#: menu.c:474
+msgid "First entry is shown."
+msgstr "První polo¾ka je zobrazena."
+
+#: menu.c:494
+msgid "Last entry is shown."
+msgstr "Poslední polo¾ka je zobrazena."
+
+#: menu.c:545
+msgid "You are on the last entry."
+msgstr "Jste na poslední polo¾ce."
+
+#: menu.c:556
+msgid "You are on the first entry."
+msgstr "Jste na první polo¾ce."
+
+#: menu.c:596 pattern.c:1060
+msgid "Search for: "
+msgstr "Vyhledat: "
+
+#: menu.c:597
+msgid "Reverse search for: "
+msgstr "Vyhledat obráceným smìrem: "
+
+#: menu.c:608 pattern.c:1093
+msgid "No search pattern."
+msgstr "Není ¾ádný vzor k vyhledání."
+
+#: menu.c:638 pager.c:1829 pager.c:1845 pager.c:1932 pattern.c:1158
+msgid "Not found."
+msgstr "Nenalezeno."
+
+#: menu.c:689
+msgid "No tagged entries."
+msgstr "®ádné polo¾ky nejsou oznaèeny."
+
+#: menu.c:777
+msgid "Search is not implemented for this menu."
+msgstr "V tomto menu není hledání pøístupné."
+
+#: menu.c:816
+msgid "Tagging is not supported."
+msgstr "Oznaèování není podporováno."
+
+#: mh.c:183
+#, c-format
+msgid "Reading %s... %d"
+msgstr "Ètu %s... %d"
+
+#: mx.c:114
+#, c-format
+msgid "Lock count exceeded, remove lock for %s?"
+msgstr "Zámek stále existuje, odemknout %s?"
+
+#: mx.c:178
+msgid "Timeout exceeded while attempting fcntl lock!"
+msgstr "Vypr¹el èas pro pokus o zamknutí pomocí funkce fcntl!"
+
+#: mx.c:184
+#, c-format
+msgid "Waiting for fcntl lock... %d"
+msgstr "Èeká se na zamknutí pomocí funkce fcntl... %d"
+
+#: mx.c:212
+msgid "Timeout exceeded while attempting flock lock!"
+msgstr "Èas pro zamknutí pomocí funkce flock vypr¹el!"
+
+#: mx.c:219
+#, c-format
+msgid "Waiting for flock attempt... %d"
+msgstr "Èeká se na pokus o zamknutí pomocí funkce flock... %d"
+
+#: mx.c:589
+#, c-format
+msgid "Reading %s..."
+msgstr "Ètu %s..."
+
+#: mx.c:679
+#, c-format
+msgid "Writing %s..."
+msgstr "Ukládám %s..."
+
+#: mx.c:704
+#, c-format
+msgid "Could not synchronize mailbox %s!"
+msgstr "Schránku %s nelze synchronizovat!"
+
+#: mx.c:767
+#, c-format
+msgid "Move read messages to %s?"
+msgstr "Pøesunout pøeètené zprávy do %s?"
+
+#: mx.c:776 mx.c:964
+#, c-format
+msgid "Purge %d deleted message?"
+msgstr "Zahodit smazané zprávy (%d)?"
+
+#: mx.c:776 mx.c:964
+#, c-format
+msgid "Purge %d deleted messages?"
+msgstr "Zahodit smazané zprávy (%d)?"
+
+#: mx.c:796
+#, c-format
+msgid "Moving read messages to %s..."
+msgstr "Pøesunuji pøeètené zprávy do %s..."
+
+#: mx.c:812 mx.c:955
+msgid "Mailbox is unchanged."
+msgstr "Obsah schránky nebyl zmìnìn."
+
+#: mx.c:831
+#, c-format
+msgid "%d kept, %d moved, %d deleted."
+msgstr "ponecháno: %d, pøesunuto: %d, smazáno: %d"
+
+#: mx.c:834 mx.c:980
+#, c-format
+msgid "%d kept, %d deleted."
+msgstr "ponecháno: %d, smazáno: %d"
+
+#: mx.c:940
+#, c-format
+msgid " Press '%s' to toggle write"
+msgstr " Stisknìte `%s' pro zapnutí zápisu"
+
+#: mx.c:942
+msgid "Use 'toggle-write' to re-enable write!"
+msgstr "Pou¾ijte 'toggle-write' pro zapnutí zápisu!"
+
+#: mx.c:944
+#, c-format
+msgid "Mailbox is marked unwritable. %s"
+msgstr "Schránka má vypnut zápis. %s"
+
+#: mx.c:949
+msgid "Mailbox is read-only."
+msgstr "Ze schránky je mo¾né pouze èíst."
+
+# Opìt krkolomné tvary kvùli
+# vlastníkùm 80ti znakových terminálù.
+#: pager.c:1370
+msgid "PrevPg"
+msgstr "Pøstr"
+
+#: pager.c:1371
+msgid "NextPg"
+msgstr "Dlstr"
+
+#: pager.c:1375
+msgid "View Attachm."
+msgstr "Pøílohy"
+
+#: pager.c:1378
+msgid "Next"
+msgstr "Dal¹í"
+
+#. emulate "less -q" and don't go on to the next message.
+#: pager.c:1741 pager.c:1772 pager.c:1801 pager.c:2020
+msgid "Bottom of message is shown."
+msgstr "Konec zprávy je zobrazen."
+
+#: pager.c:1757 pager.c:1779 pager.c:1790
+msgid "Top of message is shown."
+msgstr "Zaèátek zprávy je zobrazen."
+
+#: pager.c:1863
+msgid "Reverse search: "
+msgstr "Hledat opaèným smìrem: "
+
+#: pager.c:1864
+msgid "Search: "
+msgstr "Hledat: "
+
+#: pager.c:1958
+msgid "Help is currently being shown."
+msgstr "Pomoc je právì zobrazena."
+
+#: pager.c:1987
+msgid "No more quoted text."
+msgstr "®ádný dal¹í citovaný text."
+
+#: pager.c:2000
+msgid "No more unquoted text after quoted text."
+msgstr "Za citovaným textem ji¾ nenásleduje ¾ádný bì¾ný text."
+
+#: parse.c:502
+msgid "multipart message has no boundary parameter!"
+msgstr "Zpráva o více èástech nemá urèeny hranice!"
+
+#: pattern.c:235
+#, c-format
+msgid "Error in expression: %s"
+msgstr "Výraz %s je chybný."
+
+#: pattern.c:331
+#, c-format
+msgid "Invalid day of month: %s"
+msgstr "Nesprávné datum dne (%s)."
+
+#: pattern.c:345
+#, c-format
+msgid "Invalid month: %s"
+msgstr "Mìsíc %s není správný."
+
+#: pattern.c:399
+msgid "error in expression"
+msgstr "chyba ve výrazu"
+
+#: pattern.c:584 pattern.c:692
+#, c-format
+msgid "error in pattern at: %s"
+msgstr "chyba ve vzoru na: %s"
+
+#: pattern.c:632
+#, c-format
+msgid "%c: invalid command"
+msgstr "pøíkaz %c je nesprávný"
+
+#: pattern.c:638
+#, c-format
+msgid "%c: not supported in this mode"
+msgstr "V tomto módu není %c podporováno."
+
+#: pattern.c:651
+msgid "missing parameter"
+msgstr "chybí parametr"
+
+#: pattern.c:667
+#, c-format
+msgid "mismatched parenthesis: %s"
+msgstr "neshodují se závorky: %s"
+
+#: pattern.c:699
+msgid "empty pattern"
+msgstr "prázdný vzor"
+
+#: pattern.c:876
+#, c-format
+msgid "error: unknown op %d (report this error)."
+msgstr "chyba: neznámý operand %d (ohla¹te tuto chybu)."
+
+#: pattern.c:941 pattern.c:1079
+msgid "Compiling search pattern..."
+msgstr "Pøekládám vzor k vyhledání..."
+
+#: pattern.c:955
+msgid "Executing command on matching messages..."
+msgstr "Spou¹tím pøíkaz pro shodující se zprávy... "
+
+#: pattern.c:1022
+msgid "No messages matched criteria."
+msgstr "®ádná ze zpráv nesplòuje daná kritéria."
+
+#: pattern.c:1117
+msgid "Search hit bottom without finding match"
+msgstr "Pøi vyhledávání bylo dosa¾eno konce bez nalezení shody."
+
+#: pattern.c:1128
+msgid "Search hit top without finding match"
+msgstr "Pøi vyhledávání bylo dosa¾eno zaèátku bez nalezení shody."
+
+#: pattern.c:1150
+msgid "Search interrupted."
+msgstr "Hledání bylo pøeru¹eno."
+
+#: pgp.c:131
+msgid "Enter PGP passphrase:"
+msgstr "Zadejte PGP heslo:"
+
+#: pgp.c:147
+msgid "PGP passphrase forgotten."
+msgstr "PGP heslo zapomenuto"
+
+#: pgp.c:175
+#, c-format
+msgid "Unknown PGP version \"%s\"."
+msgstr "Neznámá verze PGP \"%s\"."
+
+#: pgp.c:208
+msgid "[-- PGP output follows (current time: "
+msgstr "[-- následuje výstup PGP (aktuální èas: "
+
+#: pgp.c:321
+msgid "[-- Error: unable to create PGP subprocess! --]\n"
+msgstr "[-- Chyba: nelze spustit PGP proces! --]\n"
+
+# Je vhodné následující zprávy pøekládat? Nezpùsobí to inkompatibilitu s
+# anglickou verzí muttu?
+#: pgp.c:348
+msgid ""
+"\n"
+"[-- End of PGP output --]\n"
+"\n"
+msgstr ""
+"\n"
+"[-- Konec výstupu PGP --]\n"
+"\n"
+
+#: pgp.c:354
+msgid ""
+"[-- BEGIN PGP MESSAGE --]\n"
+"\n"
+msgstr ""
+"[-- ZAÈÁTEK PGP ZPRÁVY --]\n"
+"\n"
+
+#: pgp.c:356
+msgid "[-- BEGIN PGP PUBLIC KEY BLOCK --]\n"
+msgstr "[--ZAÈÁTEK VEØEJNÉHO KLÍÈE PGP --]\n"
+
+#: pgp.c:358
+msgid ""
+"[-- BEGIN PGP SIGNED MESSAGE --]\n"
+"\n"
+msgstr ""
+"[-- ZAÈÁTEK PODEPSANÉ PGP ZPRÁVY --]\n"
+"\n"
+
+#: pgp.c:460
+msgid ""
+"\n"
+"[-- END PGP MESSAGE --]\n"
+msgstr ""
+"\n"
+"[-- KONEC PGP ZPRÁVY --]\n"
+
+#: pgp.c:462
+msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
+msgstr "[-- KONEC VEØEJNÉHO KLÍÈE PGP --]\n"
+
+#: pgp.c:464
+msgid ""
+"\n"
+"[-- END PGP SIGNED MESSAGE --]\n"
+msgstr ""
+"\n"
+"[-- KONEC PODEPSANÉ PGP ZPRÁVY --]\n"
+
+#: pgp.c:477
+msgid ""
+"[-- Error: could not find beginning of PGP message! --]\n"
+"\n"
+msgstr ""
+"[-- Chyba: nelze najít zaèátek PGP zprávy! --]\n"
+"\n"
+
+#: pgp.c:670 pgp.c:895
+msgid ""
+"[-- End of PGP output --]\n"
+"\n"
+msgstr ""
+"[-- Konec výstupu PGP --]\n"
+"\n"
+
+#. Now display the signed body
+#: pgp.c:677
+msgid ""
+"[-- The following data is PGP/MIME signed --]\n"
+"\n"
+msgstr ""
+"[-- Následují podepsaná data ve formátu PGP/MIME --]\n"
+"\n"
+
+#: pgp.c:683
+msgid ""
+"\n"
+"[-- End of PGP/MIME signed data --]\n"
+msgstr ""
+"\n"
+"[-- Konec podepsaných dat ve formátu PGP/MIME --]\n"
+
+#: pgp.c:688
+msgid ""
+"[-- Error: this message does not comply with the PGP/MIME specification! "
+"--]\n"
+"\n"
+msgstr ""
+"[-- Chyba: tato zpráva nevyhovuje specifikacím PGP/MIME! --]\n"
+"\n"
+
+#: pgp.c:802
+msgid "Internal error. Inform <roessler@guug.de>."
+msgstr "Vnitøní chyba. Informujte <roessler@guug.de>."
+
+#: pgp.c:866
+msgid ""
+"[-- Error: could not create a PGP subprocess! --]\n"
+"\n"
+msgstr ""
+"[-- Chyba: nelze spustit PGP! --]\n"
+"\n"
+
+#: pgp.c:959
+msgid ""
+"[-- Error: malformed PGP/MIME message! --]\n"
+"\n"
+msgstr ""
+"[-- Chyba: zpráva ve formátu PGP/MIME je poru¹ena! --]\n"
+"\n"
+
+#: pgp.c:972
+msgid "[-- Error: could not create temporary file! --]\n"
+msgstr "[-- Chyba: doèasný soubor nelze vytvoøit! --]\n"
+
+#: pgp.c:981
+msgid ""
+"[-- The following data is PGP/MIME encrypted --]\n"
+"\n"
+msgstr ""
+"[-- Následující data jsou za¹ifrována ve formátu PGP/MIME --]\n"
+"\n"
+
+#: pgp.c:989
+msgid ""
+"\n"
+"[-- End of PGP/MIME encrypted data --]\n"
+msgstr ""
+"\n"
+"[-- Konec dat za¹ifrovaných ve formátu PGP/MIME --]\n"
+
+#: pgp.c:1071
+msgid "Can't open PGP subprocess!"
+msgstr "PGP proces nelze spustit!"
+
+#: pgp.c:1195
+#, c-format
+msgid "Use keyID = \"%s\" for %s?"
+msgstr "Pou¾ít ID klíèe = \"%s\" pro %s?"
+
+#: pgp.c:1201
+#, c-format
+msgid "Enter keyID for %s: "
+msgstr "Zadejte ID klíèe pro %s: "
+
+#: pgpkey.c:174
+msgid "Exit  "
+msgstr "Ukonèit  "
+
+#: pgpkey.c:176
+msgid "Select  "
+msgstr "Zvolit "
+
+#: pgpkey.c:179
+msgid "Check key  "
+msgstr "Kontrolovat klíè  "
+
+#: pgpkey.c:192
+msgid "PGP keys matching "
+msgstr "klíèe PGP se shodují"
+
+#: pgpkey.c:211 pgpkey.c:388
+msgid "Can't open /dev/null"
+msgstr "Nelze otevøít /dev/null"
+
+#: pgpkey.c:217 pgpkey.c:382
+msgid "Can't create temporary file"
+msgstr "Doèasný soubor nelze vytvoøit."
+
+#: pgpkey.c:227 pgpkey.c:399
+msgid "Can't create filter"
+msgstr "Filtr nelze vytvoøit"
+
+#: pgpkey.c:237
+#, c-format
+msgid "Key ID: 0x%s"
+msgstr "ID klíèe: 0x%s"
+
+#: pgpkey.c:258
+msgid "This ID's trust level is undefined."
+msgstr "Dúvìryhodnost tohoto ID není definována."
+
+#: pgpkey.c:259
+msgid "This ID is not trusted."
+msgstr "Toto ID není dùvìryhodné."
+
+#: pgpkey.c:260
+msgid "This ID is only marginally trusted."
+msgstr "Dùvìryhodnost tohoto ID je pouze èásteèná."
+
+# %s je vìta typu zprávy vý¹e
+#: pgpkey.c:263
+#, c-format
+msgid "%s Do you really want to use it?"
+msgstr "%s Opravdu jej chcete pou¾ít?"
+
+#: pgpkey.c:370
+msgid "Please enter the key ID: "
+msgstr "Zadejte ID klíèe: "
+
+#: pgpkey.c:417
+#, c-format
+msgid "PGP Key 0x%s."
+msgstr "Klíè PGP 0x%s."
+
+#: pgppubring.c:59
+msgid "reserved"
+msgstr "reservováno"
+
+#: pgppubring.c:60
+msgid "Encrypted Session Key"
+msgstr "Za¹ifrovaný klíè sezení"
+
+# co to ty 'pakety ' znamenají?
+# provizorní pøeklad
+#: pgppubring.c:61
+msgid "Signature Packet"
+msgstr "Podpisový paket"
+
+#: pgppubring.c:62
+msgid "Conventionally Encrypted Session Key Packet"
+msgstr "Konvenènì za¹ifrovaný paket klíèe sezení"
+
+#: pgppubring.c:63
+msgid "One-Pass Signature Packet"
+msgstr "Jednoprùchodový podpisový paket"
+
+#: pgppubring.c:64
+msgid "Secret Key Packet"
+msgstr "Paket tajného klíèe"
+
+#: pgppubring.c:65
+msgid "Public Key Packet"
+msgstr "Paket veøejného klíèe"
+
+#: pgppubring.c:66
+msgid "Secret Subkey Packet"
+msgstr "Paket tajného podklíèe"
+
+#: pgppubring.c:67
+msgid "Compressed Data Packet"
+msgstr "Paket komprimovaných dat"
+
+#: pgppubring.c:68
+msgid "Symmetrically Encrypted Data Packet"
+msgstr "Symetricky za¹ifrovaný datový paket"
+
+#: pgppubring.c:69
+msgid "Marker Packet"
+msgstr "Znaèkový paket"
+
+#: pgppubring.c:70
+msgid "Literal Data Packet"
+msgstr "Datový paket"
+
+#: pgppubring.c:71
+msgid "Trust Packet"
+msgstr "Paket dùvìry"
+
+#: pgppubring.c:72
+msgid "Name Packet"
+msgstr "Jmenný paket"
+
+#: pgppubring.c:73
+msgid "Subkey Packet"
+msgstr "Paket podklíèe"
+
+#: pgppubring.c:74
+msgid "Reserved"
+msgstr "Reservováno"
+
+#: pgppubring.c:75
+msgid "Comment Packet"
+msgstr "Paket komentáøe"
+
+#: pop.c:67
+msgid "POP Password: "
+msgstr "Heslo na POP serveru: "
+
+#: pop.c:92
+msgid "POP host is not defined."
+msgstr "POP server není definován."
+
+#: pop.c:98
+msgid "No POP username is defined."
+msgstr "U¾ivatelské jméno na POP serveru není definováno."
+
+#: pop.c:115
+#, c-format
+msgid "Could not find address for host %s."
+msgstr "Adresu poèítaèe %s nelze nalézt."
+
+#: pop.c:123
+#, c-format
+msgid "Connecting to %s"
+msgstr "Pøipojuji se k %s"
+
+#: pop.c:167 pop.c:332
+msgid "Server closed connection!"
+msgstr "Server uzavøel spojení!"
+
+#: pop.c:188
+msgid "No new mail in POP mailbox."
+msgstr "Ve schránce na POP serveru nejsou nové zprávy."
+
+#: pop.c:210
+#, c-format
+msgid "Reading %d new message (%d bytes)..."
+msgstr "Naèítám nové zprávy. Poèet zpráv: %d, poèet bajtù: %d ..."
+
+#: pop.c:211
+#, c-format
+msgid "Reading %d new messages (%d bytes)..."
+msgstr "Naèítám nové zprávy. Poèet zpráv: %d, poèet bajtù: %d ..."
+
+#: pop.c:246
+msgid "Error reading message!"
+msgstr "Chyba pøi ètení zprávy!"
+
+#: pop.c:282
+msgid "Error while writing mailbox!"
+msgstr "Chyba pøi zápisu do schránky!"
+
+#: pop.c:306
+#, c-format
+msgid "%s [%d messages read]"
+msgstr "%s [poèet pøeètených zpráv - %d]"
+
+#: postpone.c:112
+msgid "Postponed Messages"
+msgstr "¾ádné odlo¾ené zprávy"
+
+#: postpone.c:185 postpone.c:194
+msgid "No postponed messages."
+msgstr "®ádné zprávy nejsou odlo¾eny."
+
+#: postpone.c:339 postpone.c:359 postpone.c:368
+msgid "Illegal PGP header"
+msgstr "Nekorektní PGP hlavièka"
+
+#: query.c:46
+msgid "New Query"
+msgstr "Nový dotaz"
+
+#: query.c:47
+msgid "Make Alias"
+msgstr "Vytvoøit pøezdívku"
+
+#: query.c:48
+msgid "Search"
+msgstr "Hledat"
+
+#: query.c:92
+msgid "Waiting for response..."
+msgstr "Èekám na odpovìï..."
+
+#: query.c:193 query.c:218
+msgid "Query command not defined."
+msgstr "Pøíkaz pro dotazy není definován."
+
+#: query.c:245
+msgid "Query"
+msgstr "Dotaz"
+
+#. Prompt for Query
+#: query.c:258 query.c:286
+msgid "Query: "
+msgstr "Dotázat se na: "
+
+#: query.c:269 query.c:295
+#, c-format
+msgid "Query '%s'"
+msgstr "Dotaz na `%s'"
+
+#: recvattach.c:50
+msgid "Pipe"
+msgstr "Poslat rourou"
+
+#: recvattach.c:51
+msgid "Print"
+msgstr "Tisk"
+
+#: recvattach.c:371
+msgid "Saving..."
+msgstr "Ukládám..."
+
+#: recvattach.c:432
+msgid "Attachment saved"
+msgstr "Pøíloha ulo¾ena"
+
+#: recvattach.c:444
+#, c-format
+msgid "WARNING!  You are about to overwrite %s, continue?"
+msgstr "VAROVÁNÍ! Takto pøepí¹ete %s. Pokraèovat?"
+
+#: recvattach.c:462
+msgid "Attachment filtered."
+msgstr "Pøíloha byla filtrována."
+
+#: recvattach.c:528
+msgid "Filter through: "
+msgstr "Filtrovat pøes: "
+
+#: recvattach.c:528
+msgid "Pipe to: "
+msgstr "Poslat rourou do: "
+
+#: recvattach.c:563
+#, c-format
+msgid "I dont know how to print %s attachments!"
+msgstr "Nevím, jak vytisknout tento poèet (%s) pøíloh."
+
+#: recvattach.c:626
+msgid "Print tagged attachment(s)?"
+msgstr "Vytisknout oznaèené pøílohy?"
+
+#: recvattach.c:626
+msgid "Print attachment?"
+msgstr "Vytisknout pøílohu?"
+
+#: recvattach.c:654
+msgid "You may only bounce message/rfc822 parts."
+msgstr "Pøeposlat lze pouze zprávu nebo její èásti vyhovující rfc 822."
+
+#: recvattach.c:690
+#, c-format
+msgid "Bounce messages to %s...?"
+msgstr "Pøeposlat zprávy na %s...?"
+
+#: recvattach.c:691
+#, c-format
+msgid "Bounce message to %s...?"
+msgstr "Pøeposlat zprávu na %s...?"
+
+#: recvattach.c:916
+msgid "Attachments"
+msgstr "Pøílohy"
+
+#: recvattach.c:973
+msgid "Deletion of attachments from PGP messages is unsupported."
+msgstr "Mazání pøíloh PGP zpráv není podporováno."
+
+#: recvattach.c:993 recvattach.c:1010
+msgid "Only deletion of multipart attachments is supported."
+msgstr "Podporováno je pouze mazání pøíloh o více èástech."
+
+#: recvattach.c:1060
+msgid "This operation is not currently supported for PGP messages."
+msgstr "Tento pøíkaz není u PGP zpráv podporován."
+
+#: rfc1524.c:158
+#, c-format
+msgid "Improperly formated entry for type %s in \"%s\" line %d"
+msgstr "Nesprávný formát polo¾ky pro typ %s v \"%s\" na øádku %d"
+
+#: rfc1524.c:390
+msgid "No mailcap path specified"
+msgstr "Cesta k mailcapu není zadána."
+
+#: rfc1524.c:416
+#, c-format
+msgid "mailcap entry for type %s not found"
+msgstr "pro typ %s nebyla nalezena polo¾ka v mailcapu"
+
+#: score.c:74
+msgid "score: too few arguments"
+msgstr "skóre: pøílí¹ málo argumentù"
+
+#: score.c:83
+msgid "score: too many arguments"
+msgstr "skóre: pøíli¹ mnoho argumentù"
+
+#: send.c:230
+msgid "No subject, abort?"
+msgstr "Vìc není specifikována, zru¹it?"
+
+#: send.c:232
+msgid "No subject, aborting."
+msgstr "Vìc není specifikována, zru¹eno."
+
+#. There are quite a few mailing lists which set the Reply-To:
+#. * header field to the list address, which makes it quite impossible
+#. * to send a message to only the sender of the message.  This
+#. * provides a way to do that.
+#.
+#: send.c:433
+#, c-format
+msgid "Reply to %s%s?"
+msgstr "Odpovìdìt %s%s?"
+
+#. This could happen if the user tagged some messages and then did
+#. * a limit such that none of the tagged message are visible.
+#.
+#: send.c:517
+msgid "No tagged messages are visible!"
+msgstr "®ádná oznaèená zpráva není viditelná!"
+
+#: send.c:542
+msgid "No mailing lists found!"
+msgstr "®ádné diskusní skupiny nebyly nalezeny!"
+
+#: send.c:629
+msgid "Include message in reply?"
+msgstr "Vlo¾it zprávu do odpovìdi?"
+
+#: send.c:643
+msgid "Could not include all requested messages!"
+msgstr "V¹echny po¾adované zprávy nelze vlo¾it!"
+
+#: send.c:656
+msgid "Forward MIME encapsulated?"
+msgstr "Pøeposlat v MIME formátu?"
+
+#. If the user is composing a new message, check to see if there
+#. * are any postponed messages first.
+#.
+#: send.c:867
+msgid "Recall postponed message?"
+msgstr "Vrátit se k odlo¾eným zprávám?"
+
+#: send.c:1099
+msgid "Abort unmodified message?"
+msgstr "Zahodit nezmìnìnou zprávu?"
+
+#: send.c:1101
+msgid "Aborted unmodified message."
+msgstr "Nezmìnìná zpráva byla zahozena."
+
+#. abort
+#: send.c:1140
+msgid "Mail not sent."
+msgstr "Zpráva nebyla odeslána."
+
+#: send.c:1153
+msgid "Message postponed."
+msgstr "Zpráva byla odlo¾ena."
+
+#: send.c:1162
+msgid "No recipients are specified!"
+msgstr "Nejsou zadáni pøíjemci!"
+
+#: send.c:1167
+msgid "No recipients were specified."
+msgstr "Nebyli zadání pøíjemci."
+
+#: send.c:1173
+msgid "No subject, abort sending?"
+msgstr "®ádná vìc, zru¹it odeslání?"
+
+#: send.c:1177
+msgid "No subject specified."
+msgstr "Vìc nebyla zadána."
+
+#: send.c:1216
+msgid "Message edited. Really send?"
+msgstr "Zpráva editována. Skuteènì odeslat?"
+
+#: send.c:1222
+msgid "Sending message..."
+msgstr "Posílám zprávu..."
+
+#: send.c:1324
+msgid "Could not send the message."
+msgstr "Zprávu nelze odeslat."
+
+#: send.c:1330
+msgid "Mail sent."
+msgstr "Zpráva odeslána."
+
+#: sendlib.c:475
+msgid "No boundary parameter found! [report this error]"
+msgstr "Nebyl nalezen 'boundary' parametr! [ohla¹te tuto chybu]"
+
+#: sendlib.c:509
+#, c-format
+msgid "%s no longer exists!"
+msgstr "%s ji¾ neexistuje!"
+
+#: sendlib.c:777
+#, c-format
+msgid "Could not open %s"
+msgstr "%s nelze otevøít"
+
+#: sendlib.c:1695
+#, c-format
+msgid "Error sending message, child exited %d (%s).\n"
+msgstr "Chyba pøi zasílání zprávy, potomek ukonèen %d (%s).\n"
+
+#: sendlib.c:1697
+#, c-format
+msgid "Saved output of child process to %s.\n"
+msgstr "Výstup potomka byl ulo¾en do %s.\n"
+
+#: sendlib.c:1701
+msgid "Error sending message."
+msgstr "Chyba pøi zasílání zprávy."
+
+#: signal.c:39 signal.c:42
+#, c-format
+msgid "Caught %s...  Exiting.\n"
+msgstr "Zachycen %s... Konèím.\n"
+
+#: signal.c:44
+#, c-format
+msgid "Caught signal %d...  Exiting.\n"
+msgstr "Zachycen signál %d... Konèím.\n"
+
+#: sort.c:199
+msgid "Sorting mailbox..."
+msgstr "Øadím schránku..."
+
+#: sort.c:227
+msgid "Could not find sorting function! [report this bug]"
+msgstr "Øadící funkci nelze nalézt! [ohla¹te tutu chybu]"
+
+#: status.c:102
+msgid "(no mailbox)"
+msgstr "(¾ádná schránka)"
