@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 1998 Werner Koch <werner.koch@guug.de>
+ * Copyright (C) 1998-2000 Werner Koch <werner.koch@guug.de>
  *
  *     This program is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by

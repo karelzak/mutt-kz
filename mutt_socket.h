@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 1998 Brandon Long <blong@fiction.net>
+ * Copyright (C) 1998-2000Brandon Long <blong@fiction.net>
  * 
  *     This program is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by

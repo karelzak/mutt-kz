@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 1998 Ruslan Ermilov <ru@ucb.crimea.ua>
+ * Copyright (C) 1998-2000 Ruslan Ermilov <ru@ucb.crimea.ua>
  *
  *     This program is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
