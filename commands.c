@@ -141,11 +141,14 @@ int mutt_display_message (HEADER *cur)
 
   res = mutt_copy_message (fpout, Context, cur, cmflags,
        	(option (OPTWEED) ? (CH_WEED | CH_REORDER) : 0) | CH_DECODE | CH_FROM);
-  if ((fclose (fpout) != 0 && errno != EPIPE) || res == -1)
+  if ((safe_fclose (&fpout) != 0 && errno != EPIPE) || res == -1)
   {
     mutt_error (_("Could not copy message"));
     if (fpfilterout != NULL)
+    {
       mutt_wait_filter (filterpid);
+      safe_fclose (&fpfilterout);
+    }
     mutt_unlink (tempfile);
     return 0;
   }
@@ -153,6 +156,8 @@ int mutt_display_message (HEADER *cur)
   if (fpfilterout != NULL && mutt_wait_filter (filterpid) != 0)
     mutt_any_key_to_continue (NULL);
 
+  safe_fclose (&fpfilterout);
+  
 #ifdef HAVE_PGP
   /* update PGP information for this message */
   cur->pgp |= pgp_query (cur->content);
