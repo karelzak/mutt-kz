@@ -26,6 +26,7 @@
 #include <dirent.h>
 #include <utime.h>
 #include <ctype.h>
+#include <unistd.h>
 
 #include <stdio.h>
 
