@@ -1,0 +1,3041 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Mutt 1.0\n"
+"POT-Creation-Date: 1999-10-03 14:23+0100\n"
+"PO-Revision-Date: 1999-11-07 10:28+00:00\n"
+"Last-Translator: Edmund GRIMLEY EVANS <edmundo@rano.demon.co.uk>\n"
+"Language-Team: eo <eo@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: addrbook.c:31 browser.c:53 pager.c:1372 postpone.c:33 query.c:43
+#: recvattach.c:57
+msgid "Exit"
+msgstr "Fino"
+
+#: addrbook.c:32
+msgid "Select"
+msgstr "Elekto"
+
+#: addrbook.c:33 browser.c:56 compose.c:83 curs_main.c:264 pager.c:1469
+#: pgpkey.c:180 postpone.c:36 query.c:48 recvattach.c:61
+msgid "Help"
+msgstr "Helpo"
+
+#: addrbook.c:131
+msgid "You have no aliases!"
+msgstr "Vi ne havas adresaron!"
+
+#: addrbook.c:143
+msgid "Aliases"
+msgstr "Adresaro"
+
+#. add a new alias
+#: alias.c:192
+msgid "Alias as: "
+msgstr "Aldonu nomon: "
+
+#: alias.c:198
+msgid "You already have an alias defined with that name!"
+msgstr "En la adresaro jam estas nomo kun tiu adreso!"
+
+#: alias.c:212
+msgid "Address: "
+msgstr "Adreso: "
+
+#: alias.c:228
+msgid "Personal name: "
+msgstr "Plena nomo: "
+
+#: alias.c:237
+#, c-format
+msgid "[%s = %s] Accept?"
+msgstr "[%s = %s] Ĉu akcepti?"
+
+#: alias.c:254 recvattach.c:356 recvattach.c:413
+msgid "Save to file: "
+msgstr "Skribi al dosiero: "
+
+#: alias.c:265
+msgid "Alias added."
+msgstr "Adreso aldonita."
+
+#: attach.c:112 attach.c:239 attach.c:431 attach.c:878
+msgid "Can't match nametemplate, continue?"
+msgstr "Nomŝamblono ne estas plenumebla. Ĉu daŭrigi?"
+
+#. For now, editing requires a file, no piping
+#: attach.c:124
+msgid "Mailcap compose entry requires %%s"
+msgstr "\"compose\" en Mailcap-dosiero postulas %%s"
+
+#: attach.c:132 attach.c:257 commands.c:155 compose.c:1019 curs_lib.c:128
+#: curs_lib.c:323
+#, c-format
+msgid "Error running \"%s\"!"
+msgstr "Eraro dum ruligo de \"%s\"!"
+
+#: attach.c:142
+msgid "Failure to open file to parse headers."
+msgstr "Malsukceso malferi dosieron por analizi ĉapaĵojn."
+
+#: attach.c:173
+msgid "Failure to open file to strip headers."
+msgstr "Malsukceso malferi dosieron por forigi ĉapaĵojn."
+
+#: attach.c:191
+#, c-format
+msgid "No mailcap compose entry for %s, creating empty file."
+msgstr "En la Mailcap-dosiero mankas \"compose\" por %s; malplena dosiero estas kreita."
+
+#. For now, editing requires a file, no piping
+#: attach.c:251
+msgid "Mailcap Edit entry requires %%s"
+msgstr "\"edit\" en Mailcap-dosiero postulas %%s"
+
+#: attach.c:270
+#, c-format
+msgid "No mailcap edit entry for %s"
+msgstr "En la Mailcap-dosiero mankas \"edit\" por %s"
+
+#: attach.c:397
+msgid "No matching mailcap entry found.  Viewing as text."
+msgstr "Neniu Mailcap-regulo kongruas. Traktas kiel tekston."
+
+#: attach.c:410
+msgid "MIME type not defined.  Cannot view attachment."
+msgstr "MIME-speco ne difinita. Ne povas vidigi parton."
+
+#: attach.c:500
+msgid "Cannot create filter"
+msgstr "Ne povas krei filtrilon."
+
+#: attach.c:702 recvattach.c:387
+msgid "Attachment saved."
+msgstr "Parto skribita."
+
+#: attach.c:758
+msgid "Write fault!"
+msgstr "Skriberaro!"
+
+#: attach.c:962
+msgid "I don't know how to print that!"
+msgstr "Mi ne scias presi tion!"
+
+#: browser.c:54
+msgid "Chdir"
+msgstr "Listo"
+
+#: browser.c:55
+msgid "Mask"
+msgstr "Masko"
+
+#: browser.c:344 browser.c:678
+#, c-format
+msgid "%s is not a directory."
+msgstr "%s ne estas dosierujo."
+
+#: browser.c:449
+#, c-format
+msgid "Mailboxes [%d]"
+msgstr "Poŝtfakoj [%d]"
+
+#: browser.c:454
+#, c-format
+msgid "Directory [%s], File mask: %s"
+msgstr "Dosierujo [%s], Dosieromasko: %s"
+
+#: browser.c:519
+msgid "IMAP folder browsing is not currently supported"
+msgstr "Mutt ankoraŭ ne kapablas ekzameni IMAP-dosierujojn"
+
+#: browser.c:545 browser.c:735 browser.c:818
+msgid "No files match the file mask"
+msgstr "Neniu dosiero kongruas kun la dosieromasko"
+
+#: browser.c:652
+msgid "Chdir to: "
+msgstr "Iri al la dosierujo: "
+
+#: browser.c:671 browser.c:728
+msgid "Error scanning directory."
+msgstr "Eraro dum legado de dosierujo."
+
+#: browser.c:689
+msgid "File Mask: "
+msgstr "Dosieromasko: "
+
+#: browser.c:751
+msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
+msgstr "Inversa ordigo laŭ (d)ato, (a)lfabete, (g)rando, aŭ (n)e ordigu? "
+
+#: browser.c:752
+msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
+msgstr "Ordigo laŭ (d)ato, (a)lfabete, (g)rando, aŭ (n)e ordigu? "
+
+#: browser.c:753
+msgid "dazn"
+msgstr "dagn"
+
+#: browser.c:805
+msgid "New file name: "
+msgstr "Nova dosieronomo: "
+
+#: browser.c:826
+msgid "Can't view a directory"
+msgstr "Ne povas rigardi dosierujon"
+
+#: browser.c:844
+msgid "Error trying to view file"
+msgstr "Eraro dum vidigo de dosiero"
+
+#: buffy.c:393
+#, c-format
+msgid "New mail in %s."
+msgstr "Nova mesaĝo en %s."
+
+#: color.c:322
+#, c-format
+msgid "%s: color not supported by term"
+msgstr "%s: terminalo ne kapablas je koloro"
+
+#: color.c:328
+#, c-format
+msgid "%s: no such color"
+msgstr "%s: koloro ne ekzistas"
+
+#: color.c:374 color.c:565 color.c:576
+#, c-format
+msgid "%s: no such object"
+msgstr "%s: objekto ne ekzistas"
+
+#: color.c:381
+#, c-format
+msgid "%s: command valid only for index object"
+msgstr "%s: komando validas nur por indeksobjekto"
+
+#: color.c:389
+#, c-format
+msgid "%s: too few arguments"
+msgstr "%s: Nesufiĉe da argumentoj"
+
+#: color.c:553
+msgid "Missing arguments."
+msgstr "Mankas argumentoj"
+
+#: color.c:592 color.c:603
+msgid "color: too few arguments"
+msgstr "color: nesufiĉe da argumentoj"
+
+#: color.c:626
+msgid "mono: too few arguments"
+msgstr "mono: nesufiĉe da argumentoj"
+
+#: color.c:646
+#, c-format
+msgid "%s: no such attribute"
+msgstr "%s: nekonata trajto"
+
+#: color.c:686 hook.c:61 hook.c:69 keymap.c:697
+msgid "too few arguments"
+msgstr "nesufiĉe da argumentoj"
+
+#: color.c:695 hook.c:75
+msgid "too many arguments"
+msgstr "tro da argumentoj"
+
+#: color.c:709
+msgid "default colors not supported"
+msgstr "implicitaj koloroj ne funkcias"
+
+#: commands.c:87 commands.c:95 pgp.c:1389 pgpkey.c:220
+msgid "Invoking PGP..."
+msgstr "Alvokas PGP ..."
+
+#. find out whether or not the verify signature
+#: commands.c:92
+msgid "Verify PGP signature?"
+msgstr "Ĉu kontroli PGP-subskribon?"
+
+#: commands.c:110 mbox.c:722
+msgid "Could not create temporary file!"
+msgstr "Ne povis krei dumtempan dosieron!"
+
+#: commands.c:162
+msgid "Command: "
+msgstr "Komando: "
+
+#: commands.c:180 recvattach.c:692
+msgid "Bounce message to: "
+msgstr "Redirekti mesaĝon al: "
+
+#: commands.c:182 recvattach.c:694
+msgid "Bounce tagged messages to: "
+msgstr "Redirekti markitajn mesaĝojn al: "
+
+#: commands.c:197
+msgid "Error parsing address!"
+msgstr "Eraro dum analizo de adreso!"
+
+#: commands.c:207
+#, c-format
+msgid "Bounce message to %s"
+msgstr "Redirekti mesaĝon al %s"
+
+#: commands.c:207
+#, c-format
+msgid "Bounce messages to %s"
+msgstr "Redirekti mesaĝojn al %s"
+
+#: commands.c:218
+msgid "Message bounced."
+msgstr "Mesaĝo redirektita."
+
+#: commands.c:218
+msgid "Messages bounced."
+msgstr "Mesaĝoj redirektitaj."
+
+#: commands.c:238
+msgid "Pipe to command: "
+msgstr "Filtri per komando: "
+
+#: commands.c:338
+msgid ""
+"Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr "Inversa ordigo laŭ (d)ato/d(e)/(r)ecv/(t)emo/(a)l/(f)adeno/(n)esortite/(g)rando/(p)oentoj?: "
+
+#: commands.c:339
+msgid ""
+"Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr "Ordigo laŭ (d)ato/d(e)/(r)ecv/(t)emo/(a)l/(f)adeno/(n)esortite/(g)rando/(p)oentoj?: "
+
+#: commands.c:340
+msgid "dfrsotuzc"
+msgstr "dertafndp"
+
+#: commands.c:393
+msgid "Shell command: "
+msgstr "Ŝelkomando: "
+
+#: commands.c:509
+#, c-format
+msgid "%s%s to mailbox"
+msgstr "%s%s mesaĝojn al poŝtfako"
+
+#: commands.c:510
+msgid "Decode-save"
+msgstr "Malkodita skribi"
+
+#: commands.c:510
+msgid "Decode-copy"
+msgstr "Malkodita kopii"
+
+#: commands.c:511
+msgid "Decrypt-save"
+msgstr "Malĉifrita skribi"
+
+#: commands.c:511
+msgid "Decrypt-copy"
+msgstr "Malĉifrita kopii"
+
+#: commands.c:512 curs_main.c:260 recvattach.c:58
+msgid "Save"
+msgstr "Skribi"
+
+#: commands.c:512
+msgid "Copy"
+msgstr "Kopii"
+
+#: commands.c:512
+msgid " tagged"
+msgstr " markitajn"
+
+#: commands.c:581
+#, c-format
+msgid "Copying to %s..."
+msgstr "Kopias al %s ..."
+
+#: commands.c:653
+msgid "Print message?"
+msgstr "Ĉu presi mesaĝon?"
+
+#: commands.c:653
+msgid "Print tagged messages?"
+msgstr "Ĉu presi markitajn mesaĝojn?"
+
+#: commands.c:680
+msgid "Message printed"
+msgstr "Mesaĝo presita"
+
+#: commands.c:680
+msgid "Messages printed"
+msgstr "Mesaĝoj presitaj"
+
+#: compose.c:76
+msgid "Send"
+msgstr "Sendi"
+
+#: compose.c:77
+msgid "Abort"
+msgstr "Interrompi"
+
+#: compose.c:81 compose.c:538
+msgid "Attach file"
+msgstr "Aldoni dosieron"
+
+#: compose.c:82
+msgid "Descrip"
+msgstr "Priskribo"
+
+#: compose.c:103
+msgid "Sign, Encrypt"
+msgstr "Subskribi, Ĉifri"
+
+#: compose.c:105
+msgid "Encrypt"
+msgstr "Ĉifri"
+
+#: compose.c:107
+msgid "Sign"
+msgstr "Subskribi"
+
+#: compose.c:109
+msgid "Clear"
+msgstr "Neĉifrita"
+
+#: compose.c:116
+msgid " sign as: "
+msgstr " subskribi kiel: "
+
+#: compose.c:116
+msgid "<default>"
+msgstr "<implicite>"
+
+#: compose.c:117 compose.c:191
+msgid "MIC algorithm: "
+msgstr "MIC-algoritmo: "
+
+#: compose.c:132
+msgid ""
+"(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
+"it? "
+msgstr "ĉ(i)fri, (s)ubskribi, subskribi (k)iel, (a)mbaŭ, elektu (m)ic-algoritmon, aŭ (f)orgesi? "
+
+#: compose.c:133
+msgid "esabmf"
+msgstr "iskamf"
+
+#: compose.c:150
+msgid "Can't open your secret key ring!"
+msgstr "Ne povas malfermi vian sekretan ŝlosilaron!"
+
+#: compose.c:155
+msgid "Sign as: "
+msgstr "Subskribi kiel: "
+
+#: compose.c:175
+msgid "An unkown PGP version was defined for signing."
+msgstr "Nekonata PGP-versio estis difinita por subskribo."
+
+#: compose.c:185
+msgid "This doesn't make sense if you don't want to sign the message."
+msgstr "Tio ne havas sencon, se vi ne volas subskribi la mesaĝon."
+
+#: compose.c:196
+msgid "Unknown MIC algorithm, valid ones are: pgp-md5, pgp-sha1, pgp-rmd160"
+msgstr "Nekonata MIC-algoritmo; konataj estas: pgp-md5, pgp-sha1, pgp-rmd160"
+
+#: compose.c:232
+#, c-format
+msgid "%s [#%d] no longer exists!"
+msgstr "%s [#%d] ne plu ekzistas!"
+
+#: compose.c:240
+#, c-format
+msgid "%s [#%d] modified. Update encoding?"
+msgstr "%s [#%d] modifita. Ĉu aktualigi kodadon?"
+
+#: compose.c:281
+msgid "===== Attachments ====="
+msgstr "===== Partoj ====="
+
+#: compose.c:319
+msgid "You may not delete the only attachment."
+msgstr "Vi ne povas forviŝi la solan parton."
+
+#: compose.c:393
+msgid "Compose"
+msgstr "Verki"
+
+#: compose.c:543
+msgid "Open mailbox to attach message from"
+msgstr "Malfermu poŝtkeston por aldoni mesaĝon el ĝi"
+
+#: compose.c:585
+msgid "No messages in that folder."
+msgstr "Ne estas mesaĝoj en tiu poŝtfako."
+
+#: compose.c:592
+msgid "Tag the messages you want to attach!"
+msgstr "Marku la mesaĝojn, kiujn vi volas aldoni!"
+
+#: compose.c:627 compose.c:647
+msgid "Unable to attach!"
+msgstr "Ne povas aldoni!"
+
+#: compose.c:783
+msgid "Invalid encoding."
+msgstr "Nevalida kodado."
+
+#: compose.c:798
+msgid "Save a copy of this message?"
+msgstr "Ĉu skribi kopion de ĉi tiu mesaĝo?"
+
+#: compose.c:845
+msgid "Rename to: "
+msgstr "Renomi al: "
+
+#: compose.c:850
+#, c-format
+msgid "Can't stat: %s"
+msgstr "Ne povas ekzameni la dosieron %s"
+
+#: compose.c:877
+msgid "New file: "
+msgstr "Nova dosiero: "
+
+#: compose.c:890
+msgid "Content-Type is of the form base/sub"
+msgstr "Content-Type havas la formon bazo/subspeco"
+
+#: compose.c:896
+#, c-format
+msgid "Unknown Content-Type %s"
+msgstr "Nekonata Content-Type %s"
+
+#: compose.c:909
+#, c-format
+msgid "Can't create file %s"
+msgstr "Ne povas krei dosieron %s"
+
+#: compose.c:917
+msgid "What we have here is a failure to make an attachment"
+msgstr "Oni malsukcesis krei aldonaĵon"
+
+#: compose.c:980
+msgid "Postpone this message?"
+msgstr "Ĉu prokrasti ĉi tiun mesaĝon?"
+
+#: compose.c:1034
+msgid "Write message to mailbox"
+msgstr "Skribi mesaĝon al poŝtfako"
+
+#: compose.c:1038
+#, c-format
+msgid "Writing message to %s ..."
+msgstr "Skribas mesaĝon al %s ..."
+
+#: compose.c:1049
+msgid "Message written."
+msgstr "Mesaĝo skribita."
+
+#: curs_lib.c:136
+msgid "yes"
+msgstr "jes"
+
+#: curs_lib.c:137
+msgid "no"
+msgstr "ne"
+
+#. restore blocking operation
+#: curs_lib.c:176
+msgid "Exit Mutt?"
+msgstr "Ĉu eliri el Mutt?"
+
+#: curs_lib.c:276
+msgid "unknown error"
+msgstr "nekonata eraro"
+
+#: curs_lib.c:296
+msgid "Press any key to continue..."
+msgstr "Premu klavon por daŭrigi ..."
+
+#: curs_lib.c:339
+msgid " ('?' for list): "
+msgstr " ('?' por listo): "
+
+#: curs_main.c:50 curs_main.c:537
+msgid "No mailbox is open."
+msgstr "Neniu poŝtfako estas malfermita."
+
+#: curs_main.c:51
+msgid "There are no messages."
+msgstr "Ne estas mesaĝoj."
+
+#: curs_main.c:52 mx.c:996 pager.c:55 recvattach.c:47
+msgid "Mailbox is read-only."
+msgstr "Poŝtfako estas nurlega."
+
+#: curs_main.c:53 pager.c:56
+msgid "Function not permitted in attach-message mode."
+msgstr "Funkcio nepermesata dum elektado de aldonoj."
+
+#: curs_main.c:220
+msgid "Cannot toggle write on a readonly mailbox!"
+msgstr "Ne povas ŝanĝi skribostaton ĉe nurlega poŝtfako!"
+
+#: curs_main.c:227
+msgid "Changes to folder will be written on folder exit."
+msgstr "Ŝanĝoj al poŝtfako estos skribitaj ĉe eliro."
+
+#: curs_main.c:232
+msgid "Changes to folder will not be written."
+msgstr "Ŝanĝoj al poŝtfako ne estos skribitaj."
+
+#: curs_main.c:257
+msgid "Quit"
+msgstr "Fini"
+
+#: curs_main.c:258 pager.c:1379 postpone.c:34
+msgid "Del"
+msgstr "Forviŝi"
+
+#: curs_main.c:259 postpone.c:35
+msgid "Undel"
+msgstr "Malforviŝi"
+
+#: curs_main.c:261 query.c:44
+msgid "Mail"
+msgstr "Nova mesaĝo"
+
+#: curs_main.c:262 pager.c:1380
+msgid "Reply"
+msgstr "Respondi"
+
+#: curs_main.c:263
+msgid "Group"
+msgstr "Respondi al grupo"
+
+#: curs_main.c:434
+msgid "Mailbox was externally modified.  Flags may be wrong."
+msgstr "Poŝtfako estis modifita deekstere. Flagoj povas esti malĝustaj."
+
+#: curs_main.c:437
+msgid "New mail in this mailbox."
+msgstr "Nova mesaĝo en ĉi tiu poŝtfako"
+
+#: curs_main.c:543
+msgid "No tagged messages."
+msgstr "Ne esats markitaj mesaĝoj."
+
+#: curs_main.c:623
+msgid "Jump to message: "
+msgstr "Salti al mesaĝo: "
+
+#: curs_main.c:629
+msgid "Argument must be a message number."
+msgstr "Argumento devas esti mesaĝnumero."
+
+#: curs_main.c:662
+msgid "That message is not visible."
+msgstr "Tiu mesaĝo ne estas videbla."
+
+#: curs_main.c:665
+msgid "Invalid message number."
+msgstr "Nevalida mesaĝnumero."
+
+#: curs_main.c:678
+msgid "Delete messages matching: "
+msgstr "Forviŝi mesaĝojn laŭ la ŝablono: "
+
+#: curs_main.c:700
+msgid "No limit pattern is in effect."
+msgstr "Nenia ŝablono estas aktiva."
+
+#. i18n: ask for a limit to apply
+#: curs_main.c:705
+#, c-format
+msgid "Limit: %s"
+msgstr "Ŝablono: %s"
+
+#: curs_main.c:714
+msgid "Limit to messages matching: "
+msgstr "Limigi al mesaĝoj laŭ la ŝablono: "
+
+#: curs_main.c:744
+msgid "Quit Mutt?"
+msgstr "Ĉu eliri el Mutt?"
+
+#: curs_main.c:846
+msgid "Tag messages matching: "
+msgstr "Marki mesaĝojn laŭ la ŝablono: "
+
+#: curs_main.c:854
+msgid "Undelete messages matching: "
+msgstr "Malforviŝi mesaĝojn laŭ la ŝablono: "
+
+#: curs_main.c:861
+msgid "Untag messages matching: "
+msgstr "Malmarki mesaĝojn laŭ la ŝablono: "
+
+#: curs_main.c:879
+msgid "Open mailbox in read-only mode"
+msgstr "Malfermi poŝtfakon nurlege"
+
+#: curs_main.c:881
+msgid "Open mailbox"
+msgstr "Malfermi poŝtfakon"
+
+#: curs_main.c:897 mx.c:457 mx.c:598
+#, c-format
+msgid "%s is not a mailbox."
+msgstr "%s ne estas poŝtfako."
+
+#: curs_main.c:979
+msgid "Exit Mutt without saving?"
+msgstr "Eliri el Mutt sen skribi?"
+
+#: curs_main.c:996 curs_main.c:1020
+msgid "You are on the last message."
+msgstr "Vi estas ĉe la lasta mesaĝo."
+
+#: curs_main.c:1003 curs_main.c:1045
+msgid "No undeleted messages."
+msgstr "Mankas neforviŝitaj mesaĝoj."
+
+#: curs_main.c:1038 curs_main.c:1061
+msgid "You are on the first message."
+msgstr "Vi estas ĉe la unua mesaĝo."
+
+#: curs_main.c:1133 pattern.c:1109
+msgid "Search wrapped to top."
+msgstr "Serĉo rekomencis ĉe la komenco."
+
+#: curs_main.c:1142 pattern.c:1120
+msgid "Search wrapped to bottom."
+msgstr "Serĉo rekomencis ĉe la fino."
+
+#: curs_main.c:1175
+msgid "No new messages"
+msgstr "Mankas novaj mesaĝoj"
+
+#: curs_main.c:1175
+msgid "No unread messages"
+msgstr "Mankas nelegitaj mesaĝoj"
+
+#: curs_main.c:1176
+msgid " in this limited view"
+msgstr " en ĉi tiu limigita rigardo"
+
+#: curs_main.c:1286
+msgid "No more threads."
+msgstr "Ne restas fadenoj."
+
+#: curs_main.c:1288
+msgid "You are on the first thread."
+msgstr "Vi estas ĉe la unua fadeno."
+
+#: curs_main.c:1341
+msgid "Thread contains unread messages."
+msgstr "Fadeno enhavas nelegitajn mesaĝojn."
+
+#: curs_main.c:1354 flags.c:219 thread.c:661
+msgid "Threading is not enabled."
+msgstr "Fadenoj ne estas ŝaltitaj."
+
+#.
+#. * SLcurses_waddnstr() can't take a "const char *", so this is only
+#. * declared "static" (sigh)
+#.
+#: edit.c:36
+msgid ""
+"~~\t\tinsert a line begining with a single ~\n"
+"~b users\tadd users to the Bcc: field\n"
+"~c users\tadd users to the Cc: field\n"
+"~f messages\tinclude messages\n"
+"~F messages\tsame as ~f, except also include headers\n"
+"~h\t\tedit the message header\n"
+"~m messages\tinclude and quote messages\n"
+"~M messages\tsame as ~m, except include headers\n"
+"~p\t\tprint the message\n"
+"~q\t\twrite file and quit editor\n"
+"~r file\t\tread a file into the editor\n"
+"~t users\tadd users to the To: field\n"
+"~u\t\trecall the previous line\n"
+"~v\t\tedit message with the $visual editor\n"
+"~w file\t\twrite message to file\n"
+"~x\t\tabort changes and quit editor\n"
+"~?\t\tthis message\n"
+".\t\ton a line by itself ends input\n"
+msgstr ""
+"~~\t\tenŝovi linion, kiu komenciĝas per unuopa ~\n"
+"~b adresoj\taldoni adresojn al la linio Bcc:\n"
+"~c adresoj\taldoni adresojn al la linio Cc:\n"
+"~f mesaĝoj\tinkluzivi mesaĝojn\n"
+"~F mesaĝoj\tsame kiel ~f, sed inkluzivi ankaŭ la ĉapon\n"
+"~h\t\tredakti la mesaĝoĉapon\n"
+"~m mesaĝoj\tinkluzivi kaj citi mesaĝojn\n"
+"~M mesaĝoj\tsame kiel ~m, sed inkluzivi ankaŭ la ĉapojn\n"
+"~[\t\tpresi la mesaĝon\n"
+"~q\t\tskribi la dosieron kaj eliri el la redaktilo\n"
+"~r dosiero\t\tlegi dosieron en la redaktilon\n"
+"~t adresoj\taldoni adresojn al la linio To:\n"
+"~u\t\tredakti la antaŭan linion denove\n"
+"~v\t\tredakti mesaĝon per la redaktilo $visual\n"
+"~w dosiero\tskribi mesaĝon al dosiero\n"
+"~x\t\tforĵeti ŝanĝojn kaj eliri el la redaktilo\n"
+"~?\t\tvidi ĉi tiun informon\n"
+".\t\tsola en linio finas la enigon\n"
+
+#: edit.c:178
+#, c-format
+msgid "%d: invalid message number.\n"
+msgstr "%d: nevalida mesaĝnumero.\n"
+
+#: edit.c:312
+msgid "(End message with a . on a line by itself)\n"
+msgstr "(Finu mesaĝon per . sur propra linio)\n"
+
+#: edit.c:370
+msgid "No mailbox.\n"
+msgstr "Mankas poŝtfako.\n"
+
+#: edit.c:374
+msgid "Message contains:\n"
+msgstr "Mesaĝo enhavas:\n"
+
+#: edit.c:378 edit.c:430
+msgid "(continue)\n"
+msgstr "(daŭrigi)\n"
+
+#: edit.c:391
+msgid "missing filename.\n"
+msgstr "mankas dosieronomo.\n"
+
+#: edit.c:412
+msgid "No lines in message.\n"
+msgstr "Nul linioj en mesaĝo.\n"
+
+#: edit.c:441
+#, c-format
+msgid "%s: unknown editor command (~? for help)\n"
+msgstr "%s: nekonata redaktokomando (~? por helpo)\n"
+
+#: flags.c:257
+msgid "Set flag"
+msgstr "Ŝalti flagon"
+
+#: flags.c:257
+msgid "Clear flag"
+msgstr "Malŝalti flagon"
+
+#: handler.c:145
+msgid "[-- Error: unexpected end of file! --]\n"
+msgstr "[-- Eraro: neatendita fino de dosiero! --]\n"
+
+#. didn't find anything that we could display!
+#: handler.c:968
+msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
+msgstr "[-- Eraro: Neniu parto de Multipart/Alternative estis montrebla! --]\n"
+
+#: handler.c:1085
+#, c-format
+msgid "[-- Attachment #%d"
+msgstr "[-- Parto #%d"
+
+#: handler.c:1096
+#, c-format
+msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
+msgstr "[-- Speco: %s/%s, Kodado: %s, Grando: %s --]\n"
+
+#: handler.c:1155
+#, c-format
+msgid "[-- Autoview using %s --]\n"
+msgstr "[-- Aŭtomata vidigo per %s --]\n"
+
+#: handler.c:1156
+#, c-format
+msgid "Invoking autoview command: %s"
+msgstr "Alvokas aŭtomatan vidigon per: %s"
+
+#: handler.c:1193 handler.c:1211
+#, c-format
+msgid "[-- Autoview stderr of %s --]\n"
+msgstr "[-- Erareligo de %s --]\n"
+
+#: handler.c:1243
+msgid "[-- Error: message/external-body has no access-type parameter --]\n"
+msgstr "[-- Eraro: parto message/external ne havas parametro access-type --]\n"
+
+#: handler.c:1260
+#, c-format
+msgid "[-- This %s/%s attachment "
+msgstr "[-- Ĉi tiu %s/%s-parto "
+
+#: handler.c:1267
+#, c-format
+msgid "(size %s bytes) "
+msgstr "(grando %s bitokoj) "
+
+#: handler.c:1269
+msgid "has been deleted --]\n"
+msgstr "estas forviŝita --]\n"
+
+#: handler.c:1272
+#, c-format
+msgid "[-- on %s --]\n"
+msgstr "[-- je %s --]\n"
+
+#: handler.c:1282
+#, c-format
+msgid ""
+"[-- This %s/%s attachment is not included, --]\n"
+"[-- and the indicated external source has --]\n"
+"[-- expired. --]\n"
+msgstr ""
+"[-- Ĉi tiu %s/%s-parto ne estas inkluzivita, --]\n"
+"[-- kaj la indikita ekstera fonto estas --]\n"
+"[-- eksvalidiĝinta. --]\n"
+
+#: handler.c:1296
+#, c-format
+msgid ""
+"[-- This %s/%s attachment is not included, --]\n"
+"[-- and the indicated access-type %s is unsupported --]\n"
+msgstr ""
+"[-- Ĉi tiu %s/%s-parto ne estas inkluzivita, --]\n"
+"[-- kaj Mutt ne kapablas je la indikita alirmaniero %s. --]\n"
+
+#: handler.c:1393
+msgid "Error: multipart/signed has no protocol."
+msgstr "Eraro: multipart/signed ne havas parametron protocol!"
+
+#: handler.c:1405
+msgid "Error: multipart/encrypted has no protocol parameter!"
+msgstr "Eraro: multipart/encrypted ne havas parametron protocol!"
+
+#: handler.c:1447
+msgid "Unable to open temporary file!"
+msgstr "Ne povas malfermi dumtempan dosieron!"
+
+#: handler.c:1506
+#, c-format
+msgid "[-- %s/%s is unsupported "
+msgstr "[-- %s/%s ne estas konata "
+
+#: handler.c:1511
+#, c-format
+msgid "(use '%s' to view this part)"
+msgstr "(uzu '%s' por vidigi ĉi tiun parton)"
+
+#: handler.c:1513
+msgid "(need 'view-attachments' bound to key!)"
+msgstr "(bezonas klavodifinon por 'view-attachments'!)"
+
+#: headers.c:202
+#, c-format
+msgid "%s: unable to attach file"
+msgstr "%s: ne povas aldoni dosieron"
+
+#: help.c:273
+msgid "ERROR: please report this bug"
+msgstr "ERARO: bonvolu raporti ĉi tiun cimon"
+
+#: help.c:315
+msgid "<UNKNOWN>"
+msgstr "<NEKONATA>"
+
+#: help.c:327
+msgid ""
+"\n"
+"Generic bindings:\n"
+"\n"
+msgstr "\nĜeneralaj klavodifinoj:\n\n"
+
+#: help.c:331
+msgid ""
+"\n"
+"Unbound functions:\n"
+"\n"
+msgstr "\nFunkcioj, kiuj ne havas klavodifinon:\n\n"
+
+#: help.c:339
+#, c-format
+msgid "Help for %s"
+msgstr "Helpo por %s"
+
+#: imap.c:206
+#, c-format
+msgid "imap_error(): unexpected response in %s: %s\n"
+msgstr "imap_error(): neatendita respondo en %s: %s\n"
+
+#. something is wrong because the server reported fewer messages
+#. * than we previously saw
+#.
+#: imap.c:499
+msgid "Fatal error.  Message count is out of sync!"
+msgstr "Grava eraro. Mesaĝonombro ne kongruas!"
+
+#: imap.c:632
+#, c-format
+msgid "Fetching message headers... [%d/%d]"
+msgstr "Elŝutas mesaĝoĉapojn ... [%d/%d]"
+
+#. Unable to fetch headers for lower versions
+#: imap.c:659
+msgid "Unable to fetch headers from this IMAP server version."
+msgstr "Ne povas elŝuti ĉapojn de ĉi tiu IMAP-servilo."
+
+#: imap.c:851
+#, c-format
+msgid "Reopening mailbox... %s"
+msgstr "Remalfermas poŝtfakon ... %s"
+
+#: imap.c:1203
+msgid "This IMAP server is ancient. Mutt does not work with it."
+msgstr "Ĉi tiu IMAP-servilo estas antikva. Mutt ne funkcias kun ĝi."
+
+#: imap.c:1224
+msgid "IMAP Username: "
+msgstr "IMAP-uzantonomo: "
+
+#: imap.c:1237
+#, c-format
+msgid "Password for %s@%s: "
+msgstr "Pasvorto por %s@%s: "
+
+#: imap.c:1250
+msgid "Logging in..."
+msgstr "Konektiĝas ..."
+
+#. Login failed, try again
+#: imap.c:1263
+msgid "Login failed."
+msgstr "Saluto malsukcesis."
+
+#: imap.c:1383
+#, c-format
+msgid "Selecting %s..."
+msgstr "Elektas %s ..."
+
+#. STATUS not supported
+#. * The thing to do seems to be:
+#. *  - Open a *new* IMAP session, select, and then close it. Report the
+#. * error if the mailbox did not exist.
+#: imap.c:1532
+msgid "Unable to append to IMAP mailboxes at this server"
+msgstr "Ne povas aldoni al IMAP-poŝtfakon ĉe ĉi tiu servilo"
+
+#: imap.c:1542 lib.c:1270
+#, c-format
+msgid "Create %s?"
+msgstr "Ĉu krei %s?"
+
+#: imap.c:1594
+msgid "Fetching message..."
+msgstr "Elŝutas mesaĝon ..."
+
+#. hack from Nathan Neulinger
+#: imap.c:1736
+msgid "Sending CREATE command ..."
+msgstr "Sendas la komandon CREATE ..."
+
+#: imap.c:1741
+msgid "Sending APPEND command ..."
+msgstr "Sendas la komandon APPEND ..."
+
+#: imap.c:1779
+msgid "Uploading message ..."
+msgstr "Alŝutas mesaĝon ..."
+
+#: imap.c:1834
+msgid "Closing connection to IMAP server..."
+msgstr "Fermas la konekton al la IMAP-servilo ..."
+
+#: imap.c:1878
+#, c-format
+msgid "Saving message status flags... [%d/%d]"
+msgstr "Skribas mesaĝoflagojn ... [%d/%d]"
+
+#: imap.c:1921
+msgid "Expunging messages from server..."
+msgstr "Forviŝas mesaĝojn de la servilo ..."
+
+#. tell the server to commit changes
+#: imap.c:1952
+msgid "Closing mailbox..."
+msgstr "Fermas poŝtfakon ..."
+
+#: init.c:444
+msgid "alias: no address"
+msgstr "adresaro: mankas adreso"
+
+#: init.c:538
+msgid "invalid header field"
+msgstr "nevalida ĉaplinio"
+
+#: init.c:546
+#, c-format
+msgid "ignoring empty header field: %s"
+msgstr "ignoras malplenan ĉaplinion: %s"
+
+#: init.c:598
+#, c-format
+msgid "%s: unknown sorting method"
+msgstr "%s: nekonata ordigmaniero"
+
+#: init.c:671
+#, c-format
+msgid "mutt_restore_default: error in regexp: %s\n"
+msgstr "mutt_restore_default: eraro en regula esprimo: %s\n"
+
+#: init.c:731
+#, c-format
+msgid "%s: unknown variable"
+msgstr "%s: nekonata variablo"
+
+#: init.c:740
+msgid "prefix is illegal with reset"
+msgstr "reset: prefikso ne permesata"
+
+#: init.c:746
+msgid "value is illegal with reset"
+msgstr "reset: valoro ne permesata"
+
+#: init.c:785
+#, c-format
+msgid "%s is set"
+msgstr "%s estas ŝaltita"
+
+#: init.c:785
+#, c-format
+msgid "%s is unset"
+msgstr "%s estas malŝaltita"
+
+#: init.c:959
+#, c-format
+msgid "%s: invalid mailbox type"
+msgstr "%s: nevalida poŝtfakospeco"
+
+#: init.c:1018
+#, c-format
+msgid "%s: invalid value"
+msgstr "%s: nevalida valoro"
+
+#: init.c:1068
+#, c-format
+msgid "%s: unknown type"
+msgstr "%s: nekonata speco"
+
+#: init.c:1117
+#, c-format
+msgid "Error in %s, line %d: %s"
+msgstr "Eraro en %s, linio %d: %s"
+
+#. the muttrc source keyword
+#: init.c:1128
+#, c-format
+msgid "source: errors in %s"
+msgstr "source: eraroj en %s"
+
+#: init.c:1138
+#, c-format
+msgid "source: error at %s"
+msgstr "source: eraro ĉe %s"
+
+#: init.c:1143
+msgid "source: too many arguments"
+msgstr "source: tro da argumentoj"
+
+#: init.c:1194
+#, c-format
+msgid "%s: unknown command"
+msgstr "%s: nekonata komando"
+
+#: init.c:1526
+#, c-format
+msgid "Error in command line: %s\n"
+msgstr "Eraro en komandlinio: %s\n"
+
+#: init.c:1569
+msgid "unable to determine home directory"
+msgstr "ne povas eltrovi la hejmdosierujon"
+
+#: init.c:1577
+msgid "unable to determine username"
+msgstr "ne povas eltrovi la uzantonomo"
+
+#: keymap.c:440
+msgid "Macro loop detected."
+msgstr "Cirkla makroo trovita."
+
+#: keymap.c:636 keymap.c:644
+msgid "Key is not bound."
+msgstr "Klavo ne estas difinita."
+
+#: keymap.c:648
+#, c-format
+msgid "Key is not bound.  Press '%s' for help."
+msgstr "Klavo ne estas difinita. Premu '%s' por helpo."
+
+#: keymap.c:659
+msgid "push: too many arguments"
+msgstr "push: tro da argumentoj"
+
+#: keymap.c:680
+#, c-format
+msgid "%s: no such menu"
+msgstr "%s: nekonata menuo"
+
+#: keymap.c:689
+msgid "null key sequence"
+msgstr "malplena klavoserio"
+
+#: keymap.c:767
+msgid "bind: too many arguments"
+msgstr "bind: tro da argumentoj"
+
+#: keymap.c:782
+#, c-format
+msgid "%s: no such function in map"
+msgstr "%s: nekonata funkcio"
+
+#: keymap.c:805
+msgid "macro: empty key sequence"
+msgstr "macro: malplena klavoserio"
+
+#: keymap.c:816
+msgid "macro: too many arguments"
+msgstr "macro: tro da argumentoj"
+
+#: keymap.c:846
+msgid "exec: too few arguments"
+msgstr "exec: nesufiĉe da argumentoj"
+
+#: keymap.c:866
+#, c-format
+msgid "%s: no such command"
+msgstr "%s: nekonata komando"
+
+#: keymap_defs.h:5
+msgid "null operation"
+msgstr "malplena funkcio"
+
+#: keymap_defs.h:6
+msgid "force viewing of attachment using mailcap"
+msgstr "devigi vidigon de parto per mailcap"
+
+#: keymap_defs.h:7
+msgid "view attachment as text"
+msgstr "vidigi parton kiel tekston"
+
+#: keymap_defs.h:8
+msgid "move to the bottom of the page"
+msgstr "iri al fino de paĝo"
+
+#: keymap_defs.h:9
+msgid "remail a message to another user"
+msgstr "resendi mesaĝon al alia adreso"
+
+#: keymap_defs.h:10
+msgid "select a new file in this directory"
+msgstr "elekti novan dosieron en ĉi tiu dosierujo"
+
+#: keymap_defs.h:11
+msgid "view file"
+msgstr "vidigi dosieron"
+
+#: keymap_defs.h:12
+msgid "display the currently selected file's name"
+msgstr "montri la nomon de la elektita dosiero"
+
+#: keymap_defs.h:13
+msgid "change directories"
+msgstr "ŝanĝi la dosierujon"
+
+#: keymap_defs.h:14
+msgid "check mailboxes for new mail"
+msgstr "kontroli poŝtfakojn pri novaj mesaĝoj"
+
+#: keymap_defs.h:15
+msgid "attach a file(s) to this message"
+msgstr "aldoni dosiero(j)n al ĉi tiu mesaĝo"
+
+#: keymap_defs.h:16
+msgid "attach message(s) to this message"
+msgstr "aldoni mesaĝo(j)n al ĉi tiu mesaĝo"
+
+#: keymap_defs.h:17
+msgid "edit the BCC list"
+msgstr "redakti la BCC-liston"
+
+#: keymap_defs.h:18
+msgid "edit the CC list"
+msgstr "redakti la CC-liston"
+
+#: keymap_defs.h:19
+msgid "edit attachment description"
+msgstr "redakti priskribon de parto"
+
+#: keymap_defs.h:20
+msgid "edit attachment transfer-encoding"
+msgstr "redakti kodadon de parto"
+
+#: keymap_defs.h:21
+msgid "enter a file to save a copy of this message in"
+msgstr "donu dosieron, al kiu la mesaĝo estu skribita"
+
+#: keymap_defs.h:22
+msgid "edit the file to be attached"
+msgstr "redakti la dosieron aldonotan"
+
+#: keymap_defs.h:23
+msgid "edit the from field"
+msgstr "redakti la From-kampon"
+
+#: keymap_defs.h:24
+msgid "edit the message with headers"
+msgstr "redakti la mesaĝon kun ĉapo"
+
+#: keymap_defs.h:25
+msgid "edit the message"
+msgstr "redakti la mesaĝon"
+
+#: keymap_defs.h:26
+msgid "edit attachment using mailcap entry"
+msgstr "redakti parton, uzante mailcap"
+
+#: keymap_defs.h:27
+msgid "edit the Reply-To field"
+msgstr "redakti la kampon Reply-To"
+
+#: keymap_defs.h:28
+msgid "edit the subject of this message"
+msgstr "redakti la temlinion de le mesaĝo"
+
+#: keymap_defs.h:29
+msgid "edit the TO list"
+msgstr "redakti la liston de ricevontoj"
+
+#: keymap_defs.h:30
+msgid "edit attachment type"
+msgstr "redakti specon de parto"
+
+#: keymap_defs.h:31
+msgid "get a temporary copy of an attachment"
+msgstr "akiri dumtempan kopion de parto"
+
+#: keymap_defs.h:32
+msgid "run ispell on the message"
+msgstr "apliki ispell al la mesaĝo"
+
+#: keymap_defs.h:33
+msgid "compose new attachment using mailcap entry"
+msgstr "verki novan parton per mailcap"
+
+#: keymap_defs.h:34
+msgid "save this message to send later"
+msgstr "skribi ĉi tiun mesaĝon por sendi ĝin poste"
+
+#: keymap_defs.h:35
+msgid "rename/move an attached file"
+msgstr "renomi/movi aldonitan dosieron"
+
+#: keymap_defs.h:36
+msgid "send the message"
+msgstr "sendi la mesaĝon"
+
+#: keymap_defs.h:37
+msgid "toggle whether to delete file after sending it"
+msgstr "elekti, ĉu forviŝi la dosieron post sendado"
+
+#: keymap_defs.h:38
+msgid "update an attachment's encoding info"
+msgstr "aktualigi la kodadon de parto"
+
+#: keymap_defs.h:39
+msgid "write the message to a folder"
+msgstr "skribi la mesaĝon al poŝtkesto"
+
+#: keymap_defs.h:40
+msgid "copy a message to a file/mailbox"
+msgstr "kopii mesaĝon al dosiero/poŝtfako"
+
+#: keymap_defs.h:41
+msgid "create an alias from a message sender"
+msgstr "aldoni sendinton al adresaro"
+
+#: keymap_defs.h:42
+msgid "move entry to bottom of screen"
+msgstr "movi registron al fino de ekrano"
+
+#: keymap_defs.h:43
+msgid "move entry to middle of screen"
+msgstr "movi registron al mezo de ekrano"
+
+#: keymap_defs.h:44
+msgid "move entry to top of screen"
+msgstr "movi registron al komenco de ekrano"
+
+#: keymap_defs.h:45
+msgid "make decoded (text/plain) copy"
+msgstr "fari malkoditan kopion (text/plain)"
+
+#: keymap_defs.h:46
+msgid "make decoded copy (text/plain) and delete"
+msgstr "fari malkoditan kopion (text/plain) kaj forviŝi"
+
+#: keymap_defs.h:47
+msgid "delete the current entry"
+msgstr "forviŝi registron"
+
+#: keymap_defs.h:48
+msgid "delete all messages in subthread"
+msgstr "forviŝi ĉiujn mesaĝojn en subfadeno"
+
+#: keymap_defs.h:49
+msgid "delete all messages in thread"
+msgstr "forviŝi ĉiujn mesaĝojn en fadeno"
+
+#: keymap_defs.h:50
+msgid "display full address of sender"
+msgstr "montri plenan adreson de sendinto"
+
+#: keymap_defs.h:51
+msgid "display message with full headers"
+msgstr "montri mesaĝon kun la tuta ĉapo"
+
+#: keymap_defs.h:52
+msgid "display a message"
+msgstr "montri mesaĝon"
+
+#: keymap_defs.h:53
+msgid "edit the current message for resending"
+msgstr "redakti ĉi tiun mesaĝon por resendo"
+
+#: keymap_defs.h:54
+msgid "delete the char in front of the cursor"
+msgstr "forviŝi la signon antaŭ la tajpmontrilo"
+
+#: keymap_defs.h:55
+msgid "move the cursor one character to the left"
+msgstr "movi la tajpmontrilon unu signon maldekstren"
+
+#: keymap_defs.h:56
+msgid "jump to the beginning of the line"
+msgstr "salti al la komenco de la linio"
+
+#: keymap_defs.h:57
+msgid "cycle among incoming mailboxes"
+msgstr "rondiri tra enir-poŝtfakoj"
+
+#: keymap_defs.h:58
+msgid "complete filename or alias"
+msgstr "kompletigi dosieronomon aŭ nomon el la adresaro"
+
+#: keymap_defs.h:59
+msgid "complete address with query"
+msgstr "kompletigi adreson kun demando"
+
+#: keymap_defs.h:60
+msgid "delete the char under the cursor"
+msgstr "forviŝi la signon sub la tajpmontrilo"
+
+#: keymap_defs.h:61
+msgid "jump to the end of the line"
+msgstr "salti al la fino de la linio"
+
+#: keymap_defs.h:62
+msgid "move the cursor one character to the right"
+msgstr "movi la tajpmontrilon unu signon dekstren"
+
+#: keymap_defs.h:63 keymap_defs.h:64
+msgid "scroll up through the history list"
+msgstr "rulumi supren tra la histori-listo"
+
+#: keymap_defs.h:65
+msgid "delete chars from cursor to end of line"
+msgstr "forviŝi signojn de la tajpmontrilo ĝis linifino"
+
+#: keymap_defs.h:66
+msgid "delete all chars on the line"
+msgstr "forviŝi ĉiujn signojn en la linio"
+
+#: keymap_defs.h:67
+msgid "delete the word in front of the cursor"
+msgstr "forviŝi la vorton antaŭ la tajpmontrilo"
+
+#: keymap_defs.h:68
+msgid "quote the next typed key"
+msgstr "citi la sekvontan klavopremon"
+
+#: keymap_defs.h:69
+msgid "enter a muttrc command"
+msgstr "enigi muttrc-komandon"
+
+#: keymap_defs.h:70
+msgid "enter a file mask"
+msgstr "enigi dosierŝablonon"
+
+#: keymap_defs.h:71
+msgid "exit this menu"
+msgstr "eliri el ĉi tiu menuo"
+
+#: keymap_defs.h:72
+msgid "filter attachment through a shell command"
+msgstr "filtri parton tra ŝelkomando"
+
+#: keymap_defs.h:73
+msgid "move to the first entry"
+msgstr "iri al la unua registro"
+
+#: keymap_defs.h:74
+msgid "toggle a message's 'important' flag"
+msgstr "ŝanĝi la flagon 'grava' de mesaĝo"
+
+#: keymap_defs.h:75
+msgid "forward a message with comments"
+msgstr "plusendi mesaĝon kun komentoj"
+
+#: keymap_defs.h:76
+msgid "select the current entry"
+msgstr "elekti la aktualan registron"
+
+#: keymap_defs.h:77
+msgid "reply to all recipients"
+msgstr "respondi al ĉiuj ricevintoj"
+
+#: keymap_defs.h:78
+msgid "scroll down 1/2 page"
+msgstr "rulumi malsupren duonon de paĝo"
+
+#: keymap_defs.h:79
+msgid "scroll up 1/2 page"
+msgstr "rulumi supren duonon de paĝo"
+
+#: keymap_defs.h:80
+msgid "this screen"
+msgstr "ĉi tiu ekrano"
+
+#: keymap_defs.h:81
+msgid "jump to an index number"
+msgstr "salti al indeksnumero"
+
+#: keymap_defs.h:82
+msgid "move to the last entry"
+msgstr "iri al la lasta registro"
+
+#: keymap_defs.h:83
+msgid "reply to specified mailing list"
+msgstr "respondi al specifita dissendolisto"
+
+#: keymap_defs.h:84
+msgid "execute a macro"
+msgstr "ruligi makroon"
+
+#: keymap_defs.h:85
+msgid "compose a new mail message"
+msgstr "verki novan mesaĝon"
+
+#: keymap_defs.h:86
+msgid "open a different folder"
+msgstr "malfermi alian poŝtfakon"
+
+#: keymap_defs.h:87
+msgid "open a different folder in read only mode"
+msgstr "malfermi alian poŝtfakon nurlege"
+
+#: keymap_defs.h:88
+msgid "clear a status flag from a message"
+msgstr "malŝalti flagon ĉe mesaĝo"
+
+#: keymap_defs.h:89
+msgid "delete messages matching a pattern"
+msgstr "forviŝi mesaĝojn laŭ ŝablono"
+
+#: keymap_defs.h:90
+msgid "retrieve mail from POP server"
+msgstr "elŝuti mesaĝojn de POP-servilo"
+
+#: keymap_defs.h:91
+msgid "move to the first message"
+msgstr "iri al la unua mesaĝo"
+
+#: keymap_defs.h:92
+msgid "move to the last message"
+msgstr "iri al la lasta mesaĝo"
+
+#: keymap_defs.h:93
+msgid "show only messages matching a pattern"
+msgstr "montri nur la mesaĝojn, kiuj kongruas kun ŝablono"
+
+#: keymap_defs.h:94
+msgid "jump to the next new message"
+msgstr "salti al la unua nova mesaĝo"
+
+#: keymap_defs.h:95
+msgid "jump to the next subthread"
+msgstr "salti al la sekva subfadeno"
+
+#: keymap_defs.h:96
+msgid "jump to the next thread"
+msgstr "salti al la sekva fadeno"
+
+#: keymap_defs.h:97
+msgid "move to the next undeleted message"
+msgstr "salti al la sekva neforviŝita mesaĝo"
+
+#: keymap_defs.h:98
+msgid "jump to the next unread message"
+msgstr "salti al la sekva nelegita mesaĝo"
+
+#: keymap_defs.h:99
+msgid "jump to previous thread"
+msgstr "salti al la antaŭa fadeno"
+
+#: keymap_defs.h:100
+msgid "jump to previous subthread"
+msgstr "salti al la antaŭa subfadeno"
+
+#: keymap_defs.h:101
+msgid "move to the last undelete message"
+msgstr "iri al la lasta neforviŝita mesaĝo"
+
+#: keymap_defs.h:102
+msgid "jump to the previous new message"
+msgstr "salti al la antaŭa nova mesaĝo"
+
+#: keymap_defs.h:103
+msgid "jump to the previous unread message"
+msgstr "salti al la antaŭa nelegita mesaĝo"
+
+#: keymap_defs.h:104
+msgid "mark the current thread as read"
+msgstr "marki la aktualan fadenon kiel legitan"
+
+#: keymap_defs.h:105
+msgid "mark the current subthread as read"
+msgstr "marki la aktualan subfadenon kiel legitan"
+
+#: keymap_defs.h:106
+msgid "set a status flag on a message"
+msgstr "ŝalti flagon ĉe mesaĝo"
+
+#: keymap_defs.h:107
+msgid "save changes to mailbox"
+msgstr "skribi ŝanĝojn al poŝtfako"
+
+#: keymap_defs.h:108
+msgid "tag messages matching a pattern"
+msgstr "marki mesaĝojn laŭ ŝablono"
+
+#: keymap_defs.h:109
+msgid "undelete messages matching a pattern"
+msgstr "malforviŝi mesaĝojn laŭ ŝablono"
+
+#: keymap_defs.h:110
+msgid "untag messages matching a pattern"
+msgstr "malmarki mesaĝojn laŭ ŝablono"
+
+#: keymap_defs.h:111
+msgid "move to the middle of the page"
+msgstr "iri al la mezo de la paĝo"
+
+#: keymap_defs.h:112
+msgid "move to the next entry"
+msgstr "iri al la sekva registro"
+
+#: keymap_defs.h:113
+msgid "scroll down one line"
+msgstr "rulumi malsupren unu linion"
+
+#: keymap_defs.h:114
+msgid "move to the next page"
+msgstr "iri al la sekva paĝo"
+
+#: keymap_defs.h:115
+msgid "jump to the bottom of the message"
+msgstr "salti al la fino de la mesaĝo"
+
+#: keymap_defs.h:116
+msgid "return to the main-menu"
+msgstr "reiri al la ĉefmenuo"
+
+#: keymap_defs.h:117
+msgid "toggle display of quoted text"
+msgstr "ŝalti aŭ malŝalti montradon de citita teksto"
+
+#: keymap_defs.h:118
+msgid "skip beyond quoted text"
+msgstr "supersalti cititan tekston"
+
+#: keymap_defs.h:119
+msgid "jump to the top of the message"
+msgstr "salti al la komenco de mesaĝo"
+
+#: keymap_defs.h:120
+msgid "pipe message/attachment to a shell command"
+msgstr "trakti mesaĝon/parton per ŝelkomando"
+
+#: keymap_defs.h:121
+msgid "move to the previous entry"
+msgstr "iri al la antaŭa registro"
+
+#: keymap_defs.h:122
+msgid "scroll up one line"
+msgstr "rulumi supren unu linion"
+
+#: keymap_defs.h:123
+msgid "move to the previous page"
+msgstr "iri al la antaŭa paĝo"
+
+#: keymap_defs.h:124
+msgid "print the current entry"
+msgstr "presi la aktualan registron"
+
+#: keymap_defs.h:125
+msgid "query external program for addresses"
+msgstr "demandi eksteran programon pri adresoj"
+
+#: keymap_defs.h:126
+msgid "append new query results to current results"
+msgstr "aldoni novajn demandrezultojn al jamaj rezultoj"
+
+#: keymap_defs.h:127
+msgid "save changes to mailbox and quit"
+msgstr "skribi ŝanĝojn al poŝtfako kaj eliri"
+
+#: keymap_defs.h:128
+msgid "recall a postponed message"
+msgstr "revoki prokrastitan mesaĝon"
+
+#: keymap_defs.h:129
+msgid "clear and redraw the screen"
+msgstr "rekrei la enhavon de la ekrano"
+
+#: keymap_defs.h:130
+msgid "{internal}"
+msgstr "{interna}"
+
+#: keymap_defs.h:131
+msgid "reply to a message"
+msgstr "respondi al mesaĝo"
+
+#: keymap_defs.h:132
+msgid "save message/attachment to a file"
+msgstr "skribi mesaĝon/parton al dosiero"
+
+#: keymap_defs.h:133
+msgid "search for a regular expression"
+msgstr "serĉi pri regula esprimo"
+
+#: keymap_defs.h:134
+msgid "search backwards for a regular expression"
+msgstr "serĉi malantaŭen per regula esprimo"
+
+#: keymap_defs.h:135
+msgid "search for next match"
+msgstr "serĉi pri la sekva trafo"
+
+#: keymap_defs.h:136
+msgid "search for next match in opposite direction"
+msgstr "serĉi pri la sekva trafo en la mala direkto"
+
+#: keymap_defs.h:137
+msgid "toggle search pattern coloring"
+msgstr "ŝalti aŭ malŝalti alikolorigon de serĉŝablono"
+
+#: keymap_defs.h:138
+msgid "invoke a command in a subshell"
+msgstr "alvoki komandon en subŝelo"
+
+#: keymap_defs.h:139
+msgid "sort messages"
+msgstr "ordigi mesaĝojn"
+
+#: keymap_defs.h:140
+msgid "sort messages in reverse order"
+msgstr "ordigi mesaĝojn en inversa ordo"
+
+#: keymap_defs.h:141
+msgid "tag the current entry"
+msgstr "marki la aktualan registron"
+
+#: keymap_defs.h:142
+msgid "apply next function to tagged messages"
+msgstr "apliki la sekvan komandon al ĉiuj markitaj mesaĝoj"
+
+#: keymap_defs.h:143
+msgid "tag the current subthread"
+msgstr "marki la aktualan subfadenon"
+
+#: keymap_defs.h:144
+msgid "tag the current thread"
+msgstr "marki la aktualan fadenon"
+
+#: keymap_defs.h:145
+msgid "toggle a message's 'new' flag"
+msgstr "ŝanĝi la flagon 'nova' de mesaĝo"
+
+#: keymap_defs.h:146
+msgid "toggle whether the mailbox will be rewritten"
+msgstr "(mal)ŝalti, ĉu la poŝtfako estos reskribita"
+
+#: keymap_defs.h:147
+msgid "toggle whether to browse mailboxes or all files"
+msgstr "(mal)ŝali, ĉu vidi poŝtfakojn aŭ ĉiujn dosierojn"
+
+#: keymap_defs.h:148
+msgid "move to the top of the page"
+msgstr "iri al la supro de la paĝo"
+
+#: keymap_defs.h:149
+msgid "undelete the current entry"
+msgstr "malforviŝi la aktualan registron"
+
+#: keymap_defs.h:150
+msgid "undelete all messages in thread"
+msgstr "malforviŝi ĉiujn mesaĝojn en fadeno"
+
+#: keymap_defs.h:151
+msgid "undelete all messages in subthread"
+msgstr "malforviŝi ĉiujn mesaĝojn en subfadeno"
+
+#: keymap_defs.h:152
+msgid "show the Mutt version number and date"
+msgstr "montri la version kaj daton de Mutt"
+
+#: keymap_defs.h:153
+msgid "view attachment using mailcap entry if necessary"
+msgstr "vidigi parton, per mailcap, se necese"
+
+#: keymap_defs.h:154
+msgid "show MIME attachments"
+msgstr "montri MIME-partojn"
+
+#: keymap_defs.h:155
+msgid "show currently active limit pattern"
+msgstr "montri la aktivan limigŝablonon"
+
+#: keymap_defs.h:156
+msgid "collapse/uncollapse current thread"
+msgstr "(mal)kolapsigi la aktualan fadenon"
+
+#: keymap_defs.h:157
+msgid "collapse/uncollapse all threads"
+msgstr "(mal)kolapsigi ĉiujn fadenojn"
+
+#: keymap_defs.h:158
+msgid "attach a PGP public key"
+msgstr "aldoni publikan PGP-ŝlosilon"
+
+#: keymap_defs.h:159
+msgid "show PGP options"
+msgstr "montri PGP-funkciojn"
+
+#: keymap_defs.h:160
+msgid "extract PGP public keys"
+msgstr "eltiri publikajn PGP-ŝlosilojn"
+
+#: keymap_defs.h:161
+msgid "wipe PGP passphrase from memory"
+msgstr "forviŝi PGP-pasfrazon el memoro"
+
+#: keymap_defs.h:162
+msgid "mail a PGP public key"
+msgstr "sendi publikan PGP-ŝlosilon"
+
+#: keymap_defs.h:163
+msgid "verify a PGP public key"
+msgstr "kontroli publikan PGP-ŝlosilon"
+
+#: keymap_defs.h:164
+msgid "view the key's user id"
+msgstr "vidi la uzant-identigilon de la ŝlosilo"
+
+#: keymap_defs.h:165
+msgid "make decrypted copy and delete"
+msgstr "fari malĉifritan kopion kaj forviŝi"
+
+#: keymap_defs.h:166
+msgid "make decrypted copy"
+msgstr "fari malĉifritan kopion"
+
+#: lib.c:276 lib.c:291 lib.c:322
+msgid "Out of memory!"
+msgstr "Mankas memoro!"
+
+#: lib.c:845
+msgid "File is a directory, save under it?"
+msgstr "Tio estas dosierujo; ĉu skribi dosieron en ĝi?"
+
+#: lib.c:850
+msgid "File under directory: "
+msgstr "Dosiero en dosierujo: "
+
+#: lib.c:862
+msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
+msgstr "Dosiero ekzistas; (s)urskribi, (a)ldoni, aŭ (n)uligi?"
+
+#: lib.c:862
+msgid "oac"
+msgstr "san"
+
+#: lib.c:1246
+#, c-format
+msgid "%s is not a mailbox!"
+msgstr "%s ne estas poŝtfako!"
+
+#: lib.c:1252
+#, c-format
+msgid "Append messages to %s?"
+msgstr "Ĉu aldoni mesaĝojn al %s?"
+
+#: main.c:39
+msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
+msgstr "Por kontakti la kreantojn bonvolu skribi al <mutt-dev@mutt.org>.\n"
+
+#: main.c:42
+msgid ""
+"Copyright (C) 1996-9 Michael R. Elkins and others.\n"
+"Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
+"Mutt is free software, and you are welcome to redistribute it\n"
+"under certain conditions; type `mutt -vv' for details.\n"
+msgstr ""
+"Kopirajto © 1996-9 Michael R. Elkins kaj aliaj.\n"
+"Mutt venas kun ABSOLUTE NENIA GARANTIO; por detaloj tajpu 'mutt -vv'.\n"
+"Mutt estas libera programo, kaj vi rajtas pludoni kopiojn\n"
+"sub difinitaj kondiĉoj; tajpu 'mutt -v' por detaloj.\n"
+
+#: main.c:48
+msgid ""
+"Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"\n"
+"Lots of others not mentioned here contributed lots of code,\n"
+"fixes, and suggestions.\n"
+"\n"
+"    This program is free software; you can redistribute it and/or modify\n"
+"    it under the terms of the GNU General Public License as published by\n"
+"    the Free Software Foundation; either version 2 of the License, or\n"
+"    (at your option) any later version.\n"
+"\n"
+"    This program is distributed in the hope that it will be useful,\n"
+"    but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"    GNU General Public License for more details.\n"
+"\n"
+"    You should have received a copy of the GNU General Public License\n"
+"    along with this program; if not, write to the Free Software\n"
+"    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
+msgstr ""
+"Kopirajto © 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Kopirajto © 1997-9 Thomas Roessler <roessler@guug.de>\n"
+"Kopirajto © 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Kopirajto © 1998-9 Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"\n"
+"Multaj aliaj homoj ne menciitaj ĉi tie kontribuis multe da\n"
+"programlinioj, riparoj, kaj sugestoj.\n"
+"\n"
+"    Ĉi tiu programo estas libera; vi povas pludoni kopiojn kaj modifi\n"
+"    ĝin sub la kondiĉoj de la Ĝenerala Publika Rajtigilo de GNU,\n"
+"    kiel tio estas eldonita de Free Software Foundation; aŭ versio 2\n"
+"    de la Rajtigilo, aŭ (laŭ via elekto) iu sekva versio.\n"
+"\n"
+"    Ĉi tiu programo estas disdonita kun la espero, ke ĝi estos utila,\n"
+"    sed SEN IA AJN GARANTIO; eĉ sen la implicita garantio de\n"
+"    KOMERCA KVALITO aŭ ADEKVATECO POR DIFINITA CELO. Vidu la\n"
+"    Ĝeneralan Publikan Rajtigilon de GNU por pli da detaloj.\n"
+"\n"
+"    Vi devus esti ricevinta kopion de la Ĝenerala Publika Rajtigilo de\n"
+"    GNU kun ĉi tiu programo; se ne, skribu al Free Software Foundation,\n"
+"    Inc., 675 Mass Ave, Cambridge, MA 02139, Usono.\n"
+
+#: main.c:73
+msgid ""
+"\n"
+"SHA1 implementation Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"\n"
+"    Redistribution and use in source and binary forms, with or without\n"
+"    modification, are permitted under certain conditions.\n"
+"\n"
+"    The SHA1 implementation comes AS IS, and ANY EXPRESS OR IMPLIED\n"
+"    WARRANTIES, including, but not limited to, the implied warranties of\n"
+"    merchantability and fitness for a particular purpose ARE DISCLAIMED.\n"
+"\n"
+"    You should have received a copy of the full distribution terms\n"
+"    along with this program; if not, write to the program's developers.\n"
+msgstr ""
+"\n"
+"Realigo de SHA1 Kopirajto © 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"\n"
+"    Pludonado de kopioj kaj uzado kaj de la fontprogramo kaj de celprogramo,\n"
+"    kun aŭ sen modifado, estas permesataj sub difinitaj kondiĉoj.\n"
+"\n"
+"    La realigo de SHA1 venas TIA, KIA ĜI ESTAS, kaj ĈIAJ EKSPLICITAJ AŬ\n"
+"    IMPLICITAJ GARANTIOJ, inkluzive de, sed ne limigitaj al, la implicita\n"
+"    garantio de komerca kvalito aŭ adekvateco por difinita celo,\n"
+"    ESTAS NEITAJ.\n"
+"\n"
+"    Vi devus esti ricevinta kopion de la kompletaj disdonkondiĉoj kun\n"
+"    ĉi tiu programo; se ne, skribu al la kreantoj de la programo.\n"
+
+#: main.c:99
+msgid ""
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
+"]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
+"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
+"       mutt -v[v]\n"
+"\n"
+"options:\n"
+"  -a <file>\tattach a file to the message\n"
+"  -b <address>\tspecify a blind carbon-copy (BCC) address\n"
+"  -c <address>\tspecify a carbon-copy (CC) address\n"
+"  -e <command>\tspecify a command to be executed after initialization\n"
+"  -f <file>\tspecify which mailbox to read\n"
+"  -F <file>\tspecify an alternate muttrc file\n"
+"  -H <file>\tspecify a draft file to read header from\n"
+"  -i <file>\tspecify a file which Mutt should include in the reply\n"
+"  -m <type>\tspecify a default mailbox type\n"
+"  -n\t\tcauses Mutt not to read the system Muttrc\n"
+"  -p\t\trecall a postponed message\n"
+"  -R\t\topen mailbox in read-only mode\n"
+"  -s <subj>\tspecify a subject (must be in quotes if it has spaces)\n"
+"  -v\t\tshow version and compile-time definitions\n"
+"  -x\t\tsimulate the mailx send mode\n"
+"  -y\t\tselect a mailbox specified in your `mailboxes' list\n"
+"  -z\t\texit immediately if there are no messages in the mailbox\n"
+"  -Z\t\topen the first folder with new message, exit immediately if none\n"
+"  -h\t\tthis help message"
+msgstr ""
+"usage: mutt [ -nRzZ ] [ -e <kom> ] [ -F <dos> ] [ -m <speco> ] [ -f <dos> ]\n"
+"       mutt [ -nx ] [ -e <kom> ] [ -a <dos> ] [ -F <dos> ] [ -H <dos> ] [ -i <dos> ] [ -s <temo> ] [ -b <adr> ] [ -c <adr> ] <adr> [ ... ]\n"
+"       mutt [ -n ] [ -e <kom> ] [ -F <dos> ] -p\n"
+"       mutt -v[v]\n"
+"\n"
+"elektoj:\n"
+"  -a <dosiero>\taldoni dosieron al la mesaĝo\n"
+"  -b <adreso>\tspecifi adreson por blinda kopio (BCC)\n"
+"  -c <adreso>\tspecifi adreson por kopio (CC)\n"
+"  -e <komando>\tspecifi komandon por ruligi post la starto\n"
+"  -f <dosiero>\tspecifi la poŝtfakon por malfermi\n"
+"  -F <dosiero>\tspecifi alian dosieron muttrc\n"
+"  -H <dosiero>\tspecifi malnetan dosieron por legi la ĉapon\n"
+"  -i <file>\tspecifi dosieron, kiun Mutt inkluzivu en la respondo\n"
+"  -m <type>\tspecifi implicitan specon de poŝtfakoj\n"
+"  -n\t\tindikas al Mutt ne legi la sisteman dosieron Muttrc\n"
+"  -p\t\trevoki prokrastitan mesaĝon\n"
+"  -R\t\tmalferi poŝtfakon nurlege\n"
+"  -s <temo>\tspecifi temlinion (en citiloj, se ĝi enhavas spacetojn)\n"
+"  -v\t\tmontri version kaj parametrojn de la tradukaĵo\n"
+"  -x\t\timiti la sendreĝimon de mailx\n"
+"  -y\t\telekti poŝtfakon specifitan en via listo 'mailboxes'\n"
+"  -z\t\teliri tuj, se ne estas mesaĝoj en la poŝtfako\n"
+"  -Z\t\tmalfermi la unuan poŝtfakon kun nova mesaĝo; eliri tuj, se mankas\n"
+"  -h\t\tdoni ĉi tiun mesaĝon"
+
+#: main.c:151
+msgid ""
+"\n"
+"Compile options:"
+msgstr "\nParametroj de la tradukaĵo:"
+
+#: main.c:308
+msgid "Error initializing terminal."
+msgstr "Eraro dum startigo de la terminalo."
+
+#: main.c:406
+#, c-format
+msgid "Debugging at level %d.\n"
+msgstr "Sencimigo ĉe la nivelo %d.\n"
+
+#: main.c:408
+msgid "DEBUG was not defined during compilation.  Ignored.\n"
+msgstr "DEBUG ne estis difinita por la tradukado. Ignoras.\n"
+
+#: main.c:546
+msgid "No recipients specified.\n"
+msgstr "Nenia ricevonto specifita.\n"
+
+#: main.c:619
+#, c-format
+msgid "%s: unable to attach file.\n"
+msgstr "%s: ne povas aldoni dosieron.\n"
+
+#: main.c:639
+msgid "No mailbox with new mail."
+msgstr "Mankas poŝtfako kun nova poŝto."
+
+#: main.c:673
+msgid "Mailbox is empty."
+msgstr "Poŝtfako estas malplena."
+
+#: mbox.c:143 mbox.c:202
+msgid "Mailbox is corrupt!"
+msgstr "Poŝtfako estas fuŝita!"
+
+#: mbox.c:277
+msgid "Reading %s... %d (%d%%)"
+msgstr "Legas %s ... %d (%d%%)"
+
+#: mbox.c:650
+msgid "Mailbox was corrupted!"
+msgstr "Poŝtfako fuŝiĝis!"
+
+#: mbox.c:685 mbox.c:928
+msgid "Fatal error!  Could not reopen mailbox!"
+msgstr "Grava eraro! Ne povis remalfermi poŝtfakon!"
+
+#: mbox.c:694
+msgid "Unable to lock mailbox!"
+msgstr "Ne povis ŝlosi poŝtfakon!"
+
+#. this means ctx->changed or ctx->deleted was set, but no
+#. * messages were found to be changed or deleted.  This should
+#. * never happen, is we presume it is a bug in mutt.
+#.
+#: mbox.c:738
+msgid "sync: mbox modified, but no modified messages! (report this bug)"
+msgstr "sync: mbox modifita, sed mankas modifitaj mesaĝoj! (Raportu ĉi tiun cimon.)"
+
+#: mbox.c:767
+msgid "Writing messages... %d (%d%%)"
+msgstr "Skribas mesaĝojn ... %d (%d%%)"
+
+#: mbox.c:913
+#, c-format
+msgid "Write failed!  Saved partial mailbox to %s"
+msgstr "Skribo malsukcesis! Skribis partan poŝtfakon al %s"
+
+#: mbox.c:965
+msgid "Could not reopen mailbox!"
+msgstr "Ne povis remalfermi poŝtfakon!"
+
+#: mbox.c:1003
+msgid "Reopening mailbox..."
+msgstr "Remalfermas poŝtfakon ..."
+
+#: menu.c:314
+msgid "Jump to: "
+msgstr "Salti al: "
+
+#: menu.c:323
+msgid "Invalid index number."
+msgstr "Nevalida indeksnumero."
+
+#: menu.c:327 menu.c:345 menu.c:381 menu.c:422 menu.c:438 menu.c:449
+#: menu.c:460 menu.c:502 menu.c:513 menu.c:526 menu.c:539 menu.c:818
+msgid "No entries."
+msgstr "Neniaj registroj."
+
+#: menu.c:342
+msgid "You cannot scroll down farther."
+msgstr "Vi ne povas rulumi pli malsupren."
+
+#: menu.c:358
+msgid "You cannot scroll up farther."
+msgstr "Vi ne povas rulumi pli supren."
+
+#: menu.c:378
+msgid "You are on the last page."
+msgstr "Vi estas ĉe la lasta paĝo."
+
+#: menu.c:400
+msgid "You are on the first page."
+msgstr "Vi estas ĉe la unua paĝo."
+
+#: menu.c:479
+msgid "First entry is shown."
+msgstr "Unua registro estas montrita."
+
+#: menu.c:499
+msgid "Last entry is shown."
+msgstr "Lasta registro estas montrita."
+
+#: menu.c:550
+msgid "You are on the last entry."
+msgstr "Vi estas ĉe la lasta registro."
+
+#: menu.c:561
+msgid "You are on the first entry."
+msgstr "Vi estas ĉe la lasta registro."
+
+#: menu.c:601 pattern.c:1055
+msgid "Search for: "
+msgstr "Serĉi pri: "
+
+#: menu.c:602
+msgid "Reverse search for: "
+msgstr "Inversa serĉo pri: "
+
+#: menu.c:613 pattern.c:1088
+msgid "No search pattern."
+msgstr "Mankas serĉŝablono."
+
+#: menu.c:643 pager.c:1832 pager.c:1848 pager.c:1936 pattern.c:1153
+msgid "Not found."
+msgstr "Ne trovita."
+
+#: menu.c:694
+msgid "No tagged entries."
+msgstr "Mankas markitaj registroj."
+
+#: menu.c:782
+msgid "Search is not implemented for this menu."
+msgstr "Serĉo ne eblas por ĉi tiu menuo."
+
+#: menu.c:821
+msgid "Tagging is not supported."
+msgstr "Markado ne funkcias."
+
+#: mh.c:189
+#, c-format
+msgid "Reading %s... %d"
+msgstr "Legas %s ... %d"
+
+#: mx.c:116
+#, c-format
+msgid "Lock count exceeded, remove lock for %s?"
+msgstr "Tro da ŝlosoj; ĉu forigi la ŝloson por %s?"
+
+#: mx.c:127
+#, c-format
+msgid "Can't dotlock %s.\n"
+msgstr "Ne povas ŝlosi %s.\n"
+
+#: mx.c:185
+msgid "Timeout exceeded while attempting fcntl lock!"
+msgstr "Tro da tempo pasis dum provado akiri fcntl-ŝloson!"
+
+#: mx.c:191
+#, c-format
+msgid "Waiting for fcntl lock... %d"
+msgstr "Atendas fcntl-ŝloson ... %d"
+
+#: mx.c:219
+msgid "Timeout exceeded while attempting flock lock!"
+msgstr "Tro da tempo pasis dum provado akiri flock-ŝloson!"
+
+#: mx.c:226
+#, c-format
+msgid "Waiting for flock attempt... %d"
+msgstr "Atendas flock-ŝloson ... %d"
+
+#: mx.c:623
+#, c-format
+msgid "Reading %s..."
+msgstr "Legas %s ..."
+
+#: mx.c:713
+#, c-format
+msgid "Writing %s..."
+msgstr "Skribas %s ..."
+
+#: mx.c:739
+#, c-format
+msgid "Could not synchronize mailbox %s!"
+msgstr "Ne povis aktualigi la poŝtfakon %s!"
+
+#: mx.c:803
+#, c-format
+msgid "Move read messages to %s?"
+msgstr "Ĉu movi legitajn mesaĝojn al %s?"
+
+#: mx.c:812 mx.c:1011
+#, c-format
+msgid "Purge %d deleted message?"
+msgstr "Ĉu forpurigi %d forviŝitan mesaĝon?"
+
+#: mx.c:812 mx.c:1011
+#, c-format
+msgid "Purge %d deleted messages?"
+msgstr "Ĉu forpurigi %d forviŝitajn mesaĝojn?"
+
+#: mx.c:836
+#, c-format
+msgid "Moving read messages to %s..."
+msgstr "Movas legitajn mesaĝojn al %s ..."
+
+#: mx.c:859 mx.c:1002
+msgid "Mailbox is unchanged."
+msgstr "Poŝtfako estas neŝanĝita."
+
+#: mx.c:878
+#, c-format
+msgid "%d kept, %d moved, %d deleted."
+msgstr "%d retenite, %d movite, %d forviŝite."
+
+#: mx.c:881 mx.c:1027
+#, c-format
+msgid "%d kept, %d deleted."
+msgstr "%d retenite, %d forviŝite."
+
+#: mx.c:987
+#, c-format
+msgid " Press '%s' to toggle write"
+msgstr " Premu '%s' por (mal)ŝalti skribon"
+
+#: mx.c:989
+msgid "Use 'toggle-write' to re-enable write!"
+msgstr "Uzu 'toggle-write' por reebligi skribon!"
+
+#: mx.c:991
+#, c-format
+msgid "Mailbox is marked unwritable. %s"
+msgstr "Poŝtfako estas markita kiel neskribebla. %s"
+
+#: pager.c:54
+msgid "Not available in this menu."
+msgstr "Ne disponata en ĉi tiu menuo."
+
+#: pager.c:1373
+msgid "PrevPg"
+msgstr "AntPĝ"
+
+#: pager.c:1374
+msgid "NextPg"
+msgstr "SekvPĝ"
+
+#: pager.c:1378
+msgid "View Attachm."
+msgstr "Vidi Partojn"
+
+#: pager.c:1381
+msgid "Next"
+msgstr "Sekva"
+
+#. emulate "less -q" and don't go on to the next message.
+#: pager.c:1744 pager.c:1775 pager.c:1804 pager.c:2024
+msgid "Bottom of message is shown."
+msgstr "Fino de mesaĝo estas montrita."
+
+#: pager.c:1760 pager.c:1782 pager.c:1793
+msgid "Top of message is shown."
+msgstr "Vi estas ĉe la komenco de la mesaĝo"
+
+#: pager.c:1866
+msgid "Reverse search: "
+msgstr "Inversa serĉo: "
+
+#: pager.c:1867
+msgid "Search: "
+msgstr "Serĉo: "
+
+#: pager.c:1962
+msgid "Help is currently being shown."
+msgstr "Helpo estas nun montrata."
+
+#: pager.c:1991
+msgid "No more quoted text."
+msgstr "Ne plu da citita teksto."
+
+#: pager.c:2004
+msgid "No more unquoted text after quoted text."
+msgstr "Ne plu da necitita teksto post citita teksto."
+
+#: parse.c:503
+msgid "multipart message has no boundary parameter!"
+msgstr "Plurparta mesaĝo ne havas limparametron!"
+
+#: pattern.c:236
+#, c-format
+msgid "Error in expression: %s"
+msgstr "Eraro en esprimo: %s"
+
+#: pattern.c:333
+#, c-format
+msgid "Invalid day of month: %s"
+msgstr "Nevalida tago de monato: %s"
+
+#: pattern.c:347
+#, c-format
+msgid "Invalid month: %s"
+msgstr "Nevalida monato: %s"
+
+#: pattern.c:401
+msgid "error in expression"
+msgstr "eraro en esprimo"
+
+#: pattern.c:586 pattern.c:694
+#, c-format
+msgid "error in pattern at: %s"
+msgstr "eraro en ŝablono ĉe: %s"
+
+#: pattern.c:634
+#, c-format
+msgid "%c: invalid command"
+msgstr "%c: nevalida komando"
+
+#: pattern.c:640
+#, c-format
+msgid "%c: not supported in this mode"
+msgstr "%c: ne funkcias en ĉi tiu reĝimo"
+
+#: pattern.c:653
+msgid "missing parameter"
+msgstr "parametro mankas"
+
+#: pattern.c:669
+#, c-format
+msgid "mismatched parenthesis: %s"
+msgstr "krampoj ne kongruas: %s"
+
+#: pattern.c:701
+msgid "empty pattern"
+msgstr "malplena ŝablono"
+
+#: pattern.c:880
+#, c-format
+msgid "error: unknown op %d (report this error)."
+msgstr "eraro: nekonata funkcio %d (raportu ĉi tiun cimon)"
+
+#: pattern.c:945 pattern.c:1074
+msgid "Compiling search pattern..."
+msgstr "Tradukas serĉŝablonon ..."
+
+#: pattern.c:959
+msgid "Executing command on matching messages..."
+msgstr "Ruligas komandon pri trafataj mesaĝoj ..."
+
+#: pattern.c:1022
+msgid "No messages matched criteria."
+msgstr "Mankas mesaĝoj, kiuj plenumas la kondiĉojn"
+
+#: pattern.c:1112
+msgid "Search hit bottom without finding match"
+msgstr "Serĉo atingis la finon sen trovi trafon"
+
+#: pattern.c:1123
+msgid "Search hit top without finding match"
+msgstr "Serĉo atingis la komencon sen trovi trafon"
+
+#: pattern.c:1145
+msgid "Search interrupted."
+msgstr "Serĉo interrompita."
+
+#: pgp.c:139
+msgid "Enter PGP passphrase:"
+msgstr "Donu PGP-pasfrazon:"
+
+#: pgp.c:155
+msgid "PGP passphrase forgotten."
+msgstr "PGP-pasfrazo forgesita."
+
+#: pgp.c:183
+#, c-format
+msgid "Unknown PGP version \"%s\"."
+msgstr "Nekonata PGP-versio \"%s\"."
+
+#: pgp.c:216
+msgid "[-- PGP output follows (current time: "
+msgstr "[-- Eligo de PGP sekvas (nun horo: "
+
+#: pgp.c:329
+msgid "[-- Error: unable to create PGP subprocess! --]\n"
+msgstr "[-- Eraro: ne povas krei PGP-subprocezon! --]\n"
+
+#: pgp.c:356
+msgid ""
+"\n"
+"[-- End of PGP output --]\n"
+"\n"
+msgstr "\n[-- Fino de PGP-eligo --]\n\n"
+
+#: pgp.c:362
+msgid ""
+"[-- BEGIN PGP MESSAGE --]\n"
+"\n"
+msgstr "[-- KOMENCO DE PGP-MESAĜO --]\n"
+
+#: pgp.c:364
+msgid "[-- BEGIN PGP PUBLIC KEY BLOCK --]\n"
+msgstr "[-- KOMENCO DE PUBLIKA PGP-ŜLOSILO --]\n"
+
+#: pgp.c:366
+msgid ""
+"[-- BEGIN PGP SIGNED MESSAGE --]\n"
+"\n"
+msgstr "[-- KOMENCO DE PGP-SUBSKRIBITA MESAĜO --]\n\n"
+
+#: pgp.c:468
+msgid ""
+"\n"
+"[-- END PGP MESSAGE --]\n"
+msgstr "\n[-- FINO DE PGP-MESAĜO --]\n"
+
+#: pgp.c:470
+msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
+msgstr "[-- FINO DE PUBLIKA PGP-ŜLOSILO --]\n"
+
+#: pgp.c:472
+msgid ""
+"\n"
+"[-- END PGP SIGNED MESSAGE --]\n"
+msgstr "\n[-- FINO DE PGP-SUBSKRIBA MESAĜO --]\n"
+
+#: pgp.c:485
+msgid ""
+"[-- Error: could not find beginning of PGP message! --]\n"
+"\n"
+msgstr "[-- Eraro: ne povas trovi komencon de PGP-mesaĝo! --]\n\n"
+
+#: pgp.c:678 pgp.c:903
+msgid ""
+"[-- End of PGP output --]\n"
+"\n"
+msgstr "[-- Fino de PGP-eligo --]\n\n"
+
+#. Now display the signed body
+#: pgp.c:685
+msgid ""
+"[-- The following data is PGP/MIME signed --]\n"
+"\n"
+msgstr "[-- La sekvaj datenoj estas PGP/MIME-subskribitaj --]\n\n"
+
+#: pgp.c:691
+msgid ""
+"\n"
+"[-- End of PGP/MIME signed data --]\n"
+msgstr "\n[-- Fino de PGP/MIME-subskribitaj datenoj --]\n"
+
+#: pgp.c:696
+msgid ""
+"[-- Error: this message does not comply with the PGP/MIME specification! "
+"--]\n"
+"\n"
+msgstr "[-- Eraro: ĉi tiu mesaĝo ne obeas la PGP/MIME-difinon! --]\n\n"
+
+#: pgp.c:810
+msgid "Internal error. Inform <roessler@guug.de>."
+msgstr "Interna eraro. Informu al <roessler@guug.de>."
+
+#: pgp.c:874
+msgid ""
+"[-- Error: could not create a PGP subprocess! --]\n"
+"\n"
+msgstr "[-- Eraro: ne povas krei PGP-subprocezon! --]\n\n"
+
+#: pgp.c:967
+msgid ""
+"[-- Error: malformed PGP/MIME message! --]\n"
+"\n"
+msgstr "[-- Eraro: misformita PGP/MIME-mesaĝo! --]\n\n"
+
+#: pgp.c:980
+msgid "[-- Error: could not create temporary file! --]\n"
+msgstr "[-- Eraro: ne povas krei dumtempan dosieron! --]\n"
+
+#: pgp.c:989
+msgid ""
+"[-- The following data is PGP/MIME encrypted --]\n"
+"\n"
+msgstr "[-- La sekvaj datenoj estas PGP/MIME-ĉifritaj --]\n\n"
+
+#: pgp.c:997
+msgid ""
+"\n"
+"[-- End of PGP/MIME encrypted data --]\n"
+msgstr "\n[-- Fino de PGP/MIME-ĉifritaj datenoj --]\n"
+
+#: pgp.c:1079
+msgid "Can't open PGP subprocess!"
+msgstr "Ne povas malfermi PGP-subprocezon!"
+
+#: pgp.c:1207
+#, c-format
+msgid "Use keyID = \"%s\" for %s?"
+msgstr "Ĉu uzi keyID = \"%s\" por %s?"
+
+#: pgp.c:1213
+#, c-format
+msgid "Enter keyID for %s: "
+msgstr "Donu keyID por %s: "
+
+#: pgpkey.c:173
+msgid "Exit  "
+msgstr "Eliri  "
+
+#: pgpkey.c:175
+msgid "Select  "
+msgstr "Elekti  "
+
+#: pgpkey.c:178
+msgid "Check key  "
+msgstr "Kontroli ŝlosilon  "
+
+#: pgpkey.c:191
+msgid "PGP keys matching "
+msgstr "PGP-ŝlosiloj, kiuj kongruas kun "
+
+#: pgpkey.c:210 pgpkey.c:387
+msgid "Can't open /dev/null"
+msgstr "Ne povas malfermi /dev/null"
+
+#: pgpkey.c:216 pgpkey.c:381
+msgid "Can't create temporary file"
+msgstr "Ne povas krei dumtempan dosieron"
+
+#: pgpkey.c:226 pgpkey.c:398
+msgid "Can't create filter"
+msgstr "Ne povas krei filtrilon"
+
+#: pgpkey.c:236
+#, c-format
+msgid "Key ID: 0x%s"
+msgstr "Key ID: 0x%s"
+
+#: pgpkey.c:257
+msgid "This ID's trust level is undefined."
+msgstr "La fidonivelo de ĉi tiu ID ne estas difinita."
+
+#: pgpkey.c:258
+msgid "This ID is not trusted."
+msgstr "Ĉi tiu ID ne estas fidinda."
+
+#: pgpkey.c:259
+msgid "This ID is only marginally trusted."
+msgstr "Ĉi tiu ID estas nur iomete fidinda."
+
+#: pgpkey.c:262
+#, c-format
+msgid "%s Do you really want to use it?"
+msgstr "%s Ĉu vi vere volas uzi ĝin?"
+
+#: pgpkey.c:369
+msgid "Please enter the key ID: "
+msgstr "Bonvolu doni la ŝlosilidentigilon: "
+
+#: pgpkey.c:416
+#, c-format
+msgid "PGP Key 0x%s."
+msgstr "PGP-ŝlosilo 0x%s."
+
+#: pgppubring.c:58
+msgid "reserved"
+msgstr "rezervite"
+
+#: pgppubring.c:59
+msgid "Encrypted Session Key"
+msgstr "Ĉifrita Seanco-Ŝlosilo"
+
+#: pgppubring.c:60
+msgid "Signature Packet"
+msgstr "Subskribo-Paketo"
+
+#: pgppubring.c:61
+msgid "Conventionally Encrypted Session Key Packet"
+msgstr "Konvencie Ĉifrita Paketo de Seanco-Ŝlosilo"
+
+#: pgppubring.c:62
+msgid "One-Pass Signature Packet"
+msgstr "Paketo de Unufoja Subskribo"
+
+#: pgppubring.c:63
+msgid "Secret Key Packet"
+msgstr "Paketo de Sekreta Ŝlosilo"
+
+#: pgppubring.c:64
+msgid "Public Key Packet"
+msgstr "Paketo de Publika Ŝlosilo"
+
+#: pgppubring.c:65
+msgid "Secret Subkey Packet"
+msgstr "Paketo de Sekreta Subŝlosilo"
+
+#: pgppubring.c:66
+msgid "Compressed Data Packet"
+msgstr "Paketo de Densigitaj Datenoj"
+
+#: pgppubring.c:67
+msgid "Symmetrically Encrypted Data Packet"
+msgstr "Paketo de Simetrie Ĉifritaj Datenoj"
+
+#: pgppubring.c:68
+msgid "Marker Packet"
+msgstr "Marka Paketo"
+
+#: pgppubring.c:69
+msgid "Literal Data Packet"
+msgstr "Paketo de Laŭvortaj Datenoj"
+
+#: pgppubring.c:70
+msgid "Trust Packet"
+msgstr "Fido-Paketo"
+
+#: pgppubring.c:71
+msgid "Name Packet"
+msgstr "Nomo-Paketo"
+
+#: pgppubring.c:72
+msgid "Subkey Packet"
+msgstr "Subŝlosilo-Paketo"
+
+#: pgppubring.c:73
+msgid "Reserved"
+msgstr "Rezervite"
+
+#: pgppubring.c:74
+msgid "Comment Packet"
+msgstr "Komento-Paketo"
+
+#: pop.c:66
+msgid "POP Password: "
+msgstr "POP-pasvorto: "
+
+#: pop.c:91
+msgid "POP host is not defined."
+msgstr "POP-servilo ne estas difinita."
+
+#: pop.c:97
+msgid "No POP username is defined."
+msgstr "POP-uzantonomo ne estas difinita."
+
+#: pop.c:114
+#, c-format
+msgid "Could not find address for host %s."
+msgstr "Ne povis trovi adreson por servilo %s."
+
+#: pop.c:122
+#, c-format
+msgid "Connecting to %s"
+msgstr "Konektiĝas al %s"
+
+#: pop.c:166 pop.c:336
+msgid "Server closed connection!"
+msgstr "Servilo fermis la konekton!"
+
+#: pop.c:187
+msgid "No new mail in POP mailbox."
+msgstr "Mankas novaj mesaĝoj en POP-poŝtfako."
+
+#: pop.c:209
+#, c-format
+msgid "Reading %d new message (%d bytes)..."
+msgstr "Elŝutas %d novan mesaĝon (%d bitokojn) ..."
+
+#: pop.c:210
+#, c-format
+msgid "Reading %d new messages (%d bytes)..."
+msgstr "Elŝutas %d novajn mesaĝojn (%d bitokojn) ..."
+
+#: pop.c:245
+msgid "Error reading message!"
+msgstr "Eraro dum legado de mesaĝo!"
+
+#: pop.c:281
+msgid "Error while writing mailbox!"
+msgstr "Eraro dum skribado de poŝtfako!"
+
+#: pop.c:307
+#, c-format
+msgid "%s [%d messages read]"
+msgstr "%s [%d mesaĝoj legitaj]"
+
+#: postpone.c:112
+msgid "Postponed Messages"
+msgstr "Prokrastitaj Mesaĝoj"
+
+#: postpone.c:185 postpone.c:194
+msgid "No postponed messages."
+msgstr "Mankas prokrastitaj mesaĝoj."
+
+#: postpone.c:339 postpone.c:359 postpone.c:368
+msgid "Illegal PGP header"
+msgstr "Nevalida PGP-ĉapo"
+
+#: query.c:45
+msgid "New Query"
+msgstr "Nova Demando"
+
+#: query.c:46
+msgid "Make Alias"
+msgstr "Aldoni Nomon"
+
+#: query.c:47
+msgid "Search"
+msgstr "Serĉi"
+
+#: query.c:91
+msgid "Waiting for response..."
+msgstr "Atendas respondon ..."
+
+#: query.c:192 query.c:217
+msgid "Query command not defined."
+msgstr "Demandokomando ne difinita."
+
+#: query.c:244
+msgid "Query"
+msgstr "Demando"
+
+#. Prompt for Query
+#: query.c:257 query.c:285
+msgid "Query: "
+msgstr "Demando: "
+
+#: query.c:268 query.c:294
+#, c-format
+msgid "Query '%s'"
+msgstr "Demando '%s'"
+
+#: recvattach.c:59
+msgid "Pipe"
+msgstr "Tubo"
+
+#: recvattach.c:60
+msgid "Print"
+msgstr "Presi"
+
+#: recvattach.c:384
+msgid "Saving..."
+msgstr "Skribas ..."
+
+#: recvattach.c:447
+msgid "Attachment saved"
+msgstr "Parto skribita"
+
+#: recvattach.c:459
+#, c-format
+msgid "WARNING!  You are about to overwrite %s, continue?"
+msgstr "AVERTO! Vi estas surskribonta %s; ĉu daŭrigi?"
+
+#: recvattach.c:477
+msgid "Attachment filtered."
+msgstr "Parto filtrita."
+
+#: recvattach.c:543
+msgid "Filter through: "
+msgstr "Filtri tra: "
+
+#: recvattach.c:543
+msgid "Pipe to: "
+msgstr "Trakti per: "
+
+#: recvattach.c:578
+#, c-format
+msgid "I dont know how to print %s attachments!"
+msgstr "Mi ne scias presi %s-partojn!"
+
+#: recvattach.c:641
+msgid "Print tagged attachment(s)?"
+msgstr "Ĉu presi markitajn partojn?"
+
+#: recvattach.c:641
+msgid "Print attachment?"
+msgstr "Ĉu presi parton?"
+
+#: recvattach.c:669
+msgid "You may only bounce message/rfc822 parts."
+msgstr "Vi povas redirekti nur message/rfc822-partojn."
+
+#: recvattach.c:705
+#, c-format
+msgid "Bounce messages to %s...?"
+msgstr "Ĉu redirekti mesaĝojn al %s ...?"
+
+#: recvattach.c:706
+#, c-format
+msgid "Bounce message to %s...?"
+msgstr "Ĉu redirekti mesaĝon al %s ...?"
+
+#: recvattach.c:941
+msgid "Attachments"
+msgstr "Partoj"
+
+#: recvattach.c:999
+msgid "Deletion of attachments from PGP messages is unsupported."
+msgstr "Mutt ne kapablas forviŝi partojn el PGP-mesaĝoj."
+
+#: recvattach.c:1019 recvattach.c:1036
+msgid "Only deletion of multipart attachments is supported."
+msgstr "Mutt kapablas forviŝi nur multipart-partojn."
+
+#: recvattach.c:1087
+msgid "This operation is not currently supported for PGP messages."
+msgstr "Mutt ankoraŭ ne kapablas fari tion ĉe PGP-mesaĝoj."
+
+#: rfc1524.c:176
+#, c-format
+msgid "Improperly formated entry for type %s in \"%s\" line %d"
+msgstr "Malĝuste strukturita elemento por speco %s en \"%s\" linio %d"
+
+#: rfc1524.c:408
+msgid "No mailcap path specified"
+msgstr "Neniu mailcap-vojo specifita"
+
+#: rfc1524.c:434
+#, c-format
+msgid "mailcap entry for type %s not found"
+msgstr "mailcap-regulo por speco %s ne trovita"
+
+#: score.c:73
+msgid "score: too few arguments"
+msgstr "score: nesufiĉe da argumentoj"
+
+#: score.c:82
+msgid "score: too many arguments"
+msgstr "score: tro da argumentoj"
+
+#: send.c:229
+msgid "No subject, abort?"
+msgstr "Mankas temlinio; ĉu nuligi?"
+
+#: send.c:231
+msgid "No subject, aborting."
+msgstr "Mankas temlinio; eliras."
+
+#. There are quite a few mailing lists which set the Reply-To:
+#. * header field to the list address, which makes it quite impossible
+#. * to send a message to only the sender of the message.  This
+#. * provides a way to do that.
+#.
+#: send.c:433
+#, c-format
+msgid "Reply to %s%s?"
+msgstr "Ĉu respondi al %s%s?"
+
+#. This could happen if the user tagged some messages and then did
+#. * a limit such that none of the tagged message are visible.
+#.
+#: send.c:517
+msgid "No tagged messages are visible!"
+msgstr "Neniuj markitaj mesaĝoj estas videblaj!"
+
+#: send.c:542
+msgid "No mailing lists found!"
+msgstr "Neniu dissendolisto trovita!"
+
+#: send.c:627
+msgid "Include message in reply?"
+msgstr "Ĉu inkluzivi mesaĝon en respondo?"
+
+#: send.c:641
+msgid "Could not include all requested messages!"
+msgstr "Ne povis inkluzivi ĉiujn petitajn mesaĝojn!"
+
+#: send.c:654
+msgid "Forward MIME encapsulated?"
+msgstr "Ĉu plusendi MIME-pakita?"
+
+#. If the user is composing a new message, check to see if there
+#. * are any postponed messages first.
+#.
+#: send.c:865
+msgid "Recall postponed message?"
+msgstr "Ĉu revoki prokrastitan mesaĝon?"
+
+#: send.c:1097
+msgid "Abort unmodified message?"
+msgstr "Ĉu nuligi nemodifitan mesaĝon?"
+
+#: send.c:1099
+msgid "Aborted unmodified message."
+msgstr "Nemodifita mesaĝon nuligita"
+
+#. abort
+#: send.c:1138
+msgid "Mail not sent."
+msgstr "Mesaĝo ne sendita."
+
+#: send.c:1151
+msgid "Message postponed."
+msgstr "Mesaĝo prokrastita."
+
+#: send.c:1160
+msgid "No recipients are specified!"
+msgstr "Neniu ricevanto estas specifita!"
+
+#: send.c:1165
+msgid "No recipients were specified."
+msgstr "Neniuj ricevantoj estis specifitaj."
+
+#: send.c:1171
+msgid "No subject, abort sending?"
+msgstr "Mankas temlinio; ĉu haltigi sendon?"
+
+#: send.c:1175
+msgid "No subject specified."
+msgstr "Temlinio ne specifita."
+
+#: send.c:1212
+msgid "Message edited. Really send?"
+msgstr "Mesaĝo redaktita. Ĉu vere sendi?"
+
+#: send.c:1218
+msgid "Sending message..."
+msgstr "Sendas mesaĝon ..."
+
+#: send.c:1320
+msgid "Could not send the message."
+msgstr "Ne povis sendi la mesaĝon."
+
+#: send.c:1325
+msgid "Mail sent."
+msgstr "Mesaĝo sendita."
+
+#: send.c:1325
+msgid "Sending in background."
+msgstr "Sendas en fono."
+
+#: sendlib.c:489
+msgid "No boundary parameter found! [report this error]"
+msgstr "Nenia limparametro trovita! (Raportu ĉi tiun cimon.)"
+
+#: sendlib.c:523
+#, c-format
+msgid "%s no longer exists!"
+msgstr "%s ne plu ekzistas!"
+
+#: sendlib.c:791
+#, c-format
+msgid "Could not open %s"
+msgstr "Ne povas malfermi %s"
+
+#: sendlib.c:1690
+#, c-format
+msgid "Error sending message, child exited %d (%s)."
+msgstr "Eraro dum sendado de mesaĝo; ido finis per %d (%s)."
+
+#: sendlib.c:1696
+msgid "Output of the delivery process"
+msgstr "Eligo de la liverprocezo"
+
+#: signal.c:39
+#, c-format
+msgid "%s...  Exiting.\n"
+msgstr "%s ... Eliras.\n"
+
+#: signal.c:42
+#, c-format
+msgid "Caught %s...  Exiting.\n"
+msgstr "Ricevis %s ... Eliras.\n"
+
+#: signal.c:44
+#, c-format
+msgid "Caught signal %d...  Exiting.\n"
+msgstr "Ricevis signalon %d ... Eliras.\n"
+
+#: socket.c:130
+#, c-format
+msgid "Connecting to %s..."
+msgstr "Konektiĝas al %s ..."
+
+#: sort.c:198
+msgid "Sorting mailbox..."
+msgstr "Ordigas poŝtfakon ..."
+
+#: sort.c:226
+msgid "Could not find sorting function! [report this bug]"
+msgstr "Ne povis trovi ordigfunkcion! (Raportu ĉi tiun cimon.)"
+
+#: status.c:101
+msgid "(no mailbox)"
+msgstr "(mankas poŝtfako)"
