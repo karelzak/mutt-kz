@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-0.95.5\n"
-"POT-Creation-Date: 1999-08-31 21:26+0200\n"
+"POT-Creation-Date: 1999-09-25 08:52+0200\n"
 "PO-Revision-Date: 1999-05-24 22:24+02:00\n"
 "Last-Translator: Marco d'Itri <md@linux.it>\n"
 "Language-Team: none\n"
@@ -140,7 +140,7 @@ msgstr "CambiaDir"
 msgid "Mask"
 msgstr "Maschera"
 
-#: browser.c:344 browser.c:671
+#: browser.c:344 browser.c:678
 #, c-format
 msgid "%s is not a directory."
 msgstr "%s non è una directory."
@@ -155,44 +155,49 @@ msgstr "Mailbox [%d]"
 msgid "Directory [%s], File mask: %s"
 msgstr "Directory [%s], Maschera dei file: %s"
 
-#: browser.c:538 browser.c:728 browser.c:811
+#: browser.c:519
+#, fuzzy
+msgid "IMAP folder browsing is not currently supported"
+msgstr "Questa operazione attualmente non è gestita per i messaggi PGP."
+
+#: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
 msgstr "Non ci sono file corrispondenti alla maschera"
 
-#: browser.c:645
+#: browser.c:652
 msgid "Chdir to: "
 msgstr "Cambia directory:"
 
-#: browser.c:664 browser.c:721
+#: browser.c:671 browser.c:728
 msgid "Error scanning directory."
 msgstr "Errore nella lettura della directory."
 
-#: browser.c:682
+#: browser.c:689
 msgid "File Mask: "
 msgstr "Maschera dei file: "
 
-#: browser.c:744
+#: browser.c:751
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr ""
 "Ordino al contrario per (d)ata, (a)lfabetico, dimensioni(z) o (n)ulla? "
 
-#: browser.c:745
+#: browser.c:752
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "Ordino per (d)ata, (a)lfabetico, dimensioni(z) o (n)ulla? "
 
-#: browser.c:746
+#: browser.c:753
 msgid "dazn"
 msgstr "dazn"
 
-#: browser.c:798
+#: browser.c:805
 msgid "New file name: "
 msgstr "Nuovo nome del file: "
 
-#: browser.c:819
+#: browser.c:826
 msgid "Can't view a directory"
 msgstr "Impossibile vedere una directory"
 
-#: browser.c:837
+#: browser.c:844
 msgid "Error trying to view file"
 msgstr "C'è stato un errore nella visualizzazione del file"
 
@@ -848,62 +853,62 @@ msgid "[-- Error: unexpected end of file! --]\n"
 msgstr "[-- Errore: fine del file inaspettata! --]\n"
 
 #. didn't find anything that we could display!
-#: handler.c:959
+#: handler.c:971
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
 msgstr ""
 "[-- Errore: impossibile visualizzare alcuna parte di multipart/alternative! "
 "--]\n"
 
-#: handler.c:1076
+#: handler.c:1088
 #, c-format
 msgid "[-- Attachment #%d"
 msgstr "[-- Allegato #%d"
 
-#: handler.c:1087
+#: handler.c:1099
 #, c-format
 msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
 msgstr "[-- Tipo: %s/%s, Codifica: %s, Dimensioni: %s --]\n"
 
-#: handler.c:1146
+#: handler.c:1158
 #, c-format
 msgid "[-- Autoview using %s --]\n"
 msgstr "[-- Visualizza automaticamente con %s --]\n"
 
-#: handler.c:1147
+#: handler.c:1159
 #, c-format
 msgid "Invoking autoview command: %s"
 msgstr "Richiamo il comando di autovisualizzazione: %s"
 
-#: handler.c:1184 handler.c:1202
+#: handler.c:1196 handler.c:1214
 #, c-format
 msgid "[-- Autoview stderr of %s --]\n"
 msgstr "[-- Stderr dell'autoview di %s --]\n"
 
-#: handler.c:1234
+#: handler.c:1246
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
 msgstr ""
 "[-- Errore: message/external-body non ha un parametro access-type --]\n"
 
-#: handler.c:1251
+#: handler.c:1263
 #, c-format
 msgid "[-- This %s/%s attachment "
 msgstr "[-- Questo allegato %s/%s "
 
-#: handler.c:1258
+#: handler.c:1270
 #, c-format
 msgid "(size %s bytes) "
 msgstr "(dimensioni %s byte) "
 
-#: handler.c:1260
+#: handler.c:1272
 msgid "has been deleted --]\n"
 msgstr "è stato cancellato -- ]\n"
 
-#: handler.c:1263
+#: handler.c:1275
 #, c-format
 msgid "[-- on %s --]\n"
 msgstr "[-- su %s --]\n"
 
-#: handler.c:1273
+#: handler.c:1285
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
@@ -913,7 +918,7 @@ msgstr ""
 "[-- Questo allegato %s/%s non è incluso --]\n"
 "[-- e l'origine esterna indicata è scaduta. --]\n"
 
-#: handler.c:1287
+#: handler.c:1299
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
@@ -922,29 +927,29 @@ msgstr ""
 "[-- Questo allegato %s/%s non è incluso --]\n"
 "[-- e il l'access-type %s indicato non è gestito --]\n"
 
-#: handler.c:1384
+#: handler.c:1396
 msgid "Error: multipart/signed has no protocol."
 msgstr "Errore: multipart/signed non ha protocollo."
 
-#: handler.c:1396
+#: handler.c:1408
 msgid "Error: multipart/encrypted has no protocol parameter!"
 msgstr "Errore: multipart/encrypted non ha il parametro protocol!"
 
-#: handler.c:1438
+#: handler.c:1450
 msgid "Unable to open temporary file!"
 msgstr "Impossibile aprire il file temporaneo!"
 
-#: handler.c:1497
+#: handler.c:1509
 #, c-format
 msgid "[-- %s/%s is unsupported "
 msgstr "[-- %s/%s non è gestito "
 
-#: handler.c:1502
+#: handler.c:1514
 #, c-format
 msgid "(use '%s' to view this part)"
 msgstr "(usa '%s' per vederlo)"
 
-#: handler.c:1504
+#: handler.c:1516
 msgid "(need 'view-attachments' bound to key!)"
 msgstr "('view-attachments' deve essere assegnato a un tasto!)"
 
@@ -1089,102 +1094,102 @@ msgstr "Cancello i messaggi dal server..."
 msgid "Closing mailbox..."
 msgstr "Chiudo la mailbox..."
 
-#: init.c:432
+#: init.c:444
 msgid "alias: no address"
 msgstr "alias: nessun indirizzo"
 
-#: init.c:526
+#: init.c:538
 msgid "invalid header field"
 msgstr "Campo dell'header non valido"
 
-#: init.c:534
+#: init.c:546
 #, c-format
 msgid "ignoring empty header field: %s"
 msgstr "Ignoro il campo dell'header vuoto: %s"
 
-#: init.c:586
+#: init.c:598
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: metodo di ordinamento sconosciuto"
 
-#: init.c:659
+#: init.c:671
 #, c-format
 msgid "mutt_restore_default: error in regexp: %s\n"
 msgstr "mutt_restore_default: errore nella regexp: %s\n"
 
-#: init.c:719
+#: init.c:731
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: variabile sconosciuta"
 
-#: init.c:728
+#: init.c:740
 msgid "prefix is illegal with reset"
 msgstr "prefix non è consentito con reset"
 
-#: init.c:734
+#: init.c:746
 msgid "value is illegal with reset"
 msgstr "value non è consentito con reset"
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is set"
 msgstr "%s è attivo"
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is unset"
 msgstr "%s non è attivo"
 
-#: init.c:947
+#: init.c:959
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: tipo di mailbox non valido"
 
-#: init.c:1006
+#: init.c:1018
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: valore non valido"
 
-#: init.c:1056
+#: init.c:1068
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: tipo sconosciuto"
 
-#: init.c:1105
+#: init.c:1117
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Errore in %s, linea %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1116
+#: init.c:1128
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: errori in %s"
 
-#: init.c:1126
+#: init.c:1138
 #, c-format
 msgid "source: error at %s"
 msgstr "source: errore in %s"
 
-#: init.c:1131
+#: init.c:1143
 msgid "source: too many arguments"
 msgstr "source: troppi argomenti"
 
-#: init.c:1182
+#: init.c:1194
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: comando sconosciuto"
 
-#: init.c:1514
+#: init.c:1526
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Errore nella riga di comando: %s\n"
 
-#: init.c:1557
+#: init.c:1569
 msgid "unable to determine home directory"
 msgstr "impossibile determinare la home directory"
 
-#: init.c:1565
+#: init.c:1577
 msgid "unable to determine username"
 msgstr "impossibile determinare l'username"
 
@@ -2037,33 +2042,33 @@ msgstr ""
 "\n"
 "Opzioni di compilazione:"
 
-#: main.c:305
+#: main.c:308
 msgid "Error initializing terminal."
 msgstr "Errore nell'inizializzazione del terminale."
 
-#: main.c:403
+#: main.c:406
 #, c-format
 msgid "Debugging at level %d.\n"
 msgstr "Debugging al livello %d.\n"
 
-#: main.c:405
+#: main.c:408
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
 msgstr "DEBUG non è stato definito durante la compilazione.  Ignorato.\n"
 
-#: main.c:543
+#: main.c:546
 msgid "No recipients specified.\n"
 msgstr "Nessun destinatario specificato.\n"
 
-#: main.c:616
+#: main.c:619
 #, c-format
 msgid "%s: unable to attach file.\n"
 msgstr "%s: impossibile allegare il file.\n"
 
-#: main.c:636
+#: main.c:639
 msgid "No mailbox with new mail."
 msgstr "Nessuna mailbox con nuova posta."
 
-#: main.c:670
+#: main.c:673
 msgid "Mailbox is empty."
 msgstr "La mailbox è vuota."
 

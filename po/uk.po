@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 1999-08-31 21:26+0200\n"
+"POT-Creation-Date: 1999-09-25 08:52+0200\n"
 "PO-Revision-Date: 1998-10-25 15:44+0200\n"
 "Last-Translator: Andrej N. Gritsenko <andrej@lucky.net>\n"
 "Language-Team: Ukrainian <uk@ua.net>\n"
@@ -136,7 +136,7 @@ msgstr "Каталог"
 msgid "Mask"
 msgstr "Маска"
 
-#: browser.c:344 browser.c:671
+#: browser.c:344 browser.c:678
 #, c-format
 msgid "%s is not a directory."
 msgstr "%s не ╓ каталогом."
@@ -151,43 +151,48 @@ msgstr "Поштов╕ скриньки [%d]"
 msgid "Directory [%s], File mask: %s"
 msgstr "Каталог [%s] з маскою: %s"
 
-#: browser.c:538 browser.c:728 browser.c:811
+#: browser.c:519
+#, fuzzy
+msgid "IMAP folder browsing is not currently supported"
+msgstr "Ця операц╕я не п╕дтриму╓ться для лист╕в з PGP."
+
+#: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
 msgstr "Нема╓ в╕дпов╕дних до маски файл╕в"
 
-#: browser.c:645
+#: browser.c:652
 msgid "Chdir to: "
 msgstr "Перейти до: "
 
-#: browser.c:664 browser.c:721
+#: browser.c:671 browser.c:728
 msgid "Error scanning directory."
 msgstr "Каталог не скану╓ться."
 
-#: browser.c:682
+#: browser.c:689
 msgid "File Mask: "
 msgstr "Маска: "
 
-#: browser.c:744
+#: browser.c:751
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "Зворотньо сортувати за датою(d), л╕терою(a), розм╕ром(s), чи н╕(n)?"
 
-#: browser.c:745
+#: browser.c:752
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "Сортувати за датою(d), л╕терою(a), розм╕ром(s), чи н╕(n)?"
 
-#: browser.c:746
+#: browser.c:753
 msgid "dazn"
 msgstr ""
 
-#: browser.c:798
+#: browser.c:805
 msgid "New file name: "
 msgstr "╤м'я нового файлу: "
 
-#: browser.c:819
+#: browser.c:826
 msgid "Can't view a directory"
 msgstr "Неможливо побачити каталог"
 
-#: browser.c:837
+#: browser.c:844
 msgid "Error trying to view file"
 msgstr "Неможливо розглянути файл"
 
@@ -841,60 +846,60 @@ msgid "[-- Error: unexpected end of file! --]\n"
 msgstr "[-- Помилка: к╕нець файлу не знайдено! --]\n"
 
 #. didn't find anything that we could display!
-#: handler.c:959
+#: handler.c:971
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
 msgstr ""
 "[-- Помилка: жодну частину Multipart/Alternative не вийшло побачити! --]\n"
 
-#: handler.c:1076
+#: handler.c:1088
 #, c-format
 msgid "[-- Attachment #%d"
 msgstr "[-- Додаток номер %d"
 
-#: handler.c:1087
+#: handler.c:1099
 #, c-format
 msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
 msgstr "[-- Тип: %s/%s, кодування: %s, розм╕р: %s --]\n"
 
-#: handler.c:1146
+#: handler.c:1158
 #, c-format
 msgid "[-- Autoview using %s --]\n"
 msgstr "[-- Автопроглядання за допомогою %s --]\n"
 
-#: handler.c:1147
+#: handler.c:1159
 #, c-format
 msgid "Invoking autoview command: %s"
 msgstr "Виклик команди автоматичного проглядання: %s"
 
-#: handler.c:1184 handler.c:1202
+#: handler.c:1196 handler.c:1214
 #, c-format
 msgid "[-- Autoview stderr of %s --]\n"
 msgstr "[-- Программа проглядання %s пов╕домила помилку --]\n"
 
-#: handler.c:1234
+#: handler.c:1246
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
-msgstr ""
-
-#: handler.c:1251
-#, fuzzy, c-format
-msgid "[-- This %s/%s attachment "
-msgstr "[-- Додаток номер %d"
-
-#: handler.c:1258
-#, c-format
-msgid "(size %s bytes) "
-msgstr ""
-
-#: handler.c:1260
-msgid "has been deleted --]\n"
 msgstr ""
 
 #: handler.c:1263
 #, fuzzy, c-format
+msgid "[-- This %s/%s attachment "
+msgstr "[-- Додаток номер %d"
+
+#: handler.c:1270
+#, c-format
+msgid "(size %s bytes) "
+msgstr ""
+
+#: handler.c:1272
+msgid "has been deleted --]\n"
+msgstr ""
+
+#: handler.c:1275
+#, fuzzy, c-format
 msgid "[-- on %s --]\n"
 msgstr "[-- Автопроглядання за допомогою %s --]\n"
 
-#: handler.c:1273
+#: handler.c:1285
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
@@ -902,36 +907,36 @@ msgid ""
 "[-- expired. --]\n"
 msgstr ""
 
-#: handler.c:1287
+#: handler.c:1299
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
 "[-- and the indicated access-type %s is unsupported --]\n"
 msgstr ""
 
-#: handler.c:1384
+#: handler.c:1396
 msgid "Error: multipart/signed has no protocol."
 msgstr "Помилка: нема╓ протоколу для multipart/signed."
 
-#: handler.c:1396
+#: handler.c:1408
 msgid "Error: multipart/encrypted has no protocol parameter!"
 msgstr "Помилка: нема╓ параметру протоколу для multipart/encrypted!"
 
-#: handler.c:1438
+#: handler.c:1450
 msgid "Unable to open temporary file!"
 msgstr "Неможливо в╕дкрити тимчасовий файл!"
 
-#: handler.c:1497
+#: handler.c:1509
 #, c-format
 msgid "[-- %s/%s is unsupported "
 msgstr "[-- %s/%s не п╕дтриму╓ться "
 
-#: handler.c:1502
+#: handler.c:1514
 #, c-format
 msgid "(use '%s' to view this part)"
 msgstr "(використовуйте '%s' для ц╕╓╖ частини)"
 
-#: handler.c:1504
+#: handler.c:1516
 msgid "(need 'view-attachments' bound to key!)"
 msgstr "(треба призначити клав╕шу до 'view-attachments'!)"
 
@@ -1074,102 +1079,102 @@ msgstr ""
 msgid "Closing mailbox..."
 msgstr "Закриття поштово╖ скриньки..."
 
-#: init.c:432
+#: init.c:444
 msgid "alias: no address"
 msgstr "alias: без адреси"
 
-#: init.c:526
+#: init.c:538
 msgid "invalid header field"
 msgstr "нев╕рне поле заголовку"
 
-#: init.c:534
+#: init.c:546
 #, c-format
 msgid "ignoring empty header field: %s"
 msgstr "порожн╓ поле заголовку '%s' ╕гноровано"
 
-#: init.c:586
+#: init.c:598
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: нев╕домий метод сортування"
 
-#: init.c:659
+#: init.c:671
 #, c-format
 msgid "mutt_restore_default: error in regexp: %s\n"
 msgstr ""
 
-#: init.c:719
+#: init.c:731
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: нев╕дома зм╕нна"
 
-#: init.c:728
+#: init.c:740
 msgid "prefix is illegal with reset"
 msgstr "преф╕кс неприпустимий для скидання"
 
-#: init.c:734
+#: init.c:746
 msgid "value is illegal with reset"
 msgstr "значення неприпустиме для скидання"
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is set"
 msgstr "%s встановлено"
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is unset"
 msgstr "%s не встановлено"
 
-#: init.c:947
+#: init.c:959
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: нев╕рний тип скриньки"
 
-#: init.c:1006
+#: init.c:1018
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: нев╕рне значення"
 
-#: init.c:1056
+#: init.c:1068
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: нев╕домий тип"
 
-#: init.c:1105
+#: init.c:1117
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Помилка в %s, рядок %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1116
+#: init.c:1128
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: помилки в %s"
 
-#: init.c:1126
+#: init.c:1138
 #, c-format
 msgid "source: error at %s"
 msgstr "source: помилка в %s"
 
-#: init.c:1131
+#: init.c:1143
 msgid "source: too many arguments"
 msgstr "source: дуже багато аргумент╕в"
 
-#: init.c:1182
+#: init.c:1194
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: нев╕дома команда"
 
-#: init.c:1514
+#: init.c:1526
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Помилка командного рядку: %s\n"
 
-#: init.c:1557
+#: init.c:1569
 msgid "unable to determine home directory"
 msgstr "неможливо з'ясувати домашн╕й каталог"
 
-#: init.c:1565
+#: init.c:1577
 msgid "unable to determine username"
 msgstr "неможливо з'ясувати ╕м'я користувача"
 
@@ -2018,33 +2023,33 @@ msgid ""
 "Compile options:"
 msgstr ""
 
-#: main.c:305
+#: main.c:308
 msgid "Error initializing terminal."
 msgstr "Помилка ╕н╕ц╕ал╕зац╖╖ терм╕налу."
 
-#: main.c:403
+#: main.c:406
 #, c-format
 msgid "Debugging at level %d.\n"
 msgstr ""
 
-#: main.c:405
+#: main.c:408
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
 msgstr "DEBUG не вказано п╕д час комп╕ляц╖╖. ╤гнору╓ться.\n"
 
-#: main.c:543
+#: main.c:546
 msgid "No recipients specified.\n"
 msgstr "Отримувач╕в не вказано.\n"
 
-#: main.c:616
+#: main.c:619
 #, c-format
 msgid "%s: unable to attach file.\n"
 msgstr "%s: неможливо при╓днати файл.\n"
 
-#: main.c:636
+#: main.c:639
 msgid "No mailbox with new mail."
 msgstr "Нема╓ поштово╖ скриньки з новою поштою."
 
-#: main.c:670
+#: main.c:673
 msgid "Mailbox is empty."
 msgstr "Поштова скринька порожня."
 

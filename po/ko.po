@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6pre1\n"
-"POT-Creation-Date: 1999-09-02 01:07+0900\n"
+"POT-Creation-Date: 1999-09-25 08:52+0200\n"
 "PO-Revision-Date: 1999-09-02 01:08+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarag.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -135,7 +135,7 @@ msgstr "디렉터리 이동"
 msgid "Mask"
 msgstr "매스크"
 
-#: browser.c:344 browser.c:671
+#: browser.c:344 browser.c:678
 #, c-format
 msgid "%s is not a directory."
 msgstr "%s는 디렉터리가 아닙니다."
@@ -150,43 +150,48 @@ msgstr "편지함 [%d]"
 msgid "Directory [%s], File mask: %s"
 msgstr "디렉터리 [%s], 파일 매스크: %s"
 
-#: browser.c:538 browser.c:728 browser.c:811
+#: browser.c:519
+#, fuzzy
+msgid "IMAP folder browsing is not currently supported"
+msgstr "이 작동은 현재 PGP 편지에서는 지원되지 않음."
+
+#: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
 msgstr "파일 매스크와 일치하는 파일 없음."
 
-#: browser.c:645
+#: browser.c:652
 msgid "Chdir to: "
 msgstr "이동할 디렉터리: "
 
-#: browser.c:664 browser.c:721
+#: browser.c:671 browser.c:728
 msgid "Error scanning directory."
 msgstr "디렉터리 검사중 오류."
 
-#: browser.c:682
+#: browser.c:689
 msgid "File Mask: "
 msgstr "파일 매스크: "
 
-#: browser.c:744
+#: browser.c:751
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "역순 정렬 방법 날짜(d), 낱말(a), 크기(z) 또는 안함(n)?"
 
-#: browser.c:745
+#: browser.c:752
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "정렬 방법 날짜(d), 글자(a), 크기(z) 또는 안함(n)?"
 
-#: browser.c:746
+#: browser.c:753
 msgid "dazn"
 msgstr ""
 
-#: browser.c:798
+#: browser.c:805
 msgid "New file name: "
 msgstr "새 파일 이름: "
 
-#: browser.c:819
+#: browser.c:826
 msgid "Can't view a directory"
 msgstr "디렉터리를 볼 수 없음"
 
-#: browser.c:837
+#: browser.c:844
 msgid "Error trying to view file"
 msgstr "파일 보기 시도 중 오류"
 
@@ -839,59 +844,59 @@ msgid "[-- Error: unexpected end of file! --]\n"
 msgstr "[-- 오류: 예상치 못한 파일의 끝! --]\n"
 
 #. didn't find anything that we could display!
-#: handler.c:959
+#: handler.c:971
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
 msgstr "[-- 오류:  Multipart/Alternative 부분을 보여줄 수 없음! --]\n"
 
-#: handler.c:1076
+#: handler.c:1088
 #, c-format
 msgid "[-- Attachment #%d"
 msgstr "[-- 첨부물 #%d"
 
-#: handler.c:1087
+#: handler.c:1099
 #, c-format
 msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
 msgstr "[-- 종류: %s/%s, 부호화방식: %s, 크기: %s --]\n"
 
-#: handler.c:1146
+#: handler.c:1158
 #, c-format
 msgid "[-- Autoview using %s --]\n"
 msgstr "[-- %s를 사용한 자동 보기 --]\n"
 
-#: handler.c:1147
+#: handler.c:1159
 #, c-format
 msgid "Invoking autoview command: %s"
 msgstr "자동 보기 명령어 실행: %s"
 
-#: handler.c:1184 handler.c:1202
+#: handler.c:1196 handler.c:1214
 #, c-format
 msgid "[-- Autoview stderr of %s --]\n"
 msgstr "[-- %s 자동 보기 표준 에러 --]\n"
 
-#: handler.c:1234
+#: handler.c:1246
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
 msgstr "[-- 오류: message/external-body는 access-type 인자가 없음 --]\n"
 
-#: handler.c:1251
+#: handler.c:1263
 #, c-format
 msgid "[-- This %s/%s attachment "
 msgstr "[-- %s/%s 첨부물 "
 
-#: handler.c:1258
+#: handler.c:1270
 #, c-format
 msgid "(size %s bytes) "
 msgstr "(크기: %s 바이트) "
 
-#: handler.c:1260
+#: handler.c:1272
 msgid "has been deleted --]\n"
 msgstr "삭제 되었음 --]\n"
 
-#: handler.c:1263
+#: handler.c:1275
 #, c-format
 msgid "[-- on %s --]\n"
 msgstr "[-- %s 에 --]\n"
 
-#: handler.c:1273
+#: handler.c:1285
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
@@ -899,36 +904,36 @@ msgid ""
 "[-- expired. --]\n"
 msgstr ""
 
-#: handler.c:1287
+#: handler.c:1299
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
 "[-- and the indicated access-type %s is unsupported --]\n"
 msgstr ""
 
-#: handler.c:1384
+#: handler.c:1396
 msgid "Error: multipart/signed has no protocol."
 msgstr "오류: 프로토콜에 없는 multipart/signed."
 
-#: handler.c:1396
+#: handler.c:1408
 msgid "Error: multipart/encrypted has no protocol parameter!"
 msgstr "오류: 프로토콜 매개 변수에 없는 multipart/encrypted"
 
-#: handler.c:1438
+#: handler.c:1450
 msgid "Unable to open temporary file!"
 msgstr "임시 파일을 열 수 없음!"
 
-#: handler.c:1497
+#: handler.c:1509
 #, c-format
 msgid "[-- %s/%s is unsupported "
 msgstr "[-- '%s/%s'는 지원되지 않음 "
 
-#: handler.c:1502
+#: handler.c:1514
 #, c-format
 msgid "(use '%s' to view this part)"
 msgstr "('%s' 키로 현재 부분 보기)"
 
-#: handler.c:1504
+#: handler.c:1516
 msgid "(need 'view-attachments' bound to key!)"
 msgstr "('view-attachments' 키 정의가 필요함!)"
 
@@ -1072,102 +1077,102 @@ msgstr "서버의 메세지 삭제 중..."
 msgid "Closing mailbox..."
 msgstr "편지함 닫는 중..."
 
-#: init.c:432
+#: init.c:444
 msgid "alias: no address"
 msgstr "별칭: 주소 없음"
 
-#: init.c:526
+#: init.c:538
 msgid "invalid header field"
 msgstr "잘못된 헤더 기록란"
 
-#: init.c:534
+#: init.c:546
 #, c-format
 msgid "ignoring empty header field: %s"
 msgstr "빈 헤더 기록란 무시: %s"
 
-#: init.c:586
+#: init.c:598
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: 알 수 없는 정렬 방법"
 
-#: init.c:659
+#: init.c:671
 #, c-format
 msgid "mutt_restore_default: error in regexp: %s\n"
 msgstr "mutt_restore_default: regexp 오류 %s\n"
 
-#: init.c:719
+#: init.c:731
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: 알 수 없는 변수."
 
-#: init.c:728
+#: init.c:740
 msgid "prefix is illegal with reset"
 msgstr ""
 
-#: init.c:734
+#: init.c:746
 msgid "value is illegal with reset"
 msgstr ""
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is set"
 msgstr "%s 설정"
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is unset"
 msgstr "%s 설정 해제"
 
-#: init.c:947
+#: init.c:959
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: 잘못된 형식의 편지함"
 
-#: init.c:1006
+#: init.c:1018
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: 잘못된 값"
 
-#: init.c:1056
+#: init.c:1068
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: 알 수 없는 형식"
 
-#: init.c:1105
+#: init.c:1117
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "%s의 %d번 줄에 오류: %s"
 
 #. the muttrc source keyword
-#: init.c:1116
+#: init.c:1128
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: %s에 오류"
 
-#: init.c:1126
+#: init.c:1138
 #, c-format
 msgid "source: error at %s"
 msgstr "source: %s에 오류"
 
-#: init.c:1131
+#: init.c:1143
 msgid "source: too many arguments"
 msgstr "source: 인수가 너무 많음"
 
-#: init.c:1182
+#: init.c:1194
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: 알 수 없는 명령어"
 
-#: init.c:1514
+#: init.c:1526
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "명령어 오류: %s\n"
 
-#: init.c:1557
+#: init.c:1569
 msgid "unable to determine home directory"
 msgstr "홈 디렉터리를 찾을 수가 없습니다"
 
-#: init.c:1565
+#: init.c:1577
 msgid "unable to determine username"
 msgstr "알 수 없는 사용자 이름입니다"
 
@@ -2044,33 +2049,33 @@ msgstr ""
 "\n"
 "컴파일 선택사항:"
 
-#: main.c:305
+#: main.c:308
 msgid "Error initializing terminal."
 msgstr "터미널 초기화 오류."
 
-#: main.c:403
+#: main.c:406
 #, c-format
 msgid "Debugging at level %d.\n"
 msgstr "디버깅 레벨 %d.\n"
 
-#: main.c:405
+#: main.c:408
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
 msgstr "DEBUG가 컴파일시 정의되지 않음. 무시함\n"
 
-#: main.c:543
+#: main.c:546
 msgid "No recipients specified.\n"
 msgstr "수신자가 지정되지 않음.\n"
 
-#: main.c:616
+#: main.c:619
 #, c-format
 msgid "%s: unable to attach file.\n"
 msgstr "%s: 파일을 첨부할 수 없음.\n"
 
-#: main.c:636
+#: main.c:639
 msgid "No mailbox with new mail."
 msgstr "새로운 편지가 도착한 편지함 없음."
 
-#: main.c:670
+#: main.c:673
 msgid "Mailbox is empty."
 msgstr "편지함이 비었음"
 

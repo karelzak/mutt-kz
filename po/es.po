@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt\n"
-"POT-Creation-Date: 1999-08-31 21:26+0200\n"
+"POT-Creation-Date: 1999-09-25 08:52+0200\n"
 "PO-Revision-Date: 1999-09-19 18:27+02:00\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
@@ -132,7 +132,7 @@ msgstr "Directorio"
 msgid "Mask"
 msgstr "Patrón"
 
-#: browser.c:344 browser.c:671
+#: browser.c:344 browser.c:678
 #, c-format
 msgid "%s is not a directory."
 msgstr "%s no es un directorio."
@@ -147,44 +147,49 @@ msgstr "Buzones [%d]"
 msgid "Directory [%s], File mask: %s"
 msgstr "Directorio [%s], patrón de archivos: %s"
 
-#: browser.c:538 browser.c:728 browser.c:811
+#: browser.c:519
+#, fuzzy
+msgid "IMAP folder browsing is not currently supported"
+msgstr "Esta operación al momento no es soportada en mensajes PGP."
+
+#: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
 msgstr "Ningún archivo coincide con el patrón"
 
-#: browser.c:645
+#: browser.c:652
 msgid "Chdir to: "
 msgstr "Cambiar directorio a:"
 
-#: browser.c:664 browser.c:721
+#: browser.c:671 browser.c:728
 msgid "Error scanning directory."
 msgstr "Error leyendo directorio."
 
-#: browser.c:682
+#: browser.c:689
 msgid "File Mask: "
 msgstr "Patrón de archivos: "
 
-#: browser.c:744
+#: browser.c:751
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr ""
 "¿Orden inverso por (f)echa, (t)amaño, (a)lfabéticamente o (s)in orden? "
 
-#: browser.c:745
+#: browser.c:752
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "¿Ordenar por (f)echa, (t)amaño, (a)lfabéticamente o (s)in orden? "
 
-#: browser.c:746
+#: browser.c:753
 msgid "dazn"
 msgstr "fats"
 
-#: browser.c:798
+#: browser.c:805
 msgid "New file name: "
 msgstr "Nuevo nombre del archivo: "
 
-#: browser.c:819
+#: browser.c:826
 msgid "Can't view a directory"
 msgstr "No se puede mostrar el directorio"
 
-#: browser.c:837
+#: browser.c:844
 msgid "Error trying to view file"
 msgstr "Error al tratar de mostrar el archivo"
 
@@ -420,7 +425,8 @@ msgstr "Algoritmo MIC: "
 msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
-msgstr "(c)ifrar, (f)irmar c(o)mo, (a)mbos, escoger algorithmo (m)ic, ca(n)celar? "
+msgstr ""
+"(c)ifrar, (f)irmar c(o)mo, (a)mbos, escoger algorithmo (m)ic, ca(n)celar? "
 
 #: compose.c:133
 msgid "esabmf"
@@ -836,60 +842,61 @@ msgid "[-- Error: unexpected end of file! --]\n"
 msgstr "[-- ¡Error: fin inesperado del archivo! --]\n"
 
 #. didn't find anything that we could display!
-#: handler.c:959
+#: handler.c:971
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
 msgstr ""
 "[-- ¡Error: no se pudo mostrar ninguna parte de multipart/alternative! --]\n"
 
-#: handler.c:1076
+#: handler.c:1088
 #, c-format
 msgid "[-- Attachment #%d"
 msgstr "[-- Archivo adjunto #%d"
 
-#: handler.c:1087
+#: handler.c:1099
 #, c-format
 msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
 msgstr "[-- Tipo: %s/%s, Codificación: %s, Tamaño: %s --]\n"
 
-#: handler.c:1146
+#: handler.c:1158
 #, c-format
 msgid "[-- Autoview using %s --]\n"
 msgstr "[-- Automuestra usando %s --]\n"
 
-#: handler.c:1147
+#: handler.c:1159
 #, c-format
 msgid "Invoking autoview command: %s"
 msgstr "Invocando orden de automuestra: %s"
 
-#: handler.c:1184 handler.c:1202
+#: handler.c:1196 handler.c:1214
 #, c-format
 msgid "[-- Autoview stderr of %s --]\n"
 msgstr "[-- Error al ejecutar %s --]\n"
 
-#: handler.c:1234
+#: handler.c:1246
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
-msgstr "[-- Error: Tipo message/external-body sin el parámetro access-type --]\n"
+msgstr ""
+"[-- Error: Tipo message/external-body sin el parámetro access-type --]\n"
 
-#: handler.c:1251
+#: handler.c:1263
 #, c-format
 msgid "[-- This %s/%s attachment "
 msgstr "[-- Este archivo adjunto %s/%s "
 
-#: handler.c:1258
+#: handler.c:1270
 #, c-format
 msgid "(size %s bytes) "
 msgstr "(tamaño %s bytes) "
 
-#: handler.c:1260
+#: handler.c:1272
 msgid "has been deleted --]\n"
 msgstr "ha sido suprimido --]\n"
 
-#: handler.c:1263
+#: handler.c:1275
 #, c-format
 msgid "[-- on %s --]\n"
 msgstr "[-- el %s --]\n"
 
-#: handler.c:1273
+#: handler.c:1285
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
@@ -899,7 +906,7 @@ msgstr ""
 "[-- Este archivo adjunto %s/%s no está incluido --]\n"
 "[-- y la fuente externa indicada ha expirado. --]\n"
 
-#: handler.c:1287
+#: handler.c:1299
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
@@ -908,29 +915,29 @@ msgstr ""
 "[-- Este archivo adjunto %s/%s no está incluido --]\n"
 "[-- y el tipo de acceso indicado %s no está soportado --]\n"
 
-#: handler.c:1384
+#: handler.c:1396
 msgid "Error: multipart/signed has no protocol."
 msgstr "Error: multipart/signed no tiene protocolo."
 
-#: handler.c:1396
+#: handler.c:1408
 msgid "Error: multipart/encrypted has no protocol parameter!"
 msgstr "Error: ¡multipart/encrypted no tiene parámetro de protocolo!"
 
-#: handler.c:1438
+#: handler.c:1450
 msgid "Unable to open temporary file!"
 msgstr "¡Imposible abrir archivo temporal!"
 
-#: handler.c:1497
+#: handler.c:1509
 #, c-format
 msgid "[-- %s/%s is unsupported "
 msgstr "[-- %s/%s no está soportado "
 
-#: handler.c:1502
+#: handler.c:1514
 #, c-format
 msgid "(use '%s' to view this part)"
 msgstr "(use '%s' para ver esta parte)"
 
-#: handler.c:1504
+#: handler.c:1516
 msgid "(need 'view-attachments' bound to key!)"
 msgstr "(¡necesita 'view-attachments' enlazado a una tecla!)"
 
@@ -992,7 +999,8 @@ msgstr "Recogiendo cabeceras de mensajes... [%d/%d]"
 #. Unable to fetch headers for lower versions
 #: imap.c:659
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr "No se pueden recoger cabeceras de mensajes de esta versión de servidor IMAP."
+msgstr ""
+"No se pueden recoger cabeceras de mensajes de esta versión de servidor IMAP."
 
 #: imap.c:851
 #, c-format
@@ -1074,102 +1082,102 @@ msgstr "Eliminando mensajes del servidor..."
 msgid "Closing mailbox..."
 msgstr "Cerrando buzón..."
 
-#: init.c:432
+#: init.c:444
 msgid "alias: no address"
 msgstr "alias: sin dirección"
 
-#: init.c:526
+#: init.c:538
 msgid "invalid header field"
 msgstr "encabezado erróneo"
 
-#: init.c:534
+#: init.c:546
 #, c-format
 msgid "ignoring empty header field: %s"
 msgstr "ignorando encabezado vacío: %s"
 
-#: init.c:586
+#: init.c:598
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: orden desconocido"
 
-#: init.c:659
+#: init.c:671
 #, c-format
 msgid "mutt_restore_default: error in regexp: %s\n"
 msgstr "mutt_restore_default: error en expresión regular: %s\n"
 
-#: init.c:719
+#: init.c:731
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: varibale desconocida"
 
-#: init.c:728
+#: init.c:740
 msgid "prefix is illegal with reset"
 msgstr "prefijo es ilegal con reset"
 
-#: init.c:734
+#: init.c:746
 msgid "value is illegal with reset"
 msgstr "valor es ilegal con reset"
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is set"
 msgstr "%s esta activada"
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is unset"
 msgstr "%s no esta activada"
 
-#: init.c:947
+#: init.c:959
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: tipo de buzón inválido"
 
-#: init.c:1006
+#: init.c:1018
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: valor inválido"
 
-#: init.c:1056
+#: init.c:1068
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: tipo desconocido"
 
-#: init.c:1105
+#: init.c:1117
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Error en %s, renglón %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1116
+#: init.c:1128
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: errores en %s"
 
-#: init.c:1126
+#: init.c:1138
 #, c-format
 msgid "source: error at %s"
 msgstr "source: errores en %s"
 
-#: init.c:1131
+#: init.c:1143
 msgid "source: too many arguments"
 msgstr "source: demasiados parámetros"
 
-#: init.c:1182
+#: init.c:1194
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: orden desconocida"
 
-#: init.c:1514
+#: init.c:1526
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Error en línea de órdenes: %s\n"
 
-#: init.c:1557
+#: init.c:1569
 msgid "unable to determine home directory"
 msgstr "imposible determinar el directorio del usuario"
 
-#: init.c:1565
+#: init.c:1577
 msgid "unable to determine username"
 msgstr "imposible determinar nombre del usuario"
 
@@ -2022,7 +2030,8 @@ msgid ""
 "  -h\t\tthis help message"
 msgstr ""
 "uso: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <arch> ] [ -m <tipo> ] [ -f <arch> ]\n"
-"     mutt [ -nx ] [ -e <cmd> ] [ -a <arch> ] [ -F <arch> ] [ -H <arch> ] [ -i <arch> ] [ -s <asunto> ] [ -b <dir> ] [ -c <dir> ] <dir> [ ... ]\n"
+"     mutt [ -nx ] [ -e <cmd> ] [ -a <arch> ] [ -F <arch> ] [ -H <arch> ] [ "
+"-i <arch> ] [ -s <asunto> ] [ -b <dir> ] [ -c <dir> ] <dir> [ ... ]\n"
 "     mutt [ -n ] [ -e <cmd> ] [ -F <archivo> ] -p\n"
 "     mutt -v[v]\n"
 "\n"
@@ -2039,7 +2048,8 @@ msgstr ""
 "  -n\t\tproduce que Mutt no lea el archivo Muttrc del sistema\n"
 "  -p\t\tcontinuar un mensaje pospuesto\n"
 "  -R\t\tabrir un buzón en modo de solo-lectura\n"
-"  -s <asunto>\tespecifica el asunto (necesita comillas si contiene espacios)\n"
+"  -s <asunto>\tespecifica el asunto (necesita comillas si contiene "
+"espacios)\n"
 "  -v\t\tmuestra versión y opciones definidas al compilar\n"
 "  -x\t\tsimula el modo de envío mailx\n"
 "  -y\t\tselecciona un buzón especificado en su lista `mailboxes'\n"
@@ -2055,33 +2065,33 @@ msgstr ""
 "\n"
 "Opciones especificadas al compilar:"
 
-#: main.c:305
+#: main.c:308
 msgid "Error initializing terminal."
 msgstr "Error al inicializar la terminal."
 
-#: main.c:403
+#: main.c:406
 #, c-format
 msgid "Debugging at level %d.\n"
 msgstr "Modo debug a nivel %d.\n"
 
-#: main.c:405
+#: main.c:408
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
 msgstr "DEBUG no fue definido al compilar.  Ignorado.\n"
 
-#: main.c:543
+#: main.c:546
 msgid "No recipients specified.\n"
 msgstr "No hay destinatario.\n"
 
-#: main.c:616
+#: main.c:619
 #, c-format
 msgid "%s: unable to attach file.\n"
 msgstr "%s: imposible adjuntar archivo.\n"
 
-#: main.c:636
+#: main.c:639
 msgid "No mailbox with new mail."
 msgstr "Ningún buzón con correo nuevo."
 
-#: main.c:670
+#: main.c:673
 msgid "Mailbox is empty."
 msgstr "El buzón esta vacío."
 
@@ -2111,7 +2121,8 @@ msgstr "¡Imposible bloquear buzón!"
 #.
 #: mbox.c:738
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr "sync: buzón modificado, pero sin mensajes modificados (reporte este fallo)"
+msgstr ""
+"sync: buzón modificado, pero sin mensajes modificados (reporte este fallo)"
 
 #: mbox.c:767
 msgid "Writing messages... %d (%d%%)"

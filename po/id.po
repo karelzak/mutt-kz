@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0pre1-1\n"
-"POT-Creation-Date: 1999-08-31 21:26+0200\n"
+"POT-Creation-Date: 1999-09-25 08:52+0200\n"
 "PO-Revision-Date: 1999-08-24 15:35-0500\n"
 "Last-Translator: Ronny Haryanto <giant@canada.com>\n"
 "Language-Team: Indonesia <id@li.org>\n"
@@ -136,7 +136,7 @@ msgstr "Pindah dir"
 msgid "Mask"
 msgstr "Mask"
 
-#: browser.c:344 browser.c:671
+#: browser.c:344 browser.c:678
 #, c-format
 msgid "%s is not a directory."
 msgstr "%s bukan direktori."
@@ -151,44 +151,49 @@ msgstr "Kotak surat [%d]"
 msgid "Directory [%s], File mask: %s"
 msgstr "Direktori [%s], File mask: %s"
 
-#: browser.c:538 browser.c:728 browser.c:811
+#: browser.c:519
+#, fuzzy
+msgid "IMAP folder browsing is not currently supported"
+msgstr "Operasi ini belum didukung untuk surat-surat PGP."
+
+#: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
 msgstr "Tidak ada file yang sesuai dengan mask"
 
-#: browser.c:645
+#: browser.c:652
 msgid "Chdir to: "
 msgstr "Pindah dir ke: "
 
-#: browser.c:664 browser.c:721
+#: browser.c:671 browser.c:728
 msgid "Error scanning directory."
 msgstr "Gagal membaca direktori."
 
-#: browser.c:682
+#: browser.c:689
 msgid "File Mask: "
 msgstr "File Mask: "
 
-#: browser.c:744
+#: browser.c:751
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr ""
 "Urut terbalik berdasarkan (t)anggal, (a)bjad, (u)kuran atau (n)ggak diurut? "
 
-#: browser.c:745
+#: browser.c:752
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
 msgstr "Urut berdasarkan (t)anggal, (a)bjad, (u)kuran atau (n)ggak diurut? "
 
-#: browser.c:746
+#: browser.c:753
 msgid "dazn"
 msgstr "taun"
 
-#: browser.c:798
+#: browser.c:805
 msgid "New file name: "
 msgstr "Nama file baru: "
 
-#: browser.c:819
+#: browser.c:826
 msgid "Can't view a directory"
 msgstr "Tidak bisa menampilkan sebuah direktori"
 
-#: browser.c:837
+#: browser.c:844
 msgid "Error trying to view file"
 msgstr "Gagal menampilkan file"
 
@@ -847,61 +852,61 @@ msgid "[-- Error: unexpected end of file! --]\n"
 msgstr "[-- Error: akhir file tak diduga! --]\n"
 
 #. didn't find anything that we could display!
-#: handler.c:959
+#: handler.c:971
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
 msgstr ""
 "[-- Error: Tidak ada bagian Multipart/Alternative yg bisa ditampilkan! --]\n"
 
-#: handler.c:1076
+#: handler.c:1088
 #, c-format
 msgid "[-- Attachment #%d"
 msgstr "[-- Lampiran #%d"
 
-#: handler.c:1087
+#: handler.c:1099
 #, c-format
 msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
 msgstr "[-- Jenis: %s/%s, Encoding: %s, Ukuran: %s --]\n"
 
-#: handler.c:1146
+#: handler.c:1158
 #, c-format
 msgid "[-- Autoview using %s --]\n"
 msgstr "[-- Tampil-otomatis dengan %s --]\n"
 
-#: handler.c:1147
+#: handler.c:1159
 #, c-format
 msgid "Invoking autoview command: %s"
 msgstr "Menjalankan perintah tampil-otomatis: %s"
 
-#: handler.c:1184 handler.c:1202
+#: handler.c:1196 handler.c:1214
 #, c-format
 msgid "[-- Autoview stderr of %s --]\n"
 msgstr "[-- Stderr dari tampil-otomatis %s --]\n"
 
-#: handler.c:1234
+#: handler.c:1246
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
 msgstr ""
 "[-- Error:  message/external-body tidak punya parameter access-type --]\n"
 
-#: handler.c:1251
+#: handler.c:1263
 #, c-format
 msgid "[-- This %s/%s attachment "
 msgstr "[-- Lampiran %s/%s ini "
 
-#: handler.c:1258
+#: handler.c:1270
 #, c-format
 msgid "(size %s bytes) "
 msgstr "(ukuran %s bytes) "
 
-#: handler.c:1260
+#: handler.c:1272
 msgid "has been deleted --]\n"
 msgstr "telah dihapus --]\n"
 
-#: handler.c:1263
+#: handler.c:1275
 #, c-format
 msgid "[-- on %s --]\n"
 msgstr "[-- pada %s --]\n"
 
-#: handler.c:1273
+#: handler.c:1285
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
@@ -912,7 +917,7 @@ msgstr ""
 "[-- dan sumber luar yang dimaksud sudah --]\n"
 "[-- kadaluwarsa. --]\n"
 
-#: handler.c:1287
+#: handler.c:1299
 #, c-format
 msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
@@ -921,29 +926,29 @@ msgstr ""
 "[-- Lampiran %s/%s ini tidak disertakan, --]\n"
 "[-- dan access-type %s tidak didukung --]\n"
 
-#: handler.c:1384
+#: handler.c:1396
 msgid "Error: multipart/signed has no protocol."
 msgstr "Error: multipart/signed tidak punya protokol."
 
-#: handler.c:1396
+#: handler.c:1408
 msgid "Error: multipart/encrypted has no protocol parameter!"
 msgstr "Error: multipart/encrypted tidak punya parameter protokol!"
 
-#: handler.c:1438
+#: handler.c:1450
 msgid "Unable to open temporary file!"
 msgstr "Tidak bisa membuka file sementara!"
 
-#: handler.c:1497
+#: handler.c:1509
 #, c-format
 msgid "[-- %s/%s is unsupported "
 msgstr "[-- %s/%s tidak didukung "
 
-#: handler.c:1502
+#: handler.c:1514
 #, c-format
 msgid "(use '%s' to view this part)"
 msgstr "(gunakan '%s' untuk melihat bagian ini)"
 
-#: handler.c:1504
+#: handler.c:1516
 msgid "(need 'view-attachments' bound to key!)"
 msgstr "(tombol untuk 'view-attachments' belum ditentukan!)"
 
@@ -1088,102 +1093,102 @@ msgstr "Menghapus surat-surat di server..."
 msgid "Closing mailbox..."
 msgstr "Menutup kotak surat..."
 
-#: init.c:432
+#: init.c:444
 msgid "alias: no address"
 msgstr "alias: tidak ada alamat email"
 
-#: init.c:526
+#: init.c:538
 msgid "invalid header field"
 msgstr "kolom header tidak dikenali"
 
-#: init.c:534
+#: init.c:546
 #, c-format
 msgid "ignoring empty header field: %s"
 msgstr "mengacuhkan kolom header kosong: %s"
 
-#: init.c:586
+#: init.c:598
 #, c-format
 msgid "%s: unknown sorting method"
 msgstr "%s: metoda pengurutan tidak dikenali"
 
-#: init.c:659
+#: init.c:671
 #, c-format
 msgid "mutt_restore_default: error in regexp: %s\n"
 msgstr "mutt_restore_default: error pada regexp: %s\n"
 
-#: init.c:719
+#: init.c:731
 #, c-format
 msgid "%s: unknown variable"
 msgstr "%s: variable tidak diketahui"
 
-#: init.c:728
+#: init.c:740
 msgid "prefix is illegal with reset"
 msgstr "prefix tidak diperbolehkan dengan reset"
 
-#: init.c:734
+#: init.c:746
 msgid "value is illegal with reset"
 msgstr "nilai tidak diperbolehkan dengan reset"
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is set"
 msgstr "%s hidup"
 
-#: init.c:773
+#: init.c:785
 #, c-format
 msgid "%s is unset"
 msgstr "%s mati"
 
-#: init.c:947
+#: init.c:959
 #, c-format
 msgid "%s: invalid mailbox type"
 msgstr "%s: jenis kotak surat tidak dikenali"
 
-#: init.c:1006
+#: init.c:1018
 #, c-format
 msgid "%s: invalid value"
 msgstr "%s: nilai tidak betul"
 
-#: init.c:1056
+#: init.c:1068
 #, c-format
 msgid "%s: unknown type"
 msgstr "%s: jenis tidak dikenali"
 
-#: init.c:1105
+#: init.c:1117
 #, c-format
 msgid "Error in %s, line %d: %s"
 msgstr "Error di %s, baris %d: %s"
 
 #. the muttrc source keyword
-#: init.c:1116
+#: init.c:1128
 #, c-format
 msgid "source: errors in %s"
 msgstr "source: errors di %s"
 
-#: init.c:1126
+#: init.c:1138
 #, c-format
 msgid "source: error at %s"
 msgstr "source: error pada %s"
 
-#: init.c:1131
+#: init.c:1143
 msgid "source: too many arguments"
 msgstr "source: parameter terlalu banyak"
 
-#: init.c:1182
+#: init.c:1194
 #, c-format
 msgid "%s: unknown command"
 msgstr "%s: perintah tidak dikenali"
 
-#: init.c:1514
+#: init.c:1526
 #, c-format
 msgid "Error in command line: %s\n"
 msgstr "Error di baris perintah: %s\n"
 
-#: init.c:1557
+#: init.c:1569
 msgid "unable to determine home directory"
 msgstr "tidak bisa menentukan home direktori"
 
-#: init.c:1565
+#: init.c:1577
 msgid "unable to determine username"
 msgstr "tidak bisa menentukan username"
 
@@ -2073,33 +2078,33 @@ msgstr ""
 "\n"
 "Pilihan waktu kompilasi:"
 
-#: main.c:305
+#: main.c:308
 msgid "Error initializing terminal."
 msgstr "Gagal menginisialisasi terminal."
 
-#: main.c:403
+#: main.c:406
 #, c-format
 msgid "Debugging at level %d.\n"
 msgstr "Debugging pada tingkat %d.\n"
 
-#: main.c:405
+#: main.c:408
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
 msgstr "DEBUG tidak digunakan sewaktu compile. Cuek.\n"
 
-#: main.c:543
+#: main.c:546
 msgid "No recipients specified.\n"
 msgstr "Tidak ada penerima yang disebutkan.\n"
 
-#: main.c:616
+#: main.c:619
 #, c-format
 msgid "%s: unable to attach file.\n"
 msgstr "%s: tidak bisa melampirkan file.\n"
 
-#: main.c:636
+#: main.c:639
 msgid "No mailbox with new mail."
 msgstr "Tidak ada kotak surat dengan surat baru."
 
-#: main.c:670
+#: main.c:673
 msgid "Mailbox is empty."
 msgstr "Kotak surat kosong."
 
