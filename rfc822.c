@@ -198,30 +198,28 @@ parse_mailboxdomain (const char *s, const char *nonspecial,
 
 static const char *
 parse_address (const char *s,
+               char *token, size_t *tokenlen, size_t tokenmax,
 	       char *comment, size_t *commentlen, size_t commentmax,
 	       ADDRESS *addr)
 {
-  char token[128];
-  size_t tokenlen = 0;
-
   s = parse_mailboxdomain (s, ".\"(\\",
-			   token, &tokenlen, sizeof (token) - 1,
+			   token, tokenlen, tokenmax,
 			   comment, commentlen, commentmax);
   if (!s)
     return NULL;
 
   if (*s == '@')
   {
-    if (tokenlen < sizeof (token) - 1)
-      token[tokenlen++] = '@';
+    if (*tokenlen < tokenmax)
+      token[(*tokenlen)++] = '@';
     s = parse_mailboxdomain (s + 1, ".([]\\",
-			     token, &tokenlen, sizeof (token) - 1,
+			     token, tokenlen, tokenmax,
 			     comment, commentlen, commentmax);
     if (!s)
       return NULL;
   }
 
-  token[tokenlen] = 0;
+  token[*tokenlen] = 0;
   addr->mailbox = safe_strdup (token);
 
   if (*commentlen && !addr->personal)
@@ -238,27 +236,34 @@ parse_route_addr (const char *s,
 		  char *comment, size_t *commentlen, size_t commentmax,
 		  ADDRESS *addr)
 {
+  char token[128];
+  size_t tokenlen = 0;
+
   SKIPWS (s);
 
   /* find the end of the route */
   if (*s == '@')
   {
-    char token[128];
-    size_t tokenlen = 0;
-
     while (s && *s == '@')
-      s = parse_mailboxdomain (s + 1, ".[](\\", token,
+    {
+      if (tokenlen < sizeof (token) - 1)
+	token[tokenlen++] = '@';
+      s = parse_mailboxdomain (s + 1, ".\\[](", token,
 			       &tokenlen, sizeof (token) - 1,
 			       comment, commentlen, commentmax);
+    }
     if (!s || *s != ':')
     {
       RFC822Error = ERR_BAD_ROUTE;
       return NULL; /* invalid route */
     }
+
+    if (tokenlen < sizeof (token) - 1)
+      token[tokenlen++] = ':';
     s++;
   }
 
-  if ((s = parse_address (s, comment, commentlen, commentmax, addr)) == NULL)
+  if ((s = parse_address (s, token, &tokenlen, sizeof (token) - 1, comment, commentlen, commentmax, addr)) == NULL)
     return NULL;
 
   if (*s != '>' || !addr->mailbox)
@@ -276,7 +281,10 @@ parse_addr_spec (const char *s,
 		 char *comment, size_t *commentlen, size_t commentmax,
 		 ADDRESS *addr)
 {
-  s = parse_address (s, comment, commentlen, commentmax, addr);
+  char token[128];
+  int tokenlen = 0;
+
+  s = parse_address (s, token, &tokenlen, sizeof (token) - 1, comment, commentlen, commentmax, addr);
   if (s && *s && *s != ',' && *s != ';')
   {
     RFC822Error = ERR_BAD_ADDR_SPEC;
@@ -583,7 +591,10 @@ void rfc822_write_address_single (char *buf, size_t buflen, ADDRESS *addr)
       goto done;
     *pbuf++ = ' ';
     buflen--;
+  }
 
+  if (addr->personal || (addr->mailbox && *addr->mailbox == '@'))
+  {
     if (!buflen)
       goto done;
     *pbuf++ = '<';
@@ -599,7 +610,7 @@ void rfc822_write_address_single (char *buf, size_t buflen, ADDRESS *addr)
     pbuf += len;
     buflen -= len;
 
-    if (addr->personal)
+    if (addr->personal || (addr->mailbox && *addr->mailbox == '@'))
     {
       if (!buflen)
 	goto done;
@@ -668,7 +679,10 @@ void rfc822_write_address (char *buf, size_t buflen, ADDRESS *addr)
     len = strlen (pbuf);
     pbuf += len;
     buflen -= len;
-    if (addr->next && !addr->group)
+
+    /* if there is another address, and its not a group mailbox name or
+       group terminator, add a comma to separate the addresses */
+    if (addr->next && addr->next->mailbox && !addr->group)
     {
       if (!buflen)
 	goto done;
@@ -745,12 +759,7 @@ int main (int argc, char **argv)
 {
   ADDRESS *list;
   char buf[256];
-  char *str = "aaaaaaaaaaaaaa <bbbbbbbbbbbbbbbb>, ccccccc <dddddddddddddddd>,\n\
-          eeeeeeeeee <ffffffffffffffff>, ggggggggggg <hhhhhhhhhhhhhhhhhhh>,\n\
-	          iiiiiiiiiiiiiiii <jjjjjjjjjjjjjjjjjjjj>,\n\
-		          kkkkkkkkkkkkkk <lllllllllllllllll>,\n\
-			          mmmmmmmmmmmmm <nnnnnnnnnnnnnnnnnn>, ooooooooooo <pppppppppppppp>,\n\
-				          qqqqqqqqqqqqq <rrrrrrrrrrrrrrrr>\n";
+  char *str = "michael, Michael Elkins <me@cs.hmc.edu>, testing a really complex address: this example <@contains.a.source.route@with.multiple.hosts:address@example.com>;, lothar@of.the.hillpeople (lothar)";
   
   list = rfc822_parse_adrlist (NULL, str);
   buf[0] = 0;
