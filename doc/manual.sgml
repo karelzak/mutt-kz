@@ -2540,14 +2540,6 @@ Default: value of environment variable &dollar;VISUAL, &dollar;EDITOR, or &dquot
 
 This variable specifies which editor to use when composing messages.
 
-<sect2>empty&lowbar;to<label id="empty_to">
-<p>
-Type: string<newline>
-Default: undisclosed-recipients
-
-Specifies the text Mutt inserts in the <tt/To:/ header of a message you're
-sending, if the <tt/To:/ and <tt/Cc:/ fields are empty.
-
 <sect2>escape<label id="escape">
 <p>
 Type: string<newline>

@@ -1175,7 +1175,7 @@ main_loop:
      * it by using an empty To: field.
      */
     msg->env->to = rfc822_new_address ();
-    msg->env->to->mailbox = safe_strdup (EmptyTo);
+    msg->env->to->mailbox = safe_strdup ("undisclosed-recipients:;");
     msg->env->to->group = 1;
     msg->env->to->next = rfc822_new_address ();
  

@@ -32,7 +32,6 @@ WHERE char *DeleteFmt;
 WHERE char *DsnNotify;
 WHERE char *DsnReturn;
 WHERE char *Editor;
-WHERE char *EmptyTo;
 WHERE char *EscChar;
 WHERE char *FolderFormat;
 WHERE char *ForwFmt;

@@ -55,7 +55,6 @@ macro pager \cb |urlview\n
 # set dsn_return=""
 # unset edit_headers
 # set editor=""
-# set empty_to="undisclosed-recipients"
 # set escape="~"
 # unset fast_reply
 # unset fcc_attach
