@@ -992,6 +992,10 @@ Usage: <tt/hdr&lowbar;order/ <em/header1/ <em/header2/ <em/header3/
 With this command, you can specify an order in which mutt will attempt
 to present headers to you when viewing messages.
 
+``unhdr_order *'' will clear all previous headers from the order list,
+thus removing the header order effects set by the system-wide startup
+file.
+
 <tscreen><verb>
 hdr&lowbar;order From Date: From: To: Cc: Subject:
 </verb></tscreen>
@@ -2265,6 +2269,8 @@ The following are the commands understood by mutt.
 <tt><ref id="ignore" name="unignore"></tt> <em/pattern/ &lsqb; <em/pattern/ ... &rsqb;
 <item>
 <tt><ref id="hdr_order" name="hdr&lowbar;order"></tt> <em/header/ &lsqb; <em/header/ ... &rsqb;
+<item>
+<tt><ref id="hdr_order" name="unhdr&lowbar;order"></tt> <em/header/ &lsqb; <em/header/ ... &rsqb;
 <item>
 <tt><ref id="lists" name="lists"></tt> <em/address/ &lsqb; <em/address/ ... &rsqb; 
 <item>

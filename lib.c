@@ -787,6 +787,8 @@ static char safe_chars[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 
 void mutt_sanitize_filename(char *f)
 {
+  if(!f) return;
+
   for(; *f; f++)
   {
     if(!strchr(safe_chars, *f))
