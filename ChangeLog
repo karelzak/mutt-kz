@@ -1,3 +1,128 @@
+Thu Sep 23 21:13:55 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/el.po: New Greek tranlsation from Fanis <madf@geocities.com>.
+
+	* browser.c: [stable] Solaris snprintf vs. NULL pointers.
+
+	* po/es.po: [stable] new spanish translation from Boris Wesslowski
+	<Boris.Wesslowski@StudBox.Uni-Stuttgart.DE>.
+
+	* alias.c: increase this limit for stable as well.
+
+	* handler.c:
+	[stable] Fix a buffer overflow and a bug helping with exploiting this
+	overflow in the text/enriched handler.
+
+Sun Sep 12 19:39:10 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/es.po: [stable] Updated spanish translation from Boris Wesslowski.
+
+	* po/es.po:
+	[stable] Fixes for the Spanish translation.  From Nicolás Lichtmaier
+	<nick@debian.org>.
+
+Sat Sep 11 17:04:12 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/pl.po: [stable] new polish translation from Pawel Dienkonski.
+
+	* po/es.po: [stable] New Spanish translation from Boris Wesslowski.
+
+	* configure.in: [stable] Hurd portability patch from Marcus Brinkmann.
+
+	* Attic/Muttrc.in: typos fixed by Telsa.
+
+	* doc/Attic/manual.sgml.in:
+	Small manual fix for stable.  Noted by Telsa
+	<hobbit@aloss.ukuu.org.uk>.
+
+Tue Sep  7 17:01:28 1999  Thomas Roessler  <roessler@guug.de>
+
+	* Makefile.am: Bail out if the chmod of mutt_dotlock fails.
+
+	* pgpkey.c: Fix a strtok NULL pointer problem.
+
+	* doc/Attic/manual.sgml.in: notes on how to produce secure mailcaps.
+
+Sun Sep  5 08:42:23 1999  Thomas Roessler  <roessler@guug.de>
+
+	* init.c: [stable] Fixing "unignore *".
+
+Fri Sep  3 21:42:16 1999  Thomas Roessler  <roessler@guug.de>
+
+	* contrib/sample.muttrc:
+	fix mailing list addresses.  Noted by David Benfell
+	<benfell@greybeard95a.com>.
+
+	* configure.in, strdup.c:
+	[stable] Some systems may not have strdup.  Substitute it.
+
+	* strdup.c:
+	file strdup.c was initially added on branch mutt-1-0-stable.
+
+	* browser.c: [stable] cosmetic fix from Brendan Cully.
+
+Thu Sep  2 18:50:46 1999  Thomas Roessler  <roessler@guug.de>
+
+	* acconfig.h, configure.in, init.c, init.h, main.c:
+	[stable] Improved pgp 6.5.1 support.  From Jochen Schmitt
+	<Jochen@herr-schmitt.de>.
+
+	* doc/manual.sgml.head, Makefile.am, OPS, compose.c, curs_main.c, editmsg.c, mutt.h, protos.h, send.c, sendlib.c:
+	A new edit-message feature, giving the raw message in an editor.
+
+	* dotlock.c: Remove a superfluous label.
+
+	* dotlock.c: [stable] remove a superfluous label.
+
+	* po/cs.po:
+	New czech translation.  From Jiri Pavlovsky <pavlovsk@ff.cuni.cz>.
+
+	* doc/Attic/manual.sgml.in:
+	[stable] It's www.sgmltools.org, not www.sgml-tools.org.  Noted by
+	Heiko Schlichting.
+
+Wed Sep  1 21:41:19 1999  Thomas Roessler  <roessler@guug.de>
+
+	* doc/Makefile.in, Makefile.am:
+	A couple of build process and portability fixes concerning the
+	automatically generated documentation.
+
+	* mutt.h, init.c:
+	[stable] Fix ignore/unignore.  This is a back-port from the unstable
+	branch.
+
+	* po/ko.po: New Korean translation.  From Byeong-Chan Kim
+	<redhands@linux.sarang.net>.
+
+	* curs_lib.c, edit.c, hdrline.c, sendlib.c:
+	Fix a couple of possible compilation warnings.  (Noted by "John C.
+	Place" <placej@ctcdist.com>.)
+
+	* hdrline.c, sendlib.c, curs_lib.c, edit.c:
+	[stable] Fix a couple of small warnings.  Noted by "John C. Place"
+	<placej@ctcdist.com>.
+
+	* ChangeLog: check-point commit.
+
+	* mx.c: Don't clear the error line whenever dotlocking a file.
+
+	* mx.h: adding a prototype.
+
+	* curs_main.c, mailbox.h, mx.c:
+	When the user synchronizes a mail folder, do a thorough check.
+
+Tue Aug 31 20:26:33 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/uk.po, po/zh_TW.Big5.po, po/ru.po, po/sk.po, po/ko.po, po/nl.po, po/pl.po, po/id.po, po/it.po, po/es.po, po/fr.po, VERSION, po/cs.po, po/de.po, po/el.po, reldate.h, Makefile.am, ChangeLog:
+	automatic post-release commit for mutt-0.96.6
+
+	* po/zh_TW.Big5.po, po/uk.po, po/sk.po, po/ru.po, po/pl.po, po/nl.po, po/ko.po, po/it.po, po/id.po, po/fr.po, po/es.po, po/el.po, po/de.po, po/cs.po, VERSION, reldate.h, ChangeLog:
+	post-release commit for 1.0pre2.
+
+	* doc/manual.sgml.tail, doc/manual.sgml.head, protos.h, thread.c, OPS, curs_main.c, functions.h:
+	Adding a <parent-message> function. From Roland Rosenfeld
+	<roland@spinnaker.rhein.de>.
+
 Tue Aug 31 19:11:57 1999  Thomas Roessler  <roessler@guug.de>
 
 	* curs_lib.c: Fix possible signedness problem with localized
