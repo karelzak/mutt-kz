@@ -111,13 +111,15 @@ void mutt_decode_quoted (STATE *s, long len, int istext)
 
     len--;
     
-    if (s->prefix && lbreak) state_puts (s->prefix, s);
+    if (s->prefix && lbreak)
+      state_puts (s->prefix, s);
+    
     lbreak = 0;
     if (ch == '=')
     {
       int ch1, ch2;
       
-      if((ch1 = handler_state_fgetc(s)) == EOF)
+      if(!len || (ch1 = handler_state_fgetc(s)) == EOF)
 	break;
 
       len--;
@@ -127,52 +129,51 @@ void mutt_decode_quoted (STATE *s, long len, int istext)
 	/* Skip whitespace at the end of the line since MIME does not
 	 * allow for it
 	 */
-	while((ch1 = handler_state_fgetc(s)) != EOF)
+	if(ch1 != '\n')
 	{
-	  len--;
-	  if(ch1 == '\n')
+	  while(len && (ch1 = handler_state_fgetc(s)) != EOF)
 	  {
-	    state_putc(ch1, s);
-	    lbreak = 1;
-	    break;
+	    len--;
+	    if(ch1 == '\n')
+	      break;
 	  }
 	}
-	
-	if(ch1 == EOF) 
+
+	if(ch1 == EOF)
 	  break;
+
+	ch = EOF;
+
       }
       else
       {
-	if((ch2 = handler_state_fgetc(s)) == EOF)
+	if(!len || (ch2 = handler_state_fgetc(s)) == EOF)
 	  break;
 
 	len--;
 	
         ch = hexval (ch1) << 4;
         ch |= hexval (ch2);
-        state_putc (ch, s);
-	if(ch == '\n')
-	  lbreak = 1;
       }
     } /* ch == '=' */
     else if (istext && ch == '\r')
     {
-      int ch1 = fgetc(s->fpin);
-      if(ch1 == '\n')
+      int ch1;
+
+      if((ch1 =fgetc(s->fpin)) == '\n')
       {
-	state_putc ('\n', s);
-	lbreak = 1;
+	ch = ch1;
+	len--;
       }
       else
-      {
 	ungetc(ch1, s->fpin);
-	state_putc (ch, s);
-      }
     }
-    else
-    {
+
+    if(ch != EOF)
       state_putc (ch, s);
-    }
+
+    if(ch == '\n')
+      lbreak = 1;
   }
 }
 
