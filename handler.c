@@ -66,22 +66,34 @@ int Index_64[128] = {
 void mutt_decode_xbit (STATE *s, long len, int istext)
 {
   int c;
-
+  int lbreak = 1;
+  
   if (istext)
   {
-    if(s->prefix) state_puts(s->prefix, s);
     while ((c = fgetc(s->fpin)) != EOF && len--)
     {
+      if(lbreak && s->prefix)
+      {
+	state_puts(s->prefix, s);
+	lbreak = 0;
+      }
+	  
       if (c == '\r' && len)
       {
-	if((c = fgetc(s->fpin)) != '\n')
-	  ungetc(c, s->fpin);
+	int ch;
+	
+	if((ch = fgetc(s->fpin)) != '\n')
+	  ungetc(ch, s->fpin);
 	else
+	{
+	  c = ch;
 	  len--;
+	}
+	
       }
       fputc(c, s->fpout);
-      if(c == '\n' && s->prefix)
-	state_puts (s->prefix, s);
+      if(c == '\n')
+	lbreak = 1;
     }
   }
   else
