@@ -1,46 +1,39 @@
-Fri Jul 10 09:38:55 1998  Thomas Roessler  <roessler@guug.de>
+Tue Jul 14 15:42:28 1998  Thomas Roessler  <roessler@guug.de>
 
-	* doc/PGP-Notes.txt: Adding a notice about core dumps.
+	* rfc2047.c, mime.h, handler.c: More unsigned fixes.
 
-	* reldate.h, README, INSTALL: Preparing 0.93i.
+	* pattern.c, parse.c:
+	Changing (int) casts in is* arguments to (unsigned char).
 
-	* handler.c: Fix text/enriched decoding: if there's a tag mismatch in
-	the last paragraph in the attachment, the whole paragraph
-	wouldn't be displayed.
+	* rfc2047.c: Removing a superfluous (unsigned char) cast in an IsPrint
+	argument.
 
-Thu Jul  9 19:51:36 1998  Thomas Roessler  <roessler@guug.de>
+Mon Jul 13 10:50:39 1998  Thomas Roessler  <roessler@guug.de>
 
-	* configure.in, configure, Attic/config.sub:
-	Use CC -Ae -D_HPUX_SOURCE on HP/UX.
+	* doc/mutt.sgml, doc/mutt.man, doc/Makefile.in:
+	Since manual page generation seems to be broken in the
+	SGML-tools package, we remove the SGML version of mutt.man
+	and make the troff source the master copy.  Suggested by
+	Roland Rosenfeld <roland@luv.rhein.de> who also provided
+	the corrected mutt.man file.
 
-	* Attic/config.sub:
-	file config.sub was initially added on branch mutt-0-93.
+Sun Jul 12 13:15:31 1998  Thomas Roessler  <roessler@guug.de>
 
-	* Attic/config.guess: Use CC -Ae -D_HPUX_SOURCE on HP/UX.
+	* protos.h: Replace calloc by safe_calloc in new_pattern.
 
-	* Attic/config.guess:
-	file config.guess was initially added on branch mutt-0-93.
+Sat Jul 11 05:10:29 1998  Thomas Roessler  <roessler@guug.de>
 
-Wed Jul  8 21:59:43 1998  Thomas Roessler  <roessler@guug.de>
+	* doc/manual.txt, doc/manual.sgml: Key bindings documentation.
 
-	* snprintf.c, pattern.c, parse.c, mx.c, mh.c, lib.c, keymap.c, init.c, from.c, edit.c, curs_main.c:
-	Changing (int) casts in is* arguments to (unsigned char)
-	casts to avoid mis-casting of signed chars.  (From Michael
-	Elkins.)
+Fri Jul 10 17:58:26 1998  Thomas Roessler  <roessler@guug.de>
 
-Tue Jul  7 09:22:40 1998  Thomas Roessler  <roessler@guug.de>
+	* NEWS: s/fwd_decode/forward_decode/ (Noted by Lars Hecking)
 
-	* rfc822.c: Change one int to size_t in rfc822.c.
+	* pop.c: tmp[] wasn't initialized when asking for the POP password.
 
-	* rfc822.c: Fix the parsing of route addresses a la RFC 822.  Patch
-	from Michael Elkins.
+	* buffy.c: On SunOS 4.1, one must include unistd.h in order to
+	declare SEEK_END.  (Fabrice Noilhan)
 
-	* snprintf.c, sendlib.c, pattern.c, parse.c, mx.c, mh.c, lib.c, keymap.c, init.c, from.c, edit.c, curs_main.c:
-	Cast the arguments of the is* functions to int.  Patch
-	from Michael Elkins.
-
-Thu Jul  2 21:15:18 1998  Thomas Roessler  <roessler@guug.de>
-
-	* hdrline.c:
-	Using the correct version of O'Shaughnessy Evans' %O patch.
+	* mutt.h: include <posix1_lim.h> if limits.h doesn't defile
+	_POSIX_PATH_MAX.
 
