@@ -1,15 +1,15 @@
 # Υποστήριξη Ελληνικών για το Mutt.
 # Copyright (C) 1999 Free Software Foundation, Inc.
-# Φάνης Δοκιανάκης <fanis@freemail.gr>, 1999.
+# Φάνης Δοκιανάκης <madf@hellug.gr>, 1999.
 # Νίκος Μαυρογιαννόπουλος <nmav@hellug.gr>
 # Σίμος Ξενιτέλλης <S.Xenitellis@rhbnc.ac.uk>
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mutt-1.0pre1\n"
-"POT-Creation-Date: 1999-10-11 21:19+0200\n"
-"PO-Revision-Date: 1999-09-16 12:00+0200\n"
-"Last-Translator: Φάνης Δοκιανάκης <fanis@freemail.gr>\n"
+"Project-Id-Version: Mutt-1.0pre4\n"
+"POT-Creation-Date: 1999-10-14 20:09+0300\n"
+"PO-Revision-Date: 1999-10-19 12:00+0200\n"
+"Last-Translator: Φάνης Δοκιανάκης <madf@hellug.gr>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-7\n"
@@ -340,12 +340,12 @@ msgstr "Εντολή: "
 #
 #: commands.c:180 recvattach.c:692
 msgid "Bounce message to: "
-msgstr "Αναπήδηση μηνύματος στο: "
+msgstr "Αυτούσια Προώθηση μηνύματος στο: "
 
 #
 #: commands.c:182 recvattach.c:694
 msgid "Bounce tagged messages to: "
-msgstr "Αναπήδηση σημειωμένων μηνυμάτων στο: "
+msgstr "Αυτούσια Προώθηση σημειωμένων μηνυμάτων στο: "
 
 #
 #: commands.c:197
@@ -356,23 +356,23 @@ msgstr "Σφάλμα κατά την ανάλυση της διεύθηνσης!"
 #: commands.c:207
 #, c-format
 msgid "Bounce message to %s"
-msgstr "Αναπήδηση μηνύματος στο %s"
+msgstr "Αυτούσια Προώθηση μηνύματος στο %s"
 
 #
 #: commands.c:207
 #, c-format
 msgid "Bounce messages to %s"
-msgstr "Αναπήδηση μηνημάτων στο %s"
+msgstr "Αυτούσια Προώθηση μηνημάτων στο %s"
 
 #
 #: commands.c:218
 msgid "Message bounced."
-msgstr "Το μήνυμα αναπηδήστε."
+msgstr "Το μήνυμα προωθήθηκε αυτούσιο."
 
 #
 #: commands.c:218
 msgid "Messages bounced."
-msgstr "Τα μηνύματα αναπήδησαν."
+msgstr "Τα μηνύματα προωθήθηκαν αυτούσια."
 
 #
 #: commands.c:238
@@ -2313,13 +2313,13 @@ msgstr "εξαγάγετε τα δημόσια κλειδιά PGP"
 # keymap_defs.h:161
 #: keymap_defs.h:161
 msgid "wipe PGP passphrase from memory"
-msgstr "εξαφανίστε την φράση κλειδί PGP από τη μνήμη"
+msgstr "εξαφανίζει την φράση κλειδί PGP από τη μνήμη"
 
 #
 # keymap_defs.h:162
 #: keymap_defs.h:162
 msgid "mail a PGP public key"
-msgstr "στείλτε με γράμμα το δημόσιο κλειδί PGP"
+msgstr "ταχυδρόμηση δημόσιου κλειδιού PGP"
 
 #
 # keymap_defs.h:163
@@ -2331,17 +2331,17 @@ msgstr "επιβεβαιώστε ένα δημόσιο κλειδί PGP"
 # keymap_defs.h:164
 #: keymap_defs.h:164
 msgid "view the key's user id"
-msgstr "εμφανίστε τον ιδιοκτήτη του κλειδιού"
+msgstr "εμφάνιση του ιδιοκτήτη του κλειδιού"
 
 #
 #: keymap_defs.h:165
 msgid "make decrypted copy and delete"
-msgstr "κάντε αποκωδικοποιημένο αντίγραφο και διέγραψε"
+msgstr "δημιουργία αποκρυπτογραφημένου αντιγράφου και διαγραφή"
 
 #
 #: keymap_defs.h:166
 msgid "make decrypted copy"
-msgstr "κάντε αποκωδικοποιημένο αντίγραφο"
+msgstr "δημιουργία αποκρυπτογραφημένου αντιγράφου"
 
 #
 #: lib.c:276 lib.c:291 lib.c:322
@@ -3597,19 +3597,19 @@ msgstr "Εκτύπωση προσαρτήσεων;"
 #
 #: recvattach.c:669
 msgid "You may only bounce message/rfc822 parts."
-msgstr "Μπορείς να αναπηδήσεις μόνο μήνυμα/μέρη rfc822"
+msgstr "Μπορείς να προωθήσεις αυτούσια μόνο μήνυμα/μέρη rfc822"
 
 #
 #: recvattach.c:705
 #, c-format
 msgid "Bounce messages to %s...?"
-msgstr "Αναπήδηση μυνημάτων στο %s...?"
+msgstr "Αυτούσια Προώθηση μυνημάτων στο %s...?"
 
 #
 #: recvattach.c:706
 #, c-format
 msgid "Bounce message to %s...?"
-msgstr "Αναπήδηση μυνήματος στο %s...?"
+msgstr "Αυτούσια Προώθηση μυνήματος στο %s...?"
 
 #
 #: recvattach.c:943
@@ -3730,7 +3730,7 @@ msgstr "Ματαίωση αποστολής μη τροποποιημένου μηνύματος."
 #. abort
 #: send.c:1140
 msgid "Mail not sent."
-msgstr "Το γράμμα δε στάλθηκε."
+msgstr "Το γράμμα δεν εστάλη."
 
 #
 #: send.c:1153
@@ -3775,7 +3775,7 @@ msgstr "Δεν κατάφερα να στείλω το μήνυμα."
 #
 #: send.c:1327
 msgid "Mail sent."
-msgstr "Το γράμμα εστάλει."
+msgstr "Το γράμμα εστάλη."
 
 #
 #: send.c:1327
