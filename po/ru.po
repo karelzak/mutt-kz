@@ -176,7 +176,7 @@ msgstr "%s не является каталогом."
 #: browser.c:495
 #, c-format
 msgid "Mailboxes [%d]"
-msgstr "Почтовых ящиков [%d]"
+msgstr "Почтовые ящики [%d]"
 
 #: browser.c:502
 #, c-format
