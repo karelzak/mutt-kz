@@ -1692,7 +1692,7 @@ int mutt_write_fcc (const char *path, HEADER *hdr, const char *msgid, int post)
     }
   }
 
-  hdr->read = 1; /* make sure to put it in the `cur' directory (maildir) */
+  hdr->read = !post; /* make sure to put it in the `cur' directory (maildir) */
   if ((msg = mx_open_new_message (&f, hdr, M_ADD_FROM)) == NULL)
   {
     mx_close_mailbox (&f);
