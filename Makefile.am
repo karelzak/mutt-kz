@@ -35,7 +35,7 @@ EXTRA_DIST = COPYRIGHT GPL OPS OPS.PGP TODO configure acconfig.h attach.h \
 	mailbox.h mapping.h mime.h mutt.h mutt_curses.h mutt_menu.h  \
 	mutt_regex.h mutt_socket.h mx.h pager.h parse.h pgp.h protos.h  \
 	reldate.h rfc1524.h rfc2047.h rfc822.h sha.h sha_locl.h	\
-	sort.h mime.types VERSION prepare _regex.h
+	sort.h mime.types VERSION prepare _regex.h README.SECURITY
 
 BUILT_SOURCES = mutt_dotlock.c keymap_defs.h
 

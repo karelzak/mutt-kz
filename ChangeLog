@@ -1,11 +1,50 @@
-Tue Jan 26 08:41:06 1999  Thomas Roessler  <roessler@guug.de>
+Wed Feb 10 23:12:27 1999  Thomas Roessler  <roessler@guug.de>
+
+	* rfc1524.c, protos.h, lib.c, handler.c, attach.c:
+	Fix the security fix.
+
+	* rfc1524.c, mutt.h, lib.c, init.h: [stable] $mailcap_sanitize
+
+Tue Feb  9 23:54:03 1999  Thomas Roessler  <roessler@guug.de>
+
+	* sort.c, mx.c, mutt.h, mh.c, mbox.c, curs_main.c, ChangeLog:
+	Vikas' latest collapse fix.
+
+	* pgppubring.c: [stable] Alg. 16 is encrypt-only, el-gamal.
+
+	* po/cs.po: New czech translation.
+
+	* commands.c: Reorder headers when decode-piping.
+
+Thu Feb  4 12:00:10 1999  Thomas Roessler  <roessler@guug.de>
+
+	* mx.c: Check for write errors when moving messages to $mbox.
+
+Tue Feb  2 21:57:44 1999  Thomas Roessler  <roessler@guug.de>
+
+	* pattern.c: small nit-fix from vikas to the ~v pattern.
+
+	* imap.c: Brandon's imap_create patch.
+
+	* copy.c, imap.c: A couple of IMAP fixes from Brandon Long.
+
+Thu Jan 28 09:08:47 1999  Thomas Roessler  <roessler@guug.de>
+
+	* gnupgparse.c: gnupg's trust model is currently unusable.
+	As a work-around, we don't present the user with _any_ trust
+	information if he uses gnupg.
+
+Tue Jan 26 21:24:56 1999  Thomas Roessler  <roessler@guug.de>
+
+	* doc/manual.sgml.in: [stable] document ~v.
+
+	* thread.c, pattern.c, mutt.h: [stable] Add the ~v pattern.
+
+	* doc/manual.sgml.in: Document $implicit_autoview.
 
 	* compose.c: Fix a segfault when users change attachment
 	content types, and let toggle-unlink honor the $resolv
 	variable.
-
-	* compose.c: $resolve should be honored when doing
-	toggle-unlink on the compose menu.
 
 Mon Jan 25 22:16:46 1999  Thomas Roessler  <roessler@guug.de>
 
