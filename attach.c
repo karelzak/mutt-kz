@@ -25,6 +25,7 @@
 #include "pager.h"
 #include "mailbox.h"
 #include "copy.h"
+#include "mx.h"
 
 #include <ctype.h>
 #include <stdlib.h>
@@ -537,20 +538,28 @@ int mutt_save_attachment (FILE *fp, BODY *m, char *path, int flags, HEADER *hdr)
       
       HEADER *hn;
       CONTEXT ctx;
+      MESSAGE *msg;
+      int chflags = 0;
       int r = -1;
       
       hn = m->hdr;
       hn->msgno = hdr->msgno; /* required for MH/maildir */
+      hn->read = 1;
 
       if (mx_open_mailbox(path, M_APPEND | M_QUIET, &ctx) == NULL)
 	return -1;
-      
-      if(mutt_append_message(&ctx, Context, hn, 0, 0) == 0)
+      if ((msg = mx_open_new_message (&ctx, hdr, M_ADD_FROM)) == NULL)
       {
-	mutt_message("Attachment saved.");
-	r = 0;
+	mx_close_mailbox(&ctx);
+	return -1;
       }
+      if (ctx.magic == M_MBOX || ctx.magic == M_MMDF)
+	chflags = CH_FROM;
+      chflags |= (ctx.magic == M_MAILDIR ? CH_NOSTATUS : CH_UPDATE);
+      if ((r = _mutt_copy_message (msg->fp, fp, hn, hn->content, 0, chflags)) == 0)
+	mutt_message("Attachment saved.");
 	
+      mx_close_message (&msg);
       mx_close_mailbox(&ctx);
       return r;
     }

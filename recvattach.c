@@ -266,7 +266,7 @@ static int mutt_query_save_attachment (FILE *fp, BODY *body, HEADER *hdr)
   
   if (body->filename)
     strfcpy (buf, body->filename, sizeof (buf));
-  else  if(body->hdr && mutt_is_message_type(body->type, body->subtype))
+  else if(body->hdr && mutt_is_message_type(body->type, body->subtype))
     mutt_default_save(buf, sizeof(buf), body->hdr);
   else
     buf[0] = 0;
@@ -277,7 +277,7 @@ static int mutt_query_save_attachment (FILE *fp, BODY *body, HEADER *hdr)
 
   mutt_expand_path (buf, sizeof (buf));
 
-  if(fp && hdr && body->hdr && mutt_is_message_type (body->type, body->subtype))
+  if(fp && body->hdr && mutt_is_message_type (body->type, body->subtype))
   {
     struct stat st;
     
@@ -293,7 +293,7 @@ static int mutt_query_save_attachment (FILE *fp, BODY *body, HEADER *hdr)
     return -1;
   
   mutt_message ("Saving...");
-  if (mutt_save_attachment (fp, body, tfile, 0, hdr) == 0)
+  if (mutt_save_attachment (fp, body, tfile, 0, hdr ? hdr : body->hdr) == 0)
   {
     mutt_message ("Attachment saved.");
     return 0;
