@@ -491,7 +491,7 @@ static int imap_read_headers (CONTEXT *ctx, int msgbegin, int msgend)
        * If we get more messages while doing this, we make another
        * request for all the new messages.
        */
-      snprintf (buf, sizeof (buf), "%s FETCH %d:%d (FLAGS INTERNALDATE RFC822.SIZE BODY.PEEK[HEADER.FIELDS (DATE FROM SUBJECT TO CC REFERENCES CONTENT-TYPE IN-REPLY-TO)])\r\n", seq, msgno + 1, msgend + 1);
+      snprintf (buf, sizeof (buf), "%s FETCH %d:%d (FLAGS INTERNALDATE RFC822.SIZE BODY.PEEK[HEADER.FIELDS (DATE FROM SUBJECT TO CC MESSAGE-ID REFERENCES CONTENT-TYPE IN-REPLY-TO REPLY-TO)])\r\n", seq, msgno + 1, msgend + 1);
       imap_write (CTX_DATA->conn, buf);
       fetchlast = msgend + 1;
     }
