@@ -190,11 +190,14 @@ AC_CHECK_FUNCS(setegid srand48 strerror)
 AC_REPLACE_FUNCS(strcasecmp)
 
 mutt_cv_snprintf=no
+SNPRINTFOBJS=""
 AC_CHECK_FUNC(snprintf, [AC_DEFINE(HAVE_SNPRINTF)], [mutt_cv_snprintf=yes])
 AC_CHECK_FUNC(vsnprintf, [AC_DEFINE(HAVE_VSNPRINTF)], [mutt_cv_snprintf=yes])
 if test $mutt_cv_snprintf = yes; then
 	LIBOBJS="$LIBOBJS snprintf.o"
+	SNPRINTFOBJS="snprintf.o"
 fi
+AC_SUBST(SNPRINTFOBJS)
 
 dnl SCO uses chsize() instead of ftruncate()
 AC_CHECK_FUNCS(ftruncate, break, [AC_CHECK_LIB(x, chsize)])
@@ -294,28 +297,38 @@ int main (int argc, char **argv)
 	fi
 fi
 
+AC_ARG_WITH(libdir, [  --with-libdir=PATH       specify where to put arch dependent files],
+	[mutt_cv_libdir=$withval],
+	[ AC_CACHE_CHECK(where to put architecture-dependent files,
+		       mutt_cv_libdir,
+		[if test -d ${mutt_cv_prefix}/lib/misc; then
+			mutt_cv_libdir="${mutt_cv_prefix}/lib/misc"
+		else
+			mutt_cv_libdir="${mutt_cv_prefix}/lib"
+		fi])
+	])
+
+libdir=$mutt_cv_libdir
+AC_SUBST(libdir)
+
 AC_ARG_WITH(sharedir, [  --with-sharedir=PATH       specify where to put arch independent files],
 	[mutt_cv_sharedir=$withval],
 	[ AC_CACHE_CHECK(where to put architecture-independent data files,
 		       mutt_cv_sharedir,
-		[if test x$prefix = xNONE; then
-			mutt_cv_prefix=$ac_default_prefix
-		else
-			mutt_cv_prefix=$prefix
-		fi
-		if test -d ${mutt_cv_prefix}/share; then
+		[if test -d ${mutt_cv_prefix}/share; then
 			if test -d ${mutt_cv_prefix}/share/misc; then
-				mutt_cv_sharedir='${prefix}/share/misc'
+				mutt_cv_sharedir="${mutt_cv_prefix}/share/misc"
 			else
-				mutt_cv_sharedir='${prefix}/share'
+				mutt_cv_sharedir="${mutt_cv_prefix}/share"
 			fi
 		else
-			mutt_cv_sharedir='${libdir}'
+			mutt_cv_sharedir="$libdir"
 		fi])
 	])
 
 sharedir=$mutt_cv_sharedir
 AC_SUBST(sharedir)
+
 
 AC_ARG_WITH(docdir, [  --with-docdir=PATH       specify where to put the documentation],
 	[mutt_cv_docdir=$withval],
@@ -334,14 +347,14 @@ AC_SUBST(docdir)
 
 
 if test x$mutt_cv_setgid = xyes; then
-	MUTT_GROUP='-g mail'
-	MUTT_PERMISSION=2755
+	DOTLOCK_GROUP='-g mail'
+	DOTLOCK_PERMISSION=2755
 else
-	MUTT_GROUP=''
-	MUTT_PERMISSION=755
+	DOTLOCK_GROUP=''
+	DOTLOCK_PERMISSION=755
 fi
-AC_SUBST(MUTT_GROUP)
-AC_SUBST(MUTT_PERMISSION)
+AC_SUBST(DOTLOCK_GROUP)
+AC_SUBST(DOTLOCK_PERMISSION)
 
 AC_ARG_WITH(domain, [  --with-domain=DOMAIN       Specify your DNS domain name ],
 	[if test $withval != yes; then
@@ -412,4 +425,4 @@ AC_ARG_ENABLE(exact-address, [  --enable-exact-address     enable regeneration o
 		AC_DEFINE(EXACT_ADDRESS)
 	fi])
 
-AC_OUTPUT(Makefile rx/Makefile Muttrc doc/Makefile)
+AC_OUTPUT(Makefile rx/Makefile Muttrc doc/Makefile doc/dotlock.man doc/mutt.man)

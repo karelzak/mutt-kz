@@ -288,12 +288,6 @@ void mutt_pattern_free (pattern_t **pat);
 #define DRAND (double)rand
 #endif /* HAVE_SRAND48 */
 
-#ifdef HAVE_SETEGID
-#define SETEGID setegid
-#else
-#define SETEGID setgid
-#endif
-
 int getdnsdomainname (char *, size_t);
 
 /* According to SCO support, this is how to detect SCO */

@@ -120,11 +120,6 @@ WHERE FILE *debugfile INITVAL (0);
 WHERE int debuglevel INITVAL (0);
 #endif
 
-#ifdef USE_SETGID
-WHERE gid_t MailGid;
-WHERE gid_t UserGid;
-#endif /* USE_SETGID */
-
 #ifdef MAIN_C
 const char *Weekdays[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
 const char *Months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "ERR" };

@@ -334,28 +334,6 @@ int main (int argc, char **argv)
 
   mutt_error = mutt_nocurses_error;
 
-#ifdef USE_SETGID
-  /* Determine the user's default gid and the gid to use for locking the spool
-   * mailbox on those systems which require setgid "mail" to write to the
-   * directory.  This function also resets the gid to "normal" since the
-   * effective gid will be "mail" when we start (Mutt attempts to run
-   * non-setgid whenever possible to reduce the possibility of security holes).
-   */
-
-  /* Get the default gid for the user */
-  UserGid = getgid ();
-
-  /* it is assumed that we are setgid to the correct gid to begin with */
-  MailGid = getegid ();
-
-  /* reset the effective gid to the normal gid */
-  if (SETEGID (UserGid) != 0)
-  {
-    perror ("setegid");
-    exit (0);
-  }
-#endif
-
 #ifdef USE_SLANG_CURSES
 
   check_slang();

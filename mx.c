@@ -37,6 +37,10 @@
 #include "buffy.h"
 #endif
 
+#ifdef USE_DOTLOCK
+#include "dotlock.h"
+#endif
+
 #include <dirent.h>
 #include <fcntl.h>
 #include <sys/file.h>
@@ -64,147 +68,62 @@
  * path - file to lock
  * retry - should retry if unable to lock?
  */
+
+#define DL_FL_TRY	(1 << 0)
+#define DL_FL_UNLOCK	(1 << 1)
+#define DL_FL_USEPRIV	(1 << 2)
+#define DL_FL_FORCE	(1 << 3)
+#define DL_FL_RETRY	(1 << 4)
+
+static int invoke_dotlock(const char *path, int flags, int retry)
+{
+  char cmd[LONG_STRING + _POSIX_PATH_MAX];
+  char r[SHORT_STRING];
+  
+  if(flags & DL_FL_RETRY)
+    snprintf(r, sizeof(r), "-r %d ", retry ? MAXLOCKATTEMPT : 0);
+  
+  snprintf(cmd, sizeof(cmd),
+	   "%s %s%s%s%s%s%s",
+	   DOTLOCK,
+	   flags & DL_FL_TRY ? "-t " : "",
+	   flags & DL_FL_UNLOCK ? "-u " : "",
+	   flags & DL_FL_USEPRIV ? "-p " : "",
+	   flags & DL_FL_FORCE ? "-f " : "",
+	   flags & DL_FL_RETRY ? r : "",
+	   path);
+
+  return mutt_system(cmd);
+}
+
 static int dotlock_file (const char *path, int retry)
 {
-  const char *pathptr = path;
-  char lockfile[_POSIX_PATH_MAX];
-  char nfslockfile[_POSIX_PATH_MAX];
-  char realpath[_POSIX_PATH_MAX];
-  struct stat sb;
-  size_t prev_size = 0;
-  int count = 0;
-  int attempt = 0;
-  int fd;
+  int r;
+  int flags = DL_FL_USEPRIV | DL_FL_RETRY;
+  
+  if(retry) retry = 1;
 
-  /* if the file is a symlink, find the real file to which it refers */
-  FOREVER
+retry_lock:
+  mutt_message("Trying to lock %s...", path);
+  if((r = invoke_dotlock(path, flags, retry)) == DL_EX_EXIST)
   {
-    dprint(2,(debugfile,"dotlock_file(): locking %s\n", pathptr));
-
-    if (lstat (pathptr, &sb) != 0)
+    if(retry && mutt_yesorno("Lock count exceeded, remove lock?", 1) == 1)
     {
-      mutt_perror (pathptr);
-      return (-1);
+      flags |= DL_FL_FORCE;
+      retry--;
+      goto retry_lock;
     }
-
-    if (S_ISLNK (sb.st_mode))
-    {
-      char linkfile[_POSIX_PATH_MAX];
-      char linkpath[_POSIX_PATH_MAX];
-
-      if ((count = readlink (pathptr, linkfile, sizeof (linkfile))) == -1)
-      {
-	mutt_perror (path);
-	return (-1);
-      }
-      linkfile[count] = 0; /* readlink() does not NUL terminate the string! */
-      mutt_expand_link (linkpath, pathptr, linkfile);
-      strfcpy (realpath, linkpath, sizeof (realpath));
-      pathptr = realpath;
-    }
-    else
-      break;
   }
-
-  snprintf (nfslockfile, sizeof (nfslockfile), "%s.%s.%d", pathptr, Hostname, (int) getpid ());
-  snprintf (lockfile, sizeof (lockfile), "%s.lock", pathptr);
-  unlink (nfslockfile);
-
-  while ((fd = open (nfslockfile, O_WRONLY | O_EXCL | O_CREAT, 0)) < 0)
-    if (errno != EAGAIN)
-    {
-      mutt_perror ("cannot open NFS lock file!");
-      return (-1);
-    }
-
-  close (fd);
-
-  count = 0;
-  FOREVER
-  {
-    link (nfslockfile, lockfile);
-    if (stat (nfslockfile, &sb) != 0)
-    {
-      mutt_perror ("stat");
-      return (-1);
-    }
-
-    if (sb.st_nlink == 2)
-      break;
-    
-    if (stat (path, &sb) != 0)
-      sb.st_size = 0;
-
-    if (count == 0)
-      prev_size = sb.st_size;
-
-    /* only try to remove the lock if the file is not changing */
-    if (prev_size == sb.st_size && ++count >= retry ? MAXLOCKATTEMPT : 0)
-    {
-      if (retry && mutt_yesorno ("Lock count exceeded, remove lock?", 1) == 1)
-      {
-	unlink (lockfile);
-	count = 0;
-	attempt = 0;
-	continue;
-      }
-      else
-	return (-1);
-    }
-
-    prev_size = sb.st_size;
-
-    mutt_message ("Waiting for lock attempt #%d...", ++attempt);
-    sleep (1);
-  }
-
-  unlink (nfslockfile);
-
-  return 0;
+  mutt_clear_error();
+  return (r == DL_EX_OK ? 0 : -1);
 }
 
 static int undotlock_file (const char *path)
 {
-  const char *pathptr = path;
-  char lockfile[_POSIX_PATH_MAX];
-  char realpath[_POSIX_PATH_MAX];
-  struct stat sb;
-  int n;
-
-  FOREVER
-  {
-    dprint (2,(debugfile,"undotlock: unlocking %s\n",path));
-
-    if (lstat (pathptr, &sb) != 0)
-    {
-      mutt_perror (pathptr);
-      return (-1);
-    }
-
-    if (S_ISLNK (sb.st_mode))
-    {
-      char linkfile[_POSIX_PATH_MAX];
-      char linkpath[_POSIX_PATH_MAX];
-
-      if ((n = readlink (pathptr, linkfile, sizeof (linkfile))) == -1)
-      {
-	mutt_perror (pathptr);
-	return (-1);
-      }
-      linkfile[n] = 0; /* readlink() does not NUL terminate the string! */
-      mutt_expand_link (linkpath, pathptr, linkfile);
-      strfcpy (realpath, linkpath, sizeof (realpath));
-      pathptr = realpath;
-      continue;
-    }
-    else
-      break;
-  }
-
-  snprintf (lockfile, sizeof (lockfile), "%s.lock", pathptr);
-  unlink (lockfile);
-  return 0;
+  return (invoke_dotlock(path, DL_FL_USEPRIV | DL_FL_UNLOCK, 0) == DL_EX_OK ? 
+	  0 : -1);
 }
+
 #endif /* USE_DOTLOCK */
 
 /* Args:

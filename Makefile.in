@@ -32,8 +32,8 @@ VPATH=@srcdir@
 
 INSTALL=@INSTALL@
 CC=@CC@
-XCPPFLAGS=-I. @CPPFLAGS@
-CFLAGS=@CFLAGS@ -DSHAREDIR=\"$(sharedir)\" $(XCPPFLAGS)
+XCPPFLAGS=-I. @CPPFLAGS@ -DSHAREDIR=\"$(sharedir)\" -DDOTLOCK=\"$(libdir)/dotlock\"
+CFLAGS=@CFLAGS@  $(XCPPFLAGS)
 LDFLAGS=@LDFLAGS@
 LIBS=@LIBS@
 OPS=@OPS@
@@ -46,7 +46,7 @@ OBJS=	addrbook.o alias.o attach.o browser.o buffy.o color.o \
 	rfc1524.o rfc2047.o score.o send.o sendlib.o signal.o sort.o \
 	status.o system.o thread.o @LIBOBJS@
 
-CLEANFILES=mutt *.o core
+CLEANFILES=dotlock mutt *.o core
 VERYCLEANFILES=$(CLEANFILES) Makefile config.cache config.log \
 	config.status config.h Muttrc
 DISTCLEANFILES=$(VERYCLEANFILES) tags keymap_defs.h *.rej *.orig *~ Makefile.bak
@@ -56,19 +56,24 @@ NONEXPORT=pgp.c pgp.h pgpinvoke.c pgpkey.c pgppubring.c sha.h sha1dgst.c \
 	gnupgparse.c sha_locl.h OPS.PGP doc/pgp-Notes.txt doc/language.txt \
 	doc/language50.txt
 
-all: mutt
+all: mutt dotlock
 
 mutt: keymap_defs.h $(OBJS) $(REGEX)
 	$(CC) -o mutt $(OBJS) $(REGEX) $(LDFLAGS) $(LIBS)
+
+dotlock: dotlock.o @SNPRINTFOBJS@
 
 keymap_defs.h: Makefile $(OPS)
 	rm -f keymap_defs.h
 	$(srcdir)/gen_defs $(OPS) > keymap_defs.h
 
-install: mutt install.doc
+install: mutt dotlock install.doc
 	$(srcdir)/mkinstalldirs $(bindir)
+	$(srcdir)/mkinstalldirs $(libdir)
 	-mv -f $(bindir)/mutt $(bindir)/mutt.old
-	$(INSTALL) @MUTT_GROUP@ -m @MUTT_PERMISSION@ mutt $(bindir)
+	-mv -f $(libdir)/dotlock $(libdir)/dotlock.old
+	$(INSTALL) -m 755 mutt $(bindir)
+	$(INSTALL) @DOTLOCK_GROUP@ -m @DOTLOCK_PERMISSION@ dotlock $(libdir)
 	-if [ ! -f $(sharedir)/Muttrc ]; then \
 		$(srcdir)/mkinstalldirs $(sharedir); \
 		$(INSTALL) -m 644 $(srcdir)/Muttrc $(sharedir); \
