@@ -84,11 +84,13 @@ static KEYINFO *parse_pub_line( char *buf, int *is_subkey )
 	  case 2: /* trust info */
 	    switch( *p ) { /* look only at the first letter */
 	      case 'e': k->flags |= KEYFLAG_EXPIRED;   break;
+	      case 'r': k->flags |= KEYFLAG_REVOKED;   break;
+#if 0
 	      case 'n': trust = 1;  break;
 	      case 'm': trust = 2;  break;
 	      case 'f': trust = 3;  break;
 	      case 'u': trust = 3;  break;
-	      case 'r': k->flags |= KEYFLAG_REVOKED;   break;
+#endif
 	    }
 	    break;
 	  case 3: /* key length  */
