@@ -1708,6 +1708,7 @@ int imap_append_message (CONTEXT *ctx, MESSAGE *msg)
   int port;
   size_t len;
   int c, last;
+  CONNECTION *conn = CTX_DATA->conn;
 
   if (imap_parse_path (ctx->path, host, sizeof (host), &port, &pc))
     return (-1);
@@ -1729,23 +1730,24 @@ int imap_append_message (CONTEXT *ctx, MESSAGE *msg)
   }
   rewind(fp);
 
+  imap_quote_string (mbox, sizeof (mbox), mailbox);
+
   /* hack from Nathan Neulinger */
   mutt_message _("Sending CREATE command ...");
   imap_make_sequence (seq, sizeof (seq));
   snprintf (buf, sizeof (buf), "%s CREATE %s\r\n", seq, mbox);
-  imap_exec (buf, sizeof (buf), idata, seq, buf, IMAP_OK_FAIL);
+  imap_exec (buf, sizeof (buf), CONN_DATA, seq, buf, IMAP_OK_FAIL);
 
   mutt_message _("Sending APPEND command ...");
 
-  imap_quote_string (mbox, sizeof (mbox), mailbox);
   imap_make_sequence (seq, sizeof (seq));
   snprintf (buf, sizeof (buf), "%s APPEND %s {%d}\r\n", seq, mbox, len);
 
-  mutt_socket_write (CTX_DATA->conn, buf);
+  mutt_socket_write (conn, buf);
 
   do 
   {
-    if (mutt_socket_read_line_d (buf, sizeof (buf), CTX_DATA->conn) < 0)
+    if (mutt_socket_read_line_d (buf, sizeof (buf), conn) < 0)
     {
       fclose (fp);
       return (-1);
@@ -1784,19 +1786,19 @@ int imap_append_message (CONTEXT *ctx, MESSAGE *msg)
     buf[len++] = c;
 
     if(len > sizeof(buf) - 3)
-      flush_buffer(buf, &len, CTX_DATA->conn);
+      flush_buffer(buf, &len, conn);
   }
   
   if(len)
-    flush_buffer(buf, &len, CTX_DATA->conn);
+    flush_buffer(buf, &len, conn);
 
     
-  mutt_socket_write (CTX_DATA->conn, "\r\n");
+  mutt_socket_write (conn, "\r\n");
   fclose (fp);
 
   do
   {
-    if (mutt_socket_read_line_d (buf, sizeof (buf), CTX_DATA->conn) < 0)
+    if (mutt_socket_read_line_d (buf, sizeof (buf), conn) < 0)
       return (-1);
 
     if (buf[0] == '*' && imap_handle_untagged (CTX_DATA, buf) != 0)
