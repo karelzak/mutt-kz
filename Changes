@@ -1,27 +1,12 @@
-Tue Jun 30 06:35:32 1998  Thomas Roessler  <roessler@guug.de>
+Thu Jul  2 19:47:12 1998  Thomas Roessler  <roessler@guug.de>
 
-	* configure.in, configure, TODO, README, NEWS:
-	Updating some of the documentation for 0.93. (And
-	bumping the version number.)
+	* hdrline.c: Adding the %O expansion.
 
-	* doc/manual.txt: Incorporate the recent changes to manual.sgml.
+	* doc/manual.sgml: Applying the various manual_nits patches.
 
-	* main.c: Work around a buffer overflow in SLang.  (This is the same
-	bug which is fixed by 0.91.2i.)
+Wed Jul  1 17:01:50 1998  Thomas Roessler  <roessler@guug.de>
 
-Fri Jun 26 10:31:28 1998  Thomas Roessler  <roessler@guug.de>
+	* curs_main.c: Fixing a reverse-threading problem.
 
-	* doc/manual.sgml, send.c, init.h, globals.h, Muttrc.in:
-	Removing $empty_to.
-
-Thu Jun 25 22:31:46 1998  Thomas Roessler  <roessler@guug.de>
-
-	* hdrline.c: Moved a break statement where it belongs.
-
-	* mx.c: Fix an imap-related typo.
-
-	* handler.c: Don't generate non-terminated last lines when quoting
-	8bit-"encoded" text-plain body parts.
-
-	* Makefile.in: Don't use GNU make specific features.
+	* imap.c: Fixing an imap-related segmentation fault.
 
