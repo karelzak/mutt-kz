@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.26\n"
 "POT-Creation-Date: 2002-05-02 01:08+0200\n"
-"PO-Revision-Date: 2002-01-19 17:52+0100\n"
+"PO-Revision-Date: 2002-05-02 17:33+0200\n"
 "Last-Translator: Roland Rosenfeld <roland@spinnaker.de>\n"
 "Language-Team: German <mutt-po@mutt.org>\n"
 "MIME-Version: 1.0\n"
@@ -1788,9 +1788,8 @@ msgid "move the cursor to the end of the word"
 msgstr "Springe zum Ende des Wortes"
 
 #: keymap_alldefs.h:73
-#, fuzzy
 msgid "scroll down through the history list"
-msgstr "Gehe in der Liste früherer Eingaben nach oben"
+msgstr "Gehe in der Liste früherer Eingaben nach unten"
 
 #: keymap_alldefs.h:74
 msgid "scroll up through the history list"
