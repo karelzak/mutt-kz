@@ -1178,8 +1178,11 @@ int mutt_write_rfc822_header (FILE *fp, ENVELOPE *env, BODY *attach, int mode)
 
   if (env->bcc)
   {
-    fputs ("Bcc: ", fp);
-    mutt_write_address_list (env->bcc, fp, 5);
+    if(mode != 0 || option(OPTWRITEBCC))
+    {
+      fputs ("Bcc: ", fp);
+      mutt_write_address_list (env->bcc, fp, 5);
+    }
   }
   else if (mode > 0)
     fputs ("Bcc: \n", fp);

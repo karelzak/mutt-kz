@@ -263,6 +263,7 @@ struct option_t MuttVars[] = {
   { "wait_key",		DT_BOOL, R_NONE, OPTWAITKEY, 1 },
   { "wrap_search",	DT_BOOL, R_NONE, OPTWRAPSEARCH, 1 },
   { "write_inc",	DT_NUM,	 R_NONE, UL &WriteInc, 10 },
+  { "write_bcc",	DT_BOOL, R_NONE, OPTWRITEBCC, 1},
   { NULL }
 };
 

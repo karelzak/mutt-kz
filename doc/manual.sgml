@@ -3642,8 +3642,8 @@ Type: string<newline>
 Default: /usr/lib/sendmail -oi -oem
 
 Specifies the program and arguments used to deliver mail sent by Mutt.
-Mutt expects that the specified program will read the message header for
-recipients.
+Mutt expects that the specified program interprets
+additional arguments as recipient addresses.
 
 <sect2>sendmail&lowbar;wait<label id="sendmail_wait">
 <p>
@@ -4076,6 +4076,15 @@ When writing a mailbox, a message will be printed every
 a single message will be displayed before writing a mailbox.
 
 Also see the <ref id="read_inc" name="&dollar;read&lowbar;inc"> variable.
+
+<sect2>write&lowbar;bcc<label id="write_bcc">
+<p>
+Type: boolean<newline>
+Default: set
+
+Controls whether mutt writes out the Bcc header when
+preparing messages to be sent.  Exim users may wish to use
+this.
 
 <sect1>Functions<label id="functions">
 <p>

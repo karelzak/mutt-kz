@@ -4087,8 +4087,8 @@
   Default: /usr/lib/sendmail -oi -oem
 
   Specifies the program and arguments used to deliver mail sent by Mutt.
-  Mutt expects that the specified program will read the message header
-  for recipients.
+  Mutt expects that the specified program interprets additional
+  arguments as recipient addresses.
 
   66..33..112277..  sseennddmmaaiill__wwaaiitt
 
@@ -4568,6 +4568,15 @@
   Also see the ``$read_inc'' variable.
 
 
+  66..33..115588..  wwrriittee__bbcccc
+
+  Type: boolean
+  Default: set
+
+  Controls whether mutt writes out the Bcc header when preparing
+  messages to be sent.  Exim users may wish to use this.
+
+
   66..44..  FFuunnccttiioonnss
 
   The following is the list of available functions listed by the mapping
@@ -4583,6 +4592,30 @@
   (such as movement) available in all menus except for _p_a_g_e_r and _e_d_i_t_o_r.
   Changing settings for this menu will affect the default bindings for
   all menus (except as noted).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   bottom-page                L   move to the bottom of the page
@@ -4617,8 +4650,38 @@
 
 
 
-
   66..44..22..  iinnddeexx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   bounce-message             b   remail a message to another user
@@ -4683,6 +4746,9 @@
   undelete-thread           ^U   undelete all messages in thread
   untag-pattern             ^T   untag messages matching a pattern
   view-attachments           v   show MIME attachments
+
+
+
 
   66..44..33..  ppaaggeerr
 
