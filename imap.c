@@ -1246,6 +1246,7 @@ int imap_append_message (CONTEXT *ctx, MESSAGE *msg)
   FILE *fp;
   char seq[8];
   char buf[LONG_STRING];
+  char mbox[LONG_STRING];
   size_t len;
   int c, last;
   
@@ -1266,8 +1267,9 @@ int imap_append_message (CONTEXT *ctx, MESSAGE *msg)
   
   mutt_message _("Sending APPEND command ...");
   imap_make_sequence (seq, sizeof (seq));
+  imap_quote_string (mbox, sizeof (mbox), CTX_DATA->mailbox);
   snprintf (buf, sizeof (buf), "%s APPEND %s {%d}\r\n", seq, 
-      CTX_DATA->mailbox, len);
+	    mbox, len);
 
   mutt_socket_write (CTX_DATA->conn, buf);
 
