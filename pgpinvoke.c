@@ -398,6 +398,86 @@ pid_t pgp_v3_invoke_verify_key(struct pgp_vinfo *pgp,
 }
 
 
+
+/*******************************************************************
+ * 
+ * PGP V6 Invocation stuff
+ * 
+ *******************************************************************/
+
+
+pid_t pgp_v6_invoke_sign(struct pgp_vinfo *pgp,
+			 FILE **pgpin, FILE **pgpout, FILE **pgperr,
+			 int pgpinfd, int pgpoutfd, int pgperrfd, 
+			 const char *fname)
+{
+  char cmd[HUGE_STRING];
+  char *pubring = mutt_quote_filename(*pgp->pubring);
+  char *secring = mutt_quote_filename(*pgp->secring); 
+  char *binary  = mutt_quote_filename(*pgp->binary);
+  char *_fname  = mutt_quote_filename(fname);
+  
+  snprintf(cmd, sizeof(cmd),
+	   "PGPPASSFD=0; export PGPPASSFD; cat - %s | %s "
+	   "+language=%s +pubring=%s +secring=%s +verbose=0 +batchmode +pgp_mime=off -abfst %s %s",
+	   _fname, NONULL (binary), NONULL (*pgp->language), NONULL (pubring), NONULL (secring), 
+	   PgpSignAs ? "-u" : "",
+	   PgpSignAs ? PgpSignAs : "");
+  
+  FREE(&pubring); FREE(&secring); FREE(&binary);
+  FREE(&_fname);
+  return mutt_create_filter_fd(cmd, pgpin, pgpout, pgperr,
+			       pgpinfd, pgpoutfd, pgperrfd);
+}
+
+
+
+pid_t pgp_v6_invoke_encrypt(struct pgp_vinfo *pgp,
+			    FILE **pgpin, FILE **pgpout, FILE **pgperr,
+			    int pgpinfd, int pgpoutfd, int pgperrfd,
+			    const char *fname, const char *uids, int sign)
+{
+  char cmd[HUGE_STRING];
+  char *pubring = mutt_quote_filename(*pgp->pubring);
+  char *secring = mutt_quote_filename(*pgp->secring); 
+  char *binary  = mutt_quote_filename(*pgp->binary);
+  char *_fname  = mutt_quote_filename(fname);
+  
+  snprintf(cmd, sizeof(cmd),
+	   "%scat %s%s | %s +language=%s +pubring=%s +secring=%s +verbose=0 %s +batchmode +pgp_mime=off -aeft%s %s%s %s",
+	   sign ? "PGPPASSFD=0; export PGPPASSFD; " : "",
+	   sign ? "- " : "",
+	   _fname,
+	   NONULL (binary), NONULL (*pgp->language), NONULL (pubring), NONULL (secring), 
+	   option(OPTPGPENCRYPTSELF) ? "+encrypttoself" : "",
+	   sign ? "s" : "",
+	   sign && PgpSignAs ? "-u " : "",
+	   sign && PgpSignAs ? PgpSignAs : "",
+	   uids);
+  FREE(&pubring); FREE(&secring); FREE(&binary);
+  FREE(&_fname);
+  return mutt_create_filter_fd(cmd, pgpin, pgpout, pgperr, 
+			       pgpinfd, pgpoutfd, pgperrfd);
+}
+
+
+pid_t pgp_v6_invoke_export(struct pgp_vinfo *pgp,
+			   FILE **pgpin, FILE **pgpout, FILE **pgperr,
+			   int pgpinfd, int pgpoutfd, int pgperrfd, const char *id)
+{
+  char cmd[HUGE_STRING];
+  char *pubring = mutt_quote_filename(*pgp->pubring);
+  char *secring = mutt_quote_filename(*pgp->secring); 
+  char *binary  = mutt_quote_filename(*pgp->binary);
+
+  snprintf(cmd, sizeof(cmd), "%s -kxaf +pgp_mime=off +language=%s +pubring=%s +secring=%s 0x%8s",
+	   NONULL (binary), NONULL (*pgp->language), NONULL (pubring), NONULL (secring), id);
+  FREE(&pubring); FREE(&secring); FREE(&binary);
+  return mutt_create_filter_fd(cmd, pgpin, pgpout, pgperr,
+			       pgpinfd, pgpoutfd, pgperrfd);
+}
+
+
 /*******************************************************************
  * 
  * GNU Privacy Guard invocation stuff

@@ -54,6 +54,7 @@ enum pgp_version
 {
   PGP_V2, 
   PGP_V3,
+  PGP_V6,
   PGP_GPG,
   PGP_UNKNOWN
 };
@@ -130,6 +131,11 @@ WHERE char *PgpV3;
 WHERE char *PgpV3Language;
 WHERE char *PgpV3Pubring;
 WHERE char *PgpV3Secring;
+
+WHERE char *PgpV6;
+WHERE char *PgpV6Language;
+WHERE char *PgpV6Pubring;
+WHERE char *PgpV6Secring;
 
 WHERE char *PgpGpg;
 #if 0
@@ -280,6 +286,23 @@ pid_t pgp_v3_invoke_verify_key(struct pgp_vinfo *,
 				    FILE **, FILE **, FILE **,
 				    int, int, int,
 				    const char *);
+
+/* PGP V6 Prototypes */
+
+pid_t pgp_v6_invoke_sign(struct pgp_vinfo *, 
+			      FILE **, FILE **, FILE **,
+			      int, int, int,
+			      const char *);
+
+pid_t pgp_v6_invoke_encrypt(struct pgp_vinfo *,
+				 FILE **, FILE **, FILE **,
+				 int, int, int,
+				 const char *, const char *, int);
+
+pid_t pgp_v6_invoke_export(struct pgp_vinfo*, 
+				FILE **, FILE **, FILE **,
+				int, int, int,
+				const char *);
 
 /* GNU Privacy Guard Prototypes */
 

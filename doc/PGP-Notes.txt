@@ -1,6 +1,6 @@
 Subject: Using PGP from within mutt
 From: Thomas Roessler <roessler@guug.de>
-Date: Thu,  8 Oct 1998 14:29:01 +0200
+Date: Wed, 28 Jul 1999 21:18:58 +0200
 
 While encryption, verification and signing of messages are
 done by an externally invoked PGP binary, the key
@@ -30,7 +30,7 @@ controlled by the following set of variables:
 	pgp_receive_version
 	pgp_key_version
 
-Valid values for all of these variables include "pgp5" and
+Valid values for all of these variables include "pgp5", "pgp6", and
 "pgp2".
 
 The last three variables may be set to "default" (which is
@@ -50,16 +50,16 @@ rings and need different language settings, the following
 variables can be used to configure these aspects:
 
   - Language settings:
-	$pgp_v2_language, $pgp_v5_language
+	$pgp_v2_language, $pgp_v5_language, $pgp_v6_language
 
   - Public key ring:
-  	$pgp_v2_pubring, $pgp_v5_pubring
+  	$pgp_v2_pubring, $pgp_v5_pubring, $pgp_v6_pubring
 
   - Secret key ring:
-        $pgp_v2_secring, $pgp_v5_secring
+        $pgp_v2_secring, $pgp_v5_secring, $pgp_v6_secring
 
   - PGP itself:
-  	$pgp_v2, $pgp_v5
+  	$pgp_v2, $pgp_v5, $pgp_v6
 	
     Note that PGP 5 comes in several binaries (pgps, pgpk,
     pgpv, pgp).  Mutt assumes that these binaries reside

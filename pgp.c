@@ -74,7 +74,16 @@ static struct pgp_vinfo pgp_vinfo[] =
     pgp_v3_invoke_sign, pgp_v3_invoke_encrypt, pgp_v3_invoke_import,
     pgp_v3_invoke_export, pgp_v3_invoke_verify_key 
   },
-  
+
+  { PGP_V6,
+    "pgp6",	
+    &PgpV6,	&PgpV6Pubring,	&PgpV6Secring, 	&PgpV6Language,
+    pgp_read_pubring, pgp_read_secring,
+    pgp_v2_invoke_decode, pgp_v2_invoke_verify, pgp_v2_invoke_decrypt,
+    pgp_v6_invoke_sign, pgp_v6_invoke_encrypt, pgp_v2_invoke_import,
+    pgp_v6_invoke_export, pgp_v2_invoke_verify_key 
+  },
+
   { PGP_GPG, 	
     "gpg",	
     &PgpGpg,	&PgpGpgDummy,	&PgpGpgDummy, &PgpGpgDummy,

@@ -1627,12 +1627,17 @@ void mutt_init (int skip_sys_rc, LIST *commands)
 #ifdef _PGPPATH
 #ifdef _PGPV2PATH
   PgpV2 = safe_strdup (_PGPV2PATH);
+  PgpV6 = safe_strdup (_PGPV2PATH);
   if ((p = getenv("PGPPATH")) != NULL)
   {
     snprintf (buffer, sizeof (buffer), "%s/pubring.pgp", p);
     PgpV2Pubring = safe_strdup (buffer);
     snprintf (buffer, sizeof (buffer), "%s/secring.pgp", p); 
     PgpV2Secring = safe_strdup (buffer);
+    snprintf (buffer, sizeof (buffer), "%s/pubring.pkr", p);
+    PgpV6Pubring = safe_strdup (buffer);
+    snprintf (buffer, sizeof (buffer), "%s/secring.skr", p); 
+    PgpV6Secring = safe_strdup (buffer);
   }
   else
   {
@@ -1640,6 +1645,10 @@ void mutt_init (int skip_sys_rc, LIST *commands)
     PgpV2Pubring = safe_strdup (buffer);
     snprintf (buffer, sizeof (buffer), "%s/.pgp/secring.pgp", NONULL(Homedir));
     PgpV2Secring = safe_strdup (buffer);
+    snprintf (buffer, sizeof (buffer), "%s/.pgp/pubring.pkr", NONULL(Homedir));
+    PgpV6Pubring = safe_strdup (buffer);
+    snprintf (buffer, sizeof (buffer), "%s/.pgp/secring.skr", NONULL(Homedir));
+    PgpV6Secring = safe_strdup (buffer);
   }
 #endif
 

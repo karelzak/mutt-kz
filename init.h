@@ -186,6 +186,11 @@ struct option_t MuttVars[] = {
   { "pgp_v5_pubring",	DT_PATH, R_NONE, UL &PgpV3Pubring, 0 },
   { "pgp_v5_secring",	DT_PATH, R_NONE, UL &PgpV3Secring, 0 },
 
+  { "pgp_v6",		DT_PATH, R_NONE, UL &PgpV6, 0 },
+  { "pgp_v6_language",	DT_STR,	 R_NONE, UL &PgpV6Language, 0 },
+  { "pgp_v6_pubring",	DT_PATH, R_NONE, UL &PgpV6Pubring, 0 },
+  { "pgp_v6_secring",	DT_PATH, R_NONE, UL &PgpV6Secring, 0 },
+
   { "pgp_gpg",		DT_PATH, R_NONE, UL &PgpGpg, 0 },
   
 # ifdef HAVE_PGP2
