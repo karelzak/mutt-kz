@@ -4,14 +4,14 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.95i\n"
+"Project-Id-Version: 0.95.6i\n"
 "POT-Creation-Date: 1999-06-03 22:17+0200\n"
-"PO-Revision-Date: 1999-01-07 00:00+0100\n"
+"PO-Revision-Date: 1999-07-29 00:00+0100\n"
 "Last-Translator: Miroslav Vasko <vasko@ies.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO Latin 2\n"
-"Content-Transfer-Encoding: 8859.2\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8-bit\n"
 
 #: addrbook.c:31 browser.c:53 pager.c:1368 postpone.c:32 query.c:43
 #: recvattach.c:47
@@ -25,7 +25,7 @@ msgstr "Oznaèi»"
 #: addrbook.c:33 browser.c:56 compose.c:83 curs_main.c:259 pager.c:1465
 #: pgpkey.c:180 postpone.c:35 query.c:48 recvattach.c:51
 msgid "Help"
-msgstr "Nápoveda"
+msgstr "Pomoc"
 
 #: addrbook.c:131
 msgid "You have no aliases!"
@@ -162,8 +162,7 @@ msgstr "Maska súborov: "
 
 #: browser.c:744
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr ""
-"Spätné triedenie podµa (d)átumu, zn(a)kov, (z)-veµkosti, alebo (n)etriedi»? "
+msgstr "Spätné triedenie podµa (d)átumu, zn(a)kov, (z)-veµkosti, (n)etriedi»? "
 
 #: browser.c:745
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
@@ -299,8 +298,7 @@ msgstr "Po¹li do rúry príkazu: "
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Spät.tried. "
-"(d)át/(f)-od/p(r)í/(s)-pred/k(o)mu/(t)-re»/(u)-ne/(z)-veµ/(c)-skó:"
+"Spät.tried.(d)át/(f)-od/p(r)í/(s)-pred/k(o)mu/(t)-re»/(u)-ne/(z)-veµ/(c)-skóre: "
 
 #: commands.c:335
 msgid ""
@@ -419,7 +417,7 @@ msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
 msgstr ""
-"(e)-¹ifr, (s)-podp, podp (a)ko, o(b)e, oznaè alg. mi(c), alebo (f)-zabudni "
+"(e)-¹ifr, (s)-podp, podp (a)ko, o(b)e, oznaè alg. mi(c), alebo (f)-zabudnú» "
 "na to? "
 
 #: compose.c:133
@@ -454,7 +452,7 @@ msgstr "%s [#%d] u¾ neexistuje!"
 #: compose.c:240
 #, c-format
 msgid "%s [#%d] modified. Update encoding?"
-msgstr "%s [#%s] bolo zmenené. Aktualizova» kódovanie?"
+msgstr "%s [#%d] bolo zmenené. Aktualizova» kódovanie?"
 
 #: compose.c:281
 msgid "===== Attachments ====="
@@ -758,8 +756,8 @@ msgid ""
 ".\t\ton a line by itself ends input\n"
 msgstr ""
 "~~\t\tvlo¾ riadok zaèínajúci s jednoduchým znakom ~\n"
-"~b u¾ívatelia\tpridaj u¾ívateµov do poµa Bcc:\n"
-"~c u¾ívatelia\tpridaj u¾ívateµov do poµa Cc:\n"
+"~b u¾ívatelia\tpridaj pou¾ívateµov do poµa Bcc:\n"
+"~c u¾ívatelia\tpridaj pou¾ívateµov do poµa Cc:\n"
 "~f správy\tpridaj správy\n"
 "~F správy\ttak isto ako ~f, ale pridá aj hlavièky\n"
 "~h\t\tuprav hlavièku správy\n"
@@ -768,12 +766,12 @@ msgstr ""
 "~p\t\tvytlaè správu\n"
 "~q\t\tzapí¹ správu a ukonèi editor\n"
 "~r súbor\t\tnaèítaj do editoru súbor\n"
-"~t u¾ívatelia\tpridaj u¾ívateµov do poµa To:\n"
+"~t u¾ívatelia\tpridaj pou¾ívateµov do poµa To:\n"
 "~u\t\tvyvolaj predchádzajúci riadok\n"
 "~v\t\tuprav správu s editorom $visual\n"
 "~w súbor\t\tzapí¹ správo do súboru súbor\n"
 "~x\t\tzru¹ zmeny a ukonèi editor\n"
-"~?\t\ttáto nápoveda\n"
+"~?\t\ttáto pomoc\n"
 ".\t\tsamotná bodka na riadku ukonèí vstup\n"
 
 #: edit.c:178
@@ -854,8 +852,7 @@ msgstr "[-- Chyba pri automatickom prezeraní (stderr) %s --]\n"
 
 #: handler.c:1228
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
-msgstr ""
-"[-- Chyba: message/external-body nemá vyplnený parameter access-type --]\n"
+msgstr "[-- Chyba: message/external-body nemá vyplnený parameter access-type --]\n"
 
 #: handler.c:1245
 #, c-format
@@ -958,7 +955,7 @@ msgstr ""
 #: help.c:339
 #, c-format
 msgid "Help for %s"
-msgstr "Nápoveda pre %s"
+msgstr "Pomoc pre %s"
 
 #: imap.c:206
 #, c-format
@@ -980,20 +977,20 @@ msgstr "Vyvolávam hlavièky správ... [%d/%d]"
 #. Unable to fetch headers for lower versions
 #: imap.c:689
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr ""
+msgstr "Nemo¾no získa» hlavièky z tejto verzie IMAP serveru."
 
 #: imap.c:881
-#, fuzzy, c-format
+#, c-format
 msgid "Reopening mailbox... %s"
-msgstr "Znovuotváram schránku..."
+msgstr "Znovuotváram schránku... %s"
 
 #: imap.c:1233
 msgid "This IMAP server is ancient. Mutt does not work with it."
-msgstr ""
+msgstr "Tento IMAP server je starý. Mutt s ním nevie pracova»."
 
 #: imap.c:1254
 msgid "IMAP Username: "
-msgstr "Meno u¾ívateµa IMAPu:"
+msgstr "Meno pou¾ívateµa IMAPu:"
 
 #: imap.c:1267
 #, c-format
@@ -1020,7 +1017,7 @@ msgstr "Vyberám %s..."
 #. * error if the mailbox did not exist.
 #: imap.c:1562
 msgid "Unable to append to IMAP mailboxes at this server"
-msgstr ""
+msgstr "Nemo¾no pridáva» k IMAP schránkam na tomto serveri"
 
 #: imap.c:1572 lib.c:1206
 #, c-format
@@ -1154,7 +1151,7 @@ msgstr "nemo¾no urèi» domáci adresár"
 
 #: init.c:1565
 msgid "unable to determine username"
-msgstr "nemo¾no urèi» meno u¾ívateµa"
+msgstr "nemo¾no urèi» meno pou¾ívateµa"
 
 #: keymap.c:440
 msgid "Macro loop detected."
@@ -1226,7 +1223,7 @@ msgstr "presunú» na vrch stránky"
 
 #: keymap_defs.h:9
 msgid "remail a message to another user"
-msgstr "znovu po¹li správu inému u¾ívateµovi"
+msgstr "znovu po¹li správu inému pou¾ívateµovi"
 
 #: keymap_defs.h:10
 msgid "select a new file in this directory"
@@ -1486,7 +1483,7 @@ msgstr "prepnú» príznak dôle¾itosti správy"
 
 #: keymap_defs.h:75
 msgid "forward a message with comments"
-msgstr "posunú» správu inému u¾ívateµovi s poznámkami"
+msgstr "posunú» správu inému pou¾ívateµovi s poznámkami"
 
 #: keymap_defs.h:76
 msgid "select the current entry"
@@ -1842,7 +1839,7 @@ msgstr "overi» verejný kµúè PGP"
 
 #: keymap_defs.h:164
 msgid "view the key's user id"
-msgstr "zobrazi» ID u¾ívateµa tohoto kµúèu"
+msgstr "zobrazi» ID pou¾ívateµa tohoto kµúèu"
 
 #: keymap_defs.h:165
 msgid "make decrypted copy and delete"
@@ -1865,13 +1862,12 @@ msgid "File under directory: "
 msgstr "Súbor v adresári: "
 
 #: lib.c:798
-#, fuzzy
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "Súbor existuje, prepísa»?"
+msgstr "Súbor existuje, (o)-prepísa», prid(a)» alebo (c)-zru¹i»?"
 
 #: lib.c:798
 msgid "oac"
-msgstr ""
+msgstr "oac"
 
 #: lib.c:1182
 #, c-format
@@ -2031,13 +2027,15 @@ msgstr ""
 "  -z\t\tukonèi» okam¾ite, ak v schránke nie sú ¾iadne správy\n"
 "  -Z\t\totvori» prvú zlo¾ku s novými správami, okam¾ite skonèi», ak ¾iadne "
 "nie sú\n"
-"  -h\t\ttáto nápoveda"
+"  -h\t\ttáto pomoc"
 
 #: main.c:151
 msgid ""
 "\n"
 "Compile options:"
 msgstr ""
+"\n"
+"Nastavenia kompilácie:"
 
 #: main.c:305
 msgid "Error initializing terminal."
@@ -2075,7 +2073,7 @@ msgstr "Schránka je poru¹ená!"
 
 #: mbox.c:277
 msgid "Reading %s... %d (%d%%)"
-msgstr "Èítam %s... %s (%d%%)"
+msgstr "Èítam %s... %d (%d%%)"
 
 #: mbox.c:650
 msgid "Mailbox was corrupted!"
@@ -2095,8 +2093,7 @@ msgstr "Nemo¾no uzamknú» schránku!"
 #.
 #: mbox.c:738
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr ""
-"sync: schránka zmenená, ale ¾iadne zmenené správy! (oznámte túto chybu)"
+msgstr "sync: schránka zmenená, ale ¾iadne zmenené správy! (oznámte túto chybu)"
 
 #: mbox.c:767
 msgid "Writing messages... %d (%d%%)"
@@ -2199,9 +2196,9 @@ msgid "Lock count exceeded, remove lock for %s?"
 msgstr "Poèet zámkov prekroèený, vymaza» zámok pre %s?"
 
 #: mx.c:126
-#, fuzzy, c-format
+#, c-format
 msgid "Can't dotlock %s.\n"
-msgstr "Nemo¾no zisti» stav: %s"
+msgstr "Nemo¾no zisti» stav: %s.\n"
 
 #: mx.c:184
 msgid "Timeout exceeded while attempting fcntl lock!"
@@ -2232,9 +2229,9 @@ msgid "Writing %s..."
 msgstr "Zapisujem %s..."
 
 #: mx.c:711
-#, fuzzy, c-format
+#, c-format
 msgid "Could not synchronize mailbox %s!"
-msgstr "Nemo¾no znovu otvori» schránku!"
+msgstr "Nemo¾no zosynchronizova» schránku %s!"
 
 #: mx.c:775
 #, c-format
@@ -2323,7 +2320,7 @@ msgstr "Hµada»: "
 
 #: pager.c:1957
 msgid "Help is currently being shown."
-msgstr "Nápoveda sa akurát zobrazuje."
+msgstr "Pomoc sa akurát zobrazuje."
 
 #: pager.c:1986
 msgid "No more quoted text."
@@ -2477,13 +2474,12 @@ msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
 msgstr "[-- KONIEC BLOKU VEREJNÉHO K¥ÚÈA PGP --]\n"
 
 #: pgp.c:463
-#, fuzzy
 msgid ""
 "\n"
 "[-- END PGP SIGNED MESSAGE --]\n"
 msgstr ""
-"[-- ZAÈIATOK SPRÁVY PODPÍSANEJ S PGP --]\n"
 "\n"
+"[-- KONIEC SPRÁVY PODPÍSANEJ S PGP --]\n"
 
 #: pgp.c:476
 msgid ""
@@ -2718,7 +2714,7 @@ msgstr "Hostiteµ POP nie je definovaný."
 
 #: pop.c:97
 msgid "No POP username is defined."
-msgstr "Meno u¾ívateµa POP nie je definované."
+msgstr "Meno pou¾ívateµa POP nie je definované."
 
 #: pop.c:114
 #, c-format
@@ -2995,9 +2991,8 @@ msgid "Sending message..."
 msgstr "Posielam správu..."
 
 #: send.c:1323
-#, fuzzy
 msgid "Could not send the message."
-msgstr "posla» správu"
+msgstr "Nemo¾no posla» správu."
 
 #: send.c:1329
 msgid "Mail sent."
