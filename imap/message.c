@@ -209,12 +209,10 @@ int imap_read_headers (CONTEXT *ctx, int msgbegin, int msgend)
        added to this */
 
     /* in case we get new mail while fetching the headers */
-    if (((IMAP_DATA *) ctx->data)->status == IMAP_NEW_MAIL)
+    if (CTX_DATA->status == IMAP_NEW_MAIL)
     {
-      msgend = ((IMAP_DATA *) ctx->data)->newMailCount - 1;
-      while ((msgend + 1) > ctx->hdrmax)
-        mx_alloc_memory (ctx);
-      ((IMAP_DATA *) ctx->data)->status = 0;
+      msgend = CTX_DATA->newMailCount - 1;
+      CTX_DATA->status = 0;
     }
 
     h->next = msg_new_header ();
@@ -228,6 +226,9 @@ int imap_read_headers (CONTEXT *ctx, int msgbegin, int msgend)
    * Now that we have all the header information, we can tell mutt about
    * it.
    */
+  while ((msgend + 1) > ctx->hdrmax)
+    mx_alloc_memory (ctx);
+
   ploc=0;
   for (msgno = msgbegin; msgno <= msgend;msgno++)
   {
