@@ -903,8 +903,8 @@ ci_send_message (int flags,		/* send mode */
 
     if (!tempfp)
     {
-      dprint(1,(debugfile, "newsend_message: can't create tempfile %s (errno=%d)\n", tempfile, errno));
-      mutt_perror (tempfile);
+      dprint(1,(debugfile, "newsend_message: can't create tempfile %s (errno=%d)\n", msg->content->filename, errno));
+      mutt_perror (msg->content->filename);
       goto cleanup;
     }
   }
