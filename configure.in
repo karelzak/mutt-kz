@@ -210,7 +210,7 @@ AC_TYPE_PID_T
 
 AC_CHECK_FUNCS(setegid srand48 strerror)
 
-AC_REPLACE_FUNCS(strcasecmp)
+AC_REPLACE_FUNCS(strcasecmp strdup)
 
 mutt_cv_snprintf=no
 SNPRINTFOBJS=""
