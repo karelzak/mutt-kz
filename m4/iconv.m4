@@ -8,7 +8,7 @@ dnl the same distribution terms as the rest of that program.
 
 dnl From Bruno Haible.
 
-AC_DEFUN([AM_ICONV_LINK],
+AC_DEFUN([MUTT_AM_ICONV_LINK],
 [
   dnl Some systems have iconv in libc, some have it in libiconv (OSF/1 and
   dnl those with the standalone portable GNU libiconv installed).
@@ -67,9 +67,9 @@ AC_DEFUN([AM_ICONV_LINK],
   AC_SUBST(LTLIBICONV)
 ])
 
-AC_DEFUN([AM_ICONV],
+AC_DEFUN([MUTT_AM_ICONV],
 [
-  AC_REQUIRE([AM_ICONV_LINK])
+  AC_REQUIRE([MUTT_AM_ICONV_LINK])
   if test "$am_cv_func_iconv" = yes; then
     AC_MSG_CHECKING([for iconv declaration])
     AC_CACHE_VAL(am_cv_proto_iconv, [

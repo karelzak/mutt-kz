@@ -54,14 +54,14 @@ dnl GNU format catalogs when building on a platform with an X/Open gettext),
 dnl but we keep it in order not to force irrelevant filename changes on the
 dnl maintainers.
 dnl
-AC_DEFUN([AM_GNU_GETTEXT],
+AC_DEFUN([MUTT_AM_GNU_GETTEXT],
 [
   dnl Argument checking.
   ifelse([$1], [], , [ifelse([$1], [external], , [ifelse([$1], [no-libtool], , [ifelse([$1], [use-libtool], ,
-    [errprint([ERROR: invalid first argument to AM_GNU_GETTEXT
+    [errprint([ERROR: invalid first argument to MUTT_AM_GNU_GETTEXT
 ])])])])])
   ifelse([$2], [], , [ifelse([$2], [need-ngettext], ,
-    [errprint([ERROR: invalid second argument to AM_GNU_GETTEXT
+    [errprint([ERROR: invalid second argument to MUTT_AM_GNU_GETTEXT
 ])])])
   define(gt_included_intl, ifelse([$1], [external], [no], [yes]))
   define(gt_libtool_suffix_prefix, ifelse([$1], [use-libtool], [l], []))
@@ -126,7 +126,7 @@ return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("", 
         if test "$gt_cv_func_gnugettext_libc" != "yes"; then
           dnl Sometimes libintl requires libiconv, so first search for libiconv.
           ifelse(gt_included_intl, yes, , [
-            AM_ICONV_LINK
+            MUTT_AM_ICONV_LINK
           ])
           dnl Search for libintl and define LIBINTL, LTLIBINTL and INCINTL
           dnl accordingly. Don't use AC_LIB_LINKFLAGS_BODY([intl],[iconv])
@@ -488,7 +488,7 @@ stdlib.h string.h unistd.h sys/param.h])
 geteuid getgid getuid mempcpy munmap putenv setenv setlocale stpcpy \
 strcasecmp strdup strtoul tsearch __argz_count __argz_stringify __argz_next])
 
-  AM_ICONV
+  MUTT_AM_ICONV
   AM_LANGINFO_CODESET
   AM_LC_MESSAGES
 
