@@ -3187,7 +3187,7 @@ the logical <em/not/ operator for the expression.
 <sect2>mbox<label id="mbox">
 <p>
 Type: String<newline>
-Default: +inbox
+Default: &tilde;/mbox
 
 This specifies the folder into which read mail in your <ref id="spoolfile"
 name="spoolfile"> folder will be appended.
