@@ -1,6 +1,8 @@
 Major changes since 0.95
 ------------------------
 
+- Added $bounce_delivered; this is a back-port from unstable.
+
 - The $in_reply_to configuration variable is gone.  The In-Reply-To
   header currently only contains the message-id of the message to
   which the reply refers.  This is to make sure that this header is
