@@ -28,7 +28,7 @@ INCLUDES=-I. -I$(includedir)
 
 non_us_sources = pgp.c pgpinvoke.c pgpkey.c pgppubring.c sha1dgst.c \
 	gnupgparse.c sha.h sha_locl.h \
-	doc/language.txt doc/language50.txt OPS.PGP doc/PGP-Notes
+	doc/language.txt doc/language50.txt OPS.PGP doc/PGP-Notes.txt
 
 EXTRA_mutt_SOURCES = pgp.c pgpinvoke.c pgpkey.c pgppubring.c sha1dgst.c \
 	gnupgparse.c resize.c dotlock.c pop.c imap.c socket.c
