@@ -130,6 +130,7 @@ struct option_t MuttVars[] = {
   { "imap_passive",	DT_BOOL, R_NONE, OPTIMAPPASSIVE, 1 },
 #endif
   { "implicit_autoview", DT_BOOL,R_NONE, OPTIMPLICITAUTOVIEW, 0},
+  { "in_reply_to",	DT_STR,	 R_NONE, UL &InReplyTo, UL "%i; from %a on %{!%a, %b %d, %Y at %I:%M:%S%p %Z}" },
   { "include",		DT_QUAD, R_NONE, OPT_INCLUDE, M_ASKYES },
   { "indent_string",	DT_STR,	 R_NONE, UL &Prefix, UL "> " },
   { "indent_str",	DT_SYN,  R_NONE, UL "indent_string", 0 },
