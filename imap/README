@@ -1,30 +1,31 @@
-Mutt's IMAP support is still experimental, in that it hasn't been tested on
-a wide variety of servers and machines. It may contain memory leaks, dangling
-pointers, and other nasty problems. IWFM. YMMV. Caveant emptor lectorque.
+Mutt's IMAP support is reasonably good, although still a little rough around
+the edges. It has been tested with fairly good results against the following
+IMAP4rev1 servers:
 
-Note in particular that mutt doesn't handle connection timeouts well at all,
-and may often crash in their presence. Please keep backups from within your
-editor of messages that take a long time to write - the longer you take,
-the more likely your connection is to time out, AND the more valuable your
-message probably is.
+* UW-IMAP
+* Cyrus
+* Courier
+
+There are still some caveats:
+* Mutt may not always handle dropped connections very well. For this reason
+  it does its best to keep connections alive. But if it fails at this, you
+  will probably have to leave mutt uncleanly, and may, eg, lose the message
+  you had been working all day on. Save your work!
+* The browser is kludgy - it is unintuitive, has occasional difficulties
+  with namespaces, and doesn't support creating new IMAP folders. Complain
+  away, this will probably get heavily rewritten in 1.3.
+* I recommend you not get too fancy with multiple open sesions to the same
+  IMAP server. It mostly works, but you may lose flags updates etc, and the
+  behaviour is heavily dependent on which server you are using.
+* under some circumstances, the index view may become corrupted - that is,
+  the headers in the index won't match the message you download. This is
+  believed to be fixed late in 1.3, but the changes are extensive enough
+  that they probably won't be backported.
 
 Please report bugs to mutt-dev@mutt.org and/or brendan@kublai.com. Version,
-options, stack-trace and .muttdebug files are a plus.
+options, stack-trace and .muttdebug files are a plus. You may also use the
+muttbug script to send bugs to the automated bug-tracking system at
+bugs.guug.de.
 
-New features vs. the stable distribution:
-
-* Tab-completion of IMAP folder names
-* Folder browsing
-* Go-fast stripes
-* Postponed-message support
-* Server-side copy
-* Fast sync
-* Secure login (GSSAPI and CRAM-MD5)
-* Attach messages from IMAP folders
-* Use an IMAP path as your Maildir (set folder={...})
-* Preserve message keywords
-* Preserve deleted messages if you don't choose to expunge them
-* Delete mailboxes (from the browser)
-* Multiple IMAP usernames
-* Read-only folder support (toggling read-only is buggy, though)
-* More and better segfaults
+Brendan Cully
+20000728
