@@ -71,46 +71,9 @@ static struct mapping_t ComposeHelp[] = {
 
 void snd_entry (char *b, size_t blen, MUTTMENU *menu, int num)
 {
-#if 1
     mutt_FormatString (b, blen, NONULL (AttachFormat), mutt_attach_fmt,
 	    (unsigned long)(((ATTACHPTR **) menu->data)[num]),
 	    M_FORMAT_STAT_FILE);
-#else
-  char t[SHORT_STRING], size[SHORT_STRING];
-  char tmp[_POSIX_PATH_MAX];
-  BODY *m;
-  ATTACHPTR **idx = (ATTACHPTR **) menu->data;
-  struct stat finfo;
-
-  m = idx[num]->content;
-
-  if (m->filename && m->filename[0])
-  {
-    if (stat (m->filename, &finfo) != -1)
-      mutt_pretty_size (size, sizeof (size), finfo.st_size);
-    else
-      strcpy (size, "0K");
-    strfcpy (tmp, m->filename, sizeof (tmp));
-  }
-  else
-  {
-    strcpy (size, "0K");
-    strcpy (tmp, "<no file>");
-  }
-  mutt_pretty_mailbox (tmp);
-
-  snprintf (t, sizeof (t), "[%.7s/%.10s, %.6s, %s]",
-	    TYPE (m->type), m->subtype, ENCODING (m->encoding), size);
-
-  snprintf (b, blen, "%c%c%2d %-34.34s %s%s <%s>",
-	    m->unlink ? '-' : ' ',
-	    m->tagged ? '*' : ' ',
-	    num + 1,
-	    t,
-	    idx[num]->tree ? idx[num]->tree : "",
-	    tmp,
-	    m->description ? m->description : "no description");
-#endif
 }
 
 
