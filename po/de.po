@@ -1,9 +1,9 @@
 # $Id$
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.1.10\n"
+"Project-Id-Version: 1.2.2\n"
 "POT-Creation-Date: 2000-06-21 00:23+0200\n"
-"PO-Revision-Date: 2000-03-30 12:33+02:00\n"
+"PO-Revision-Date: 2000-07-03 14:44+02:00\n"
 "Last-Translator: Roland Rosenfeld <roland@spinnaker.de>\n"
 "Language-Team: German <mutt-po@mutt.org>\n"
 "MIME-Version: 1.0\n"
@@ -1270,18 +1270,16 @@ msgid "[unable to calculate]"
 msgstr "[kann nicht berechnet werden]"
 
 #: imap/imap_ssl.c:292
-#, fuzzy
 msgid "[invalid date]"
-msgstr "%s: Ungültiger Wert"
+msgstr "[ungültiges Datum]"
 
 #: imap/imap_ssl.c:367
 msgid "Server certificate is not yet valid"
-msgstr ""
+msgstr "Server Zertifikat ist noch nicht gültig"
 
 #: imap/imap_ssl.c:374
-#, fuzzy
 msgid "Server certificate has expired"
-msgstr "Dieses Zertifikat wurde ausgegeben von:"
+msgstr "Zertifikat des Servers ist abgelaufen"
 
 #: imap/imap_ssl.c:447
 msgid "This certificate belongs to:"
@@ -1292,19 +1290,18 @@ msgid "This certificate was issued by:"
 msgstr "Dieses Zertifikat wurde ausgegeben von:"
 
 #: imap/imap_ssl.c:467
-#, fuzzy
 msgid "This certificate is valid"
-msgstr "Dieses Zertifikat wurde ausgegeben von:"
+msgstr "Dieses Zertifikat ist gültig"
 
 #: imap/imap_ssl.c:468
 #, c-format
 msgid "   from %s"
-msgstr ""
+msgstr "    von %s"
 
 #: imap/imap_ssl.c:470
 #, c-format
 msgid "     to %s"
-msgstr ""
+msgstr "     an %s"
 
 #: imap/imap_ssl.c:476
 #, c-format
