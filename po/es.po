@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mutt\n"
 "POT-Creation-Date: 2000-07-28 20:51+0200\n"
-"PO-Revision-Date: 2000-04-01 14:19+02:00\n"
+"PO-Revision-Date: 2000-09-07 18:24+02:00\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
 "MIME-Version: 1.0\n"
@@ -1266,18 +1266,16 @@ msgid "[unable to calculate]"
 msgstr "[imposible calcular]"
 
 #: imap/imap_ssl.c:292
-#, fuzzy
 msgid "[invalid date]"
-msgstr "%s: valor inválido"
+msgstr "[fecha inválida]"
 
 #: imap/imap_ssl.c:367
 msgid "Server certificate is not yet valid"
-msgstr ""
+msgstr "El certificado del servidor todavía no es válido"
 
 #: imap/imap_ssl.c:374
-#, fuzzy
 msgid "Server certificate has expired"
-msgstr "Este certificado fue producido por:"
+msgstr "Este certificado ha expirado"
 
 #: imap/imap_ssl.c:447
 msgid "This certificate belongs to:"
@@ -1288,19 +1286,18 @@ msgid "This certificate was issued by:"
 msgstr "Este certificado fue producido por:"
 
 #: imap/imap_ssl.c:467
-#, fuzzy
 msgid "This certificate is valid"
-msgstr "Este certificado fue producido por:"
+msgstr "Este certificado es válido"
 
 #: imap/imap_ssl.c:468
 #, c-format
 msgid "   from %s"
-msgstr ""
+msgstr "   de %s"
 
 #: imap/imap_ssl.c:470
 #, c-format
 msgid "     to %s"
-msgstr ""
+msgstr "     a %s"
 
 #: imap/imap_ssl.c:476
 #, c-format
