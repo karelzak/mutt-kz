@@ -389,7 +389,7 @@ static void init_menu (struct browser_state *state, MUTTMENU *menu, char *title,
 
 void mutt_select_file (char *f, size_t flen, int buffy)
 {
-  char buf[STRING];
+  char buf[_POSIX_PATH_MAX];
   char prefix[_POSIX_PATH_MAX] = "";
   char helpstr[SHORT_STRING];
   char title[STRING];
@@ -708,6 +708,38 @@ void mutt_select_file (char *f, size_t flen, int buffy)
 	}
 	MAYBE_REDRAW (menu->redraw);
 	break;
+
+      case OP_BROWSER_VIEW_FILE:
+	if (!state.entrylen)
+	{
+	  mutt_error ("No files match the file mask");
+	  break;
+	}
+
+        if (S_ISDIR (state.entry[menu->current].mode) ||
+	    (S_ISLNK (state.entry[menu->current].mode) &&
+	    link_is_dir (state.entry[menu->current].name)))
+	{
+	  mutt_error ("Can't view a directory");
+	  break;
+	} 
+	else
+	{
+	  BODY *b;
+	  char buf[_POSIX_PATH_MAX];
+
+	  snprintf (buf, sizeof (buf), "%s/%s", LastDir,
+		    state.entry[menu->current].name);
+	  b = mutt_make_attach (buf);
+	  if (b != NULL)
+	  {
+	    mutt_view_attachment (NULL, b, M_REGULAR);
+	    mutt_free_body (&b);
+	    menu->redraw = REDRAW_FULL;
+	  }
+	  else
+	    mutt_error ("Error trying to view file");
+	}
     }
   }
   /* not reached */

@@ -359,6 +359,7 @@ struct binding_t OpBrowser[] = {
   { "sort-reverse",	OP_SORT_REVERSE,	"O" },
   { "select-new",	OP_BROWSER_NEW_FILE,	"N" },
   { "check-new",	OP_CHECK_NEW,		"\t" },
+  { "view-file",	OP_BROWSER_VIEW_FILE,	" " },
   { NULL,		0,			NULL }
 };
 
