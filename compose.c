@@ -307,13 +307,13 @@ static int edit_address_list (int line, ENVELOPE *env)
   }
 
   rfc822_write_address (buf, sizeof (buf), *addr);
-  if (mutt_get_field (prompt, buf, sizeof (buf), M_ALIAS) != 0)
-    return 0;
-
-  rfc822_free_address (addr);
-  *addr = mutt_parse_adrlist (*addr, buf);
-  *addr = mutt_expand_aliases (*addr);
-
+  if (mutt_get_field (prompt, buf, sizeof (buf), M_ALIAS) == 0)
+  {
+    rfc822_free_address (addr);
+    *addr = mutt_parse_adrlist (*addr, buf);
+    *addr = mutt_expand_aliases (*addr);
+  }
+  
   if (option (OPTNEEDREDRAW))
   {
     unset_option (OPTNEEDREDRAW);
