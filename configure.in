@@ -65,7 +65,7 @@ else
 
 	AC_PATH_PROG(PGP, pgp, no)
 	if test $PGP != no ; then
-		if pgp 2>&1 | grep -q 6\.5 ; then
+		if pgp 2>&1 | grep 6\.5 2> /dev/null > /dev/null; then
 			AC_DEFINE_UNQUOTED(_PGPV6PATH, "$PGP")
 			AC_DEFINE(HAVE_PGP6)
 		else
