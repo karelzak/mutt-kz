@@ -1841,9 +1841,12 @@
 
   +o  = or + -- refers to your ``$folder'' directory
 
+  +o  @_a_l_i_a_s -- refers to the ``default save folder'' as determined by
+     the address of the alias
+
+
 
   44..77..  HHaannddlliinngg MMaaiilliinngg LLiissttss
-
 
 
   Mutt has a few configuration options that make dealing with large
@@ -1970,9 +1973,6 @@
 
 
        [-- image/gif is unsupported (use 'v' to view this part) --]
-
-
-
 
 
 
