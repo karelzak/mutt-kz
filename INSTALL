@@ -18,6 +18,7 @@ systems:
 	MkLinux
 	NetBSD
 	QNX
+	SCO Unix 3.2v4/5
 	Solaris
 	SunOS
 	Ultrix
@@ -37,11 +38,12 @@ systems:
 Installation
 ============
 
-Installing Mutt is rather painless through the use of the GNU autoconf
-package.  Simply untar the Mutt distribution, and run the ``configure''
-script.  In most cases, it will automatically determine everything it needs
-to know in order to compile.  However, there are a few options to
-``configure'' to help it out, or change the default behavior:
+Installing Mutt is rather painless through the use of the GNU
+autoconf package.  Simply untar the Mutt distribution, and run the
+``configure'' script.  In most cases, it will automatically determine
+everything it needs to know in order to compile.  However, there are
+a few options to ``configure'' to help it out, or change the default
+behavior:
 
 --prefix=DIR
 	install Mutt in DIR instead of /usr/local
@@ -80,13 +82,13 @@ to know in order to compile.  However, there are a few options to
 	provides a way to support them.
 
 --enable-flock
-	use flock() to lock files
+	use flock() to lock files.  
 
 --disable-fcntl
 	by default, Mutt uses fcntl() to lock files.  Over NFS this can
 	result in poor performance on read/write.  Note that using this
-	option could be dangerous if dotlocking is also disabled
-
+	option could be dangerous if dotlocking is also disabled.
+	
 --enable-nfs-fix
 	some implementations of NFS do not always write the
 	atime/mtime of small files.  This means that Mutt's ``mailboxes''
@@ -119,7 +121,7 @@ to know in order to compile.  However, there are a few options to
 		Personal Name <user@host.domain>
 	regardless of the input.  By enabling this option, Mutt will write
 	addresses in the same form they are parsed.  NOTE: this requires
-	significantly more memory
+	significantly more memory.
 
 Once ``configure'' has completed, simply type ``make install.''
 
@@ -142,3 +144,9 @@ Solaris 2.4
 	Color does not work right with Solaris curses.  You will have to
 	compile with either ncurses or slang to get working color support.
 
+
+Linux
+
+	On recent Linux systems, flock() and fcntl() locks don't mix.  If
+	you use the --enable-flock switch on such systems, be sure to
+	give the --disable-fcntl argument as well.

@@ -1,8 +1,10 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_INIT(mutt.h)
 AC_CONFIG_HEADER(config.h)
-VERSION=0.92.14
+VERSION=0.93
 SUBVERSION=''
+
+AC_CANONICAL_HOST
 
 AC_MSG_CHECKING(for prefix)
 if test x$prefix = xNONE; then
@@ -15,6 +17,14 @@ AC_MSG_RESULT($mutt_cv_prefix)
 AC_PROG_CC
 AC_PROG_MAKE_SET
 AC_PROG_INSTALL
+
+case "$host" in
+*-*-hpux*)
+	if test -z "$GCC" ; then
+		CFLAGS="$CFLAGS -Ae -D_HPUX_SOURCE"
+	fi
+	;;
+esac
 
 AC_PATH_PROG(SENDMAIL, sendmail, no, `echo $PATH | sed "s/:/ /"` /usr/sbin /usr/lib)
 AC_DEFINE_UNQUOTED(SENDMAIL, "$ac_cv_path_SENDMAIL")
