@@ -833,7 +833,6 @@ void mutt_parse_mime_message (CONTEXT *ctx, HEADER *cur)
 #endif /* _PGPPATH */
 
 
-
     mx_close_message (&msg);
   }
 }

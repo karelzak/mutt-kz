@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 1996-1998 Michael R. Elkins <me@cs.hmc.edu>
+ * Copyright (C) 1999 Thomas Roessler <roessler@guug.de>
  * 
  *     This program is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -756,6 +757,7 @@ create_tagged_message (const char *tempfile,
     mutt_copy_bytes (src->fp, msg->fp, body->length);
   }
 
+  mx_commit_message (msg, &tmpctx);
   mx_close_message (&msg);
   mx_close_message (&src);
   mx_close_mailbox (&tmpctx);
@@ -891,7 +893,7 @@ void mutt_view_attachments (HEADER *hdr)
 #ifdef _PGPPATH
   if((hdr->pgp & PGPENCRYPT) && !pgp_valid_passphrase())
   {
-    mx_close_message(&msg);
+    mx_close_message (&msg);
     return;
   }
   

@@ -299,6 +299,10 @@ int safe_open (const char *, int);
 int safe_symlink (const char *, const char *);
 FILE *safe_fopen (const char *, const char *);
 
+int safe_rename (const char *, const char *);
+int safe_fclose (FILE **);
+
+
 ADDRESS *alias_reverse_lookup (ADDRESS *);
 
 #define strfcpy(A,B,C) strncpy(A,B,C), *(A+(C)-1)=0
