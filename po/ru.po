@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 0.95.1i\n"
-"POT-Creation-Date: 1999-04-20 17:55+0200\n"
+"POT-Creation-Date: 1999-04-23 10:50+0200\n"
 "PO-Revision-Date: 1999-09-10 10:44 +0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
@@ -962,7 +962,7 @@ msgstr ""
 msgid "Help for %s"
 msgstr "Справка для %s"
 
-#: imap.c:116
+#: imap.c:204
 #, c-format
 msgid "imap_error(): unexpected response in %s: %s\n"
 msgstr "imap_error(): неожиданный ответ в %s: %s\n"
@@ -970,79 +970,92 @@ msgstr "imap_error(): неожиданный ответ в %s: %s\n"
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap.c:372
+#: imap.c:527
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Критическая ошибка.  Нарушена синхронизация счетчика сообщений!"
 
-#: imap.c:448
+#: imap.c:660
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Получение заголовков сообщений... [%d из %d]"
 
-#: imap.c:646 mbox.c:1003
-msgid "Reopening mailbox..."
+#. Unable to fetch headers for lower versions
+#: imap.c:687
+msgid "Unable to fetch headers from this IMAP server version."
+msgstr ""
+
+#: imap.c:879
+#, fuzzy, c-format
+msgid "Reopening mailbox... %s"
 msgstr "Повторное открытие почтового ящика..."
 
-#: imap.c:890
-#, c-format
-msgid "Connecting to %s..."
-msgstr "Устанавливается соединение с %s..."
+#: imap.c:1229
+msgid "This IMAP server is ancient. Mutt does not work with it."
+msgstr ""
 
-#: imap.c:913
+#: imap.c:1250
 msgid "IMAP Username: "
 msgstr "Имя пользователя IMAP: "
 
-#: imap.c:926
+#: imap.c:1263
 #, c-format
 msgid "Password for %s@%s: "
 msgstr "Пароль для %s@%s: "
 
-#: imap.c:939
+#: imap.c:1276
 msgid "Logging in..."
 msgstr "Регистрация..."
 
 #. Login failed, try again
-#: imap.c:952
+#: imap.c:1289
 msgid "Login failed."
 msgstr "Регистрация не удалась."
 
-#: imap.c:1009
+#: imap.c:1400
 #, c-format
 msgid "Selecting %s..."
 msgstr "Выбирается %s..."
 
-#: imap.c:1109 lib.c:1206
+#. STATUS not supported
+#. * The thing to do seems to be:
+#. *  - Open a *new* IMAP session, select, and then close it. Report the
+#. * error if the mailbox did not exist.
+#: imap.c:1549
+msgid "Unable to append to IMAP mailboxes at this server"
+msgstr ""
+
+#: imap.c:1559 lib.c:1206
 #, c-format
 msgid "Create %s?"
 msgstr "Создать %s?"
 
-#: imap.c:1158
+#: imap.c:1611
 msgid "Fetching message..."
 msgstr "Получение сообщения..."
 
-#: imap.c:1277
+#: imap.c:1733
 msgid "Sending APPEND command ..."
 msgstr "Отправка команды APPEND..."
 
-#: imap.c:1317
+#: imap.c:1772
 msgid "Uploading message ..."
 msgstr "Загрузка сообщения..."
 
-#: imap.c:1372
+#: imap.c:1827
 msgid "Closing connection to IMAP server..."
 msgstr "Закрытие соединения с сервером IMAP..."
 
-#: imap.c:1402
+#: imap.c:1858
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Сохранение флагов состояния сообщений... [%d из %d]"
 
-#: imap.c:1428
+#: imap.c:1890
 msgid "Expunging messages from server..."
 msgstr "Удаление сообщений с сервера..."
 
 #. tell the server to commit changes
-#: imap.c:1479
+#: imap.c:1921
 msgid "Closing mailbox..."
 msgstr "Закрытие почтового ящика..."
 
@@ -2123,76 +2136,80 @@ msgstr "Запись не удалась!  Неполный почтовый ящик сохранен в %s"
 msgid "Could not reopen mailbox!"
 msgstr "Не удалось заново открыть почтовый ящик!"
 
-#: menu.c:313
+#: mbox.c:1003
+msgid "Reopening mailbox..."
+msgstr "Повторное открытие почтового ящика..."
+
+#: menu.c:312
 msgid "Jump to: "
 msgstr "Перейти к: "
 
-#: menu.c:322
+#: menu.c:321
 msgid "Invalid index number."
 msgstr "Неверный индекс."
 
-#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
-#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
+#: menu.c:325 menu.c:343 menu.c:379 menu.c:420 menu.c:436 menu.c:447
+#: menu.c:458 menu.c:500 menu.c:511 menu.c:524 menu.c:537 menu.c:816
 msgid "No entries."
 msgstr "Записи отсутствуют."
 
-#: menu.c:341
+#: menu.c:340
 msgid "You cannot scroll down farther."
 msgstr "Прокрутка дальше невозможна."
 
-#: menu.c:357
+#: menu.c:356
 msgid "You cannot scroll up farther."
 msgstr "Прокрутка дальше невозможна."
 
-#: menu.c:377
+#: menu.c:376
 msgid "You are on the last page."
 msgstr "Вы уже на последней странице."
 
-#: menu.c:399
+#: menu.c:398
 msgid "You are on the first page."
 msgstr "Вы уже на первой странице."
 
-#: menu.c:478
+#: menu.c:477
 msgid "First entry is shown."
 msgstr "Первая запись уже на экране."
 
-#: menu.c:498
+#: menu.c:497
 msgid "Last entry is shown."
 msgstr "Последняя запись уже на экране."
 
-#: menu.c:549
+#: menu.c:548
 msgid "You are on the last entry."
 msgstr "Вы уже на последней записи."
 
-#: menu.c:560
+#: menu.c:559
 msgid "You are on the first entry."
 msgstr "Вы уже на первой записи."
 
-#: menu.c:600 pattern.c:1054
+#: menu.c:599 pattern.c:1054
 msgid "Search for: "
 msgstr "Поиск: "
 
-#: menu.c:601
+#: menu.c:600
 msgid "Reverse search for: "
 msgstr "Обратный поиск: "
 
-#: menu.c:612 pattern.c:1087
+#: menu.c:611 pattern.c:1087
 msgid "No search pattern."
 msgstr "Нет образца поиска."
 
-#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:641 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Не найдено."
 
-#: menu.c:693
+#: menu.c:692
 msgid "No tagged entries."
 msgstr "Нет отмеченных записей."
 
-#: menu.c:781
+#: menu.c:780
 msgid "Search is not implemented for this menu."
 msgstr "Поиск не реализован в этом меню."
 
-#: menu.c:820
+#: menu.c:819
 msgid "Tagging is not supported."
 msgstr "Возможность пометки не поддерживается."
 
@@ -3027,17 +3044,17 @@ msgstr "%s больше не существует!"
 msgid "Could not open %s"
 msgstr "Не удалось открыть %s"
 
-#: sendlib.c:1684
+#: sendlib.c:1686
 #, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Не удалось послать сообщение, процесс-потомок вернул %d (%s).\n"
 
-#: sendlib.c:1686
+#: sendlib.c:1688
 #, c-format
 msgid "Saved output of child process to %s.\n"
 msgstr "Результат работы процесса-потомка сохранен в %s.\n"
 
-#: sendlib.c:1690
+#: sendlib.c:1692
 msgid "Error sending message."
 msgstr "Ошибка посылки сообщения."
 
@@ -3050,6 +3067,11 @@ msgstr "Получен сигнал %s...  Завершение работы.\n"
 #, c-format
 msgid "Caught signal %d...  Exiting.\n"
 msgstr "Получен сигнал %d...  Завершение работы.\n"
+
+#: socket.c:130
+#, c-format
+msgid "Connecting to %s..."
+msgstr "Устанавливается соединение с %s..."
 
 #: sort.c:198
 msgid "Sorting mailbox..."
@@ -3086,10 +3108,6 @@ msgstr "(нет почтового ящика)"
 #, fuzzy
 #~ msgid "Unable to attach %s!"
 #~ msgstr "Не удалось вложить!"
-
-#, fuzzy
-#~ msgid "Reopening mailbox... %s"
-#~ msgstr "Повторное открытие почтового ящика..."
 
 #, fuzzy
 #~ msgid "Subscribing to %s..."

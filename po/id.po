@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.4i-1\n"
-"POT-Creation-Date: 1999-04-20 17:55+0200\n"
+"POT-Creation-Date: 1999-04-23 10:50+0200\n"
 "PO-Revision-Date: 1999-04-02 15:40-0600\n"
 "Last-Translator: Ronny Haryanto <giant@canada.com>\n"
 "Language-Team: Indonesia <id@li.org>\n"
@@ -965,7 +965,7 @@ msgstr ""
 msgid "Help for %s"
 msgstr "Bantuan utk %s"
 
-#: imap.c:116
+#: imap.c:204
 #, c-format
 msgid "imap_error(): unexpected response in %s: %s\n"
 msgstr "imap_error(): respons tak terduga di %s: %s\n"
@@ -973,79 +973,92 @@ msgstr "imap_error(): respons tak terduga di %s: %s\n"
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap.c:372
+#: imap.c:527
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Fatal error. Jumlah surat kacau!"
 
-#: imap.c:448
+#: imap.c:660
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Mengambil headers surat-surat... [%d/%d]"
 
-#: imap.c:646 mbox.c:1003
-msgid "Reopening mailbox..."
+#. Unable to fetch headers for lower versions
+#: imap.c:687
+msgid "Unable to fetch headers from this IMAP server version."
+msgstr ""
+
+#: imap.c:879
+#, fuzzy, c-format
+msgid "Reopening mailbox... %s"
 msgstr "Membuka kembali kotak surat..."
 
-#: imap.c:890
-#, c-format
-msgid "Connecting to %s..."
-msgstr "Menghubungi %s..."
+#: imap.c:1229
+msgid "This IMAP server is ancient. Mutt does not work with it."
+msgstr ""
 
-#: imap.c:913
+#: imap.c:1250
 msgid "IMAP Username: "
 msgstr "IMAP Username: "
 
-#: imap.c:926
+#: imap.c:1263
 #, c-format
 msgid "Password for %s@%s: "
 msgstr "Password utk %s@%s: "
 
-#: imap.c:939
+#: imap.c:1276
 msgid "Logging in..."
 msgstr "Sedang login..."
 
 #. Login failed, try again
-#: imap.c:952
+#: imap.c:1289
 msgid "Login failed."
 msgstr "Login gagal."
 
-#: imap.c:1009
+#: imap.c:1400
 #, c-format
 msgid "Selecting %s..."
 msgstr "Memilih %s..."
 
-#: imap.c:1109 lib.c:1206
+#. STATUS not supported
+#. * The thing to do seems to be:
+#. *  - Open a *new* IMAP session, select, and then close it. Report the
+#. * error if the mailbox did not exist.
+#: imap.c:1549
+msgid "Unable to append to IMAP mailboxes at this server"
+msgstr ""
+
+#: imap.c:1559 lib.c:1206
 #, c-format
 msgid "Create %s?"
 msgstr "Buat %s?"
 
-#: imap.c:1158
+#: imap.c:1611
 msgid "Fetching message..."
 msgstr "Mengambil surat..."
 
-#: imap.c:1277
+#: imap.c:1733
 msgid "Sending APPEND command ..."
 msgstr "Mengirim perintah APPEND ..."
 
-#: imap.c:1317
+#: imap.c:1772
 msgid "Uploading message ..."
 msgstr "Mengirim surat ..."
 
-#: imap.c:1372
+#: imap.c:1827
 msgid "Closing connection to IMAP server..."
 msgstr "Menutup hubungan ke server IMAP..."
 
-#: imap.c:1402
+#: imap.c:1858
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Menyimpan tanda-tanda status surat... [%d/%d]"
 
-#: imap.c:1428
+#: imap.c:1890
 msgid "Expunging messages from server..."
 msgstr "Menghapus surat-surat di server..."
 
 #. tell the server to commit changes
-#: imap.c:1479
+#: imap.c:1921
 msgid "Closing mailbox..."
 msgstr "Menutup kotak surat..."
 
@@ -2063,76 +2076,80 @@ msgstr "Gagal menulis! Sebagian dari kotak surat disimpan ke %s"
 msgid "Could not reopen mailbox!"
 msgstr "Tidak bisa membuka kembali mailbox!"
 
-#: menu.c:313
+#: mbox.c:1003
+msgid "Reopening mailbox..."
+msgstr "Membuka kembali kotak surat..."
+
+#: menu.c:312
 msgid "Jump to: "
 msgstr "Ke: "
 
-#: menu.c:322
+#: menu.c:321
 msgid "Invalid index number."
 msgstr "Nomer indeks tidak betul."
 
-#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
-#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
+#: menu.c:325 menu.c:343 menu.c:379 menu.c:420 menu.c:436 menu.c:447
+#: menu.c:458 menu.c:500 menu.c:511 menu.c:524 menu.c:537 menu.c:816
 msgid "No entries."
 msgstr "Tidak ada entry."
 
-#: menu.c:341
+#: menu.c:340
 msgid "You cannot scroll down farther."
 msgstr "Sudah tidak bisa geser lagi. Jebol nanti."
 
-#: menu.c:357
+#: menu.c:356
 msgid "You cannot scroll up farther."
 msgstr "Sudah tidak bisa geser lagi. Jebol nanti."
 
-#: menu.c:377
+#: menu.c:376
 msgid "You are on the last page."
 msgstr "Anda di halaman terakhir."
 
-#: menu.c:399
+#: menu.c:398
 msgid "You are on the first page."
 msgstr "Anda di halaman pertama."
 
-#: menu.c:478
+#: menu.c:477
 msgid "First entry is shown."
 msgstr "Entry pertama sudah ditampilkan."
 
-#: menu.c:498
+#: menu.c:497
 msgid "Last entry is shown."
 msgstr "Entry terakhir sudah ditampilkan."
 
-#: menu.c:549
+#: menu.c:548
 msgid "You are on the last entry."
 msgstr "Anda di entry terakhir."
 
-#: menu.c:560
+#: menu.c:559
 msgid "You are on the first entry."
 msgstr "Anda di entry pertama."
 
-#: menu.c:600 pattern.c:1054
+#: menu.c:599 pattern.c:1054
 msgid "Search for: "
 msgstr "Cari: "
 
-#: menu.c:601
+#: menu.c:600
 msgid "Reverse search for: "
 msgstr "Cari mundur: "
 
-#: menu.c:612 pattern.c:1087
+#: menu.c:611 pattern.c:1087
 msgid "No search pattern."
 msgstr "Tidak ada kriteria pencarian."
 
-#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:641 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Tidak ketemu."
 
-#: menu.c:693
+#: menu.c:692
 msgid "No tagged entries."
 msgstr "Tidak ada entry yang ditandai."
 
-#: menu.c:781
+#: menu.c:780
 msgid "Search is not implemented for this menu."
 msgstr "Pencarian tidak bisa dilakukan untuk menu ini."
 
-#: menu.c:820
+#: menu.c:819
 msgid "Tagging is not supported."
 msgstr "Penandaan tidak didukung."
 
@@ -2957,17 +2974,17 @@ msgstr "%s tidak ada lagi!"
 msgid "Could not open %s"
 msgstr "Tidak bisa membuka %s"
 
-#: sendlib.c:1684
+#: sendlib.c:1686
 #, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Error dalam pengiriman surat, proses anak mengembalikan %d (%s).\n"
 
-#: sendlib.c:1686
+#: sendlib.c:1688
 #, c-format
 msgid "Saved output of child process to %s.\n"
 msgstr "Keluaran dari proses anak telah disimpan ke %s.\n"
 
-#: sendlib.c:1690
+#: sendlib.c:1692
 msgid "Error sending message."
 msgstr "Error dalam pengiriman surat."
 
@@ -2980,6 +2997,11 @@ msgstr "%s tertangkap... Keluar.\n"
 #, c-format
 msgid "Caught signal %d...  Exiting.\n"
 msgstr "Sinyal %d tertangkap... Keluar.\n"
+
+#: socket.c:130
+#, c-format
+msgid "Connecting to %s..."
+msgstr "Menghubungi %s..."
 
 #: sort.c:198
 msgid "Sorting mailbox..."

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-0.94.17\n"
-"POT-Creation-Date: 1999-04-20 17:55+0200\n"
+"POT-Creation-Date: 1999-04-23 10:50+0200\n"
 "PO-Revision-Date: 1998-11-19 15:54+01:00\n"
 "Last-Translator: Marco d'Itri <md@linux.it>\n"
 "Language-Team: none\n"
@@ -966,7 +966,7 @@ msgstr ""
 msgid "Help for %s"
 msgstr "Aiuto per %s"
 
-#: imap.c:116
+#: imap.c:204
 #, c-format
 msgid "imap_error(): unexpected response in %s: %s\n"
 msgstr "imap_error(): risposta inaspettata in %s: %s\n"
@@ -974,79 +974,92 @@ msgstr "imap_error(): risposta inaspettata in %s: %s\n"
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap.c:372
+#: imap.c:527
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Errore fatale.  Il conto dei messaggi non è sincronizzato!"
 
-#: imap.c:448
+#: imap.c:660
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Prendo gli header dei messaggi... [%d/%d]"
 
-#: imap.c:646 mbox.c:1003
-msgid "Reopening mailbox..."
+#. Unable to fetch headers for lower versions
+#: imap.c:687
+msgid "Unable to fetch headers from this IMAP server version."
+msgstr ""
+
+#: imap.c:879
+#, fuzzy, c-format
+msgid "Reopening mailbox... %s"
 msgstr "Riapro la mailbox..."
 
-#: imap.c:890
-#, c-format
-msgid "Connecting to %s..."
-msgstr "Mi connetto a %s..."
+#: imap.c:1229
+msgid "This IMAP server is ancient. Mutt does not work with it."
+msgstr ""
 
-#: imap.c:913
+#: imap.c:1250
 msgid "IMAP Username: "
 msgstr "Nome dell'utente IMAP: "
 
-#: imap.c:926
+#: imap.c:1263
 #, c-format
 msgid "Password for %s@%s: "
 msgstr "Password per %s@%s: "
 
-#: imap.c:939
+#: imap.c:1276
 msgid "Logging in..."
 msgstr "Faccio il login..."
 
 #. Login failed, try again
-#: imap.c:952
+#: imap.c:1289
 msgid "Login failed."
 msgstr "Login fallito."
 
-#: imap.c:1009
+#: imap.c:1400
 #, c-format
 msgid "Selecting %s..."
 msgstr "Seleziono %s..."
 
-#: imap.c:1109 lib.c:1206
+#. STATUS not supported
+#. * The thing to do seems to be:
+#. *  - Open a *new* IMAP session, select, and then close it. Report the
+#. * error if the mailbox did not exist.
+#: imap.c:1549
+msgid "Unable to append to IMAP mailboxes at this server"
+msgstr ""
+
+#: imap.c:1559 lib.c:1206
 #, c-format
 msgid "Create %s?"
 msgstr "Creo %s?"
 
-#: imap.c:1158
+#: imap.c:1611
 msgid "Fetching message..."
 msgstr "Prendo il messaggio..."
 
-#: imap.c:1277
+#: imap.c:1733
 msgid "Sending APPEND command ..."
 msgstr "Mando il comando APPEND ..."
 
-#: imap.c:1317
+#: imap.c:1772
 msgid "Uploading message ..."
 msgstr "Mando il messaggio ..."
 
-#: imap.c:1372
+#: imap.c:1827
 msgid "Closing connection to IMAP server..."
 msgstr "Chiudo la connessione al server IMAP..."
 
-#: imap.c:1402
+#: imap.c:1858
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Salvo i flag di stato dei messaggi... [%d/%d]"
 
-#: imap.c:1428
+#: imap.c:1890
 msgid "Expunging messages from server..."
 msgstr "Cancello i messaggi dal server..."
 
 #. tell the server to commit changes
-#: imap.c:1479
+#: imap.c:1921
 msgid "Closing mailbox..."
 msgstr "Chiudo la mailbox..."
 
@@ -2069,76 +2082,80 @@ msgstr "Scrittura fallita!  Salvo la mailbox parziale in %s"
 msgid "Could not reopen mailbox!"
 msgstr "Impossibile riaprire la mailbox!"
 
-#: menu.c:313
+#: mbox.c:1003
+msgid "Reopening mailbox..."
+msgstr "Riapro la mailbox..."
+
+#: menu.c:312
 msgid "Jump to: "
 msgstr "Salta a: "
 
-#: menu.c:322
+#: menu.c:321
 msgid "Invalid index number."
 msgstr "Numero dell'indice non valido."
 
-#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
-#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
+#: menu.c:325 menu.c:343 menu.c:379 menu.c:420 menu.c:436 menu.c:447
+#: menu.c:458 menu.c:500 menu.c:511 menu.c:524 menu.c:537 menu.c:816
 msgid "No entries."
 msgstr "Nessuna voce."
 
-#: menu.c:341
+#: menu.c:340
 msgid "You cannot scroll down farther."
 msgstr "Non puoi spostarti più in basso."
 
-#: menu.c:357
+#: menu.c:356
 msgid "You cannot scroll up farther."
 msgstr "Non puoi spostarti più in alto."
 
-#: menu.c:377
+#: menu.c:376
 msgid "You are on the last page."
 msgstr "Sei all'ultima pagina."
 
-#: menu.c:399
+#: menu.c:398
 msgid "You are on the first page."
 msgstr "Sei alla prima pagina."
 
-#: menu.c:478
+#: menu.c:477
 msgid "First entry is shown."
 msgstr "La prima voce è questa."
 
-#: menu.c:498
+#: menu.c:497
 msgid "Last entry is shown."
 msgstr "L'ultima voce è questa."
 
-#: menu.c:549
+#: menu.c:548
 msgid "You are on the last entry."
 msgstr "Sei all'ultima voce."
 
-#: menu.c:560
+#: menu.c:559
 msgid "You are on the first entry."
 msgstr "Sei alla prima voce."
 
-#: menu.c:600 pattern.c:1054
+#: menu.c:599 pattern.c:1054
 msgid "Search for: "
 msgstr "Cerca: "
 
-#: menu.c:601
+#: menu.c:600
 msgid "Reverse search for: "
 msgstr "Cerca all'indietro: "
 
-#: menu.c:612 pattern.c:1087
+#: menu.c:611 pattern.c:1087
 msgid "No search pattern."
 msgstr "Nessun modello di ricerca."
 
-#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:641 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Non trovato."
 
-#: menu.c:693
+#: menu.c:692
 msgid "No tagged entries."
 msgstr "Nessuna voce segnata."
 
-#: menu.c:781
+#: menu.c:780
 msgid "Search is not implemented for this menu."
 msgstr "In questo menù la ricerca non è stata implementata."
 
-#: menu.c:820
+#: menu.c:819
 msgid "Tagging is not supported."
 msgstr "Non è possibile segnare un messaggio."
 
@@ -2963,18 +2980,18 @@ msgstr "%s non esiste più!"
 msgid "Could not open %s"
 msgstr "Impossibile aprire %s"
 
-#: sendlib.c:1684
+#: sendlib.c:1686
 #, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr ""
 "Errore nella spedizione del messaggio, il figlio è uscito con %d (%s).\n"
 
-#: sendlib.c:1686
+#: sendlib.c:1688
 #, c-format
 msgid "Saved output of child process to %s.\n"
 msgstr "Output del processo figlio salvato in %s.\n"
 
-#: sendlib.c:1690
+#: sendlib.c:1692
 msgid "Error sending message."
 msgstr "Errore nella spedizione del messaggio."
 
@@ -2987,6 +3004,11 @@ msgstr "Preso %s...  Esco.\n"
 #, c-format
 msgid "Caught signal %d...  Exiting.\n"
 msgstr "Preso il segnale %d...  Esco.\n"
+
+#: socket.c:130
+#, c-format
+msgid "Connecting to %s..."
+msgstr "Mi connetto a %s..."
 
 #: sort.c:198
 msgid "Sorting mailbox..."
@@ -3023,10 +3045,6 @@ msgstr "(nessuna mailbox)"
 #, fuzzy
 #~ msgid "Unable to attach %s!"
 #~ msgstr "Impossibile allegare!"
-
-#, fuzzy
-#~ msgid "Reopening mailbox... %s"
-#~ msgstr "Riapro la mailbox..."
 
 #, fuzzy
 #~ msgid "Subscribing to %s..."

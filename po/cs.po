@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.5i\n"
-"POT-Creation-Date: 1999-04-20 17:55+0200\n"
+"POT-Creation-Date: 1999-04-23 10:50+0200\n"
 "PO-Revision-Date: 1999-04-20 23:26+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -963,7 +963,7 @@ msgstr ""
 msgid "Help for %s"
 msgstr "Pomoc pro %s"
 
-#: imap.c:116
+#: imap.c:204
 #, c-format
 msgid "imap_error(): unexpected response in %s: %s\n"
 msgstr "imap_error(): neoèekávaná odpovìï v %s: %s\n"
@@ -971,79 +971,92 @@ msgstr "imap_error(): neoèekávaná odpovìï v %s: %s\n"
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap.c:372
+#: imap.c:527
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Kritická chyba. Poèet zpráv nesouhlasí!"
 
-#: imap.c:448
+#: imap.c:660
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Stahuji hlavièky zpráv... [%d/%d]"
 
-#: imap.c:646 mbox.c:1003
-msgid "Reopening mailbox..."
+#. Unable to fetch headers for lower versions
+#: imap.c:687
+msgid "Unable to fetch headers from this IMAP server version."
+msgstr ""
+
+#: imap.c:879
+#, fuzzy, c-format
+msgid "Reopening mailbox... %s"
 msgstr "Znovu otevírám schránku..."
 
-#: imap.c:890
-#, c-format
-msgid "Connecting to %s..."
-msgstr "Pøipojuji se k %s..."
+#: imap.c:1229
+msgid "This IMAP server is ancient. Mutt does not work with it."
+msgstr ""
 
-#: imap.c:913
+#: imap.c:1250
 msgid "IMAP Username: "
 msgstr "U¾ivatelské jméno na IMAP serveru: "
 
-#: imap.c:926
+#: imap.c:1263
 #, c-format
 msgid "Password for %s@%s: "
 msgstr "Heslo pro %s@%s: "
 
-#: imap.c:939
+#: imap.c:1276
 msgid "Logging in..."
 msgstr "Probíhá pøihla¹ování..."
 
 #. Login failed, try again
-#: imap.c:952
+#: imap.c:1289
 msgid "Login failed."
 msgstr "Pøihlá¹ení se nezdaøilo."
 
-#: imap.c:1009
+#: imap.c:1400
 #, c-format
 msgid "Selecting %s..."
 msgstr "Volím %s..."
 
-#: imap.c:1109 lib.c:1206
+#. STATUS not supported
+#. * The thing to do seems to be:
+#. *  - Open a *new* IMAP session, select, and then close it. Report the
+#. * error if the mailbox did not exist.
+#: imap.c:1549
+msgid "Unable to append to IMAP mailboxes at this server"
+msgstr ""
+
+#: imap.c:1559 lib.c:1206
 #, c-format
 msgid "Create %s?"
 msgstr "Vytvoøit %s?"
 
-#: imap.c:1158
+#: imap.c:1611
 msgid "Fetching message..."
 msgstr "Stahuji zprávu..."
 
-#: imap.c:1277
+#: imap.c:1733
 msgid "Sending APPEND command ..."
 msgstr "Posílám pøíkaz APPEND ..."
 
-#: imap.c:1317
+#: imap.c:1772
 msgid "Uploading message ..."
 msgstr "Posílám zprávu ..."
 
-#: imap.c:1372
+#: imap.c:1827
 msgid "Closing connection to IMAP server..."
 msgstr "Konèím spojení s IMAP serverem..."
 
-#: imap.c:1402
+#: imap.c:1858
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Ukládám pøíznaky stavu zprávy... [%d/%d]"
 
-#: imap.c:1428
+#: imap.c:1890
 msgid "Expunging messages from server..."
 msgstr "Odstraòuji zprávy ze serveru..."
 
 #. tell the server to commit changes
-#: imap.c:1479
+#: imap.c:1921
 msgid "Closing mailbox..."
 msgstr "Uzavírám schránku..."
 
@@ -2116,76 +2129,80 @@ msgstr "Ulo¾ení se nezdaøilo! Èást schránky byla ulo¾ena do %s"
 msgid "Could not reopen mailbox!"
 msgstr "Schránku nelze znovu otevøít!"
 
-#: menu.c:313
+#: mbox.c:1003
+msgid "Reopening mailbox..."
+msgstr "Znovu otevírám schránku..."
+
+#: menu.c:312
 msgid "Jump to: "
 msgstr "Pøeskoèit na: "
 
-#: menu.c:322
+#: menu.c:321
 msgid "Invalid index number."
 msgstr "Nesprávné indexové èíslo."
 
-#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
-#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
+#: menu.c:325 menu.c:343 menu.c:379 menu.c:420 menu.c:436 menu.c:447
+#: menu.c:458 menu.c:500 menu.c:511 menu.c:524 menu.c:537 menu.c:816
 msgid "No entries."
 msgstr "®ádné polo¾ky."
 
-#: menu.c:341
+#: menu.c:340
 msgid "You cannot scroll down farther."
 msgstr "Dolù ji¾ rolovat nemù¾ete."
 
-#: menu.c:357
+#: menu.c:356
 msgid "You cannot scroll up farther."
 msgstr "Nahoru ji¾ rolovat nemù¾ete."
 
-#: menu.c:377
+#: menu.c:376
 msgid "You are on the last page."
 msgstr "Jste na poslední stránce."
 
-#: menu.c:399
+#: menu.c:398
 msgid "You are on the first page."
 msgstr "Jste na první stránce."
 
-#: menu.c:478
+#: menu.c:477
 msgid "First entry is shown."
 msgstr "První polo¾ka je zobrazena."
 
-#: menu.c:498
+#: menu.c:497
 msgid "Last entry is shown."
 msgstr "Poslední polo¾ka je zobrazena."
 
-#: menu.c:549
+#: menu.c:548
 msgid "You are on the last entry."
 msgstr "Jste na poslední polo¾ce."
 
-#: menu.c:560
+#: menu.c:559
 msgid "You are on the first entry."
 msgstr "Jste na první polo¾ce."
 
-#: menu.c:600 pattern.c:1054
+#: menu.c:599 pattern.c:1054
 msgid "Search for: "
 msgstr "Vyhledat: "
 
-#: menu.c:601
+#: menu.c:600
 msgid "Reverse search for: "
 msgstr "Vyhledat obráceným smìrem: "
 
-#: menu.c:612 pattern.c:1087
+#: menu.c:611 pattern.c:1087
 msgid "No search pattern."
 msgstr "Není ¾ádný vzor k vyhledání."
 
-#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:641 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Nenalezeno."
 
-#: menu.c:693
+#: menu.c:692
 msgid "No tagged entries."
 msgstr "®ádné polo¾ky nejsou oznaèeny."
 
-#: menu.c:781
+#: menu.c:780
 msgid "Search is not implemented for this menu."
 msgstr "V tomto menu není hledání pøístupné."
 
-#: menu.c:820
+#: menu.c:819
 msgid "Tagging is not supported."
 msgstr "Oznaèování není podporováno."
 
@@ -3023,17 +3040,17 @@ msgstr "%s ji¾ neexistuje!"
 msgid "Could not open %s"
 msgstr "%s nelze otevøít"
 
-#: sendlib.c:1684
+#: sendlib.c:1686
 #, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Chyba pøi zasílání zprávy, potomek ukonèen %d (%s).\n"
 
-#: sendlib.c:1686
+#: sendlib.c:1688
 #, c-format
 msgid "Saved output of child process to %s.\n"
 msgstr "Výstup potomka byl ulo¾en do %s.\n"
 
-#: sendlib.c:1690
+#: sendlib.c:1692
 msgid "Error sending message."
 msgstr "Chyba pøi zasílání zprávy."
 
@@ -3046,6 +3063,11 @@ msgstr "Zachycen %s... Konèím.\n"
 #, c-format
 msgid "Caught signal %d...  Exiting.\n"
 msgstr "Zachycen signál %d... Konèím.\n"
+
+#: socket.c:130
+#, c-format
+msgid "Connecting to %s..."
+msgstr "Pøipojuji se k %s..."
 
 #: sort.c:198
 msgid "Sorting mailbox..."
