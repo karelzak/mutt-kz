@@ -150,9 +150,8 @@ msgid "Directory [%s], File mask: %s"
 msgstr "Verzeichnis [%s], Dateimaske: %s"
 
 #: browser.c:519
-#, fuzzy
 msgid "IMAP folder browsing is not currently supported"
-msgstr "Diese Funktion wird nicht für PGP-Nachrichten unterstützt."
+msgstr "Das Auflisten der IMAP Mailboxen wird noch nicht unterstützt."
 
 #: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
@@ -2996,7 +2995,7 @@ msgstr "Nachricht verschickt."
 
 #: send.c:1325
 msgid "Sending in background."
-msgstr ""
+msgstr "Verschicke Mail im Hintergrund."
 
 #: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
@@ -3019,7 +3018,7 @@ msgstr "Fehler %d beim Versand der Nachricht (%s)."
 
 #: sendlib.c:1696
 msgid "Output of the delivery process"
-msgstr ""
+msgstr "Ausgabe des Mail-Auslieferungs-Prozesses"
 
 #: signal.c:39
 #, c-format
