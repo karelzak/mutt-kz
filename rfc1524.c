@@ -436,7 +436,7 @@ void mutt_adv_mktemp (char *s, size_t l)
       return;
     if ((period = strrchr (tmp, '.')) != NULL)
       *period = 0;
-    sprintf (s, l, "%s/%s.XXXXXX", buf, tmp);
+    snprintf (s, l, "%s/%s.XXXXXX", buf, tmp);
     mktemp (s);
     if (period != NULL)
     {
