@@ -1882,7 +1882,7 @@ mutt_pager (const char *banner, const char *fname, int do_color, pager_t *extra,
 	{
 	  ch = -1;
 	  rc = OP_MAIN_NEXT_UNDELETED;
-	};
+	}
 	break;
 
       case OP_DELETE_THREAD:

@@ -308,7 +308,7 @@ hdr_format_str (char *dest,
 	    {
 	      if (len >= 5)
 	      {
-		sprintf (p, "%c%02d%02d", hdr->zoccident ? '-' : '+',
+		sprintf (p, "%c%02u%02u", hdr->zoccident ? '-' : '+',
 			 hdr->zhours, hdr->zminutes);
 		p += 5;
 		len -= 5;

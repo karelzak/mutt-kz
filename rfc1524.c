@@ -138,7 +138,8 @@ static int get_field_text (char *field, char **entry,
   {
     if (entry)
     {
-      field = mutt_skip_whitespace (++field);
+      field++;
+      field = mutt_skip_whitespace (field);
       safe_free ((void **) entry);
       *entry = safe_strdup (field);
     }

@@ -165,11 +165,11 @@ static void encode_quoted (FILE * fin, FILE *fout, int istext)
     if (c == '\n' && istext)
     {
       /* Check to make sure there is no trailing space on this line. */
-      if (line[linelen-1] == ' ' || line[linelen-1] == '\t')
+      if (linelen > 0 && (line[linelen-1] == ' ' || line[linelen-1] == '\t'))
       {
         if (linelen < 74)
 	{
-          sprintf (line+linelen-1, "=%2.2X", line[linelen-1]);
+          sprintf (line+linelen-1, "=%2.2X", (unsigned char) line[linelen-1]);
           fputs (line, fout);
         }
         else
@@ -179,7 +179,7 @@ static void encode_quoted (FILE * fin, FILE *fout, int istext)
           line[linelen-1] = '=';
           line[linelen] = 0;
           fputs (line, fout);
-          fprintf (fout, "\n=%2.2X", savechar);
+          fprintf (fout, "\n=%2.2X", (unsigned char) savechar);
         }
       }
       else
@@ -203,7 +203,7 @@ static void encode_quoted (FILE * fin, FILE *fout, int istext)
         fputc ('\n', fout);
         linelen = 0;
       }
-      sprintf (line+linelen,"=%2.2X", c);
+      sprintf (line+linelen,"=%2.2X", (unsigned char) c);
       linelen += 3;
     }
     else
@@ -222,7 +222,7 @@ static void encode_quoted (FILE * fin, FILE *fout, int istext)
     {
       /* take care of trailing whitespace */
       if (linelen < 74)
-        sprintf (line+linelen-1, "=%2.2X", line[linelen-1]);
+        sprintf (line+linelen-1, "=%2.2X", (unsigned char) line[linelen-1]);
       else
       {
         savechar = line[linelen-1];
@@ -230,7 +230,7 @@ static void encode_quoted (FILE * fin, FILE *fout, int istext)
         line[linelen] = 0;
         fputs (line, fout);
         fputc ('\n', fout);
-        sprintf (line, "=%2.2X", savechar);
+        sprintf (line, "=%2.2X", (unsigned char) savechar);
       }
     }
     else
@@ -709,7 +709,6 @@ static char *set_text_charset (CONTENT *info)
 void mutt_message_to_7bit (BODY *a, FILE *fp)
 {
   char temp[_POSIX_PATH_MAX];
-  size_t linelen = 0;
   char *line = NULL;
   FILE *fpin = NULL;
   FILE *fpout = NULL;
@@ -755,7 +754,6 @@ void mutt_message_to_7bit (BODY *a, FILE *fp)
   
  cleanup:
   safe_free ((void **) &line);
-  linelen = 0;
 
   if (fpin && !fp)
     fclose (fpin);

@@ -542,8 +542,6 @@ static KEYINFO *pgp_parse_keyinfo(unsigned char *buff, size_t l)
 static int pgp_parse_pgp2_sig(unsigned char *buff, size_t l, KEYINFO *p)
 {
   unsigned char sigtype;
-  unsigned char pkalg;
-  unsigned char hashalg;
   long sig_gen_time;
   unsigned long signerid;
   size_t j;
@@ -563,9 +561,6 @@ static int pgp_parse_pgp2_sig(unsigned char *buff, size_t l, KEYINFO *p)
   signerid = 0;
   for(i = 0; i < 4; i++)
     signerid = (signerid << 8) + buff[j++];
-  
-  pkalg = buff[j++];
-  hashalg = buff[j++];
   
   if(sigtype == 0x20 || sigtype == 0x28)
     p->flags |= KEYFLAG_REVOKED;

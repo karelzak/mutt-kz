@@ -35,7 +35,7 @@ static void q_encode_string (char *d, size_t dlen, const unsigned char *s)
   char *wptr = d;
 
   snprintf (charset, sizeof (charset), "=?%s?Q?",
-	    strcasecmp ("us-ascii", charset) == 0 ? "unknown-8bit" : NONULL(Charset));
+	    strcasecmp ("us-ascii", NONULL(Charset)) == 0 ? "unknown-8bit" : NONULL(Charset));
   cslen = strlen (charset);
 
   strcpy (wptr, charset);
