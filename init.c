@@ -1175,16 +1175,46 @@ int mutt_command_complete (char *buffer, size_t len, int pos)
       return 0;
     strncpy (buffer, completed, len);
   }
-  else if (!strncasecmp (cmd, "set", 3)
-	   || !strncasecmp (cmd, "unset", 5)
-	   || !strncasecmp (cmd, "toggle", 6))
+  else if (!strcasecmp (cmd, "set")
+	   || !strcasecmp (cmd, "unset")
+	   || !strcasecmp (cmd, "reset")
+	   || !strcasecmp (cmd, "toggle"))
   { 		/* complete variables */
+    char *prefixes[] = { "no", "inv", "?", "&", 0 };
+    int  prefix_index;
+    char tmpbuffer[STRING];
+    int  prefix_len;
+
+    /* remember if the command is set to decide whether we want to attempt the
+     * prefixes */
+    int  cmd_is_set = !strcasecmp (cmd, "set"); 
+    
     pt++;
     if (*pt == 0)
       return 0;
     strncpy (cmd, pt, sizeof (cmd));
     for (num = 0; MuttVars[num].option; num++)
       candidate (completed, cmd, MuttVars[num].option, sizeof (completed));
+  
+    if ( cmd_is_set ) {
+      /* loop through all the possible prefixes (no, inv, ...) */
+      for ( prefix_index = 0; prefixes[prefix_index]; prefix_index++ )
+      {
+        prefix_len = strlen(prefixes[prefix_index]);
+        strncpy( tmpbuffer, prefixes[prefix_index], sizeof(tmpbuffer) );
+  
+        /* if the current option is prepended with the prefix */
+        if ( !strncasecmp(cmd, tmpbuffer, prefix_len )) {
+          for (num = 0; MuttVars[num].option; num++) {
+            strncpy( &tmpbuffer[prefix_len], 
+                     MuttVars[num].option, 
+                     sizeof(tmpbuffer) - prefix_len );
+            candidate (completed, cmd, tmpbuffer, sizeof (completed));
+          }
+        }
+      }
+    }
+
     if (completed[0] == 0)
       return 0;
     strncpy (pt, completed, buffer + len - pt);
