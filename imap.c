@@ -1196,7 +1196,6 @@ int imap_buffy_check (char *path)
       return (-1);
   conn->uses++;
 
-  mutt_message ("Checking IMAP buffy STATUS");
   imap_make_sequence (seq, sizeof (seq));
   snprintf (buf, sizeof (buf), "%s STATUS %s (RECENT)\r\n", seq, mbox);
 

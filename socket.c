@@ -37,7 +37,8 @@ int mutt_socket_readchar (CONNECTION *conn, char *c)
 {
   if (conn->bufpos >= conn->available)
   {
-    conn->available = read (conn->fd, conn->inbuf, sizeof(LONG_STRING));
+    conn->available = read (conn->fd, conn->inbuf, LONG_STRING);
+    dprint (1, (debugfile, "mutt_socket_readchar(): buffered %d chars\n", conn->available));
     conn->bufpos = 0;
     if (conn->available <= 0)
       return conn->available; /* returns 0 for EOF or -1 for other error */
