@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mutt-1.0pre2i\n"
+"Project-Id-Version: mutt-1.0pre3i\n"
 "POT-Creation-Date: 1999-09-25 08:52+0200\n"
-"PO-Revision-Date: 1999-09-09\n"
+"PO-Revision-Date: 1999-09-27\n"
 "Last-Translator: Pawe³ Dziekoñski <pdziekonski@mml.ch.pwr.wroc.pl>\n"
 "Language-Team: POLISH <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -96,8 +96,7 @@ msgstr "B³±d podczas próby otwarcia pliku w celu eliminacji nag³ówków."
 #: attach.c:191
 #, c-format
 msgid "No mailcap compose entry for %s, creating empty file."
-msgstr ""
-"Brak pola \"compose\" dla %s w pliku 'mailcap', tworzenie pustego pliku."
+msgstr "Brak pola \"compose\" dla %s w pliku 'mailcap', tworzenie pustego pliku."
 
 #. For now, editing requires a file, no piping
 #: attach.c:251
@@ -157,9 +156,8 @@ msgid "Directory [%s], File mask: %s"
 msgstr "Katalog [%s], Wzorzec nazw plików: %s"
 
 #: browser.c:519
-#, fuzzy
 msgid "IMAP folder browsing is not currently supported"
-msgstr "Ten rodzaj operacji nie jest na razie wykonalny na listach PGP."
+msgstr "Przeg³±danie folderów IMAP nie jest aktualnie obs³ugiwane"
 
 #: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
@@ -312,17 +310,12 @@ msgid "Pipe to command: "
 msgstr "Wy¶lij przez potok do polecenia: "
 
 #: commands.c:338
-msgid ""
-"Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr ""
-"Odwr-Sort "
-"(d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)a?: "
+msgid "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr "Odwr-Sort (d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)a?: "
 
 #: commands.c:339
-msgid ""
-"Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr ""
-"Sortuj (d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)a?: "
+msgid "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgstr "Sortuj (d)ata/(a)utor/o(t)rzym/t(e)mat/d(o)/(w)±tek/(b)ez/ro(z)miar/wa(g)a?: "
 
 #: commands.c:340
 msgid "dfrsotuzc"
@@ -1967,19 +1960,19 @@ msgstr ""
 "\n"
 "Wiele nie wymienionych tutaj osób wnios³o swój kod, poprawki i sugestie.\n"
 "\n"
-"    Ten program jest darmowy; mo¿esz go rozprowadzaæ i/lub modyfikowaæ\n"
-"    w ramach Ogólnej Publicznej Licencji GNU publikowanej przez Free\n"
-"    Software Foundation; tak¿e w ramach wersji 2 tej Licencji lub dowolnej\n"
-"    po¼niejszej wed³ug twego uznania.\n"
+"    Ten program jest darmowy; mo¿esz rozprowadzaæ go i/lub modyfikowaæ\n"
+"    zachowuj±c warunki Powszechnej Licencji Publicznej GNU (General Public\n"
+"    Licence), opublikowanej przez Free Software Foundation, w wersji 2 lub\n"
+"    wy¿szej.\n"
 "\n"
-"    Ten program jest rozprowadzany w nadzieji, ¿e bêdzie u¿yteczny,\n"
-"    ale nie podlega ¿adnej gwarancji, nawet gwarancji przydatno¶ci\n"
-"    do jakiegokolwiek zastosowania lub sprzeda¿y. Zajrzyj do Ogólnej\n"
-"    Publicznej Licencji GNU by poznaæ szczegó³y.\n"
+"    Program ten jest rozprowadzany w nadziei, ¿e bêdzie przydatny,\n"
+"    ale BEZ ¯ADNYCH GWARANCJI, wyra¿onych wprost lub domy¶lnie nawet,\n"
+"    w tym gwarancji mo¿liwo¶ci SPRZEDA¯Y i PRZYDATNO¦CI DO KONKRETNYCH\n"
+"    CELÓW. Szczegó³y znajdziesz w Powszechnej Licencji Publicznej GNU.\n"
 "\n"
-"    Wraz z tym programem powiniene¶ otrzymaæ kopiê Ogólnej Publicznej\n"
-"    Licencji GNU. Je¶li tak siê nie sta³o napisz do Free Software\n"
-"    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
+"    Powiniene¶ otrzymaæ kopiê Powszechnej Licencji Publicznej GNU wraz\n"
+"    z tym programem. Je¶li nie, napisz do Free Software Foundation,\n"
+"    Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.\n"
 
 #: main.c:73
 msgid ""
