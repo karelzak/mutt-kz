@@ -1,14 +1,16 @@
-# This file was prepared by (in alphabetical order):
+# This file was prepared by (names are in [Russian :)] alphabetical order):
 #
-#   Alexey Vyskubov (alexey@alv.stud.pu.ru)
+#   Alexey Vyskubov (alexey@pepper.spb.ru)
+#   Andrej N. Gritsenko (andrej@lucky.net)
 #   Michael Sobolev (mss@transas.com)
+#
+# Last revision: $Date$
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mutt 0.95.1i\n"
+"Project-Id-Version: Mutt 0.96.2\n"
 "POT-Creation-Date: 1999-08-24 18:04+0200\n"
-"PO-Revision-Date: 1999-09-10 10:44 +0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +31,7 @@ msgstr "Подсказка"
 
 #: addrbook.c:131
 msgid "You have no aliases!"
-msgstr "Список псевдонимов отсутвует!"
+msgstr "Список псевдонимов пуст!"
 
 #: addrbook.c:143
 msgid "Aliases"
@@ -76,9 +78,9 @@ msgstr "Указанный в mailcap способ создания требует %%s"
 
 #: attach.c:132 attach.c:257 commands.c:155 compose.c:1016 curs_lib.c:128
 #: curs_lib.c:323
-#, fuzzy, c-format
+#, c-format
 msgid "Error running \"%s\"!"
-msgstr "Ошибка разбора адреса!"
+msgstr "Ошибка запуска \"%s\"!"
 
 #: attach.c:142
 msgid "Failure to open file to parse headers."
@@ -143,7 +145,7 @@ msgstr "%s не является каталогом."
 #: browser.c:449
 #, c-format
 msgid "Mailboxes [%d]"
-msgstr "Почтовых ящиков [%d]"
+msgstr "Почтовые ящики [%d]"
 
 #: browser.c:454
 #, c-format
@@ -152,7 +154,7 @@ msgstr "Каталог [%s], маска файла: %s"
 
 #: browser.c:538 browser.c:728 browser.c:811
 msgid "No files match the file mask"
-msgstr "Нет файлов, удовлетворяющих данной маске"
+msgstr "Нет файлов, отвечающих данной маске"
 
 #: browser.c:645
 msgid "Chdir to: "
@@ -268,11 +270,11 @@ msgstr "Команда: "
 
 #: commands.c:180 recvattach.c:692
 msgid "Bounce message to: "
-msgstr "Перенаправить сообщение: "
+msgstr "Перенаправить сообщение по адресу: "
 
 #: commands.c:182 recvattach.c:694
 msgid "Bounce tagged messages to: "
-msgstr "Перенаправить сообщения: "
+msgstr "Перенаправить помеченные сообщения по адресу: "
 
 #: commands.c:197
 msgid "Error parsing address!"
@@ -434,7 +436,7 @@ msgstr "шпкиао"
 
 #: compose.c:150
 msgid "Can't open your secret key ring!"
-msgstr "Не удалось открыть вашу связку секретных ключей!"
+msgstr "Не удалось открыть связку секретных ключей!"
 
 #: compose.c:155
 msgid "Sign as: "
@@ -488,7 +490,7 @@ msgstr "Пометьте сообщения, которые вы хотите вложить!"
 
 #: compose.c:624 compose.c:644
 msgid "Unable to attach!"
-msgstr "Не удалось вложить!"
+msgstr "Не удалось создать вложение!"
 
 #: compose.c:780
 msgid "Invalid encoding."
@@ -505,7 +507,7 @@ msgstr "Переименовать в: "
 #: compose.c:847
 #, c-format
 msgid "Can't stat: %s"
-msgstr "Невозможно получить информацию: %s"
+msgstr "Не удалось получить информацию: %s"
 
 #: compose.c:874
 msgid "New file: "
@@ -576,18 +578,16 @@ msgid "No mailbox is open."
 msgstr "Нет открытого почтового ящика."
 
 #: curs_main.c:51
-#, fuzzy
 msgid "There are no messages."
-msgstr "В дискуссии присутствуют непрочитанные сообщения."
+msgstr "Сообщений нет."
 
 #: curs_main.c:52 mx.c:992 pager.c:55 recvattach.c:47
 msgid "Mailbox is read-only."
-msgstr "Почтовый ящик немодифицируем."
+msgstr "Почтовый ящик открыт в режиме \"только для чтения\"."
 
 #: curs_main.c:53 pager.c:56
-#, fuzzy
 msgid "Function not permitted in attach-message mode."
-msgstr "%c: в этом режиме не поддерживается"
+msgstr "В режиме вложения сообщений эта функция не поддерживается."
 
 #: curs_main.c:220
 msgid "Cannot toggle write on a readonly mailbox!"
@@ -627,7 +627,8 @@ msgstr "Ответить всем"
 
 #: curs_main.c:434
 msgid "Mailbox was externally modified.  Flags may be wrong."
-msgstr "Ящик был изменен снаружи.  Значения флагов могут быть некорректны."
+msgstr ""
+"Почтовый ящик был изменен другой программой.  Значения флагов могут быть некорректны."
 
 #: curs_main.c:437
 msgid "New mail in this mailbox."
@@ -689,7 +690,7 @@ msgstr "Снять пометку с сообщений по образцу: "
 
 #: curs_main.c:879
 msgid "Open mailbox in read-only mode"
-msgstr "Открыть почтовый ящик только для чтения"
+msgstr "Открыть почтовый ящик в режиме \"только для чтения\""
 
 #: curs_main.c:881
 msgid "Open mailbox"
@@ -742,7 +743,7 @@ msgstr "Нет больше дискуссий."
 
 #: curs_main.c:1288
 msgid "You are on the first thread."
-msgstr "Это первая дискуссия"
+msgstr "Это первая дискуссия."
 
 #: curs_main.c:1341
 msgid "Thread contains unread messages."
@@ -951,7 +952,7 @@ msgstr "%s: не удалось вложить файл"
 
 #: help.c:273
 msgid "ERROR: please report this bug"
-msgstr "ОШИБКА: пожалуйста. сообщите о ней"
+msgstr "ОШИБКА: пожалуйста, сообщите о ней"
 
 #: help.c:315
 msgid "<UNKNOWN>"
@@ -980,7 +981,7 @@ msgstr ""
 #: help.c:339
 #, c-format
 msgid "Help for %s"
-msgstr "Справка для %s"
+msgstr "Подсказка для меню %s"
 
 #: imap.c:206
 #, c-format
@@ -1002,16 +1003,16 @@ msgstr "Получение заголовков сообщений... [%d из %d]"
 #. Unable to fetch headers for lower versions
 #: imap.c:659
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr ""
+msgstr "Не удалось получить заголовки с IMAP-сервера этой версии."
 
 #: imap.c:851
-#, fuzzy, c-format
+#, c-format
 msgid "Reopening mailbox... %s"
-msgstr "Повторное открытие почтового ящика..."
+msgstr "Повторное открытие почтового ящика... %s"
 
 #: imap.c:1203
 msgid "This IMAP server is ancient. Mutt does not work with it."
-msgstr ""
+msgstr "Этот IMAP-сервер устарел.  Mutt не будет с ним работать."
 
 #: imap.c:1224
 msgid "IMAP Username: "
@@ -1042,7 +1043,7 @@ msgstr "Выбирается %s..."
 #. * error if the mailbox did not exist.
 #: imap.c:1532
 msgid "Unable to append to IMAP mailboxes at this server"
-msgstr ""
+msgstr "Не удалось добавить к IMAP-ящику на этом сервере"
 
 #: imap.c:1542 lib.c:1270
 #, c-format
@@ -1055,13 +1056,12 @@ msgstr "Получение сообщения..."
 
 #. hack from Nathan Neulinger
 #: imap.c:1736
-#, fuzzy
 msgid "Sending CREATE command ..."
-msgstr "Отправка команды APPEND..."
+msgstr "Выполняется команда CREATE..."
 
 #: imap.c:1741
 msgid "Sending APPEND command ..."
-msgstr "Отправка команды APPEND..."
+msgstr "Выполняется команда APPEND..."
 
 #: imap.c:1779
 msgid "Uploading message ..."
@@ -1087,7 +1087,7 @@ msgstr "Закрытие почтового ящика..."
 
 #: init.c:432
 msgid "alias: no address"
-msgstr "псевдоним: отсутвует адрес"
+msgstr "псевдоним: отсутствует адрес"
 
 #: init.c:526
 msgid "invalid header field"
@@ -1096,7 +1096,7 @@ msgstr "недопустимое поле в заголовке"
 #: init.c:534
 #, c-format
 msgid "ignoring empty header field: %s"
-msgstr "пустое поле заголовка (%s) пропущено"
+msgstr "пустое поле заголовка (%s); пропущено"
 
 #: init.c:586
 #, c-format
@@ -1370,7 +1370,7 @@ msgstr "удалить/оставить файл после отправки"
 
 #: keymap_defs.h:38
 msgid "update an attachment's encoding info"
-msgstr "обновить информацио о кодировке вложения"
+msgstr "обновить информацию о кодировке вложения"
 
 #: keymap_defs.h:39
 msgid "write the message to a folder"
@@ -1490,7 +1490,7 @@ msgstr "ввести следующую нажатую клавишу \"как есть\""
 
 #: keymap_defs.h:69
 msgid "enter a muttrc command"
-msgstr "ввести комманду muttrc"
+msgstr "ввести команду muttrc"
 
 #: keymap_defs.h:70
 msgid "enter a file mask"
@@ -1801,11 +1801,9 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "разрешить/запретить перезапись почтового ящика"
 
 #: keymap_defs.h:147
-#, fuzzy
 msgid "toggle whether to browse mailboxes or all files"
 msgstr ""
-"переключиться между режимами просмотра всех файлов и просмотра почтовых "
-"ящиков"
+"переключиться между режимами просмотра почтовых ящиков и просмотра файлов"
 
 #: keymap_defs.h:148
 msgid "move to the top of the page"
@@ -1896,13 +1894,12 @@ msgid "File under directory: "
 msgstr "Файл в каталоге: "
 
 #: lib.c:862
-#, fuzzy
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "Файл существует, перезаписать?"
+msgstr "Файл существует, (п)ерезаписать, (д)обавить или (о)тказ?"
 
 #: lib.c:862
 msgid "oac"
-msgstr ""
+msgstr "пдо"
 
 #: lib.c:1246
 #, c-format
@@ -1916,30 +1913,23 @@ msgstr "Добавить сообщения в %s?"
 
 #: main.c:39
 msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
-msgstr ""
-"Для того, чтобы связаться с разработчиками, отправьте, пожалуйста, "
-"сообщение\n"
-"по адресу <mutt-dev@mutt.org>.\n"
+msgstr "Для связи с разработчиками пользуйтесь адресом <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-9 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
-"Copyright (C) 1996-98 Michael R. Elkins и другие.\n"
-"Mutt распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; для получения более "
-"подробной\n"
+"Copyright (C) 1996-8 Michael R. Elkins и другие.\n"
+"Mutt распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; для получения подробной\n"
 "информации введите `mutt -vv'.\n"
-"Mutt является свободным программным обеспечением. Вы можете распространять "
-"его\n"
-"при соблюдении опредленных условий; для получения более подробной\n"
+"Mutt является свободным программным обеспечением. Вы можете распространять\n"
+"его при соблюдении определенных условий; для получения подробной\n"
 "информации введите `mutt -vv'.\n"
 
 #: main.c:48
-#, fuzzy
 msgid ""
 "Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
@@ -1963,33 +1953,28 @@ msgid ""
 "    along with this program; if not, write to the Free Software\n"
 "    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
 msgstr ""
-"Copyright (C) 1996-98 Michael R. Elkins  <me@cs.hmc.edu>\n"
-"Copyroght (C) 1997-98 Thomas Roessler <roessler@guug.de>\n"
-"Copyright (C) 1998    Werner Koch <wk@isil.d.shuttle.de>\n"
-"Copyright (C) 1998    Руслан Ермилов  <ru@ucb.crimea.ua>\n"
+"Copyright (C) 1996-9 Michael R. Elkins  <me@cs.hmc.edu>\n"
+"Copyroght (C) 1997-9 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998-9 Руслан Ермилов <ru@ucb.crimea.ua>\n"
 "\n"
-"Многие части кода, исправления и предложения были сделаны неупомянутыми "
-"здесь\n"
-"людьми.\n"
+"Многие части кода, исправления и предложения были сделаны неупомянутыми \n"
+"здесь людьми.\n"
 "\n"
-"   Эта программа -- свободное программное обеспечение. Вы можете "
-"распространять\n"
-"   и/или изменять ее при соблюдений условий GNU General Piblic License,\n"
-"   опубликованной Free Software Foundation, версии 2 или (на ваше "
-"усмотрение)\n"
-"   любой более поздней версии.\n"
+"   Эта программа -- свободное программное обеспечение.  Вы можете\n"
+"   распространять и/или изменять ее при соблюдений условий GNU General Piblic\n"
+"   License, опубликованной Free Software Foundation, версии 2 или (на ваше\n"
+"   усмотрение) любой более поздней версии.\n"
 "\n"
 "   Эта программа распространяется с надеждой, что она окажется полезной, но\n"
-"   БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ. Особо отметим, что отсутствует ГАРАНТИЯ "
-"ПРИГОДНОСТИ\n"
-"   ДЛЯ ВЫПОЛНЕНИЯ ОПРЕДЕЛЕННЫХ ЗАДАЧ. Более подробную информацию вы можете "
-"найти\n"
-"   в GNU General Public License.\n"
+"   БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ. Особо отметим, что отсутствует ГАРАНТИЯ\n"
+"   ПРИГОДНОСТИ ДЛЯ ВЫПОЛНЕНИЯ ОПРЕДЕЛЕННЫХ ЗАДАЧ. Более подробную "
+"информацию\n"
+"   вы можете найти в GNU General Public License.\n"
 "\n"
 "   Вы должны были получить копию GNU General Public License вместе с этой\n"
-"   программой. Если вы ее не получили, обратитесь во Free Software "
-"Foundation, Inc.,\n"
-"   675 Mass Ave, Cambridge, MA 02139, USA.\n"
+"   программой. Если вы ее не получили, обратитесь во Free Software\n"
+"   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
 
 #: main.c:73
 msgid ""
@@ -2010,8 +1995,8 @@ msgstr ""
 "Реализация SHA1-алгоритма Copyright (C) 1995-7 Eric A. Young "
 "<eay@cryptsoft.com>\n"
 "\n"
-"    Распространение и использование в исходной и двоичных формах, с или б\n"
-"    изменениями, разрешены при определенных условиях.\n"
+"    Распространение и использование в исходной и двоичных формах, с или без\n"
+"    изменений, разрешены при определенных условиях.\n"
 "\n"
 "    Реализация SHA1-алгоритма предлагается КАК ЕСТЬ, и БЕЗ ЯВНЫХ ИЛИ "
 "НЕЯВНЫХ\n"
@@ -2051,31 +2036,33 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
-"запуск: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
-"]\n"
-"        mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] "
-"[ -i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
-"        mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
+"запуск: mutt [ -nRzZ ] [ -e <команда> ] [ -F <файл> ] [ -m <тип> ] [ -f "
+"<файл> ]\n"
+"        mutt [ -nx ] [ -e <команда> ] [ -a <файл> ] [ -F <файл> ] [ -H "
+"<файл> ] [ -i <файл> ] [ -s <тема> ] [ -b <адрес> ] [ -c <адрес> ] <адрес> [ "
+"... ]\n"
+"        mutt [ -n ] [ -e <команда> ] [ -F <файл> ] -p\n"
 "        mutt -v[v]\n"
 "\n"
 "параметры:\n"
-"  -a <file>\tattach a file to the message\n"
-"  -b <address>\tspecify a blind carbon-copy (BCC) address\n"
-"  -c <address>\tspecify a carbon-copy (CC) address\n"
-"  -e <command>\tspecify a command to be executed after initialization\n"
-"  -f <file>\tуказать почтовый ящик для работы\n"
-"  -F <file>\tуказать альтернативный muttrc\n"
-"  -H <file>\tspecify a draft file to read header from\n"
-"  -i <file>\tspecify a file which Mutt should include in the reply\n"
+"  -a <файл>\tвложить файл в сообщение\n"
+"  -b <адрес>\tуказать адресата для посылки \"слепой\" копии\n"
+"  -c <адрес>\tуказать адресата для посылки копии\n"
+"  -e <команда>\tвыполнить указанную команду после инициализации\n"
+"  -f <файл>\tуказать почтовый ящик для работы\n"
+"  -F <файл>\tуказать альтернативный muttrc\n"
+"  -H <файл>\tуказать файл, который необходимо использовать как черновик\n"
+"  -i <файл>\tуказать файл, содержимое которого должно быть использовано при "
+"ответе\n"
 "  -m <тип>\tуказать тип почтового ящика по умолчанию\n"
 "  -n\t\tзапретить чтение системного Muttrc\n"
 "  -p\t\tпродолжить отложенное сообщение\n"
 "  -R\t\tоткрыть почтовый ящик в режиме \"только для чтения\"\n"
-"  -s <тема>\tуказать тему сообщения (должна быть в кавычках, если "
-"присутствуют пробелы)\n"
+"  -s <тема>\tуказать тему сообщения (используйте кавычки, если присутствуют "
+"пробелы)\n"
 "  -v\t\tвывести номер версии и параметры компиляции\n"
 "  -x\t\tэмулировать режим посылки команды mailx\n"
-"  -y\t\tselect a mailbox specified in your `mailboxes' list\n"
+"  -y\t\tвыбрать почтовый ящик из указанных командой `mailboxes'\n"
 "  -z\t\tвыйти немедленно если в почтовом ящике отсутствует новая почта\n"
 "  -Z\t\tоткрыть первый почтовый ящик с новой почтой, выйти немедленно если "
 "таковая отсутствует\n"
@@ -2252,9 +2239,9 @@ msgstr ""
 "%s?"
 
 #: mx.c:127
-#, fuzzy, c-format
+#, c-format
 msgid "Can't dotlock %s.\n"
-msgstr "Невозможно получить информацию: %s"
+msgstr "Не удалось заблокировать %s.\n"
 
 #: mx.c:185
 msgid "Timeout exceeded while attempting fcntl lock!"
@@ -2335,12 +2322,11 @@ msgstr "Используйте 'toggle-write' для разрешения записи!"
 #: mx.c:987
 #, c-format
 msgid "Mailbox is marked unwritable. %s"
-msgstr "Почтовый ящик помечен как переписываемый. %s"
+msgstr "Почтовый ящик помечен как немодифицируемый. %s"
 
 #: pager.c:54
-#, fuzzy
 msgid "Not available in this menu."
-msgstr "Новая почта в этом ящике."
+msgstr "Недоступно в этом меню."
 
 #: pager.c:1373
 msgid "PrevPg"
@@ -2473,7 +2459,7 @@ msgstr "Введите PGP фразу-пароль:"
 
 #: pgp.c:155
 msgid "PGP passphrase forgotten."
-msgstr "PGP фраза-пароль забыта."
+msgstr "PGP фраза-пароль вычищена из памяти."
 
 #: pgp.c:183
 #, c-format
@@ -2486,7 +2472,7 @@ msgstr "[-- Результат работы программы PGP (текущее время: "
 
 #: pgp.c:329
 msgid "[-- Error: unable to create PGP subprocess! --]\n"
-msgstr "[-- Ошибка: не удалось создать PGP подпроцесс! --]\n"
+msgstr "[-- Ошибка: не удалось создать PGP-подпроцесс! --]\n"
 
 #: pgp.c:356
 msgid ""
@@ -2556,22 +2542,20 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:685
-#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Начало данных, шифрованных в формате PGP/MIME --]\n"
+"[-- Начало данных, подписанных в формате PGP/MIME --]\n"
 "\n"
 
 #: pgp.c:691
-#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Конец данных, шифрованных в формате PGP/MIME --]\n"
+"[-- Конец данных, подписанных в формате PGP/MIME --]\n"
 
 #: pgp.c:696
 msgid ""
@@ -2579,7 +2563,7 @@ msgid ""
 "--]\n"
 "\n"
 msgstr ""
-"[-- Ошибка: это сообщение не удовлетворяет спецификации PGP/MIME! --]\n"
+"[-- Ошибка: это сообщение не соответствует спецификации PGP/MIME! --]\n"
 "\n"
 
 #: pgp.c:810
@@ -2591,7 +2575,7 @@ msgid ""
 "[-- Error: could not create a PGP subprocess! --]\n"
 "\n"
 msgstr ""
-"[-- Ошибка: не удалось создать PGP подпроцесс! --]\n"
+"[-- Ошибка: не удалось создать PGP-подпроцесс! --]\n"
 "\n"
 
 #: pgp.c:967
@@ -2624,7 +2608,7 @@ msgstr ""
 
 #: pgp.c:1079
 msgid "Can't open PGP subprocess!"
-msgstr "Не удалось открыть PGP подпроцесс!"
+msgstr "Не удалось открыть PGP-подпроцесс!"
 
 #: pgp.c:1207
 #, c-format
@@ -2650,7 +2634,7 @@ msgstr "Тест ключа "
 
 #: pgpkey.c:191
 msgid "PGP keys matching "
-msgstr "PGP-ключи соответствующие "
+msgstr "PGP-ключи, соответствующие "
 
 #: pgpkey.c:210 pgpkey.c:387
 msgid "Can't open /dev/null"
@@ -2675,16 +2659,16 @@ msgstr "Степень доверия для этого ID не определена."
 
 #: pgpkey.c:258
 msgid "This ID is not trusted."
-msgstr "Степень доверия для этого ID \"отсутствие доверия\""
+msgstr "Степень доверия для этого ID  -- \"отсутствие доверия\""
 
 #: pgpkey.c:259
 msgid "This ID is only marginally trusted."
-msgstr "Степень доверия для этого ID \"частичный доверенный\""
+msgstr "Степень доверия для этого ID -- \"частичный доверенный\""
 
 #: pgpkey.c:262
 #, c-format
 msgid "%s Do you really want to use it?"
-msgstr "%s Вы на самом деле хотите его использовать?"
+msgstr "%s Вы действительно хотите его использовать?"
 
 #: pgpkey.c:369
 msgid "Please enter the key ID: "
@@ -2898,7 +2882,7 @@ msgstr "Передать программе: "
 #: recvattach.c:578
 #, c-format
 msgid "I dont know how to print %s attachments!"
-msgstr "Неизвестно как печатать %s вложения!"
+msgstr "Неизвестно, как печатать %s-вложения!"
 
 #: recvattach.c:641
 msgid "Print tagged attachment(s)?"
@@ -2910,17 +2894,17 @@ msgstr "Напечатать вложение?"
 
 #: recvattach.c:669
 msgid "You may only bounce message/rfc822 parts."
-msgstr "Вы можете перепосылать только части типа message/rfc822."
+msgstr "Вы можете перенаправлять только части типа message/rfc822."
 
 #: recvattach.c:705
 #, c-format
 msgid "Bounce messages to %s...?"
-msgstr "Перепослать сообщения %s...?"
+msgstr "Перенаправить сообщения %s...?"
 
 #: recvattach.c:706
 #, c-format
 msgid "Bounce message to %s...?"
-msgstr "Перепослать сообщение %s...?"
+msgstr "Перенаправить сообщение %s...?"
 
 #: recvattach.c:941
 msgid "Attachments"
@@ -2936,7 +2920,7 @@ msgstr "Для составных вложений поддерживается только удаление."
 
 #: recvattach.c:1087
 msgid "This operation is not currently supported for PGP messages."
-msgstr "Для PGP сообщений эта операция пока не поддерживается."
+msgstr "Для PGP-сообщений эта операция пока не поддерживается."
 
 #: rfc1524.c:176
 #, c-format
@@ -3035,7 +3019,7 @@ msgstr "Не было указано ни одного адресата."
 
 #: send.c:1171
 msgid "No subject, abort sending?"
-msgstr "Нет темы сообщения, прервать посылку?"
+msgstr "Нет темы сообщения, прервать отправку?"
 
 #: send.c:1175
 msgid "No subject specified."
@@ -3043,11 +3027,11 @@ msgstr "Тема сообщения не указана."
 
 #: send.c:1212
 msgid "Message edited. Really send?"
-msgstr "Сообщение отредактировано.  На самом деле посылать?"
+msgstr "Сообщение было изменено.  Продолжить отправку?"
 
 #: send.c:1218
 msgid "Sending message..."
-msgstr "Сообщение посылается..."
+msgstr "Сообщение отправляется..."
 
 #: send.c:1320
 msgid "Could not send the message."
@@ -3055,11 +3039,11 @@ msgstr "Не удалось отправить сообщение"
 
 #: send.c:1325
 msgid "Mail sent."
-msgstr "Сообщение послано."
+msgstr "Сообщение отправлено."
 
 #: send.c:1325
 msgid "Sending in background."
-msgstr ""
+msgstr "Фоновая отправка."
 
 #: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
@@ -3076,18 +3060,18 @@ msgid "Could not open %s"
 msgstr "Не удалось открыть %s"
 
 #: sendlib.c:1690
-#, fuzzy, c-format
+#, c-format
 msgid "Error sending message, child exited %d (%s)."
-msgstr "Не удалось послать сообщение, процесс-потомок вернул %d (%s).\n"
+msgstr "Не удалось отправить сообщение, дочерний процесс вернул %d (%s)."
 
 #: sendlib.c:1696
 msgid "Output of the delivery process"
-msgstr ""
+msgstr "Результат работы программы доставки почты"
 
 #: signal.c:39
-#, fuzzy, c-format
+#, c-format
 msgid "%s...  Exiting.\n"
-msgstr "Получен сигнал %s...  Завершение работы.\n"
+msgstr "%s...  Завершение работы.\n"
 
 #: signal.c:42
 #, c-format
@@ -3115,76 +3099,3 @@ msgstr "Не удалось найти функцию сортировки! (сообщите об этой ошибке)"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(нет почтового ящика)"
-
-#~ msgid "Saved output of child process to %s.\n"
-#~ msgstr "Результат работы процесса-потомка сохранен в %s.\n"
-
-#~ msgid "Error sending message."
-#~ msgstr "Ошибка посылки сообщения."
-
-#, fuzzy
-#~ msgid "Subscribed [%s], File mask: %s"
-#~ msgstr "Каталог [%s], маска файла: %s"
-
-#, fuzzy
-#~ msgid "Can't attach a directory!"
-#~ msgstr "Не удалось просмотреть каталог"
-
-#, fuzzy
-#~ msgid "Can't open %s: %s."
-#~ msgstr "Невозможно получить информацию: %s"
-
-#, fuzzy
-#~ msgid "-- Attachments"
-#~ msgstr "Вложения"
-
-#, fuzzy
-#~ msgid "Unable to attach %s!"
-#~ msgstr "Не удалось вложить!"
-
-#, fuzzy
-#~ msgid "Subscribing to %s..."
-#~ msgstr "Копируется в %s..."
-
-#, fuzzy
-#~ msgid "Unsubscribing to %s..."
-#~ msgstr "Устанавливается соединение с %s..."
-
-#, fuzzy
-#~ msgid "Delete a remailer from the chain"
-#~ msgstr "удалить все символы в строке"
-
-#, fuzzy
-#~ msgid ""
-#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
-#~ "\n"
-#~ msgstr "Ошибка: тип multipart/signed требует параметра protocol."
-
-#, fuzzy
-#~ msgid ""
-#~ "[-- The following data is signed --]\n"
-#~ "\n"
-#~ msgstr ""
-#~ "[-- Начало данных, подписанных в формате PGP/MIME --]\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "[-- End of signed data --]\n"
-#~ msgstr ""
-#~ "\n"
-#~ "[-- Конец данных, подписанных в формате PGP/MIME --]\n"
-
-#, fuzzy
-#~ msgid "Invoking pgp..."
-#~ msgstr "Запускается PGP..."
-
-#~ msgid "Display message using mailcap?"
-#~ msgstr "Показать сообщение в соответствии с mailcap?"
-
-#~ msgid "Please report this program error in the function mutt_mktime."
-#~ msgstr "Сообщите, пожалуйста, что произошла ошибка в функции mutt_mktime."
-
-#~ msgid "%s is a boolean var!"
-#~ msgstr "%s -- булевская переменная!"
