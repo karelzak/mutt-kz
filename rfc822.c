@@ -282,7 +282,7 @@ parse_addr_spec (const char *s,
 		 ADDRESS *addr)
 {
   char token[128];
-  int tokenlen = 0;
+  size_t tokenlen = 0;
 
   s = parse_address (s, token, &tokenlen, sizeof (token) - 1, comment, commentlen, commentmax, addr);
   if (s && *s && *s != ',' && *s != ';')
