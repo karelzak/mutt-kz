@@ -41,5 +41,11 @@ manual.html: manual.sgml
 mutt.man: mutt.sgml
 	sgml2txt -man mutt
 
-clean clean-real distclean:
+clean: 
 	rm -f *~ *.html *.orig *.rej
+
+clean-real:
+	rm -f manual.txt mutt.man
+
+distclean: clean
+	rm -f Makefile

@@ -36,18 +36,18 @@ mutt - The Mutt Mail User Agent
 .SH SYNOPSIS
 
 .Pp
-mutt [ -hnpRvxyzZ ]
-[ -a \fIfile\fP ]
-[ -b \fIaddress\fP ]
-[ -c \fIaddress\fP ]
-[ -e \fIcommand\fP ]
-[ -f \fImailbox\fP ]
-[ -F \fImuttrc\fP ]
-[ -H \fIdraftfile\fP ]
-[ -i \fIinclude\fP ]
-[ -m \fItype\fP ]
-[ -s \fIsubject\fP ]
-[ \fIaddress\fP ... ]
+mutt [lsqb  ] -hnpRvxyzZ [rsqb  ]
+[lsqb  ] -a \fIfile\fP [rsqb  ]
+[lsqb  ] -b \fIaddress\fP [rsqb  ]
+[lsqb  ] -c \fIaddress\fP [rsqb  ]
+[lsqb  ] -e \fIcommand\fP [rsqb  ]
+[lsqb  ] -f \fImailbox\fP [rsqb  ]
+[lsqb  ] -F \fImuttrc\fP [rsqb  ]
+[lsqb  ] -H \fIdraftfile\fP [rsqb  ]
+[lsqb  ] -i \fIinclude\fP [rsqb  ]
+[lsqb  ] -m \fItype\fP [rsqb  ]
+[lsqb  ] -s \fIsubject\fP [rsqb  ]
+[lsqb  ] \fIaddress\fP ... [rsqb  ]
 .Pp
 .SH DESCRIPTION
 
@@ -86,7 +86,7 @@ Specify which mailbox to load.
 .IP "-F \fImuttrc\fP"
 .nr bi 1
 .Pp
-Specify an initialization file to read instead of ~/.muttrc
+Specify an initialization file to read instead of [tilde ]/.muttrc
 .IP "-h"
 .nr bi 1
 .Pp
@@ -100,7 +100,7 @@ message.
 .nr bi 1
 .Pp
 Specify a file to include into the body of a message.
-.IP "-m \fItype\fP "
+.IP "-m \fItype\fP       "
 .nr bi 1
 .Pp
 specify a default mailbox type
@@ -168,7 +168,7 @@ Full path of the user's spool mailbox.
 .nr bi 1
 .Pp
 Path to search for mailcap files.
-.IP "MM_NOASK"
+.IP "MM[lowbar]NOASK"
 .nr bi 1
 .Pp
 If this variable is set, mailcap are always used without prompting first.
@@ -187,7 +187,7 @@ Default Reply-To address.
 .IP "VISUAL"
 .nr bi 1
 .Pp
-Editor to invoke when the ~v command is given in the builtin editor.
+Editor to invoke when the [tilde ]v command is given in the builtin editor.
 .if \n(ll>1 .RE
 .nr ll -1
 .Pp
@@ -197,7 +197,7 @@ Editor to invoke when the ~v command is given in the builtin editor.
 .nr ll +1
 .nr t\n(ll 2
 .if \n(ll>1 .RS
-.IP "~/.muttrc"
+.IP "[tilde ]/.muttrc"
 .nr bi 1
 .Pp
 User configuration file.
@@ -209,7 +209,7 @@ System-wide configuration file.
 .nr bi 1
 .Pp
 Temporary files created by Mutt.
-.IP "~/.mailcap"
+.IP "[tilde ]/.mailcap"
 .nr bi 1
 .Pp
 User definition for handling non-text MIME types.
@@ -217,7 +217,7 @@ User definition for handling non-text MIME types.
 .nr bi 1
 .Pp
 System definition for handing non-text MIME types.
-.IP "~/.mime.types"
+.IP "[tilde ]/.mime.types"
 .nr bi 1
 .Pp
 User's personal mapping between MIME types and file extensions.
@@ -249,11 +249,11 @@ for one of the functions listed while Mutt is running.
 .Pp
 curses(3), ncurses(3), sendmail(1), smail(1), mailcap(5)
 .Pp
-Mutt Home Page: http://www.cs.hmc.edu/~me/mutt/
+Mutt Home Page: http://www.cs.hmc.edu/[tilde ]me/mutt/
 .Pp
 .SH AUTHOR
 
 .Pp
-Michael Elkins <me@cs.hmc.edu>
+Michael Elkins [lt    ]me@cs.hmc.edu[gt    ]
 .Pp
-http://www.cs.hmc.edu/~me
+http://www.cs.hmc.edu/[tilde ]me

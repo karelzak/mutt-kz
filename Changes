@@ -1,25 +1,35 @@
-Changes since 0.92.10i
-----------------------
+Sat Jun 20 06:12:38 1998  Thomas Roessler  <roessler@guug.de>
 
-Tue Jun 16 15:15:00 1998  Thomas Roessler  <roessler@guug.de>
+	* handler.c: Fixing the quoted-printable decoder.
 
-	* imap.h: Check in a proper version of imap.h.
+	* handler.c, copy.c: Make mutt handle messages containing null bytes.
 
-	* color.c: Fix the "unknown color" bug reported by Vikas.
+	* doc/manual.sgml: documenting alias-path
 
-	* mx.c: Remove a spurious #include "imap.h" from mx.c.
+Fri Jun 19 12:52:16 1998  Thomas Roessler  <roessler@guug.de>
 
-	* doc/style-guide: Add a note about the global Muttrc to style-guide.
+	* sendlib.c, send.c, protos.h, postpone.c, pattern.c, menu.c, main.c, headers.c, functions.h, curs_main.c, compose.c, OPS:
+	Removing the Attach-Menu feature for the next release
+	version.
 
-	* configure.in, Muttrc.in, configure, Attic/Muttrc, Makefile.in:
-	The global Muttrc contains a list of default settings
-	which can be used as a starting-point for the user's own
-	configuration.
+Thu Jun 18 20:37:59 1998  Thomas Roessler  <roessler@guug.de>
 
-	* pgppubring.c, pgp.h, gnupgparse.c:
-	Removing some duplicate code from gnupgparse.c and
-	pgppubring.c.
+	* protos.h, lib.c, alias.c:
+	Bradon long's alias_path patch, for the sake of Elm
+	compatibility.
 
-	* pgpinvoke.c, gnupgparse.c:
-	Include part of Werner Koch's latest GPG patches.
+Tue Jun 16 20:59:20 1998  Thomas Roessler  <roessler@guug.de>
+
+	* mx.c: Avoid pointless error messages from mx_get_magic() when
+	called from an mx_open_mailbox_append() on a non-existing
+	mailbox.
+
+	* doc/manual.txt, doc/Makefile.in, configure.in, configure, Makefile.in:
+	Have "make install" install manual.txt as well.
+
+	* doc/Attic/makefile, doc/Makefile.in:
+	Putting Makefile under autoconf control.
+
+	* main.c: Switch the error reporting address from mutt-users to
+	mutt-dev.
 
