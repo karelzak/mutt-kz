@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6i\n"
-"POT-Creation-Date: 1999-06-01 04:02+0200\n"
+"POT-Creation-Date: 1999-06-03 22:17+0200\n"
 "PO-Revision-Date: 1999-06-03 19:52+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -3080,13 +3080,3 @@ msgstr "Øadící funkci nelze nalézt! [ohlaste tutu chybu]"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(¾ádná schránka)"
-
-#~ msgid "Display message using mailcap?"
-#~ msgstr "Zobrazit zprávu pomocí mailcapu?"
-
-#~ msgid "Please report this program error in the function mutt_mktime."
-#~ msgstr "Ohlaste, prosím, tuto chybu ve funkci mutt_mktime."
-
-#~ msgid "%s is a boolean var!"
-#~ msgstr "Promìnná %s je typu boolean!"
-#~ msgstr "Promìnná %s je typu boolean!"

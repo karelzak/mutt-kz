@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95i\n"
-"POT-Creation-Date: 1999-05-31 12:50+0200\n"
+"POT-Creation-Date: 1999-06-03 22:17+0200\n"
 "PO-Revision-Date: 1999-01-07 00:00+0100\n"
 "Last-Translator: Miroslav Vasko <vasko@ies.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"

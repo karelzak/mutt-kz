@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 0.95.6i\n"
-"POT-Creation-Date: 1999-05-31 12:50+0200\n"
+"POT-Creation-Date: 1999-06-03 22:17+0200\n"
 "PO-Revision-Date: 1999-06-02 01:39+0200\n"
 "Last-Translator: Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre "
 "<vincent@vinc17.org>\n"
@@ -1031,7 +1031,9 @@ msgstr "Récupération des en-têtes du message... [%d/%d]"
 #. Unable to fetch headers for lower versions
 #: imap.c:689
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr "Impossible de récupérer les en-têtes à partir de cette version du serveur IMAP."
+msgstr ""
+"Impossible de récupérer les en-têtes à partir de cette version du serveur "
+"IMAP."
 
 #: imap.c:881
 #, fuzzy, c-format

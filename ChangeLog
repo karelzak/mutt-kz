@@ -1,3 +1,63 @@
+Thu Jun  3 20:13:22 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/pl.po, po/ko.po, po/fr.po, po/de.po, po/cs.po: Latest chagnes.
+
+Wed Jun  2 18:52:19 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/ko.po, po/pl.po, po/es.po, po/it.po, po/de.po: various updates.
+
+Tue Jun  1 14:52:09 1999  Thomas Roessler  <roessler@guug.de>
+
+	* flags.c, mh.c, curs_main.c:
+	Back-porting the maildir fixes from 0.96.2.
+
+Mon May 31 16:11:32 1999  Thomas Roessler  <roessler@guug.de>
+
+	* VERSION: Preparing pre-release for 0.95.6.
+
+	* po/uk.po, po/sk.po, po/ru.po, po/pl.po, po/nl.po,
+	po/ko.po, po/it.po, po/id.po, po/fr.po, po/es.po, po/de.po,
+	po/cs.po: translation updates
+
+	* hook.c, pattern.c, pgp.c, send.c: Backporting fixes from unstable.
+
+Fri May 21 15:55:27 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/ko.po: Adding the Korean translation.
+
+Tue May 18 19:22:55 1999  Thomas Roessler  <roessler@guug.de>
+
+	* imap.c: Latest IMAP fixes from Brandon.
+
+	* imap.c: The current IMAP code wasn't asking for the
+	capabilities of the server in the case where the user is
+	using PREAUTH.
+
+Sun May 16 06:26:11 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/it.po: New IT translation.
+
+Wed May  5 20:33:57 1999  Thomas Roessler  <roessler@guug.de>
+
+	* imap.c: The latest IMAP fixes.
+
+Mon May  3 16:17:29 1999  Thomas Roessler  <roessler@guug.de>
+
+	* gnupgparse.c: gnupg gives reasonable trust values now.
+
+Fri Apr 23 09:01:42 1999  Thomas Roessler  <roessler@guug.de>
+
+	* reldate.h: ups, this should also be updated for 0.95.5 final.
+
+	* ChangeLog: preparing the final 0.95.5.
+
+	* po/uk.po, po/sk.po, po/ru.po, po/pl.po, po/nl.po, po/it.po, po/id.po, po/fr.po, po/es.po, po/de.po, po/cs.po:
+	New translations and typo fixes.
+
+	* OPS: Fix a documentation typo.
+
+	* po/de.po: translation fixes from Roland and Gero.
+
 Fri Apr 23 08:55:26 1999  Thomas Roessler  <roessler@guug.de>
 
 	* po/uk.po, po/sk.po, po/ru.po, po/pl.po, po/nl.po, po/it.po, po/id.po, po/fr.po, po/es.po, po/de.po, po/cs.po:

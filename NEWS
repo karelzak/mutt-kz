@@ -10,11 +10,18 @@ Major changes since 0.95
   implicit_autoview.  See the manual for details.
 
 - We have more translations than ever before.  Supported languages
-  now include cs, de, es, fr, it, nl, pl, ru, uk.  And en, as usual.
+  now include cs, de, es, fr, id, it, ko, nl, pl, ru, sk, uk.  And
+  en, as usual.
 
 - Mutt now uses version 0.12 of the "regex" library instead of rx.
   This library is believed to be far more stable than rx.  See
   INSTALL for details.
+
+- The annoying "maildir erratic behaviour" bug could finally be
+  tracked down and fixed as of 0.95.6.
+
+- There were some major improvements with the IMAP code.  It should
+  work rather correctly against most common IMAP servers now.
 
 Major changes since 0.93
 ------------------------
