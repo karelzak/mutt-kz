@@ -1,3 +1,520 @@
+Wed May  1 23:06:21 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* build-release: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	s/scp1/scp/
+
+Mon Apr 29 17:12:18 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* lib.c, lib.h, protos.h:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix #1171.
+
+	* po/fr.po: From: Vincent Lefevre <vincent@vinc17.org>
+
+	update.
+
+	* po/ja.po: From: oota toshiya <oota@mspd.mt.nec.co.jp>
+
+	update.
+
+	* imap/util.c: From: Byrial Jensen <byrial@image.dk>
+
+	There is a possible buffer overflow due an off-by-one error in
+	imap/util.c, line 125. The error is in the maximum field width
+	indication in the sscanf() call. You must have room in the receiving
+	buffer for this number of characters /plus a terminating NULL
+	character/.
+
+	* imap/util.c: From: Byrial Jensen <byrial@image.dk>
+
+	There is a possible buffer overflow due an off-by-one error in
+	imap/util.c, line 125. The error is in the maximum field width
+	indication in the sscanf() call. You must have room in the
+	receiving buffer for this number of characters /plus a
+	terminating NULL character/.
+
+Thu Apr 25 13:30:49 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* pop.c, pop_lib.c: From: Vsevolod Volkov <vvv@mutt.org.ua>
+
+	Attached patch fixes the problem described below. It should be
+	applied to both mutt 1.3/1.4 and 1.5 branches.
+
+	> Date: Thu, 11 Apr 2002 16:24:00 -0500
+	> Subject: mutt 1.3.x / pop
+	> From: "Ryan O'Hara" <rohara@isis.visi.com>
+	> To: bcully@users.sourceforge.net
+	> User-Agent: Mutt/1.3.27i
+
+	> Hi. My apologies if this has nothing to do with you. If it does not,
+	> maybe you could forward it on to someone.
+
+	> In mutt 1.3.x I have noticed that if I uses POP to retrieve mail, and
+	> I enter an incorrect password whem prompted, it will *save* that
+	> password and keep trying to use it. However, in the 1.2.x versions it
+	> worked like this: type in wrong POP password, try to connect to POP
+	> server again and it will ask you (again) for the password. mutt 1.3.x
+	> does not, it just tries to connect with the wrongs password (which
+	> just failed).
+
+	> This is kinda annoying. Just thought I'd point out this regression.
+
+	> Thanks.
+	> R
+
+	* doc/manual.sgml.head: From: Wouter Verheijen <wv@xs2mail.com>
+
+	Someone in news:comp.mail.mutt noted that the list of command-line
+	options in the manual is not up-to-date.
+
+	Included a small patch that includes all options that 'mutt -h' shows.
+
+	* doc/manual.sgml.tail, init.h, OPS, pattern.c:
+	From: Cedric Duval <cedricduval@free.fr>
+
+	attached are fixes for some little mistakes :
+
+	* history-down -> scroll _down_, not up
+	* functions decode-(save|copy) do not exist in the attach menu.
+	* gettext oversight in pattern.c
+	* inconsistency between "printf-like sequences" used all over the place
+	  and "escape sequences" for the description of $attribution.
+
+	* doc/manual.sgml.tail, pattern.c, init.h, OPS:
+	From: Cedric Duval <cedricduval@free.fr>
+
+	attached are fixes for some little mistakes :
+
+	* history-down -> scroll _down_, not up
+	* functions decode-(save|copy) do not exist in the attach menu.
+	* gettext oversight in pattern.c
+	* inconsistency between "printf-like sequences" used all over the
+	  place and "escape sequences" for the description of $attribution.
+
+	* recvattach.c: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Also fix this for the S/MIME case.
+
+	* recvattach.c: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fiy handling of multiparts which have encrypted sub-parts, at least
+	for PGP.
+
+	* sendlib.c: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Force 7bit encoding for application/pgp-keys.
+
+Sat Apr 20 21:38:47 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* m4/Attic/lib-ld.m4, m4/Attic/lib-link.m4, m4/Attic/lib-prefix.m4, m4/codeset.m4, m4/gettext.m4, m4/glibc21.m4, m4/iconv.m4, m4/lcmessage.m4, m4/progtest.m4, intl/Attic/eval-plural.h, intl/Attic/gmo.h, intl/Attic/localename.c, intl/Attic/os2compat.c, intl/Attic/os2compat.h, intl/Attic/osdep.c, intl/Attic/plural-exp.c, intl/Attic/plural-exp.h, intl/bindtextdom.c, intl/ChangeLog, intl/config.charset, intl/dcigettext.c, intl/gettextP.h, intl/hash-string.h, intl/l10nflist.c, intl/libgnuintl.h, intl/loadinfo.h, intl/loadmsgcat.c, intl/localcharset.c, intl/localealias.c, intl/Makefile.in, intl/plural.c, intl/plural.y, ABOUT-NLS, Attic/config.rpath, configure.in, INSTALL:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Backing out the latest iconv-related changes from the
+	mutt-1-4-stable branch.
+
+	* m4/Attic/lib-ld.m4, m4/Attic/lib-link.m4, m4/Attic/lib-prefix.m4, m4/codeset.m4, m4/gettext.m4, m4/glibc21.m4, m4/iconv.m4, m4/lcmessage.m4, m4/progtest.m4:
+	same as above.
+
+	* intl/Attic/eval-plural.h, intl/Attic/gmo.h, intl/Attic/localename.c, intl/Attic/os2compat.c, intl/Attic/os2compat.h, intl/Attic/osdep.c, intl/Attic/plural-exp.c, intl/Attic/plural-exp.h, intl/gettextP.h, intl/hash-string.h, intl/l10nflist.c, intl/libgnuintl.h, intl/loadinfo.h, intl/loadmsgcat.c, intl/localcharset.c, intl/localealias.c, intl/plural.c, intl/plural.y, intl/bindtextdom.c, intl/ChangeLog, intl/config.charset, intl/dcigettext.c, intl/Makefile.in:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Committing the new iconv patches into a separate branch.
+
+	* ABOUT-NLS, Attic/config.rpath, configure.in, INSTALL:
+	From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Committing the new noiconv patches into a separate branch.
+
+	* sendlib.c: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Generate the resent-message-id ourselves, and add it in the top of
+	the header.
+
+	* copy.c, mutt.h, sendlib.c: From: Wouter Verheijen <wv@xs2mail.com>
+
+	Bug #571 "mutt should not replicate ">From " headers while bounding",
+	has a patch attached.
+	Will that patch get in?
+
+	Although these lines are not generated by mutt, I would strongly
+	suggest
+	to prevent it, because by boucing a mail the MUA should ensure
+	that the message header is according to the specification.
+	A ">From " line is not, because of the spaces before a colon.
+
+	Because this has such serious consequences (totally unreadable mail)
+	when a MTA interpretes this line as the beginning of the body (not
+	unreasonable), I think Mutt should prevent sending this invalid
+	headerline.
+
+	Because the other patch to the bugreport is not really correct IMHO
+	(because the fieldnames are not limited to alphanumeric chars, RFC2822
+	3.6.8), I propose another one.
+
+	This patch also appends Resent-* to the header, instead of
+	prepending it. The Resent-Message-Id is however still appended,
+	because I could not find it; is it added by the MTA instead of by
+	Mutt?
+
+	* m4/codeset.m4, m4/gettext.m4, m4/glibc21.m4, m4/iconv.m4, m4/lcmessage.m4, m4/progtest.m4:
+	Try to get the noiconv patch to work.
+
+	* configure.in: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Try to get the noiconv patch to work with my development environment.
+
+	* INSTALL: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix a typo.
+
+	* init.h, rfc2047.c, sendlib.c, charset.c, charset.h, configure.in, gnupgparse.c, INSTALL:
+	From: Lars Hecking <lhecking@nmrc.ie>
+
+	 patch.1.3.28.lh.noiconv
+	 =======================
+
+	 This is the new version of my noiconv patch. It _requires_ the previous
+	 patch! If applied without, you'll have to resolve a couple of conflicts
+	 manually.
+
+	 Notes:
+	 - it's a lot cleaner than the old noiconv patch because no m4 files are
+	   modified
+	 - new configure option --disable-iconv; INSTALL updated accordingly
+	   [I am guessing here, but the background for the --without-iconv option
+	    mentioned in INSTALL was that mutt had a without-iconv option before
+	    gettext included iconv support. When mutt's intl/* files were updated
+	    to a newer gettext, there suddenly were two iconv options, which then
+	    got merged, that is, mutt's was removed. That was probably when
+	    --without-iconv stopped working, but I'm not sure, it may well be that
+	    it never worked since iconv support was introduced.]
+	 - all changes in *.[ch] files should be identical to the old patch
+
+	* intl/Attic/localename.c:
+	file localename.c was initially added on branch mutt-1-4-stable.
+
+	* intl/Attic/localename.c: From: Lars Hecking <lhecking@nmrc.ie>
+
+	This one seems to have been missing, too.
+
+	* Attic/config.rpath:
+	file config.rpath was initially added on branch mutt-1-4-stable.
+
+	* Attic/config.rpath: From: Lars Hecking <lhecking@nmrc.ie>
+
+	Another file from the gettext patch.
+
+	* m4/Attic/lib-ld.m4:
+	file lib-ld.m4 was initially added on branch mutt-1-4-stable.
+
+	* m4/Attic/lib-link.m4:
+	file lib-link.m4 was initially added on branch mutt-1-4-stable.
+
+	* m4/Attic/lib-prefix.m4:
+	file lib-prefix.m4 was initially added on branch mutt-1-4-stable.
+
+	* m4/Attic/lib-ld.m4, m4/Attic/lib-link.m4, m4/Attic/lib-prefix.m4:
+	From: Lars Hecking <lhecking@nmrc.ie>
+
+	Add new m4 files from patch.1.3.28.lh.gettext-0.11.1.
+
+	* m4/codeset.m4, m4/gettext.m4, m4/glibc21.m4, m4/iconv.m4, m4/lcmessage.m4, m4/progtest.m4:
+	From: Lars Hecking <lhecking@nmrc.ie>
+
+	 patch.1.3.28.lh.gettext-0.11.1
+	 ==============================
+
+	 This one updates the gettext stuff in mutt to gettext-0.11.1. I started
+	 doing this in the hope that the new gettext version would simplify the
+	 noiconv patch, but unfortunately, this turned out not to be the case
+	 (the new iconv m4 macros still don't allow for switching iconv support off).
+
+	 However, as a few hours of merging and testing were spent, I'd suggest to
+	 adopt it for 1.4. The actual changes to intl/* are part cosmetic, part code
+	 reorganisation. Ok, a bit more, I'm no gettext expert :)
+
+	 Notes:
+	 - after applying the patch, you need to chmod 755 config.rpath
+	 - a couple of new files for m4/*, too
+	 - I have broken with the tradition of renaming gettext's AM_* macros
+	   to MUTT_AM_*! I don't think it's necessary anymore to customise these
+	   macros, but you (I really mean "you, tlr" :) want to have a look at
+	   the new gettext.m4.  The others should be ok as they are.
+	 - previous gettext updates were also updating po/Makefile.in.in, which
+	   I didn't; someone who has a clue about gettext should check whether
+	   this might be necessary, and also whether any other files in po/ need
+	   updating
+
+	 I will provide the same patch for the 1.5 branch at some stage, ideally
+	 after getting some  F E E D B A C K  for this one.
+
+	* intl/Attic/eval-plural.h:
+	file eval-plural.h was initially added on branch mutt-1-4-stable.
+
+	* intl/Attic/gmo.h:
+	file gmo.h was initially added on branch mutt-1-4-stable.
+
+	* intl/Attic/os2compat.c:
+	file os2compat.c was initially added on branch mutt-1-4-stable.
+
+	* intl/Attic/os2compat.h:
+	file os2compat.h was initially added on branch mutt-1-4-stable.
+
+	* intl/Attic/osdep.c:
+	file osdep.c was initially added on branch mutt-1-4-stable.
+
+	* intl/Attic/plural-exp.c:
+	file plural-exp.c was initially added on branch mutt-1-4-stable.
+
+	* intl/Attic/plural-exp.h:
+	file plural-exp.h was initially added on branch mutt-1-4-stable.
+
+	* intl/Attic/eval-plural.h, intl/Attic/gmo.h, intl/Attic/os2compat.c, intl/Attic/os2compat.h, intl/Attic/osdep.c, intl/Attic/plural-exp.c, intl/Attic/plural-exp.h, intl/bindtextdom.c, intl/ChangeLog, intl/config.charset, intl/dcigettext.c, intl/gettextP.h, intl/hash-string.h, intl/l10nflist.c, intl/libgnuintl.h, intl/loadinfo.h, intl/loadmsgcat.c, intl/localcharset.c, intl/localealias.c, intl/Makefile.in, intl/plural.c, intl/plural.y, ABOUT-NLS, charset.c, charset.h, configure.in, gnupgparse.c, init.h, rfc2047.c, sendlib.c:
+	From: Lars Hecking <lhecking@nmrc.ie>
+
+	 patch.1.3.28.lh.gettext-0.11.1
+	 ==============================
+
+	 This one updates the gettext stuff in mutt to gettext-0.11.1. I started
+	 doing this in the hope that the new gettext version would simplify the
+	 noiconv patch, but unfortunately, this turned out not to be the case
+	 (the new iconv m4 macros still don't allow for switching iconv support off).
+
+	 However, as a few hours of merging and testing were spent, I'd suggest to
+	 adopt it for 1.4. The actual changes to intl/* are part cosmetic, part code
+	 reorganisation. Ok, a bit more, I'm no gettext expert :)
+
+	 Notes:
+	 - after applying the patch, you need to chmod 755 config.rpath
+	 - a couple of new files for m4/*, too
+	 - I have broken with the tradition of renaming gettext's AM_* macros
+	   to MUTT_AM_*! I don't think it's necessary anymore to customise these
+	   macros, but you (I really mean "you, tlr" :) want to have a look at
+	   the new gettext.m4.  The others should be ok as they are.
+	 - previous gettext updates were also updating po/Makefile.in.in, which
+	   I didn't; someone who has a clue about gettext should check whether
+	   this might be necessary, and also whether any other files in po/ need
+	   updating
+
+	 I will provide the same patch for the 1.5 branch at some stage, ideally
+	 after getting some  F E E D B A C K  for this one.
+
+Wed Apr 17 17:05:54 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/fr.po: From: Vincent Lefevre <vincent@vinc17.org>
+
+	Update.
+
+	* m4/gssapi.m4: From: David Champion <dgc@uchicago.edu>
+
+	MIT krb5 1.2.4 has krb5-config, so it's no longer sufficient to say
+	that possession of krb5-config indicates Heimdal. Patch attached. This
+	assumes that Heimdal's "kreb5-config --vendor" begins with "Heimdal".
+	I cannot verify that this is correct, so patch might be wrong on this
+	point.
+
+Sun Apr  7 21:19:57 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* imap/command.c, imap/imap.c, imap/message.c:
+	From: Brendan Cully <brendan@kublai.com>
+
+	The attached patch cleans up some bugs in switching IMAP mailboxes:
+	* free current flags on mailbox close
+	* reset reopen state
+	* don't parse the same untagged SELECT response for multiple options
+	* call mx_update_context after reading the whole mailbox, not after
+	  each message
+	* reset new mail flag if mail arrives in the middle of opening the
+	  mailbox. This should close 1139
+
+	939 is most likely unaffected. I discovered these problems while
+	investigating 939.
+
+Fri Apr  5 10:42:54 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/ja.po: From: "TAKAHASHI, Tamotsu" <arms405@jade.dti.ne.jp>
+
+	update.
+
+Thu Apr  4 20:49:46 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/ko.po: From: Im Eunjea <eunjea@koru.org>
+
+	Update.
+
+	* po/ja.po: From: "TAKAHASHI, Tamotsu" <arms405@jade.dti.ne.jp>
+
+	Update.
+
+	* pgp.c: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix a typo noted by Tamotsu Takahashi.
+
+Wed Apr  3 15:22:27 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* handler.c: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix printing of format=flowed text parts.
+
+	* commands.c: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix #1144 in stable.
+
+	* commands.c: From: Thomas Roessler <roessler@does-not-exist.org>
+
+	Fix a file descriptor leak in the display filter code.  Noted by
+	Chr. v. Stuckrad.
+
+	fixes: #1144
+
+Tue Apr  2 18:49:37 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* m4/iconv.m4: From: Lars Hecking <lhecking@nmrc.ie>
+	The noiconv patch.
+
+	* charset.c, charset.h, configure.in, gnupgparse.c, init.h, rfc2047.c, sendlib.c:
+	The noiconv patch.
+
+	From: Lars Hecking <lhecking@nmrc.ie>
+
+Sat Mar 30 08:26:31 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/pl.po: update.  From Pawel Dzienkonski.
+
+	* po/fr.po: Update; From Vincent Lefevre.
+
+	* postpone.c, sendlib.c:
+	The attached patch allows the user to override the user-agent field
+	with my_hdr.  It also removes the stripping of the x-mailer field
+	when recalling a postponed message.
+
+Thu Mar 28 13:25:23 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* mx.c, mx.h, mailbox.h, main.c, mbox.c, mh.c:
+	patch-1.3.28-me.emptycheck.1
+
+Wed Mar 27 08:50:42 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* pgp.c: There was some output missing.
+
+	* po/POTFILES.in: update.
+
+	* pgp.c:
+	More fixes.  Note to self:  The code which controls character set
+	selection for attachments is far too complicated.
+
+	* pgp.c:
+	Don't include temporary file names in the Content-Disposition header.
+
+	* pgp.c:
+	Use text/plain; format=... when we are asked to detect inline PGP
+	material in in text/plain body parts.
+
+	* pgp.c, sendlib.c: Fix encoder mode for text/plain; action=pgp-*.
+
+	* pgp.c:
+	Fix "noconv" handling for the message body when we generate inline
+	PGP.
+
+	* charset.c, charset.h, handler.c, muttlib.c, pgp.c:
+	Some hackisch charset handling for text/plain; x-action=pgp-*.  I
+	don't like this stuff, but it's better than nothing.
+
+Tue Mar 26 22:25:48 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* pgp.c: Change x-action values to "pgp-encrypted", "pgp-signed".
+
+	* contrib/gpg.rc, commands.c, compose.c, crypt.c, handler.c, muttlib.c, pgp.c, protos.h, recvattach.c, sendlib.c:
+	More inline PGP changes.
+
+	* pgp.c:
+	Also permit for "action" and "x-action" on the receiving end, just
+	in case we can settle on a joint standard with other MUA developers.
+
+	* commands.c, crypt.c, handler.c, pgp.c, pgpinvoke.c, sendlib.c:
+	OK, I'm giving up: pgp_create_traditional now creates text/plain;
+	x-mutt-action={pgp-encrypt,pgp-sign}.
+
+	* pgpinvoke.c: Fix application/pgp signatures.
+
+	* charset.c, charset.h, gnupgparse.c, handler.c, mbyte.c, rfc2047.c, sendlib.c:
+	Fix iconv warnings; from Edmund Grimley Evans.
+
+	* smime.c:
+	Please use ascii_strcasecmp() if you want to compare ASCII parameter
+	strings.  mutt_strcasecmp() depends on the locale, and detects "i"
+	and "I" as _different_ in Turkish locales.
+
+Mon Mar 25 11:34:40 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* crypt.c:
+	Fix S/MIME signature type.  Noted by Dan Ohnesorg <Dan@ohnesorg.cz>.
+
+	* buffy.c: close 1103; from Brendan Cully
+
+	* doc/manual.sgml.tail: close 1122; from Brendan Cully
+
+	* hdrline.c, muttlib.c: Fix #87s; from Brendan Cully.
+
+	* hdrline.c, muttlib.c: Fix #872, from Brendan Cully.
+
+	* contrib/smime_keys_test.pl, contrib/Makefile.in:
+	Include a test script by Mike Schiraldi.  It's perl > the one I have
+	installed, so I'm just putting it into contrib for now.
+
+Wed Mar 20 09:53:42 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* editmsg.c, mailbox.h, mx.c: Rename M_NEW to M_NEWFOLDER.
+
+	* editmsg.c, mailbox.h, mx.c:
+	Rename the new M_NEW by M_NEWFOLDER.  There was another constant of
+	the same name.  Problem noted by Will Yardley's compiler.
+
+Tue Mar 19 09:54:05 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* browser.c: Fix #1115.
+
+	* editmsg.c, mailbox.h, mx.c:
+	Fix a temporary file race problem when using the edit-message
+	function.  Backported from unstable.
+
+	* po/pl.po: update
+
+Mon Mar 18 18:54:56 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* browser.c: Should fix #1115.  BACKPORT!
+
+Fri Mar 15 09:11:05 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* po/ja.po: update from oota toshiya.
+
+	* po/ja.po: update, from oota toshiya.
+
+Wed Mar 13 23:43:41 2002  Thomas Roessler  <roessler@does-not-exist.org>
+
+	* attach.c:
+	Undoing the previous patch.  It was junk, and may ruin files.
+
+	* attach.c, editmsg.c, mailbox.h, mx.c:
+	Don't fopen mail folders in append mode where we should safe_fopen()
+	them in write mode.  Debian bug #138200, noted by Colin Philipps
+	<cph@cph.demon.co.uk>.
+
+	NEEDS BACKPORTING.
+
+	* po/uk.po, po/zh_CN.po, po/zh_TW.po, po/sk.po, po/sv.po, po/tr.po, po/pl.po, po/pt_BR.po, po/ru.po, po/id.po, po/it.po, po/ja.po, po/ko.po, po/lt.po, po/nl.po, po/eo.po, po/es.po, po/et.po, po/fr.po, po/gl.po, po/hu.po, po/da.po, po/de.po, po/el.po, po/Attic/ChangeLog, po/ca.po, po/cs.po:
+	automatic post-release commit for mutt-1.3.28
+
+	* po/Attic/ChangeLog:
+	file ChangeLog was initially added on branch mutt-1-4-stable.
+
+	* ChangeLog, reldate.h, VERSION:
+	automatic post-release commit for mutt-1.3.28
+
+	* doc/smime-notes.txt, smime.c: Assorted patches from Mike Schiraldi.
+
 Wed Mar 13 12:31:02 2002  Thomas Roessler  <roessler@does-not-exist.org>
 
 	* doc/smime-notes.txt, smime.c: Assorted patches from Mike Schiraldi.

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.2\n"
-"POT-Creation-Date: 2002-03-13 13:50+0100\n"
+"POT-Creation-Date: 2002-05-02 01:08+0200\n"
 "PO-Revision-Date: 1999-12-20 20:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -94,7 +94,7 @@ msgstr "无法匹配名称模板，继续？"
 msgid "Mailcap compose entry requires %%s"
 msgstr "Mailcap 编辑项目需要 %%s"
 
-#: attach.c:131 attach.c:256 commands.c:185 compose.c:1154 curs_lib.c:145
+#: attach.c:131 attach.c:256 commands.c:190 compose.c:1154 curs_lib.c:145
 #: curs_lib.c:374
 #, c-format
 msgid "Error running \"%s\"!"
@@ -247,7 +247,7 @@ msgstr "无法显示目录"
 msgid "Error trying to view file"
 msgstr "无法试著显示文件"
 
-#: buffy.c:410
+#: buffy.c:413
 #, c-format
 msgid "New mail in %s."
 msgstr "在 %s 有新信件。"
@@ -329,170 +329,170 @@ msgstr "无法建立过滤器"
 msgid "Could not copy message"
 msgstr "无法寄出信件。"
 
-#: commands.c:168
+#: commands.c:173
 msgid "PGP signature successfully verified."
 msgstr "PGP 签名验证成功。"
 
-#: commands.c:169
+#: commands.c:174
 #, fuzzy
 msgid "PGP signature could NOT be verified."
 msgstr "PGP 签名验证成功。"
 
-#: commands.c:192
+#: commands.c:197
 msgid "Command: "
 msgstr "指令："
 
-#: commands.c:210 recvcmd.c:140
+#: commands.c:215 recvcmd.c:140
 msgid "Bounce message to: "
 msgstr "直接传送邮件到："
 
-#: commands.c:212 recvcmd.c:142
+#: commands.c:217 recvcmd.c:142
 msgid "Bounce tagged messages to: "
 msgstr "无法传送已标记的邮件至："
 
-#: commands.c:227
+#: commands.c:232
 msgid "Error parsing address!"
 msgstr "无法分析位址！"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce message to %s"
 msgstr "把邮件直接传送至 %s"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce messages to %s"
 msgstr "把邮件直接传送至 %s"
 
-#: commands.c:256
+#: commands.c:261
 msgid "Message bounced."
 msgstr "邮件已被传送。"
 
-#: commands.c:256
+#: commands.c:261
 msgid "Messages bounced."
 msgstr "邮件已传送。"
 
-#: commands.c:334 commands.c:373 commands.c:390
+#: commands.c:339 commands.c:378 commands.c:395
 #, fuzzy
 msgid "Can't create filter process"
 msgstr "无法建立过滤"
 
-#: commands.c:419
+#: commands.c:424
 msgid "Pipe to command: "
 msgstr "用管道输出至命令："
 
-#: commands.c:436
+#: commands.c:441
 #, fuzzy
 msgid "No printing command has been defined."
 msgstr "圈选进入的邮筒"
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print message?"
 msgstr "打印信件？"
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print tagged messages?"
 msgstr "打印已标记的信件？"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Message printed"
 msgstr "信件已印出"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Messages printed"
 msgstr "信件已印出"
 
-#: commands.c:452
+#: commands.c:457
 #, fuzzy
 msgid "Message could not be printed"
 msgstr "信件已印出"
 
-#: commands.c:453
+#: commands.c:458
 #, fuzzy
 msgid "Messages could not be printed"
 msgstr "信件已印出"
 
-#: commands.c:462
+#: commands.c:467
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "反方向 d)日期,f)发信人,r)收信时间,s)标题,o)收信人,t)序列,u)不排,z)大小,c)分"
 "数:"
 
-#: commands.c:463
+#: commands.c:468
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "排序 d)日期,f)发信人,r)收信时间,s)标题,o)收信人,t)序列,u)不排序,z)大小,c)分"
 "数:"
 
-#: commands.c:464
+#: commands.c:469
 msgid "dfrsotuzc"
 msgstr ""
 
-#: commands.c:517
+#: commands.c:522
 msgid "Shell command: "
 msgstr "Shell 指令："
 
-#: commands.c:647
+#: commands.c:652
 #, fuzzy, c-format
 msgid "Decode-save%s to mailbox"
 msgstr "%s%s 到信箱"
 
-#: commands.c:648
+#: commands.c:653
 #, fuzzy, c-format
 msgid "Decode-copy%s to mailbox"
 msgstr "%s%s 到信箱"
 
-#: commands.c:649
+#: commands.c:654
 #, fuzzy, c-format
 msgid "Decrypt-save%s to mailbox"
 msgstr "%s%s 到信箱"
 
-#: commands.c:650
+#: commands.c:655
 #, fuzzy, c-format
 msgid "Decrypt-copy%s to mailbox"
 msgstr "%s%s 到信箱"
 
-#: commands.c:651
+#: commands.c:656
 #, fuzzy, c-format
 msgid "Save%s to mailbox"
 msgstr "%s%s 到信箱"
 
-#: commands.c:651
+#: commands.c:656
 #, fuzzy, c-format
 msgid "Copy%s to mailbox"
 msgstr "%s%s 到信箱"
 
-#: commands.c:652
+#: commands.c:657
 msgid " tagged"
 msgstr " 已标记"
 
-#: commands.c:720
+#: commands.c:725
 #, c-format
 msgid "Copying to %s..."
 msgstr "拷贝到 %s…"
 
-#: commands.c:841
+#: commands.c:846
 #, c-format
 msgid "Convert to %s upon sending?"
 msgstr ""
 
-#: commands.c:849
+#: commands.c:854
 #, fuzzy, c-format
 msgid "Content-Type changed to %s."
 msgstr "正连接到 %s…"
 
-#: commands.c:851
+#: commands.c:856
 #, fuzzy, c-format
 msgid "Character set changed to %s; %s."
 msgstr "不明的字符集 %s。"
 
-#: commands.c:853
+#: commands.c:858
 msgid "not converting"
 msgstr ""
 
-#: commands.c:853
+#: commands.c:858
 msgid "converting"
 msgstr ""
 
@@ -622,7 +622,7 @@ msgstr "储存这封信件的拷贝吗？"
 msgid "Rename to: "
 msgstr "更改名称为："
 
-#: compose.c:987 editmsg.c:96 sendlib.c:902
+#: compose.c:987 editmsg.c:96 sendlib.c:906
 #, fuzzy, c-format
 msgid "Can't stat %s: %s"
 msgstr "无法读取：%s"
@@ -1260,7 +1260,7 @@ msgstr "信箱没有改变。"
 msgid "Mailbox created."
 msgstr "邮箱已删除。"
 
-#: imap/command.c:289
+#: imap/command.c:288
 #, fuzzy
 msgid "Mailbox closed"
 msgstr "邮箱已删除。"
@@ -1268,7 +1268,7 @@ msgstr "邮箱已删除。"
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap/command.c:326
+#: imap/command.c:325
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "严重错误。信件数量不协调！"
 
@@ -1294,65 +1294,65 @@ msgstr ""
 msgid "Selecting %s..."
 msgstr "选择 %s 中…"
 
-#: imap/imap.c:669
+#: imap/imap.c:667
 #, fuzzy
 msgid "Error opening mailbox"
 msgstr "写入信箱时发生错误！"
 
 #. STATUS not supported
-#: imap/imap.c:722
+#: imap/imap.c:720
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "无法附加在这个伺服器上的 IMAP 信箱"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:731 imap/message.c:595 muttlib.c:1174
+#: imap/imap.c:729 imap/message.c:596 muttlib.c:1175
 #, c-format
 msgid "Create %s?"
 msgstr "建立 %s？"
 
-#: imap/imap.c:767
+#: imap/imap.c:765
 msgid "Closing connection to IMAP server..."
 msgstr "正在关闭与 IMAP 伺服器的连线…"
 
-#: imap/imap.c:930 pop.c:465
+#: imap/imap.c:928 pop.c:465
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "标签了的 %d 封信件删去了…"
 
-#: imap/imap.c:939
+#: imap/imap.c:937
 #, fuzzy
 msgid "Expunge failed"
 msgstr "登入失败。"
 
-#: imap/imap.c:954
+#: imap/imap.c:952
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "正在储存信件状态旗标… [%d/%d]"
 
-#: imap/imap.c:1038
+#: imap/imap.c:1036
 msgid "Expunging messages from server..."
 msgstr "正在删除伺服器上的信件…"
 
-#: imap/imap.c:1043
+#: imap/imap.c:1041
 msgid "imap_sync_mailbox: EXPUNGE failed"
 msgstr ""
 
-#: imap/imap.c:1077
+#: imap/imap.c:1075
 #, fuzzy
 msgid "CLOSE failed"
 msgstr "登入失败。"
 
-#: imap/imap.c:1325
+#: imap/imap.c:1324
 #, fuzzy
 msgid "Bad mailbox name"
 msgstr "打开信箱"
 
-#: imap/imap.c:1337
+#: imap/imap.c:1336
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "订阅 %s…"
 
-#: imap/imap.c:1339
+#: imap/imap.c:1338
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "取消订阅 %s…"
@@ -1367,31 +1367,31 @@ msgstr "无法取回使用这个 IMAP 伺服器版本的邮件的标头。"
 msgid "Could not create temporary file %s"
 msgstr "无法建立暂存档！"
 
-#: imap/message.c:97 pop.c:209
+#: imap/message.c:101 pop.c:209
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "正在取回信件标头… [%d/%d]"
 
-#: imap/message.c:249 pop.c:343
+#: imap/message.c:250 pop.c:343
 #, fuzzy
 msgid "Fetching message..."
 msgstr "寄出信件中…"
 
-#: imap/message.c:292 pop.c:380
+#: imap/message.c:293 pop.c:380
 msgid "The message index is incorrect. Try reopening the mailbox."
 msgstr ""
 
-#: imap/message.c:461
+#: imap/message.c:462
 #, fuzzy
 msgid "Uploading message ..."
 msgstr "寄出信件中…"
 
-#: imap/message.c:571
+#: imap/message.c:572
 #, fuzzy, c-format
 msgid "Copying %d messages to %s..."
 msgstr "正在搬移已经读取的信件到 %s …"
 
-#: imap/message.c:575
+#: imap/message.c:576
 #, fuzzy, c-format
 msgid "Copying message %d to %s..."
 msgstr "写入信件到 %s …"
@@ -1833,7 +1833,12 @@ msgstr "向游标向右移动一个字元"
 msgid "move the cursor to the end of the word"
 msgstr "向游标向右移动一个字元"
 
-#: keymap_alldefs.h:73 keymap_alldefs.h:74
+#: keymap_alldefs.h:73
+#, fuzzy
+msgid "scroll down through the history list"
+msgstr "向上卷动使用纪录清单"
+
+#: keymap_alldefs.h:74
 msgid "scroll up through the history list"
 msgstr "向上卷动使用纪录清单"
 
@@ -2603,7 +2608,7 @@ msgstr "您现在在第一项。"
 msgid "Search for: "
 msgstr "搜寻："
 
-#: menu.c:725
+#: menu.c:725 pattern.c:1237
 msgid "Reverse search for: "
 msgstr "返向搜寻："
 
@@ -2652,17 +2657,17 @@ msgstr "文件已经存在, (o)覆盖, (a)附加, 或是 (c)取消 ?"
 msgid "oac"
 msgstr ""
 
-#: muttlib.c:1141
+#: muttlib.c:1142
 #, fuzzy
 msgid "Can't save message to POP mailbox."
 msgstr "将信件写入到信箱"
 
-#: muttlib.c:1150
+#: muttlib.c:1151
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s 不是信箱！"
 
-#: muttlib.c:1156
+#: muttlib.c:1157
 #, c-format
 msgid "Append messages to %s?"
 msgstr "附加信件到 %s ?"
@@ -3371,7 +3376,7 @@ msgstr "寄出信件中…"
 msgid "Can't write message to temporary file!"
 msgstr "无法建立暂存档"
 
-#: pop.c:517 pop.c:581
+#: pop.c:517 pop.c:582
 #, fuzzy
 msgid "Checking for new messages..."
 msgstr "准备转寄信件…"
@@ -3380,30 +3385,30 @@ msgstr "准备转寄信件…"
 msgid "POP host is not defined."
 msgstr "POP 主机没有被定义。"
 
-#: pop.c:609
+#: pop.c:610
 msgid "No new mail in POP mailbox."
 msgstr "POP 信箱中没有新的信件"
 
-#: pop.c:616
+#: pop.c:617
 #, fuzzy
 msgid "Delete messages from server?"
 msgstr "正在删除伺服器上的信件…"
 
-#: pop.c:618
+#: pop.c:619
 #, fuzzy, c-format
 msgid "Reading new messages (%d bytes)..."
 msgstr "读取新信件 (%d 位元组)…"
 
-#: pop.c:660
+#: pop.c:661
 msgid "Error while writing mailbox!"
 msgstr "写入信箱时发生错误！"
 
-#: pop.c:664
+#: pop.c:665
 #, fuzzy, c-format
 msgid "%s [%d of %d messages read]"
 msgstr "%s [已阅读 %2d 封信件中的 %1d 封]"
 
-#: pop.c:687 pop_lib.c:274
+#: pop.c:688 pop_lib.c:276
 msgid "Server closed connection!"
 msgstr "与伺服器的联结中断了!"
 
@@ -3432,17 +3437,17 @@ msgstr "正在删除伺服器上的信件…"
 msgid "Error connecting to server: %s"
 msgstr "正连线到 %s"
 
-#: pop_lib.c:288
+#: pop_lib.c:290
 #, fuzzy
 msgid "Closing connection to POP server..."
 msgstr "正在关闭与 IMAP 伺服器的连线…"
 
-#: pop_lib.c:453
+#: pop_lib.c:455
 #, fuzzy
 msgid "Verifying message indexes..."
 msgstr "写入信件到 %s …"
 
-#: pop_lib.c:477
+#: pop_lib.c:479
 #, fuzzy
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "正在关闭与 IMAP 伺服器的连线…"
@@ -3813,22 +3818,22 @@ msgstr "没有发现分界变量！[回报错误]"
 msgid "%s no longer exists!"
 msgstr "%s 已经不存在！"
 
-#: sendlib.c:908
+#: sendlib.c:912
 #, fuzzy, c-format
 msgid "%s isn't a regular file."
 msgstr "%s 不是信箱。"
 
-#: sendlib.c:1077
+#: sendlib.c:1081
 #, c-format
 msgid "Could not open %s"
 msgstr "无法打开 %s"
 
-#: sendlib.c:2029
+#: sendlib.c:2033
 #, c-format
 msgid "Error sending message, child exited %d (%s)."
 msgstr "寄送讯息出现错误，子程序已结束 %d (%s)。"
 
-#: sendlib.c:2035
+#: sendlib.c:2039
 msgid "Output of the delivery process"
 msgstr "Delivery process 的输出"
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.4i\n"
-"POT-Creation-Date: 2002-03-13 13:50+0100\n"
+"POT-Creation-Date: 2002-05-02 01:08+0200\n"
 "PO-Revision-Date: 2001-06-12 12:47+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gtranslator.org>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -94,7 +94,7 @@ msgstr ""
 msgid "Mailcap compose entry requires %%s"
 msgstr "Mailcap düzenleme birimi %%s gerektiriyor"
 
-#: attach.c:131 attach.c:256 commands.c:185 compose.c:1154 curs_lib.c:145
+#: attach.c:131 attach.c:256 commands.c:190 compose.c:1154 curs_lib.c:145
 #: curs_lib.c:374
 #, c-format
 msgid "Error running \"%s\"!"
@@ -246,7 +246,7 @@ msgstr "Bir dizini gösterilmiyor"
 msgid "Error trying to view file"
 msgstr "Dosyayý göstermeye uðraþýrken hata oldu"
 
-#: buffy.c:410
+#: buffy.c:413
 #, c-format
 msgid "New mail in %s."
 msgstr "%s'de yeni eposta var."
@@ -326,165 +326,165 @@ msgstr "Gösterim filtrasýný yaratamadým"
 msgid "Could not copy message"
 msgstr "Iletiyi kopyalamayadým."
 
-#: commands.c:168
+#: commands.c:173
 msgid "PGP signature successfully verified."
 msgstr "PGP imzasý baþarýyla doðrulandý."
 
-#: commands.c:169
+#: commands.c:174
 msgid "PGP signature could NOT be verified."
 msgstr "PGP imzasý doðrulanamadý."
 
-#: commands.c:192
+#: commands.c:197
 msgid "Command: "
 msgstr "Komuta: "
 
-#: commands.c:210 recvcmd.c:140
+#: commands.c:215 recvcmd.c:140
 msgid "Bounce message to: "
 msgstr "Iletiyi ilet:"
 
-#: commands.c:212 recvcmd.c:142
+#: commands.c:217 recvcmd.c:142
 msgid "Bounce tagged messages to: "
 msgstr "Iþaretli iletileri ilet:"
 
-#: commands.c:227
+#: commands.c:232
 msgid "Error parsing address!"
 msgstr "Adresi tararken hata oldu!"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce message to %s"
 msgstr "Iletiyi %s'e ilet"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce messages to %s"
 msgstr "Iletileri %s'e ilet"
 
-#: commands.c:256
+#: commands.c:261
 msgid "Message bounced."
 msgstr "Ileti iletildi."
 
-#: commands.c:256
+#: commands.c:261
 msgid "Messages bounced."
 msgstr "Iletiler iletildi."
 
-#: commands.c:334 commands.c:373 commands.c:390
+#: commands.c:339 commands.c:378 commands.c:395
 msgid "Can't create filter process"
 msgstr "Filtra iþlemi yaratýlamadý"
 
-#: commands.c:419
+#: commands.c:424
 msgid "Pipe to command: "
 msgstr "Komutaya ver: "
 
-#: commands.c:436
+#: commands.c:441
 msgid "No printing command has been defined."
 msgstr "Yazdýrma komutasý belirlenmemiþ."
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print message?"
 msgstr "Ileti yazdýrýlsýn mý?"
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print tagged messages?"
 msgstr "Iþaretli iletiler yazdýrýlsýn mý?"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Message printed"
 msgstr "Ileti yazdýrýldi"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Messages printed"
 msgstr "Iletiler yazdýrýldi"
 
-#: commands.c:452
+#: commands.c:457
 msgid "Message could not be printed"
 msgstr "Ileti yazdýrýlýmadý"
 
-#: commands.c:453
+#: commands.c:458
 msgid "Messages could not be printed"
 msgstr "Iletiler yazdýrýlýmadý"
 
-#: commands.c:462
+#: commands.c:467
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Ters sýralama tipi: (t)arih/(g)önderen/(a)lan/(k)onu/gönder(i)len/k(o)num/dü"
 "(z)enmemiþ/(b)oyut/(p)uan: "
 
-#: commands.c:463
+#: commands.c:468
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Sýralama tipi: (t)arih/(g)önderen/(a)lan/(k)onu/gönder(i)len/k(o)num/dü(z)"
 "enlenmemiþ/(b)oyut/(p)uan?"
 
-#: commands.c:464
+#: commands.c:469
 msgid "dfrsotuzc"
 msgstr "tgakiozbp"
 
-#: commands.c:517
+#: commands.c:522
 msgid "Shell command: "
 msgstr "Komuta komutasý: "
 
-#: commands.c:647
+#: commands.c:652
 #, fuzzy, c-format
 msgid "Decode-save%s to mailbox"
 msgstr "eposta kutusuna %s%s"
 
-#: commands.c:648
+#: commands.c:653
 #, fuzzy, c-format
 msgid "Decode-copy%s to mailbox"
 msgstr "eposta kutusuna %s%s"
 
-#: commands.c:649
+#: commands.c:654
 #, fuzzy, c-format
 msgid "Decrypt-save%s to mailbox"
 msgstr "eposta kutusuna %s%s"
 
-#: commands.c:650
+#: commands.c:655
 #, fuzzy, c-format
 msgid "Decrypt-copy%s to mailbox"
 msgstr "eposta kutusuna %s%s"
 
-#: commands.c:651
+#: commands.c:656
 #, fuzzy, c-format
 msgid "Save%s to mailbox"
 msgstr "eposta kutusuna %s%s"
 
-#: commands.c:651
+#: commands.c:656
 #, fuzzy, c-format
 msgid "Copy%s to mailbox"
 msgstr "eposta kutusuna %s%s"
 
-#: commands.c:652
+#: commands.c:657
 msgid " tagged"
 msgstr " iþaretli "
 
-#: commands.c:720
+#: commands.c:725
 #, c-format
 msgid "Copying to %s..."
 msgstr "%s'e kopyalanýyor..."
 
-#: commands.c:841
+#: commands.c:846
 #, c-format
 msgid "Convert to %s upon sending?"
 msgstr "Gönderirken %s'ye dönüþtürülsün mü?"
 
-#: commands.c:849
+#: commands.c:854
 #, c-format
 msgid "Content-Type changed to %s."
 msgstr "Içerik tipi %s iye deðiþtirildi."
 
-#: commands.c:851
+#: commands.c:856
 #, c-format
 msgid "Character set changed to %s; %s."
 msgstr "Karakter kümesi deðiþtirildi: %s -> %s"
 
-#: commands.c:853
+#: commands.c:858
 msgid "not converting"
 msgstr "dönüþtürülmüyor"
 
-#: commands.c:853
+#: commands.c:858
 msgid "converting"
 msgstr "dönüþtürülüyor"
 
@@ -613,7 +613,7 @@ msgstr "Bu iletinin bir kopyasýný kaydedeyim mi?"
 msgid "Rename to: "
 msgstr "Adýný deðiþtir: "
 
-#: compose.c:987 editmsg.c:96 sendlib.c:902
+#: compose.c:987 editmsg.c:96 sendlib.c:906
 #, fuzzy, c-format
 msgid "Can't stat %s: %s"
 msgstr "Stat edemedim : %s"
@@ -1231,14 +1231,14 @@ msgstr "Her eposta kutusunun ismi olmak zorunda."
 msgid "Mailbox created."
 msgstr "Eposta kutusu yaratýldý."
 
-#: imap/command.c:289
+#: imap/command.c:288
 msgid "Mailbox closed"
 msgstr "Eposta kutusu kapatýldý"
 
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap/command.c:326
+#: imap/command.c:325
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Aðýr hata. Ileti sayýlarý karýþtý!"
 
@@ -1264,64 +1264,64 @@ msgstr "TLS baðlantýsý kurulamadý"
 msgid "Selecting %s..."
 msgstr "%s seçiliyor..."
 
-#: imap/imap.c:669
+#: imap/imap.c:667
 #, fuzzy
 msgid "Error opening mailbox"
 msgstr "Eposta kutusunu yazarken hata oldu!"
 
 #. STATUS not supported
-#: imap/imap.c:722
+#: imap/imap.c:720
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Bu sunucudaki IMAP eposta kutularýna ileti eklenemiyor"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:731 imap/message.c:595 muttlib.c:1174
+#: imap/imap.c:729 imap/message.c:596 muttlib.c:1175
 #, c-format
 msgid "Create %s?"
 msgstr "%s yaratýlsýn mý?"
 
-#: imap/imap.c:767
+#: imap/imap.c:765
 msgid "Closing connection to IMAP server..."
 msgstr "IMAP sunucusuna varolan baðlantý kapatýlýyor..."
 
-#: imap/imap.c:930 pop.c:465
+#: imap/imap.c:928 pop.c:465
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "%d ileti silinmek için iþaretlenmiþ..."
 
-#: imap/imap.c:939
+#: imap/imap.c:937
 #, fuzzy
 msgid "Expunge failed"
 msgstr "CLOSE baþarýsýz oldu"
 
-#: imap/imap.c:954
+#: imap/imap.c:952
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Ileti durum iþaretleri kaydediliyor... [%d/%d]"
 
-#: imap/imap.c:1038
+#: imap/imap.c:1036
 msgid "Expunging messages from server..."
 msgstr "Iletileri sunucudan sil..."
 
-#: imap/imap.c:1043
+#: imap/imap.c:1041
 msgid "imap_sync_mailbox: EXPUNGE failed"
 msgstr ""
 
-#: imap/imap.c:1077
+#: imap/imap.c:1075
 msgid "CLOSE failed"
 msgstr "CLOSE baþarýsýz oldu"
 
-#: imap/imap.c:1325
+#: imap/imap.c:1324
 #, fuzzy
 msgid "Bad mailbox name"
 msgstr "Eposta kutusunu yarat:"
 
-#: imap/imap.c:1337
+#: imap/imap.c:1336
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "%s'e abone olunuyor..."
 
-#: imap/imap.c:1339
+#: imap/imap.c:1338
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "%s'deki abonelik feshediliyor..."
@@ -1336,29 +1336,29 @@ msgstr "Bu IMAP sunucu neslinden baþlýklarý alýnamýyor."
 msgid "Could not create temporary file %s"
 msgstr "Geçici dosyayý yaratamadým!"
 
-#: imap/message.c:97 pop.c:209
+#: imap/message.c:101 pop.c:209
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Ileti baþlýklarýný alýnýyor... [%d/%d]"
 
-#: imap/message.c:249 pop.c:343
+#: imap/message.c:250 pop.c:343
 msgid "Fetching message..."
 msgstr "Ileti alýnýyor..."
 
-#: imap/message.c:292 pop.c:380
+#: imap/message.c:293 pop.c:380
 msgid "The message index is incorrect. Try reopening the mailbox."
 msgstr "Ileti sayýsý yanlýþtýr. Eposta kutusu yeniden açilmasý denenebilir."
 
-#: imap/message.c:461
+#: imap/message.c:462
 msgid "Uploading message ..."
 msgstr "Ileti yükleniyor..."
 
-#: imap/message.c:571
+#: imap/message.c:572
 #, c-format
 msgid "Copying %d messages to %s..."
 msgstr "%d ileti %s'e kopyalanýyor..."
 
-#: imap/message.c:575
+#: imap/message.c:576
 #, c-format
 msgid "Copying message %d to %s..."
 msgstr "%d ileti %s'e kopyalanýyor..."
@@ -1796,7 +1796,12 @@ msgstr "imleçi bir harf saða taþý"
 msgid "move the cursor to the end of the word"
 msgstr "imleçi kelime sonuna taþý"
 
-#: keymap_alldefs.h:73 keymap_alldefs.h:74
+#: keymap_alldefs.h:73
+#, fuzzy
+msgid "scroll down through the history list"
+msgstr "geçmiþler listesinde yukarý çýk"
+
+#: keymap_alldefs.h:74
 msgid "scroll up through the history list"
 msgstr "geçmiþler listesinde yukarý çýk"
 
@@ -2547,7 +2552,7 @@ msgstr "Ilk birimdesiniz."
 msgid "Search for: "
 msgstr "Ara: "
 
-#: menu.c:725
+#: menu.c:725 pattern.c:1237
 msgid "Reverse search for: "
 msgstr "Ters ara: "
 
@@ -2596,16 +2601,16 @@ msgstr "Dosya zaten var, ü(s)tüne yaz, (e)kle yoksa i(p)tal mý?"
 msgid "oac"
 msgstr "sep"
 
-#: muttlib.c:1141
+#: muttlib.c:1142
 msgid "Can't save message to POP mailbox."
 msgstr "Ileti POP eposta kutusuna kaydedilmiyor."
 
-#: muttlib.c:1150
+#: muttlib.c:1151
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s bir eposta kutusu deðil!"
 
-#: muttlib.c:1156
+#: muttlib.c:1157
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Iletiler %s'e eklensin mi?"
@@ -3304,7 +3309,7 @@ msgstr "Ileti listesi alýnýyor..."
 msgid "Can't write message to temporary file!"
 msgstr "iletiyi geçici bir dosyaya yazýlamadý!"
 
-#: pop.c:517 pop.c:581
+#: pop.c:517 pop.c:582
 msgid "Checking for new messages..."
 msgstr "Yeni ileti için bakýlýyor..."
 
@@ -3312,29 +3317,29 @@ msgstr "Yeni ileti için bakýlýyor..."
 msgid "POP host is not defined."
 msgstr "POP sunucusu belirlenmedi."
 
-#: pop.c:609
+#: pop.c:610
 msgid "No new mail in POP mailbox."
 msgstr "POP eposta kutusunda yeni eposta yok."
 
-#: pop.c:616
+#: pop.c:617
 msgid "Delete messages from server?"
 msgstr "Iletiler sunucudan silinsin mi?"
 
-#: pop.c:618
+#: pop.c:619
 #, c-format
 msgid "Reading new messages (%d bytes)..."
 msgstr "Yeni iletileri okunuyor (%d bayt)..."
 
-#: pop.c:660
+#: pop.c:661
 msgid "Error while writing mailbox!"
 msgstr "Eposta kutusunu yazarken hata oldu!"
 
-#: pop.c:664
+#: pop.c:665
 #, c-format
 msgid "%s [%d of %d messages read]"
 msgstr "%1$s [ %3$d iletiden %2$d ileti okundu]"
 
-#: pop.c:687 pop_lib.c:274
+#: pop.c:688 pop_lib.c:276
 msgid "Server closed connection!"
 msgstr "Sunucu baðlantýyý kesti!"
 
@@ -3359,15 +3364,15 @@ msgstr "Iletiler sunucuda býrakýlamýyor."
 msgid "Error connecting to server: %s"
 msgstr "%s'e baðlanýlýrken hata oldu"
 
-#: pop_lib.c:288
+#: pop_lib.c:290
 msgid "Closing connection to POP server..."
 msgstr "POP sunucuya varolan baðlantý kapatýlýyor..."
 
-#: pop_lib.c:453
+#: pop_lib.c:455
 msgid "Verifying message indexes..."
 msgstr "Ileti sayýsýný doðrula..."
 
-#: pop_lib.c:477
+#: pop_lib.c:479
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Baðlantý kayboldu. Yeniden POP sunucusuna baðlanýlsýn mý?"
 
@@ -3735,22 +3740,22 @@ msgstr "Sýnýrlandýrma verisi bulunamadý! [bu hata rapor edilmesi gerek]"
 msgid "%s no longer exists!"
 msgstr "%s daha yok!"
 
-#: sendlib.c:908
+#: sendlib.c:912
 #, fuzzy, c-format
 msgid "%s isn't a regular file."
 msgstr "%s bir eposta kutusu deðildir!"
 
-#: sendlib.c:1077
+#: sendlib.c:1081
 #, c-format
 msgid "Could not open %s"
 msgstr "%s açýlanamadý"
 
-#: sendlib.c:2029
+#: sendlib.c:2033
 #, c-format
 msgid "Error sending message, child exited %d (%s)."
 msgstr "Ileti gönderilirken hata oldu, altiþlem %d ile iptal bitirildi (%s)."
 
-#: sendlib.c:2035
+#: sendlib.c:2039
 msgid "Output of the delivery process"
 msgstr "Gönderme iþleminin geri verisi"
 

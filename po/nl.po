@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2002-03-13 13:50+0100\n"
+"POT-Creation-Date: 2002-05-02 01:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Johan van Selst <johans@stack.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,7 +91,7 @@ msgstr "Naamsjabloon kan niet worden ingevuld, doorgaan?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "\"compose\"-entry in mailcap vereist %%s."
 
-#: attach.c:131 attach.c:256 commands.c:185 compose.c:1154 curs_lib.c:145
+#: attach.c:131 attach.c:256 commands.c:190 compose.c:1154 curs_lib.c:145
 #: curs_lib.c:374
 #, c-format
 msgid "Error running \"%s\"!"
@@ -245,7 +245,7 @@ msgstr "Directory kan niet worden getoond."
 msgid "Error trying to view file"
 msgstr "Fout opgetreden tijdens het weergeven van bestand"
 
-#: buffy.c:410
+#: buffy.c:413
 #, c-format
 msgid "New mail in %s."
 msgstr "Nieuw bericht in %s."
@@ -327,166 +327,166 @@ msgstr "Filter kan niet worden aangemaakt."
 msgid "Could not copy message"
 msgstr "Bericht kon niet verstuurd worden."
 
-#: commands.c:168
+#: commands.c:173
 msgid "PGP signature successfully verified."
 msgstr "PGP handtekening is correct bevonden."
 
-#: commands.c:169
+#: commands.c:174
 #, fuzzy
 msgid "PGP signature could NOT be verified."
 msgstr "PGP handtekening is correct bevonden."
 
-#: commands.c:192
+#: commands.c:197
 msgid "Command: "
 msgstr "Commando: "
 
-#: commands.c:210 recvcmd.c:140
+#: commands.c:215 recvcmd.c:140
 msgid "Bounce message to: "
 msgstr "Bericht doorsturen naar: "
 
-#: commands.c:212 recvcmd.c:142
+#: commands.c:217 recvcmd.c:142
 msgid "Bounce tagged messages to: "
 msgstr "Gemarkeerde berichten doorsturen naar: "
 
-#: commands.c:227
+#: commands.c:232
 msgid "Error parsing address!"
 msgstr "Ongeldig adres!"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce message to %s"
 msgstr "Bericht doorsturen aan %s"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce messages to %s"
 msgstr "Berichten doorsturen aan %s"
 
-#: commands.c:256
+#: commands.c:261
 msgid "Message bounced."
 msgstr "Bericht doorgestuurd."
 
-#: commands.c:256
+#: commands.c:261
 msgid "Messages bounced."
 msgstr "Berichten doorgestuurd."
 
-#: commands.c:334 commands.c:373 commands.c:390
+#: commands.c:339 commands.c:378 commands.c:395
 #, fuzzy
 msgid "Can't create filter process"
 msgstr "Kan filter niet aanmaken"
 
-#: commands.c:419
+#: commands.c:424
 msgid "Pipe to command: "
 msgstr "Doorsluizen naar commando: "
 
-#: commands.c:436
+#: commands.c:441
 #, fuzzy
 msgid "No printing command has been defined."
 msgstr "Geen mailfolders opgegeven."
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print message?"
 msgstr "Bericht afdrukken?"
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print tagged messages?"
 msgstr "Geselecteerde berichten uitprinten?"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Message printed"
 msgstr "Bericht afgedrukt"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Messages printed"
 msgstr "Berichten afgedrukt"
 
-#: commands.c:452
+#: commands.c:457
 #, fuzzy
 msgid "Message could not be printed"
 msgstr "Bericht afgedrukt"
 
-#: commands.c:453
+#: commands.c:458
 #, fuzzy
 msgid "Messages could not be printed"
 msgstr "Berichten afgedrukt"
 
-#: commands.c:462
+#: commands.c:467
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 
-#: commands.c:463
+#: commands.c:468
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 
-#: commands.c:464
+#: commands.c:469
 msgid "dfrsotuzc"
 msgstr "dfrsotuzc"
 
-#: commands.c:517
+#: commands.c:522
 msgid "Shell command: "
 msgstr "Shell commando: "
 
-#: commands.c:647
+#: commands.c:652
 #, fuzzy, c-format
 msgid "Decode-save%s to mailbox"
 msgstr "%s%s in mailfolder"
 
-#: commands.c:648
+#: commands.c:653
 #, fuzzy, c-format
 msgid "Decode-copy%s to mailbox"
 msgstr "%s%s in mailfolder"
 
-#: commands.c:649
+#: commands.c:654
 #, fuzzy, c-format
 msgid "Decrypt-save%s to mailbox"
 msgstr "%s%s in mailfolder"
 
-#: commands.c:650
+#: commands.c:655
 #, fuzzy, c-format
 msgid "Decrypt-copy%s to mailbox"
 msgstr "%s%s in mailfolder"
 
-#: commands.c:651
+#: commands.c:656
 #, fuzzy, c-format
 msgid "Save%s to mailbox"
 msgstr "%s%s in mailfolder"
 
-#: commands.c:651
+#: commands.c:656
 #, fuzzy, c-format
 msgid "Copy%s to mailbox"
 msgstr "%s%s in mailfolder"
 
-#: commands.c:652
+#: commands.c:657
 msgid " tagged"
 msgstr " gemarkeerd"
 
-#: commands.c:720
+#: commands.c:725
 #, c-format
 msgid "Copying to %s..."
 msgstr "Kopieren naar %s..."
 
-#: commands.c:841
+#: commands.c:846
 #, c-format
 msgid "Convert to %s upon sending?"
 msgstr ""
 
-#: commands.c:849
+#: commands.c:854
 #, fuzzy, c-format
 msgid "Content-Type changed to %s."
 msgstr "Bezig met verbinden met %s..."
 
-#: commands.c:851
+#: commands.c:856
 #, fuzzy, c-format
 msgid "Character set changed to %s; %s."
 msgstr "Onbekende karakterset %s."
 
-#: commands.c:853
+#: commands.c:858
 msgid "not converting"
 msgstr ""
 
-#: commands.c:853
+#: commands.c:858
 msgid "converting"
 msgstr ""
 
@@ -616,7 +616,7 @@ msgstr "Een kopie van dit bericht maken?"
 msgid "Rename to: "
 msgstr "Hernoemen naar: "
 
-#: compose.c:987 editmsg.c:96 sendlib.c:902
+#: compose.c:987 editmsg.c:96 sendlib.c:906
 #, fuzzy, c-format
 msgid "Can't stat %s: %s"
 msgstr "Kan %s niet lezen."
@@ -1251,7 +1251,7 @@ msgstr "Mailfolder is niet veranderd."
 msgid "Mailbox created."
 msgstr "Mailfolder is verwijderd."
 
-#: imap/command.c:289
+#: imap/command.c:288
 #, fuzzy
 msgid "Mailbox closed"
 msgstr "Mailfolder is verwijderd."
@@ -1259,7 +1259,7 @@ msgstr "Mailfolder is verwijderd."
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap/command.c:326
+#: imap/command.c:325
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Kritieke fout. Berichtenteller wijkt af!"
 
@@ -1285,65 +1285,65 @@ msgstr ""
 msgid "Selecting %s..."
 msgstr "%s wordt uitgekozen..."
 
-#: imap/imap.c:669
+#: imap/imap.c:667
 #, fuzzy
 msgid "Error opening mailbox"
 msgstr "Er is een fout opgetreden tijdens het wegschrijven van de mailfolder!"
 
 #. STATUS not supported
-#: imap/imap.c:722
+#: imap/imap.c:720
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "IMAP server laat het toevoegen van berichten niet toe"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:731 imap/message.c:595 muttlib.c:1174
+#: imap/imap.c:729 imap/message.c:596 muttlib.c:1175
 #, c-format
 msgid "Create %s?"
 msgstr "%s aanmaken?"
 
-#: imap/imap.c:767
+#: imap/imap.c:765
 msgid "Closing connection to IMAP server..."
 msgstr "Verbinding met IMAP-server wordt gesloten.."
 
-#: imap/imap.c:930 pop.c:465
+#: imap/imap.c:928 pop.c:465
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "%d berichten worden gemarkeerd voor verwijdering..."
 
-#: imap/imap.c:939
+#: imap/imap.c:937
 #, fuzzy
 msgid "Expunge failed"
 msgstr "Aanmelden mislukt..."
 
-#: imap/imap.c:954
+#: imap/imap.c:952
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Berichten-status wordt opgeslagen... [%d/%d]"
 
-#: imap/imap.c:1038
+#: imap/imap.c:1036
 msgid "Expunging messages from server..."
 msgstr "Berichten op de server worden gewist..."
 
-#: imap/imap.c:1043
+#: imap/imap.c:1041
 msgid "imap_sync_mailbox: EXPUNGE failed"
 msgstr ""
 
-#: imap/imap.c:1077
+#: imap/imap.c:1075
 #, fuzzy
 msgid "CLOSE failed"
 msgstr "Aanmelden mislukt..."
 
-#: imap/imap.c:1325
+#: imap/imap.c:1324
 #, fuzzy
 msgid "Bad mailbox name"
 msgstr "Open mailfolder"
 
-#: imap/imap.c:1337
+#: imap/imap.c:1336
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "Aanmelden voor %s..."
 
-#: imap/imap.c:1339
+#: imap/imap.c:1338
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "Afmelden voor %s..."
@@ -1358,29 +1358,29 @@ msgstr "Kan berichtenoverzicht niet overhalen van deze IMAP server."
 msgid "Could not create temporary file %s"
 msgstr "Tijdelijk bestand kon niet worden aangelegd!"
 
-#: imap/message.c:97 pop.c:209
+#: imap/message.c:101 pop.c:209
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Headers worden gelezen... [%d/%d]"
 
-#: imap/message.c:249 pop.c:343
+#: imap/message.c:250 pop.c:343
 msgid "Fetching message..."
 msgstr "Bericht wordt gelezen..."
 
-#: imap/message.c:292 pop.c:380
+#: imap/message.c:293 pop.c:380
 msgid "The message index is incorrect. Try reopening the mailbox."
 msgstr ""
 
-#: imap/message.c:461
+#: imap/message.c:462
 msgid "Uploading message ..."
 msgstr "Bericht wordt verstuurd ..."
 
-#: imap/message.c:571
+#: imap/message.c:572
 #, c-format
 msgid "Copying %d messages to %s..."
 msgstr "%d berichten worden gekopieerd naar %s..."
 
-#: imap/message.c:575
+#: imap/message.c:576
 #, c-format
 msgid "Copying message %d to %s..."
 msgstr "Bericht %d wordt gekopieerd naar %s ..."
@@ -1816,7 +1816,12 @@ msgstr "Beweeg de cursor een karakter naar rechts"
 msgid "move the cursor to the end of the word"
 msgstr "Beweeg de cursor een karakter naar rechts"
 
-#: keymap_alldefs.h:73 keymap_alldefs.h:74
+#: keymap_alldefs.h:73
+#, fuzzy
+msgid "scroll down through the history list"
+msgstr "Ga omhoog in history list"
+
+#: keymap_alldefs.h:74
 msgid "scroll up through the history list"
 msgstr "Ga omhoog in history list"
 
@@ -2525,7 +2530,7 @@ msgstr "U bent op het eerste item."
 msgid "Search for: "
 msgstr "Zoek naar: "
 
-#: menu.c:725
+#: menu.c:725 pattern.c:1237
 msgid "Reverse search for: "
 msgstr "Zoek achteruit naar: "
 
@@ -2574,17 +2579,17 @@ msgstr "Bestand bestaat, (o)verschrijven, (t)oevoegen, (a)nnuleren?"
 msgid "oac"
 msgstr "ota"
 
-#: muttlib.c:1141
+#: muttlib.c:1142
 #, fuzzy
 msgid "Can't save message to POP mailbox."
 msgstr "Sla bericht op in mailfolder"
 
-#: muttlib.c:1150
+#: muttlib.c:1151
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s is geen mailfolder!"
 
-#: muttlib.c:1156
+#: muttlib.c:1157
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Bericht aan %s toevoegen?"
@@ -3290,7 +3295,7 @@ msgstr "Bericht wordt gelezen..."
 msgid "Can't write message to temporary file!"
 msgstr "Kan tijdelijk bestand niet aanmaken"
 
-#: pop.c:517 pop.c:581
+#: pop.c:517 pop.c:582
 #, fuzzy
 msgid "Checking for new messages..."
 msgstr "Voorbereiden door te sturen bericht..."
@@ -3299,30 +3304,30 @@ msgstr "Voorbereiden door te sturen bericht..."
 msgid "POP host is not defined."
 msgstr "Er is geen POP-server gespecificeerd."
 
-#: pop.c:609
+#: pop.c:610
 msgid "No new mail in POP mailbox."
 msgstr "Geen nieuwe berichten op de POP-server."
 
-#: pop.c:616
+#: pop.c:617
 #, fuzzy
 msgid "Delete messages from server?"
 msgstr "Berichten op de server worden gewist..."
 
-#: pop.c:618
+#: pop.c:619
 #, c-format
 msgid "Reading new messages (%d bytes)..."
 msgstr "Bezig met het lezen van nieuwe berichten (%d bytes)..."
 
-#: pop.c:660
+#: pop.c:661
 msgid "Error while writing mailbox!"
 msgstr "Er is een fout opgetreden tijdens het wegschrijven van de mailfolder!"
 
-#: pop.c:664
+#: pop.c:665
 #, c-format
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d van de %d berichten gelezen]"
 
-#: pop.c:687 pop_lib.c:274
+#: pop.c:688 pop_lib.c:276
 msgid "Server closed connection!"
 msgstr "Server heeft verbinding gesloten!"
 
@@ -3351,17 +3356,17 @@ msgstr "Berichten op de server worden gewist..."
 msgid "Error connecting to server: %s"
 msgstr "Verbinding met %s wordt aangelegd"
 
-#: pop_lib.c:288
+#: pop_lib.c:290
 #, fuzzy
 msgid "Closing connection to POP server..."
 msgstr "Verbinding met IMAP-server wordt gesloten.."
 
-#: pop_lib.c:453
+#: pop_lib.c:455
 #, fuzzy
 msgid "Verifying message indexes..."
 msgstr "Bericht wordt opgeslagen in %s ..."
 
-#: pop_lib.c:477
+#: pop_lib.c:479
 #, fuzzy
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Verbinding met IMAP-server wordt gesloten.."
@@ -3727,22 +3732,22 @@ msgstr "Geen 'boundary parameter' gevonden! [meldt deze fout!]"
 msgid "%s no longer exists!"
 msgstr "%s bestaat niet meer!"
 
-#: sendlib.c:908
+#: sendlib.c:912
 #, fuzzy, c-format
 msgid "%s isn't a regular file."
 msgstr "%s is geen mailfolder."
 
-#: sendlib.c:1077
+#: sendlib.c:1081
 #, c-format
 msgid "Could not open %s"
 msgstr "Kan %s niet openen."
 
-#: sendlib.c:2029
+#: sendlib.c:2033
 #, c-format
 msgid "Error sending message, child exited %d (%s)."
 msgstr "Fout %d opgetreden tijdens versturen van bericht: %s"
 
-#: sendlib.c:2035
+#: sendlib.c:2039
 msgid "Output of the delivery process"
 msgstr "Uitvoer van het afleverings proces"
 

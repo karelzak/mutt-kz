@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.3.23\n"
-"POT-Creation-Date: 2002-03-13 13:50+0100\n"
+"POT-Creation-Date: 2002-05-02 01:08+0200\n"
 "PO-Revision-Date: 2002-01-19 21:09+0100\n"
 "Last-Translator: Marco d'Itri <md@linux.it>\n"
 "Language-Team: none\n"
@@ -97,7 +97,7 @@ msgstr "Il nametemplate non corrisponde, continuo?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "La voce compose di mailcap richiede %%s"
 
-#: attach.c:131 attach.c:256 commands.c:185 compose.c:1154 curs_lib.c:145
+#: attach.c:131 attach.c:256 commands.c:190 compose.c:1154 curs_lib.c:145
 #: curs_lib.c:374
 #, c-format
 msgid "Error running \"%s\"!"
@@ -252,7 +252,7 @@ msgstr "Impossibile vedere una directory"
 msgid "Error trying to view file"
 msgstr "C'è stato un errore nella visualizzazione del file"
 
-#: buffy.c:410
+#: buffy.c:413
 #, c-format
 msgid "New mail in %s."
 msgstr "Nuova posta in %s."
@@ -332,164 +332,164 @@ msgstr "Impossibile creare il filtro di visualizzazione"
 msgid "Could not copy message"
 msgstr "Impossibile copiare il messaggio"
 
-#: commands.c:168
+#: commands.c:173
 msgid "PGP signature successfully verified."
 msgstr "Firma PGP verificata con successo."
 
-#: commands.c:169
+#: commands.c:174
 msgid "PGP signature could NOT be verified."
 msgstr "Non è stato possibile verificare la firma PGP."
 
-#: commands.c:192
+#: commands.c:197
 msgid "Command: "
 msgstr "Comando: "
 
-#: commands.c:210 recvcmd.c:140
+#: commands.c:215 recvcmd.c:140
 msgid "Bounce message to: "
 msgstr "Rimbalza il messaggio a: "
 
-#: commands.c:212 recvcmd.c:142
+#: commands.c:217 recvcmd.c:142
 msgid "Bounce tagged messages to: "
 msgstr "Rimbalza i messaggi a: "
 
-#: commands.c:227
+#: commands.c:232
 msgid "Error parsing address!"
 msgstr "Errore nella lettura dell'indirizzo!"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce message to %s"
 msgstr "Rimbalza il messaggio a %s"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce messages to %s"
 msgstr "Rimbalza i messaggi a %s"
 
-#: commands.c:256
+#: commands.c:261
 msgid "Message bounced."
 msgstr "Messaggio rimbalzato."
 
-#: commands.c:256
+#: commands.c:261
 msgid "Messages bounced."
 msgstr "Messaggi rimbalzati."
 
-#: commands.c:334 commands.c:373 commands.c:390
+#: commands.c:339 commands.c:378 commands.c:395
 msgid "Can't create filter process"
 msgstr "Impossibile creare il processo filtro"
 
-#: commands.c:419
+#: commands.c:424
 msgid "Pipe to command: "
 msgstr "Apri una pipe con il comando: "
 
-#: commands.c:436
+#: commands.c:441
 msgid "No printing command has been defined."
 msgstr "Non è stato definito un comando di stampa."
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print message?"
 msgstr "Stampo il messaggio?"
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print tagged messages?"
 msgstr "Stampo i messaggi segnati?"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Message printed"
 msgstr "Messaggio stampato"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Messages printed"
 msgstr "Messaggi stampati"
 
-#: commands.c:452
+#: commands.c:457
 msgid "Message could not be printed"
 msgstr "Impossibile stampare il messaggio"
 
-#: commands.c:453
+#: commands.c:458
 msgid "Messages could not be printed"
 msgstr "Impossibile stampare i messaggi"
 
-#: commands.c:462
+#: commands.c:467
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "OrdContr (d)ata/(f)rom/(r)icev/(s)ogg/t(o)/(t)hread/n(u)lla/si(z)e/s(c)ore?: "
 
-#: commands.c:463
+#: commands.c:468
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Ordina per (d)ata/(f)rom/(r)icev/(s)ogg/t(o)/(t)hread/n(u)lla/si(z)e/s(c)"
 "ore?: "
 
-#: commands.c:464
+#: commands.c:469
 msgid "dfrsotuzc"
 msgstr "dfrsotuzc"
 
-#: commands.c:517
+#: commands.c:522
 msgid "Shell command: "
 msgstr "Comando della shell: "
 
-#: commands.c:647
+#: commands.c:652
 #, c-format
 msgid "Decode-save%s to mailbox"
 msgstr "Decodifica e salva nella mailbox%s"
 
-#: commands.c:648
+#: commands.c:653
 #, c-format
 msgid "Decode-copy%s to mailbox"
 msgstr "Decodifica e copia nella mailbox%s"
 
-#: commands.c:649
+#: commands.c:654
 #, c-format
 msgid "Decrypt-save%s to mailbox"
 msgstr "Decifra e salva nella mailbox%s"
 
-#: commands.c:650
+#: commands.c:655
 #, c-format
 msgid "Decrypt-copy%s to mailbox"
 msgstr "Decifra e copia nella mailbox%s"
 
-#: commands.c:651
+#: commands.c:656
 #, c-format
 msgid "Save%s to mailbox"
 msgstr "Salva nella mailbox%s"
 
-#: commands.c:651
+#: commands.c:656
 #, c-format
 msgid "Copy%s to mailbox"
 msgstr "Copia nella mailbox%s"
 
-#: commands.c:652
+#: commands.c:657
 msgid " tagged"
 msgstr " i messaggi segnati"
 
-#: commands.c:720
+#: commands.c:725
 #, c-format
 msgid "Copying to %s..."
 msgstr "Copio in %s..."
 
-#: commands.c:841
+#: commands.c:846
 #, c-format
 msgid "Convert to %s upon sending?"
 msgstr "Convertire in %s al momento dell'invio?"
 
-#: commands.c:849
+#: commands.c:854
 #, c-format
 msgid "Content-Type changed to %s."
 msgstr "Il Content-Type è stato cambiato in %s."
 
-#: commands.c:851
+#: commands.c:856
 #, c-format
 msgid "Character set changed to %s; %s."
 msgstr "Il set di caratteri è stato cambiato in %s; %s."
 
-#: commands.c:853
+#: commands.c:858
 msgid "not converting"
 msgstr "non convertito"
 
-#: commands.c:853
+#: commands.c:858
 msgid "converting"
 msgstr "convertito"
 
@@ -616,7 +616,7 @@ msgstr "Salvo una copia di questo messaggio?"
 msgid "Rename to: "
 msgstr "Rinomina in: "
 
-#: compose.c:987 editmsg.c:96 sendlib.c:902
+#: compose.c:987 editmsg.c:96 sendlib.c:906
 #, c-format
 msgid "Can't stat %s: %s"
 msgstr "Impossibile fare stat di %s: %s"
@@ -1234,14 +1234,14 @@ msgstr "La mailbox deve avere un nome."
 msgid "Mailbox created."
 msgstr "Mailbox creata."
 
-#: imap/command.c:289
+#: imap/command.c:288
 msgid "Mailbox closed"
 msgstr "Mailbox chiusa"
 
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap/command.c:326
+#: imap/command.c:325
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Errore fatale. Il numero dei messaggi non è sincronizzato!"
 
@@ -1267,61 +1267,61 @@ msgstr "Impossibile negoziare la connessione TLS"
 msgid "Selecting %s..."
 msgstr "Seleziono %s..."
 
-#: imap/imap.c:669
+#: imap/imap.c:667
 msgid "Error opening mailbox"
 msgstr "Errore durante l'apertura della mailbox"
 
 #. STATUS not supported
-#: imap/imap.c:722
+#: imap/imap.c:720
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Impossibile accodare alle mailbox IMAP di questo server"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:731 imap/message.c:595 muttlib.c:1174
+#: imap/imap.c:729 imap/message.c:596 muttlib.c:1175
 #, c-format
 msgid "Create %s?"
 msgstr "Creo %s?"
 
-#: imap/imap.c:767
+#: imap/imap.c:765
 msgid "Closing connection to IMAP server..."
 msgstr "Chiudo la connessione al server IMAP..."
 
-#: imap/imap.c:930 pop.c:465
+#: imap/imap.c:928 pop.c:465
 #, c-format
 msgid "Marking %d messages deleted..."
 msgstr "Segno cancellati %d messaggi..."
 
-#: imap/imap.c:939
+#: imap/imap.c:937
 msgid "Expunge failed"
 msgstr "Expunge fallito"
 
-#: imap/imap.c:954
+#: imap/imap.c:952
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Salvo i flag di stato dei messaggi... [%d/%d]"
 
-#: imap/imap.c:1038
+#: imap/imap.c:1036
 msgid "Expunging messages from server..."
 msgstr "Cancello i messaggi dal server..."
 
-#: imap/imap.c:1043
+#: imap/imap.c:1041
 msgid "imap_sync_mailbox: EXPUNGE failed"
 msgstr "imap_sync_mailbox: EXPUNGE fallito"
 
-#: imap/imap.c:1077
+#: imap/imap.c:1075
 msgid "CLOSE failed"
 msgstr "CLOSE fallito"
 
-#: imap/imap.c:1325
+#: imap/imap.c:1324
 msgid "Bad mailbox name"
 msgstr "Nome della mailbox non valido"
 
-#: imap/imap.c:1337
+#: imap/imap.c:1336
 #, c-format
 msgid "Subscribing to %s..."
 msgstr "Mi iscrivo a %s..."
 
-#: imap/imap.c:1339
+#: imap/imap.c:1338
 #, c-format
 msgid "Unsubscribing to %s..."
 msgstr "Mi deiscrivo da %s..."
@@ -1336,29 +1336,29 @@ msgstr "Impossibile scaricare gli header da questa versione del server IMAP."
 msgid "Could not create temporary file %s"
 msgstr "Impossibile creare il file temporaneo %s"
 
-#: imap/message.c:97 pop.c:209
+#: imap/message.c:101 pop.c:209
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Prendo gli header dei messaggi... [%d/%d]"
 
-#: imap/message.c:249 pop.c:343
+#: imap/message.c:250 pop.c:343
 msgid "Fetching message..."
 msgstr "Prendo il messaggio..."
 
-#: imap/message.c:292 pop.c:380
+#: imap/message.c:293 pop.c:380
 msgid "The message index is incorrect. Try reopening the mailbox."
 msgstr "L'indice dei messaggi non è corretto; prova a riaprire la mailbox."
 
-#: imap/message.c:461
+#: imap/message.c:462
 msgid "Uploading message ..."
 msgstr "Mando il messaggio ..."
 
-#: imap/message.c:571
+#: imap/message.c:572
 #, c-format
 msgid "Copying %d messages to %s..."
 msgstr "Copio %d messaggi in %s..."
 
-#: imap/message.c:575
+#: imap/message.c:576
 #, c-format
 msgid "Copying message %d to %s..."
 msgstr "Copio il messaggio %d in %s ..."
@@ -1791,7 +1791,12 @@ msgstr "sposta il cursore di un carattere a destra"
 msgid "move the cursor to the end of the word"
 msgstr "sposta il cursore alla fine della parola"
 
-#: keymap_alldefs.h:73 keymap_alldefs.h:74
+#: keymap_alldefs.h:73
+#, fuzzy
+msgid "scroll down through the history list"
+msgstr "spostati in alto attraverso l'history"
+
+#: keymap_alldefs.h:74
 msgid "scroll up through the history list"
 msgstr "spostati in alto attraverso l'history"
 
@@ -2551,7 +2556,7 @@ msgstr "Sei alla prima voce."
 msgid "Search for: "
 msgstr "Cerca: "
 
-#: menu.c:725
+#: menu.c:725 pattern.c:1237
 msgid "Reverse search for: "
 msgstr "Cerca all'indietro: "
 
@@ -2601,16 +2606,16 @@ msgstr ""
 msgid "oac"
 msgstr "oac"
 
-#: muttlib.c:1141
+#: muttlib.c:1142
 msgid "Can't save message to POP mailbox."
 msgstr "Impossibile salvare il messaggio nella mailbox POP."
 
-#: muttlib.c:1150
+#: muttlib.c:1151
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s non è una mailbox!"
 
-#: muttlib.c:1156
+#: muttlib.c:1157
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Accodo i messaggi a %s?"
@@ -3280,7 +3285,7 @@ msgstr "Prendo la lista dei messaggi..."
 msgid "Can't write message to temporary file!"
 msgstr "Impossibile scrivere il messaggio nel file temporaneo!"
 
-#: pop.c:517 pop.c:581
+#: pop.c:517 pop.c:582
 msgid "Checking for new messages..."
 msgstr "Controllo se ci sono nuovi messaggi..."
 
@@ -3288,29 +3293,29 @@ msgstr "Controllo se ci sono nuovi messaggi..."
 msgid "POP host is not defined."
 msgstr "L'host POP non è stato definito."
 
-#: pop.c:609
+#: pop.c:610
 msgid "No new mail in POP mailbox."
 msgstr "Non c'è nuova posta nella mailbox POP."
 
-#: pop.c:616
+#: pop.c:617
 msgid "Delete messages from server?"
 msgstr "Cancello i messaggi dal server?"
 
-#: pop.c:618
+#: pop.c:619
 #, c-format
 msgid "Reading new messages (%d bytes)..."
 msgstr "Leggo i nuovi messaggi (%d byte)..."
 
-#: pop.c:660
+#: pop.c:661
 msgid "Error while writing mailbox!"
 msgstr "Errore durante la scrittura della mailbox!"
 
-#: pop.c:664
+#: pop.c:665
 #, c-format
 msgid "%s [%d of %d messages read]"
 msgstr "%s [%d messaggi letti su %d]"
 
-#: pop.c:687 pop_lib.c:274
+#: pop.c:688 pop_lib.c:276
 msgid "Server closed connection!"
 msgstr "Il server ha chiuso la connessione!"
 
@@ -3335,15 +3340,15 @@ msgstr "Impossibile lasciare i messaggi sul server."
 msgid "Error connecting to server: %s"
 msgstr "Errore nella connessione al server: %s"
 
-#: pop_lib.c:288
+#: pop_lib.c:290
 msgid "Closing connection to POP server..."
 msgstr "Chiudo la connessione al server POP..."
 
-#: pop_lib.c:453
+#: pop_lib.c:455
 msgid "Verifying message indexes..."
 msgstr "Verifica degli indici dei messaggi..."
 
-#: pop_lib.c:477
+#: pop_lib.c:479
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Connessione persa. Mi riconnetto al server POP?"
 
@@ -3707,22 +3712,22 @@ msgstr "No boundary parameter found! [segnala questo errore]"
 msgid "%s no longer exists!"
 msgstr "%s non esiste più!"
 
-#: sendlib.c:908
+#: sendlib.c:912
 #, c-format
 msgid "%s isn't a regular file."
 msgstr "%s non è un file regolare."
 
-#: sendlib.c:1077
+#: sendlib.c:1081
 #, c-format
 msgid "Could not open %s"
 msgstr "Impossibile aprire %s"
 
-#: sendlib.c:2029
+#: sendlib.c:2033
 #, c-format
 msgid "Error sending message, child exited %d (%s)."
 msgstr "Errore nella spedizione del messaggio, il figlio è uscito con %d (%s)."
 
-#: sendlib.c:2035
+#: sendlib.c:2039
 msgid "Output of the delivery process"
 msgstr "Output del processo di consegna"
 

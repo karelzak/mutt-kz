@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.6i\n"
-"POT-Creation-Date: 2002-03-13 13:50+0100\n"
+"POT-Creation-Date: 2002-05-02 01:08+0200\n"
 "PO-Revision-Date: 1999-07-29 00:00+0100\n"
 "Last-Translator: Miroslav Vasko <vasko@ies.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -94,7 +94,7 @@ msgstr "Nena¹iel som ¹ablónu názvu, pokraèova»?"
 msgid "Mailcap compose entry requires %%s"
 msgstr "Zostavovacia polo¾ka mailcap-u vy¾aduje %%s"
 
-#: attach.c:131 attach.c:256 commands.c:185 compose.c:1154 curs_lib.c:145
+#: attach.c:131 attach.c:256 commands.c:190 compose.c:1154 curs_lib.c:145
 #: curs_lib.c:374
 #, fuzzy, c-format
 msgid "Error running \"%s\"!"
@@ -251,7 +251,7 @@ msgstr "Nemo¾no prezera» adresár"
 msgid "Error trying to view file"
 msgstr "Chyba pri prezeraní súboru"
 
-#: buffy.c:410
+#: buffy.c:413
 #, c-format
 msgid "New mail in %s."
 msgstr "Nová po¹ta v %s."
@@ -333,168 +333,168 @@ msgstr "Nemo¾no vytvori» filter."
 msgid "Could not copy message"
 msgstr "Nemo¾no posla» správu."
 
-#: commands.c:168
+#: commands.c:173
 msgid "PGP signature successfully verified."
 msgstr ""
 
-#: commands.c:169
+#: commands.c:174
 msgid "PGP signature could NOT be verified."
 msgstr ""
 
-#: commands.c:192
+#: commands.c:197
 msgid "Command: "
 msgstr "Príkaz: "
 
-#: commands.c:210 recvcmd.c:140
+#: commands.c:215 recvcmd.c:140
 msgid "Bounce message to: "
 msgstr "Presmerova» správu do: "
 
-#: commands.c:212 recvcmd.c:142
+#: commands.c:217 recvcmd.c:142
 msgid "Bounce tagged messages to: "
 msgstr "Presmerova» oznaèené správy do: "
 
-#: commands.c:227
+#: commands.c:232
 msgid "Error parsing address!"
 msgstr "Chyba pri analýze adresy!"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce message to %s"
 msgstr "Presmerova» správu do %s"
 
-#: commands.c:242
+#: commands.c:247
 #, c-format
 msgid "Bounce messages to %s"
 msgstr "Presmerova» správy do %s"
 
-#: commands.c:256
+#: commands.c:261
 msgid "Message bounced."
 msgstr "Správa bola presmerovaná."
 
-#: commands.c:256
+#: commands.c:261
 msgid "Messages bounced."
 msgstr "Správy boli presmerované."
 
-#: commands.c:334 commands.c:373 commands.c:390
+#: commands.c:339 commands.c:378 commands.c:395
 #, fuzzy
 msgid "Can't create filter process"
 msgstr "Nemo¾no vytvori» filter"
 
-#: commands.c:419
+#: commands.c:424
 msgid "Pipe to command: "
 msgstr "Po¹li do rúry príkazu: "
 
-#: commands.c:436
+#: commands.c:441
 #, fuzzy
 msgid "No printing command has been defined."
 msgstr "cykluj medzi schránkami s príchodzími správami"
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print message?"
 msgstr "Vytlaèi» správu?"
 
-#: commands.c:441
+#: commands.c:446
 msgid "Print tagged messages?"
 msgstr "Vytlaèi» oznaèené správy?"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Message printed"
 msgstr "Správa bola vytlaèené"
 
-#: commands.c:450
+#: commands.c:455
 msgid "Messages printed"
 msgstr "Správy boli vytlaèené"
 
-#: commands.c:452
+#: commands.c:457
 #, fuzzy
 msgid "Message could not be printed"
 msgstr "Správa bola vytlaèené"
 
-#: commands.c:453
+#: commands.c:458
 #, fuzzy
 msgid "Messages could not be printed"
 msgstr "Správy boli vytlaèené"
 
-#: commands.c:462
+#: commands.c:467
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Spät.tried.(d)át/(f)-od/p(r)í/(s)-pred/k(o)mu/(t)-re»/(u)-ne/(z)-veµ/(c)-"
 "skóre: "
 
-#: commands.c:463
+#: commands.c:468
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Tried. (d)át/(f)-od/p(r)í/(s)-pred/k(o)mu/(t)-re»/(u)-ne/(z)-veµ/(c)-skó:"
 
-#: commands.c:464
+#: commands.c:469
 msgid "dfrsotuzc"
 msgstr "dfrsotuzc"
 
-#: commands.c:517
+#: commands.c:522
 msgid "Shell command: "
 msgstr "Príkaz shell-u: "
 
-#: commands.c:647
+#: commands.c:652
 #, fuzzy, c-format
 msgid "Decode-save%s to mailbox"
 msgstr "%s%s do schránky"
 
-#: commands.c:648
+#: commands.c:653
 #, fuzzy, c-format
 msgid "Decode-copy%s to mailbox"
 msgstr "%s%s do schránky"
 
-#: commands.c:649
+#: commands.c:654
 #, fuzzy, c-format
 msgid "Decrypt-save%s to mailbox"
 msgstr "%s%s do schránky"
 
-#: commands.c:650
+#: commands.c:655
 #, fuzzy, c-format
 msgid "Decrypt-copy%s to mailbox"
 msgstr "%s%s do schránky"
 
-#: commands.c:651
+#: commands.c:656
 #, fuzzy, c-format
 msgid "Save%s to mailbox"
 msgstr "%s%s do schránky"
 
-#: commands.c:651
+#: commands.c:656
 #, fuzzy, c-format
 msgid "Copy%s to mailbox"
 msgstr "%s%s do schránky"
 
-#: commands.c:652
+#: commands.c:657
 msgid " tagged"
 msgstr " oznaèené"
 
-#: commands.c:720
+#: commands.c:725
 #, c-format
 msgid "Copying to %s..."
 msgstr "Kopírujem do %s..."
 
-#: commands.c:841
+#: commands.c:846
 #, c-format
 msgid "Convert to %s upon sending?"
 msgstr ""
 
-#: commands.c:849
+#: commands.c:854
 #, fuzzy, c-format
 msgid "Content-Type changed to %s."
 msgstr "Spájam sa s %s..."
 
-#: commands.c:851
+#: commands.c:856
 #, fuzzy, c-format
 msgid "Character set changed to %s; %s."
 msgstr "Spájam sa s %s..."
 
-#: commands.c:853
+#: commands.c:858
 msgid "not converting"
 msgstr ""
 
-#: commands.c:853
+#: commands.c:858
 msgid "converting"
 msgstr ""
 
@@ -627,7 +627,7 @@ msgstr "Ulo¾i» kópiu tejto správy?"
 msgid "Rename to: "
 msgstr "Premenova» na: "
 
-#: compose.c:987 editmsg.c:96 sendlib.c:902
+#: compose.c:987 editmsg.c:96 sendlib.c:906
 #, fuzzy, c-format
 msgid "Can't stat %s: %s"
 msgstr "Nemo¾no zisti» stav: %s"
@@ -1261,7 +1261,7 @@ msgstr "Schránka nie je zmenená."
 msgid "Mailbox created."
 msgstr "Bola zistená sluèka v makre."
 
-#: imap/command.c:289
+#: imap/command.c:288
 #, fuzzy
 msgid "Mailbox closed"
 msgstr "Bola zistená sluèka v makre."
@@ -1269,7 +1269,7 @@ msgstr "Bola zistená sluèka v makre."
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
 #.
-#: imap/command.c:326
+#: imap/command.c:325
 msgid "Fatal error.  Message count is out of sync!"
 msgstr "Fatálna chyba. Poèet správ nie je zosynchronizovaný!"
 
@@ -1295,65 +1295,65 @@ msgstr ""
 msgid "Selecting %s..."
 msgstr "Vyberám %s..."
 
-#: imap/imap.c:669
+#: imap/imap.c:667
 #, fuzzy
 msgid "Error opening mailbox"
 msgstr "Chyba pri zapisovaní do schránky!"
 
 #. STATUS not supported
-#: imap/imap.c:722
+#: imap/imap.c:720
 msgid "Unable to append to IMAP mailboxes at this server"
 msgstr "Nemo¾no pridáva» k IMAP schránkam na tomto serveri"
 
 #. command failed cause folder doesn't exist
-#: imap/imap.c:731 imap/message.c:595 muttlib.c:1174
+#: imap/imap.c:729 imap/message.c:596 muttlib.c:1175
 #, c-format
 msgid "Create %s?"
 msgstr "Vytvori» %s?"
 
-#: imap/imap.c:767
+#: imap/imap.c:765
 msgid "Closing connection to IMAP server..."
 msgstr "Zatváram spojenie s IMAP serverom..."
 
-#: imap/imap.c:930 pop.c:465
+#: imap/imap.c:928 pop.c:465
 #, fuzzy, c-format
 msgid "Marking %d messages deleted..."
 msgstr "Èítam %d nových správ (%d bytov)..."
 
-#: imap/imap.c:939
+#: imap/imap.c:937
 #, fuzzy
 msgid "Expunge failed"
 msgstr "Prihlasovanie zlyhalo."
 
-#: imap/imap.c:954
+#: imap/imap.c:952
 #, c-format
 msgid "Saving message status flags... [%d/%d]"
 msgstr "Ukladám stavové príznaky správy... [%d/%d]"
 
-#: imap/imap.c:1038
+#: imap/imap.c:1036
 msgid "Expunging messages from server..."
 msgstr "Vymazávam správy zo serveru..."
 
-#: imap/imap.c:1043
+#: imap/imap.c:1041
 msgid "imap_sync_mailbox: EXPUNGE failed"
 msgstr ""
 
-#: imap/imap.c:1077
+#: imap/imap.c:1075
 #, fuzzy
 msgid "CLOSE failed"
 msgstr "Prihlasovanie zlyhalo."
 
-#: imap/imap.c:1325
+#: imap/imap.c:1324
 #, fuzzy
 msgid "Bad mailbox name"
 msgstr "Otvor schránku"
 
-#: imap/imap.c:1337
+#: imap/imap.c:1336
 #, fuzzy, c-format
 msgid "Subscribing to %s..."
 msgstr "Kopírujem do %s..."
 
-#: imap/imap.c:1339
+#: imap/imap.c:1338
 #, fuzzy, c-format
 msgid "Unsubscribing to %s..."
 msgstr "Spájam sa s %s..."
@@ -1368,29 +1368,29 @@ msgstr "Nemo¾no získa» hlavièky z tejto verzie IMAP serveru."
 msgid "Could not create temporary file %s"
 msgstr "Nemo¾no vytvori» doèasný súbor!"
 
-#: imap/message.c:97 pop.c:209
+#: imap/message.c:101 pop.c:209
 #, c-format
 msgid "Fetching message headers... [%d/%d]"
 msgstr "Vyvolávam hlavièky správ... [%d/%d]"
 
-#: imap/message.c:249 pop.c:343
+#: imap/message.c:250 pop.c:343
 msgid "Fetching message..."
 msgstr "Vyvolávam správu..."
 
-#: imap/message.c:292 pop.c:380
+#: imap/message.c:293 pop.c:380
 msgid "The message index is incorrect. Try reopening the mailbox."
 msgstr ""
 
-#: imap/message.c:461
+#: imap/message.c:462
 msgid "Uploading message ..."
 msgstr "Odsúvam správu ..."
 
-#: imap/message.c:571
+#: imap/message.c:572
 #, fuzzy, c-format
 msgid "Copying %d messages to %s..."
 msgstr "Presúvam preèítané správy do %s..."
 
-#: imap/message.c:575
+#: imap/message.c:576
 #, fuzzy, c-format
 msgid "Copying message %d to %s..."
 msgstr "Zapisujem správu do %s ..."
@@ -1835,7 +1835,12 @@ msgstr "presunú» kurzor o jeden znak vpravo"
 msgid "move the cursor to the end of the word"
 msgstr "presunú» kurzor o jeden znak vpravo"
 
-#: keymap_alldefs.h:73 keymap_alldefs.h:74
+#: keymap_alldefs.h:73
+#, fuzzy
+msgid "scroll down through the history list"
+msgstr "rolova» hore po zozname histórie"
+
+#: keymap_alldefs.h:74
 msgid "scroll up through the history list"
 msgstr "rolova» hore po zozname histórie"
 
@@ -2610,7 +2615,7 @@ msgstr "Ste na prvej polo¾ke."
 msgid "Search for: "
 msgstr "Hµada»: "
 
-#: menu.c:725
+#: menu.c:725 pattern.c:1237
 msgid "Reverse search for: "
 msgstr "Hµada» spätne: "
 
@@ -2660,17 +2665,17 @@ msgstr "Súbor existuje, (o)-prepísa», prid(a)» alebo (c)-zru¹i»?"
 msgid "oac"
 msgstr "oac"
 
-#: muttlib.c:1141
+#: muttlib.c:1142
 #, fuzzy
 msgid "Can't save message to POP mailbox."
 msgstr "Zapísa» správu do schránky"
 
-#: muttlib.c:1150
+#: muttlib.c:1151
 #, c-format
 msgid "%s is not a mailbox!"
 msgstr "%s nie je schránka!"
 
-#: muttlib.c:1156
+#: muttlib.c:1157
 #, c-format
 msgid "Append messages to %s?"
 msgstr "Prida» správy do %s?"
@@ -3374,7 +3379,7 @@ msgstr "Vyvolávam správu..."
 msgid "Can't write message to temporary file!"
 msgstr "Nemo¾no vytvori» doèasný súbor"
 
-#: pop.c:517 pop.c:581
+#: pop.c:517 pop.c:582
 #, fuzzy
 msgid "Checking for new messages..."
 msgstr "Odsúvam správu ..."
@@ -3383,30 +3388,30 @@ msgstr "Odsúvam správu ..."
 msgid "POP host is not defined."
 msgstr "Hostiteµ POP nie je definovaný."
 
-#: pop.c:609
+#: pop.c:610
 msgid "No new mail in POP mailbox."
 msgstr "®iadna nová po¹ta v schránke POP."
 
-#: pop.c:616
+#: pop.c:617
 #, fuzzy
 msgid "Delete messages from server?"
 msgstr "Vymazávam správy zo serveru..."
 
-#: pop.c:618
+#: pop.c:619
 #, fuzzy, c-format
 msgid "Reading new messages (%d bytes)..."
 msgstr "Èítam %d nových správ (%d bytov)..."
 
-#: pop.c:660
+#: pop.c:661
 msgid "Error while writing mailbox!"
 msgstr "Chyba pri zapisovaní do schránky!"
 
-#: pop.c:664
+#: pop.c:665
 #, fuzzy, c-format
 msgid "%s [%d of %d messages read]"
 msgstr "%s [preèítaných správ: %d]"
 
-#: pop.c:687 pop_lib.c:274
+#: pop.c:688 pop_lib.c:276
 msgid "Server closed connection!"
 msgstr "Server uzavrel spojenie!"
 
@@ -3433,17 +3438,17 @@ msgstr "Vymazávam správy zo serveru..."
 msgid "Error connecting to server: %s"
 msgstr "Pripájam sa na %s"
 
-#: pop_lib.c:288
+#: pop_lib.c:290
 #, fuzzy
 msgid "Closing connection to POP server..."
 msgstr "Zatváram spojenie s IMAP serverom..."
 
-#: pop_lib.c:453
+#: pop_lib.c:455
 #, fuzzy
 msgid "Verifying message indexes..."
 msgstr "Zapisujem správu do %s ..."
 
-#: pop_lib.c:477
+#: pop_lib.c:479
 #, fuzzy
 msgid "Connection lost. Reconnect to POP server?"
 msgstr "Zatváram spojenie s IMAP serverom..."
@@ -3816,22 +3821,22 @@ msgstr "Nenájdený parameter ohranièenia (boundary)! [ohláste túto chybu]"
 msgid "%s no longer exists!"
 msgstr "%s u¾ viac neexistuje!"
 
-#: sendlib.c:908
+#: sendlib.c:912
 #, fuzzy, c-format
 msgid "%s isn't a regular file."
 msgstr "%s nie je schránka"
 
-#: sendlib.c:1077
+#: sendlib.c:1081
 #, c-format
 msgid "Could not open %s"
 msgstr "Nemo¾no otvori» %s"
 
-#: sendlib.c:2029
+#: sendlib.c:2033
 #, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s)."
 msgstr "Chyba pri posielaní správy, dcérsky proces vrátil %d (%s).\n"
 
-#: sendlib.c:2035
+#: sendlib.c:2039
 msgid "Output of the delivery process"
 msgstr ""
 
