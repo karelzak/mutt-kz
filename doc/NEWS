@@ -1,0 +1,111 @@
+Major changes since 0.91.1
+--------------------------
+
+- additional format for $hdr_format
+  	%L	displays the total size of all visible messages in a
+		limited view
+	%<fmt>	displays current time using strftime(fmt)
+
+- additional operators to the pattern matching lanauge:
+	~B<pattern>	finds pattern anywhere in the message (more
+			efficient than ~h %s | ~b %s
+	~z<size>	finds messages of size <size>
+			E.g. 
+			 ~z<10k #finds messages smaller than 10KB
+			 ~z>10k #finds messages larger than 10KB
+			 ~z10k  #finds messages exactly 10KB in length
+			 
+
+- the $hdr_format variable is renamed to $index_format
+  $hdr_format is still accepted for backwards compatibility
+
+- new variable $folder_format to display entries in the 'browser' menu.
+
+- new variable $followup_to to control generation of Mail-Followup-To
+  field. You can edit this field and Mutt will not overwrite it.
+
+- new variable $sendmail_wait
+
+  Specifies the number of seconds to wait for the ``sendmail'' process
+  to finish before giving up and putting delivery in the background.
+
+  Mutt interprets the value of this variable as follows:
+
+  >0      number of seconds to wait for sendmail to finish before continuing
+  0       wait forever for sendmail to finish
+  <0      always put sendmail in the background without waiting
+
+  Note that if you specify a value other than 0, the output of the child
+  process will be put in a temporary file.  If there is some error, you
+  will be informed as to where to find the output.
+
+- Variable $sendmail_bounce has been removed. Mutt now passes all
+  recipients on the command line for normal sending. 
+
+- new variable $query_command
+  Adds support for querying an external database for email addresses.
+
+- The $fwd_decode variable has been removed. This has been split into 2
+  variables
+
+  $fwd_decode - used when $mime_fwd is not set
+  $mime_fwd_decode - used when $mime_fwd is set
+
+- new variable $wrap_search. This controls whether searches wrap around the
+  end of the mailbox.
+  
+  When set, searches will wrap around the first (or last) message. When
+  unset, searches will not wrap
+
+
+- New command 'reset' to reset variables to their default compile-time
+  definitions. When used with special keyword 'all', all variables are
+  reset to their default values. When used with the 'set' command and the
+  variable name prefixed with '&', this has the same behaviour as the
+  'reset' command.
+
+  Eg. 
+   reset move
+   reset all
+   set &move
+   set &all
+
+- Function key names used in muttrc need to be enclosed in <>. 
+  Function keys can be used in macros also.
+  
+  Eg. 
+   macro index Y *<PageUp>
+   bind index <down> next-entry
+
+- You can now delete a message's attachments by pressing 'd' (delete-entry)
+  on the attachment in the attachment menu.
+  
+- You can now color index menu entries using the pattern matching language.
+  The 'uncolor' command resets the entry to its default color. The '*'
+  token can be used to reset all index entries to their default colors.
+  
+  Eg.
+    color index blue white ~fvikas
+    color index red white ~z>100k
+    uncolor index ~fvikas
+    uncolor index *
+    
+- mailboxes specified in save-hooks can be %-expanded using $header_format
+
+- the default save mailbox no longer looks at defined `lists'. To get the
+  old behaviour, use
+    save-hook ~l %B
+
+- optional strings in format strings have been extended to allow for an
+  `else' clause.  the new syntax is:
+        %?<testchar>?<if-string>&<else-string>?
+  or if no `else' clause is desired (backwards compatibility):
+        %?<testchar>?<if-string>?
+
+- If new mail is delivered to a folder when Mutt is displaying a limited
+  view of the folder, it is added to the limited view only if it satisfies
+  the current limit criteria.
+
+- the <Tab> key on the command-line now completes commands and variable
+  names. The longest non-ambiguous part is put on the command-line.
+  Entering additional text and using <Tab> will perform completion again.
