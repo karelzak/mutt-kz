@@ -241,6 +241,9 @@ int mutt_get_postponed (CONTEXT *ctx, HEADER *hdr, HEADER **cur)
       file[0] = '\0';
       if (b->filename)
 	strfcpy (file, b->filename, sizeof (file));
+      else
+	/* avoid Content-Disposition: header with temporary filename */
+	b->use_disp = 0;
       mutt_adv_mktemp (file);
       if (mutt_save_attachment (msg->fp, b, file, 0) == -1)
       {
