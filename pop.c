@@ -63,7 +63,8 @@ static int getPass (void)
   {
     char tmp[SHORT_STRING];
     tmp[0] = '\0';
-    if (mutt_get_password ("POP Password: ", tmp, sizeof (tmp)) != 0)
+    if (mutt_get_password ("POP Password: ", tmp, sizeof (tmp)) != 0
+	|| *tmp == '\0')
       return 0;
     PopPass = safe_strdup (tmp);
   }
@@ -136,7 +137,7 @@ void mutt_fetchPopMail (void)
     goto finish;
   }
 
-  sprintf (buffer, "user %s\r\n", PopUser);
+  snprintf (buffer, sizeof(buffer), "user %s\r\n", PopUser);
   write (s, buffer, strlen (buffer));
 
   if (getLine (s, buffer, sizeof (buffer)) == -1)
@@ -149,7 +150,7 @@ void mutt_fetchPopMail (void)
     goto finish;
   }
   
-  sprintf (buffer, "pass %s\r\n", PopPass);
+  snprintf (buffer, sizeof(buffer), "pass %s\r\n", NONULL(PopPass));
   write (s, buffer, strlen (buffer));
   
   if (getLine (s, buffer, sizeof (buffer)) == -1)
@@ -157,7 +158,7 @@ void mutt_fetchPopMail (void)
 
   if (strncmp (buffer, "+OK", 3) != 0)
   {
-    PopPass[0] = 0; /* void the given password */
+    safe_free((void **) &PopPass); /* void the given password */
     mutt_remove_trailing_ws (buffer);
     mutt_error (buffer[0] ? buffer : "Server closed connection!");
     goto finish;
@@ -193,7 +194,7 @@ void mutt_fetchPopMail (void)
 
   for (i = 1 ; i <= msgs ; i++)
   {
-    sprintf (buffer, "retr %d\r\n", i);
+    snprintf (buffer, sizeof(buffer), "retr %d\r\n", i);
     write (s, buffer, strlen (buffer));
 
     if (getLine (s, buffer, sizeof (buffer)) == -1)
@@ -269,7 +270,7 @@ void mutt_fetchPopMail (void)
     if (option (OPTPOPDELETE))
     {
       /* delete the message on the server */
-      sprintf (buffer, "dele %d\r\n", i);
+      snprintf (buffer, sizeof(buffer), "dele %d\r\n", i);
       write (s, buffer, strlen (buffer));
 
       /* eat the server response */
