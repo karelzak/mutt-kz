@@ -133,8 +133,8 @@ void mutt_edit_file (const char *editor, const char *data)
 int mutt_yesorno (const char *msg, int def)
 {
   event_t ch;
-  char *yes = _("yes");
-  char *no = _("no");
+  unsigned char *yes = _("yes");
+  unsigned char *no = _("no");
   
   CLEARLINE(LINES-1);
   printw("%s ([%c]/%c): ", msg, def ? *yes : *no,
