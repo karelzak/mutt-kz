@@ -19,7 +19,7 @@ CFLAGS=@CFLAGS@ -DSHAREDIR=\"$(sharedir)\" $(XCPPFLAGS)
 LDFLAGS=@LDFLAGS@
 
 
-all: manual.txt mutt.man manual.html
+all: manual.txt manual.html
 
 install: mutt.man manual.txt
 	../mkinstalldirs $(mandir)/man1
@@ -38,14 +38,11 @@ manual.txt: manual.sgml
 manual.html: manual.sgml
 	sgml2html manual
 
-mutt.man: mutt.sgml
-	sgml2txt -man mutt
-
 clean: 
 	rm -f *~ *.html *.orig *.rej
 
 clean-real:
-	rm -f manual.txt mutt.man
+	rm -f manual.txt
 
 distclean: clean
 	rm -f Makefile
