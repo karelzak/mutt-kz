@@ -1043,11 +1043,11 @@ mutt_pattern_exec (struct pattern_t *pat, pattern_exec_flag flags, CONTEXT *ctx,
       return (pat->not ^ (h->collapsed && h->num_hidden > 1));
 #ifdef HAVE_PGP
    case M_PGP_SIGN:
-     return (pat->not ^ (h->pgp & PGPSIGN));
+     return (pat->not ^ ((h->pgp & PGPSIGN) ? 1 : 0));
    case M_PGP_ENCRYPT:
-     return (pat->not ^ (h->pgp & PGPENCRYPT));
+     return (pat->not ^ ((h->pgp & PGPENCRYPT) ? 1 : 0));
    case M_PGP_KEY:
-     return (pat->not ^ (h->pgp & PGPKEY));
+     return (pat->not ^ ((h->pgp & PGPKEY) ? 1 : 0));
 #endif
     case M_XLABEL:
       return (pat->not ^ (h->env->x_label && regexec (pat->rx, h->env->x_label, 0, NULL, 0) == 0));
