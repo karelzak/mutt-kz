@@ -45,6 +45,10 @@ int mutt_is_mail_list (ADDRESS *addr)
   return 0;
 }
 
+/* Search for a mailing list in the list of addresses pointed to by adr.
+ * If one is found, print pfx and the name of the list into buf, then
+ * return 1.  Otherwise, simply return 0.
+ */
 static int
 check_for_mailing_list (ADDRESS *adr, char *pfx, char *buf, int buflen)
 {
@@ -52,13 +56,33 @@ check_for_mailing_list (ADDRESS *adr, char *pfx, char *buf, int buflen)
   {
     if (mutt_is_mail_list (adr))
     {
-      if (buf && buflen)
-	snprintf (buf, buflen, "%s%s", NONULL(pfx), mutt_get_name (adr));
+      if (pfx && buf && buflen)
+	snprintf (buf, buflen, "%s%s", pfx, mutt_get_name (adr));
       return 1;
     }
   }
   return 0;
 }
+
+/* Search for a mailing list in the list of addresses pointed to by adr.
+ * If one is found, print the address of the list into buf, then return 1.
+ * Otherwise, simply return 0.
+ */
+static int
+check_for_mailing_list_addr (ADDRESS *adr, char *buf, int buflen)
+{
+  for (; adr; adr = adr->next)
+  {
+    if (mutt_is_mail_list (adr))
+    {
+      if (buf && buflen)
+	snprintf (buf, buflen, "%s", adr->mailbox);
+      return 1;
+    }
+  }
+  return 0;
+}
+
 
 static int first_mailing_list (char *buf, size_t buflen, ADDRESS *a)
 {
@@ -105,9 +129,9 @@ static void make_from_addr (ENVELOPE *hdr, char *buf, size_t len, int do_lists)
 
   if (do_lists || me)
   {
-    if (check_for_mailing_list (hdr->to, NULL, buf, len))
+    if (check_for_mailing_list_addr (hdr->to, buf, len))
       return;
-    if (check_for_mailing_list (hdr->cc, NULL, buf, len))
+    if (check_for_mailing_list_addr (hdr->cc, buf, len))
       return;
   }
 
@@ -414,8 +438,8 @@ hdr_format_str (char *dest,
 	snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
 	snprintf (dest, destlen, fmt, buf2);
       }
-      else if (!check_for_mailing_list (hdr->env->to, NULL, NULL, 0) &&
-	       !check_for_mailing_list (hdr->env->cc, NULL, NULL, 0))
+      else if (!check_for_mailing_list_addr (hdr->env->to, NULL, 0) &&
+	       !check_for_mailing_list_addr (hdr->env->cc, NULL, 0))
       {
 	optional = 0;
       }
