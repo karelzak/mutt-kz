@@ -2756,6 +2756,17 @@ may not be updated if a binding is changed while Mutt is running.  Since
 this variable is primarily aimed at new users, neither of these should
 present a major problem.
 
+<sect2>hidden&lowbar;host<label id="hidden_host">
+<p>
+Type: boolean<newline>
+Default: unset
+
+When set, mutt will skip the host name part of <ref
+id="hostname" name="hostname"> variable when adding the
+domain part to addresses.  This variable does not affect
+the generation, and it will not lead to the cut-off of
+first-level domains.
+
 <sect2>history<label id="history">
 <p>
 Type: number<newline>
@@ -4404,7 +4415,7 @@ quote-char                ^V   quote the next typed key
 
 <sect1>Acknowledgements
 <p>
-Kari Hurrta
+Kari Hurtta
 <htmlurl url="mailto:kari.hurtta@fmi.fi" name="&lt;kari.hurtta@fmi.fi&gt;">
 co-developed the original MIME parsing code back in the ELM-ME days.
 
