@@ -62,6 +62,7 @@ static int getPass (void)
   if (!PopPass)
   {
     char tmp[SHORT_STRING];
+    tmp[0] = '\0';
     if (mutt_get_password ("POP Password: ", tmp, sizeof (tmp)) != 0)
       return 0;
     PopPass = safe_strdup (tmp);
