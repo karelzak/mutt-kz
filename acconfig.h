@@ -48,9 +48,6 @@
 /* Where new mail is spooled */
 #undef MAILPATH
 
-/* Should I just use the domain name? (--enable-hidden-host) */
-#undef HIDDEN_HOST
-
 /* Does your system have the srand48() suite? */
 #undef HAVE_SRAND48
 

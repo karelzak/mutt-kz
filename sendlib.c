@@ -1296,18 +1296,46 @@ static void encode_descriptions (BODY *b)
   }
 }
 
+const char *mutt_fqdn(short may_hide_host)
+{
+  char *p = NULL, *q;
+  
+  if(Fqdn && Fqdn[0] != '@')
+  {
+    p = Fqdn;
+    
+    if(may_hide_host && option(OPTHIDDENHOST))
+    {
+      if((p = strchr(Fqdn, '.')))
+	p++;
+
+      /* sanity check: don't hide the host if
+       * the fqdn is something like detebe.org.
+       */
+      
+      if(!p || !(q = strchr(p, '.')))
+	p = Fqdn;
+    }
+  }
+
+  return p;
+}
+
 char *mutt_gen_msgid (void)
 {
   char buf[SHORT_STRING];
   time_t now;
   struct tm *tm;
+  const char *fqdn;
 
   now = time (NULL);
   tm = localtime (&now);
+  if(!(fqdn = mutt_fqdn(0)))
+    fqdn = NONULL(Hostname);
+
   snprintf (buf, sizeof (buf), "<%d%02d%02d%02d%02d%02d.%c%d@%s>",
 	    tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday, tm->tm_hour,
-	    tm->tm_min, tm->tm_sec, MsgIdPfx, getpid (),
-	    Fqdn && Fqdn[0] != '@' ? Fqdn : NONULL(Hostname));
+	    tm->tm_min, tm->tm_sec, MsgIdPfx, getpid (), fqdn);
   MsgIdPfx = (MsgIdPfx == 'Z') ? 'A' : MsgIdPfx + 1;
   return (safe_strdup (buf));
 }
@@ -1737,11 +1765,13 @@ void mutt_bounce_message (HEADER *h, ADDRESS *to)
     mutt_mktemp (tempfile);
     if ((f = safe_fopen (tempfile, "w")) != NULL)
     {
+      const char *fqdn;
+
       fseek (msg->fp, h->offset, 0);
       mutt_copy_header (msg->fp, h, f, CH_XMIT | CH_NONEWLINE, NULL);
       fprintf (f, "Resent-From: %s", NONULL(Username));
-      if (Fqdn[0] != '@')
-	fprintf (f, "@%s", Fqdn);
+      if((fqdn = mutt_fqdn(1)))
+	fprintf (f, "@%s", fqdn);
       fprintf (f, "\nResent-%s", mutt_make_date (date));
       fputs ("Resent-To: ", f);
       mutt_write_address_list (to, f, 11);

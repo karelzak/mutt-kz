@@ -60,9 +60,6 @@
 /* Where new mail is spooled */
 #undef MAILPATH
 
-/* Should I just use the domain name? (--enable-hidden-host) */
-#undef HIDDEN_HOST
-
 /* Where to find sendmail on your system */
 #undef SENDMAIL
 

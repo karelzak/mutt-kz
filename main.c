@@ -126,11 +126,6 @@ static void show_version (void)
 #endif
 
   puts (
-#ifdef HIDDEN_HOST
-	"+HIDDEN_HOST  "
-#else
-	"-HIDDEN_HOST  "
-#endif
 
 #ifdef HOMESPOOL
 	"+HOMESPOOL  "

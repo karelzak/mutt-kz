@@ -784,13 +784,14 @@ static ADDRESS *set_reverse_name (ENVELOPE *env)
 static ADDRESS *mutt_default_from (void)
 {
   ADDRESS *adr = rfc822_new_address ();
-
+  const char *fqdn = mutt_fqdn(1);
+  
   /* don't set realname here, it will be set later */
 
   if (option (OPTUSEDOMAIN))
   {
-    adr->mailbox = safe_malloc (strlen (NONULL(Username)) + strlen (NONULL(Fqdn)) + 2);
-    sprintf (adr->mailbox, "%s@%s", NONULL(Username), NONULL(Fqdn));
+    adr->mailbox = safe_malloc (strlen (NONULL(Username)) + strlen (NONULL(fqdn)) + 2);
+    sprintf (adr->mailbox, "%s@%s", NONULL(Username), NONULL(fqdn));
   }
   else
     adr->mailbox = safe_strdup (NONULL(Username));

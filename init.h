@@ -116,6 +116,7 @@ struct option_t MuttVars[] = {
   { "hdrs",		DT_BOOL, R_NONE, OPTHDRS, 1 },
   { "header",		DT_BOOL, R_NONE, OPTHEADER, 0 },
   { "help",		DT_BOOL, R_BOTH, OPTHELP, 1 },
+  { "hidden_host",	DT_BOOL, R_NONE, OPTHIDDENHOST, 0 },
   { "history",		DT_NUM,	 R_NONE, UL &HistSize, 10 },
   { "hostname",		DT_STR,	 R_NONE, UL &Fqdn, 0 },
 #ifdef USE_IMAP

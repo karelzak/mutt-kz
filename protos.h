@@ -113,6 +113,8 @@ char *mutt_skip_whitespace (char *);
 char *mutt_substrcpy (char *, const char *, const char *, size_t);
 char *mutt_substrdup (const char *, const char *);
 
+const char *mutt_fqdn(short);
+
 void mutt_add_child_pid (pid_t);
 void mutt_alias_menu (char *, size_t, ALIAS *);
 void mutt_block_signals (void);

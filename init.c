@@ -1394,12 +1394,8 @@ void mutt_init (int skip_sys_rc, LIST *commands)
   else
 #endif /* DOMAIN */
   {
-# ifdef HIDDEN_HOST
-    Fqdn = safe_strdup (DOMAIN);
-# else
     Fqdn = safe_malloc (strlen (DOMAIN) + strlen (NONULL(Hostname)) + 2);
     sprintf (Fqdn, "%s.%s", NONULL(Hostname), DOMAIN);
-# endif /* HIDDEN_HOST */
   }
 
   if ((p = getenv ("MAIL")))

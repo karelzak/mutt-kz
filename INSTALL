@@ -73,9 +73,6 @@ behavior:
 --enable-pop
 	enable POP3 support
 
---enable-hidden-host
-	local hostname is not part of the FQDN.
-
 --with-rx
 	use GNU rx instead of local regexp routines.  Many systems don't
 	have the POSIX compliant regcomp/regexec/regfree routines, so this
