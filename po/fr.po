@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 0.94.14i\n"
-"POT-Creation-Date: 1999-03-03 20:45+0100\n"
+"POT-Creation-Date: 1999-04-20 17:55+0200\n"
 "PO-Revision-Date: 1999-02-15 21:37+0100\n"
 "Last-Translator: Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre "
 "<Vincent.Lefevre@ens-lyon.fr>\n"
@@ -60,7 +60,7 @@ msgstr "Nom de la personne : "
 msgid "[%s = %s] Accept?"
 msgstr "[%s = %s] Accepter ?"
 
-#: alias.c:254 recvattach.c:344 recvattach.c:401
+#: alias.c:254 recvattach.c:346 recvattach.c:403
 msgid "Save to file: "
 msgstr "Sauver dans le fichier : "
 
@@ -114,7 +114,7 @@ msgstr "Type MIME non défini. Impossible de visualiser l'attachement."
 msgid "Cannot create filter"
 msgstr "Impossible de créer le filtre"
 
-#: attach.c:696 recvattach.c:375
+#: attach.c:696 recvattach.c:377
 msgid "Attachment saved."
 msgstr "Attachement sauvé."
 
@@ -275,11 +275,11 @@ msgstr "Impossible de créer le fichier temporaire !"
 msgid "Command: "
 msgstr "Commande : "
 
-#: commands.c:176 recvattach.c:680
+#: commands.c:176 recvattach.c:682
 msgid "Bounce message to: "
 msgstr "Renvoyer le message à : "
 
-#: commands.c:178 recvattach.c:682
+#: commands.c:178 recvattach.c:684
 msgid "Bounce tagged messages to: "
 msgstr "Renvoyer les messages marqués à : "
 
@@ -757,7 +757,7 @@ msgstr "Vous êtes sur la première discussion."
 msgid "Thread contains unread messages."
 msgstr "Cette discussion contient des messages non-lus."
 
-#: curs_main.c:1349 flags.c:219 thread.c:651
+#: curs_main.c:1349 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
 msgstr "L'affichage des discussions n'est pas activé."
 
@@ -2186,76 +2186,76 @@ msgstr "Erreur d'écriture ! Boîte aux lettres partielle sauvée dans %s"
 msgid "Could not reopen mailbox!"
 msgstr "La boîte aux lettres n'a pas pu être réouverte !"
 
-#: menu.c:308
+#: menu.c:313
 msgid "Jump to: "
 msgstr "Aller à : "
 
-#: menu.c:317
+#: menu.c:322
 msgid "Invalid index number."
 msgstr "Numéro d'index invalide."
 
-#: menu.c:321 menu.c:339 menu.c:375 menu.c:416 menu.c:432 menu.c:443
-#: menu.c:454 menu.c:496 menu.c:507 menu.c:520 menu.c:533 menu.c:812
+#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
+#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
 msgid "No entries."
 msgstr "Pas d'entrées."
 
-#: menu.c:336
+#: menu.c:341
 msgid "You cannot scroll down farther."
 msgstr "Défilement vers le bas impossible."
 
-#: menu.c:352
+#: menu.c:357
 msgid "You cannot scroll up farther."
 msgstr "Défilement vers le haut impossible."
 
-#: menu.c:372
+#: menu.c:377
 msgid "You are on the last page."
 msgstr "Vous êtes sur la dernière page."
 
-#: menu.c:394
+#: menu.c:399
 msgid "You are on the first page."
 msgstr "Vous êtes sur la première page."
 
-#: menu.c:473
+#: menu.c:478
 msgid "First entry is shown."
 msgstr "La première entrée est affichée."
 
-#: menu.c:493
+#: menu.c:498
 msgid "Last entry is shown."
 msgstr "La dernière entrée est affichée."
 
-#: menu.c:544
+#: menu.c:549
 msgid "You are on the last entry."
 msgstr "Vous êtes sur la dernière entrée."
 
-#: menu.c:555
+#: menu.c:560
 msgid "You are on the first entry."
 msgstr "Vous êtes sur la première entrée."
 
-#: menu.c:595 pattern.c:1054
+#: menu.c:600 pattern.c:1054
 msgid "Search for: "
 msgstr "Rechercher : "
 
-#: menu.c:596
+#: menu.c:601
 msgid "Reverse search for: "
 msgstr "Rechercher en arrière : "
 
-#: menu.c:607 pattern.c:1087
+#: menu.c:612 pattern.c:1087
 msgid "No search pattern."
 msgstr "Pas de motif de recherche."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Non trouvé."
 
-#: menu.c:688
+#: menu.c:693
 msgid "No tagged entries."
 msgstr "Pas d'entrées marquées."
 
-#: menu.c:776
+#: menu.c:781
 msgid "Search is not implemented for this menu."
 msgstr "La recherche n'est pas implémentée pour ce menu."
 
-#: menu.c:815
+#: menu.c:820
 msgid "Tagging is not supported."
 msgstr "Le marquage n'est pas supporté."
 
@@ -2922,75 +2922,75 @@ msgstr "Pipe"
 msgid "Print"
 msgstr "Imprimer"
 
-#: recvattach.c:372
+#: recvattach.c:374
 msgid "Saving..."
 msgstr "On sauve..."
 
-#: recvattach.c:435
+#: recvattach.c:437
 msgid "Attachment saved"
 msgstr "Attachement sauvé"
 
 # , c-format
-#: recvattach.c:447
+#: recvattach.c:449
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
 msgstr "ATTENTION !  Vous allez écraser %s, continuer ?"
 
-#: recvattach.c:465
+#: recvattach.c:467
 msgid "Attachment filtered."
 msgstr "Attachement filtré."
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Filter through: "
 msgstr "Filtrer avec : "
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Pipe to: "
 msgstr "Passer à la commande : "
 
 # , c-format
-#: recvattach.c:566
+#: recvattach.c:568
 #, c-format
 msgid "I dont know how to print %s attachments!"
 msgstr "Je ne sais pas comment imprimer %s attachements !"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print tagged attachment(s)?"
 msgstr "Imprimer l(es) attachement(s) marqué(s) ?"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print attachment?"
 msgstr "Imprimer l'attachement ?"
 
-#: recvattach.c:657
+#: recvattach.c:659
 msgid "You may only bounce message/rfc822 parts."
 msgstr "Vous ne pouvez renvoyer que des parties message/rfc822."
 
 # , c-format
-#: recvattach.c:693
+#: recvattach.c:695
 #, c-format
 msgid "Bounce messages to %s...?"
 msgstr "Renvoyer les messages à %s... ?"
 
 # , c-format
-#: recvattach.c:694
+#: recvattach.c:696
 #, c-format
 msgid "Bounce message to %s...?"
 msgstr "Renvoyer le message à %s... ?"
 
-#: recvattach.c:919
+#: recvattach.c:921
 msgid "Attachments"
 msgstr "Attachements"
 
-#: recvattach.c:976
+#: recvattach.c:978
 msgid "Deletion of attachments from PGP messages is unsupported."
 msgstr "L'effacement d'attachements des messages PGP n'est pas supporté."
 
-#: recvattach.c:996 recvattach.c:1013
+#: recvattach.c:998 recvattach.c:1015
 msgid "Only deletion of multipart attachments is supported."
 msgstr "Seul l'effacement d'attachements multipart est supporté."
 
-#: recvattach.c:1063
+#: recvattach.c:1065
 msgid "This operation is not currently supported for PGP messages."
 msgstr ""
 "Cette opération n'est pas actuellement supportée pour les messages PGP."
@@ -3109,12 +3109,12 @@ msgstr "Message édité. Voulez-vous vraiment l'envoyer ?"
 msgid "Sending message..."
 msgstr "Envoi du message..."
 
-#: send.c:1325
+#: send.c:1335
 #, fuzzy
 msgid "Could not send the message."
 msgstr "Impossible d'envoyer le message."
 
-#: send.c:1331
+#: send.c:1341
 msgid "Mail sent."
 msgstr "Message envoyé."
 

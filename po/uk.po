@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 1999-03-03 20:45+0100\n"
+"POT-Creation-Date: 1999-04-20 17:55+0200\n"
 "PO-Revision-Date: 1998-10-25 15:44+0200\n"
 "Last-Translator: Andrej N. Gritsenko <andrej@lucky.net>\n"
 "Language-Team: Ukrainian <uk@ua.net>\n"
@@ -58,7 +58,7 @@ msgstr "Повне ╕м'я: "
 msgid "[%s = %s] Accept?"
 msgstr "[%s = %s] В╕рно?"
 
-#: alias.c:254 recvattach.c:344 recvattach.c:401
+#: alias.c:254 recvattach.c:346 recvattach.c:403
 msgid "Save to file: "
 msgstr "Внести до файлу: "
 
@@ -110,7 +110,7 @@ msgstr "Тип MIME не визначено. Неможливо побачити додаток."
 msgid "Cannot create filter"
 msgstr "Неможливо створити ф╕льтр"
 
-#: attach.c:696 recvattach.c:375
+#: attach.c:696 recvattach.c:377
 msgid "Attachment saved."
 msgstr "Додаток записано."
 
@@ -261,11 +261,11 @@ msgstr "Не вийшло створити тимчасовий файл!"
 msgid "Command: "
 msgstr "Команда: "
 
-#: commands.c:176 recvattach.c:680
+#: commands.c:176 recvattach.c:682
 msgid "Bounce message to: "
 msgstr "Над╕слати коп╕ю листа: "
 
-#: commands.c:178 recvattach.c:682
+#: commands.c:178 recvattach.c:684
 msgid "Bounce tagged messages to: "
 msgstr "Над╕слати коп╕╖ вид╕лених лист╕в: "
 
@@ -726,7 +726,7 @@ msgstr "Це перша нитка."
 msgid "Thread contains unread messages."
 msgstr "Нитка ма╓ нечитан╕ листи."
 
-#: curs_main.c:1349 flags.c:219 thread.c:651
+#: curs_main.c:1349 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
 msgstr "Сшивання недоступне."
 
@@ -2050,77 +2050,77 @@ msgstr "Зб╕й запису! Часткову скриньку збережено у %s"
 msgid "Could not reopen mailbox!"
 msgstr "Не вийшло в╕дкрити поштову скриньку знову!"
 
-#: menu.c:308
+#: menu.c:313
 msgid "Jump to: "
 msgstr "Перейти до: "
 
-#: menu.c:317
+#: menu.c:322
 msgid "Invalid index number."
 msgstr "Нев╕рний номер перел╕ку."
 
-#: menu.c:321 menu.c:339 menu.c:375 menu.c:416 menu.c:432 menu.c:443
-#: menu.c:454 menu.c:496 menu.c:507 menu.c:520 menu.c:533 menu.c:812
+#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
+#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
 msgid "No entries."
 msgstr "Жодно╖ позиц╖╖."
 
-#: menu.c:336
+#: menu.c:341
 msgid "You cannot scroll down farther."
 msgstr "Дал╕ нижче прокручувати не можна."
 
-#: menu.c:352
+#: menu.c:357
 msgid "You cannot scroll up farther."
 msgstr "Дал╕ вище прокручувати не можна."
 
-#: menu.c:372
+#: menu.c:377
 msgid "You are on the last page."
 msgstr "Це остання стор╕нка."
 
-#: menu.c:394
+#: menu.c:399
 msgid "You are on the first page."
 msgstr "Це перша стор╕нка."
 
-#: menu.c:473
+#: menu.c:478
 msgid "First entry is shown."
 msgstr "Ви бачите першу позиц╕ю."
 
-#: menu.c:493
+#: menu.c:498
 msgid "Last entry is shown."
 msgstr "Ви бачите останню позиц╕ю."
 
-#: menu.c:544
+#: menu.c:549
 msgid "You are on the last entry."
 msgstr "Це остання позиц╕я."
 
-#: menu.c:555
+#: menu.c:560
 msgid "You are on the first entry."
 msgstr "Це перша позиц╕я."
 
-#: menu.c:595 pattern.c:1054
+#: menu.c:600 pattern.c:1054
 msgid "Search for: "
 msgstr "Шукати вираз:"
 
-#: menu.c:596
+#: menu.c:601
 msgid "Reverse search for: "
 msgstr "Зворотн╕й пошук виразу: "
 
-#: menu.c:607 pattern.c:1087
+#: menu.c:612 pattern.c:1087
 msgid "No search pattern."
 msgstr "Нема╓ виразу пошуку."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Не знайдено."
 
-#: menu.c:688
+#: menu.c:693
 #, fuzzy
 msgid "No tagged entries."
 msgstr "Жодно╖ позиц╖╖."
 
-#: menu.c:776
+#: menu.c:781
 msgid "Search is not implemented for this menu."
 msgstr "Пошук в цьому меню не орган╕зовано."
 
-#: menu.c:815
+#: menu.c:820
 msgid "Tagging is not supported."
 msgstr "Вид╕лення не п╕дтриму╓ться."
 
@@ -2752,71 +2752,71 @@ msgstr "Конв."
 msgid "Print"
 msgstr "Друк"
 
-#: recvattach.c:372
+#: recvattach.c:374
 msgid "Saving..."
 msgstr "Збереження..."
 
-#: recvattach.c:435
+#: recvattach.c:437
 msgid "Attachment saved"
 msgstr "Додаток збережено"
 
-#: recvattach.c:447
+#: recvattach.c:449
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
 msgstr "ОБЕРЕЖНО! Ви знищите ╕снуючий %s при запису. Ви певн╕?"
 
-#: recvattach.c:465
+#: recvattach.c:467
 msgid "Attachment filtered."
 msgstr "Додаток отф╕льтровано."
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Filter through: "
 msgstr "Ф╕льтрувати через: "
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Pipe to: "
 msgstr "Конве╓р: "
 
-#: recvattach.c:566
+#: recvattach.c:568
 #, c-format
 msgid "I dont know how to print %s attachments!"
 msgstr "Я не знаю, як друкувати додатки типу %s!"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print tagged attachment(s)?"
 msgstr "Друкувати вид╕лен╕ додатки?"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print attachment?"
 msgstr "Друкувати додаток?"
 
-#: recvattach.c:657
+#: recvattach.c:659
 msgid "You may only bounce message/rfc822 parts."
 msgstr "Ви можете надсилати т╕льки коп╖╖ частин message/rfc822."
 
-#: recvattach.c:693
+#: recvattach.c:695
 #, c-format
 msgid "Bounce messages to %s...?"
 msgstr "Над╕слати коп╖╖ пов╕домлень %s...?"
 
-#: recvattach.c:694
+#: recvattach.c:696
 #, c-format
 msgid "Bounce message to %s...?"
 msgstr "Над╕слати коп╖ю пов╕домлення %s...?"
 
-#: recvattach.c:919
+#: recvattach.c:921
 msgid "Attachments"
 msgstr "Додатки"
 
-#: recvattach.c:976
+#: recvattach.c:978
 msgid "Deletion of attachments from PGP messages is unsupported."
 msgstr "Видалення додатк╕в з лист╕в з PGP не п╕дтриму╓ться."
 
-#: recvattach.c:996 recvattach.c:1013
+#: recvattach.c:998 recvattach.c:1015
 msgid "Only deletion of multipart attachments is supported."
 msgstr "П╕дтриму╓ться т╕льки видалення в багаточастинних листах."
 
-#: recvattach.c:1063
+#: recvattach.c:1065
 msgid "This operation is not currently supported for PGP messages."
 msgstr "Ця операц╕я не п╕дтриму╓ться для лист╕в з PGP."
 
@@ -2931,12 +2931,12 @@ msgstr "Лист зм╕нено. Справд╕ в╕дсилати?"
 msgid "Sending message..."
 msgstr "Лист в╕дправля╓ться..."
 
-#: send.c:1325
+#: send.c:1335
 #, fuzzy
 msgid "Could not send the message."
 msgstr "в╕д╕слати лист"
 
-#: send.c:1331
+#: send.c:1341
 msgid "Mail sent."
 msgstr "Лист послано."
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.4i-1\n"
-"POT-Creation-Date: 1999-04-02 15:40-0600\n"
+"POT-Creation-Date: 1999-04-20 17:55+0200\n"
 "PO-Revision-Date: 1999-04-02 15:40-0600\n"
 "Last-Translator: Ronny Haryanto <giant@canada.com>\n"
 "Language-Team: Indonesia <id@li.org>\n"
@@ -57,7 +57,7 @@ msgstr "Nama lengkap: "
 msgid "[%s = %s] Accept?"
 msgstr "[%s = %s] Sudah betul?"
 
-#: alias.c:254 recvattach.c:344 recvattach.c:401
+#: alias.c:254 recvattach.c:346 recvattach.c:403
 msgid "Save to file: "
 msgstr "Simpan ke file: "
 
@@ -85,7 +85,8 @@ msgstr "Gagal membuka file untuk menghapus headers."
 #: attach.c:186
 #, c-format
 msgid "No mailcap compose entry for %s, creating empty file."
-msgstr "'compose' di file mailcap tidak ditemukan untuk %s, membuat file kosong."
+msgstr ""
+"'compose' di file mailcap tidak ditemukan untuk %s, membuat file kosong."
 
 #. For now, editing requires a file, no piping
 #: attach.c:246
@@ -109,7 +110,7 @@ msgstr "Jenis MIME tidak didefinisikan. Tidak bisa melihat lampiran."
 msgid "Cannot create filter"
 msgstr "Tidak bisa membuat filter"
 
-#: attach.c:696 recvattach.c:375
+#: attach.c:696 recvattach.c:377
 msgid "Attachment saved."
 msgstr "Lampiran telah disimpan."
 
@@ -162,7 +163,8 @@ msgstr "File Mask: "
 
 #: browser.c:744
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr "Urut terbalik berdasarkan (t)anggal, (a)bjad, (u)kuran atau (n)ggak diurut? "
+msgstr ""
+"Urut terbalik berdasarkan (t)anggal, (a)bjad, (u)kuran atau (n)ggak diurut? "
 
 #: browser.c:745
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
@@ -260,11 +262,11 @@ msgstr "Tidak bisa membuat file sementara!"
 msgid "Command: "
 msgstr "Perintah: "
 
-#: commands.c:176 recvattach.c:680
+#: commands.c:176 recvattach.c:682
 msgid "Bounce message to: "
 msgstr "Tembuskan surat ke: "
 
-#: commands.c:178 recvattach.c:682
+#: commands.c:178 recvattach.c:684
 msgid "Bounce tagged messages to: "
 msgstr "Tembuskan surat yang telah ditandai ke: "
 
@@ -298,15 +300,15 @@ msgstr "Pipe ke perintah: "
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Urut terbalik "
-"tan(g)gal/d(a)ri/t(e)rima/(s)ubj/(k)e/(t)hread/(n)ggak urut/(u)kuran/n(i)lai? "
+"Urut terbalik tan(g)gal/d(a)ri/t(e)rima/(s)ubj/(k)e/(t)hread/(n)ggak "
+"urut/(u)kuran/n(i)lai? "
 
 #: commands.c:335
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
-"Urut "
-"tan(g)gal/d(a)ri/t(e)rima/(s)ubj/(k)e/(t)hread/(n)ggak urut/(u)kuran/n(i)lai? "
+"Urut tan(g)gal/d(a)ri/t(e)rima/(s)ubj/(k)e/(t)hread/(n)ggak "
+"urut/(u)kuran/n(i)lai? "
 
 #: commands.c:336
 msgid "dfrsotuzc"
@@ -604,8 +606,8 @@ msgstr "Grup"
 #: curs_main.c:429
 msgid "Mailbox was externally modified.  Flags may be wrong."
 msgstr ""
-"Kotak surat diobok-obok oleh program lain. "
-"Tanda-tanda surat mungkin tidak tepat."
+"Kotak surat diobok-obok oleh program lain. Tanda-tanda surat mungkin tidak "
+"tepat."
 
 #: curs_main.c:432
 msgid "New mail in this mailbox."
@@ -730,7 +732,7 @@ msgstr "Anda di thread yang pertama."
 msgid "Thread contains unread messages."
 msgstr "Thread berisi surat yang belum dibaca."
 
-#: curs_main.c:1349 flags.c:219 thread.c:651
+#: curs_main.c:1349 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
 msgstr "Tidak disetting untuk melakukan threading."
 
@@ -828,8 +830,7 @@ msgstr "[-- Error: akhir file tak diduga! --]\n"
 #: handler.c:953
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
 msgstr ""
-"[-- Error: Tidak ada bagian Multipart/Alternative yg bisa ditampilkan! "
-"--]\n"
+"[-- Error: Tidak ada bagian Multipart/Alternative yg bisa ditampilkan! --]\n"
 
 #: handler.c:1070
 #, c-format
@@ -858,7 +859,8 @@ msgstr "[-- Stderr dari tampil-otomatis %s --]\n"
 
 #: handler.c:1228
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
-msgstr "[-- Error:  message/external-body tidak punya parameter access-type --]\n"
+msgstr ""
+"[-- Error:  message/external-body tidak punya parameter access-type --]\n"
 
 #: handler.c:1245
 #, c-format
@@ -2045,7 +2047,8 @@ msgstr "Tidak bisa mengunci kotak surat!"
 #.
 #: mbox.c:738
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr "sync: mbox dirubah, tapi tidak ada surat yang berubah! (laporkan bug ini)"
+msgstr ""
+"sync: mbox dirubah, tapi tidak ada surat yang berubah! (laporkan bug ini)"
 
 #: mbox.c:767
 msgid "Writing messages... %d (%d%%)"
@@ -2060,76 +2063,76 @@ msgstr "Gagal menulis! Sebagian dari kotak surat disimpan ke %s"
 msgid "Could not reopen mailbox!"
 msgstr "Tidak bisa membuka kembali mailbox!"
 
-#: menu.c:308
+#: menu.c:313
 msgid "Jump to: "
 msgstr "Ke: "
 
-#: menu.c:317
+#: menu.c:322
 msgid "Invalid index number."
 msgstr "Nomer indeks tidak betul."
 
-#: menu.c:321 menu.c:339 menu.c:375 menu.c:416 menu.c:432 menu.c:443
-#: menu.c:454 menu.c:496 menu.c:507 menu.c:520 menu.c:533 menu.c:812
+#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
+#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
 msgid "No entries."
 msgstr "Tidak ada entry."
 
-#: menu.c:336
+#: menu.c:341
 msgid "You cannot scroll down farther."
 msgstr "Sudah tidak bisa geser lagi. Jebol nanti."
 
-#: menu.c:352
+#: menu.c:357
 msgid "You cannot scroll up farther."
 msgstr "Sudah tidak bisa geser lagi. Jebol nanti."
 
-#: menu.c:372
+#: menu.c:377
 msgid "You are on the last page."
 msgstr "Anda di halaman terakhir."
 
-#: menu.c:394
+#: menu.c:399
 msgid "You are on the first page."
 msgstr "Anda di halaman pertama."
 
-#: menu.c:473
+#: menu.c:478
 msgid "First entry is shown."
 msgstr "Entry pertama sudah ditampilkan."
 
-#: menu.c:493
+#: menu.c:498
 msgid "Last entry is shown."
 msgstr "Entry terakhir sudah ditampilkan."
 
-#: menu.c:544
+#: menu.c:549
 msgid "You are on the last entry."
 msgstr "Anda di entry terakhir."
 
-#: menu.c:555
+#: menu.c:560
 msgid "You are on the first entry."
 msgstr "Anda di entry pertama."
 
-#: menu.c:595 pattern.c:1054
+#: menu.c:600 pattern.c:1054
 msgid "Search for: "
 msgstr "Cari: "
 
-#: menu.c:596
+#: menu.c:601
 msgid "Reverse search for: "
 msgstr "Cari mundur: "
 
-#: menu.c:607 pattern.c:1087
+#: menu.c:612 pattern.c:1087
 msgid "No search pattern."
 msgstr "Tidak ada kriteria pencarian."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Tidak ketemu."
 
-#: menu.c:688
+#: menu.c:693
 msgid "No tagged entries."
 msgstr "Tidak ada entry yang ditandai."
 
-#: menu.c:776
+#: menu.c:781
 msgid "Search is not implemented for this menu."
 msgstr "Pencarian tidak bisa dilakukan untuk menu ini."
 
-#: menu.c:815
+#: menu.c:820
 msgid "Tagging is not supported."
 msgstr "Penandaan tidak didukung."
 
@@ -2460,8 +2463,7 @@ msgid ""
 "--]\n"
 "\n"
 msgstr ""
-"[-- Error: surat ini tidak menuruti aturan spesifikasi PGP/MIME! "
-"--]\n"
+"[-- Error: surat ini tidak menuruti aturan spesifikasi PGP/MIME! --]\n"
 "\n"
 
 #: pgp.c:801
@@ -2485,7 +2487,8 @@ msgstr ""
 "\n"
 
 #: pgp.c:971
-msgid "[-- Error: create temporary file! --]\n"
+#, fuzzy
+msgid "[-- Error: could not create temporary file! --]\n"
 msgstr "[-- Error: tidak bisa membuat file sementara! --]\n"
 
 #: pgp.c:980
@@ -2497,10 +2500,13 @@ msgstr ""
 "\n"
 
 #: pgp.c:988
+#, fuzzy
 msgid ""
 "\n"
-"[-- Akhir data yg di-encrypt dgn PGP/MIME --]\n"
+"[-- End of PGP/MIME encrypted data --]\n"
 msgstr ""
+"\n"
+"[-- Akhir data yang ditandatangani dg PGP/MIME --]\n"
 
 #: pgp.c:1070
 msgid "Can't open PGP subprocess!"
@@ -2750,71 +2756,71 @@ msgstr ""
 msgid "Print"
 msgstr "Cetak"
 
-#: recvattach.c:372
+#: recvattach.c:374
 msgid "Saving..."
 msgstr "Menyimpan..."
 
-#: recvattach.c:435
+#: recvattach.c:437
 msgid "Attachment saved"
 msgstr "Lampiran telah disimpan"
 
-#: recvattach.c:447
+#: recvattach.c:449
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
 msgstr "PERHATIAN! Anda akan menimpa %s, lanjut?"
 
-#: recvattach.c:465
+#: recvattach.c:467
 msgid "Attachment filtered."
 msgstr "Lampiran telah difilter."
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Filter through: "
 msgstr "Filter melalui: "
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Pipe to: "
 msgstr "Pipe ke: "
 
-#: recvattach.c:566
+#: recvattach.c:568
 #, c-format
 msgid "I dont know how to print %s attachments!"
 msgstr "Saya tidak tahu bagaimana mencetak lampiran %s!"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print tagged attachment(s)?"
 msgstr "Cetak lampiran yang ditandai?"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print attachment?"
 msgstr "Cetak lampiran?"
 
-#: recvattach.c:657
+#: recvattach.c:659
 msgid "You may only bounce message/rfc822 parts."
 msgstr "Anda hanya bisa menembuskan bagian-bagian message/rfc822."
 
-#: recvattach.c:693
+#: recvattach.c:695
 #, c-format
 msgid "Bounce messages to %s...?"
 msgstr "Tembuskan surat-surat ke %s...?"
 
-#: recvattach.c:694
+#: recvattach.c:696
 #, c-format
 msgid "Bounce message to %s...?"
 msgstr "Tembuskan surat ke %s...?"
 
-#: recvattach.c:919
+#: recvattach.c:921
 msgid "Attachments"
 msgstr "Lampiran"
 
-#: recvattach.c:976
+#: recvattach.c:978
 msgid "Deletion of attachments from PGP messages is unsupported."
 msgstr "Penghapusan lampiran dari surat PGP tidak didukung."
 
-#: recvattach.c:996 recvattach.c:1013
+#: recvattach.c:998 recvattach.c:1015
 msgid "Only deletion of multipart attachments is supported."
 msgstr "Hanya penghapusan lampiran dari surat multi bagian yang didukung."
 
-#: recvattach.c:1063
+#: recvattach.c:1065
 msgid "This operation is not currently supported for PGP messages."
 msgstr "Operasi ini belum didukung untuk surat-surat PGP."
 
@@ -2929,11 +2935,11 @@ msgstr "Surat telah di-edit. Yakin mau dikirim?"
 msgid "Sending message..."
 msgstr "Mengirim surat..."
 
-#: send.c:1325
+#: send.c:1335
 msgid "Could not send the message."
 msgstr "Tidak bisa mengirim surat."
 
-#: send.c:1331
+#: send.c:1341
 msgid "Mail sent."
 msgstr "Surat telah dikirim."
 

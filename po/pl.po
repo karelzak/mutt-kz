@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-0.95i\n"
-"POT-Creation-Date: 1999-03-03 20:45+0100\n"
+"POT-Creation-Date: 1999-04-20 17:55+0200\n"
 "PO-Revision-Date: 1998-12-17 13:12+0100\n"
 "Last-Translator: Pawe³ Dziekoñski <pdziekonski@pkmk486.ch.pwr.wroc.pl>\n"
 "Language-Team: POLISH <pl@li.org>\n"
@@ -59,7 +59,7 @@ msgstr "Nazwisko: "
 msgid "[%s = %s] Accept?"
 msgstr "[%s = %s] Potwierdzasz?"
 
-#: alias.c:254 recvattach.c:344 recvattach.c:401
+#: alias.c:254 recvattach.c:346 recvattach.c:403
 msgid "Save to file: "
 msgstr "Zachowaj do pliku: "
 
@@ -111,7 +111,7 @@ msgstr "Typ MIME nie zosta³ zdefiniowany. Nie mogê wy¶wietliæ za³±cznika."
 msgid "Cannot create filter"
 msgstr "Nie mogê utworzyæ filtru"
 
-#: attach.c:696 recvattach.c:375
+#: attach.c:696 recvattach.c:377
 msgid "Attachment saved."
 msgstr "Za³±cznik zachowany."
 
@@ -262,11 +262,11 @@ msgstr "Nie mogê utorzyæ pliku tymczasowego!"
 msgid "Command: "
 msgstr "Polecenie: "
 
-#: commands.c:176 recvattach.c:680
+#: commands.c:176 recvattach.c:682
 msgid "Bounce message to: "
 msgstr "Wy¶lij kopiê listu do: "
 
-#: commands.c:178 recvattach.c:682
+#: commands.c:178 recvattach.c:684
 msgid "Bounce tagged messages to: "
 msgstr "Wy¶lij kopiê zaznaczonych listów do: "
 
@@ -728,7 +728,7 @@ msgstr "To pierwszy w±tek."
 msgid "Thread contains unread messages."
 msgstr "Watek zawiera nie przeczytane listy."
 
-#: curs_main.c:1349 flags.c:219 thread.c:651
+#: curs_main.c:1349 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
 msgstr "W±tkowanie nie w³±czone."
 
@@ -2106,76 +2106,76 @@ msgstr "Zapis niemo¿liwy! Zapisa³em czê¶æ foldera poczty do %s"
 msgid "Could not reopen mailbox!"
 msgstr "Nie mogê ponownie otworzyæ foldera poczty!"
 
-#: menu.c:308
+#: menu.c:313
 msgid "Jump to: "
 msgstr "Przeskocz do:"
 
-#: menu.c:317
+#: menu.c:322
 msgid "Invalid index number."
 msgstr "Niew³a¶ciwy numer indeksu."
 
-#: menu.c:321 menu.c:339 menu.c:375 menu.c:416 menu.c:432 menu.c:443
-#: menu.c:454 menu.c:496 menu.c:507 menu.c:520 menu.c:533 menu.c:812
+#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
+#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
 msgid "No entries."
 msgstr "Brak pozycji."
 
-#: menu.c:336
+#: menu.c:341
 msgid "You cannot scroll down farther."
 msgstr "Nie mo¿esz ju¿ ni¿ej przewin±æ."
 
-#: menu.c:352
+#: menu.c:357
 msgid "You cannot scroll up farther."
 msgstr "Nie mo¿esz ju¿ wy¿ej przewin±æ."
 
-#: menu.c:372
+#: menu.c:377
 msgid "You are on the last page."
 msgstr "Jeste¶ na ostatniej stronie."
 
-#: menu.c:394
+#: menu.c:399
 msgid "You are on the first page."
 msgstr "Jeste¶ na pierwszej stronie."
 
-#: menu.c:473
+#: menu.c:478
 msgid "First entry is shown."
 msgstr "Pokazana jest pierwsza pozycja."
 
-#: menu.c:493
+#: menu.c:498
 msgid "Last entry is shown."
 msgstr "Pokazana jest ostatnia pozycja."
 
-#: menu.c:544
+#: menu.c:549
 msgid "You are on the last entry."
 msgstr "Jeste¶ na ostatniej pozycji."
 
-#: menu.c:555
+#: menu.c:560
 msgid "You are on the first entry."
 msgstr "Jeste¶ na pierwszej pozycji."
 
-#: menu.c:595 pattern.c:1054
+#: menu.c:600 pattern.c:1054
 msgid "Search for: "
 msgstr "Szukaj frazy: "
 
-#: menu.c:596
+#: menu.c:601
 msgid "Reverse search for: "
 msgstr "Szukaj frazy w odwrotn± stronê: "
 
-#: menu.c:607 pattern.c:1087
+#: menu.c:612 pattern.c:1087
 msgid "No search pattern."
 msgstr "Nie ustali³e¶ wzorca poszukiwañ."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Nic nie znaleziono."
 
-#: menu.c:688
+#: menu.c:693
 msgid "No tagged entries."
 msgstr "Brak zaznaczonych pozycji listy."
 
-#: menu.c:776
+#: menu.c:781
 msgid "Search is not implemented for this menu."
 msgstr "Poszukiwanie nie jest mo¿liwe w tym menu."
 
-#: menu.c:815
+#: menu.c:820
 msgid "Tagging is not supported."
 msgstr "Zaznaczanie nie jest obs³ugiwane."
 
@@ -2809,71 +2809,71 @@ msgstr "Rura"
 msgid "Print"
 msgstr "Drukuj"
 
-#: recvattach.c:372
+#: recvattach.c:374
 msgid "Saving..."
 msgstr "Zachowywanie..."
 
-#: recvattach.c:435
+#: recvattach.c:437
 msgid "Attachment saved"
 msgstr "Za³±cznik zachowany"
 
-#: recvattach.c:447
+#: recvattach.c:449
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
 msgstr "UWAGA!  Zastêpujesz zbiór %s, kontynuowaæ?"
 
-#: recvattach.c:465
+#: recvattach.c:467
 msgid "Attachment filtered."
 msgstr "Za³±cznik przefiltrowany."
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Filter through: "
 msgstr "Przefiltruj przez: "
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Pipe to: "
 msgstr "Pu¶æ przez rurê do: "
 
-#: recvattach.c:566
+#: recvattach.c:568
 #, c-format
 msgid "I dont know how to print %s attachments!"
 msgstr "Nie wiem jak wydrukowaæ %s za³±czników!"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print tagged attachment(s)?"
 msgstr "Drukowaæ zaznaczony za³±cznik/i?"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print attachment?"
 msgstr "Drukowaæ za³±cznik?"
 
-#: recvattach.c:657
+#: recvattach.c:659
 msgid "You may only bounce message/rfc822 parts."
 msgstr "Mo¿esz odbijaæ jedynie czê¶ciowe wiadomo¶ci zgodne z RFC 822."
 
-#: recvattach.c:693
+#: recvattach.c:695
 #, c-format
 msgid "Bounce messages to %s...?"
 msgstr "Odbiæ wiadomo¶ci do %s...?"
 
-#: recvattach.c:694
+#: recvattach.c:696
 #, c-format
 msgid "Bounce message to %s...?"
 msgstr "Odbiæ wiadomo¶æ do %s...?"
 
-#: recvattach.c:919
+#: recvattach.c:921
 msgid "Attachments"
 msgstr "Za³±czniki"
 
-#: recvattach.c:976
+#: recvattach.c:978
 msgid "Deletion of attachments from PGP messages is unsupported."
 msgstr "Kasowanie za³±czników z listów PGP nie jest mo¿liwe."
 
-#: recvattach.c:996 recvattach.c:1013
+#: recvattach.c:998 recvattach.c:1015
 msgid "Only deletion of multipart attachments is supported."
 msgstr "Mo¿liwe jest jedynie kasowanie wieloczê¶ciowych za³±czników."
 
-#: recvattach.c:1063
+#: recvattach.c:1065
 msgid "This operation is not currently supported for PGP messages."
 msgstr "ten rodzaj operacji nie jest obecnie mo¿liwy dla listów PGP."
 
@@ -2988,12 +2988,12 @@ msgstr "Wiadomo¶æ by³a zmieniana. Czy na pewno wys³aæ?"
 msgid "Sending message..."
 msgstr "Wysy³anie wiadomo¶ci..."
 
-#: send.c:1325
+#: send.c:1335
 #, fuzzy
 msgid "Could not send the message."
 msgstr "wy¶lij list"
 
-#: send.c:1331
+#: send.c:1341
 msgid "Mail sent."
 msgstr "Poczta wys³ana."
 

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 0.95.1i\n"
-"POT-Creation-Date: 1999-03-03 20:45+0100\n"
+"POT-Creation-Date: 1999-04-20 17:55+0200\n"
 "PO-Revision-Date: 1999-09-10 10:44 +0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
@@ -57,7 +57,7 @@ msgstr "Полное имя: "
 msgid "[%s = %s] Accept?"
 msgstr "[%s = %s] Принять?"
 
-#: alias.c:254 recvattach.c:344 recvattach.c:401
+#: alias.c:254 recvattach.c:346 recvattach.c:403
 msgid "Save to file: "
 msgstr "Сохранить в файл: "
 
@@ -109,7 +109,7 @@ msgstr "MIME-тип не определен.  Невозможно просмотреть вложение."
 msgid "Cannot create filter"
 msgstr "Не удалось создать фильтр"
 
-#: attach.c:696 recvattach.c:375
+#: attach.c:696 recvattach.c:377
 msgid "Attachment saved."
 msgstr "Вложение сохранено."
 
@@ -260,11 +260,11 @@ msgstr "Не удалось создать временный файл!"
 msgid "Command: "
 msgstr "Команда: "
 
-#: commands.c:176 recvattach.c:680
+#: commands.c:176 recvattach.c:682
 msgid "Bounce message to: "
 msgstr "Перенаправить сообщение: "
 
-#: commands.c:178 recvattach.c:682
+#: commands.c:178 recvattach.c:684
 msgid "Bounce tagged messages to: "
 msgstr "Перенаправить сообщения: "
 
@@ -728,7 +728,7 @@ msgstr "Это первая дискуссия"
 msgid "Thread contains unread messages."
 msgstr "В дискуссии присутствуют непрочитанные сообщения."
 
-#: curs_main.c:1349 flags.c:219 thread.c:651
+#: curs_main.c:1349 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
 msgstr "Группировка по дискуссиям не включена."
 
@@ -2123,76 +2123,76 @@ msgstr "Запись не удалась!  Неполный почтовый ящик сохранен в %s"
 msgid "Could not reopen mailbox!"
 msgstr "Не удалось заново открыть почтовый ящик!"
 
-#: menu.c:308
+#: menu.c:313
 msgid "Jump to: "
 msgstr "Перейти к: "
 
-#: menu.c:317
+#: menu.c:322
 msgid "Invalid index number."
 msgstr "Неверный индекс."
 
-#: menu.c:321 menu.c:339 menu.c:375 menu.c:416 menu.c:432 menu.c:443
-#: menu.c:454 menu.c:496 menu.c:507 menu.c:520 menu.c:533 menu.c:812
+#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
+#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
 msgid "No entries."
 msgstr "Записи отсутствуют."
 
-#: menu.c:336
+#: menu.c:341
 msgid "You cannot scroll down farther."
 msgstr "Прокрутка дальше невозможна."
 
-#: menu.c:352
+#: menu.c:357
 msgid "You cannot scroll up farther."
 msgstr "Прокрутка дальше невозможна."
 
-#: menu.c:372
+#: menu.c:377
 msgid "You are on the last page."
 msgstr "Вы уже на последней странице."
 
-#: menu.c:394
+#: menu.c:399
 msgid "You are on the first page."
 msgstr "Вы уже на первой странице."
 
-#: menu.c:473
+#: menu.c:478
 msgid "First entry is shown."
 msgstr "Первая запись уже на экране."
 
-#: menu.c:493
+#: menu.c:498
 msgid "Last entry is shown."
 msgstr "Последняя запись уже на экране."
 
-#: menu.c:544
+#: menu.c:549
 msgid "You are on the last entry."
 msgstr "Вы уже на последней записи."
 
-#: menu.c:555
+#: menu.c:560
 msgid "You are on the first entry."
 msgstr "Вы уже на первой записи."
 
-#: menu.c:595 pattern.c:1054
+#: menu.c:600 pattern.c:1054
 msgid "Search for: "
 msgstr "Поиск: "
 
-#: menu.c:596
+#: menu.c:601
 msgid "Reverse search for: "
 msgstr "Обратный поиск: "
 
-#: menu.c:607 pattern.c:1087
+#: menu.c:612 pattern.c:1087
 msgid "No search pattern."
 msgstr "Нет образца поиска."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Не найдено."
 
-#: menu.c:688
+#: menu.c:693
 msgid "No tagged entries."
 msgstr "Нет отмеченных записей."
 
-#: menu.c:776
+#: menu.c:781
 msgid "Search is not implemented for this menu."
 msgstr "Поиск не реализован в этом меню."
 
-#: menu.c:815
+#: menu.c:820
 msgid "Tagging is not supported."
 msgstr "Возможность пометки не поддерживается."
 
@@ -2826,71 +2826,71 @@ msgstr "Передать программе"
 msgid "Print"
 msgstr "Напечатать"
 
-#: recvattach.c:372
+#: recvattach.c:374
 msgid "Saving..."
 msgstr "Сохраняется..."
 
-#: recvattach.c:435
+#: recvattach.c:437
 msgid "Attachment saved"
 msgstr "Вложение сохранено"
 
-#: recvattach.c:447
+#: recvattach.c:449
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
 msgstr "ПРЕДУПРЕЖДЕНИЕ!  Вы собираетесь перезаписать %s, продолжать?"
 
-#: recvattach.c:465
+#: recvattach.c:467
 msgid "Attachment filtered."
 msgstr "Вложение обработано."
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Filter through: "
 msgstr "Пропустить через: "
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Pipe to: "
 msgstr "Передать программе: "
 
-#: recvattach.c:566
+#: recvattach.c:568
 #, c-format
 msgid "I dont know how to print %s attachments!"
 msgstr "Неизвестно как печатать %s вложения!"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print tagged attachment(s)?"
 msgstr "Напечатать отмеченные вложения?"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print attachment?"
 msgstr "Напечатать вложение?"
 
-#: recvattach.c:657
+#: recvattach.c:659
 msgid "You may only bounce message/rfc822 parts."
 msgstr "Вы можете перепосылать только части типа message/rfc822."
 
-#: recvattach.c:693
+#: recvattach.c:695
 #, c-format
 msgid "Bounce messages to %s...?"
 msgstr "Перепослать сообщения %s...?"
 
-#: recvattach.c:694
+#: recvattach.c:696
 #, c-format
 msgid "Bounce message to %s...?"
 msgstr "Перепослать сообщение %s...?"
 
-#: recvattach.c:919
+#: recvattach.c:921
 msgid "Attachments"
 msgstr "Вложения"
 
-#: recvattach.c:976
+#: recvattach.c:978
 msgid "Deletion of attachments from PGP messages is unsupported."
 msgstr "Удаление вложений из PGP-сообщений не поддерживается."
 
-#: recvattach.c:996 recvattach.c:1013
+#: recvattach.c:998 recvattach.c:1015
 msgid "Only deletion of multipart attachments is supported."
 msgstr "Для составных вложений поддерживается только удаление."
 
-#: recvattach.c:1063
+#: recvattach.c:1065
 msgid "This operation is not currently supported for PGP messages."
 msgstr "Для PGP сообщений эта операция пока не поддерживается."
 
@@ -3005,11 +3005,11 @@ msgstr "Сообщение отредактировано.  На самом деле посылать?"
 msgid "Sending message..."
 msgstr "Сообщение посылается..."
 
-#: send.c:1325
+#: send.c:1335
 msgid "Could not send the message."
 msgstr "Не удалось отправить сообщение"
 
-#: send.c:1331
+#: send.c:1341
 msgid "Mail sent."
 msgstr "Сообщение послано."
 

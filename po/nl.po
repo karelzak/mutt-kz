@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-03-03 20:45+0100\n"
+"POT-Creation-Date: 1999-04-20 17:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgstr "Naam: "
 msgid "[%s = %s] Accept?"
 msgstr "[%s = %s] Accepteren?"
 
-#: alias.c:254 recvattach.c:344 recvattach.c:401
+#: alias.c:254 recvattach.c:346 recvattach.c:403
 msgid "Save to file: "
 msgstr "Opslaan als: "
 
@@ -106,7 +106,7 @@ msgstr "MIME type is niet gedefinieerd. Kan bijlage niet weergeven."
 msgid "Cannot create filter"
 msgstr "Filter kan niet worden aangemaakt."
 
-#: attach.c:696 recvattach.c:375
+#: attach.c:696 recvattach.c:377
 msgid "Attachment saved."
 msgstr "Bijlage opgeslagen."
 
@@ -259,11 +259,11 @@ msgstr "Tijdelijk bestand kon niet worden aangelegd!"
 msgid "Command: "
 msgstr "Commando: "
 
-#: commands.c:176 recvattach.c:680
+#: commands.c:176 recvattach.c:682
 msgid "Bounce message to: "
 msgstr "Bericht doorsturen naar: "
 
-#: commands.c:178 recvattach.c:682
+#: commands.c:178 recvattach.c:684
 msgid "Bounce tagged messages to: "
 msgstr "Gemarkeerde berichten doorsturen naar: "
 
@@ -723,7 +723,7 @@ msgstr "U bent al bij de eerste thread."
 msgid "Thread contains unread messages."
 msgstr "Thread bevat ongelezen berichten"
 
-#: curs_main.c:1349 flags.c:219 thread.c:651
+#: curs_main.c:1349 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
 msgstr "Het weergeven van threads is niet ingeschakeld."
 
@@ -2031,77 +2031,77 @@ msgstr "Opslaan mislukt! Deel-mailbox opgeslagen als %s"
 msgid "Could not reopen mailbox!"
 msgstr "Kon mailbox niet opnieuw openen!"
 
-#: menu.c:308
+#: menu.c:313
 msgid "Jump to: "
 msgstr "Ga naar: "
 
-#: menu.c:317
+#: menu.c:322
 msgid "Invalid index number."
 msgstr "Ongeldig Indexnummer."
 
-#: menu.c:321 menu.c:339 menu.c:375 menu.c:416 menu.c:432 menu.c:443
-#: menu.c:454 menu.c:496 menu.c:507 menu.c:520 menu.c:533 menu.c:812
+#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
+#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
 msgid "No entries."
 msgstr "Geen items"
 
-#: menu.c:336
+#: menu.c:341
 msgid "You cannot scroll down farther."
 msgstr "U kunt niet verder naar beneden gaan."
 
-#: menu.c:352
+#: menu.c:357
 msgid "You cannot scroll up farther."
 msgstr "U kunt niet verder naar boven gaan."
 
-#: menu.c:372
+#: menu.c:377
 msgid "You are on the last page."
 msgstr "U bent op de laatste pagina."
 
-#: menu.c:394
+#: menu.c:399
 msgid "You are on the first page."
 msgstr "U bent op de eerste pagina."
 
-#: menu.c:473
+#: menu.c:478
 msgid "First entry is shown."
 msgstr "Het eerste item wordt weergegeven."
 
-#: menu.c:493
+#: menu.c:498
 msgid "Last entry is shown."
 msgstr "Het laatste item wordt weergegeven."
 
-#: menu.c:544
+#: menu.c:549
 msgid "You are on the last entry."
 msgstr "U bent op het laatste item."
 
-#: menu.c:555
+#: menu.c:560
 msgid "You are on the first entry."
 msgstr "U bent op het eerste item."
 
-#: menu.c:595 pattern.c:1054
+#: menu.c:600 pattern.c:1054
 msgid "Search for: "
 msgstr "Zoek naar: "
 
-#: menu.c:596
+#: menu.c:601
 msgid "Reverse search for: "
 msgstr "Zoek achteruit naar: "
 
-#: menu.c:607 pattern.c:1087
+#: menu.c:612 pattern.c:1087
 msgid "No search pattern."
 msgstr "Geen zoekpatroon."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Niet gevonden."
 
-#: menu.c:688
+#: menu.c:693
 #, fuzzy
 msgid "No tagged entries."
 msgstr "Geen geselecteerde items."
 
-#: menu.c:776
+#: menu.c:781
 msgid "Search is not implemented for this menu."
 msgstr "In dit menu kan niet worden gezocht."
 
-#: menu.c:815
+#: menu.c:820
 msgid "Tagging is not supported."
 msgstr "Markeren is niet ondersteund."
 
@@ -2733,71 +2733,71 @@ msgstr "Filteren"
 msgid "Print"
 msgstr "Druk af"
 
-#: recvattach.c:372
+#: recvattach.c:374
 msgid "Saving..."
 msgstr "Bezig met opslaan..."
 
-#: recvattach.c:435
+#: recvattach.c:437
 msgid "Attachment saved"
 msgstr "Bijlage opgeslagen."
 
-#: recvattach.c:447
+#: recvattach.c:449
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
 msgstr "Waarschuwing! Bestand %s bestaat al. Overschrijven?"
 
-#: recvattach.c:465
+#: recvattach.c:467
 msgid "Attachment filtered."
 msgstr "Bijlage gefilterd."
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Filter through: "
 msgstr "Filter door: "
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Pipe to: "
 msgstr "Doorgeven aan(pipe): "
 
-#: recvattach.c:566
+#: recvattach.c:568
 #, c-format
 msgid "I dont know how to print %s attachments!"
 msgstr "Kan %s bijlagen niet afdrukken!"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print tagged attachment(s)?"
 msgstr "Gemarkeerde bericht(en) afdrukken?"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print attachment?"
 msgstr "Bijlage afdrukken?"
 
-#: recvattach.c:657
+#: recvattach.c:659
 msgid "You may only bounce message/rfc822 parts."
 msgstr "U kunt alleen message/rfc882-gedeelten doorsturen!"
 
-#: recvattach.c:693
+#: recvattach.c:695
 #, c-format
 msgid "Bounce messages to %s...?"
 msgstr "Berichten aan %s doorsturen ?"
 
-#: recvattach.c:694
+#: recvattach.c:696
 #, c-format
 msgid "Bounce message to %s...?"
 msgstr "Berichten aan %s doorsturen ?"
 
-#: recvattach.c:919
+#: recvattach.c:921
 msgid "Attachments"
 msgstr "Bijlagen"
 
-#: recvattach.c:976
+#: recvattach.c:978
 msgid "Deletion of attachments from PGP messages is unsupported."
 msgstr "Het wissen van bijlagen uit PGP-berichten is niet ondersteund."
 
-#: recvattach.c:996 recvattach.c:1013
+#: recvattach.c:998 recvattach.c:1015
 msgid "Only deletion of multipart attachments is supported."
 msgstr "Kan alleen multipart-bijlagen wissen."
 
-#: recvattach.c:1063
+#: recvattach.c:1065
 msgid "This operation is not currently supported for PGP messages."
 msgstr "Deze operatie is op dit moment niet ondersteund voor PGP-berichten."
 
@@ -2912,12 +2912,12 @@ msgstr "Bericht veranderd. Werkelijk versturen?"
 msgid "Sending message..."
 msgstr "Verstuur bericht..."
 
-#: send.c:1325
+#: send.c:1335
 #, fuzzy
 msgid "Could not send the message."
 msgstr "Verstuur het bericht"
 
-#: send.c:1331
+#: send.c:1341
 msgid "Mail sent."
 msgstr "Bericht verstuurd."
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.95.3i\n"
-"POT-Creation-Date: 1999-03-03 20:45+0100\n"
+"POT-Creation-Date: 1999-04-20 17:55+0200\n"
 "PO-Revision-Date: 1999-02-13 01:12+0100\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -57,7 +57,7 @@ msgstr "Vlastní jméno: "
 msgid "[%s = %s] Accept?"
 msgstr "[%s = %s] Pøijmout?"
 
-#: alias.c:254 recvattach.c:344 recvattach.c:401
+#: alias.c:254 recvattach.c:346 recvattach.c:403
 msgid "Save to file: "
 msgstr "Ulo¾it jako: "
 
@@ -109,7 +109,7 @@ msgstr "MIME typ není definován, nelze zobrazit pøílohu."
 msgid "Cannot create filter"
 msgstr "Nelze vytvoøit filtr"
 
-#: attach.c:696 recvattach.c:375
+#: attach.c:696 recvattach.c:377
 msgid "Attachment saved."
 msgstr "Pøíloha ulo¾ena."
 
@@ -260,11 +260,11 @@ msgstr "Doèasný soubor nelze vytvoøit!"
 msgid "Command: "
 msgstr "Pøíkaz: "
 
-#: commands.c:176 recvattach.c:680
+#: commands.c:176 recvattach.c:682
 msgid "Bounce message to: "
 msgstr "Pøeposlat zprávu na: "
 
-#: commands.c:178 recvattach.c:682
+#: commands.c:178 recvattach.c:684
 msgid "Bounce tagged messages to: "
 msgstr "Pøeposlat oznaèené zprávy na: "
 
@@ -731,7 +731,7 @@ msgstr "Jste na prvním vláknu."
 msgid "Thread contains unread messages."
 msgstr "Vlákno obsahuje nepøeètené zprávy."
 
-#: curs_main.c:1349 flags.c:219 thread.c:651
+#: curs_main.c:1349 flags.c:219 thread.c:661
 msgid "Threading is not enabled."
 msgstr "Vlákna nejsou podporována."
 
@@ -2119,76 +2119,76 @@ msgstr "Ulo¾ení se nezdaøilo! Èást schránky byla ulo¾ena do %s"
 msgid "Could not reopen mailbox!"
 msgstr "Schránku nelze znovu otevøít!"
 
-#: menu.c:308
+#: menu.c:313
 msgid "Jump to: "
 msgstr "Pøeskoèit na: "
 
-#: menu.c:317
+#: menu.c:322
 msgid "Invalid index number."
 msgstr "Nesprávné indexové èíslo."
 
-#: menu.c:321 menu.c:339 menu.c:375 menu.c:416 menu.c:432 menu.c:443
-#: menu.c:454 menu.c:496 menu.c:507 menu.c:520 menu.c:533 menu.c:812
+#: menu.c:326 menu.c:344 menu.c:380 menu.c:421 menu.c:437 menu.c:448
+#: menu.c:459 menu.c:501 menu.c:512 menu.c:525 menu.c:538 menu.c:817
 msgid "No entries."
 msgstr "®ádné polo¾ky."
 
-#: menu.c:336
+#: menu.c:341
 msgid "You cannot scroll down farther."
 msgstr "Dolù ji¾ rolovat nemù¾ete."
 
-#: menu.c:352
+#: menu.c:357
 msgid "You cannot scroll up farther."
 msgstr "Nahoru ji¾ rolovat nemù¾ete."
 
-#: menu.c:372
+#: menu.c:377
 msgid "You are on the last page."
 msgstr "Jste na poslední stránce."
 
-#: menu.c:394
+#: menu.c:399
 msgid "You are on the first page."
 msgstr "Jste na první stránce."
 
-#: menu.c:473
+#: menu.c:478
 msgid "First entry is shown."
 msgstr "První polo¾ka je zobrazena."
 
-#: menu.c:493
+#: menu.c:498
 msgid "Last entry is shown."
 msgstr "Poslední polo¾ka je zobrazena."
 
-#: menu.c:544
+#: menu.c:549
 msgid "You are on the last entry."
 msgstr "Jste na poslední polo¾ce."
 
-#: menu.c:555
+#: menu.c:560
 msgid "You are on the first entry."
 msgstr "Jste na první polo¾ce."
 
-#: menu.c:595 pattern.c:1054
+#: menu.c:600 pattern.c:1054
 msgid "Search for: "
 msgstr "Vyhledat: "
 
-#: menu.c:596
+#: menu.c:601
 msgid "Reverse search for: "
 msgstr "Vyhledat obráceným smìrem: "
 
-#: menu.c:607 pattern.c:1087
+#: menu.c:612 pattern.c:1087
 msgid "No search pattern."
 msgstr "Není ¾ádný vzor k vyhledání."
 
-#: menu.c:637 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
+#: menu.c:642 pager.c:1828 pager.c:1844 pager.c:1931 pattern.c:1152
 msgid "Not found."
 msgstr "Nenalezeno."
 
-#: menu.c:688
+#: menu.c:693
 msgid "No tagged entries."
 msgstr "®ádné polo¾ky nejsou oznaèeny."
 
-#: menu.c:776
+#: menu.c:781
 msgid "Search is not implemented for this menu."
 msgstr "V tomto menu není hledání pøístupné."
 
-#: menu.c:815
+#: menu.c:820
 msgid "Tagging is not supported."
 msgstr "Oznaèování není podporováno."
 
@@ -2827,71 +2827,71 @@ msgstr "Poslat rourou"
 msgid "Print"
 msgstr "Tisk"
 
-#: recvattach.c:372
+#: recvattach.c:374
 msgid "Saving..."
 msgstr "Ukládám..."
 
-#: recvattach.c:435
+#: recvattach.c:437
 msgid "Attachment saved"
 msgstr "Pøíloha ulo¾ena"
 
-#: recvattach.c:447
+#: recvattach.c:449
 #, c-format
 msgid "WARNING!  You are about to overwrite %s, continue?"
 msgstr "VAROVÁNÍ! Takto pøepí¹ete %s. Pokraèovat?"
 
-#: recvattach.c:465
+#: recvattach.c:467
 msgid "Attachment filtered."
 msgstr "Pøíloha byla filtrována."
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Filter through: "
 msgstr "Filtrovat pøes: "
 
-#: recvattach.c:531
+#: recvattach.c:533
 msgid "Pipe to: "
 msgstr "Poslat rourou do: "
 
-#: recvattach.c:566
+#: recvattach.c:568
 #, c-format
 msgid "I dont know how to print %s attachments!"
 msgstr "Nevím, jak vytisknout tento poèet (%s) pøíloh."
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print tagged attachment(s)?"
 msgstr "Vytisknout oznaèené pøílohy?"
 
-#: recvattach.c:629
+#: recvattach.c:631
 msgid "Print attachment?"
 msgstr "Vytisknout pøílohu?"
 
-#: recvattach.c:657
+#: recvattach.c:659
 msgid "You may only bounce message/rfc822 parts."
 msgstr "Pøeposlat lze pouze èásti typu 'message/rfc822'."
 
-#: recvattach.c:693
+#: recvattach.c:695
 #, c-format
 msgid "Bounce messages to %s...?"
 msgstr "Pøeposlat zprávy na %s...?"
 
-#: recvattach.c:694
+#: recvattach.c:696
 #, c-format
 msgid "Bounce message to %s...?"
 msgstr "Pøeposlat zprávu na %s...?"
 
-#: recvattach.c:919
+#: recvattach.c:921
 msgid "Attachments"
 msgstr "Pøílohy"
 
-#: recvattach.c:976
+#: recvattach.c:978
 msgid "Deletion of attachments from PGP messages is unsupported."
 msgstr "Mazání pøíloh PGP zpráv není podporováno."
 
-#: recvattach.c:996 recvattach.c:1013
+#: recvattach.c:998 recvattach.c:1015
 msgid "Only deletion of multipart attachments is supported."
 msgstr "Podporováno je pouze mazání pøíloh o více èástech."
 
-#: recvattach.c:1063
+#: recvattach.c:1065
 msgid "This operation is not currently supported for PGP messages."
 msgstr "Tento pøíkaz není u PGP zpráv podporován."
 
@@ -3006,11 +3006,11 @@ msgstr "Zpráva editována. Skuteènì odeslat?"
 msgid "Sending message..."
 msgstr "Posílám zprávu..."
 
-#: send.c:1325
+#: send.c:1335
 msgid "Could not send the message."
 msgstr "Zprávu nelze odeslat."
 
-#: send.c:1331
+#: send.c:1341
 msgid "Mail sent."
 msgstr "Zpráva odeslána."
 

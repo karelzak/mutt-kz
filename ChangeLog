@@ -1,3 +1,53 @@
+Mon Apr 12 21:02:35 1999  Thomas Roessler  <roessler@guug.de>
+
+	* po/sk.po, po/id.po, configure.in: new languages: id, sk.
+
+	* po/id.po, po/sk.po, configure.in: New translations: id, sk.
+
+Tue Mar 30 23:50:33 1999  Thomas Roessler  <roessler@guug.de>
+
+	* pager.c: Fix a pager failure for long messages. From Liviu.
+
+Tue Mar 16 21:42:06 1999  Thomas Roessler  <roessler@guug.de>
+
+	* thread.c: Detect thread loops.
+
+Mon Mar 15 15:32:19 1999  Thomas Roessler  <roessler@guug.de>
+
+	* send.c: Cleanly handle fcc when the user unsets it and the message is
+	postponed.
+
+	* main.c: Fix compilation problems under digital unix.
+
+	* configure.in: Fix sendmail autodetection.
+
+	* color.c: Fix colorN, N > 7 for Slang's curses emulation. From Vikas.
+
+Tue Mar  9 13:34:52 1999  Thomas Roessler  <roessler@guug.de>
+
+	* send.c, menu.c, handler.c: Fixes.
+
+Wed Mar  3 20:06:33 1999  Thomas Roessler  <roessler@guug.de>
+
+	* rfc2047.c: ups.
+
+	* po/uk.po, po/ru.po, po/pl.po, po/nl.po, po/it.po,
+	po/fr.po, po/es.po, po/de.po, po/cs.po, ChangeLog: releasing
+	0.95.4.
+
+	* sendlib.c, rfc2047.c, reldate.h, curs_main.c, VERSION,
+	ChangeLog: releasing 0.96.1.
+
+	* reldate.h, regex.c, VERSION, Makefile.am, ChangeLog:
+	release preparations; back-port a couple of things from
+	unstable.
+
+	* curs_main.c: Vikas' resort_index.3.
+
+	* sendlib.c, imap.c, from.c, curs_main.c:
+	from.c: Backport from unstable.
+	others: latest imap related patches.
+
 Wed Mar  3 19:44:24 1999  Thomas Roessler  <roessler@guug.de>
 
 	* reldate.h, regex.c, VERSION, Makefile.am, ChangeLog:
