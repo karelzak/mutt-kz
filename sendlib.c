@@ -415,9 +415,9 @@ int mutt_write_mime_header (BODY *a, FILE *f)
        * even when they aren't needed.
        */
 
-      if (!strcasecmp (p->attribute, "boundary") && !strcmp (buffer, tmp))
-	snprintf (buffer, sizeof (buffer), "\"%s\"", tmp);
-      
+      if (!strcasecmp (p->attribute, "boundary") && !strcmp (buffer, p->value))
+	snprintf (buffer, sizeof (buffer), "\"%s\"", p->value);
+
       tmplen = mutt_strlen (buffer) + mutt_strlen (p->attribute) + 1;
 
       if (len + tmplen + 2 > 76)
