@@ -1183,7 +1183,7 @@ void mutt_body_handler (BODY *b, STATE *s)
   }
   else if (b->type == TYPEMESSAGE)
   {
-    if (!strcasecmp ("rfc822", b->subtype) || !strcasecmp ("news", b->subtype))
+    if(mutt_is_message_type(b->type, b->subtype))
       handler = message_handler;
     else if (!strcasecmp ("delivery-status", b->subtype))
       plaintext = 1;

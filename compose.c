@@ -796,7 +796,7 @@ int mutt_send_menu (HEADER *msg,   /* structure for new message */
 
       case OP_SAVE:
 	CHECK_COUNT;
-	mutt_save_attachment_list (NULL, menu->tagprefix, menu->tagprefix ? msg->content : idx[menu->current]->content);
+	mutt_save_attachment_list (NULL, menu->tagprefix, menu->tagprefix ?  msg->content : idx[menu->current]->content, NULL);
 	break;
 
       case OP_PRINT:

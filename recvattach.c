@@ -120,9 +120,7 @@ ATTACHPTR **mutt_gen_attach_list (BODY *m,
       new->level = level;
 
       /* We don't support multipart messages in the compose menu yet */
-      if (!compose && m->type == TYPEMESSAGE &&
-	  (!strcasecmp (m->subtype, "rfc822") ||
-	   !strcasecmp (m->subtype, "news")) && is_multipart (m->parts))
+      if (!compose && mutt_is_message_type(m->type, m->subtype) && is_multipart (m->parts))
       {
 	idx = mutt_gen_attach_list (m->parts, idx, idxlen, idxmax, level + 1, compose);
       }
@@ -162,10 +160,8 @@ const char *mutt_attach_fmt (char *dest,
   {
     case 'd':
       snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
-      if (aptr->content->type == TYPEMESSAGE && MsgFmt &&
-	  aptr->content->hdr &&
-	  (!strcasecmp ("rfc822", aptr->content->subtype) ||
-	   !strcasecmp ("news", aptr->content->subtype)))
+      if (mutt_is_message_type(aptr->content->type, aptr->content->subtype) &&
+	  MsgFmt && aptr->content->hdr)
       {
 	char s[SHORT_STRING];
 	_mutt_make_string (s, sizeof (s), MsgFmt, NULL, aptr->content->hdr,
@@ -255,32 +251,66 @@ int mutt_tag_attach (MUTTMENU *menu, int n)
   return (((ATTACHPTR **) menu->data)[n]->content->tagged = !((ATTACHPTR **) menu->data)[n]->content->tagged);
 }
 
-static void mutt_query_save_attachment (FILE *fp, BODY *body)
+int mutt_is_message_type (int type, const char *subtype)
 {
-  char buf[_POSIX_PATH_MAX], tfile[_POSIX_PATH_MAX];
+  if (type != TYPEMESSAGE)
+    return 0;
 
-  if (fp && body->filename)
-    strfcpy (buf, body->filename, sizeof (buf));
-  else
-    buf[0] = 0;
-  if (mutt_get_field ("Save to file: ", buf, sizeof (buf), M_FILE | M_CLEAR) != 0 || !buf[0])
-    return;
-  mutt_expand_path (buf, sizeof (buf));
-  if (mutt_check_overwrite (body->filename, buf, tfile, sizeof (tfile), 0))
-    return;
-  mutt_message ("Saving...");
-  if (mutt_save_attachment (fp, body, tfile, 0) == 0)
-    mutt_message ("Attachment saved.");
+  subtype = NONULL(subtype);
+  return (strcasecmp (subtype, "rfc822") == 0 || strcasecmp (subtype, "news") == 0);
 }
 
-void mutt_save_attachment_list (FILE *fp, int tag, BODY *top)
+static int mutt_query_save_attachment (FILE *fp, BODY *body, HEADER *hdr)
+{
+  char buf[_POSIX_PATH_MAX], tfile[_POSIX_PATH_MAX];
+  
+  if (body->filename)
+    strfcpy (buf, body->filename, sizeof (buf));
+  else  if(body->hdr && mutt_is_message_type(body->type, body->subtype))
+    mutt_default_save(buf, sizeof(buf), body->hdr);
+  else
+    buf[0] = 0;
+  
+  if (mutt_get_field ("Save to file: ", buf, sizeof (buf), M_FILE | M_CLEAR) != 0 
+      || !buf[0])
+    return -1;
+
+  mutt_expand_path (buf, sizeof (buf));
+
+  if(fp && hdr && body->hdr && mutt_is_message_type (body->type, body->subtype))
+  {
+    struct stat st;
+    
+    /* check to make sure that this file is really the one the user wants */
+    if (!mutt_save_confirm (buf, &st))
+    {
+      CLEARLINE (LINES-1);
+      return -1;
+    }
+    strfcpy(tfile, buf, sizeof(tfile));
+  }
+  else if (mutt_check_overwrite (body->filename, buf, tfile, sizeof (tfile), 0))
+    return -1;
+  
+  mutt_message ("Saving...");
+  if (mutt_save_attachment (fp, body, tfile, 0, hdr) == 0)
+  {
+    mutt_message ("Attachment saved.");
+    return 0;
+  }
+  
+  return -1;
+  
+}
+
+void mutt_save_attachment_list (FILE *fp, int tag, BODY *top, HEADER *hdr)
 {
   for (; top; top = top->next)
   {
     if (!tag || top->tagged)
-      mutt_query_save_attachment (fp, top);
+      mutt_query_save_attachment (fp, top, hdr);
     else if (top->parts)
-      mutt_save_attachment_list (fp, 1, top->parts);
+      mutt_save_attachment_list (fp, 1, top->parts, hdr);
     if (!tag)
       return;
   }
@@ -370,15 +400,6 @@ void mutt_print_attachment_list (FILE *fp, int tag, BODY *top)
   if (query_quadoption (OPT_PRINT, tag ? "Print tagged attachment(s)?" : "Print attachment?") != M_YES)
     return;
   print_attachment_list (fp, tag, top);
-}
-
-int mutt_is_message_type (int type, char *subtype)
-{
-  if (type != TYPEMESSAGE)
-    return 0;
-  if (strcasecmp (subtype, "rfc822") == 0 || strcasecmp (subtype, "news") == 0)
-    return 1;
-  return 0;
 }
 
 static void
@@ -493,9 +514,10 @@ create_tagged_message (const char *tempfile,
 }
 
 /* op		flag to ci_send_message()
-   tag		operate on tagged attachments?
-   hdr		current message
-   body		current attachment */
+ * tag		operate on tagged attachments?
+ * hdr		current message
+ * body		current attachment 
+ */
 static void reply_attachment_list (int op, int tag, HEADER *hdr, BODY *body)
 {
   HEADER *hn;
@@ -706,14 +728,11 @@ void mutt_view_attachments (HEADER *hdr)
 	break;
 
       case OP_SAVE:
-	mutt_save_attachment_list (fp, menu->tagprefix, menu->tagprefix ? cur : idx[menu->current]->content);
+	mutt_save_attachment_list (fp, menu->tagprefix, menu->tagprefix ?  cur : idx[menu->current]->content, hdr);
 	if (option (OPTRESOLVE) && menu->current < menu->max - 1)
-	{
 	  menu->current++;
-	  menu->redraw = REDRAW_MOTION_RESYNCH;
-	}
-	else
-	  menu->redraw = REDRAW_CURRENT;
+      
+        menu->redraw = REDRAW_MOTION_RESYNCH | REDRAW_FULL;
 	break;
 
       case OP_DELETE:

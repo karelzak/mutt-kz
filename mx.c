@@ -315,7 +315,6 @@ int mx_get_magic (const char *path)
   {
     dprint (1, (debugfile, "mx_get_magic(): unable to stat %s: %s (errno %d).\n",
 		path, strerror (errno), errno));
-    mutt_perror (path);
     return (-1);
   }
 

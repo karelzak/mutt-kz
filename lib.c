@@ -19,6 +19,8 @@
 #include "mutt.h"
 #include "mutt_curses.h"
 #include "mime.h"
+#include "mailbox.h"
+#include "mx.h"
 
 #include <string.h>
 #include <ctype.h>
@@ -1063,4 +1065,56 @@ FILE *mutt_open_read (const char *path, pid_t *thepid)
     *thepid = -1;
   }
   return (f);
+}
+
+/* returns 1 if OK to proceed, 0 to abort */
+int mutt_save_confirm (const char *s, struct stat *st)
+{
+  char tmp[_POSIX_PATH_MAX];
+  int ret = 1;
+  int magic = 0;
+
+  magic = mx_get_magic (s);
+
+  if (stat (s, st) != -1)
+  {
+    if (magic == -1)
+    {
+      mutt_error ("%s is not a mailbox!", s);
+      return 0;
+    }
+
+    if (option (OPTCONFIRMAPPEND))
+    {
+      snprintf (tmp, sizeof (tmp), "Append messages to %s?", s);
+      if (mutt_yesorno (tmp, 1) < 1)
+	ret = 0;
+    }
+  }
+  else
+  {
+    if (magic != M_IMAP)
+    {
+      st->st_mtime = 0;
+      st->st_atime = 0;
+
+      if (errno == ENOENT)
+      {
+	if (option (OPTCONFIRMCREATE))
+	{
+	  snprintf (tmp, sizeof (tmp), "Create %s?", s);
+	  if (mutt_yesorno (tmp, 1) < 1)
+	    ret = 0;
+	}
+      }
+      else
+      {
+	mutt_perror (s);
+	return 0;
+      }
+    }
+  }
+
+  CLEARLINE (LINES-1);
+  return (ret);
 }

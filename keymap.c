@@ -457,6 +457,10 @@ void km_init (void)
   km_bindkey ("9", MENU_PAGER, OP_JUMP, NULL);
 
   km_bindkey ("<return>", MENU_ALIAS, OP_TAG, NULL);
+
+  /* edit-to (default "t") hides generic tag-entry in Compose menu
+     This will bind tag-entry to  "T" in the Compose menu */
+  km_bindkey ("T", MENU_COMPOSE, OP_TAG, NULL);
 }
 
 void km_error_key (int menu)

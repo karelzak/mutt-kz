@@ -391,6 +391,7 @@ int mutt_write_mime_body (BODY *a, FILE *f)
     if (!(p = mutt_get_parameter ("boundary", a->parameter)))
     {
       dprint (1, (debugfile, "mutt_write_mime_body(): no boundary parameter found!\n"));
+      mutt_error ("No boundary parameter found! [report this error]");
       return (-1);
     }
     strfcpy (boundary, p, sizeof (boundary));
@@ -424,6 +425,7 @@ int mutt_write_mime_body (BODY *a, FILE *f)
   if ((fpin = fopen (a->filename, "r")) == NULL)
   {
     dprint(1,(debugfile, "write_mime_body: %s no longer exists!\n",a->filename));
+    mutt_error ("%s no longer exists!", a->filename);
     return -1;
   }
 
@@ -1555,7 +1557,13 @@ int mutt_send_message (HEADER *msg, const char *fcc)
   mutt_write_rfc822_header (tempfp, msg->env, msg->content, 0);
   fputc ('\n', tempfp); /* tie off the header. */
 
-  mutt_write_mime_body (msg->content, tempfp);
+  if ((mutt_write_mime_body (msg->content, tempfp) == -1))
+  {
+    fclose(tempfp);
+    unlink (tempfile);
+    return (-1);
+  }
+  
   if (fclose (tempfp) != 0)
   {
     mutt_perror (tempfile);

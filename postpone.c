@@ -245,7 +245,7 @@ int mutt_get_postponed (CONTEXT *ctx, HEADER *hdr, HEADER **cur)
 	/* avoid Content-Disposition: header with temporary filename */
 	b->use_disp = 0;
       mutt_adv_mktemp (file);
-      if (mutt_save_attachment (msg->fp, b, file, 0) == -1)
+      if (mutt_save_attachment (msg->fp, b, file, 0, NULL) == -1)
       {
 	mutt_free_envelope (&hdr->env);
 	mutt_free_body (&hdr->content);
@@ -265,7 +265,7 @@ int mutt_get_postponed (CONTEXT *ctx, HEADER *hdr, HEADER **cur)
   else
   {
     mutt_mktemp (file);
-    if (mutt_save_attachment (msg->fp, h->content, file, 0) == -1)
+    if (mutt_save_attachment (msg->fp, h->content, file, 0, NULL) == -1)
     {
       mutt_free_envelope (&hdr->env);
       mx_close_message (&msg);

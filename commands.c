@@ -506,58 +506,6 @@ void mutt_display_address (ADDRESS *adr)
   mutt_message ("%s", buf);
 }
 
-/* returns 1 if OK to proceed, 0 to abort */
-static int save_confirm_func (const char *s, struct stat *st)
-{
-  char tmp[_POSIX_PATH_MAX];
-  int ret = 1;
-  int magic = 0;
-
-  magic = mx_get_magic (s);
-
-  if (stat (s, st) != -1)
-  {
-    if (magic == -1)
-    {
-      mutt_error ("%s is not a mailbox!", s);
-      return 0;
-    }
-
-    if (option (OPTCONFIRMAPPEND))
-    {
-      snprintf (tmp, sizeof (tmp), "Append messages to %s?", s);
-      if (mutt_yesorno (tmp, 1) < 1)
-	ret = 0;
-    }
-  }
-  else
-  {
-    if (magic != M_IMAP)
-    {
-      st->st_mtime = 0;
-      st->st_atime = 0;
-
-      if (errno == ENOENT)
-      {
-	if (option (OPTCONFIRMCREATE))
-	{
-	  snprintf (tmp, sizeof (tmp), "Create %s?", s);
-	  if (mutt_yesorno (tmp, 1) < 1)
-	    ret = 0;
-	}
-      }
-      else
-      {
-	mutt_perror (s);
-	return 0;
-      }
-    }
-  }
-
-  CLEARLINE (LINES-1);
-  return (ret);
-}
-
 /* returns 0 if the copy/save was successful, or -1 on error/abort */
 int mutt_save_message (HEADER *h, int delete, int decode, int *redraw)
 {
@@ -627,7 +575,7 @@ int mutt_save_message (HEADER *h, int delete, int decode, int *redraw)
   mutt_expand_path (buf, sizeof (buf));
 
   /* check to make sure that this file is really the one the user wants */
-  if (!save_confirm_func (buf, &st))
+  if (!mutt_save_confirm (buf, &st))
   {
     CLEARLINE (LINES-1);
     return (-1);

@@ -210,6 +210,7 @@ int mutt_get_password (char *, char *, size_t);
 int mutt_get_postponed (CONTEXT *, HEADER *, HEADER **);
 int mutt_is_autoview (char *);
 int mutt_is_mail_list (ADDRESS *);
+int mutt_is_message_type(int, const char *);
 int mutt_is_list_recipient (ADDRESS *a);
 int mutt_is_text_type (int, char *);
 int mutt_is_valid_mailbox (const char *);
@@ -231,7 +232,7 @@ int mutt_pipe_attachment (FILE *, BODY *, const char *, char *);
 int mutt_pipe_message (HEADER *);
 int mutt_print_attachment (FILE *, BODY *);
 int mutt_query_complete (char *, size_t);
-int mutt_save_attachment (FILE *, BODY *, char *, int);
+int mutt_save_attachment (FILE *, BODY *, char *, int, HEADER *);
 int mutt_save_message (HEADER *, int, int, int *);
 int mutt_search_command (int, int);
 int mutt_send_menu (HEADER *, char *, size_t, HEADER *);
@@ -248,6 +249,7 @@ int mutt_write_rfc822_header (FILE *, ENVELOPE *, BODY *, int);
 int mutt_yesorno (const char *, int);
 void mutt_cache_index_colors(CONTEXT *);
 void mutt_set_header_color(CONTEXT *, HEADER *);
+int mutt_save_confirm (const char  *, struct stat *);
 
 int mh_valid_message (const char *);
 

@@ -23,6 +23,8 @@
 #include "rfc1524.h"
 #include "mime.h"
 #include "pager.h"
+#include "mailbox.h"
+#include "copy.h"
 
 #include <ctype.h>
 #include <stdlib.h>
@@ -246,9 +248,7 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
   rfc1524_entry *entry = NULL;
   int rc = -1;
 
-  is_message = (a->type == TYPEMESSAGE && a->subtype &&
-		  (!strcasecmp (a->subtype,"rfc822") ||
-		   !strcasecmp (a->subtype, "news")));
+  is_message = mutt_is_message_type(a->type, a->subtype);
   use_mailcap = (flag == M_MAILCAP ||
 		(flag == M_REGULAR && mutt_needs_mailcap (a)));
   snprintf (type, sizeof (type), "%s/%s", TYPE (a->type), a->subtype);
@@ -306,7 +306,7 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
     if (fp)
     {
       /* recv case: we need to save the attachment to a file */
-      if (mutt_save_attachment (fp, a, tempfile, 0) == -1)
+      if (mutt_save_attachment (fp, a, tempfile, 0, NULL) == -1)
 	goto return_error;
     }
 
@@ -403,7 +403,7 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
     if (flag == M_AS_TEXT)
     {
       /* just let me see the raw data */
-      if (mutt_save_attachment (fp, a, pagerfile, 0))
+      if (mutt_save_attachment (fp, a, pagerfile, 0, NULL))
 	goto return_error;
     }
     else
@@ -523,31 +523,61 @@ int mutt_pipe_attachment (FILE *fp, BODY *b, const char *path, char *outfile)
 }
 
 /* returns 0 on success, -1 on error */
-int mutt_save_attachment (FILE *fp, BODY *m, char *path, int flags)
+int mutt_save_attachment (FILE *fp, BODY *m, char *path, int flags, HEADER *hdr)
 {
   if (fp)
   {
-    /* In recv mode, extract from folder and decode */
+    
+    /* recv mode */
 
-    STATE s;
-  
-    memset (&s, 0, sizeof (s));
-    if (flags == M_SAVE_APPEND)
-      s.fpout = safe_fopen (path, "a");
-    else
-      s.fpout = fopen (path, "w");
-    if (s.fpout == NULL)
+    if(hdr && m->hdr && mutt_is_message_type(m->type, m->subtype))
     {
-      mutt_perror ("fopen");
-      return (-1);
+      
+      /* message type attachments are written to mail folders. */
+      
+      HEADER *hn;
+      CONTEXT ctx;
+      int r = -1;
+      
+      hn = m->hdr;
+      hn->msgno = hdr->msgno; /* required for MH/maildir */
+
+      if (mx_open_mailbox(path, M_APPEND | M_QUIET, &ctx) == NULL)
+	return -1;
+      
+      if(mutt_append_message(&ctx, Context, hn, 0, 0) == 0)
+      {
+	mutt_message("Attachment saved.");
+	r = 0;
+      }
+	
+      mx_close_mailbox(&ctx);
+      return r;
     }
-    fseek ((s.fpin = fp), m->offset, 0);
-    mutt_decode_attachment (m, &s);
-
-    if (fclose (s.fpout) != 0)
+    else
     {
-      mutt_perror ("fclose");
-      return (-1);
+      /* In recv mode, extract from folder and decode */
+      
+      STATE s;
+      
+      memset (&s, 0, sizeof (s));
+      if (flags == M_SAVE_APPEND)
+	s.fpout = safe_fopen (path, "a");
+      else
+	s.fpout = fopen (path, "w");
+      if (s.fpout == NULL)
+      {
+	mutt_perror ("fopen");
+	return (-1);
+      }
+      fseek ((s.fpin = fp), m->offset, 0);
+      mutt_decode_attachment (m, &s);
+      
+      if (fclose (s.fpout) != 0)
+      {
+	mutt_perror ("fclose");
+	return (-1);
+      }
     }
   }
   else
@@ -626,9 +656,7 @@ int mutt_decode_save_attachment (FILE *fp, BODY *m, char *path,
     m->length = st.st_size;
     m->encoding = ENC8BIT;
     m->offset = 0;
-    if (m->type == TYPEMESSAGE && m->subtype &&
-		  (!strcasecmp (m->subtype,"rfc822") ||
-		   !strcasecmp (m->subtype, "news")))
+    if (mutt_is_message_type(m->type, m->subtype))
       m->parts = mutt_parse_messageRFC822 (s.fpin, m);
   }
   else
@@ -699,7 +727,7 @@ int mutt_print_attachment (FILE *fp, BODY *a)
 
     /* in recv mode, save file to newfile first */
     if (fp)
-      mutt_save_attachment (fp, a, newfile, 0);
+      mutt_save_attachment (fp, a, newfile, 0, NULL);
 
     strfcpy (command, entry->printcommand, sizeof (command));
     piped = rfc1524_expand_command (a, newfile, type, command, sizeof (command));

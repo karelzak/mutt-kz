@@ -2050,7 +2050,7 @@ mutt_pager (const char *banner, const char *fname, int do_color, pager_t *extra)
       case OP_SAVE:
 	if (IsAttach (extra))
 	{
-	  mutt_save_attachment_list (extra->fp, 0, extra->bdy);
+	  mutt_save_attachment_list (extra->fp, 0, extra->bdy, extra->hdr);
 	  break;
 	}
 	/* fall through */
