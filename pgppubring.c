@@ -790,6 +790,9 @@ static KEYINFO *pgp_read_keyring(const char *fname)
       case PT_NAME:
       {
 	char *chr;
+	
+	if(!addr) break;
+	
 	chr = safe_malloc(l);
 	memcpy(chr, buff + 1, l - 1);
 	chr[l-1] = '\0';
@@ -830,13 +833,18 @@ KEYINFO *pgp_read_secring(struct pgp_vinfo *pgp)
 void pgp_close_keydb (KEYINFO **ki)
 {
   KEYINFO *tmp, *k = *ki;
+  PGPUID *uid;
   LIST *q;
   
   while (k)
   {
     if (k->keyid) safe_free ((void **)&k->keyid);
     for(q = k->address; q; q = q-> next)
+    {
+      uid = (PGPUID *) q->data;
+      safe_free((void **)&uid->addr);
       safe_free((void **)&q->data);
+    }
     tmp = k;
     k = k->next;
     safe_free ((void **)&tmp);
