@@ -139,7 +139,7 @@ static int dotlock_file (const char *path, int retry)
       prev_size = sb.st_size;
 
     /* only try to remove the lock if the file is not changing */
-    if (prev_size == sb.st_size && ++count >= retry ? MAXLOCKATTEMPT : 0)
+    if (prev_size == sb.st_size && ++count >= (retry ? MAXLOCKATTEMPT : 0))
     {
       if (retry && mutt_yesorno ("Lock count exceeded, remove lock?", 1) == 1)
       {
@@ -248,7 +248,7 @@ int mx_lock_file (const char *path, int fd, int excl, int dot, int timeout)
       prev_sb = sb;
 
     /* only unlock file if it is unchanged */
-    if (prev_sb.st_size == sb.st_size && ++count >= timeout?MAXLOCKATTEMPT:0)
+    if (prev_sb.st_size == sb.st_size && ++count >= (timeout?MAXLOCKATTEMPT:0))
     {
       if (timeout)
 	mutt_error ("Timeout exceeded while attempting fcntl lock!");
@@ -282,7 +282,7 @@ int mx_lock_file (const char *path, int fd, int excl, int dot, int timeout)
       prev_sb=sb;
 
     /* only unlock file if it is unchanged */
-    if (prev_sb.st_size == sb.st_size && ++count >= timeout?MAXLOCKATTEMPT:0)
+    if (prev_sb.st_size == sb.st_size && ++count >= (timeout?MAXLOCKATTEMPT:0))
     {
       if (timeout)
 	mutt_error ("Timeout exceeded while attempting flock lock!");
