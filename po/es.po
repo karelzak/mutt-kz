@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mutt\n"
 "POT-Creation-Date: 1999-09-25 08:52+0200\n"
-"PO-Revision-Date: 1999-09-19 18:27+02:00\n"
+"PO-Revision-Date: 1999-09-30 16:38+02:00\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
 "MIME-Version: 1.0\n"
@@ -148,9 +148,8 @@ msgid "Directory [%s], File mask: %s"
 msgstr "Directorio [%s], patrón de archivos: %s"
 
 #: browser.c:519
-#, fuzzy
 msgid "IMAP folder browsing is not currently supported"
-msgstr "Esta operación al momento no es soportada en mensajes PGP."
+msgstr "Ver carpetas IMAP no está soportado al momento"
 
 #: browser.c:545 browser.c:735 browser.c:818
 msgid "No files match the file mask"
@@ -1475,7 +1474,7 @@ msgstr "suprimir caracteres desde el cursor hasta el final del renglón"
 
 #: keymap_defs.h:66
 msgid "delete all chars on the line"
-msgstr "suprimir todos lod caracteres en el renglón"
+msgstr "suprimir todos los caracteres en el renglón"
 
 #: keymap_defs.h:67
 msgid "delete the word in front of the cursor"
