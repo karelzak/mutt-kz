@@ -1062,6 +1062,18 @@ signatures based upon the recipients.
 list of recipients.  Adding a recipient after replying or editing the
 message will NOT cause any send-hook to be executed.
 
+<sect1>Choosing the PGP key of the recipient<label id="pgp-hook">
+<p>
+Usage: <tt/pgp-hook/ <em/pattern/ <em/keyid/
+
+When encrypting messages with PGP, you may want to associate a certain
+PGP key with a given e-mail address automatically, either because the
+recipient's public key can't be deduced from the destination address,
+or because, for some reasons, you need to override the key Mutt would
+normally use.  The pgp-hook command provides a method by which you can
+specify the ID of the public key to be used when encrypting messages to
+a certain recipient.
+
 <sect1>Adding key sequences to the keyboard buffer<label id="push">
 <p>
 Usage: <tt/push/ <em/string/

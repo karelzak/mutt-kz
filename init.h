@@ -335,6 +335,9 @@ struct command_t Commands[] = {
   { "mbox-hook",	mutt_parse_hook,	M_MBOXHOOK },
   { "mono",		mutt_parse_mono,	0 },
   { "my_hdr",		parse_my_hdr,		0 },
+#ifdef _PGPPATH
+  { "pgp-hook",		mutt_parse_hook,	M_PGPHOOK },
+#endif /* _PGPPATH */
   { "push",		mutt_parse_push,	0 },
   { "reset",		parse_set,		M_SET_RESET },
   { "save-hook",	mutt_parse_hook,	M_SAVEHOOK },

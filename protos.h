@@ -103,6 +103,9 @@ char *mutt_generate_boundary (void);
 char *mutt_gen_msgid (void);
 char *mutt_get_name (ADDRESS *);
 char *mutt_get_parameter (const char *, PARAMETER *);
+#ifdef _PGPPATH
+char *mutt_pgp_hook (ADDRESS *);
+#endif /* _PGPPATH */
 char *mutt_read_line (char *, size_t *, FILE *, int *);
 char *mutt_strlower (char *);
 char *mutt_skip_whitespace (char *);
