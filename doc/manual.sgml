@@ -664,7 +664,6 @@ defined maps are:
 <item>compose
 <item>pager
 <item>pgp
-<item>url
 </itemize>
 
 <em/key/ is the key (or key sequence) you wish to bind.  To specify a
@@ -683,18 +682,18 @@ In addition, <em/key/ may consist of:
 \r		carriage return
 \n		newline
 \e		escape
-up		up arrow
-down		down arrow
-left		left arrow
-right		right arrow
-pageup		Page Up
-pagedown	Page Down
-backspace	Backspace
-delete		Delete
-insert		Insert
-enter		Enter
-home		Home
-end		End
+<up>		up arrow
+<down>		down arrow
+<left>		left arrow
+<right>		right arrow
+<pageup>	Page Up
+<pagedown>	Page Down
+<backspace>	Backspace
+<delete>	Delete
+<insert>	Insert
+<enter>		Enter
+<home>		Home
+<end>		End
 f1		function key 1
 f10		function key 10
 </verb></tscreen>

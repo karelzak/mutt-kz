@@ -770,8 +770,6 @@
 
   +o  pgp
 
-  +o  url
-
   _k_e_y is the key (or key sequence) you wish to bind.  To specify a
   control character, use the sequence _\_C_x, where _x is the letter of the
   control character (for example, to specify control-A use ``\Ca'').
@@ -790,22 +788,24 @@
 
 
 
+
+
   \t             tab
   \r             carriage return
   \n             newline
   \e             escape
-  up              up arrow
-  down            down arrow
-  left            left arrow
-  right           right arrow
-  pageup          Page Up
-  pagedown        Page Down
-  backspace       Backspace
-  delete          Delete
-  insert          Insert
-  enter           Enter
-  home            Home
-  end             End
+  <up>            up arrow
+  <down>          down arrow
+  <left>          left arrow
+  <right>         right arrow
+  <pageup>        Page Up
+  <pagedown>      Page Down
+  <backspace>     Backspace
+  <delete>        Delete
+  <insert>        Insert
+  <enter>         Enter
+  <home>          Home
+  <end>           End
   f1              function key 1
   f10             function key 10
 
