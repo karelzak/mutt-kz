@@ -1151,6 +1151,10 @@
   With this command, you can specify an order in which mutt will attempt
   to present headers to you when viewing messages.
 
+  ``unhdr_order *'' will clear all previous headers from the order list,
+  thus removing the header order effects set by the system-wide startup
+  file.
+
 
 
        hdr_order From Date: From: To: Cc: Subject:
@@ -1181,9 +1185,8 @@
 
 
 
+
   Also see the ``fcc-save-hook'' command.
-
-
 
 
   33..1144..  SSppeecciiffyy ddeeffaauulltt FFcccc:: mmaaiillbbooxx wwhheenn ccoommppoossiinngg
@@ -1383,7 +1386,6 @@
   metacharacter with special meaning may be quoted by preceding it with
   a backslash.
 
-
   The period ``.'' matches any single character.  The caret ``^'' and
   the dollar sign ``$'' are metacharacters that respectively match the
   empty string at the beginning and end of a line.
@@ -1513,8 +1515,8 @@
      \\yy Matches the empty string at either the beginning or the end of a
         word.
 
-     \\BB Matches the empty string within a word.
 
+     \\BB Matches the empty string within a word.
 
      \\<< Matches the empty string at the beginning of a word.
 
@@ -1578,6 +1580,7 @@
 
 
   Where EXPR, USER, ID, and SUBJECT are ``regular expressions''.
+
 
   *) The forms <[MAX], >[MIN], [MIN]- and -[MAX] are allowed, too.
 
@@ -1646,7 +1649,6 @@
   be specified as:
 
   +o  >_o_f_f_s_e_t (messages older than _o_f_f_s_e_t units)
-
 
   +o  <_o_f_f_s_e_t (messages newer than _o_f_f_s_e_t units)
 
@@ -1777,13 +1779,14 @@
   matching addresses, return a non-zero exit code and a one line error
   message.
 
+
   An example multiple response output:
 
 
-  Searching database ... 20 entries ... 3 matching:
-  me@cs.hmc.edu           Michael Elkins  mutt dude
-  blong@fiction.net       Brandon Long    mutt and more
-  roessler@guug.de        Thomas Roessler mutt pgp
+       Searching database ... 20 entries ... 3 matching:
+       me@cs.hmc.edu           Michael Elkins  mutt dude
+       blong@fiction.net       Brandon Long    mutt and more
+       roessler@guug.de        Thomas Roessler mutt pgp
 
 
 
@@ -1972,6 +1975,9 @@
   consider using a specialized program, such as fetchmail.
 
 
+
+
+
   44..1122..  SSttaarrtt aa WWWWWW BBrroowwsseerr oonn UURRLLss ((EEXXTTEERRNNAALL))
 
   If a message contains URLs (_u_n_i_f_i_e_d _r_e_s_s_o_u_r_c_e _l_o_c_a_t_o_r = address in the
@@ -2035,8 +2041,6 @@
 
 
        [-- image/gif is unsupported (use 'v' to view this part) --]
-
-
 
 
 
@@ -2106,7 +2110,6 @@
 
   A sample mime.types file comes with the Mutt distribution, and should
   contain most of the MIME types you are likely to use.
-
   If Mutt can not determine the mime type by the extension of the file
   you attach, it will look at the file.  If the file is free of binary
   information, Mutt will assume that the file is plain text, and mark it
@@ -2237,11 +2240,14 @@
 
 
 
+
+
   55..33..22..11..  OOppttiioonnaall FFiieellddss
 
   In addition to the required content-type and view command fields, you
   can add semi-colon ';' separated fields to set flags and other
   options.  Mutt recognizes the following optional fields:
+
      ccooppiioouussoouuttppuutt
         This flag tells Mutt that the command passes possibly large
         amounts of text on stdout.  This causes Mutt to invoke a pager
@@ -2302,8 +2308,7 @@
         viewer with a line in the mailcap file like:
 
 
-          text/html; lynx %s; nametemplate=%s.html
-
+     text/html; lynx %s; nametemplate=%s.html
 
 
 
@@ -2368,10 +2373,9 @@
 
   For ``Autoview'', Mutt will choose the third entry because of the
   copiousoutput tag.  For interactive viewing, Mutt will run the program
-  RunningX to determine if it should use the first entry.  If the pro-
-  gram returns non-zero, Mutt will use the second entry for interactive
-  viewing.
-
+  RunningX to determine if it should use the first entry.  If the
+  program returns non-zero, Mutt will use the second entry for interac-
+  tive viewing.
 
 
   55..33..22..33..  CCoommmmaanndd EExxppaannssiioonn
@@ -2430,10 +2434,6 @@
 
 
   This mailcap file shows quite a number of examples:
-
-
-
-
 
 
 
@@ -2616,6 +2616,8 @@
 
   +o  ``hdr_order'' _h_e_a_d_e_r [ _h_e_a_d_e_r ... ]
 
+  +o  ``unhdr_order'' _h_e_a_d_e_r [ _h_e_a_d_e_r ... ]
+
   +o  ``lists'' _a_d_d_r_e_s_s [ _a_d_d_r_e_s_s ... ]
 
   +o  ``unlists'' _a_d_d_r_e_s_s [ _a_d_d_r_e_s_s ... ]
@@ -2698,8 +2700,6 @@
   %n      index number
   %r      address which alias expands to
   %t      character which indicates if the alias is tagged for inclusion (*/ )
-
-
 
 
 
