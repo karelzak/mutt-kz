@@ -14,7 +14,7 @@ ignore sender references return-path lines
 # imitate the old search-body function
 macro index \eb '/~b ' 'search in message bodies'
 
-# simluate the old url menu
+# simulate the old url menu
 macro index \cb |urlview\n 'call urlview to extract URLs out of a message'
 macro pager \cb |urlview\n 'call urlview to extract URLs out of a message'
 
@@ -23,7 +23,7 @@ macro generic <f1> "!less @docdir@/manual.txt\n" "Show Mutt documentation"
 macro index   <f1> "!less @docdir@/manual.txt\n" "Show Mutt documentation"
 macro pager   <f1> "!less @docdir@/manual.txt\n" "Show Mutt documentation"
 
-# If Mutt is unable to determine your sites domain name correctly, you can
+# If Mutt is unable to determine your site's domain name correctly, you can
 # set the default here.
 #
 # set hostname=cs.hmc.edu
@@ -87,7 +87,7 @@ macro pager   <f1> "!less @docdir@/manual.txt\n" "Show Mutt documentation"
 # set include=ask-yes
 # set indent_string="> "
 # set index_format="%4C %Z %{%b %d} %-15.15L (%4l) %s"
-# unset ignore_list_rely_to
+# unset ignore_list_reply_to
 # set ispell="@ISPELL@"
 # set locale="C"
 # set mail_check=5
@@ -159,7 +159,7 @@ macro pager   <f1> "!less @docdir@/manual.txt\n" "Show Mutt documentation"
 # unset tilde
 # set timeout=600
 # set tmpdir=""
-# set to_chars="+TCF"
+# set to_chars=" +TCF"
 # unset uncollapse_jump
 # unset use_8bitmime
 # set use_domain
@@ -171,7 +171,7 @@ macro pager   <f1> "!less @docdir@/manual.txt\n" "Show Mutt documentation"
 # set write_bcc
 # set write_inc=10
 
-## The following options are only vaild if you have
+## The following options are only valid if you have
 ## compiled in IMAP support
 
 # set imap_user=""
