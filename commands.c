@@ -220,7 +220,7 @@ void mutt_pipe_message_to_state (HEADER *h, STATE *s)
     mutt_parse_mime_message (Context, h);
   mutt_copy_message (s->fpout, Context, h,
 		     option (OPTPIPEDECODE) ? M_CM_DECODE : 0,
-		     option (OPTPIPEDECODE) ? CH_FROM | CH_WEED | CH_DECODE : CH_FROM);
+		     option (OPTPIPEDECODE) ? CH_FROM | CH_WEED | CH_DECODE | CH_REORDER : CH_FROM);
 }
 
 int mutt_pipe_message (HEADER *h)
