@@ -262,6 +262,7 @@ void *safe_malloc (unsigned int);
 void safe_realloc (void **, size_t);
 void safe_free (void **);
 
+int safe_open (const char *, int);
 FILE *safe_fopen (const char *, const char *);
 
 ADDRESS *alias_reverse_lookup (ADDRESS *);

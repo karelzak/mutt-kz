@@ -642,13 +642,32 @@ void mutt_expand_fmt (char *dest, size_t destlen, const char *fmt, const char *s
     snprintf (dest, destlen, "%s '%s'", fmt, src);
 }
 
+int safe_open (const char *path, int flags)
+{
+  struct stat osb, nsb;
+  int fd;
+
+  if ((fd = open (path, flags, 0600)) < 0)
+    return fd;
+
+  /* make sure the file is not symlink */
+  if (lstat (path, &osb) < 0 || fstat (fd, &nsb) < 0 ||
+      osb.st_dev != nsb.st_dev || osb.st_ino != nsb.st_ino ||
+      osb.st_rdev != nsb.st_rdev)
+  {
+    dprint (1, (debugfile, "safe_open(): %s is a symlink!\n", path));
+    close (fd);
+    return (-1);
+  }
+
+  return (fd);
+}
+
 /* when opening files for writing, make sure the file doesn't already exist
  * to avoid race conditions.
  */
 FILE *safe_fopen (const char *path, const char *mode)
 {
-  struct stat osb, nsb;
-
   if (mode[0] == 'w')
   {
     int fd;
@@ -659,18 +678,8 @@ FILE *safe_fopen (const char *path, const char *mode)
     else
       flags |= O_WRONLY;
 
-    if ((fd = open (path, flags, 0600)) < 0)
-      return NULL;
-
-    /* make sure the file is not symlink */
-    if (lstat (path, &osb) < 0 || fstat (fd, &nsb) < 0 ||
-	osb.st_dev != nsb.st_dev || osb.st_ino != nsb.st_ino ||
-	osb.st_rdev != nsb.st_rdev)
-    {
-      dprint (1, (debugfile, "safe_fopen():%s is a symlink!\n", path));
-      close (fd);
+    if ((fd = safe_open (path, flags)) < 0)
       return (NULL);
-    }
 
     return (fdopen (fd, mode));
   }

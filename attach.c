@@ -29,6 +29,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <fcntl.h>
 #include <string.h>
 #include <errno.h>
 
@@ -457,15 +458,13 @@ int mutt_view_attachment (FILE *fp, BODY *a, int flag)
 /* returns 1 on success, 0 on error */
 int mutt_pipe_attachment (FILE *fp, BODY *b, const char *path, char *outfile)
 {
-  STATE o;
   pid_t thepid;
-
-  memset (&o, 0, sizeof (STATE));
+  int out = -1;
 
   if (outfile && *outfile)
-    if ((o.fpout = safe_fopen (outfile, "w")) == NULL)
+    if ((out = safe_open (outfile, O_CREAT | O_EXCL | O_WRONLY)) < 0)
     {
-      mutt_perror ("fopen");
+      mutt_perror ("open");
       return 0;
     }
 
@@ -480,7 +479,7 @@ int mutt_pipe_attachment (FILE *fp, BODY *b, const char *path, char *outfile)
     memset (&s, 0, sizeof (STATE));
 
     if (outfile && *outfile)
-      thepid = mutt_create_filter (path, &s.fpout, &o.fpin, NULL);
+      thepid = mutt_create_filter_fd (path, &s.fpout, NULL, NULL, -1, out, -1);
     else
       thepid = mutt_create_filter (path, &s.fpout, NULL, NULL);
 
@@ -497,12 +496,16 @@ int mutt_pipe_attachment (FILE *fp, BODY *b, const char *path, char *outfile)
     if ((ifp = fopen (b->filename, "r")) == NULL)
     {
       mutt_perror ("fopen");
-      fclose (o.fpout);
+      if (outfile && *outfile)
+      {
+	close (out);
+	unlink (outfile);
+      }
       return 0;
     }
 
     if (outfile && *outfile)
-      thepid = mutt_create_filter (path, &ofp, &o.fpin, NULL);
+      thepid = mutt_create_filter_fd (path, &ofp, NULL, NULL, -1, out, -1);
     else
       thepid = mutt_create_filter (path, &ofp, NULL, NULL);
 
@@ -512,11 +515,7 @@ int mutt_pipe_attachment (FILE *fp, BODY *b, const char *path, char *outfile)
   }
 
   if (outfile && *outfile)
-  {
-    mutt_copy_stream (o.fpin, o.fpout);
-    fclose (o.fpin);
-    fclose (o.fpout);
-  }
+    close (out);
 
   if (mutt_wait_filter (thepid) != 0 || option (OPTWAITKEY))
     mutt_any_key_to_continue (NULL);
