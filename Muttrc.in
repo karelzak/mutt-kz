@@ -8,11 +8,11 @@ ignore "from " received content- mime-version status x-status message-id
 ignore sender references return-path lines
 
 # imitate the old search-body function
-macro index \eb '/~b '
+macro index \eb '/~b ' 'search in message bodies'
 
 # simluate the old url menu
-macro index \cb |urlview\n
-macro pager \cb |urlview\n
+macro index \cb |urlview\n 'call urlview to extract URLs out of a message'
+macro pager \cb |urlview\n 'call urlview to extract URLs out of a message'
 
 # If Mutt is unable to determine your sites domain name correctly, you can
 # set the default here.

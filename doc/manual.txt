@@ -3340,10 +3340,15 @@
   66..33..5588..  mmaasskk
 
   Type: string
-  Default: "^(\.\.$|[^.])"
+  Default: "!^\.[^.]"
 
-  A regular expression used in the file browser. Files whose names don't
-  match this mask will not be shown.
+  A regular expression used in the file browser, optionally preceded by
+  the _n_o_t operator ``!''. Files whose names don't match this mask will
+  not be shown. The match is always case-sensitive.
+
+  NNoottee:: if you need ``!'' at the beginning of the regular expression you
+  should enclose it in paranthesis, in order to distinguish it from the
+  logical _n_o_t operator for the expression.
 
 
   66..33..5599..  mmbbooxx
@@ -3359,7 +3364,6 @@
 
   Type: String
   Default: mbox
-
   The default mailbox type used when creating new folders. May be any of
   mbox, MMDF, MH and Maildir.
 
@@ -3423,6 +3427,7 @@
   Controls the decoding of complex MIME messages into text/plain when
   forwarding a message while ``mime_forward'' is _s_e_t. Otherwise
   ``forward_decode'' is used instead.
+
 
 
   66..33..6666..  mmoovvee
@@ -3556,11 +3561,11 @@
   where the gpg (GNU Privacy Guard) binary resides on your system.
 
 
+
   66..33..7788..  ppggpp__kkeeyy__vveerrssiioonn
 
   Type: string
   Default: ``default''
-
 
   This variable determines which PGP version is used for key ring
   operations like extracting keys from messages and extracting keys from
@@ -3619,6 +3624,8 @@
   default defined in ``$pgp_default_version'' will be used. Set this to
   pgp2 (PGP 2.*), pgp5 (PGP 5.*), or gpg (GNU privacy guard) if you want
   to use a different PGP version for sending operations.
+
+
 
 
   66..33..8844..  ppggpp__ssiiggnn__aass
@@ -3693,7 +3700,6 @@
   Default: $PGPPATH/pubring.pgp or ~/.pgp/pubring.pgp if $PGPPATH isn't
   set.
 
-
   Points to the PGP 2.* public keyring.
 
 
@@ -3753,6 +3759,7 @@
   weed headers and will attempt to PGP/MIME decode the messages first.
 
 
+
   66..33..9977..  ppiippee__sseepp
 
   Type: string
@@ -3760,6 +3767,8 @@
 
   The separator to add between messages when piping a list of tagged
   messages to an external Unix command.
+
+
   66..33..9988..  ppiippee__sspplliitt
 
   Type: boolean
@@ -3816,6 +3825,7 @@
   Type: string
   Default: login name on local system
 
+
   Your login name on the POP3 server.
 
 
@@ -3826,6 +3836,8 @@
 
   Similar to the ``$attribution'' variable, Mutt will append this string
   after the inclusion of a message which is being replied to.
+
+
   66..33..110055..  ppoossttppoonnee
 
   Type: quadoption
@@ -3878,6 +3890,7 @@
 
   Type: string
   Default: null
+
 
   This specifies the command that mutt will use to make external address
   queries.  The string should contain a %s, which will be substituted
@@ -3942,6 +3955,7 @@
 
   This variable specifies what "real" or "personal" name should be used
   when sending messages.
+
 
 
   66..33..111166..  rreeccaallll
@@ -4010,8 +4024,6 @@
   matches the message's sender.  For example, if you have the following
   alias:
 
-
-
        alias juser abd30425@somewhere.net (Joe User)
 
 
@@ -4022,6 +4034,8 @@
 
 
        From: abd30425@somewhere.net
+
+
 
 
   It would be displayed in the index menu as ``Joe User'' instead of
@@ -4090,6 +4104,7 @@
   Mutt expects that the specified program interprets additional
   arguments as recipient addresses.
 
+
   66..33..112277..  sseennddmmaaiill__wwaaiitt
 
   Type: number
@@ -4141,8 +4156,6 @@
   outgoing messages.   If the filename ends with a pipe (``|''), it is
   assumed that filename is a shell command and input should be read from
   its stdout.
-
-
   66..33..113311..  ssiimmppllee__sseeaarrcchh
 
   Type: string
@@ -4205,6 +4218,9 @@
 
   Specifies how the entries in the `alias' menu are sorted.  The
   following are legal values:
+
+
+
 
   alias           sort alphabetically by alias name
   address         sort alphabetically by email address
@@ -4286,8 +4302,6 @@
   with the toggle-write operation, bound by default to "%").
 
 
-
-
   66..33..114400..  ssttaattuuss__ffoorrmmaatt
 
   Type: string
@@ -4340,9 +4354,6 @@
 
                %?<sequence_char>?<optional_string>?
 
-
-
-
   where _s_e_q_u_e_n_c_e___c_h_a_r is a character from the table above, and
   _o_p_t_i_o_n_a_l___s_t_r_i_n_g is the string you would like printed if _s_t_a_t_u_s___c_h_a_r is
   nonzero.  _o_p_t_i_o_n_a_l___s_t_r_i_n_g mmaayy contain other sequence as well as normal
@@ -4353,8 +4364,7 @@
 
 
 
-
-          %?n?%n new messages.?
+               %?n?%n new messages.?
 
 
 
@@ -4418,7 +4428,6 @@
 
   Type: boolean
   Default: unset
-
 
   When set, the internal-pager will pad blank lines to the bottom of the
   screen with a tilde (~).
@@ -4486,6 +4495,7 @@
 
   Type: boolean
   Default: set
+
   When _s_e_t, Mutt will generate the `From:' header field when sending
   messages.  If _u_n_s_e_t, no `From:' header field will be generated unless
   the user explicitly sets one using the ``my_hdr'' command.
@@ -4542,15 +4552,12 @@
 
   When set, Mutt will always ask for a key. When unset, Mutt will wait
   for a key only if the external command returned a non-zero status.
-
-
   66..33..115566..  wwrraapp__sseeaarrcchh
 
   Type: boolean
   Default: set
 
   Controls whether searches wrap around the end of the mailbox.
-
 
   When set, searches will wrap around the first (or last) message. When
   unset, searches will not wrap.
@@ -4592,13 +4599,6 @@
   (such as movement) available in all menus except for _p_a_g_e_r and _e_d_i_t_o_r.
   Changing settings for this menu will affect the default bindings for
   all menus (except as noted).
-
-
-
-
-
-
-
 
 
 

@@ -748,7 +748,7 @@ folder-hook . set sort=date-sent
 
 <sect1>Keyboard macros<label id="macro">
 <p>
-Usage: <tt/macro/ <em/menu/ <em/key/ <em/sequence/
+Usage: <tt/macro/ <em/menu/ <em/key/ <em/sequence/ &lsqb; <em/description/ &rsqb;
 
 Macros are useful when you would like a single key to perform a series of
 actions.  When you press <em/key/ in menu <em/menu/, Mutt will behave as if
@@ -760,6 +760,9 @@ key.
 id="bind" name="key bindings">, with the addition that control
 characters in <em/sequence/ can also be specified as <em/&circ;x/.  In
 order to get a caret (``&circ;'') you need to use <em/&circ;&circ;/.
+
+Optionally you can specify a descriptive text, which is shown in the
+help screens.
 
 <bf/Note:/ Macro definitions (if any) listed in the help screen(s), are
 silently truncated at the screen width, and are not wrapped.   
@@ -1385,7 +1388,8 @@ messages:
 Where EXPR, USER, ID, and SUBJECT are 
 <ref id="regexp" name="regular expressions">.
 
-*) The forms <tt/&lt;[MAX]/, <tt/&gt;[MIN]/, <tt/[MIN]-/ and <tt/-[MAX]/
+*) The forms <tt/&lt;&lsqb;MAX&rsqb;/, <tt/&gt;&lsqb;MIN&rsqb;/,
+<tt/&lsqb;MIN&rsqb;-/ and <tt/-&lsqb;MAX&rsqb;/
 are allowed, too.
 
 <sect2>Complex Patterns

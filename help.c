@@ -129,7 +129,7 @@ static void dump_menu (FILE *f, int menu)
     if (map->op == OP_MACRO)
     {
       fprintf (f, "%s\t%-20s\t", buf, "macro");
-      print_macro (f, map->macro);
+      print_macro (f, map->descr ? map->descr : map->macro);
       fputc ('\n', f);
     }
     else if (map->op != OP_NULL)
