@@ -206,11 +206,11 @@ hdr_format_str (char *dest,
 	  strfcpy (dest, p + 1, destlen);
 	else
 	  strfcpy (dest, ctx->path, destlen);
-	break;
       }
       else 
 	strfcpy(dest, "(null)", destlen);
-
+      break;
+    
     case 'c':
       mutt_pretty_size (buf2, sizeof (buf2), (long) hdr->content->length);
       snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
