@@ -1,3 +1,247 @@
+Wed Jul 29 10:45:46 1998  Thomas Roessler  <roessler@guug.de>
+
+	* configure.in, configure: Bumping to 0.93.2(i).
+
+	* parse.c: Fixing a buffer overflow in parse.c.
+	Noted by Paul Boehm <paul@boehm.org>.
+
+	* send.c: Correct an error message in send.c.
+	(From Byrial Jensen <byrial@post3.tele.dk>)
+
+Mon Jul 20 21:01:05 1998  Thomas Roessler  <roessler@guug.de>
+
+	* pop.c: It seems that if you don't enter any password at all when
+	prompted for the POP password, Mutt will die with a
+	segmentation fault also.  (Bug reported by Steve Mayer
+	<smayer@rtd.com> through the Debian bug tracking system.)
+
+Thu Jul 16 16:39:53 1998  Thomas Roessler  <roessler@guug.de>
+
+	* color.c: This patch fixes two problems reported
+	on mutt-users.
+
+	(1) the error message about "default colors not supported"
+	when not using a color xterm should not be printed.  The
+	existing code did not check the value of has_colors() in
+	conjunction with use_default_colors()
+
+	(2) mutt would crash when sending mail in batch mode
+	because use_default_colors() could be used without doing
+	an initscr()
+
+	(From Michael Elkins.)
+
+Tue Jul 14 16:01:07 1998  Thomas Roessler  <roessler@guug.de>
+
+	* reldate.h, configure.in, configure, Changes, ChangeLog:
+	Preparing mutt 0.93.1i.
+
+	* rfc2047.c, mime.h, handler.c: More unsigned fixes.
+
+	* pattern.c, parse.c:
+	Changing (int) casts in is* arguments to (unsigned char).
+
+	* rfc2047.c: Removing a superfluous (unsigned char) cast in an IsPrint
+	argument.
+
+Mon Jul 13 10:50:39 1998  Thomas Roessler  <roessler@guug.de>
+
+	* doc/mutt.sgml, doc/mutt.man, doc/Makefile.in:
+	Since manual page generation seems to be broken in the
+	SGML-tools package, we remove the SGML version of mutt.man
+	and make the troff source the master copy.  Suggested by
+	Roland Rosenfeld <roland@luv.rhein.de> who also provided
+	the corrected mutt.man file.
+
+Sun Jul 12 13:15:31 1998  Thomas Roessler  <roessler@guug.de>
+
+	* protos.h: Replace calloc by safe_calloc in new_pattern.
+
+Sat Jul 11 05:10:29 1998  Thomas Roessler  <roessler@guug.de>
+
+	* doc/manual.txt, doc/manual.sgml: Key bindings documentation.
+
+Fri Jul 10 17:58:26 1998  Thomas Roessler  <roessler@guug.de>
+
+	* NEWS: s/fwd_decode/forward_decode/ (Noted by Lars Hecking)
+
+	* pop.c: tmp[] wasn't initialized when asking for the POP password.
+
+	* buffy.c: On SunOS 4.1, one must include unistd.h in order to
+	declare SEEK_END.  (Fabrice Noilhan)
+
+	* mutt.h: include <posix1_lim.h> if limits.h doesn't defile
+	_POSIX_PATH_MAX.
+
+	* Changes, ChangeLog: *** empty log message ***
+
+	* doc/PGP-Notes.txt: Adding a notice about core dumps.
+
+	* reldate.h, README, INSTALL: Preparing 0.93i.
+
+	* handler.c: Fix text/enriched decoding: if there's a tag mismatch in
+	the last paragraph in the attachment, the whole paragraph
+	wouldn't be displayed.
+
+Thu Jul  9 19:51:36 1998  Thomas Roessler  <roessler@guug.de>
+
+	* configure.in, configure, Attic/config.sub:
+	Use CC -Ae -D_HPUX_SOURCE on HP/UX.
+
+	* Attic/config.sub:
+	file config.sub was initially added on branch mutt-0-93.
+
+	* Attic/config.guess: Use CC -Ae -D_HPUX_SOURCE on HP/UX.
+
+	* Attic/config.guess:
+	file config.guess was initially added on branch mutt-0-93.
+
+	* INSTALL: Use CC -Ae -D_HPUX_SOURCE on HP/UX.
+
+Wed Jul  8 21:59:43 1998  Thomas Roessler  <roessler@guug.de>
+
+	* snprintf.c, pattern.c, parse.c, mx.c, mh.c, lib.c, keymap.c, init.c, from.c, edit.c, curs_main.c:
+	Changing (int) casts in is* arguments to (unsigned char)
+	casts to avoid mis-casting of signed chars.  (From Michael
+	Elkins.)
+
+Tue Jul  7 09:22:40 1998  Thomas Roessler  <roessler@guug.de>
+
+	* rfc822.c: Change one int to size_t in rfc822.c.
+
+	* rfc822.c: Fix the parsing of route addresses a la RFC 822.  Patch
+	from Michael Elkins.
+
+	* snprintf.c, sendlib.c, pattern.c, parse.c, mx.c, mh.c, lib.c, keymap.c, init.c, from.c, edit.c, curs_main.c:
+	Cast the arguments of the is* functions to int.  Patch
+	from Michael Elkins.
+
+Thu Jul  2 21:15:18 1998  Thomas Roessler  <roessler@guug.de>
+
+	* hdrline.c:
+	Using the correct version of O'Shaughnessy Evans' %O patch.
+
+	* configure.in, configure, Changes, ChangeLog: Preparig 0.92.14i
+
+	* doc/manual.txt, doc/manual.sgml: s/&setmn;/&bsol;/
+
+	* hdrline.c: Adding the %O expansion.
+
+	* doc/manual.sgml: Applying the various manual_nits patches.
+
+Wed Jul  1 17:01:50 1998  Thomas Roessler  <roessler@guug.de>
+
+	* curs_main.c: Fixing a reverse-threading problem.
+
+	* imap.c: Fixing an imap-related segmentation fault.
+
+Tue Jun 30 06:38:02 1998  Thomas Roessler  <roessler@guug.de>
+
+	* reldate.h, Changes, ChangeLog:
+	These are the last tiny bits of preparing 0.92.13i.
+
+	* configure.in, configure, TODO, README, NEWS:
+	Updating some of the documentation for 0.93.
+
+	* doc/Attic/NEWS: *** empty log message ***
+
+	* doc/Attic/NEWS: file NEWS was initially added on branch mutt-0-93.
+
+	* doc/manual.txt: Incorporate the recent changes to manual.sgml.
+
+	* main.c: Work around a buffer overflow in SLang.  (This is the same
+	bug which is fixed by 0.91.2i.)
+
+Fri Jun 26 10:31:28 1998  Thomas Roessler  <roessler@guug.de>
+
+	* doc/manual.sgml, send.c, init.h, globals.h, Muttrc.in:
+	Removing $empty_to.
+
+Thu Jun 25 22:31:46 1998  Thomas Roessler  <roessler@guug.de>
+
+	* hdrline.c: Moved a break statement where it belongs.
+
+	* mx.c: Fix an imap-related typo.
+
+	* handler.c: Don't generate non-terminated last lines when quoting
+	8bit-"encoded" text-plain body parts.
+
+	* Makefile.in: Don't use GNU make specific features.
+
+Sun Jun 21 07:13:03 1998  Thomas Roessler  <roessler@guug.de>
+
+	* doc/mutt.man, doc/Makefile.in, reldate.h, configure.in, configure, Changes, ChangeLog:
+	Bumping the release to 0.92.12i.
+
+Sat Jun 20 06:12:38 1998  Thomas Roessler  <roessler@guug.de>
+
+	* doc/manual.txt: *** empty log message ***
+
+	* handler.c: Fixing the quoted-printable decoder.
+
+	* handler.c, copy.c: Make mutt handle messages containing null bytes.
+
+	* doc/manual.sgml: documenting alias-path
+
+Fri Jun 19 12:52:16 1998  Thomas Roessler  <roessler@guug.de>
+
+	* sendlib.c, send.c, protos.h, postpone.c, pattern.c, menu.c, main.c, headers.c, functions.h, curs_main.c, compose.c, OPS:
+	Removing the Attach-Menu feature for the next release
+	version.
+
+Thu Jun 18 20:37:59 1998  Thomas Roessler  <roessler@guug.de>
+
+	* protos.h, lib.c, alias.c:
+	Bradon long's alias_path patch, for the sake of Elm
+	compatibility.
+
+Tue Jun 16 20:59:20 1998  Thomas Roessler  <roessler@guug.de>
+
+	* mx.c: Avoid pointless error messages from mx_get_magic() when
+	called from an mx_open_mailbox_append() on a non-existing
+	mailbox.
+
+	* doc/manual.txt, doc/Makefile.in, configure.in, configure, Makefile.in:
+	Have "make install" install manual.txt as well.
+
+	* doc/Attic/makefile, doc/Makefile.in:
+	Putting Makefile under autoconf control.
+
+	* main.c: Switch the error reporting address from mutt-users to
+	mutt-dev.
+
+	* reldate.h, configure.in, configure, Changes, ChangeLog:
+	Bump the version to 0.92.11i.
+
+	* imap.h: Check in a proper version of imap.h.
+
+	* color.c: Fix the "unknown color" bug reported by Vikas.
+
+	* mx.c: Remove a spurious #include "imap.h" from mx.c.
+
+	* doc/style-guide: Add a note about the global Muttrc to style-guide.
+
+	* configure.in, Muttrc.in, configure, Attic/Muttrc, Makefile.in:
+	The global Muttrc contains a list of default settings
+	which can be used as a starting-point for the user's own
+	configuration.
+
+	* pgppubring.c, pgp.h, gnupgparse.c:
+	Removing some duplicate code from gnupgparse.c and
+	pgppubring.c.
+
+	* pgpinvoke.c, gnupgparse.c:
+	Include part of Werner Koch's latest GPG patches.
+
+	* Changes: *** empty log message ***
+
+	* configure.in, configure, Changes, ChangeLog: Preparing 0.92.10i.
+
+	* doc/PGP-Notes.txt: Including Roland's new procmail recipe.
+
+	* protos.h, pattern.c, menu.c, curs_main.c, compose.c, addrbook.c:
+	Including Vikas' search code for the "attach message" menu.
+
 Tue Jul 14 15:42:28 1998  Thomas Roessler  <roessler@guug.de>
 
 	* rfc2047.c, mime.h, handler.c: More unsigned fixes.

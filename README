@@ -1,5 +1,5 @@
-README for mutt-0.93i
-=====================
+README for mutt-0.93.2(i)
+=========================
 
 Installation instructions are detailed in ``INSTALL''.
 
@@ -35,4 +35,4 @@ Mirror sites for the pgp-disabled version:
  ftp://ftp.ewd.3com.com/pub/mutt/
   
 
-Thomas Roessler <roessler@guug.de>, July 10, 1998
+Thomas Roessler <roessler@guug.de>, July 29, 1998
