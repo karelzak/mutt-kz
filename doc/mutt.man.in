@@ -109,18 +109,20 @@ Editor to invoke when the ~v command is given in the builtin editor.
 .PP
 .IP "~/.muttrc"
 User configuration file.
-.IP "/usr/local/share/Muttrc"
+.IP "@sharedir@/Muttrc"
 System-wide configuration file.
 .IP "/tmp/muttXXXXXX"
 Temporary files created by Mutt.
 .IP "~/.mailcap"
 User definition for handling non-text MIME types.
-.IP "/usr/local/share/mailcap"
+.IP "@sharedir@/mailcap"
 System definition for handing non-text MIME types.
 .IP "~/.mime.types"
 User's personal mapping between MIME types and file extensions.
-.IP "/usr/local/share/mime.types"
+.IP "@sharedir@/mime.types"
 System mapping between MIME types and file extensions.
+.IP "@libdir@/dotlock"
+The privileged dotlocking program.
 .SH BUGS
 .PP
 Suspend/resume while editing a file with an external editor does not work
