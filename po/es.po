@@ -417,12 +417,14 @@ msgstr "<por defecto>"
 msgid "MIC algorithm: "
 msgstr "Algoritmo MIC: "
 
+# cifrar es mejor que codificar, es consistente con el resto de los
+# mensajes. nl
 #: compose.c:132
 msgid ""
 "(e)ncrypt, (s)ign, sign (a)s, (b)oth, select (m)ic algorithm, or (f)orget "
 "it? "
 msgstr ""
-"(c)odificar, (f)irmar c(o)mo, (a)mbos, escoger algorithmo (m)ic, ca(n)celar "
+"(c)ifrar, (f)irmar c(o)mo, (a)mbos, escoger algorithmo (m)ic, ca(n)celar? "
 
 #: compose.c:133
 msgid "esabmf"
@@ -442,7 +444,7 @@ msgstr "Una versión desconocida de PGP fue definida para firmar."
 
 #: compose.c:185
 msgid "This doesn't make sense if you don't want to sign the message."
-msgstr "Esto no tiene caso si no quiere firmar el mensaje."
+msgstr "No tiene caso si no quiere firmar el mensaje."
 
 #: compose.c:196
 msgid "Unknown MIC algorithm, valid ones are: pgp-md5, pgp-sha1, pgp-rmd160"
@@ -481,7 +483,7 @@ msgstr "No hay mensajes en esa carpeta."
 
 #: compose.c:592
 msgid "Tag the messages you want to attach!"
-msgstr "Marque el mensaje que quiere adjuntar."
+msgstr "¡Marque el mensaje que quiere adjuntar!"
 
 #: compose.c:627 compose.c:647
 msgid "Unable to attach!"
@@ -510,7 +512,7 @@ msgstr "Archivo nuevo: "
 
 #: compose.c:890
 msgid "Content-Type is of the form base/sub"
-msgstr "Content-Type es de la forma base/subtipo"
+msgstr "Content-Type es de la forma tipobase/subtipo"
 
 #: compose.c:896
 #, c-format
@@ -520,7 +522,7 @@ msgstr "Content-Type %s desconocido"
 #: compose.c:909
 #, c-format
 msgid "Can't create file %s"
-msgstr "No se pudo creal el archivo %s"
+msgstr "No se pudo crear el archivo %s"
 
 #: compose.c:917
 msgid "What we have here is a failure to make an attachment"
@@ -622,7 +624,7 @@ msgstr "Grupo"
 
 #: curs_main.c:434
 msgid "Mailbox was externally modified.  Flags may be wrong."
-msgstr "Buzón fue modificado.  Los indicadores pueden estar mal."
+msgstr "Buzón fue modificado externamente.  Los indicadores pueden estar mal."
 
 #: curs_main.c:437
 msgid "New mail in this mailbox."
@@ -638,7 +640,7 @@ msgstr "Saltar a mensaje: "
 
 #: curs_main.c:629
 msgid "Argument must be a message number."
-msgstr "Argumento tiene que ser un número de mensaje."
+msgstr "El argumento tiene que ser un número de mensaje."
 
 #: curs_main.c:662
 msgid "That message is not visible."
@@ -794,11 +796,11 @@ msgstr ""
 #: edit.c:178
 #, c-format
 msgid "%d: invalid message number.\n"
-msgstr "%d: número de mensaje erróneo.\n"
+msgstr "%d: número de mensaje inválido.\n"
 
 #: edit.c:312
 msgid "(End message with a . on a line by itself)\n"
-msgstr "(Termine el mensaje con un . sólo en un renglón)\n"
+msgstr "(Termine el mensaje con un . solo en un renglón)\n"
 
 #: edit.c:370
 msgid "No mailbox.\n"
@@ -833,9 +835,10 @@ msgstr "Poner indicador"
 msgid "Clear flag"
 msgstr "Quitar indicador"
 
+# `fin de archivo innesperado' suena a que el archivo es inesperado =) nl
 #: handler.c:130
 msgid "[-- Error: unexpected end of file! --]\n"
-msgstr "[-- ¡Error: fin de archivo inesperado! --]\n"
+msgstr "[-- Error: ¡fin inesperado del archivo! --]\n"
 
 #. didn't find anything that we could display!
 #: handler.c:959
@@ -851,7 +854,7 @@ msgstr "[-- Archivo adjunto #%d"
 #: handler.c:1087
 #, c-format
 msgid "[-- Type: %s/%s, Encoding: %s, Size: %s --]\n"
-msgstr "[-- Tipo: %s/%s, codificación: %s, tamaño: %s --]\n"
+msgstr "[-- Tipo: %s/%s, Codificación: %s, Tamaño: %s --]\n"
 
 #: handler.c:1146
 #, c-format
@@ -871,7 +874,7 @@ msgstr "[-- Error al ejecutar %s --]\n"
 #: handler.c:1234
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
 msgstr ""
-"[-- Error: Contenido message/external no tiene parámetro acces-type --]\n"
+"[-- Error: Tipo message/external-body sin el parámetro acces-type --]\n"
 
 #: handler.c:1251
 #, c-format
@@ -935,7 +938,7 @@ msgstr "(use '%s' para ver esta parte)"
 
 #: handler.c:1504
 msgid "(need 'view-attachments' bound to key!)"
-msgstr "(necesita 'view-attachments' enlazado a una tecla)"
+msgstr "(¡necesita 'view-attachments' enlazado a una tecla!)"
 
 #: headers.c:202
 #, c-format
@@ -985,7 +988,7 @@ msgstr "imap_error(): respuesta inesperada en %s: %s\n"
 #.
 #: imap.c:499
 msgid "Fatal error.  Message count is out of sync!"
-msgstr "¡Error fatal!  La cuenta de mensajes no esta sincronizada."
+msgstr "¡Error fatal!  La cuenta de mensajes no coincide con la informada."
 
 #: imap.c:632
 #, c-format
@@ -1398,7 +1401,7 @@ msgstr "crear copia decodificada (text/plain) y suprimir"
 
 #: keymap_defs.h:47
 msgid "delete the current entry"
-msgstr "suprimir"
+msgstr "suprimir la entrada actual"
 
 #: keymap_defs.h:48
 msgid "delete all messages in subthread"
@@ -1822,7 +1825,7 @@ msgstr "mostrar archivo adjunto usando entrada mailcap si es necesario"
 
 #: keymap_defs.h:154
 msgid "show MIME attachments"
-msgstr "mostrar archivos adjuntos tipo MIME"
+msgstr "mostrar archivos adjuntos MIME"
 
 #: keymap_defs.h:155
 msgid "show currently active limit pattern"
@@ -1838,7 +1841,7 @@ msgstr "colapsar/expander todos los hilos"
 
 #: keymap_defs.h:158
 msgid "attach a PGP public key"
-msgstr "adjuntar llave PGP pública"
+msgstr "adjuntar clave pública PGP"
 
 #: keymap_defs.h:159
 msgid "show PGP options"
@@ -1846,7 +1849,7 @@ msgstr "mostrar opciones PGP"
 
 #: keymap_defs.h:160
 msgid "extract PGP public keys"
-msgstr "extraer llaves PGP públicas"
+msgstr "extraer claves públicas PGP"
 
 #: keymap_defs.h:161
 msgid "wipe PGP passphrase from memory"
@@ -1854,15 +1857,15 @@ msgstr "borrar contraseña PGP de la memoria"
 
 #: keymap_defs.h:162
 msgid "mail a PGP public key"
-msgstr "enviar llave PGP pública"
+msgstr "enviar clave PGP pública"
 
 #: keymap_defs.h:163
 msgid "verify a PGP public key"
-msgstr "verificar llave PGP pública"
+msgstr "verificar clave PGP pública"
 
 #: keymap_defs.h:164
 msgid "view the key's user id"
-msgstr "mostrar la identificación del usuario de la llave"
+msgstr "mostrar la identificación del usuario de la clave"
 
 #: keymap_defs.h:165
 msgid "make decrypted copy and delete"
@@ -1886,7 +1889,7 @@ msgstr "Archivo en el directorio: "
 
 #: lib.c:862
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "Archivo existe, ¿(s)obreescribirlo, (a)ñadirle o (c)ancelar?"
+msgstr "El archivo ya existe, ¿(s)obreescribirlo, (a)ñadirle o (c)ancelar?"
 
 #: lib.c:862
 msgid "oac"
@@ -2124,11 +2127,11 @@ msgstr "Guardando mensajes... %d (%d%%)"
 #: mbox.c:913
 #, c-format
 msgid "Write failed!  Saved partial mailbox to %s"
-msgstr "¡La escritura falló! Buzón parcial fue guardado en %s"
+msgstr "¡La escritura falló! Se guardó el buzón parcial en %s"
 
 #: mbox.c:965
 msgid "Could not reopen mailbox!"
-msgstr "¡Imposible reabrir buzón!"
+msgstr "¡Imposible reabrir el buzón!"
 
 #: mbox.c:1003
 msgid "Reopening mailbox..."
@@ -2165,11 +2168,11 @@ msgstr "Está en la primera página."
 
 #: menu.c:479
 msgid "First entry is shown."
-msgstr "La primera entrada esta siendo mostrada."
+msgstr "La primera entrada está siendo mostrada."
 
 #: menu.c:499
 msgid "Last entry is shown."
-msgstr "La última entrada esta siendo mostrada."
+msgstr "La última entrada está siendo mostrada."
 
 #: menu.c:550
 msgid "You are on the last entry."
@@ -2296,7 +2299,7 @@ msgstr "Presione '%s' para cambiar escritura"
 
 #: mx.c:989
 msgid "Use 'toggle-write' to re-enable write!"
-msgstr "¡Use 'toggle-write' para activar escritura!"
+msgstr "¡Use 'toggle-write' para reactivar escritura!"
 
 #: mx.c:991
 #, c-format
@@ -2326,11 +2329,11 @@ msgstr "Sig."
 #. emulate "less -q" and don't go on to the next message.
 #: pager.c:1744 pager.c:1775 pager.c:1804 pager.c:2024
 msgid "Bottom of message is shown."
-msgstr "El final del mensaje esta siendo mostrado."
+msgstr "El final del mensaje está siendo mostrado."
 
 #: pager.c:1760 pager.c:1782 pager.c:1793
 msgid "Top of message is shown."
-msgstr "El principio del mensaje esta siendo mostrado."
+msgstr "El principio del mensaje está siendo mostrado."
 
 #: pager.c:1866
 msgid "Reverse search: "
@@ -2474,7 +2477,7 @@ msgstr ""
 
 #: pgp.c:364
 msgid "[-- BEGIN PGP PUBLIC KEY BLOCK --]\n"
-msgstr "[-- PRINCIPIO DEL BLOQUE DE LLAVES PÚBLICAS PGP --]\n"
+msgstr "[-- PRINCIPIO DEL BLOQUE DE CLAVES PÚBLICAS PGP --]\n"
 
 #: pgp.c:366
 msgid ""
@@ -2495,7 +2498,7 @@ msgstr ""
 
 #: pgp.c:470
 msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
-msgstr "[-- FIN DEL BLOQUE DE LLAVES PÚBLICAS PGP --]\n"
+msgstr "[-- FIN DEL BLOQUE DE CLAVES PÚBLICAS PGP --]\n"
 
 #: pgp.c:472
 msgid ""
@@ -2612,11 +2615,11 @@ msgstr "Seleccionar  "
 
 #: pgpkey.c:178
 msgid "Check key  "
-msgstr "Verificar llave  "
+msgstr "Verificar clave  "
 
 #: pgpkey.c:191
 msgid "PGP keys matching "
-msgstr "Llaves PGP para "
+msgstr "Claves PGP para "
 
 #: pgpkey.c:210 pgpkey.c:387
 msgid "Can't open /dev/null"
@@ -2654,12 +2657,12 @@ msgstr "%s ¿Realmente quiere utilizarla?"
 
 #: pgpkey.c:369
 msgid "Please enter the key ID: "
-msgstr "Por favor entre la identificación de la llave: "
+msgstr "Por favor entre la identificación de la clave: "
 
 #: pgpkey.c:416
 #, c-format
 msgid "PGP Key 0x%s."
-msgstr "Llave PGP 0x%s."
+msgstr "Clave PGP 0x%s."
 
 #: pgppubring.c:58
 msgid "reserved"
@@ -2667,7 +2670,7 @@ msgstr "reservado"
 
 #: pgppubring.c:59
 msgid "Encrypted Session Key"
-msgstr "Llave de sesión cifrada"
+msgstr "Clave de sesión cifrada"
 
 #: pgppubring.c:60
 msgid "Signature Packet"
@@ -2675,7 +2678,7 @@ msgstr "Paquete de firma"
 
 #: pgppubring.c:61
 msgid "Conventionally Encrypted Session Key Packet"
-msgstr "Paquete de llave de sesión con cifrado convencional"
+msgstr "Paquete de clave de sesión con cifrado convencional"
 
 #: pgppubring.c:62
 msgid "One-Pass Signature Packet"
@@ -2683,15 +2686,15 @@ msgstr "Paquete de firma one-pass"
 
 #: pgppubring.c:63
 msgid "Secret Key Packet"
-msgstr "Paquete de llave secreta"
+msgstr "Paquete de clave secreta"
 
 #: pgppubring.c:64
 msgid "Public Key Packet"
-msgstr "Paquete de llave pública"
+msgstr "Paquete de clave pública"
 
 #: pgppubring.c:65
 msgid "Secret Subkey Packet"
-msgstr "Paquete de subllave secreta"
+msgstr "Paquete de subclave secreta"
 
 #: pgppubring.c:66
 msgid "Compressed Data Packet"
@@ -2719,7 +2722,7 @@ msgstr "Paquete de nombre"
 
 #: pgppubring.c:72
 msgid "Subkey Packet"
-msgstr "Paquete de subllave"
+msgstr "Paquete de subclave"
 
 #: pgppubring.c:73
 msgid "Reserved"
@@ -2739,12 +2742,12 @@ msgstr "El servidor POP no fue definido."
 
 #: pop.c:97
 msgid "No POP username is defined."
-msgstr "El nombre de usuario POP no fue definido."
+msgstr "No se definió nombre de usuario de POP."
 
 #: pop.c:114
 #, c-format
 msgid "Could not find address for host %s."
-msgstr "No se encontró dirección del servidor %s."
+msgstr "No se encontró la dirección del servidor %s."
 
 #: pop.c:122
 #, c-format
@@ -3025,7 +3028,7 @@ msgstr "Mensaje enviado."
 
 #: send.c:1325
 msgid "Sending in background."
-msgstr "Mandando en un proceso separado en el fondo."
+msgstr "Mandando en proceso en segundo plano."
 
 #: sendlib.c:489
 msgid "No boundary parameter found! [report this error]"
