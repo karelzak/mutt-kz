@@ -40,7 +40,8 @@ OPS=@OPS@
 OBJS=	addrbook.o alias.o attach.o browser.o buffy.o color.o \
         commands.o complete.o compose.o copy.o curs_lib.o curs_main.o date.o \
 	edit.o enter.o flags.o init.o filter.o from.o getdomain.o \
-	handler.o hash.o hdrline.o headers.o help.o hook.o keymap.o lib.o \
+	handler.o hash.o hdrline.o headers.o help.o	\
+	history.o hook.o keymap.o lib.o \
 	main.o mbox.o menu.o mh.o mx.o pager.o parse.o pattern.o \
 	postpone.o query.o recvattach.o rfc822.o \
 	rfc1524.o rfc2047.o score.o send.o sendlib.o signal.o sort.o \

@@ -20,7 +20,7 @@
 #include "mapping.h"
 #include "mutt_curses.h"
 #include "mutt_regex.h"
-
+#include "history.h"
 
 
 #ifdef _PGPPATH

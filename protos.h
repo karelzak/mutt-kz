@@ -143,7 +143,6 @@ void mutt_free_header (HEADER **);
 void mutt_free_parameter (PARAMETER **);
 void mutt_generate_header (char *, size_t, HEADER *, int);
 void mutt_help (int);
-void mutt_init_history (void);
 void mutt_linearize_tree (CONTEXT *, int);
 void mutt_make_help (char *, size_t, char *, int, int);
 void mutt_message (const char *, ...);

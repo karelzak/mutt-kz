@@ -24,8 +24,6 @@
 
 - fold long user-defined header fields
 
-- history classes
-
 - document honored environment variables
 
 - add -v flag to pass to sendmail...
@@ -46,7 +44,3 @@
 - mbox-hook entries should override $move?
 
 - add a preserved flag to messages
-
-- use an external lockfile(1) look-alike for dotlocking.
-  This would remove the requirement for certain sites to
-  install mutt setgid mail.
