@@ -1523,7 +1523,14 @@ main_loop:
 full_fcc:
 #endif /* HAVE_PGP */
     if (msg->content)
+    {
+      /* update received time so that when storing to a mbox-style folder
+       * the From_ line contains the current time instead of when the
+       * message was first postponed.
+       */
+      msg->received = time (NULL);
       mutt_write_fcc (fcc, msg, NULL, 0, NULL);
+    }
 
     msg->content = tmpbody;
 
