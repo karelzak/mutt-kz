@@ -163,6 +163,7 @@ const char *mutt_attach_fmt (char *dest,
     case 'd':
       snprintf (fmt, sizeof (fmt), "%%%ss", prefix);
       if (aptr->content->type == TYPEMESSAGE && MsgFmt &&
+	  aptr->content->hdr &&
 	  (!strcasecmp ("rfc822", aptr->content->subtype) ||
 	   !strcasecmp ("news", aptr->content->subtype)))
       {
