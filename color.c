@@ -149,7 +149,6 @@ int mutt_alloc_color (int fg, int bg)
 {
   COLOR_LIST *p = ColorList;
   int i;
-  int r;
 
   /* check to see if this color is already allocated to save space */
   while (p)
@@ -199,13 +198,8 @@ int mutt_alloc_color (int fg, int bg)
     bg = -1;
 #endif
 
-  dprint(1, (debugfile, "mutt_alloc_color(); init_pair(%d, %d, %d) == ",
-	     i, fg, bg));
+  init_pair(i, fg, bg);
 
-  r = init_pair(i, fg, bg);
-  
-  dprint(1, (debugfile, "%d  [ERR == %d]\n", r, ERR));
-  
   dprint(1,(debugfile,"mutt_alloc_color(): Color pairs used so far: %d\n",
                        UserColors));
 
