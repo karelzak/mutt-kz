@@ -45,11 +45,11 @@ Major changes since 0.91.1
 - new variable $query_command
   Adds support for querying an external database for email addresses.
 
-- The $fwd_decode variable has been removed. This has been split into 2
+- The $forward_decode variable has been removed. This has been split into 2
   variables
 
-  $fwd_decode - used when $mime_fwd is not set
-  $mime_fwd_decode - used when $mime_fwd is set
+  $forward_decode - used when $mime_fwd is not set
+  $mime_forward_decode - used when $mime_fwd is set
 
 - new variable $wrap_search. This controls whether searches wrap around the
   end of the mailbox.
