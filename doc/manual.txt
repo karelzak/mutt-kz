@@ -1232,16 +1232,27 @@
   message will NOT cause any send-hook to be executed.
 
 
-  33..1177..  AAddddiinngg kkeeyy sseeqquueenncceess ttoo tthhee kkeeyybbooaarrdd bbuuffffeerr
+  33..1177..  CChhoooossiinngg tthhee PPGGPP kkeeyy ooff tthhee rreecciippiieenntt
+
+  Usage: pgp-hook _p_a_t_t_e_r_n _k_e_y_i_d
+
+  When encrypting messages with PGP, you may want to associate a certain
+  PGP key with a given e-mail address automatically, either because the
+  recipient's public key can't be deduced from the destination address,
+  or because, for some reasons, you need to override the key Mutt would
+  normally use.  The pgp-hook command provides a method by which you can
+  specify the ID of the public key to be used when encrypting messages
+  to a certain recipient.
+
+
+  33..1188..  AAddddiinngg kkeeyy sseeqquueenncceess ttoo tthhee kkeeyybbooaarrdd bbuuffffeerr
 
   Usage: push _s_t_r_i_n_g
 
   This command adds the named string to the keyboard buffer.  You may
   use it to automatically run a sequence of commands at startup, or when
   entering certain folders.
-
-
-  33..1188..  MMeessssaaggee SSccoorriinngg
+  33..1199..  MMeessssaaggee SSccoorriinngg
 
   Usage: score _p_a_t_t_e_r_n _v_a_l_u_e
   Usage: unscore _p_a_t_t_e_r_n [ _p_a_t_t_e_r_n ... ]
@@ -1260,7 +1271,7 @@
   the list of all score entries.
 
 
-  33..1199..  SSeettttiinngg vvaarriiaabblleess
+  33..2200..  SSeettttiinngg vvaarriiaabblleess
 
   Usage: set [no|inv]_v_a_r_i_a_b_l_e[=_v_a_l_u_e] [ _v_a_r_i_a_b_l_e ... ]
   Usage: toggle _v_a_r_i_a_b_l_e [_v_a_r_i_a_b_l_e ... ]
@@ -1307,8 +1318,6 @@
        set ?allow_8bit
 
 
-
-
   The question mark is actually only required for boolean variables.
 
   The reset command resets all given variables to the compile time
@@ -1318,7 +1327,9 @@
 
   With the reset command there exists the special variable ``all'',
   which allows you to reset all variables to their system defaults.
-  33..2200..  RReeaaddiinngg iinniittiiaalliizzaattiioonn ccoommmmaannddss ffrroomm aannootthheerr ffiillee
+
+
+  33..2211..  RReeaaddiinngg iinniittiiaalliizzaattiioonn ccoommmmaannddss ffrroomm aannootthheerr ffiillee
 
   Usage: source _f_i_l_e_n_a_m_e
 
@@ -1384,6 +1395,7 @@
   consist of ``[:'', a keyword denoting the class, and ``:]''.  The
   following classes are defined by the POSIX standard:
 
+
      [[::aallnnuumm::]]
         Alphanumeric characters.
 
@@ -1437,6 +1449,7 @@
   collating or sorting purposes:
 
 
+
      CCoollllaattiinngg SSyymmbboollss
         A collating symbols is a multi-character collating element
         enclosed in ``[.'' and ``.]''.  For example, if ``ch'' is a
@@ -1450,6 +1463,7 @@
         and ``=]''.  For example, the name ``e'' might be used to
         represent all of ``e'' ``e'' and ``e''.  In this case, [[[[==ee==]]]]
         is a regexp that matches any of ``e'', ``e'' and ``e''.
+
   A regular expression matching a single character may be followed by
   one of several repetition operators:
 
@@ -1500,6 +1514,7 @@
 
      \\ww Matches any word-constituent character (letter, digit, or
         underscore).
+
 
      \\WW Matches any character that is not word-constituent.
 
@@ -1566,7 +1581,8 @@
 
 
 
-       ~t mutt ~f elkins
+
+  ~t mutt ~f elkins
 
 
 
@@ -1580,7 +1596,6 @@
 
 
   +o  ! -- logical NOT operator
-
 
   +o  | -- logical OR operator
 
@@ -1630,6 +1645,8 @@
 
   _o_f_f_s_e_t is specified as a positive number with one of the following
   units:
+
+
 
   y       years
   m       months
@@ -1714,7 +1731,8 @@
   For example, if you wanted to set your return address based upon
   sending mail to a specific address, you could do something like:
 
-  send-hook '~t ^me@cs\.hmc\.edu$' 'my_hdr From: Mutt User <user@host>'
+
+       send-hook '~t ^me@cs\.hmc\.edu$' 'my_hdr From: Mutt User <user@host>'
 
 
 
@@ -1762,7 +1780,6 @@
 
 
 
-
   There are two mechanisms for accessing the query function of mutt.
   One is to do a query from the index menu using the query function
   (default: Q).  This will prompt for a query, then bring up the query
@@ -1780,6 +1797,8 @@
   expand the address in place.  If there are multiple responses, mutt
   will activate the query menu.  At the query menu, you can select one
   or more addresses to be added to the prompt.
+
+
   44..55..  MMaaiillbbooxx FFoorrmmaattss
 
   Mutt supports reading and writing of four different mailbox formats:
@@ -1827,8 +1846,6 @@
   There are a number of built in shortcuts which refer to specific
   mailboxes.  These shortcuts can be used anywhere you are prompted for
   a file or mailbox path.
-
-
   +o  ! -- refers to your ``$spool'' (incoming) mailbox
 
   +o  > -- refers to your ``$mbox'' file
@@ -1843,7 +1860,6 @@
 
   +o  @_a_l_i_a_s -- refers to the ``default save folder'' as determined by
      the address of the alias
-
 
 
   44..77..  HHaannddlliinngg MMaaiilliinngg LLiissttss
@@ -1978,8 +1994,8 @@
   These lines are of the form:
 
 
-  [-- Attachment #1: Description --]
-  [-- Type: text/plain, Encoding: 7bit, Size: 10000 --]
+       [-- Attachment #1: Description --]
+       [-- Type: text/plain, Encoding: 7bit, Size: 10000 --]
 
 
 
@@ -2028,7 +2044,6 @@
       2 [applica/x-gunzip, base64, 422K]   ~/src/mutt-0.85.tar.gz <no description>
 
 
-
   The '-' denotes that Mutt will delete the file after sending the
   message.  It can be toggled with the toggle-unlink command (default:
   u).  The next field is the MIME content-type, and can be changed with
@@ -2040,8 +2055,6 @@
   which can be changed with the rename-file command (default: R).  The
   final field is the description of the attachment, and can be changed
   with the edit-description command (default: d).
-
-
 
 
   55..22..  MMIIMMEE TTyyppee ccoonnffiigguurraattiioonn wwiitthh mmiimmee..ttyyppeess
@@ -2097,7 +2110,6 @@
 
 
 
-
   where $HOME is your home directory and SHAREDIR is the shared direc-
   tory defined at compile time (visible from mutt -v).
 
@@ -2110,6 +2122,7 @@
 
   A mailcap file consists of a series of lines which are comments,
   blank, or definitions.
+
   A comment line consists of a # character followed by anything you
   want.
 
@@ -2174,6 +2187,8 @@
 
 
        text/html; lynx -dump "%s" | more
+
+
 
 
   Perhaps you wish to use lynx to view text/html files, and a pager on
@@ -2358,9 +2373,9 @@
 
 
 
-     then Mutt will expand %{charset} to iso-8859-1.  The default meta-
-     mail mailcap file uses this feature to test the charset to spawn an
-     xterm using the right charset to view the message.
+     then Mutt will expand %{charset} to iso-8859-1.  The default
+     metamail mailcap file uses this feature to test the charset to
+     spawn an xterm using the right charset to view the message.
 
         This will be replaced by a %
 
@@ -2372,7 +2387,6 @@
   55..33..33..  EExxaammppllee mmaaiillccaapp ffiilleess
 
   This mailcap file is fairly simple and standard:
-
 
   ______________________________________________________________________
   # I'm always running X :)
@@ -2386,6 +2400,44 @@
 
 
   This mailcap file shows quite a number of examples:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   ______________________________________________________________________
@@ -2439,7 +2491,6 @@
   MIME viewer defined in the mailcap file, Mutt has support for
   automatically viewing MIME attachments while in the pager.
 
-
   To work, you must define a viewer in the mailcap file which uses the
   copiousoutput option to denote that it is non-interactive.  Usually,
   you also use the entry to convert the attachment to a text
@@ -2452,7 +2503,6 @@
 
 
        auto_view text/html text/enriched application/x-gunzip application/postscript image/gif application/x-tar-gz
-
 
 
 
@@ -2502,30 +2552,24 @@
 
 
 
-
-
-
-
-  -a      attach a file to a message
-  -c      specify a carbon-copy (Cc) address
-  -e      specify a config command to be run after initilization files are read
-  -F      specify an alternate file to read initialization commands
-  -f      specify a mailbox to load
-  -h      print help on command line options
-  -H      specify a draft file from which to read a header and body
-  -i      specify a file to include in a message composition
-  -n      do not read the system Muttrc
-  -m      specify a default mailbox type
-  -p      recall a postponed message
-  -R      open mailbox in read-only mode
-  -s      specify a subject (enclose in quotes if it contains spaces)
-  -v      show version number and compile-time definitions
-  -x      simulate the mailx(1) compose mode
-  -y      show a menu containing the files specified by the mailboxes command
-  -z      exit immediately if there are no messages in the mailbox
-  -Z      open the first folder with new message,exit immediately if none
-
-
+       -a      attach a file to a message
+       -c      specify a carbon-copy (Cc) address
+       -e      specify a config command to be run after initilization files are read
+       -F      specify an alternate file to read initialization commands
+       -f      specify a mailbox to load
+       -h      print help on command line options
+       -H      specify a draft file from which to read a header and body
+       -i      specify a file to include in a message composition
+       -n      do not read the system Muttrc
+       -m      specify a default mailbox type
+       -p      recall a postponed message
+       -R      open mailbox in read-only mode
+       -s      specify a subject (enclose in quotes if it contains spaces)
+       -v      show version number and compile-time definitions
+       -x      simulate the mailx(1) compose mode
+       -y      show a menu containing the files specified by the mailboxes command
+       -z      exit immediately if there are no messages in the mailbox
+       -Z      open the first folder with new message,exit immediately if none
 
 
   To read messages in a mailbox
@@ -2637,7 +2681,6 @@
   The default file in which to save aliases created by the ``create-
   alias'' function.
 
-
   NNoottee:: Mutt will not automatically source this file; you must
   explicitly use the ``source'' command for it to be executed.
 
@@ -2655,6 +2698,8 @@
   %n      index number
   %r      address which alias expands to
   %t      character which indicates if the alias is tagged for inclusion (*/ )
+
+
 
 
 
@@ -2725,8 +2770,6 @@
   This is the string that will precede a message which has been included
   in a reply.  For a full listing of defined escape sequences see the
   section on ``$index_format''.
-
-
   66..33..1122..  aauuttooeeddiitt
 
   Type: boolean
@@ -2793,8 +2836,6 @@
   some time since it involves scanning the directory and checking each
   file to see if it has already been looked at.  If _c_h_e_c_k___n_e_w is _u_n_s_e_t,
   no check for new mail is performed while the mailbox is open.
-
-
   66..33..1188..  ccoonnffiirrmmaappppeenndd
 
   Type: boolean
@@ -2861,7 +2902,6 @@
 
   Type: quadoption
   Default: ask-yes
-
   Controls whether or not messages are really deleted when closing or
   synchronizing a mailbox.  If set to _y_e_s, messages marked for deleting
   will automatically be purged without prompting.  If set to _n_o,
@@ -2926,6 +2966,8 @@
   This variable specifies which editor to use when composing messages.
 
 
+
+
   66..33..2299..  eessccaappee
 
   Type: string
@@ -2968,6 +3010,7 @@
   `+' or `=' for any other variables since expansion takes place during
   the `set' command.
 
+
   66..33..3333..  ffoollddeerr__ffoorrmmaatt
 
   Type: format string
@@ -2990,10 +3033,6 @@
 
        %>X     right justify the rest of the string and pad with character "X"
        %|X     pad to the end of the line with character "X"
-
-
-
-
 
   66..33..3344..  ffoolllloowwuupp__ttoo
 
@@ -3098,8 +3137,6 @@
   variable is set.
 
 
-
-
   66..33..4433..  hhoossttnnaammee
 
   Type: string
@@ -3163,9 +3200,6 @@
   see the section on ``$index_format''.
 
 
-
-
-
   66..33..4499..  iinncclluuddee
 
   Type: quadoption
@@ -3198,78 +3232,44 @@
   The following sequences are defined in Mutt:
 
 
+       %a      address of the author
+       %b      filename of the original message folder (think mailBox)
+       %B      the list to which the letter was sent, or else the folder name (%b).
+       %c      number of characters (bytes) in the message
+       %C      current message number
+       %d      date and time of the message in the format specified by
+               ``date_format''
+       %f      entire From: line (address + real name)
+       %F      author name, or recipient name if the message is from you
+       %i      message-id of the current message
+       %l      number of lines in the message
+       %L      list-from function
+       %m      total number of message in the mailbox
+       %N      message score
+       %n      author's real name (or address if missing)
+       %O       (_O_riginal save folder)  Where mutt would formerly have stashed the
+               message: list name or recipient name if no list
+       %s      subject of the message
+       %S      status of the message (N/D/d/!/*/r)
+       %t      `to:' field (recipients)
+       %T      the appropriate character from the $to_chars string
+       %u      user (login) name of the author
+       %Z      message status flags
 
+       %{fmt}  the date and time of the message is converted to sender's
+               time zone, and ``fmt'' is expanded by the system call
+               ``strftime''; a leading bang disables locales
+       %[fmt]  the date and time of the message is converted to the local
+               time zone, and ``fmt'' is expanded by the system call
+               ``strftime''; a leading bang disables locales
+       %(fmt)  the local date and time when the message was received.
+               ``fmt'' is expanded by the system call ``strftime'';
+               a leading bang disables locales
+       %<fmt>  the current local time. ``fmt'' is expanded by the system
+               call ``strftime''; a leading bang disables locales.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  %a      address of the author
-  %b      filename of the original message folder (think mailBox)
-  %B      the list to which the letter was sent, or else the folder name (%b).
-  %c      number of characters (bytes) in the message
-  %C      current message number
-  %d      date and time of the message in the format specified by
-          ``date_format''
-  %f      entire From: line (address + real name)
-  %F      author name, or recipient name if the message is from you
-  %i      message-id of the current message
-  %l      number of lines in the message
-  %L      list-from function
-  %m      total number of message in the mailbox
-  %N      message score
-  %n      author's real name (or address if missing)
-  %O       (_O_riginal save folder)  Where mutt would formerly have stashed the
-          message: list name or recipient name if no list
-  %s      subject of the message
-  %S      status of the message (N/D/d/!/*/r)
-  %t      `to:' field (recipients)
-  %T      the appropriate character from the $to_chars string
-  %u      user (login) name of the author
-  %Z      message status flags
-
-  %{fmt}  the date and time of the message is converted to sender's
-          time zone, and ``fmt'' is expanded by the system call
-          ``strftime''; a leading bang disables locales
-  %[fmt]  the date and time of the message is converted to the local
-          time zone, and ``fmt'' is expanded by the system call
-          ``strftime''; a leading bang disables locales
-  %(fmt)  the local date and time when the message was received.
-          ``fmt'' is expanded by the system call ``strftime'';
-          a leading bang disables locales
-  %<fmt>  the current local time. ``fmt'' is expanded by the system
-          call ``strftime''; a leading bang disables locales.
-
-  %>X     right justify the rest of the string and pad with character "X"
-  %|X     pad to the end of the line with character "X"
+       %>X     right justify the rest of the string and pad with character "X"
+       %|X     pad to the end of the line with character "X"
 
 
 
