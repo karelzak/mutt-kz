@@ -531,11 +531,15 @@ int mutt_save_attachment (FILE *fp, BODY *m, char *path, int flags, HEADER *hdr)
     
     /* recv mode */
 
-    if(hdr && m->hdr && mutt_is_message_type(m->type, m->subtype))
+    if(hdr &&
+	m->hdr &&
+	m->encoding != ENCBASE64 &&
+	m->encoding != ENCQUOTEDPRINTABLE &&
+	mutt_is_message_type(m->type, m->subtype))
     {
-      
       /* message type attachments are written to mail folders. */
-      
+
+      char buf[HUGE_STRING];
       HEADER *hn;
       CONTEXT ctx;
       MESSAGE *msg;
@@ -546,9 +550,12 @@ int mutt_save_attachment (FILE *fp, BODY *m, char *path, int flags, HEADER *hdr)
       hn->msgno = hdr->msgno; /* required for MH/maildir */
       hn->read = 1;
 
+      fseek (fp, m->offset, 0);
+      if (fgets (buf, sizeof (buf), fp) == NULL)
+	return -1;
       if (mx_open_mailbox(path, M_APPEND | M_QUIET, &ctx) == NULL)
 	return -1;
-      if ((msg = mx_open_new_message (&ctx, hdr, M_ADD_FROM)) == NULL)
+      if ((msg = mx_open_new_message (&ctx, hn, is_from (buf, NULL, 0) ? 0 : M_ADD_FROM)) == NULL)
       {
 	mx_close_mailbox(&ctx);
 	return -1;
