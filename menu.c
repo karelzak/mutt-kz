@@ -277,7 +277,7 @@ void menu_check_recenter (MUTTMENU *menu)
   if (menu->max <= menu->pagelen)
   {
     menu->top = 0;
-    menu->redraw = REDRAW_INDEX;
+    set_option (OPTNEEDREDRAW);
   }
   else if (menu->current >= menu->top + menu->pagelen)
   {
@@ -285,7 +285,6 @@ void menu_check_recenter (MUTTMENU *menu)
       menu->top = menu->current - menu->pagelen + 1;
     else
       menu->top += menu->pagelen * ((menu->current - menu->top) / menu->pagelen);
-    menu->redraw = REDRAW_INDEX;
   }
   else if (menu->current < menu->top)
   {
@@ -297,8 +296,8 @@ void menu_check_recenter (MUTTMENU *menu)
       if (menu->top < 0)
 	menu->top = 0;
     }
-    menu->redraw = REDRAW_INDEX;
   }
+  menu->redraw |= REDRAW_INDEX;
 }
 
 void menu_jump (MUTTMENU *menu)
