@@ -1766,6 +1766,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "(dis)attiva se la mailbox sarà riscritta"
 
 #: keymap_defs.h:147
+#, fuzzy
 msgid "toggle wether to browse mailboxes or all files"
 msgstr "(dis)attiva se visualizzare le mailbox o tutti i file"
 
@@ -1881,6 +1882,7 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "Per contattare gli sviluppatori scrivi a <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
@@ -2449,20 +2451,20 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
+#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
-msgstr ""
-"[-- I seguenti dati sono firmati con PGP/MIME --]\n"
-"\n"
+msgstr "[-- I seguenti dati sono crittografati con PGP/MIME  --]\n"
 
 #: pgp.c:682
+#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Fine dei dati firmati con PGP/MIME --]\n"
+"[-- Fine dei dati crittografati con PGP/MIME  --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -2962,7 +2964,7 @@ msgid "Could not open %s"
 msgstr "Impossibile aprire %s"
 
 #: sendlib.c:1682
-#, c-format
+#, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr ""
 "Errore nella spedizione del messaggio, il figlio è uscito con %d (%s).\n"
@@ -2997,6 +2999,76 @@ msgstr "Could not find sorting function! [segnala questo bug]"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(nessuna mailbox)"
+
+#, fuzzy
+#~ msgid "Error running \"%s\"!"
+#~ msgstr "Errore nella lettura dell'indirizzo!"
+
+#, fuzzy
+#~ msgid "Subscribed [%s], File mask: %s"
+#~ msgstr "Directory [%s], Maschera dei file: %s"
+
+#, fuzzy
+#~ msgid "Can't attach a directory!"
+#~ msgstr "Impossibile vedere una directory"
+
+#, fuzzy
+#~ msgid "Can't open %s: %s."
+#~ msgstr "Non riesco a fare stat: %s"
+
+#, fuzzy
+#~ msgid "-- Attachments"
+#~ msgstr "Allegati"
+
+#, fuzzy
+#~ msgid "Unable to attach %s!"
+#~ msgstr "Impossibile allegare!"
+
+#, fuzzy
+#~ msgid "Reopening mailbox... %s"
+#~ msgstr "Riapro la mailbox..."
+
+#, fuzzy
+#~ msgid "Subscribing to %s..."
+#~ msgstr "Copio in %s..."
+
+#, fuzzy
+#~ msgid "Unsubscribing to %s..."
+#~ msgstr "Mi connetto a %s..."
+
+#, fuzzy
+#~ msgid "Delete a remailer from the chain"
+#~ msgstr "cancella tutti i caratteri sulla riga"
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
+#~ "\n"
+#~ msgstr "Errore: multipart/signed non ha protocollo."
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- The following data is signed --]\n"
+#~ "\n"
+#~ msgstr ""
+#~ "[-- I seguenti dati sono firmati con PGP/MIME --]\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "[-- End of signed data --]\n"
+#~ msgstr ""
+#~ "\n"
+#~ "[-- Fine dei dati firmati con PGP/MIME --]\n"
+
+#, fuzzy
+#~ msgid "Invoking pgp..."
+#~ msgstr "Eseguo PGP..."
+
+#, fuzzy
+#~ msgid "%s...  Exiting.\n"
+#~ msgstr "Preso %s...  Esco.\n"
 
 #~ msgid "Display message using mailcap?"
 #~ msgstr "Visualizzo il messaggio con mailcap?"

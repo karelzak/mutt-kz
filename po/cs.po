@@ -1,12 +1,12 @@
-# Czech messages fot mutt.
+# Czech messages for mutt.
 # Copyright (C) 1998 Free Software Foundation, Inc.
 # Jiøí Pavlovský <pavlovsk@ff.cuni.cz>, 1998, 1999.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.95.1i\n"
+"Project-Id-Version: 0.95.3i\n"
 "POT-Creation-Date: 1999-02-12 12:05+0100\n"
-"PO-Revision-Date: 1999-01-06 21:43+0100\n"
+"PO-Revision-Date: 1999-02-13 01:12+0100\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -220,11 +220,11 @@ msgstr "Chybí argumenty."
 
 #: color.c:576 color.c:587
 msgid "color: too few arguments"
-msgstr "color: pøíl¹ málo argumentù"
+msgstr "color: pøíli¹ málo argumentù"
 
 #: color.c:610
 msgid "mono: too few arguments"
-msgstr "mono: pøíli¹ málo argumentú"
+msgstr "mono: pøíli¹ málo argumentù"
 
 #: color.c:630
 #, c-format
@@ -237,7 +237,7 @@ msgstr "pøíli¹ málo argumentù"
 
 #: color.c:679 hook.c:75
 msgid "too many arguments"
-msgstr "pøíli¹ mnoho argumentú"
+msgstr "pøíli¹ mnoho argumentù"
 
 #: color.c:693
 msgid "default colors not supported"
@@ -294,7 +294,7 @@ msgstr "Zprávy byly pøeposlány."
 msgid "Pipe to command: "
 msgstr "Poslat rourou do pøíkazu: "
 
-# opìt psí kusy abychom se ve¹li do 80 nakù
+# opìt psí kusy abychom se ve¹li do 80 znakù
 #: commands.c:334
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
@@ -637,7 +637,6 @@ msgid "Invalid message number."
 msgstr "Èíslo zprávy není správné."
 
 #: curs_main.c:666
-#, fuzzy
 msgid "Delete messages matching: "
 msgstr "Smazat zprávy shodující se s: "
 
@@ -857,7 +856,6 @@ msgid "[-- Autoview stderr of %s --]\n"
 msgstr "[-- Automaticky zobrazuji standardní chybový výstup %s --]\n"
 
 #: handler.c:1228
-#, fuzzy
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
 msgstr ""
 "[-- Chyba: typ 'message/external-body' nemá parametr 'access-type' --]\n"
@@ -934,7 +932,7 @@ msgstr "soubor %s nelze pøipojit"
 
 #: help.c:273
 msgid "ERROR: please report this bug"
-msgstr "CHYBA: ohla¹te, prosím, tuto chybu"
+msgstr "CHYBA: ohlaste, prosím, tuto chybu"
 
 #: help.c:315
 msgid "<UNKNOWN>"
@@ -968,7 +966,7 @@ msgstr "Pomoc pro %s"
 #: imap.c:116
 #, c-format
 msgid "imap_error(): unexpected response in %s: %s\n"
-msgstr "imap_error(): neèekávaná odpovìï v %s: %s\n"
+msgstr "imap_error(): neoèekávaná odpovìï v %s: %s\n"
 
 #. something is wrong because the server reported fewer messages
 #. * than we previously saw
@@ -1487,7 +1485,7 @@ msgstr "zvolit aktuální polo¾ku"
 
 #: keymap_defs.h:77
 msgid "reply to all recipients"
-msgstr "odpovìïet v¹em pøíjemcùm"
+msgstr "odpovìdìt v¹em pøíjemcùm"
 
 #: keymap_defs.h:78
 msgid "scroll down 1/2 page"
@@ -1623,7 +1621,7 @@ msgstr "odznaèit zprávy shodující se se vzorem"
 
 #: keymap_defs.h:111
 msgid "move to the middle of the page"
-msgstr "preskoèit do støedu stránky"
+msgstr "pøeskoèit do støedu stránky"
 
 #: keymap_defs.h:112
 msgid "move to the next entry"
@@ -1729,7 +1727,7 @@ msgstr "vyhledat následující shodu opaèným smìrem"
 
 #: keymap_defs.h:137
 msgid "toggle search pattern coloring"
-msgstr "pøepnout obarvování hledaných vzorú"
+msgstr "pøepnout obarvování hledaných vzorù"
 
 #: keymap_defs.h:138
 msgid "invoke a command in a subshell"
@@ -1768,6 +1766,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "pøepnout, zda bude schránka pøepsána"
 
 #: keymap_defs.h:147
+#, fuzzy
 msgid "toggle wether to browse mailboxes or all files"
 msgstr "pøepnout, zda procházet schránky nebo v¹echny soubory"
 
@@ -1781,7 +1780,7 @@ msgstr "obnovit aktuální polo¾ku"
 
 #: keymap_defs.h:150
 msgid "undelete all messages in thread"
-msgstr "obnovit vèechny zprávy ve vláknì"
+msgstr "obnovit v¹echny zprávy ve vláknì"
 
 #: keymap_defs.h:151
 msgid "undelete all messages in subthread"
@@ -1860,13 +1859,12 @@ msgid "File under directory: "
 msgstr "Soubor v adresáøi: "
 
 #: lib.c:798
-#, fuzzy
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "Soubor ji¾ existuje, mám jej pøepsat?"
+msgstr "Soubor ji¾ existuje, (p)øepsat, pøipo(j)it èi (z)pìt?"
 
 #: lib.c:798
 msgid "oac"
-msgstr ""
+msgstr "pjz"
 
 #: lib.c:1180
 #, c-format
@@ -1886,6 +1884,7 @@ msgstr ""
 "Pøipomínky k pøekladu zasílejte na adresu <cs@li.org> (èesky).\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
@@ -1900,6 +1899,7 @@ msgstr ""
 "získáte pøíkazem `mutt -vv'.\n"
 
 #: main.c:48
+#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
@@ -1942,7 +1942,7 @@ msgstr ""
 "  Tento program je roz¹iøován v nadìji, ¾e bude u¾iteèný, av¹ak BEZ "
 "JAKÉKOLI\n"
 "ZÁRUKY; neposkytují se ani odvozené záruky PRODEJNOSTI anebo VHODNOSTI PRO\n"
-"NÌJAKÝ KONKRÉTNÍ ÚÈEL. Dal¹í podrobnosti najdete v Obecné veøené licenci "
+"NÌJAKÝ KONKRÉTNÍ ÚÈEL. Dal¹í podrobnosti najdete v Obecné veøejné licenci "
 "GNU.\n"
 "\n"
 "  Kopie Obecné veøejné licence GNU mìla být dodána spolu s tímto programem;\n"
@@ -2026,7 +2026,7 @@ msgstr ""
 "  -H <soubor>\tsoubor z nìho¾ budou naèteny vzory hlavièek\n"
 "  -i <soubor>\ttento soubor Mutt vlo¾í do odpovìdi\n"
 "  -m <soubor>\timplicitní typ schránky\n"
-"  -n\t\tMutt nebude èíst systémvý soubor Muttrc\n"
+"  -n\t\tMutt nebude èíst systémový soubor Muttrc\n"
 "  -p\t\tvrátí se k odlo¾ené zprávì\n"
 "  -R\t\totevøe schránku pouze pro ètení\n"
 "  -s <vìc>\tspecifikuje vìc (pokud obsahuje mezery,\n"
@@ -2104,7 +2104,7 @@ msgstr "Schránku nelze zamknout!"
 #: mbox.c:738
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
 msgstr ""
-"sync: mbox byl zmìnìn, ale nebyly zmìnìny ¾ádné zprávy! (ohla¹te tuto chybu)"
+"sync: mbox byl zmìnìn, ale nebyly zmìnìny ¾ádné zprávy! (ohlaste tuto chybu)"
 
 #: mbox.c:767
 msgid "Writing messages... %d (%d%%)"
@@ -2203,9 +2203,9 @@ msgid "Lock count exceeded, remove lock for %s?"
 msgstr "Zámek stále existuje, odemknout %s?"
 
 #: mx.c:126
-#, fuzzy, c-format
+#, c-format
 msgid "Can't dotlock %s.\n"
-msgstr "Chyba pøi volání funkce stat pro %s"
+msgstr "%s nelze zamknout.\n"
 
 #: mx.c:184
 msgid "Timeout exceeded while attempting fcntl lock!"
@@ -2214,7 +2214,7 @@ msgstr "Vypr¹el èas pro pokus o zamknutí pomocí funkce fcntl!"
 #: mx.c:190
 #, c-format
 msgid "Waiting for fcntl lock... %d"
-msgstr "Èeká se na zamknutí pomocí funkce fcntl... %d"
+msgstr "Èekám na zamknutí pomocí funkce fcntl... %d"
 
 #: mx.c:218
 msgid "Timeout exceeded while attempting flock lock!"
@@ -2223,7 +2223,7 @@ msgstr "Èas pro zamknutí pomocí funkce flock vypr¹el!"
 #: mx.c:225
 #, c-format
 msgid "Waiting for flock attempt... %d"
-msgstr "Èeká se na pokus o zamknutí pomocí funkce flock... %d"
+msgstr "Èekám  na pokus o zamknutí pomocí funkce flock... %d"
 
 #: mx.c:595
 #, c-format
@@ -2393,7 +2393,7 @@ msgstr "prázdný vzor"
 #: pattern.c:879
 #, c-format
 msgid "error: unknown op %d (report this error)."
-msgstr "chyba: neznámý operand %d (ohla¹te tuto chybu)."
+msgstr "chyba: neznámý operand %d (ohlaste tuto chybu)."
 
 #: pattern.c:944 pattern.c:1073
 msgid "Compiling search pattern..."
@@ -2510,20 +2510,22 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
+#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Následují podepsaná data ve formátu PGP/MIME --]\n"
+"[-- Následující data jsou za¹ifrována ve formátu PGP/MIME --]\n"
 "\n"
 
 #: pgp.c:682
+#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Konec podepsaných dat ve formátu PGP/MIME --]\n"
+"[-- Konec dat za¹ifrovaných ve formátu PGP/MIME --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -2623,7 +2625,7 @@ msgstr "ID klíèe: 0x%s"
 
 #: pgpkey.c:257
 msgid "This ID's trust level is undefined."
-msgstr "Dúvìryhodnost tohoto ID není definována."
+msgstr "Dùvìryhodnost tohoto ID není definována."
 
 #: pgpkey.c:258
 msgid "This ID is not trusted."
@@ -2650,7 +2652,7 @@ msgstr "Klíè PGP 0x%s."
 
 #: pgppubring.c:58
 msgid "reserved"
-msgstr "reservováno"
+msgstr "rezervováno"
 
 #: pgppubring.c:59
 msgid "Encrypted Session Key"
@@ -2712,7 +2714,7 @@ msgstr "Paket podklíèe"
 
 #: pgppubring.c:73
 msgid "Reserved"
-msgstr "Reservováno"
+msgstr "Rezervováno"
 
 #: pgppubring.c:74
 msgid "Comment Packet"
@@ -2909,7 +2911,7 @@ msgstr "pro typ %s nebyla nalezena polo¾ka v mailcapu"
 
 #: score.c:73
 msgid "score: too few arguments"
-msgstr "skóre: pøílí¹ málo argumentù"
+msgstr "skóre: pøíli¹ málo argumentù"
 
 #: score.c:82
 msgid "score: too many arguments"
@@ -3014,7 +3016,7 @@ msgstr "Zpráva odeslána."
 
 #: sendlib.c:474
 msgid "No boundary parameter found! [report this error]"
-msgstr "Nebyl nalezen 'boundary' parametr! [ohla¹te tuto chybu]"
+msgstr "Nebyl nalezen 'boundary' parametr! [ohlaste tuto chybu]"
 
 #: sendlib.c:508
 #, c-format
@@ -3027,7 +3029,7 @@ msgid "Could not open %s"
 msgstr "%s nelze otevøít"
 
 #: sendlib.c:1682
-#, c-format
+#, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Chyba pøi zasílání zprávy, potomek ukonèen %d (%s).\n"
 
@@ -3056,17 +3058,87 @@ msgstr "Øadím schránku..."
 
 #: sort.c:226
 msgid "Could not find sorting function! [report this bug]"
-msgstr "Øadící funkci nelze nalézt! [ohla¹te tutu chybu]"
+msgstr "Øadící funkci nelze nalézt! [ohlaste tutu chybu]"
 
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(¾ádná schránka)"
 
+#, fuzzy
+#~ msgid "Error running \"%s\"!"
+#~ msgstr "Chyba pøi zpracování adresy!"
+
+#, fuzzy
+#~ msgid "Subscribed [%s], File mask: %s"
+#~ msgstr "Adresáø [%s], Souborová maska: %s"
+
+#, fuzzy
+#~ msgid "Can't attach a directory!"
+#~ msgstr "Adresáø nelze zobrazit"
+
+#, fuzzy
+#~ msgid "Can't open %s: %s."
+#~ msgstr "Chyba pøi volání funkce stat pro %s"
+
+#, fuzzy
+#~ msgid "-- Attachments"
+#~ msgstr "Pøílohy"
+
+#, fuzzy
+#~ msgid "Unable to attach %s!"
+#~ msgstr "Nelze pøipojit!"
+
+#, fuzzy
+#~ msgid "Reopening mailbox... %s"
+#~ msgstr "Znovu otevírám schránku..."
+
+#, fuzzy
+#~ msgid "Subscribing to %s..."
+#~ msgstr "Kopíruji do %s..."
+
+#, fuzzy
+#~ msgid "Unsubscribing to %s..."
+#~ msgstr "Pøipojuji se k %s..."
+
+#, fuzzy
+#~ msgid "Delete a remailer from the chain"
+#~ msgstr "smazat v¹echny znaky na øádku"
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
+#~ "\n"
+#~ msgstr "Chyba: typ 'multipart/signed' bez informace o protokolu"
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- The following data is signed --]\n"
+#~ "\n"
+#~ msgstr ""
+#~ "[-- Následují podepsaná data ve formátu PGP/MIME --]\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "[-- End of signed data --]\n"
+#~ msgstr ""
+#~ "\n"
+#~ "[-- Konec podepsaných dat ve formátu PGP/MIME --]\n"
+
+#, fuzzy
+#~ msgid "Invoking pgp..."
+#~ msgstr "Spou¹tím PGP..."
+
+#, fuzzy
+#~ msgid "%s...  Exiting.\n"
+#~ msgstr "Zachycen %s... Konèím.\n"
+
 #~ msgid "Display message using mailcap?"
 #~ msgstr "Zobrazit zprávu pomocí mailcapu?"
 
 #~ msgid "Please report this program error in the function mutt_mktime."
-#~ msgstr "Ohla¹te, prosím, tuto chybu ve funkci mutt_mktime."
+#~ msgstr "Ohlaste, prosím, tuto chybu ve funkci mutt_mktime."
 
 #~ msgid "%s is a boolean var!"
 #~ msgstr "Promìnná %s je typu boolean!"

@@ -1756,6 +1756,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "Schakel het opslaan van wijzigingen aan/uit"
 
 #: keymap_defs.h:147
+#, fuzzy
 msgid "toggle wether to browse mailboxes or all files"
 msgstr "Kies tussen mailboxes en alle bestanden"
 
@@ -2013,7 +2014,9 @@ msgstr "Kan mailbox niet claimen!"
 #.
 #: mbox.c:738
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr "DEBUG war beim Kompilieren nicht definiert.  Ignoriert."
+msgstr ""
+"sync: mbox wurde modifiziert, aber keine modifizierten Nachrichten.  "
+"Interner Fehler."
 
 #: mbox.c:767
 msgid "Writing messages... %d (%d%%)"
@@ -2417,20 +2420,22 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
+#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- De volgende gegevens zijn PGP/MIME ondertekend --]\n"
+"[-- De volgende gegevens zijn PGP/MIME versleuteld --]\n"
 "\n"
 
 #: pgp.c:682
+#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Einde van PGP/MIME ondertekende gegevens --]\n"
+"[-- Einde van PGP/MIME versleutelde data --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -2931,7 +2936,7 @@ msgid "Could not open %s"
 msgstr "Kan %s niet openen."
 
 #: sendlib.c:1682
-#, c-format
+#, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Fout %d opgetreden tijdens versturen van bericht.\n"
 
@@ -2965,6 +2970,76 @@ msgstr "Kan 'sorting function' niet vinden! [Meldt deze bug!]"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(geen Mailbox)"
+
+#, fuzzy
+#~ msgid "Error running \"%s\"!"
+#~ msgstr "Ongeldig adres!"
+
+#, fuzzy
+#~ msgid "Subscribed [%s], File mask: %s"
+#~ msgstr "Directory [%s], Bestandsmasker: %s"
+
+#, fuzzy
+#~ msgid "Can't attach a directory!"
+#~ msgstr "Directory kan niet worden getoond."
+
+#, fuzzy
+#~ msgid "Can't open %s: %s."
+#~ msgstr "Kan directory %s niet lezen."
+
+#, fuzzy
+#~ msgid "-- Attachments"
+#~ msgstr "Bijlagen"
+
+#, fuzzy
+#~ msgid "Unable to attach %s!"
+#~ msgstr "Kan niet bijvoegen!"
+
+#, fuzzy
+#~ msgid "Reopening mailbox... %s"
+#~ msgstr "Mailbox wordt heropend.."
+
+#, fuzzy
+#~ msgid "Subscribing to %s..."
+#~ msgstr "Kopieer naar %s..."
+
+#, fuzzy
+#~ msgid "Unsubscribing to %s..."
+#~ msgstr "Bezig met verbinden met %s..."
+
+#, fuzzy
+#~ msgid "Delete a remailer from the chain"
+#~ msgstr "Wis regel"
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
+#~ "\n"
+#~ msgstr "Fout: multipart/signed zonder \"protocol\"-parameter."
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- The following data is signed --]\n"
+#~ "\n"
+#~ msgstr ""
+#~ "[-- De volgende gegevens zijn PGP/MIME ondertekend --]\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "[-- End of signed data --]\n"
+#~ msgstr ""
+#~ "\n"
+#~ "[-- Einde van PGP/MIME ondertekende gegevens --]\n"
+
+#, fuzzy
+#~ msgid "Invoking pgp..."
+#~ msgstr "PGP wordt aangeroepen..."
+
+#, fuzzy
+#~ msgid "%s...  Exiting.\n"
+#~ msgstr "Signaal %s....\n"
 
 #~ msgid "Display message using mailcap?"
 #~ msgstr "Bericht weergeven volgens mailcap?"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 0.94.14i\n"
 "POT-Creation-Date: 1999-02-12 12:05+0100\n"
-"PO-Revision-Date: 1999-01-05 20:46+0100\n"
+"PO-Revision-Date: 1999-02-15 21:37+0100\n"
 "Last-Translator: Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre "
 "<Vincent.Lefevre@ens-lyon.fr>\n"
 "Language-Team: mutt-dev <mutt-dev@mutt.org>\n"
@@ -1929,11 +1929,11 @@ msgstr "Fichier dans le répertoire : "
 #: lib.c:798
 #, fuzzy
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "Le fichier existe, écraser ?"
+msgstr "Le fichier existe, écras(e)r, (c)oncaténer ou (a)nnuler ?"
 
 #: lib.c:798
 msgid "oac"
-msgstr ""
+msgstr "eca"
 
 # , c-format
 #: lib.c:1180
@@ -2158,7 +2158,7 @@ msgstr "La boîte aux lettres a été altérée !"
 
 #: mbox.c:685 mbox.c:928
 msgid "Fatal error!  Could not reopen mailbox!"
-msgstr "Erreur fatale !  La boîte aux lettres n'a pas pu être réouverte !"
+msgstr "Erreur fatale ! La boîte aux lettres n'a pas pu être réouverte !"
 
 #: mbox.c:694
 msgid "Unable to lock mailbox!"
@@ -2170,7 +2170,7 @@ msgstr "Impossible de verrouiller la boîte aux lettres !"
 #.
 #: mbox.c:738
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr "sync: BAL modifiée, mais pas de message modifié !  (signalez ce bug)"
+msgstr "sync : BAL modifiée, mais pas de message modifié ! (signalez ce bug)"
 
 #: mbox.c:767
 msgid "Writing messages... %d (%d%%)"
@@ -2180,7 +2180,7 @@ msgstr "Écriture des messages... %d (%d%%)"
 #: mbox.c:913
 #, c-format
 msgid "Write failed!  Saved partial mailbox to %s"
-msgstr "Erreur d'écriture !  Boîte aux lettres partielle sauvée dans %s"
+msgstr "Erreur d'écriture ! Boîte aux lettres partielle sauvée dans %s"
 
 #: mbox.c:965
 msgid "Could not reopen mailbox!"
@@ -2275,7 +2275,7 @@ msgstr "Nombre d'essais de verrouillage dépassé, enlever le verrou pour %s ?"
 #: mx.c:126
 #, fuzzy, c-format
 msgid "Can't dotlock %s.\n"
-msgstr "Impossible d'obtenir le statut du fichier : %s"
+msgstr "Impossible de verrouiller %s avec dotlock.\n"
 
 #: mx.c:184
 msgid "Timeout exceeded while attempting fcntl lock!"
@@ -3095,7 +3095,7 @@ msgstr "Aucun destinataire spécifié."
 
 #: send.c:1174
 msgid "No subject, abort sending?"
-msgstr "Pas d'objet, abandonner l'envoi?"
+msgstr "Pas d'objet, abandonner l'envoi ?"
 
 #: send.c:1178
 msgid "No subject specified."

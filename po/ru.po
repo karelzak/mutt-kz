@@ -1762,6 +1762,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "разрешить/запретить перезапись почтового ящика"
 
 #: keymap_defs.h:147
+#, fuzzy
 msgid "toggle wether to browse mailboxes or all files"
 msgstr ""
 "переключиться между режимами просмотра всех файлов и просмотра почтовых "
@@ -1882,6 +1883,7 @@ msgstr ""
 "по адресу <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
@@ -1898,6 +1900,7 @@ msgstr ""
 "информации введите `mutt -vv'.\n"
 
 #: main.c:48
+#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
@@ -2509,20 +2512,22 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
+#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Начало данных, подписанных в формате PGP/MIME --]\n"
+"[-- Начало данных, шифрованных в формате PGP/MIME --]\n"
 "\n"
 
 #: pgp.c:682
+#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Конец данных, подписанных в формате PGP/MIME --]\n"
+"[-- Конец данных, шифрованных в формате PGP/MIME --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -3023,7 +3028,7 @@ msgid "Could not open %s"
 msgstr "Не удалось открыть %s"
 
 #: sendlib.c:1682
-#, c-format
+#, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Не удалось послать сообщение, процесс-потомок вернул %d (%s).\n"
 
@@ -3057,6 +3062,76 @@ msgstr "Не удалось найти функцию сортировки! (сообщите об этой ошибке)"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(нет почтового ящика)"
+
+#, fuzzy
+#~ msgid "Error running \"%s\"!"
+#~ msgstr "Ошибка разбора адреса!"
+
+#, fuzzy
+#~ msgid "Subscribed [%s], File mask: %s"
+#~ msgstr "Каталог [%s], маска файла: %s"
+
+#, fuzzy
+#~ msgid "Can't attach a directory!"
+#~ msgstr "Не удалось просмотреть каталог"
+
+#, fuzzy
+#~ msgid "Can't open %s: %s."
+#~ msgstr "Невозможно получить информацию: %s"
+
+#, fuzzy
+#~ msgid "-- Attachments"
+#~ msgstr "Вложения"
+
+#, fuzzy
+#~ msgid "Unable to attach %s!"
+#~ msgstr "Не удалось вложить!"
+
+#, fuzzy
+#~ msgid "Reopening mailbox... %s"
+#~ msgstr "Повторное открытие почтового ящика..."
+
+#, fuzzy
+#~ msgid "Subscribing to %s..."
+#~ msgstr "Копируется в %s..."
+
+#, fuzzy
+#~ msgid "Unsubscribing to %s..."
+#~ msgstr "Устанавливается соединение с %s..."
+
+#, fuzzy
+#~ msgid "Delete a remailer from the chain"
+#~ msgstr "удалить все символы в строке"
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
+#~ "\n"
+#~ msgstr "Ошибка: тип multipart/signed требует параметра protocol."
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- The following data is signed --]\n"
+#~ "\n"
+#~ msgstr ""
+#~ "[-- Начало данных, подписанных в формате PGP/MIME --]\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "[-- End of signed data --]\n"
+#~ msgstr ""
+#~ "\n"
+#~ "[-- Конец данных, подписанных в формате PGP/MIME --]\n"
+
+#, fuzzy
+#~ msgid "Invoking pgp..."
+#~ msgstr "Запускается PGP..."
+
+#, fuzzy
+#~ msgid "%s...  Exiting.\n"
+#~ msgstr "Получен сигнал %s...  Завершение работы.\n"
 
 #~ msgid "Display message using mailcap?"
 #~ msgstr "Показать сообщение в соответствии с mailcap?"

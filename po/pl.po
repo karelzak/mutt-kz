@@ -1761,6 +1761,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "ustala czy skrzynka bêdzie ponownie zapisana"
 
 #: keymap_defs.h:147
+#, fuzzy
 msgid "toggle wether to browse mailboxes or all files"
 msgstr "ustal czy przegl±daæ skrzynki pocztowe, czy wszystkie pliki"
 
@@ -1876,6 +1877,7 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "Aby powiadomiæ twórców, pisz proszê na <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
@@ -1891,6 +1893,7 @@ msgstr ""
 "T³umaczenie na jêzyk polski: Pawe³ Dziekoñski i Sergiusz Paw³owicz.\n"
 
 #: main.c:48
+#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
@@ -2492,20 +2495,22 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
+#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Nastêpuj±ce dane s± sygnowane PGP/MIME --]\n"
+"[-- Nastêpuj±ce dane s± zaszyfrowane PGP/MIME --]\n"
 "\n"
 
 #: pgp.c:682
+#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Koniec danych sygnowanych PGP/MIME --]\n"
+"[-- Koniec danych zaszyfrowanych PGP/MIME --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -3007,7 +3012,7 @@ msgid "Could not open %s"
 msgstr "Nie mogê otworzyæ %s"
 
 #: sendlib.c:1682
-#, c-format
+#, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "B³±d podczas wysy³ania listu, proces potomny opuszczony %d (%s).\n"
 
@@ -3041,6 +3046,76 @@ msgstr "Nie znaleziono funkcji sortowania! (zg³o¶ ten b³±d)"
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(nie ma foldera poczty)"
+
+#, fuzzy
+#~ msgid "Error running \"%s\"!"
+#~ msgstr "B³±d interpretacji adresu!"
+
+#, fuzzy
+#~ msgid "Subscribed [%s], File mask: %s"
+#~ msgstr "Katalog [%s], Maska nazw plików: %s"
+
+#, fuzzy
+#~ msgid "Can't attach a directory!"
+#~ msgstr "Nie mogê przegl±daæ tego katalogu"
+
+#, fuzzy
+#~ msgid "Can't open %s: %s."
+#~ msgstr "Nie mogê ustaliæ statusu: %s"
+
+#, fuzzy
+#~ msgid "-- Attachments"
+#~ msgstr "Za³±czniki"
+
+#, fuzzy
+#~ msgid "Unable to attach %s!"
+#~ msgstr "Nie mogê za³±czyæ!"
+
+#, fuzzy
+#~ msgid "Reopening mailbox... %s"
+#~ msgstr "Ponownie otwieram skrzynkê..."
+
+#, fuzzy
+#~ msgid "Subscribing to %s..."
+#~ msgstr "Kopiujê do $s..."
+
+#, fuzzy
+#~ msgid "Unsubscribing to %s..."
+#~ msgstr "£±czê siê z %s..."
+
+#, fuzzy
+#~ msgid "Delete a remailer from the chain"
+#~ msgstr "usuñ wszystkie znaki w linii"
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
+#~ "\n"
+#~ msgstr "B³±d: multipart/signed nie ma protoko³u."
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- The following data is signed --]\n"
+#~ "\n"
+#~ msgstr ""
+#~ "[-- Nastêpuj±ce dane s± sygnowane PGP/MIME --]\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "[-- End of signed data --]\n"
+#~ msgstr ""
+#~ "\n"
+#~ "[-- Koniec danych sygnowanych PGP/MIME --]\n"
+
+#, fuzzy
+#~ msgid "Invoking pgp..."
+#~ msgstr "Wywo³ujê PGP..."
+
+#, fuzzy
+#~ msgid "%s...  Exiting.\n"
+#~ msgstr "Dosta³em %s... Opuszczam program.\n"
 
 #~ msgid "Display message using mailcap?"
 #~ msgstr "Wy¶wietliæ u¿ywaj±c pliku 'mailcap'?"

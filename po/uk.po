@@ -1751,6 +1751,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "перемкнути, чи перезаписувати скриньку"
 
 #: keymap_defs.h:147
+#, fuzzy
 msgid "toggle wether to browse mailboxes or all files"
 msgstr "перемкнути проглядання скриньок/вс╕х файл╕в"
 
@@ -2437,20 +2438,22 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
+#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Наступн╕ дан╕ п╕дписано PGP/MIME --]\n"
+"[-- Наступн╕ дан╕ зашифровано PGP/MIME --]\n"
 "\n"
 
 #: pgp.c:682
+#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- К╕нець даних, п╕дписаних PGP/MIME --]\n"
+"[-- К╕нець даних, зашифрованих  PGP/MIME --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -2952,7 +2955,7 @@ msgid "Could not open %s"
 msgstr "Не вийшло в╕дкрити %s"
 
 #: sendlib.c:1682
-#, c-format
+#, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Помилка в╕дправки, код повернення %d (%s).\n"
 
@@ -2986,6 +2989,76 @@ msgstr ""
 #: status.c:101
 msgid "(no mailbox)"
 msgstr "(скриньки нема╓)"
+
+#, fuzzy
+#~ msgid "Error running \"%s\"!"
+#~ msgstr "Помилка розбору адреси!"
+
+#, fuzzy
+#~ msgid "Subscribed [%s], File mask: %s"
+#~ msgstr "Каталог [%s] з маскою: %s"
+
+#, fuzzy
+#~ msgid "Can't attach a directory!"
+#~ msgstr "Неможливо побачити каталог"
+
+#, fuzzy
+#~ msgid "Can't open %s: %s."
+#~ msgstr "Не вийшло в╕дкрити %s"
+
+#, fuzzy
+#~ msgid "-- Attachments"
+#~ msgstr "Додатки"
+
+#, fuzzy
+#~ msgid "Unable to attach %s!"
+#~ msgstr "Неможливо додати!"
+
+#, fuzzy
+#~ msgid "Reopening mailbox... %s"
+#~ msgstr "Повторне в╕дкриття поштово╖ скриньки..."
+
+#, fuzzy
+#~ msgid "Subscribing to %s..."
+#~ msgstr "Коп╕ювання до %s..."
+
+#, fuzzy
+#~ msgid "Unsubscribing to %s..."
+#~ msgstr "З'╓днання з %s..."
+
+#, fuzzy
+#~ msgid "Delete a remailer from the chain"
+#~ msgstr "спорожнити рядок"
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
+#~ "\n"
+#~ msgstr "Помилка: нема╓ протоколу для multipart/signed."
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- The following data is signed --]\n"
+#~ "\n"
+#~ msgstr ""
+#~ "[-- Наступн╕ дан╕ п╕дписано PGP/MIME --]\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "[-- End of signed data --]\n"
+#~ msgstr ""
+#~ "\n"
+#~ "[-- К╕нець даних, п╕дписаних PGP/MIME --]\n"
+
+#, fuzzy
+#~ msgid "Invoking pgp..."
+#~ msgstr "Виклик PGP..."
+
+#, fuzzy
+#~ msgid "%s...  Exiting.\n"
+#~ msgstr "Отримано %s...  Виходжу.\n"
 
 #~ msgid "Display message using mailcap?"
 #~ msgstr "В╕добразити лист з використанням mailcap?"

@@ -1763,6 +1763,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "Schalte Sichern von Änderungen ein/aus"
 
 #: keymap_defs.h:147
+#, fuzzy
 msgid "toggle wether to browse mailboxes or all files"
 msgstr "Wähle zwischen Mailboxen und allen Dateien"
 
@@ -1958,6 +1959,33 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
+"usage: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <file> ] [ -m <type> ] [ -f <file> "
+"]\n"
+"       mutt [ -nx ] [ -e <cmd> ] [ -a <file> ] [ -F <file> ] [ -H <file> ] [ "
+"-i <file> ] [ -s <subj> ] [ -b <addr> ] [ -c <addr> ] <addr> [ ... ]\n"
+"       mutt [ -n ] [ -e <cmd> ] [ -F <file> ] -p\n"
+"       mutt -v[v]\n"
+"\n"
+"options:\n"
+"  -a <file>\tHängt Datei an die Message an\n"
+"  -b <address>\tEmpfänger einer unsichtbaren Kopie (Bcc:)\n"
+"  -c <address>\tEmpfänger einer Kopie (Cc:)\n"
+"  -e <command>\tMutt-Kommando, nach der Initialisierung ausführen\n"
+"  -f <file>\tMailbox, die eingelesen werden soll\n"
+"  -F <file>\tAlternatives muttrc File.\n"
+"  -H <file>\tFile, aus dem der Header der Mail gelesen werdenn soll\n"
+"  -i <file>\tFile, das in den Body der Message eingebunden werden soll\n"
+"  -m <type>\tDefault-Mailbox Typ\n"
+"  -n\t\tDas Muttrc des Systems ignorieren\n"
+"  -p\t\tEine zurückgestellte Nachricht zurückholen\n"
+"  -R\t\tMailbox nur zum Lesen öffnen\n"
+"  -s <subj>\tSubject der Mail (Leerzeichen in Anführungsstrichen)\n"
+"  -v\t\tVersion und Einstellungen beim Compilieren anzeigen\n"
+"  -x\t\tSimuliert mailx beim Verschicken von Mails\n"
+"  -y\t\tStarte Mutt mit einer Mailbox aus der `mailboxes' Liste\n"
+"  -z\t\tNur starten, wenn neue Nachrichten in der Mailbox liegen\n"
+"  -Z\t\tÖffne erste Mailbox mit neuen Nachrichten oder beenden\n"
+"  -h\t\tDiese Hilfe"
 
 #: main.c:151
 msgid ""
@@ -2424,20 +2452,22 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
+#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Die folgenden Daten sind PGP/MIME-signiert --]\n"
+"[-- Die folgenden Daten sind PGP/MIME-verschlüsselt --]\n"
 "\n"
 
 #: pgp.c:682
+#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Ende der PGP/MIME-signierten Daten --]\n"
+"[-- Ende der PGP/MIME-verschlüsselten Daten --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -2937,7 +2967,7 @@ msgid "Could not open %s"
 msgstr "Konnte %s nicht öffnen."
 
 #: sendlib.c:1682
-#, c-format
+#, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Fehler %d beim Versand der Nachricht (%s).\n"
 
@@ -2972,11 +3002,118 @@ msgstr ""
 msgid "(no mailbox)"
 msgstr "(keine Mailbox)"
 
+#, fuzzy
+#~ msgid "Error running \"%s\"!"
+#~ msgstr "Unverständliche Adresse!"
+
+#, fuzzy
+#~ msgid "Subscribed [%s], File mask: %s"
+#~ msgstr "Verzeichnis [%s], Dateimaske: %s"
+
+#, fuzzy
+#~ msgid "Can't attach a directory!"
+#~ msgstr "Verzeichnisse können nicht angezeigt werden."
+
+#, fuzzy
+#~ msgid "Can't open %s: %s."
+#~ msgstr "Kann Verzeichniseintrag für Datei nicht lesen: %s"
+
+#, fuzzy
+#~ msgid "-- Attachments"
+#~ msgstr "Anhänge"
+
+#, fuzzy
+#~ msgid "Unable to attach %s!"
+#~ msgstr "Kann nicht anhängen!"
+
+#, fuzzy
+#~ msgid "Reopening mailbox... %s"
+#~ msgstr "Öffne Mailbox erneut..."
+
+#, fuzzy
+#~ msgid "Subscribing to %s..."
+#~ msgstr "Kopiere nach %s..."
+
+#, fuzzy
+#~ msgid "Unsubscribing to %s..."
+#~ msgstr "Verbinde zu %s..."
+
+#, fuzzy
+#~ msgid "Delete a remailer from the chain"
+#~ msgstr "Lösche Zeile"
+
+#~ msgid ""
+#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
+#~ "\n"
+#~ msgstr ""
+#~ "[-- Fehler: Unbekanntes multipart/signed Protokoll %s! --]\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "[-- The following data is signed --]\n"
+#~ "\n"
+#~ msgstr ""
+#~ "[-- Die folgenden Daten sind signiert --]\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "[-- End of signed data --]\n"
+#~ msgstr ""
+#~ "\n"
+#~ "[-- Ende der signierten Daten --]\n"
+
+#, fuzzy
+#~ msgid "Invoking pgp..."
+#~ msgstr "Rufe PGP auf..."
+
+#, fuzzy
+#~ msgid "%s...  Exiting.\n"
+#~ msgstr "Signal %s... Abbruch.\n"
+
 #~ msgid "Display message using mailcap?"
 #~ msgstr "Nachricht mittels Mailcap anzeigen?"
 
+#~ msgid "Decompressing %s..."
+#~ msgstr "Entpacke %s..."
+
+#~ msgid "Error unable to lock file %s!\n"
+#~ msgstr "Kann Mailbox %s nicht für exklusiven Zugriff markieren!\n"
+
+#~ msgid "echo Decompressing %s..."
+#~ msgstr "echo Entpacke %s..."
+
+#~ msgid "Error executing: %s : unable to open the mailbox!\n"
+#~ msgstr "Fehler beim Ausführen von %s : Kann die Mailbox nicht öffnen!\n"
+
+#~ msgid "Compressing %s..."
+#~ msgstr "Komprimiere %s..."
+
+#~ msgid "echo Compressing %s..."
+#~ msgstr "echo Komprimiere %s..."
+
+#~ msgid ""
+#~ "%s: Error compressing mailbox! Original mailbox deleted, uncompressed one "
+#~ "kept!\n"
+#~ msgstr ""
+#~ "%s: Fehler beim Komprimieren der Mailbox! Ursprüngliche Mailbox gelöscht, "
+#~ "entpackte gespeichert!\n"
+
+#~ msgid "Compressed-appending to %s..."
+#~ msgstr "Hänge komprimiert an %s... an"
+
+#~ msgid "echo Compressed-appending to %s..."
+#~ msgstr "echo Hänge komprimiert an %s... an"
+
+#~ msgid " %s: Error compressing mailbox!  Uncompressed one kept!\n"
+#~ msgstr ""
+#~ " %s: Fehler beim packen der Mailbox! Entpackte Mailbox gespeichert!\n"
+
 #~ msgid "Please report this program error in the function mutt_mktime."
 #~ msgstr "Bitte einen Fehler bezüglich der mutt_mktime Funktion melden."
+
+#~ msgid "bad formatted command string"
+#~ msgstr "Hook enthält nicht die Muster %f und %t"
 
 #~ msgid "%s is a boolean var!"
 #~ msgstr "%s ist eine Boolsche Variable!"

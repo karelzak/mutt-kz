@@ -2,8 +2,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mutt\n"
 "POT-Creation-Date: 1999-02-12 12:05+0100\n"
-"PO-Revision-Date: 1998-10-29 19:25+0100\n"
+"PO-Revision-Date: 1999-02-15 21:55+0100\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
+"Language-Team: -\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
 
 #: addrbook.c:31 browser.c:53 pager.c:1368 postpone.c:32 query.c:43
 #: recvattach.c:47
@@ -293,15 +297,17 @@ msgstr "Redirigir el mensaje al comando:"
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
+"Orden-rev (f)echa/(d)e/(r)ecep/(a)snto/(p)ara/(h)ilo/(n)ada/(t)amño/p(u)nt: "
 
 #: commands.c:335
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
+"Orden (f)echa/(d)e/(r)ecep/(a)sunto/(p)ara/(h)ilo/(n)ada/(t)amaño/p(u)ntaje: "
 
 #: commands.c:336
 msgid "dfrsotuzc"
-msgstr ""
+msgstr "fdraphntu"
 
 #: commands.c:389
 msgid "Shell command: "
@@ -847,25 +853,26 @@ msgstr "[-- Error al ejecutar %s --]\n"
 #: handler.c:1228
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
 msgstr ""
+"[-- Error: Contenido message/external no tiene parámetro acces-type --]\n"
 
 #: handler.c:1245
-#, fuzzy, c-format
+#, c-format
 msgid "[-- This %s/%s attachment "
-msgstr "[-- Archivo adjunto #%d"
+msgstr "[-- Este archivo adjunto %s/%s "
 
 #: handler.c:1252
 #, c-format
 msgid "(size %s bytes) "
-msgstr ""
+msgstr "(tamaño %s bytes) "
 
 #: handler.c:1254
 msgid "has been deleted --]\n"
-msgstr ""
+msgstr "ha sido suprimido --]\n"
 
 #: handler.c:1257
-#, fuzzy, c-format
+#, c-format
 msgid "[-- on %s --]\n"
-msgstr "[-- Automuestra usando %s --]\n"
+msgstr "[-- el %s --]\n"
 
 #: handler.c:1267
 #, c-format
@@ -874,6 +881,8 @@ msgid ""
 "[-- and the indicated external source has --]\n"
 "[-- expired. --]\n"
 msgstr ""
+"[-- Este archivo adjunto %s/%s no está incluido --]\n"
+"[-- y la fuente externa indicada ha expirado. --]\n"
 
 #: handler.c:1281
 #, c-format
@@ -881,6 +890,8 @@ msgid ""
 "[-- This %s/%s attachment is not included, --]\n"
 "[-- and the indicated access-type %s is unsupported --]\n"
 msgstr ""
+"[-- Este archivo adjunto %s/%s no está incluido --]\n"
+"[-- y el tipo de acceso indicado %s no es soportado --]\n"
 
 #: handler.c:1378
 msgid "Error: multipart/signed has no protocol."
@@ -888,7 +899,7 @@ msgstr "Error: multipart/signed no tiene protocolo."
 
 #: handler.c:1390
 msgid "Error: multipart/encrypted has no protocol parameter!"
-msgstr "Error: multipart/signed no tiene parámetro de protocolo."
+msgstr "Error: multipart/encrypted no tiene parámetro de protocolo."
 
 #: handler.c:1432
 msgid "Unable to open temporary file!"
@@ -987,9 +998,8 @@ msgstr "Entrando..."
 
 #. Login failed, try again
 #: imap.c:952
-#, fuzzy
 msgid "Login failed."
-msgstr "Entrando..."
+msgstr "El login falló."
 
 #: imap.c:1009
 #, c-format
@@ -1101,16 +1111,16 @@ msgstr "Error en %s, renglón %d: %s"
 #: init.c:1116
 #, c-format
 msgid "source: errors in %s"
-msgstr "fuente: errores en %s"
+msgstr "source: errores en %s"
 
 #: init.c:1126
 #, c-format
 msgid "source: error at %s"
-msgstr "fuente: errores en %s"
+msgstr "source: errores en %s"
 
 #: init.c:1131
 msgid "source: too many arguments"
-msgstr "fuente: demasiados argumentos"
+msgstr "source: demasiados argumentos"
 
 #: init.c:1182
 #, c-format
@@ -1500,7 +1510,7 @@ msgstr "ejecutar un macro"
 
 #: keymap_defs.h:85
 msgid "compose a new mail message"
-msgstr "Escribir un mensaje nuevo"
+msgstr "escribir un mensaje nuevo"
 
 #: keymap_defs.h:86
 msgid "open a different folder"
@@ -1512,7 +1522,7 @@ msgstr "abrir otro buzón en modo de sólo lectura"
 
 #: keymap_defs.h:88
 msgid "clear a status flag from a message"
-msgstr "Remover indicador de un mensaje"
+msgstr "quitarle un indicador a un mensaje"
 
 #: keymap_defs.h:89
 msgid "delete messages matching a pattern"
@@ -1747,6 +1757,7 @@ msgid "toggle whether the mailbox will be rewritten"
 msgstr "cambiar si los cambios del buzón serán guardados"
 
 #: keymap_defs.h:147
+#, fuzzy
 msgid "toggle wether to browse mailboxes or all files"
 msgstr "cambiar la navegación de buzones o todos los archivos"
 
@@ -1839,13 +1850,12 @@ msgid "File under directory: "
 msgstr "Archivo en el directorio: "
 
 #: lib.c:798
-#, fuzzy
 msgid "File exists, (o)verwrite, (a)ppend, or (c)ancel?"
-msgstr "Archivo existe, ¿sobreescribir?"
+msgstr "Archivo existe, ¿(s)obreescribirlo, (a)ñadirle o (c)ancelar?"
 
 #: lib.c:798
 msgid "oac"
-msgstr ""
+msgstr "sac"
 
 #: lib.c:1180
 #, c-format
@@ -1862,14 +1872,20 @@ msgid "To contact the developers, please mail to <mutt-dev@mutt.org>.\n"
 msgstr "Para contactar los autores mande un correo a <mutt-dev@mutt.org>.\n"
 
 #: main.c:42
+#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins and others.\n"
 "Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n"
 "Mutt is free software, and you are welcome to redistribute it\n"
 "under certain conditions; type `mutt -vv' for details.\n"
 msgstr ""
+"Copyright (C) 1996-8 Michael R. Elkins y otros.\n"
+"Mutt viene con ABSOLUTAMENTE NINGUNA GARANTÍA; para obtener mas detalles\n"
+"teclee `mutt -vv'. Mutt es software libre, puede redistribuirlo\n"
+"bajo ciertas condiciones; teclee `mutt -vv' para obtener detalles.\n"
 
 #: main.c:48
+#, fuzzy
 msgid ""
 "Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
 "Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
@@ -1893,6 +1909,27 @@ msgid ""
 "    along with this program; if not, write to the Free Software\n"
 "    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
 msgstr ""
+"Copyright (C) 1996-8 Michael R. Elkins <me@cs.hmc.edu>\n"
+"Copyright (C) 1997-8 Thomas Roessler <roessler@guug.de>\n"
+"Copyright (C) 1998   Werner Koch <wk@isil.d.shuttle.de>\n"
+"Copyright (C) 1998   Ruslan Ermilov <ru@ucb.crimea.ua>\n"
+"\n"
+"Muchos otros no mencionados aqui contribuyeron mucho código,\n"
+"mejoras y sugerencias.\n"
+"\n"
+"    This program is free software; you can redistribute it and/or modify\n"
+"    it under the terms of the GNU General Public License as published by\n"
+"    the Free Software Foundation; either version 2 of the License, or\n"
+"    (at your option) any later version.\n"
+"\n"
+"    This program is distributed in the hope that it will be useful,\n"
+"    but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"    GNU General Public License for more details.\n"
+"\n"
+"    You should have received a copy of the GNU General Public License\n"
+"    along with this program; if not, write to the Free Software\n"
+"    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
 
 #: main.c:73
 msgid ""
@@ -1909,6 +1946,18 @@ msgid ""
 "    You should have received a copy of the full distribution terms\n"
 "    along with this program; if not, write to the program's developers.\n"
 msgstr ""
+"\n"
+"Implementación SHA1 Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n"
+"\n"
+"    Redistribución y uso en forma de código fuente y binario con o sin\n"
+"    modificación estan permitidos bajo ciertas condiciones.\n"
+"\n"
+"    The SHA1 implementation comes AS IS, and ANY EXPRESS OR IMPLIED\n"
+"    WARRANTIES, including, but not limited to, the implied warranties of\n"
+"    merchantability and fitness for a particular purpose ARE DISCLAIMED.\n"
+"\n"
+"    Debió haber recibido una copia de los términos de distribución\n"
+"    junto con este programa. Si no, escríbale a los desarrolladores.\n"
 
 #: main.c:99
 msgid ""
@@ -1940,21 +1989,50 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
+"uso: mutt [ -nRzZ ] [ -e <cmd> ] [ -F <arch> ] [ -m <tipo> ] [ -f <arch> ]\n"
+"     mutt [ -nx ] [ -e <cmd> ] [ -a <arch> ] [ -F <arch> ] [ -H <arch> ] [ "
+"-i <arch> ] [ -s <asunto> ] [ -b <dir> ] [ -c <dir> ] <dir> [ ... ]\n"
+"     mutt [ -n ] [ -e <cmd> ] [ -F <archivo> ] -p\n"
+"     mutt -v[v]\n"
+"\n"
+"opciones:\n"
+"  -a <archivo>\tañadir un archivo al mensaje\n"
+"  -b <dirección>\tespecifica una dirección para mandar copia ciega (BCC)\n"
+"  -c <dirección>\tespecifica una dirección para mandar copia (CC)\n"
+"  -e <comando>\tespecifica un comando a ser ejecutado al empezar\n"
+"  -f <archivo>\tespecifica un buzón a leer\n"
+"  -F <archivo>\tespecifica un archivo muttrc alterno\n"
+"  -H <archivo>\tespecifica un archivo para obtener una cabecera\n"
+"  -i <archivo>\tespecifica un archivo a incluir en la respuesta\n"
+"  -m <tipo>\tespecifica un tipo de buzón\n"
+"  -n\t\tproduce que Mutt no lea el archivo Muttrc del sistema\n"
+"  -p\t\tcontinuar un mensaje pospuesto\n"
+"  -R\t\tabrir un buzón en modo de solo-lectura\n"
+"  -s <asunto>\tespecifica el asunto (necesita comillas si contiene "
+"espacios)\n"
+"  -v\t\tmuestra versión y opciones definidas al compilar\n"
+"  -x\t\tsimula el modo de envío mailx\n"
+"  -y\t\tselecciona un buzón especificado en su lista `mailboxes'\n"
+"  -z\t\tsalir inmediatamente si no hay mensajes en el buzón\n"
+"  -Z\t\tabrir la primera carpeta con mensajes nuevos, salir si no hay\n"
+"  -h\t\teste mensaje de ayuda"
 
 #: main.c:151
 msgid ""
 "\n"
 "Compile options:"
 msgstr ""
+"\n"
+"Opciones especificadas al compilar:"
 
 #: main.c:305
 msgid "Error initializing terminal."
-msgstr "Error al inicializar la terminal"
+msgstr "Error al inicializar la terminal."
 
 #: main.c:403
 #, c-format
 msgid "Debugging at level %d.\n"
-msgstr ""
+msgstr "Modo debug a nivel %d.\n"
 
 #: main.c:405
 msgid "DEBUG was not defined during compilation.  Ignored.\n"
@@ -2081,9 +2159,8 @@ msgid "Not found."
 msgstr "No fue encontrado."
 
 #: menu.c:688
-#, fuzzy
 msgid "No tagged entries."
-msgstr "No hay entradas."
+msgstr "No hay entradas marcadas."
 
 #: menu.c:776
 msgid "Search is not implemented for this menu."
@@ -2104,9 +2181,9 @@ msgid "Lock count exceeded, remove lock for %s?"
 msgstr "Cuenta de bloqueo excedida, ¿quitar bloqueo de %s?"
 
 #: mx.c:126
-#, fuzzy, c-format
+#, c-format
 msgid "Can't dotlock %s.\n"
-msgstr "No se pudo probar: %s"
+msgstr "No se pudo bloquear %s con dotlock.\n"
 
 #: mx.c:184
 msgid "Timeout exceeded while attempting fcntl lock!"
@@ -2137,9 +2214,9 @@ msgid "Writing %s..."
 msgstr "Escribiendo %s..."
 
 #: mx.c:711
-#, fuzzy, c-format
+#, c-format
 msgid "Could not synchronize mailbox %s!"
-msgstr "¡Imposible reabrir buzón!"
+msgstr "¡No se pudo sincronizar el buzón %s!"
 
 #: mx.c:775
 #, c-format
@@ -2383,12 +2460,12 @@ msgid "[-- END PGP PUBLIC KEY BLOCK --]\n"
 msgstr "[-- FIN DEL BLOQUE DE LLAVES PÚBLICAS PGP --]\n"
 
 #: pgp.c:463
-#, fuzzy
 msgid ""
 "\n"
 "[-- END PGP SIGNED MESSAGE --]\n"
 msgstr ""
-"[-- PRINCIPIO DEL MENSAJE FIRMADO CON PGP --]\n"
+"\n"
+"[-- FIN DEL MENSAJE FIRMADO CON PGP --]\n"
 "\n"
 
 #: pgp.c:476
@@ -2409,20 +2486,22 @@ msgstr ""
 
 #. Now display the signed body
 #: pgp.c:676
+#, fuzzy
 msgid ""
 "[-- The following data is PGP/MIME signed --]\n"
 "\n"
 msgstr ""
-"[-- Lo siguiente esta firmado con PGP/MIME --]\n"
+"[-- Lo siguiente esta encriptado con PGP/MIME --]\n"
 "\n"
 
 #: pgp.c:682
+#, fuzzy
 msgid ""
 "\n"
 "[-- End of PGP/MIME signed data --]\n"
 msgstr ""
 "\n"
-"[-- Fin de datos firmados con PGP/MIME --]\n"
+"[-- Fin de datos encriptados con PGP/MIME --]\n"
 
 #: pgp.c:687
 msgid ""
@@ -2650,7 +2729,7 @@ msgid "Reading %d new message (%d bytes)..."
 msgstr "Leyendo %d mensajes nuevos (%d bytes)..."
 
 #: pop.c:210
-#, fuzzy, c-format
+#, c-format
 msgid "Reading %d new messages (%d bytes)..."
 msgstr "Leyendo %d mensajes nuevos (%d bytes)..."
 
@@ -2901,9 +2980,8 @@ msgid "Sending message..."
 msgstr "Mandando mensaje..."
 
 #: send.c:1325
-#, fuzzy
 msgid "Could not send the message."
-msgstr "mandar el mensaje"
+msgstr "No se pudo mandar el mensaje."
 
 #: send.c:1331
 msgid "Mail sent."
@@ -2924,7 +3002,7 @@ msgid "Could not open %s"
 msgstr "No se pudo abrir %s"
 
 #: sendlib.c:1682
-#, c-format
+#, fuzzy, c-format
 msgid "Error sending message, child exited %d (%s).\n"
 msgstr "Error al mandar mensaje, %d (%s).\n"
 
@@ -2959,20 +3037,72 @@ msgstr "¡No se pudo encontrar la función para ordenar! [reporte este error]"
 msgid "(no mailbox)"
 msgstr "(ningún buzón)"
 
-#~ msgid "Display message using mailcap?"
-#~ msgstr "¿Mostrar mensaje usando mailcap?"
+#, fuzzy
+#~ msgid "Error running \"%s\"!"
+#~ msgstr "¡Dirección errónea!"
 
-#~ msgid "Please report this program error in the function mutt_mktime."
-#~ msgstr "Por favor reporte este error en la función mutt_mktime."
+#, fuzzy
+#~ msgid "Subscribed [%s], File mask: %s"
+#~ msgstr "Directorio [%s], patrón de archivos: %s"
 
-#~ msgid "%s is a boolean var!"
-#~ msgstr "¡%s es una variable binaria!"
+#, fuzzy
+#~ msgid "Can't attach a directory!"
+#~ msgstr "No se puede mostrar el directorio"
 
-#~ msgid "This encoding is deprecated.  Really use it?"
-#~ msgstr "Este tipo de codificación es viejo. ¿Realmente lo quiere usar?"
+#, fuzzy
+#~ msgid "Can't open %s: %s."
+#~ msgstr "No se pudo probar: %s"
 
-#~ msgid "Confused when attempting to delete attachment, h & m can't be NULL"
-#~ msgstr "Error interno al suprimir archivo adjunto."
+#, fuzzy
+#~ msgid "-- Attachments"
+#~ msgstr "Archivos adjuntos"
 
-#~ msgid "Deleting non-multipart messages not yet supported"
-#~ msgstr "Sólo partes de mensajes muliparte pueden ser suprimidos"
+#, fuzzy
+#~ msgid "Unable to attach %s!"
+#~ msgstr "¡Imposible adjuntar!"
+
+#, fuzzy
+#~ msgid "Reopening mailbox... %s"
+#~ msgstr "Reabriendo buzón..."
+
+#, fuzzy
+#~ msgid "Subscribing to %s..."
+#~ msgstr "Copiando a %s..."
+
+#, fuzzy
+#~ msgid "Unsubscribing to %s..."
+#~ msgstr "Conectando a %s..."
+
+#, fuzzy
+#~ msgid "Delete a remailer from the chain"
+#~ msgstr "suprimir todos lod caracteres en el renglón"
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- Error: Unknown multipart/signed protocol %s! --]\n"
+#~ "\n"
+#~ msgstr "Error: multipart/signed no tiene protocolo."
+
+#, fuzzy
+#~ msgid ""
+#~ "[-- The following data is signed --]\n"
+#~ "\n"
+#~ msgstr ""
+#~ "[-- Lo siguiente esta firmado con PGP/MIME --]\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "[-- End of signed data --]\n"
+#~ msgstr ""
+#~ "\n"
+#~ "[-- Fin de datos firmados con PGP/MIME --]\n"
+
+#, fuzzy
+#~ msgid "Invoking pgp..."
+#~ msgstr "Invocando PGP..."
+
+#, fuzzy
+#~ msgid "%s...  Exiting.\n"
+#~ msgstr "\"%s\" recibido...  Saliendo.\n"
