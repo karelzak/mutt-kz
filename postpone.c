@@ -400,7 +400,8 @@ int mutt_prepare_edit_message (CONTEXT *ctx, HEADER *newhdr, HEADER *hdr)
 
   fseek (msg->fp, hdr->offset, 0);
   newhdr->env = mutt_read_rfc822_header (msg->fp, newhdr, 1);
-
+  mutt_free_body (&newhdr->content);
+  
   if (hdr->content->type == TYPEMESSAGE || hdr->content->type == TYPEMULTIPART)
   {
     BODY *b;
