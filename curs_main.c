@@ -1164,12 +1164,6 @@ int mutt_index_menu (int attach_msg /* invoked while attaching a message */)
       case OP_MAIN_PREV_SUBTHREAD:
 
 	CHECK_MSGCOUNT;
-	if (Context->msgcount != Context->vcount)
-	{
-	  mutt_error ("No threads in limit mode.");
-	  break;
-	}
-
 	switch (op)
 	{
 	  case OP_MAIN_NEXT_THREAD:
