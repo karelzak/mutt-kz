@@ -1,6 +1,11 @@
 Major changes since 0.95
 ------------------------
 
+- The $in_reply_to configuration variable is gone.  The In-Reply-To
+  header currently only contains the message-id of the message to
+  which the reply refers.  This is to make sure that this header is
+  correctly formatted.
+
 - Mutt was affected by the so-called "pine remote exploit".  We have
   implemented a work-around we believe to be safe.  See
   README.SECURITY and the mailcap_sanitize option for details, and
