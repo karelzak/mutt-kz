@@ -416,7 +416,6 @@ typedef struct list_t
 } LIST;
 
 #define mutt_new_list() safe_calloc (1, sizeof (LIST))
-void mutt_add_to_list (LIST **, BUFFER *);
 void mutt_free_list (LIST **);
 int mutt_matches_ignore (const char *, LIST *);
 
