@@ -23,7 +23,8 @@
 mutt \- The Mutt Mail User Agent
 .SH SYNOPSIS
 .PP
-mutt [-hnpRvxyzZ]
+.B mutt 
+[-hnpRvxyzZ]
 [-a \fIfile\fP]
 [-b \fIaddress\fP]
 [-c \fIaddress\fP]
@@ -136,6 +137,7 @@ for one of the functions listed while Mutt is running.
 .SH SEE ALSO
 .PP
 .BR curses (3),
+.BR dotlock (1),
 .BR ncurses (3),
 .BR sendmail (1),
 .BR smail (1),
