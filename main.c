@@ -36,16 +36,16 @@
 #include <getopt.h>
 #endif
 
-const char ReachingUs[] = N_("\
+const char *ReachingUs = N_("\
 To contact the developers, please mail to <mutt-dev@mutt.org>.\n");
 
-const char Notice[] = N_("\
+const char *Notice = N_("\
 Copyright (C) 1996-9 Michael R. Elkins and others.\n\
 Mutt comes with ABSOLUTELY NO WARRANTY; for details type `mutt -vv'.\n\
 Mutt is free software, and you are welcome to redistribute it\n\
 under certain conditions; type `mutt -vv' for details.\n");
 
-const char Copyright[] = N_("\
+const char *Copyright = N_("\
 Copyright (C) 1996-9 Michael R. Elkins <me@cs.hmc.edu>\n\
 Copyright (C) 1997-9 Thomas Roessler <roessler@guug.de>\n\
 Copyright (C) 1998-9 Werner Koch <wk@isil.d.shuttle.de>\n\
@@ -70,7 +70,7 @@ fixes, and suggestions.\n\
 ");
 #ifdef _PGPPATH
 
-const char ShaCopyright[] = N_("\n\
+const char *ShaCopyright = N_("\n\
 SHA1 implementation Copyright (C) 1995-7 Eric A. Young <eay@cryptsoft.com>\n\
 \n\
     Redistribution and use in source and binary forms, with or without\n\
