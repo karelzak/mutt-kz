@@ -452,7 +452,7 @@ static int browse_get_namespace (IMAP_DATA* idata, char* nsbuf, int nsblen,
 	    if (*s == '\"')
 	    {
 	      s++;
-	      while (*s && *s != '\"') 
+	      while (*s && *s != '\"' && n < sizeof (ns) - 1) 
 	      {
 		if (*s == '\\')
 		  s++;
@@ -463,12 +463,14 @@ static int browse_get_namespace (IMAP_DATA* idata, char* nsbuf, int nsblen,
 		s++;
 	    }
 	    else
-	      while (*s && !ISSPACE (*s)) 
+	      while (*s && !ISSPACE (*s) && n < sizeof (ns) - 1)
 	      {
 		ns[n++] = *s;
 		s++;
 	      }
 	    ns[n] = '\0';
+	    if (n == sizeof (ns) - 1)
+	      dprint (1, (debugfile, "browse_get_namespace: too long: [%s]\n", ns));
 	    /* delim? */
 	    s = imap_next_word (s);
 	    /* delimiter is meaningless if namespace is "". Why does
