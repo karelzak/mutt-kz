@@ -3,7 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.19\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2001-06-09 23:27+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -1374,6 +1375,7 @@ msgid "Help for %s"
 msgstr "Nápovìda pro %s"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: unhook * nelze z jiného hooku provést"
 
@@ -1664,11 +1666,13 @@ msgstr "Promìnná %s není známa."
 
 #
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "Prefix není s 'reset' povolen."
 
 #
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "Hodnota není s 'reset' povolena."
 
@@ -3250,6 +3254,7 @@ msgstr "Neznámý"
 
 #
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[nelze spoèítat]"
 
@@ -3275,6 +3280,7 @@ msgid "This certificate was issued by:"
 msgstr "Tento certifikát vydal:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Tento certifikát je platný."
 
@@ -3568,6 +3574,7 @@ msgstr "V tomto re¾imu není %c podporováno."
 
 #
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "chybí parametr"
 
@@ -3927,6 +3934,7 @@ msgstr "Hledám klíèe vyhovující \"%s\"..."
 
 #
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "Server nepodporuje pøíkaz TOP."
 
@@ -3937,6 +3945,7 @@ msgstr "Nelze zapsat hlavièku do doèasného souboru!"
 
 #
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "Server nepodporuje pøíkaz UIDL."
 
@@ -4007,6 +4016,7 @@ msgstr "APOP ovìøení se nezdaøilo."
 
 #
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "Server nepodporuje pøíkaz USER."
 
@@ -4078,6 +4088,7 @@ msgstr "Pøíkaz pro dotazy není definován."
 
 #
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Dotaz"
 

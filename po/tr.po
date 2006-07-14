@@ -5,7 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.4i\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2001-06-12 12:47+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gtranslator.org>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -1139,6 +1140,7 @@ msgid "Help for %s"
 msgstr "%s yardýmý"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr ""
 
@@ -1391,10 +1393,12 @@ msgid "%s: unknown variable"
 msgstr "%s: bilinmeyen veri"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr ""
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr ""
 
@@ -2700,6 +2704,7 @@ msgid "Unknown"
 msgstr "Bilinmiyor"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[hesaplanamýyor]"
 
@@ -2724,6 +2729,7 @@ msgid "This certificate was issued by:"
 msgstr "Sertifikayý veren kuruluþ:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Bu sertifika geçerlidir"
 
@@ -2974,6 +2980,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c : bu türde desteklenmiyor"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "eksik argüman"
 
@@ -3286,6 +3293,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "\"%s\" tabirine uyan anahtarlar aranýyor..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "TOP komutasý sunucu tarafýndan desteklenmiyor."
 
@@ -3294,6 +3302,7 @@ msgid "Can't write header to temporary file!"
 msgstr "Baþlýðý geçici bir dosyaya yazamadým!"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "UIDL komutasý sunucu tarafýndan desteklenmiyor."
 
@@ -3353,6 +3362,7 @@ msgid "APOP authentication failed."
 msgstr "APOP doðrulamasý baþarýsýz oldu."
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "Sunucu USER komutasýný desteklentiiyor."
 
@@ -3410,6 +3420,7 @@ msgid "Query command not defined."
 msgstr "Sorgulama komutasý belirlenmedi."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Sorgula"
 

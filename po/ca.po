@@ -10,7 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.3.27i\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-06-10 16:03+0200\n"
 "Last-Translator: Ivan Vilata i Balaguer <ivan@selidor.net>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -1209,6 +1210,7 @@ msgid "Help for %s"
 msgstr "Ajuda de «%s»"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: No es pot fer «unhook *» des d'un «hook»."
 
@@ -1458,10 +1460,12 @@ msgid "%s: unknown variable"
 msgstr "%s: La variable no és coneguda."
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "El prefix usat en «reset» no és permés."
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "El valor usat en «reset» no és permés."
 
@@ -2808,6 +2812,7 @@ msgid "Unknown"
 msgstr "Desconegut/da"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[no s'ha pogut calcular]"
 
@@ -2834,6 +2839,7 @@ msgstr "Aquest certificat ha estat lliurat per:"
 # ivb (2001/12/08)
 # ivb  A continuació ve el rang de validesa.
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Aquest certificat té validesa"
 
@@ -3107,6 +3113,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c: No es suporta en aquest mode."
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "Manca un paràmetre."
 
@@ -3420,6 +3427,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "S'estan cercant les claus que concorden amb «%s»..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "El servidor no suporta l'ordre «TOP»."
 
@@ -3428,6 +3436,7 @@ msgid "Can't write header to temporary file!"
 msgstr "No s'ha pogut escriure la capçalera en un fitxer temporal!"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "El servidor no suporta l'ordre «UIDL»."
 
@@ -3490,6 +3499,7 @@ msgid "APOP authentication failed."
 msgstr "L'autenticació APOP ha fallat."
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "El servidor no suporta l'ordre «USER»."
 
@@ -3550,6 +3560,7 @@ msgid "Query command not defined."
 msgstr "No s'ha definit cap ordre de consulta."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Consulta"
 

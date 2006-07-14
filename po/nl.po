@@ -2,7 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Johan van Selst <johans@stack.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1152,6 +1153,7 @@ msgid "Help for %s"
 msgstr "Hulp voor %s"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr ""
 
@@ -1413,10 +1415,12 @@ msgid "%s: unknown variable"
 msgstr "%s: Onbekende variable"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "Prefix is niet toegestaan"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "Toekenning van een waarde is niet toegestaan"
 
@@ -2678,6 +2682,7 @@ msgid "Unknown"
 msgstr "Onbekende vaud"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[kan niet berekend worden]"
 
@@ -2704,7 +2709,7 @@ msgid "This certificate was issued by:"
 msgstr "Dit certificaat is uitgegeven door:"
 
 #: mutt_ssl.c:601
-#, fuzzy
+#, fuzzy, c-format
 msgid "This certificate is valid"
 msgstr "Dit certificaat is uitgegeven door:"
 
@@ -2954,6 +2959,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c: Niet ondersteund in deze modus"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "Te weinig parameters"
 
@@ -3266,7 +3272,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "Zoeken naar sleutels voor \"%s\"..."
 
 #: pop.c:89 pop_lib.c:159
-#, fuzzy
+#, fuzzy, c-format
 msgid "Command TOP is not supported by server."
 msgstr "Markeren is niet ondersteund."
 
@@ -3276,7 +3282,7 @@ msgid "Can't write header to temporary file!"
 msgstr "Kan tijdelijk bestand niet aanmaken"
 
 #: pop.c:197 pop_lib.c:161
-#, fuzzy
+#, fuzzy, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "Markeren is niet ondersteund."
 
@@ -3342,7 +3348,7 @@ msgid "APOP authentication failed."
 msgstr "GSSAPI authenticatie geweigerd."
 
 #: pop_auth.c:246
-#, fuzzy
+#, fuzzy, c-format
 msgid "Command USER is not supported by server."
 msgstr "Markeren is niet ondersteund."
 
@@ -3404,6 +3410,7 @@ msgid "Query command not defined."
 msgstr "Query-commando niet gedefinieerd."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr ""
 

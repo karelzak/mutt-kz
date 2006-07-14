@@ -5,7 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.99/1.4\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-05-04 12:23+0200\n"
 "Last-Translator: Andriy N. Gritsenko <andrej@lucky.net>\n"
 "MIME-Version: 1.0\n"
@@ -1130,6 +1131,7 @@ msgid "Help for %s"
 msgstr "П╕дказка до %s"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: Неможливо зробити unhook * з hook."
 
@@ -1378,10 +1380,12 @@ msgid "%s: unknown variable"
 msgstr "%s: нев╕дома зм╕нна"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "преф╕кс неприпустимий для скидання"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "значення неприпустиме для скидання"
 
@@ -2660,6 +2664,7 @@ msgid "Unknown"
 msgstr "Нев╕доме"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[неможливо обчислити]"
 
@@ -2684,6 +2689,7 @@ msgid "This certificate was issued by:"
 msgstr "Цей сертиф╕кат видано:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Цей сертиф╕кат д╕йсний"
 
@@ -2932,6 +2938,7 @@ msgid "%c: not supported in this mode"
 msgstr "в цьому режимов╕ '%c' не п╕дтриму╓ться"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "в╕дсутн╕й параметр"
 
@@ -3228,6 +3235,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "Пошук ключ╕в, що в╕дпов╕дають \"%s\"..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "Команда TOP не п╕дтриму╓ться сервером."
 
@@ -3236,6 +3244,7 @@ msgid "Can't write header to temporary file!"
 msgstr "Неможливо записати заголовок до тимчасового файлу!"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "Команда UIDL не п╕дтриму╓ться сервером."
 
@@ -3295,6 +3304,7 @@ msgid "APOP authentication failed."
 msgstr "Помилка аутентиф╕кац╕╖ APOP."
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "Команда USER не п╕дтриму╓ться сервером."
 
@@ -3352,6 +3362,7 @@ msgid "Query command not defined."
 msgstr "Команду запиту не визначено."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Запит"
 

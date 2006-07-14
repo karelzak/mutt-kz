@@ -11,7 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.4i\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-05-03 22:53+0300\n"
 "Last-Translator: mutt-ru@woe.spb.ru\n"
 "Language-Team: RUSSIAN <mutt-ru@woe.spb.ru>\n"
@@ -1147,6 +1148,7 @@ msgid "Help for %s"
 msgstr "Справка для %s"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: Невозможно выполнить unhook * из команды hook."
 
@@ -1400,10 +1402,12 @@ msgid "%s: unknown variable"
 msgstr "%s: неизвестная переменная"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "префикс недопустим при сбросе значений"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "значение недопустимо при сбросе значений"
 
@@ -2722,6 +2726,7 @@ msgid "Unknown"
 msgstr "Неизвестно"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[ошибка вычислений]"
 
@@ -2746,6 +2751,7 @@ msgid "This certificate was issued by:"
 msgstr "Данный сертификат был выдан:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Данный сертификат действителен"
 
@@ -2994,6 +3000,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c: в этом режиме не поддерживается"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "пропущен параметр"
 
@@ -3290,6 +3297,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "Поиск ключей, соответствующих \"%s\"..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "Команда TOP сервером не поддерживается."
 
@@ -3298,6 +3306,7 @@ msgid "Can't write header to temporary file!"
 msgstr "Ошибка записи заголовка во временный файл!"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "Команда UIDL сервером не поддерживается."
 
@@ -3357,6 +3366,7 @@ msgid "APOP authentication failed."
 msgstr "Ошибка APOP-аутентификации."
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "Команда USER сервером не поддерживается."
 
@@ -3414,6 +3424,7 @@ msgid "Query command not defined."
 msgstr "Команда запроса не определена."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Запрос"
 

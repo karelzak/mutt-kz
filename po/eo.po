@@ -4,7 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.99\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-05-19 13:27+0100\n"
 "Last-Translator: Edmund GRIMLEY EVANS <edmundo@rano.org>\n"
 "Language-Team: eo <translation-team-eo@lists.sourceforge.net>\n"
@@ -1135,6 +1136,7 @@ msgid "Help for %s"
 msgstr "Helpo por %s"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: Ne povas fari unhook * de en hoko."
 
@@ -1383,10 +1385,12 @@ msgid "%s: unknown variable"
 msgstr "%s: nekonata variablo"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "reset: prefikso ne permesata"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "reset: valoro ne permesata"
 
@@ -2696,6 +2700,7 @@ msgid "Unknown"
 msgstr "Nekonata"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[ne povas kalkuli]"
 
@@ -2720,6 +2725,7 @@ msgid "This certificate was issued by:"
 msgstr "Æi tiu atestilo estis eldonita de:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Æi tiu atestilo estis valida"
 
@@ -2968,6 +2974,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c: ne funkcias en æi tiu reøimo"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "parametro mankas"
 
@@ -3262,6 +3269,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "Seræas þlosilojn, kiuj kongruas kun \"%s\" ..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "Servilo ne havas la komandon TOP."
 
@@ -3270,6 +3278,7 @@ msgid "Can't write header to temporary file!"
 msgstr "Ne povas skribi la æapa¼on al dumtempa dosiero!"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "Servilo ne havas la komandon UIDL."
 
@@ -3329,6 +3338,7 @@ msgid "APOP authentication failed."
 msgstr "APOP-rajtiøo malsukcesis."
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "Servilo ne havas la komandon USER."
 
@@ -3386,6 +3396,7 @@ msgid "Query command not defined."
 msgstr "Demandokomando ne difinita."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Demando"
 

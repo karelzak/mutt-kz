@@ -5,7 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.22.1\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2001-09-06 18:25+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -1144,6 +1145,7 @@ msgid "Help for %s"
 msgstr "%s 的求助"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: 在 hook 裡面不能做 unhook *"
 
@@ -1394,10 +1396,12 @@ msgid "%s: unknown variable"
 msgstr "%s：不明的變數"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "重新設置後字首仍不合規定"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "重新設置後值仍不合規定"
 
@@ -2705,6 +2709,7 @@ msgid "Unknown"
 msgstr "不清楚"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "【無法計算】"
 
@@ -2729,6 +2734,7 @@ msgid "This certificate was issued by:"
 msgstr "這個驗証的派發者："
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "這個驗証有效"
 
@@ -2978,6 +2984,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c：在這個模式不支援"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "錯失參數"
 
@@ -3289,6 +3296,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "正找尋匹配 \"%s\" 的鑰匙…"
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "伺服器不支援 TOP 指令。"
 
@@ -3297,6 +3305,7 @@ msgid "Can't write header to temporary file!"
 msgstr "無法把標頭寫到暫存檔！"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "伺服器不支援 UIDL 指令。"
 
@@ -3356,6 +3365,7 @@ msgid "APOP authentication failed."
 msgstr "APOP 驗證失敗。"
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "伺服器不支援 USER 指令。"
 
@@ -3413,6 +3423,7 @@ msgid "Query command not defined."
 msgstr "查詢指令尚未定義。"
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "查詢"
 

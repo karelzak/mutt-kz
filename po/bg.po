@@ -8,7 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.4\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-06-29 19:50+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=windows-1251\n"
@@ -225,9 +226,7 @@ msgstr "Файлова маска: "
 
 #: browser.c:1048
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr ""
-"Обратно подреждане по: дата(d), азбучен ред(a), размер(z) или неподредени"
-"(n)? "
+msgstr "Обратно подреждане по: дата(d), азбучен ред(a), размер(z) или неподредени(n)? "
 
 #: browser.c:1049
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
@@ -410,16 +409,12 @@ msgstr "Писмата не могат да бъдат отпечатани"
 #: commands.c:467
 msgid ""
 "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr ""
-"Обратно подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател"
-"(o)/нишка(t)/неподредени(u)/размер(z)/стойност(c)? :"
+msgstr "Обратно подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател(o)/нишка(t)/неподредени(u)/размер(z)/стойност(c)? :"
 
 #: commands.c:468
 msgid ""
 "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
-msgstr ""
-"Подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател(o)/нишка"
-"(t)/неподредени(u)/размер(z)/стойност(c)? :"
+msgstr "Подреждане по: дата(d)/от(f)/дата на получаване(r)/тема(s)/получател(o)/нишка(t)/неподредени(u)/размер(z)/стойност(c)? :"
 
 #: commands.c:469
 msgid "dfrsotuzc"
@@ -904,12 +899,10 @@ msgstr ""
 "~b адрес\tдобавяне на адреси към полето Bcc:\n"
 "~c адреси\tдобавяне на адреси към полето Cc:\n"
 "~f писма\tвмъкване на писма\n"
-"~F писма\tсъщото като ~f, с изключение на това, че се вмъкват и заглавните "
-"части\n"
+"~F писма\tсъщото като ~f, с изключение на това, че се вмъкват и заглавните части\n"
 "~h\t\tредактиране на заглавната част\n"
 "~m писма\tвмъкване и цитиране на писма\n"
-"~M писма\tсъщото като ~m, с изключение на това, че се вмъкват и заглавните "
-"части\n"
+"~M писма\tсъщото като ~m, с изключение на това, че се вмъкват и заглавните части\n"
 "~p\t\tотпечатване на писмото\n"
 "~q\t\tзапис на файла и затваряне на редактора\n"
 "~r файл\t\tотваряне на файла в редактора\n"
@@ -998,9 +991,7 @@ msgstr "Изключване на индикатор"
 
 #: handler.c:1330
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
-msgstr ""
-"[-- Грешка: Невъзможно е показването на която и да е от частите Multipart/"
-"Altermative! --]\n"
+msgstr "[-- Грешка: Невъзможно е показването на която и да е от частите Multipart/Altermative! --]\n"
 
 #: handler.c:1448
 #, c-format
@@ -1034,8 +1025,7 @@ msgstr "[-- Auto view stderr of %s --]\n"
 
 #: handler.c:1629
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
-msgstr ""
-"[-- Грешка: message/external-body няма параметри за метод на достъп --]\n"
+msgstr "[-- Грешка: message/external-body няма параметри за метод на достъп --]\n"
 
 #: handler.c:1648
 #, c-format
@@ -1144,6 +1134,7 @@ msgid "Help for %s"
 msgstr "Помощ за %s"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: Не мога да извърша unhook * при изпълнение на hook."
 
@@ -1330,8 +1321,7 @@ msgstr "Отписване от %s..."
 #. Unable to fetch headers for lower versions
 #: imap/message.c:74
 msgid "Unable to fetch headers from this IMAP server version."
-msgstr ""
-"Грешка при получаване на заглавните части от тази версия на IMAP-сървъра."
+msgstr "Грешка при получаване на заглавните части от тази версия на IMAP-сървъра."
 
 #: imap/message.c:84
 #, c-format
@@ -1393,10 +1383,12 @@ msgid "%s: unknown variable"
 msgstr "%s: непозната променлива"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "при \"reset\" не е позволен префикс"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "стойността е непозволена с \"reset\""
 
@@ -1566,9 +1558,7 @@ msgstr "отписване от текущо избраната пощенска кутия (само IMAP)"
 
 #: keymap_alldefs.h:16
 msgid "toggle view all/subscribed mailboxes (IMAP only)"
-msgstr ""
-"включване/изключване показването на всички или само абонираните пощенски "
-"кутии (само IMAP)"
+msgstr "включване/изключване показването на всички или само абонираните пощенски кутии (само IMAP)"
 
 #: keymap_alldefs.h:17
 msgid "change directories"
@@ -1740,9 +1730,7 @@ msgstr "показване пълния адрес на подателя"
 
 #: keymap_alldefs.h:59
 msgid "display message and toggle header weeding"
-msgstr ""
-"показване на писмо и включване/изключване показването на всички заглавни "
-"части"
+msgstr "показване на писмо и включване/изключване показването на всички заглавни части"
 
 #: keymap_alldefs.h:60
 msgid "display a message"
@@ -2050,9 +2038,7 @@ msgstr "скок към началото на писмото"
 
 #: keymap_alldefs.h:136
 msgid "pipe message/attachment to a shell command"
-msgstr ""
-"изпращане на писмо или прикачен файл към команда на командния интерпретатор "
-"(pipe)"
+msgstr "изпращане на писмо или прикачен файл към команда на командния интерпретатор (pipe)"
 
 #: keymap_alldefs.h:137
 msgid "move to the previous entry"
@@ -2188,8 +2174,7 @@ msgstr "показване версията и датата на Mutt"
 
 #: keymap_alldefs.h:170
 msgid "view attachment using mailcap entry if necessary"
-msgstr ""
-"показване на прикачен файл, с използване на mailcap вписване при необходимост"
+msgstr "показване на прикачен файл, с използване на mailcap вписване при необходимост"
 
 #: keymap_alldefs.h:171
 msgid "show MIME attachments"
@@ -2339,8 +2324,7 @@ msgstr ""
 "Мнозина, неспоменати тук, съдействаха с много код, поправки и предложения\n"
 "\n"
 "    Тази програма е свободен софтуер; можете да я разпространявате и/или\n"
-"    променяте съобразно правилата на GNU General Public License, "
-"публикувани\n"
+"    променяте съобразно правилата на GNU General Public License, публикувани\n"
 "    от Фондацията за свободен софтуер, използвайки версия 2 на лиценза или\n"
 "    (по Ваше желание) по-късна версия.\n"
 "\n"
@@ -2350,8 +2334,7 @@ msgstr ""
 "    Вижте GNU General Public License за повече подробности.\n"
 "\n"
 "    Би трябвало да сте получили копие от GNU General Public License\n"
-"    заедно с тази програма; ако това не е така, моля пишете на Free "
-"Software\n"
+"    заедно с тази програма; ако това не е така, моля пишете на Free Software\n"
 "    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111, USA.\n"
 
 #: main.c:88
@@ -2384,11 +2367,8 @@ msgid ""
 "  -Z\t\topen the first folder with new message, exit immediately if none\n"
 "  -h\t\tthis help message"
 msgstr ""
-"Стартиране: mutt [ -nRyzZ ] [ -e <команда> ] [ -F <файл> ] [ -m <тип> ] [ -f "
-"<файл> ]\n"
-"       mutt [ -nx ] [ -e <команда> ] [ -a <файл> ] [ -F <файл> ] [ -H "
-"<файл> ] [ -i <файл> ] [ -s <тема> ] [ -b <адрес> ] [ -c <адрес> ] <адрес> "
-"[ ... ]\n"
+"Стартиране: mutt [ -nRyzZ ] [ -e <команда> ] [ -F <файл> ] [ -m <тип> ] [ -f <файл> ]\n"
+"       mutt [ -nx ] [ -e <команда> ] [ -a <файл> ] [ -F <файл> ] [ -H <файл> ] [ -i <файл> ] [ -s <тема> ] [ -b <адрес> ] [ -c <адрес> ] <адрес> [ ... ]\n"
 "       mutt [ -n ] [ -e <команда> ] [ -F <файл> ] -p\n"
 "       mutt -v[v]\n"
 "\n"
@@ -2410,8 +2390,7 @@ msgstr ""
 "  -x\t\tсимулира mailx изпращане\n"
 "  -y\t\tизбор на пощенска кутия, указана във Вашия `mailboxes' списък\n"
 "  -z\t\tнезабавен изход от програмата, ако в пощенската кутия няма писма\n"
-"  -Z\t\tотваряне на първата пощенска кутия с нови писма или незабавен изход "
-"от програмата ако няма такава\n"
+"  -Z\t\tотваряне на първата пощенска кутия с нови писма или незабавен изход от програмата ако няма такава\n"
 "  -h\t\tпоказва този текст"
 
 #: main.c:142
@@ -2481,8 +2460,7 @@ msgstr "Пощенската кутия биде разрушена!"
 
 #: mbox.c:702 mbox.c:978
 msgid "Fatal error!  Could not reopen mailbox!"
-msgstr ""
-"Непоправима грешка! Грешка при повторното отваряне на пощенската кутия!"
+msgstr "Непоправима грешка! Грешка при повторното отваряне на пощенската кутия!"
 
 #: mbox.c:711
 msgid "Unable to lock mailbox!"
@@ -2494,9 +2472,7 @@ msgstr "Грешка при заключване на пощенската кутия!"
 #.
 #: mbox.c:757
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr ""
-"sync: пощенската кутия е променена, но няма променени писма! (моля, съобщете "
-"за тази грешка)"
+msgstr "sync: пощенската кутия е променена, но няма променени писма! (моля, съобщете за тази грешка)"
 
 #: mbox.c:798
 #, c-format
@@ -2718,6 +2694,7 @@ msgid "Unknown"
 msgstr "неизвестно"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[не може да бъде пресметнат]"
 
@@ -2742,6 +2719,7 @@ msgid "This certificate was issued by:"
 msgstr "Този сертификат е издаден от:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Този сертификат е валиден"
 
@@ -2990,6 +2968,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c: не се поддържа в този режим"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "липсващ параметър"
 
@@ -3286,6 +3265,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "Търсене на ключове, отговарящи на \"%s\"..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "Командата \"TOP\" не се поддържа от сървъра."
 
@@ -3294,6 +3274,7 @@ msgid "Can't write header to temporary file!"
 msgstr "Грешка при запис на заглавната информация във временен файл!"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "Командата \"UIDL\" не се поддържа от сървъра."
 
@@ -3353,6 +3334,7 @@ msgid "APOP authentication failed."
 msgstr "Грешка при APOP идентификация."
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "Командата \"USER\" не се поддържа от сървъра."
 
@@ -3410,6 +3392,7 @@ msgid "Query command not defined."
 msgstr "Недефинирана команда за запитване."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Запитване"
 
@@ -3510,9 +3493,7 @@ msgstr "Препращане като прикачени файлове?"
 
 #: recvcmd.c:419
 msgid "Can't decode all tagged attachments.  MIME-forward the others?"
-msgstr ""
-"Невъзможно декодирането на всички маркирани прикачени файлове. MIME за "
-"останалите?"
+msgstr "Невъзможно декодирането на всички маркирани прикачени файлове. MIME за останалите?"
 
 #: recvcmd.c:544
 msgid "Forward MIME encapsulated?"
@@ -3533,9 +3514,7 @@ msgstr "Няма дефинирани mailing list-ове!"
 
 #: recvcmd.c:781
 msgid "Can't decode all tagged attachments.  MIME-encapsulate the others?"
-msgstr ""
-"Невъзможно декодирането на всички маркирани прикачени файлове. MIME за "
-"останалите?"
+msgstr "Невъзможно декодирането на всички маркирани прикачени файлове. MIME за останалите?"
 
 #: remailer.c:480
 msgid "Append"
@@ -3590,8 +3569,7 @@ msgstr "mixmaster не приема \"Cc\" или \"Bcc\" заглавни полета."
 #: remailer.c:734
 msgid ""
 "Please set the hostname variable to a proper value when using mixmaster!"
-msgstr ""
-"Моля, поставете валидна стойност в \"hostname\" когато използвате mixmaster!"
+msgstr "Моля, поставете валидна стойност в \"hostname\" когато използвате mixmaster!"
 
 #: remailer.c:768
 #, c-format
@@ -3779,8 +3757,7 @@ msgstr "Подреждане на пощенската кутия..."
 
 #: sort.c:239
 msgid "Could not find sorting function! [report this bug]"
-msgstr ""
-"Не мога да намеря функция за подреждане! (Моля, съобщете за тази грешка)"
+msgstr "Не мога да намеря функция за подреждане! (Моля, съобщете за тази грешка)"
 
 #: status.c:102
 msgid "(no mailbox)"

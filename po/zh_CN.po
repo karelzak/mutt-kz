@@ -5,7 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.1.2\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 1999-12-20 20:41+0800\n"
 "Last-Translator: Anthony Wong <ypwong@debian.org>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -1159,6 +1160,7 @@ msgid "Help for %s"
 msgstr "%s 的求助"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr ""
 
@@ -1425,10 +1427,12 @@ msgid "%s: unknown variable"
 msgstr "%s：不明的变量"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "重新设置后字首仍不合规定"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "重新设置后值仍不合规定"
 
@@ -2758,7 +2762,7 @@ msgid "Unknown"
 msgstr "不明的错误"
 
 #: mutt_ssl.c:406
-#, fuzzy
+#, fuzzy, c-format
 msgid "[unable to calculate]"
 msgstr "%s：无法附带文件"
 
@@ -2784,6 +2788,7 @@ msgid "This certificate was issued by:"
 msgstr ""
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr ""
 
@@ -3034,6 +3039,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c：在这个模式不支持"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "错失参数"
 
@@ -3347,7 +3353,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "正寻找匹配 \"%s\" 的钥匙…"
 
 #: pop.c:89 pop_lib.c:159
-#, fuzzy
+#, fuzzy, c-format
 msgid "Command TOP is not supported by server."
 msgstr "不支持标记功能。"
 
@@ -3357,7 +3363,7 @@ msgid "Can't write header to temporary file!"
 msgstr "无法建立暂存档"
 
 #: pop.c:197 pop_lib.c:161
-#, fuzzy
+#, fuzzy, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "不支持标记功能。"
 
@@ -3423,7 +3429,7 @@ msgid "APOP authentication failed."
 msgstr "GSSAPI 验证失败。"
 
 #: pop_auth.c:246
-#, fuzzy
+#, fuzzy, c-format
 msgid "Command USER is not supported by server."
 msgstr "不支持标记功能。"
 
@@ -3485,6 +3491,7 @@ msgid "Query command not defined."
 msgstr "查询指令尚未定义。"
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "查询"
 

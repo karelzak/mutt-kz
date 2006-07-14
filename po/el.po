@@ -10,7 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt-1.3.27i\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-01-24 00:03GMT+2\n"
 "Last-Translator: Dokianakis Fanis <madf@hellug.gr>\n"
 "Language-Team: Greek <EL@li.org>\n"
@@ -1392,6 +1393,7 @@ msgid "Help for %s"
 msgstr "Βοήθεια για το %s"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: Αδυναμία unhook * μέσα από ένα hook."
 
@@ -1680,11 +1682,13 @@ msgstr "%s: άγνωστη μεταβλητή"
 
 #
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "το πρόθεμα είναι άκυρο με την επαναφορά"
 
 #
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "η τιμή είναι άκυρη με την επαναφορά"
 
@@ -3270,6 +3274,7 @@ msgstr "Άγνωστο"
 
 #
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[αδυναμία υπολογισμού]"
 
@@ -3295,6 +3300,7 @@ msgid "This certificate was issued by:"
 msgstr "Αυτό το πιστοποιητικό εκδόθηκε από το:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Αυτό το πιστοποιητικό είναι έγκυρο"
 
@@ -3588,6 +3594,7 @@ msgstr "Το %c: δεν υποστηρίζεται σε αυτή την κατάσταση"
 
 #
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "έλλειψη παραμέτρου"
 
@@ -3963,6 +3970,7 @@ msgstr "Εύρεση όμοιων κλειδιών με \"%s\"..."
 
 #
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "Η εντολή TOP δεν υποστηρίζετε από το διακομιστή."
 
@@ -3973,6 +3981,7 @@ msgstr "Αδυναμία εγγραφής επικεφαλίδας στο προσωρινό αρχείο!"
 
 #
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "Η εντολή UIDL δεν υποστηρίζετε από το διακομιστή."
 
@@ -4043,6 +4052,7 @@ msgstr "Αυθεντικοποίηση APOP απέτυχε."
 
 #
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "Η εντολή USER δεν υποστηρίζετε από το διακομιστή."
 
@@ -4115,6 +4125,7 @@ msgstr "Η εντολή ερωτήσεως δεν καθορίστηκε."
 
 #
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Ερώτηση"
 

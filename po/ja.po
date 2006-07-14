@@ -5,7 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.28\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-04-24 16:37+0900\n"
 "Last-Translator: oota toshiya <oota@mspd.mt.nec.co.jp>\n"
 "Language-Team: mutt-j <mutt-j@ribbon.or.jp>\n"
@@ -1135,6 +1136,7 @@ msgid "Help for %s"
 msgstr "%s のヘルプ"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: フック内からは unhook * できない"
 
@@ -1383,10 +1385,12 @@ msgid "%s: unknown variable"
 msgstr "%s: は未定義の変数"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "reset と共に使う 接頭辞 が不正"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "reset と共に使う値が不正"
 
@@ -2669,6 +2673,7 @@ msgid "Unknown"
 msgstr "不明"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[計算不能]"
 
@@ -2693,6 +2698,7 @@ msgid "This certificate was issued by:"
 msgstr "この証明書の発行元:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "この証明書の有効期間は"
 
@@ -2941,6 +2947,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c: はこのモードでは未サポート"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "パラメータがない"
 
@@ -3237,6 +3244,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "\"%s\" に一致する鍵を検索中..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "コマンド TOP をサーバがサポートしていない。"
 
@@ -3245,6 +3253,7 @@ msgid "Can't write header to temporary file!"
 msgstr "ヘッダを一時ファイルに書き込めない!"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "コマンド UIDL をサーバがサポートしていない。"
 
@@ -3304,6 +3313,7 @@ msgid "APOP authentication failed."
 msgstr "APOP認証失敗。"
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "コマンド USER はサーバでは未サポート。"
 
@@ -3361,6 +3371,7 @@ msgid "Query command not defined."
 msgstr "問い合わせコマンドは定義されていない。"
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "問い合わせ"
 

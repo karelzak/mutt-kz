@@ -6,7 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.99\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-05-02 03:12+0200\n"
 "Last-Translator: Marc Baudoin <babafou@babafou.eu.org>, Vincent Lefevre "
 "<vincent@vinc17.org>\n"
@@ -1196,6 +1197,7 @@ msgid "Help for %s"
 msgstr "Aide pour %s"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook : impossible de faire un unhook * à l'intérieur d'un hook."
 
@@ -1461,10 +1463,12 @@ msgid "%s: unknown variable"
 msgstr "%s : variable inconnue"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "ce préfixe est illégal avec reset"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "cette valeur est illégale avec reset"
 
@@ -2809,6 +2813,7 @@ msgstr "Inconnu"
 
 # , c-format
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[impossible de calculer]"
 
@@ -2834,6 +2839,7 @@ msgid "This certificate was issued by:"
 msgstr "Ce certificat a été émis par :"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Ce certificat est valide"
 
@@ -3104,6 +3110,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c : non supporté dans ce mode"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "paramètre manquant"
 
@@ -3407,6 +3414,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "Recherche des clés correspondant à \"%s\"..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "La commande TOP n'est pas supportée par le serveur."
 
@@ -3415,6 +3423,7 @@ msgid "Can't write header to temporary file!"
 msgstr "Impossible d'écrire l'en-tête dans le fichier temporaire !"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "La commande UIDL n'est pas supportée par le serveur."
 
@@ -3476,6 +3485,7 @@ msgid "APOP authentication failed."
 msgstr "L'authentification APOP a échoué."
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "La commande USER n'est pas supportée par le serveur."
 
@@ -3535,6 +3545,7 @@ msgid "Query command not defined."
 msgstr "Commande de requête non définie."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Requête"
 

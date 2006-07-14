@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.3.99i\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-05-16\n"
 "Last-Translator: Pawe³ Dziekoñski <dzieko@pwr.wroc.pl>\n"
 "Language-Team: POLISH <pl@li.org>\n"
@@ -1140,6 +1141,7 @@ msgid "Help for %s"
 msgstr "Pomoc dla menu %s"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: Nie mo¿na wykonaæ \"unhook *\" wewn±trz innego polecenia hook."
 
@@ -1388,10 +1390,12 @@ msgid "%s: unknown variable"
 msgstr "%s: nieznana zmienna"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "reset: nieprawid³owy prefiks"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "reset: nieprawid³owa warto¶æ"
 
@@ -2707,6 +2711,7 @@ msgid "Unknown"
 msgstr "Nieznany"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr ""
 
@@ -2731,6 +2736,7 @@ msgid "This certificate was issued by:"
 msgstr "Ten certyfikat zosta³ wydany przez:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "Ten certyfikat jest wa¿ny"
 
@@ -2979,6 +2985,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c: nie obs³ugiwane w tym trybie"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "brakuj±cy parametr"
 
@@ -3275,6 +3282,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "Wyszukiwanie odpowiednich kluczy dla \"%s\"..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "Polecenie TOP nie jest obs³ugiwane przez serwer."
 
@@ -3283,6 +3291,7 @@ msgid "Can't write header to temporary file!"
 msgstr "Nie mo¿na zapisaæ nag³ówka do pliku tymczasowego!"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "Polecenie UIDL nie jest obs³ugiwane przez serwer."
 
@@ -3342,6 +3351,7 @@ msgid "APOP authentication failed."
 msgstr "Uwierzytelnianie APOP nie powiod³o siê."
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "Polecenie USER nie jest obs³ugiwane przez serwer."
 
@@ -3399,6 +3409,7 @@ msgid "Query command not defined."
 msgstr "Pytanie nie zosta³o okre¶lone."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "Pytanie"
 

@@ -5,7 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.3.99\n"
-"POT-Creation-Date: 2004-02-12 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-14 14:39-0400\n"
 "PO-Revision-Date: 2002-05-13 20:01+0300\n"
 "Last-Translator: Toomas Soome <tsoome@muhv.pri.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -1133,6 +1134,7 @@ msgid "Help for %s"
 msgstr "%s abiinfo"
 
 #: hook.c:240
+#, c-format
 msgid "unhook: Can't do unhook * from within a hook."
 msgstr "unhook: seose sees ei saa unhook * kasutada."
 
@@ -1381,10 +1383,12 @@ msgid "%s: unknown variable"
 msgstr "%s: tundmatu muutuja"
 
 #: init.c:830
+#, c-format
 msgid "prefix is illegal with reset"
 msgstr "reset k‰suga ei ole prefiks lubatud"
 
 #: init.c:836
+#, c-format
 msgid "value is illegal with reset"
 msgstr "reset k‰suga ei ole v‰‰rtus lubatud"
 
@@ -2695,6 +2699,7 @@ msgid "Unknown"
 msgstr "Tundmatu"
 
 #: mutt_ssl.c:406
+#, c-format
 msgid "[unable to calculate]"
 msgstr "[arvutamine ei ınnestu]"
 
@@ -2719,6 +2724,7 @@ msgid "This certificate was issued by:"
 msgstr "Selle sertifikaadi v‰ljastas:"
 
 #: mutt_ssl.c:601
+#, c-format
 msgid "This certificate is valid"
 msgstr "See sertifikaat on kehtiv"
 
@@ -2967,6 +2973,7 @@ msgid "%c: not supported in this mode"
 msgstr "%c: ei toetata selles moodis"
 
 #: pattern.c:815
+#, c-format
 msgid "missing parameter"
 msgstr "parameeter puudub"
 
@@ -3263,6 +3270,7 @@ msgid "Looking for keys matching \"%s\"..."
 msgstr "Otsin vıtmeid, mis sisaldavad \"%s\"..."
 
 #: pop.c:89 pop_lib.c:159
+#, c-format
 msgid "Command TOP is not supported by server."
 msgstr "Server ei toeta k‰sklust TOP."
 
@@ -3271,6 +3279,7 @@ msgid "Can't write header to temporary file!"
 msgstr "P‰ist ei ınnestu ajutissse faili kirjutada!"
 
 #: pop.c:197 pop_lib.c:161
+#, c-format
 msgid "Command UIDL is not supported by server."
 msgstr "Server ei toeta UIDL k‰sklust."
 
@@ -3330,6 +3339,7 @@ msgid "APOP authentication failed."
 msgstr "APOP autentimine ebaınnestus."
 
 #: pop_auth.c:246
+#, c-format
 msgid "Command USER is not supported by server."
 msgstr "Server ei toeta k‰sklust USER."
 
@@ -3387,6 +3397,7 @@ msgid "Query command not defined."
 msgstr "P‰ringuk‰sku ei ole defineeritud."
 
 #: query.c:277
+#, c-format
 msgid "Query"
 msgstr "P‰ring"
 
