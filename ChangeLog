@@ -1,3 +1,7 @@
+Tue Jul 18 17:23:01 2006  Vsevolod Volkov  <vvv@mutt.org.ua>
+
+	* po/ru.po: Update for 1.4.2.2.
+
 Fri Jul 14 14:37:00 2006  Thomas Roessler  <roessler@does-not-exist.org>
 
         * keymap.h: make sure that this builds in a modern
