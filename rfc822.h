@@ -55,6 +55,7 @@ void rfc822_write_address_single (char *, size_t, ADDRESS *);
 void rfc822_write_list (char *, size_t, ADDRESS *);
 void rfc822_free_address (ADDRESS **addr);
 void rfc822_cat (char *, size_t, const char *, const char *);
+int rfc822_valid_msgid (const char *msgid);
 
 extern int RFC822Error;
 extern const char *RFC822Errors[];
