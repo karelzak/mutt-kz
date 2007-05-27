@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Johan van Selst <johans@stack.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1167,7 +1167,7 @@ msgstr "unhook: onbekend type: %s"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr ""
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 #, fuzzy
 msgid "No authenticators available"
 msgstr "GSSAPI authenticatie geweigerd."
@@ -1202,11 +1202,11 @@ msgstr "GSSAPI authenticatie geweigerd."
 msgid "LOGIN disabled on this server."
 msgstr ""
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Aanmelden..."
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "Aanmelden mislukt..."
 
@@ -3337,17 +3337,21 @@ msgstr "%s [%d van de %d berichten gelezen]"
 msgid "Server closed connection!"
 msgstr "Server heeft verbinding gesloten!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 #, fuzzy
 msgid "Authenticating (APOP)..."
 msgstr "Authenticatie (GSSAPI)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 #, fuzzy
 msgid "APOP authentication failed."
 msgstr "GSSAPI authenticatie geweigerd."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, fuzzy, c-format
 msgid "Command USER is not supported by server."
 msgstr "Markeren is niet ondersteund."

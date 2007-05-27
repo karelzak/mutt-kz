@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.3.12i\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2000-11-29 21:22+0200\n"
 "Last-Translator: Gediminas Paulauskas <menesis@delfi.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -1162,7 +1162,7 @@ msgstr "unhook: neþinomas hook tipas: %s"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr ""
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 #, fuzzy
 msgid "No authenticators available"
 msgstr "SASL autentikacija nepavyko."
@@ -1196,11 +1196,11 @@ msgstr "GSSAPI autentikacija nepavyko."
 msgid "LOGIN disabled on this server."
 msgstr "LOGIN iðjungtas ðiame serveryje."
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Pasisveikinu..."
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "Nepavyko pasisveikinti."
 
@@ -3374,15 +3374,19 @@ msgstr "%s [%d ið %d laiðkø perskaityti]"
 msgid "Server closed connection!"
 msgstr "Serveris uþdarë jungtá!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "Autentikuojuosi (APOP)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "APOP autentikacija nepavyko."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "Serveris nepalaiko komandos USER."

@@ -1,6 +1,33 @@
+2007-05-22 18:32 -0400  Jonathan Smith  <https://issues.rpath.com/>  (736653ce1896)
+
+	* muttlib.c: merge changeset 47d08903b79b: Use signed arithmetic in
+	mutt_gecos_name to avoid an overflow. Closes #2885.
+
+2007-04-02 15:20 -0700  Brendan Cully  <brendan@kublai.com>  (3d1d7f6cf693)
+
+	* pop_auth.c, rfc822.c, rfc822.h: Validate msgid in APOP
+	authentication. Closes #2846
+
+2006-11-11 03:40 +0000  Ivan Vilata i Balaguer  <ivan@selidor.net>  (35f6cfe99fc5)
+
+	* po/ca.po: Updated Catalan translation.
+
+2006-08-08 22:08 +0000  Ronny Haryanto  <ronnylist@haryan.to>  (54b150b2cfe2)
+
+	* po/id.po: Update.
+
 Tue Jul 18 17:23:01 2006  Vsevolod Volkov  <vvv@mutt.org.ua>
 
 	* po/ru.po: Update for 1.4.2.2.
+
+2006-07-14 18:39 +0000  Thomas Roessler  <roessler@does-not-exist.org>  (bb71149a485c)
+
+	* VERSION, po/bg.po, po/ca.po, po/cs.po, po/da.po, po/de.po, po/el.po,
+	po/eo.po, po/es.po, po/et.po, po/fr.po, po/gl.po, po/hu.po,
+	po/id.po, po/it.po, po/ja.po, po/ko.po, po/lt.po, po/nl.po,
+	po/pl.po, po/pt_BR.po, po/ru.po, po/sk.po, po/sv.po, po/tr.po,
+	po/uk.po, po/zh_CN.po, po/zh_TW.po, reldate.h: automatic post-
+	release commit for mutt-1.4.2.2
 
 Fri Jul 14 14:37:00 2006  Thomas Roessler  <roessler@does-not-exist.org>
 

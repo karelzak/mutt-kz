@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3.19\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2001-06-09 23:27+0200\n"
 "Last-Translator: Jiøí Pavlovský <pavlovsk@ff.cuni.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -1390,7 +1390,7 @@ msgstr "unhook: hook %s není znám"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr "unhook: %s nelze z %s smazat"
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 msgid "No authenticators available"
 msgstr "Nejsou k dispozici ¾ádné autentikaèní metody"
 
@@ -1424,12 +1424,12 @@ msgid "LOGIN disabled on this server."
 msgstr "LOGIN autentikace je na tomto serveru zakázána"
 
 #
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Probíhá pøihla¹ování..."
 
 #
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "Pøihlá¹ení se nezdaøilo."
 
@@ -4006,16 +4006,20 @@ msgstr "%s [poèet pøeètených zpráv: %d/%d]"
 msgid "Server closed connection!"
 msgstr "Server uzavøel spojení!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "Ovìøuji (APOP)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "APOP ovìøení se nezdaøilo."
 
 #
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "Server nepodporuje pøíkaz USER."

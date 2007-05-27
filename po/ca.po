@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.4.2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2006-10-09 22:17+0200\n"
 "Last-Translator: Ivan Vilata i Balaguer <ivan@selidor.net>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -1256,7 +1256,7 @@ msgstr "unhook: El tipus de «hook» no és conegut: %s"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr "unhook: No es pot esborrar un «%s» des d’un «%s»."
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 msgid "No authenticators available"
 msgstr "No hi ha cap autenticador disponible."
 
@@ -1289,11 +1289,11 @@ msgstr "L’autenticació GSSAPI ha fallat."
 msgid "LOGIN disabled on this server."
 msgstr "L’ordre LOGIN no es troba habilitada en aquest servidor."
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "S’està entrant…"
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "L’entrada ha fallat."
 
@@ -1677,7 +1677,9 @@ msgstr "es dessubscriu de la bústia actual (només en IMAP)"
 
 #: keymap_alldefs.h:16
 msgid "toggle view all/subscribed mailboxes (IMAP only)"
-msgstr "canvia entre veure totes les bústies o només aquelles subscrites (només en IMAP)"
+msgstr ""
+"canvia entre veure totes les bústies o només aquelles subscrites (només en "
+"IMAP)"
 
 #: keymap_alldefs.h:17
 msgid "change directories"
@@ -2519,15 +2521,18 @@ msgstr ""
 "  -F FITXER            Especifica un fitxer «muttrc» alternatiu.\n"
 "  -H FITXER            Especifica un fitxer esborrany d’on llegir la\n"
 "                       capçalera.\n"
-"  -i FITXER            Especifica un fitxer que Mutt inclourà a la resposta.\n"
+"  -i FITXER            Especifica un fitxer que Mutt inclourà a la "
+"resposta.\n"
 "  -m TIPUS             Especifica un tipus de bústia per defecte.\n"
 "  -n                   Fa que Mutt no llija el fitxer «Muttrc» del sistema.\n"
 "  -p                   Recupera un missatge posposat.\n"
 "  -R                   Obri la bústia en mode de només lectura.\n"
-"  -s ASSUMPTE          Especifica l’assumpte (entre cometes si porta espais).\n"
+"  -s ASSUMPTE          Especifica l’assumpte (entre cometes si porta "
+"espais).\n"
 "  -v                   Mostra la versió i les definicions de compiŀlació.\n"
 "  -x                   Simula el mode d’enviament de «mailx».\n"
-"  -y                   Selecciona una bústia de la vostra llista «mailboxes».\n"
+"  -y                   Selecciona una bústia de la vostra llista "
+"«mailboxes».\n"
 "  -z                   Ix immediatament si no hi ha missatges a la bústia.\n"
 "  -Z                   Obri la primera bústia amb missatges nous, ix si no\n"
 "                       n’hi ha.\n"
@@ -3526,15 +3531,19 @@ msgstr "%s [llegits %d de %d missatges]"
 msgid "Server closed connection!"
 msgstr "El servidor ha tancat la connexió!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "S’està autenticant (APOP)…"
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "L’autenticació APOP ha fallat."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "El servidor no admet l’ordre «USER»."

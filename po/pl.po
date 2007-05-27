@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.3.99i\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2002-05-16\n"
 "Last-Translator: Pawe³ Dziekoñski <dzieko@pwr.wroc.pl>\n"
 "Language-Team: POLISH <pl@li.org>\n"
@@ -1155,7 +1155,7 @@ msgstr "unhook: nieznany typ polecenia hook: %s"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr "unhook: Nie mo¿na skasowaæ %s z wewn±trz %s."
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 msgid "No authenticators available"
 msgstr "¯adna z metod uwierzytelniania nie jest dostêpna"
 
@@ -1188,11 +1188,11 @@ msgstr "Uwierzytelnianie GSSAPI nie powiod³o siê."
 msgid "LOGIN disabled on this server."
 msgstr "LOGIN zosta³ wy³±czony na tym serwerze."
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Logowanie..."
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "Zalogowanie nie powiod³o siê."
 
@@ -3342,15 +3342,19 @@ msgstr "%s [przeczytano %d spo¶ród %d listów]"
 msgid "Server closed connection!"
 msgstr "Serwer zamkn±³ po³±czenie!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "Uwierzytelnianie (APOP)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "Uwierzytelnianie APOP nie powiod³o siê."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "Polecenie USER nie jest obs³ugiwane przez serwer."

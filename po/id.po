@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4.2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2006-08-08 21:34+1000\n"
 "Last-Translator: Ronny Haryanto <ronny-mutt-po-file@haryan.to>\n"
 "Language-Team: Indonesian <web@linux.or.id>\n"
@@ -113,7 +113,8 @@ msgstr "Gagal membuka file untuk menghapus headers."
 #: attach.c:190
 #, c-format
 msgid "No mailcap compose entry for %s, creating empty file."
-msgstr "'compose' di file mailcap tidak ditemukan untuk %s, membuat file kosong."
+msgstr ""
+"'compose' di file mailcap tidak ditemukan untuk %s, membuat file kosong."
 
 #. For now, editing requires a file, no piping
 #: attach.c:250
@@ -226,7 +227,8 @@ msgstr "File Mask: "
 
 #: browser.c:1048
 msgid "Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
-msgstr "Urut terbalik berdasarkan (t)anggal, (a)bjad, (u)kuran atau (n)ggak diurut? "
+msgstr ""
+"Urut terbalik berdasarkan (t)anggal, (a)bjad, (u)kuran atau (n)ggak diurut? "
 
 #: browser.c:1049
 msgid "Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "
@@ -407,13 +409,15 @@ msgid "Messages could not be printed"
 msgstr "Surat-surat tidak dapat dicetak"
 
 #: commands.c:467
-msgid "Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgid ""
+"Rev-Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Urut terbalik tan(g)gal/d(a)ri/t(e)rima/(s)ubj/(k)e/(t)hread/(n)ggak urut/(u)"
 "kuran/n(i)lai? "
 
 #: commands.c:468
-msgid "Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
+msgid ""
+"Sort (d)ate/(f)rm/(r)ecv/(s)ubj/t(o)/(t)hread/(u)nsort/si(z)e/s(c)ore?: "
 msgstr ""
 "Urut tan(g)gal/d(a)ri/t(e)rima/(s)ubj/(k)e/(t)hread/(n)ggak urut/(u)kuran/n"
 "(i)lai? "
@@ -995,7 +999,8 @@ msgstr "Batal ditandai"
 
 #: handler.c:1330
 msgid "[-- Error:  Could not display any parts of Multipart/Alternative! --]\n"
-msgstr "[-- Error: Tidak ada bagian Multipart/Alternative yg bisa ditampilkan! --]\n"
+msgstr ""
+"[-- Error: Tidak ada bagian Multipart/Alternative yg bisa ditampilkan! --]\n"
 
 #: handler.c:1448
 #, c-format
@@ -1029,7 +1034,8 @@ msgstr "[-- Stderr dari tampil-otomatis %s --]\n"
 
 #: handler.c:1629
 msgid "[-- Error: message/external-body has no access-type parameter --]\n"
-msgstr "[-- Error:  message/external-body tidak punya parameter access-type --]\n"
+msgstr ""
+"[-- Error:  message/external-body tidak punya parameter access-type --]\n"
 
 #: handler.c:1648
 #, c-format
@@ -1152,7 +1158,7 @@ msgstr "unhook: jenis tidak dikenali: %s"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr "unhook: Tidak dapat menghapus %s dari %s."
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 msgid "No authenticators available"
 msgstr "Tidak ada pengauthentikasi yg bisa digunakan"
 
@@ -1185,11 +1191,11 @@ msgstr "Authentikasi GSSAPI gagal."
 msgid "LOGIN disabled on this server."
 msgstr "LOGIN tidak diaktifkan di server ini."
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Sedang login..."
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "Login gagal."
 
@@ -2480,7 +2486,8 @@ msgstr "Tidak bisa mengunci kotak surat!"
 #.
 #: mbox.c:757
 msgid "sync: mbox modified, but no modified messages! (report this bug)"
-msgstr "sync: mbox diubah, tapi tidak ada surat yang berubah! (laporkan bug ini)"
+msgstr ""
+"sync: mbox diubah, tapi tidak ada surat yang berubah! (laporkan bug ini)"
 
 #: mbox.c:798
 #, c-format
@@ -3333,15 +3340,19 @@ msgstr "%s [%d dari %d surat dibaca]"
 msgid "Server closed connection!"
 msgstr "Server menutup hubungan!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "Mengauthentikasi (APOP)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "Authentikasi APOP gagal."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "Perintah USER tidak didukung oleh server."
@@ -3579,7 +3590,8 @@ msgid "Mixmaster doesn't accept Cc or Bcc headers."
 msgstr "Mixmaster tidak menerima header Cc maupun Bcc."
 
 #: remailer.c:734
-msgid "Please set the hostname variable to a proper value when using mixmaster!"
+msgid ""
+"Please set the hostname variable to a proper value when using mixmaster!"
 msgstr "Mohon variabel hostname diisi dengan benar jika menggunakan mixmaster!"
 
 #: remailer.c:768
@@ -3781,4 +3793,3 @@ msgstr "Surat induk tidak bisa dilihat di tampilan terbatas ini."
 #: thread.c:1083
 msgid "Parent message is not available."
 msgstr "Surat induk tidak ada."
-

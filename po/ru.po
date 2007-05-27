@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mutt-1.4.2.2i\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2006-07-18 12:42+0300\n"
 "Last-Translator: mutt-ru@woe.spb.ru\n"
 "Language-Team: RUSSIAN <mutt-ru@woe.spb.ru>\n"
@@ -1162,7 +1162,7 @@ msgstr "unhook: неизвестный тип события: %s"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr "unhook: Невозможно удалить %s из команды %s."
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 msgid "No authenticators available"
 msgstr "Нет доступных методов аутентификации."
 
@@ -1195,11 +1195,11 @@ msgstr "Ошибка GSSAPI-аутентификации."
 msgid "LOGIN disabled on this server."
 msgstr "Команда LOGIN запрещена на этом сервере."
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Регистрация..."
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "Регистрация не удалась."
 
@@ -3355,15 +3355,19 @@ msgstr "%s [сообщений прочитано: %d из %d]"
 msgid "Server closed connection!"
 msgstr "Сервер закрыл соединение!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "Аутентификация (метод APOP)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "Ошибка APOP-аутентификации."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "Команда USER сервером не поддерживается."

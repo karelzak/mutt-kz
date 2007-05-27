@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2002-06-29 19:50+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=windows-1251\n"
@@ -1148,7 +1148,7 @@ msgstr "unhook: непознат hook тип: %s"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr "unhook: Не мога да изтрия %s при изпълнение на %s."
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 msgid "No authenticators available"
 msgstr "Няма идентификатори"
 
@@ -1181,11 +1181,11 @@ msgstr "Грешка при GSSAPI идентификация."
 msgid "LOGIN disabled on this server."
 msgstr "LOGIN е изключен на този сървър."
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Включване..."
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "Неуспешно включване."
 
@@ -3325,15 +3325,19 @@ msgstr "%s [%d от %d писма прочетени]"
 msgid "Server closed connection!"
 msgstr "Сървърът затвори връзката!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "Идентификация (APOP)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "Грешка при APOP идентификация."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "Командата \"USER\" не се поддържа от сървъра."

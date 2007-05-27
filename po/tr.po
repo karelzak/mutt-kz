@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.4i\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2001-06-12 12:47+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gtranslator.org>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -1154,7 +1154,7 @@ msgstr "%s: bilinmeyen tip"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr ""
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 msgid "No authenticators available"
 msgstr "Doðrulamacýlar eriþilir deðil"
 
@@ -1187,11 +1187,11 @@ msgstr "GSSAPI doðrulamasý baþarýsýz oldu."
 msgid "LOGIN disabled on this server."
 msgstr "Bu sunucuda LOGIN kapalýdýr."
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Giriþ yapýlýyor..."
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "Giriþ baþarýsýz oldu."
 
@@ -3353,15 +3353,19 @@ msgstr "%1$s [ %3$d iletiden %2$d ileti okundu]"
 msgid "Server closed connection!"
 msgstr "Sunucu baðlantýyý kesti!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "Doðrulanýyor (APOP)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "APOP doðrulamasý baþarýsýz oldu."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "Sunucu USER komutasýný desteklentiiyor."

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mutt 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2001-06-08 19:44+02:00\n"
 "Last-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "Language-Team: -\n"
@@ -1156,7 +1156,7 @@ msgstr "unhook: tipo de gancho desconocido: %s"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr "unhook: No se puede suprimir un %s desde dentro de un %s."
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 msgid "No authenticators available"
 msgstr "Falta un método de verificación de autentidad"
 
@@ -1189,11 +1189,11 @@ msgstr "Verificación de autentidad GSSAPI falló."
 msgid "LOGIN disabled on this server."
 msgstr "LOGIN desactivado en este servidor."
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Entrando..."
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "El login falló."
 
@@ -3367,15 +3367,19 @@ msgstr "%s [%d de %d mensajes leídos]"
 msgid "Server closed connection!"
 msgstr "¡El servidor cerró la conneción!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "Verificando autentidad (APOP)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "Verificación de autentidad APOP falló."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "La órden USER no es soportada por el servidor."

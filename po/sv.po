@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mutt 1.3.99\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-14 14:39-0400\n"
+"POT-Creation-Date: 2007-05-26 18:00-0700\n"
 "PO-Revision-Date: 2002-01-19 14:33+01:00\n"
 "Last-Translator: Jörgen Tegnér <jorgen.tegner@telia.com>\n"
 "Language-Team: Swedish <mutt-po@mutt.org>\n"
@@ -1146,7 +1146,7 @@ msgstr "'unhook': okänd sorts 'hook': %s"
 msgid "unhook: Can't delete a %s from within a %s."
 msgstr "'unhook': Kan inte ta bort en %s inifrån en %s."
 
-#: imap/auth.c:104 pop_auth.c:393
+#: imap/auth.c:104 pop_auth.c:400
 msgid "No authenticators available"
 msgstr "Ingen verifieringsmetod tillgänglig"
 
@@ -1179,11 +1179,11 @@ msgstr "Verifiering med GSSAPI misslyckades."
 msgid "LOGIN disabled on this server."
 msgstr "LOGIN är inte aktiverad på den här servern."
 
-#: imap/auth_login.c:43 pop_auth.c:226
+#: imap/auth_login.c:43 pop_auth.c:233
 msgid "Logging in..."
 msgstr "Ansluter..."
 
-#: imap/auth_login.c:63 pop_auth.c:269
+#: imap/auth_login.c:63 pop_auth.c:276
 msgid "Login failed."
 msgstr "Anslutning misslyckades."
 
@@ -3339,15 +3339,19 @@ msgstr "%s [%d utav %d meddelanden lästa]"
 msgid "Server closed connection!"
 msgstr "Servern stängde förbindelsen!"
 
-#: pop_auth.c:187
+#: pop_auth.c:189
+msgid "POP timestamp is invalid!"
+msgstr ""
+
+#: pop_auth.c:194
 msgid "Authenticating (APOP)..."
 msgstr "Verifierar (APOP)..."
 
-#: pop_auth.c:211
+#: pop_auth.c:218
 msgid "APOP authentication failed."
 msgstr "Verifiering med APOP misslyckades."
 
-#: pop_auth.c:246
+#: pop_auth.c:253
 #, c-format
 msgid "Command USER is not supported by server."
 msgstr "Kommandot USER stöds inte av servern."
