@@ -23,6 +23,7 @@
 typedef struct buffy_t
 {
   char path[_POSIX_PATH_MAX];
+  char *desc;
   off_t size;
   struct buffy_t *next;
   short new;			/* mailbox has new mail */
@@ -35,6 +36,10 @@ BUFFY;
 
 WHERE BUFFY *Incoming INITVAL (0);
 WHERE short BuffyTimeout INITVAL (3);
+
+#ifdef USE_NOTMUCH
+WHERE BUFFY *VirtIncoming INITVAL (0);
+#endif
 
 extern time_t BuffyDoneTime;	/* last time we knew for sure how much mail there was */
 
