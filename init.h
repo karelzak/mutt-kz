@@ -3335,7 +3335,7 @@ struct option_t MuttVars[] = {
   ** Specifies the visual editor to invoke when the ``\fC~v\fP'' command is
   ** given in the built-in editor.
   */
-#ifdef NOT_MUCH
+#ifdef USE_NOTMUCH
   { "vfolder_format",	DT_STR,	 R_INDEX, UL &VirtFolderFormat, UL " %6n(%6N) %f " },
   /*
   ** .pp
