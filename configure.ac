@@ -176,6 +176,7 @@ AC_ARG_ENABLE(notmuch, AC_HELP_STRING([--enable-notmuch], [Enable NOTMUCH suppor
 			AC_MSG_ERROR([Unable to find Notmuch library]))
 		AC_DEFINE(USE_NOTMUCH,1,[ Define if you want support for the notmuch. ])
 		NOTMUCH_LIBS="-lnotmuch"
+		OPS="$OPS \$(srcdir)/OPS.NOTMUCH"
 		need_notmuch="yes"
         fi
 ])
