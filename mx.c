@@ -38,6 +38,10 @@
 #include "pop.h"
 #endif
 
+#ifdef USE_NOTMUCH
+#include "mutt_notmuch.h"
+#endif
+
 #include "buffy.h"
 
 #ifdef USE_DOTLOCK
@@ -341,6 +345,24 @@ int mx_is_pop (const char *p)
 
   return 0;
 }
+#endif
+
+#ifdef USE_NOTMUCH
+
+int mx_is_notmuch(const char *p)
+{
+  url_scheme_t scheme;
+
+  if (!p)
+    return 0;
+
+  scheme = url_check_scheme (p);
+  if (scheme == U_NOTMUCH)
+    return 1;
+
+  return 0;
+}
+
 #endif
 
 int mx_get_magic (const char *path)
