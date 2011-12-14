@@ -73,9 +73,16 @@ EXTRA_DIST = COPYRIGHT GPL OPS OPS.PGP OPS.CRYPT OPS.SMIME TODO UPDATING \
 	README.SSL smime.h group.h \
 	muttbug pgppacket.h depcomp ascii.h BEWARE PATCHES patchlist.sh \
 	ChangeLog mkchangelog.sh mutt_idna.h \
-	snprintf.c regex.c crypt-gpgme.h hcachever.sh.in
+	snprintf.c regex.c crypt-gpgme.h hcachever.sh.in \
+	README.notmuch
 
 EXTRA_SCRIPTS = smime_keys
+
+if BUILD_NOTMUCH
+mutt_SOURCES += mutt_notmuch.c mutt_notmuch.h
+mutt_LDADD += $(NOTMUCH_LIBS)
+endif
+
 
 mutt_dotlock_SOURCES = mutt_dotlock.c
 mutt_dotlock_LDADD = @LIBOBJS@
