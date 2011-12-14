@@ -29,8 +29,12 @@
 #include "sort.h"
 #include "mailbox.h"
 #include "browser.h"
+#include "mx.h"
 #ifdef USE_IMAP
 #include "imap.h"
+#endif
+#ifdef USE_NOTMUCH
+#include "mutt_notmuch.h"
 #endif
 
 #include <stdlib.h>
@@ -192,6 +196,12 @@ folder_format_str (char *dest, size_t destlen, size_t col, char op, const char *
     case 'f':
     {
       char *s;
+
+#ifdef USE_NOTMUCH
+      if (mx_is_notmuch(folder->ff->name))
+        s = NONULL (folder->ff->desc);
+      else
+#endif
 #ifdef USE_IMAP
       if (folder->ff->imap)
 	s = NONULL (folder->ff->desc);
@@ -260,7 +270,14 @@ folder_format_str (char *dest, size_t destlen, size_t col, char op, const char *
       else
 	mutt_format_s (dest, destlen, fmt, "");
       break;
-      
+
+    case 'n':
+      if (mx_is_notmuch (folder->ff->name)) {
+	snprintf (tmp, sizeof (tmp), "%%%sd", fmt);
+	snprintf (dest, destlen, tmp, folder->ff->all);
+      }
+      break;
+
     case 'N':
 #ifdef USE_IMAP
       if (mx_is_imap (folder->ff->desc))
@@ -272,6 +289,14 @@ folder_format_str (char *dest, size_t destlen, size_t col, char op, const char *
 	}
 	else if (!folder->ff->new)
 	  optional = 0;
+	break;
+      }
+#endif
+#ifdef USE_NOTMUCH
+      if (mx_is_notmuch (folder->ff->name))
+      {
+	snprintf (tmp, sizeof (tmp), "%%%sd", fmt);
+	snprintf (dest, destlen, tmp, folder->ff->new);
 	break;
       }
 #endif
@@ -325,7 +350,8 @@ folder_format_str (char *dest, size_t destlen, size_t col, char op, const char *
 }
 
 static void add_folder (MUTTMENU *m, struct browser_state *state,
-			const char *name, const struct stat *s, unsigned int new)
+			const char *name, const char *desc,
+			const struct stat *s, unsigned int new, unsigned int all)
 {
   if (state->entrylen == state->entrymax)
   {
@@ -349,8 +375,9 @@ static void add_folder (MUTTMENU *m, struct browser_state *state,
   }
 
   (state->entry)[state->entrylen].new = new;
+  (state->entry)[state->entrylen].all = all;
   (state->entry)[state->entrylen].name = safe_strdup (name);
-  (state->entry)[state->entrylen].desc = safe_strdup (name);
+  (state->entry)[state->entrylen].desc = safe_strdup(desc ? desc : name);
 #ifdef USE_IMAP
   (state->entry)[state->entrylen].imap = 0;
 #endif
@@ -432,12 +459,39 @@ static int examine_directory (MUTTMENU *menu, struct browser_state *state,
     tmp = Incoming;
     while (tmp && mutt_strcmp (buffer, tmp->path))
       tmp = tmp->next;
-    add_folder (menu, state, de->d_name, &s, (tmp) ? tmp->new : 0);
+    add_folder (menu, state, de->d_name, NULL, &s, (tmp) ? tmp->new : 0, 0);
   }
   closedir (dp);  
   browser_sort (state);
   return 0;
 }
+
+#ifdef USE_NOTMUCH
+static int examine_vfolders (MUTTMENU *menu, struct browser_state *state)
+{
+  BUFFY *tmp = VirtIncoming;
+
+  if (!VirtIncoming)
+    return (-1);
+  mutt_buffy_check (0);
+
+  init_state (state, menu);
+
+  do
+  {
+    if (mx_is_notmuch (tmp->path))
+    {
+      unsigned new = 0, all = 0;
+      nm_get_count(tmp->path, &all, &new);
+      add_folder (menu, state, tmp->path, tmp->desc, NULL, new, all);
+      continue;
+    }
+  }
+  while ((tmp = tmp->next));
+  browser_sort (state);
+  return 0;
+}
+#endif
 
 static int examine_mailboxes (MUTTMENU *menu, struct browser_state *state)
 {
@@ -460,14 +514,14 @@ static int examine_mailboxes (MUTTMENU *menu, struct browser_state *state)
     if (mx_is_imap (tmp->path))
     {
       imap_mailbox_state (tmp->path, &mbox);
-      add_folder (menu, state, tmp->path, NULL, mbox.new);
+      add_folder (menu, state, tmp->path, NULL, NULL, mbox.new, 0);
       continue;
     }
 #endif
 #ifdef USE_POP
     if (mx_is_pop (tmp->path))
     {
-      add_folder (menu, state, tmp->path, NULL, tmp->new);
+      add_folder (menu, state, tmp->path, NULL, NULL, tmp->new, 0);
       continue;
     }
 #endif
@@ -496,7 +550,7 @@ static int examine_mailboxes (MUTTMENU *menu, struct browser_state *state)
     strfcpy (buffer, NONULL(tmp->path), sizeof (buffer));
     mutt_pretty_mailbox (buffer, sizeof (buffer));
 
-    add_folder (menu, state, buffer, &s, tmp->new);
+    add_folder (menu, state, buffer, NULL, &s, tmp->new, 0);
   }
   while ((tmp = tmp->next));
   browser_sort (state);
@@ -518,6 +572,19 @@ static void folder_entry (char *s, size_t slen, MUTTMENU *menu, int num)
   mutt_FormatString (s, slen, 0, NONULL(FolderFormat), folder_format_str, 
       (unsigned long) &folder, M_FORMAT_ARROWCURSOR);
 }
+
+#ifdef USE_NOTMUCH
+static void vfolder_entry (char *s, size_t slen, MUTTMENU *menu, int num)
+{
+  FOLDER folder;
+
+  folder.ff = &((struct folder_file *) menu->data)[num];
+  folder.num = num;
+
+  mutt_FormatString (s, slen, 0, NONULL(VirtFolderFormat), folder_format_str,
+      (unsigned long) &folder, M_FORMAT_ARROWCURSOR);
+}
+#endif
 
 static void init_menu (struct browser_state *state, MUTTMENU *menu, char *title,
 		       size_t titlelen, int buffy)
@@ -584,7 +651,7 @@ void _mutt_select_file (char *f, size_t flen, int flags, char ***files, int *num
   int buffy    = (flags & M_SEL_BUFFY)  ? 1 : 0;
 
   buffy = buffy && folder;
-  
+
   memset (&state, 0, sizeof (struct browser_state));
 
   if (!folder)
@@ -637,13 +704,17 @@ void _mutt_select_file (char *f, size_t flen, int flags, char ***files, int *num
     }
 #endif
   }
-  else 
+#ifdef USE_NOTMUCH
+  else if (!(flags & M_SEL_VFOLDER))
+#else
+  else
+#endif
   {
     if (!folder)
       getcwd (LastDir, sizeof (LastDir));
     else if (!LastDir[0])
       strfcpy (LastDir, NONULL(Maildir), sizeof (LastDir));
-    
+
 #ifdef USE_IMAP
     if (!buffy && mx_is_imap (LastDir))
     {
@@ -665,6 +736,12 @@ void _mutt_select_file (char *f, size_t flen, int flags, char ***files, int *num
 
   *f = 0;
 
+#ifdef USE_NOTMUCH
+  if (flags & M_SEL_VFOLDER) {
+    if (examine_vfolders (NULL, &state) == -1)
+      goto bail;
+  } else
+#endif
   if (buffy)
   {
     if (examine_mailboxes (NULL, &state) == -1)
@@ -674,11 +751,18 @@ void _mutt_select_file (char *f, size_t flen, int flags, char ***files, int *num
 #ifdef USE_IMAP
   if (!state.imap_browse)
 #endif
+  {
   if (examine_directory (NULL, &state, LastDir, prefix) == -1)
     goto bail;
-
+  }
   menu = mutt_new_menu (MENU_FOLDER);
-  menu->make_entry = folder_entry;
+#ifdef USE_NOTMUCH
+  if (flags & M_SEL_VFOLDER)
+    menu->make_entry = vfolder_entry;
+  else
+#endif
+    menu->make_entry = folder_entry;
+
   menu->search = select_file_search;
   menu->title = title;
   menu->data = state.entry;
@@ -832,6 +916,10 @@ void _mutt_select_file (char *f, size_t flen, int flags, char ***files, int *num
 #ifdef USE_IMAP
 	else if (state.imap_browse)
           strfcpy (f, state.entry[menu->current].name, flen);
+#endif
+#ifdef USE_NOTMUCH
+	else if (mx_is_notmuch(state.entry[menu->current].name))
+	  strfcpy (f, state.entry[menu->current].name, flen);
 #endif
 	else
 	  mutt_concat_path (f, LastDir, state.entry[menu->current].name, flen);
@@ -987,7 +1075,7 @@ void _mutt_select_file (char *f, size_t flen, int flags, char ***files, int *num
         }
         break;
 #endif
-      
+
       case OP_CHANGE_DIRECTORY:
 
 	strfcpy (buf, LastDir, sizeof (buf));
