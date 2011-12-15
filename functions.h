@@ -167,6 +167,7 @@ const struct binding_t OpMain[] = { /* map: index */
   { "mail-key",			OP_MAIL_KEY,			"\033k" },
   { "decrypt-copy",		OP_DECRYPT_COPY,		NULL },
   { "decrypt-save",		OP_DECRYPT_SAVE,		NULL },
+  { "quasi-delete",		OP_MAIN_QUASI_DELETE,		NULL },
 #ifdef USE_NOTMUCH
   { "change-vfolder",		OP_MAIN_CHANGE_VFOLDER,         "X" },
   { "vfolder-from-query",	OP_MAIN_VFOLDER_FROM_QUERY,     "\033X" },
@@ -274,6 +275,7 @@ const struct binding_t OpPager[] = { /* map: pager */
   { "decrypt-save",    	OP_DECRYPT_SAVE,		NULL },
 
   { "what-key",		OP_WHAT_KEY,		NULL },
+  { "quasi-delete",	OP_MAIN_QUASI_DELETE,		NULL },
 
 #ifdef USE_NOTMUCH
   { "change-vfolder",		OP_MAIN_CHANGE_VFOLDER,		"X" },

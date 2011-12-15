@@ -1133,6 +1133,24 @@ int mutt_index_menu (void)
         else
 	  menu->redraw = REDRAW_FULL;
 	break;
+
+      case OP_MAIN_QUASI_DELETE:
+	if (tag && !option (OPTAUTOTAG))
+	{
+	  for (j = 0; j < Context->vcount; j++) {
+	    if (Context->hdrs[Context->v2r[j]]->tagged) {
+	      Context->hdrs[Context->v2r[j]]->quasi_deleted = TRUE;
+	      Context->changed = TRUE:
+	    }
+	  }
+	}
+	else
+	{
+	  CURHDR->quasi_deleted = TRUE;
+	  Context->changed = 1;
+	}
+	break;
+
 #ifdef USE_NOTMUCH
       case OP_MAIN_MODIFY_LABELS:
 	if (Context->magic != M_NOTMUCH) {
@@ -1147,7 +1165,6 @@ int mutt_index_menu (void)
           mutt_message _("No labels, aborting.");
           break;
         }
-
 	if (tag && !option (OPTAUTOTAG))
 	{
 	  char msgbuf[STRING];
@@ -1159,9 +1176,7 @@ int mutt_index_menu (void)
 	    mutt_progress_init(&progress, msgbuf, M_PROGRESS_MSG,
 				   1, Context->tagged);
 	  }
-
 	  nm_longrun_init(Context, TRUE);
-
 	  for (px = 0, j = 0; j < Context->vcount; j++) {
 	    if (Context->hdrs[Context->v2r[j]]->tagged) {
 	      if (!Context->quiet)
@@ -1169,9 +1184,7 @@ int mutt_index_menu (void)
 	      nm_modify_message_tags(Context, Context->hdrs[Context->v2r[j]], buf, sizeof (buf));
 	    }
 	  }
-
 	  nm_longrun_done(Context);
-
 	  menu->redraw = REDRAW_STATUS | REDRAW_INDEX;
 	}
 	else
@@ -1180,7 +1193,6 @@ int mutt_index_menu (void)
 	    mutt_message _("Faild to modify labels, aborting.");
 	    break;
 	  }
-
 	  if (option (OPTRESOLVE))
 	  {
 	    if ((menu->current = ci_next_undeleted (menu->current)) == -1)
@@ -1198,7 +1210,6 @@ int mutt_index_menu (void)
 	break;
 
       case OP_MAIN_VFOLDER_FROM_QUERY:
-
 	buf[0] = '\0';
         if (mutt_get_field ("Query: ", buf, sizeof (buf), 0) != 0 || !buf[0])
         {
