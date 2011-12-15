@@ -508,6 +508,10 @@ enum
   OPTDONTHANDLEPGPKEYS,	/* (pseudo) used to extract PGP keys */
   OPTUNBUFFEREDINPUT,   /* (pseudo) don't use key buffer */
 
+#ifdef USE_NOTMUCH
+  OPTVIRTSPOOLFILE,
+#endif
+
   OPTMAX
 };
 
