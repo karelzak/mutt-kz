@@ -29,6 +29,7 @@
 #include "pager.h"
 #include "attach.h"
 #include "mbyte.h"
+#include "sidebar.h"
 
 #include "mutt_crypt.h"
 
@@ -1095,6 +1096,7 @@ static int format_line (struct line_t **lineInfo, int n, unsigned char *buf,
   wchar_t wc;
   mbstate_t mbstate;
   int wrap_cols = mutt_term_width ((flags & M_PAGER_NOWRAP) ? 0 : Wrap);
+  wrap_cols -= SidebarWidth;
 
   if (check_attachment_marker ((char *)buf) == 0)
     wrap_cols = COLS;
@@ -1745,7 +1747,7 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
     if ((redraw & REDRAW_BODY) || topline != oldtopline)
     {
       do {
-	move (bodyoffset, 0);
+	move (bodyoffset, SidebarWidth);
 	curline = oldtopline = topline;
 	lines = 0;
 	force_redraw = 0;
@@ -1758,6 +1760,7 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 			    &QuoteList, &q_level, &force_redraw, &SearchRE) > 0)
 	    lines++;
 	  curline++;
+	  move(lines + bodyoffset, SidebarWidth);
 	}
 	last_offset = lineInfo[curline].offset;
       } while (force_redraw);
@@ -1771,6 +1774,7 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 	  addch ('~');
 	addch ('\n');
 	lines++;
+	move(lines + bodyoffset, SidebarWidth);
       }
       /* We are going to update the pager status bar, so it isn't
        * necessary to reset to normal color now. */
@@ -1794,21 +1798,21 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
       /* print out the pager status bar */
       SETCOLOR (MT_COLOR_STATUS);
       BKGDSET (MT_COLOR_STATUS);
-      CLEARLINE (statusoffset);
+      CLEARLINE_WIN (statusoffset);
 
       if (IsHeader (extra) || IsMsgAttach (extra))
       {
-	size_t l1 = COLS * MB_LEN_MAX;
+	size_t l1 = (COLS-SidebarWidth) * MB_LEN_MAX;
 	size_t l2 = sizeof (buffer);
 	hfi.hdr = (IsHeader (extra)) ? extra->hdr : extra->bdy->hdr;
 	mutt_make_string_info (buffer, l1 < l2 ? l1 : l2, NONULL (PagerFmt), &hfi, M_FORMAT_MAKEPRINT);
-	mutt_paddstr (COLS, buffer);
+	mutt_paddstr (COLS-SidebarWidth, buffer);
       }
       else
       {
 	char bn[STRING];
 	snprintf (bn, sizeof (bn), "%s (%s)", banner, pager_progress_str);
-	mutt_paddstr (COLS, bn);
+	mutt_paddstr (COLS-SidebarWidth, bn);
       }
       BKGDSET (MT_COLOR_NORMAL);
       SETCOLOR (MT_COLOR_NORMAL);
@@ -1819,17 +1823,22 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
       /* redraw the pager_index indicator, because the
        * flags for this message might have changed. */
       menu_redraw_current (index);
+      draw_sidebar(MENU_PAGER);
 
       /* print out the index status bar */
       menu_status_line (buffer, sizeof (buffer), index, NONULL(Status));
  
-      move (indexoffset + (option (OPTSTATUSONTOP) ? 0 : (indexlen - 1)), 0);
+      move (indexoffset + (option (OPTSTATUSONTOP) ? 0 : (indexlen - 1)), SidebarWidth);
       SETCOLOR (MT_COLOR_STATUS);
       BKGDSET (MT_COLOR_STATUS);
-      mutt_paddstr (COLS, buffer);
+      mutt_paddstr (COLS-SidebarWidth, buffer);
       SETCOLOR (MT_COLOR_NORMAL);
       BKGDSET (MT_COLOR_NORMAL);
     }
+
+    /* if we're not using the index, update every time */
+    if ( index == 0 )
+      draw_sidebar(MENU_PAGER);
 
     redraw = 0;
 
@@ -2754,6 +2763,13 @@ search_next:
 
       case OP_WHAT_KEY:
 	mutt_what_key ();
+	break;
+
+      case OP_SIDEBAR_SCROLL_UP:
+      case OP_SIDEBAR_SCROLL_DOWN:
+      case OP_SIDEBAR_NEXT:
+      case OP_SIDEBAR_PREV:
+	scroll_sidebar(ch, MENU_PAGER);
 	break;
 
       default:

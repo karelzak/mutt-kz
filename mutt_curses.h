@@ -64,6 +64,7 @@
 #undef lines
 #endif /* lines */
 
+#define CLEARLINE_WIN(x) move(x,SidebarWidth), clrtoeol()
 #define CLEARLINE(x) move(x,0), clrtoeol()
 #define CENTERLINE(x,y) move(y, (COLS-strlen(x))/2), addstr(x)
 #define BEEP() do { if (option (OPTBEEP)) beep(); } while (0)
@@ -124,8 +125,11 @@ enum
   MT_COLOR_ATTACHMENT,
   MT_COLOR_SEARCH,
   MT_COLOR_BOLD,
+  MT_COLOR_SIDEBAR,
   MT_COLOR_UNDERLINE,
   MT_COLOR_INDEX,
+  MT_COLOR_NEW,
+  MT_COLOR_FLAGGED,
   MT_COLOR_MAX
 };
 

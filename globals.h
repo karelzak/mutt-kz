@@ -117,6 +117,7 @@ WHERE short SearchContext;
 WHERE char *SendCharset;
 WHERE char *Sendmail;
 WHERE char *Shell;
+WHERE char *SidebarDelim;
 WHERE char *Signature;
 WHERE char *SimpleSearch;
 #if USE_SMTP
@@ -208,6 +209,9 @@ WHERE short ScoreThresholdDelete;
 WHERE short ScoreThresholdRead;
 WHERE short ScoreThresholdFlag;
 
+WHERE struct buffy_t *CurBuffy INITVAL(0);
+WHERE short DrawFullLine INITVAL(0);
+WHERE short SidebarWidth;
 #ifdef USE_IMAP
 WHERE short ImapKeepalive;
 WHERE short ImapPipelineDepth;

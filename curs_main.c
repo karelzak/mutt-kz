@@ -26,7 +26,9 @@
 #include "mailbox.h"
 #include "mapping.h"
 #include "sort.h"
+#include "buffy.h"
 #include "mx.h"
+#include "sidebar.h"
 
 #ifdef USE_POP
 #include "pop.h"
@@ -409,6 +411,7 @@ static int main_change_folder(MUTTMENU *menu, int op, char *buf, size_t bufsz,
 			  int *oldcount, int *index_hint)
 {
   mutt_expand_path (buf, bufsz);
+  set_curbuffy(buf);
   if (mx_get_magic (buf) <= 0)
   {
     mutt_error (_("%s is not a mailbox."), buf);
@@ -584,8 +587,12 @@ int mutt_index_menu (void)
        menu->redraw |= REDRAW_STATUS;
      if (do_buffy_notify)
      {
-       if (mutt_buffy_notify () && option (OPTBEEPNEW))
- 	beep ();
+       if (mutt_buffy_notify ())
+       {
+         menu->redraw |= REDRAW_FULL;
+         if (option (OPTBEEPNEW))
+           beep ();
+       }
      }
      else
        do_buffy_notify = 1;
@@ -597,6 +604,7 @@ int mutt_index_menu (void)
     if (menu->redraw & REDRAW_FULL)
     {
       menu_redraw_full (menu);
+      draw_sidebar(menu->menu);
       mutt_show_error ();
     }
 
@@ -619,10 +627,13 @@ int mutt_index_menu (void)
 
       if (menu->redraw & REDRAW_STATUS)
       {
+        DrawFullLine = 1;
 	menu_status_line (buf, sizeof (buf), menu, NONULL (Status));
+        DrawFullLine = 0;
 	CLEARLINE (option (OPTSTATUSONTOP) ? 0 : LINES-2);
 	SETCOLOR (MT_COLOR_STATUS);
         BKGDSET (MT_COLOR_STATUS);
+        set_buffystats(Context);
 	mutt_paddstr (COLS, buf);
 	SETCOLOR (MT_COLOR_NORMAL);
         BKGDSET (MT_COLOR_NORMAL);
@@ -636,7 +647,7 @@ int mutt_index_menu (void)
 	menu->oldcurrent = -1;
 
       if (option (OPTARROWCURSOR))
-	move (menu->current - menu->top + menu->offset, 2);
+	move (menu->current - menu->top + menu->offset, SidebarWidth + 2);
       else if (option (OPTBRAILLEFRIENDLY))
 	move (menu->current - menu->top + menu->offset, 0);
       else
@@ -1239,6 +1250,7 @@ int mutt_index_menu (void)
 
       case OP_MAIN_CHANGE_VFOLDER:
 #endif
+      case OP_SIDEBAR_OPEN:
       case OP_MAIN_CHANGE_FOLDER:
       case OP_MAIN_NEXT_UNREAD_MAILBOX:
 
@@ -1278,7 +1290,13 @@ int mutt_index_menu (void)
 	    mutt_enter_vfolder (cp, buf, sizeof (buf), &menu->redraw, 1);
 	  else
 #endif
-	  if (mutt_enter_fname (cp, buf, sizeof (buf), &menu->redraw, 1) == -1)
+          if ( op == OP_SIDEBAR_OPEN )
+	  {
+            if(!CurBuffy)
+              break;
+            strncpy( buf, CurBuffy->path, sizeof(buf) );
+	  }
+	  else if (mutt_enter_fname (cp, buf, sizeof (buf), &menu->redraw, 1) == -1)
 	  {
 	    if (menu->menu == MENU_PAGER)
 	    {
@@ -2332,6 +2350,12 @@ int mutt_index_menu (void)
 	mutt_what_key();
 	break;
 
+      case OP_SIDEBAR_SCROLL_UP:
+      case OP_SIDEBAR_SCROLL_DOWN:
+      case OP_SIDEBAR_NEXT:
+      case OP_SIDEBAR_PREV:
+        scroll_sidebar(op, menu->menu);
+        break;
       default:
 	if (menu->menu == MENU_MAIN)
 	  km_error_key (MENU_MAIN);

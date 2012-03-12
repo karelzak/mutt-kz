@@ -59,6 +59,7 @@ int mh_read_dir (CONTEXT *, const char *);
 int mh_sync_mailbox (CONTEXT *, int *);
 int mh_check_mailbox (CONTEXT *, int *);
 int mh_buffy (const char *);
+void mh_buffy_update (const char *, int *, int *, int *);
 int mh_check_empty (const char *);
 
 int maildir_read_dir (CONTEXT *);

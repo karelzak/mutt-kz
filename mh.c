@@ -235,11 +235,35 @@ int mh_buffy (const char *path)
 
   if (mh_read_sequences (&mhs, path) < 0)
     return 0;
+
   for (i = 0; !r && i <= mhs.max; i++)
-    if (mhs_check (&mhs, i) & MH_SEQ_UNSEEN)
+    if (mhs_check (&mhs, i) & MH_SEQ_UNSEEN) {
       r = 1;
+    }
   mhs_free_sequences (&mhs);
   return r;
+}
+
+void mh_buffy_update (const char *path, int *msgcount, int *msg_unread, int *msg_flagged)
+{
+  int i;
+  struct mh_sequences mhs;
+  memset (&mhs, 0, sizeof (mhs));
+
+  if (mh_read_sequences (&mhs, path) < 0)
+    return;
+
+  msgcount = 0;
+  msg_unread = 0;
+  msg_flagged = 0;
+  for (i = 0; i <= mhs.max; i++)
+    msgcount++;
+    if (mhs_check (&mhs, i) & MH_SEQ_UNSEEN) {
+      msg_unread++;
+    }
+    if (mhs_check (&mhs, i) & MH_SEQ_FLAGGED)
+      msg_flagged++;
+  mhs_free_sequences (&mhs);
 }
 
 static int mh_mkstemp (CONTEXT * dest, FILE ** fp, char **tgt)

@@ -174,6 +174,11 @@ const struct binding_t OpMain[] = { /* map: index */
   { "modify-labels",		OP_MAIN_MODIFY_LABELS,		"`" },
   { "modify-labels-then-hide",	OP_MAIN_MODIFY_LABELS_THEN_HIDE, NULL },
 #endif
+  { "sidebar-scroll-up",	OP_SIDEBAR_SCROLL_UP, NULL },
+  { "sidebar-scroll-down",	OP_SIDEBAR_SCROLL_DOWN, NULL },
+  { "sidebar-next",		OP_SIDEBAR_NEXT, NULL },
+  { "sidebar-prev",		OP_SIDEBAR_PREV, NULL },
+  { "sidebar-open",		OP_SIDEBAR_OPEN, NULL },
   { NULL,			0,				NULL }
 };
 
@@ -284,6 +289,11 @@ const struct binding_t OpPager[] = { /* map: pager */
   { "modify-labels",		OP_MAIN_MODIFY_LABELS,		"`" },
   { "modify-labels-then-hide",	OP_MAIN_MODIFY_LABELS_THEN_HIDE, NULL },
 #endif
+  { "sidebar-scroll-up",	OP_SIDEBAR_SCROLL_UP, NULL },
+  { "sidebar-scroll-down",	OP_SIDEBAR_SCROLL_DOWN, NULL },
+  { "sidebar-next",	OP_SIDEBAR_NEXT, NULL },
+  { "sidebar-prev",	OP_SIDEBAR_PREV, NULL },
+  { "sidebar-open", OP_SIDEBAR_OPEN, NULL },
 
   { NULL,		0,				NULL }
 };
