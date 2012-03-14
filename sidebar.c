@@ -147,9 +147,7 @@ void set_curbuffy(char buf[LONG_STRING])
 int draw_sidebar(int menu) {
 
 	char folder_buffer[LINE_MAX];
-	int lines = option(OPTHELP) ? 1 : 0;
-	lines += option(OPTSTATUSONTOP) ? 1 : 0;
-
+	int lines = (option(OPTHELP) ? 1 : 0) + (option(OPTSTATUSONTOP) ? 1 : 0);
 	BUFFY *tmp;
 #ifndef USE_SLANG_CURSES
         attr_t attrs;
