@@ -32,5 +32,6 @@ int draw_sidebar(int);
 void scroll_sidebar(int, int);
 void set_curbuffy(char*);
 void set_buffystats(CONTEXT*);
+void toggle_sidebar(int menu);
 
 #endif /* SIDEBAR_H */

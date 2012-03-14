@@ -27,6 +27,7 @@
 #include "mutt_curses.h"
 #include "sidebar.h"
 #include "buffy.h"
+#include "mx.h"
 #include <libgen.h>
 #include <limits.h>
 #include "keymap.h"
@@ -37,6 +38,36 @@ static BUFFY *TopBuffy = 0;
 static BUFFY *BottomBuffy = 0;
 static int known_lines = 0;
 
+enum {
+	SB_SRC_NONE = 0,
+	SB_SRC_VIRT,
+	SB_SRC_INCOMING
+};
+static int sidebar_source = SB_SRC_NONE;
+
+static BUFFY *get_incoming()
+{
+	switch (sidebar_source) {
+	case SB_SRC_NONE:
+		sidebar_source = SB_SRC_INCOMING;
+
+		if (option (OPTVIRTSPOOLFILE) && VirtIncoming) {
+			sidebar_source = SB_SRC_VIRT;
+			return VirtIncoming;
+		}
+		break;
+	case SB_SRC_VIRT:
+		if (VirtIncoming) {
+			return VirtIncoming;
+		}
+		break;
+	case SB_SRC_INCOMING:
+		break;
+	}
+
+	return Incoming;	/* default */
+}
+
 static int quick_log10(int n)
 {
         char string[32];
@@ -44,9 +75,9 @@ static int quick_log10(int n)
         return strlen(string);
 }
 
-void calc_boundaries (int menu)
+static void calc_boundaries (int menu)
 {
-	BUFFY *tmp = Incoming;
+	BUFFY *tmp = get_incoming();
 
 	if ( known_lines != LINES ) {
 		TopBuffy = BottomBuffy = 0;
@@ -56,7 +87,7 @@ void calc_boundaries (int menu)
 		tmp->next->prev = tmp;
 
 	if ( TopBuffy == 0 && BottomBuffy == 0 )
-		TopBuffy = Incoming;
+		TopBuffy = get_incoming();
 	if ( BottomBuffy == 0 ) {
 		int count = LINES - 2 - (menu != MENU_PAGER || option(OPTSTATUSONTOP));
 		BottomBuffy = TopBuffy;
@@ -82,7 +113,7 @@ void calc_boundaries (int menu)
 }
 
 static char sidebar_buffer[LINE_MAX];
-char *make_sidebar_entry(char *box, int size, int new, int flagged)
+static char *make_sidebar_entry(char *box, int size, int new, int flagged)
 {
 	char *entry;
 	size_t i = 0;
@@ -126,9 +157,9 @@ char *make_sidebar_entry(char *box, int size, int new, int flagged)
 
 void set_curbuffy(char buf[LONG_STRING])
 {
-  BUFFY* tmp = CurBuffy = Incoming;
+  BUFFY* tmp = CurBuffy = get_incoming();
 
-  if (!Incoming)
+  if (!get_incoming())
     return;
 
   while(1) {
@@ -230,13 +261,15 @@ int draw_sidebar(int menu) {
 			addstr (NONULL (SidebarDelim));
 	}
 
-	if ( Incoming == 0 ) return 0;
+	if ( get_incoming() == 0 )
+		return 0;
 	lines = option(OPTHELP) ? 1 : 0; /* go back to the top */
 	lines += option(OPTSTATUSONTOP) ? 1 : 0;
 
 	if ( known_lines != LINES || TopBuffy == 0 || BottomBuffy == 0 )
 		calc_boundaries(menu);
-	if ( CurBuffy == 0 ) CurBuffy = Incoming;
+	if ( CurBuffy == 0 )
+		CurBuffy = get_incoming();
 
 	tmp = TopBuffy;
 
@@ -311,6 +344,10 @@ int draw_sidebar(int menu) {
 				strncat(sidebar_folder_name, base_name, strlen(base_name) + sidebar_folder_depth);
 			}
 		}
+#ifdef USE_NOTMUCH
+		else if (tmp->magic == M_NOTMUCH)
+			sidebar_folder_name = tmp->desc;
+#endif
 		printw( "%.*s", SidebarWidth - delim_len + 1,
 			make_sidebar_entry(sidebar_folder_name, tmp->msgcount,
 			tmp->msg_unread, tmp->msg_flagged));
@@ -329,7 +366,7 @@ int draw_sidebar(int menu) {
 
 void set_buffystats(CONTEXT* Context)
 {
-        BUFFY *tmp = Incoming;
+        BUFFY *tmp = get_incoming();
         while(tmp) {
                 if(Context && !strcmp(tmp->path, Context->path)) {
 			tmp->msg_unread = Context->unread;
@@ -356,7 +393,7 @@ void scroll_sidebar(int op, int menu)
 			break;
 		case OP_SIDEBAR_SCROLL_UP:
 			CurBuffy = TopBuffy;
-			if ( CurBuffy != Incoming ) {
+			if ( CurBuffy != get_incoming() ) {
 				calc_boundaries(menu);
 				CurBuffy = CurBuffy->prev;
 			}
@@ -372,5 +409,23 @@ void scroll_sidebar(int op, int menu)
 			return;
 	}
 	calc_boundaries(menu);
+	draw_sidebar(menu);
+}
+
+/* switch between regualar and virtual folders */
+void toggle_sidebar(int menu)
+{
+	if (sidebar_source == -1)
+		get_incoming();
+
+	if (sidebar_source == SB_SRC_INCOMING && VirtIncoming)
+		sidebar_source = SB_SRC_VIRT;
+	else
+		sidebar_source = SB_SRC_INCOMING;
+
+	TopBuffy = NULL;
+	BottomBuffy = NULL;
+
+	set_curbuffy("");	/* default is the first mailbox */
 	draw_sidebar(menu);
 }

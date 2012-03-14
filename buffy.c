@@ -31,6 +31,10 @@
 #include "imap.h"
 #endif
 
+#ifdef USE_NOTMUCH
+#include "mutt_notmuch.h"
+#endif
+
 #include <string.h>
 #include <sys/stat.h>
 #include <dirent.h>
@@ -497,54 +501,23 @@ void buffy_mbox_update (BUFFY* mailbox)
   }
 }
 
-int mutt_buffy_check (int force)
+static void buffy_check(BUFFY *tmp, struct stat *contex_sb)
 {
-  BUFFY *tmp;
-  struct stat sb;
-  struct stat contex_sb;
-  time_t t;
+    struct stat sb;
 
-  sb.st_size=0;
-  contex_sb.st_dev=0;
-  contex_sb.st_ino=0;
+    sb.st_size=0;
 
-#ifdef USE_IMAP
-  /* update postponed count as well, on force */
-  if (force)
-    mutt_update_num_postponed ();
-#endif
-
-  /* fastest return if there are no mailboxes */
-  if (!Incoming)
-    return 0;
-  t = time (NULL);
-  if (!force && (t - BuffyTime < BuffyTimeout))
-    return BuffyCount;
- 
-  BuffyTime = t;
-  BuffyCount = 0;
-  BuffyNotify = 0;
-
-#ifdef USE_IMAP
-  BuffyCount += imap_buffy_check (force);
-#endif
-
-  /* check device ID and serial number instead of comparing paths */
-  if (!Context || Context->magic == M_IMAP || Context->magic == M_POP
-      || stat (Context->path, &contex_sb) != 0)
-  {
-    contex_sb.st_dev=0;
-    contex_sb.st_ino=0;
-  }
-  
-  for (tmp = Incoming; tmp; tmp = tmp->next)
-  {
     if (tmp->magic != M_IMAP)
     {
       tmp->new = 0;
 #ifdef USE_POP
       if (mx_is_pop (tmp->path))
 	tmp->magic = M_POP;
+      else
+#endif
+#ifdef USE_NOTMUCH
+      if (mx_is_notmuch (tmp->path))
+	tmp->magic = M_NOTMUCH;
       else
 #endif
       if (stat (tmp->path, &sb) != 0 || (S_ISREG(sb.st_mode) && sb.st_size == 0) ||
@@ -555,16 +528,16 @@ int mutt_buffy_check (int force)
 	tmp->newly_created = 1;
 	tmp->magic = 0;
 	tmp->size = 0;
-	continue;
+	return;
       }
     }
 
     /* check to see if the folder is the currently selected folder
      * before polling */
     if (!Context || !Context->path ||
-	(( tmp->magic == M_IMAP || tmp->magic == M_POP )
+	(( tmp->magic == M_IMAP || tmp->magic == M_POP || tmp->magic == M_NOTMUCH)
 	    ? mutt_strcmp (tmp->path, Context->path) :
-	      (sb.st_dev != contex_sb.st_dev || sb.st_ino != contex_sb.st_ino)))
+	      (sb.st_dev != contex_sb->st_dev || sb.st_ino != contex_sb->st_ino)))
     {
       switch (tmp->magic)
       {
@@ -589,6 +562,16 @@ int mutt_buffy_check (int force)
 	if ((tmp->new = mh_buffy (tmp->path)) > 0)
 	  BuffyCount++;
 	break;
+#ifdef USE_NOTMUCH
+      case M_NOTMUCH:
+	tmp->msgcount = 0;
+	tmp->msg_unread = 0;
+	tmp->msg_flagged = 0;
+	nm_get_count(tmp->path, &tmp->msgcount, &tmp->msg_unread);
+	if (tmp->msg_unread > 0)
+	  BuffyCount++;
+	break;
+#endif
       }
     }
     else if (option(OPTCHECKMBOXSIZE) && Context && Context->path)
@@ -598,7 +581,51 @@ int mutt_buffy_check (int force)
       tmp->notified = 0;
     else if (!tmp->notified)
       BuffyNotify++;
+}
+
+int mutt_buffy_check (int force)
+{
+  BUFFY *tmp;
+  struct stat contex_sb;
+  time_t t;
+
+  contex_sb.st_dev=0;
+  contex_sb.st_ino=0;
+
+#ifdef USE_IMAP
+  /* update postponed count as well, on force */
+  if (force)
+    mutt_update_num_postponed ();
+#endif
+
+  /* fastest return if there are no mailboxes */
+  if (!Incoming && !VirtIncoming)
+    return 0;
+  t = time (NULL);
+  if (!force && (t - BuffyTime < BuffyTimeout))
+    return BuffyCount;
+ 
+  BuffyTime = t;
+  BuffyCount = 0;
+  BuffyNotify = 0;
+
+#ifdef USE_IMAP
+  BuffyCount += imap_buffy_check (force);
+#endif
+
+  /* check device ID and serial number instead of comparing paths */
+  if (!Context || Context->magic == M_IMAP || Context->magic == M_POP
+      || stat (Context->path, &contex_sb) != 0)
+  {
+    contex_sb.st_dev=0;
+    contex_sb.st_ino=0;
   }
+
+  for (tmp = Incoming; tmp; tmp = tmp->next)
+    buffy_check(tmp, &contex_sb);
+
+  for (tmp = VirtIncoming; tmp; tmp = tmp->next)
+    buffy_check(tmp, &contex_sb);
 
   BuffyDoneTime = BuffyTime;
   return (BuffyCount);

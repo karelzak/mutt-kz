@@ -481,9 +481,9 @@ static int examine_vfolders (MUTTMENU *menu, struct browser_state *state)
   {
     if (mx_is_notmuch (tmp->path))
     {
-      unsigned new = 0, all = 0;
-      nm_get_count(tmp->path, &all, &new);
-      add_folder (menu, state, tmp->path, tmp->desc, NULL, new, all);
+      nm_get_count(tmp->path, &tmp->msgcount, &tmp->msg_unread);
+      add_folder (menu, state, tmp->path, tmp->desc, NULL,
+		      tmp->msg_unread, tmp->msgcount);
       continue;
     }
   }

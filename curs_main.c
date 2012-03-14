@@ -2356,6 +2356,11 @@ int mutt_index_menu (void)
       case OP_SIDEBAR_PREV:
         scroll_sidebar(op, menu->menu);
         break;
+
+      case OP_SIDEBAR_TOGGLE:
+	toggle_sidebar(menu->menu);
+	break;
+
       default:
 	if (menu->menu == MENU_MAIN)
 	  km_error_key (MENU_MAIN);
