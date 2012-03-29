@@ -288,7 +288,7 @@ int draw_sidebar(int menu) {
 			continue;
 		}
 
-		safe_path = strdupa(tmp->path);
+		safe_path = strdup(tmp->path);
 		if ( !safe_path ) {
 			move( lines, 0 );
 			lines++;
@@ -296,6 +296,7 @@ int draw_sidebar(int menu) {
 		}
 
 		base_name = basename(safe_path);
+		free(safe_path);
 		if ( !base_name ) {
 			move( lines, 0 );
 			lines++;
