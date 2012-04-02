@@ -758,10 +758,10 @@ int mutt_index_menu (void)
       mutt_curs_set (1);	/* fallback from the pager */
     }
 
+#ifdef USE_NOTMUCH
     if (Context)
-    {
       nm_debug_check(Context);
-    }
+#endif
 
     switch (op)
     {
@@ -2369,11 +2369,10 @@ int mutt_index_menu (void)
 	  km_error_key (MENU_MAIN);
     }
 
+#ifdef USE_NOTMUCH
     if (Context)
-    {
       nm_debug_check(Context);
-    }
-
+#endif
 
     if (menu->menu == MENU_PAGER)
     {

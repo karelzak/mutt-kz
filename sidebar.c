@@ -51,6 +51,7 @@ static BUFFY *get_incoming()
 	case SB_SRC_NONE:
 		sidebar_source = SB_SRC_INCOMING;
 
+#ifdef USE_NOTMUCH
 		if (option (OPTVIRTSPOOLFILE) && VirtIncoming) {
 			sidebar_source = SB_SRC_VIRT;
 			return VirtIncoming;
@@ -61,6 +62,7 @@ static BUFFY *get_incoming()
 			return VirtIncoming;
 		}
 		break;
+#endif
 	case SB_SRC_INCOMING:
 		break;
 	}
@@ -419,9 +421,11 @@ void toggle_sidebar(int menu)
 	if (sidebar_source == -1)
 		get_incoming();
 
+#ifdef USE_NOTMUCH
 	if (sidebar_source == SB_SRC_INCOMING && VirtIncoming)
 		sidebar_source = SB_SRC_VIRT;
 	else
+#endif
 		sidebar_source = SB_SRC_INCOMING;
 
 	TopBuffy = NULL;

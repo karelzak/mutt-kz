@@ -272,10 +272,12 @@ folder_format_str (char *dest, size_t destlen, size_t col, char op, const char *
       break;
 
     case 'n':
+#ifdef USE_NOTMUCH
       if (mx_is_notmuch (folder->ff->name)) {
 	snprintf (tmp, sizeof (tmp), "%%%sd", fmt);
 	snprintf (dest, destlen, tmp, folder->ff->all);
       }
+#endif
       break;
 
     case 'N':
