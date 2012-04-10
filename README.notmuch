@@ -95,7 +95,7 @@ notmuch support for mutt
    mutt docs.
 
 
-   virtual-mailboxes <desciption> <uri> [ ...]
+   virtual-mailboxes <description> <uri> [ ...]
 
       This command specifies one or more virtual folder. The folders are 
       accessioble by command 'X'.
