@@ -36,7 +36,7 @@ notmuch support for mutt
    If the "<path>" is not defined then $nm_default_uri is used, for example:
 
 	set nm_default_uri = "notmuch:///home/foo/maildir"
-	virtual-mailboxes "notmuch://?query=tag:inbox" "My INBOX"
+	virtual-mailboxes "My INBOX" "notmuch://?query=tag:inbox"
 
    Items:
 
