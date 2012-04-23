@@ -1213,7 +1213,7 @@ int mutt_index_menu (void)
 	else
 	{
 	  if (nm_modify_message_tags(Context, CURHDR, buf)) {
-	    mutt_message _("Faild to modify labels, aborting.");
+	    mutt_message _("Failed to modify labels, aborting.");
 	    break;
 	  }
 	  if (op == OP_MAIN_MODIFY_LABELS_THEN_HIDE)
@@ -1246,7 +1246,7 @@ int mutt_index_menu (void)
           break;
         }
 	if (!nm_uri_from_query(Context, buf, sizeof (buf)))
-	  mutt_message _("Faild to create query, aborting.");
+	  mutt_message _("Failed to create query, aborting.");
 	else
 	  main_change_folder(menu, op, buf, sizeof (buf), &oldcount, &index_hint);
 	break;
