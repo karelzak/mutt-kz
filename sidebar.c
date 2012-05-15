@@ -199,6 +199,7 @@ int draw_sidebar(int menu) {
                 saveSidebarWidth = SidebarWidth;
                 if(!option(OPTSIDEBAR)) SidebarWidth = 0;
                 initialized = true;
+		SidebarLastRefresh = time(NULL);
         }
 
         /* save or restore the value SidebarWidth */
@@ -433,4 +434,17 @@ void toggle_sidebar(int menu)
 
 	set_curbuffy("");	/* default is the first mailbox */
 	draw_sidebar(menu);
+}
+
+int sidebar_should_refresh()
+{
+	if (option(OPTSIDEBAR) && SidebarRefresh > 0) {
+		if (time(NULL) - SidebarLastRefresh >= SidebarRefresh)
+			return 1;
+	}
+	return 0;
+}
+void sidebar_updated()
+{
+	SidebarLastRefresh = time(NULL);
 }

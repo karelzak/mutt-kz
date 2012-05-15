@@ -1995,6 +1995,12 @@ struct option_t MuttVars[] = {
   { "sidebar_width", DT_NUM, R_BOTH, UL &SidebarWidth, 0 },
   /*
   ** .pp
+  ** Do not refresh sidebar in less than $sidebar_refresh seconds,
+  ** (0 disables refreshing).
+  */
+  { "sidebar_refresh", DT_NUM, R_BOTH, UL &SidebarRefresh, 60 },
+  /*
+  ** .pp
   ** The width of the sidebar.
   */
   { "pgp_use_gpg_agent", DT_BOOL, R_NONE, OPTUSEGPGAGENT, 0},

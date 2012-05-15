@@ -33,5 +33,7 @@ void scroll_sidebar(int, int);
 void set_curbuffy(char*);
 void set_buffystats(CONTEXT*);
 void toggle_sidebar(int menu);
+int sidebar_should_refresh();
+void sidebar_updated();
 
 #endif /* SIDEBAR_H */

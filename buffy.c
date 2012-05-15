@@ -26,6 +26,7 @@
 #include "mx.h"
 
 #include "mutt_curses.h"
+#include "sidebar.h"
 
 #ifdef USE_IMAP
 #include "imap.h"
@@ -543,22 +544,28 @@ static void buffy_check(BUFFY *tmp, struct stat *contex_sb)
       {
       case M_MBOX:
       case M_MMDF:
-	if (option(OPTSIDEBAR))
+	if (sidebar_should_refresh()) {
 	  buffy_mbox_update (tmp);
+	  sidebar_updated();
+	}
 	if (buffy_mbox_hasnew (tmp, &sb) > 0)
 	  BuffyCount++;
 	break;
 
       case M_MAILDIR:
-	if (option(OPTSIDEBAR))
+	if (sidebar_should_refresh()) {
 	  buffy_maildir_update (tmp);
+	  sidebar_updated();
+	}
 	if (buffy_maildir_hasnew (tmp) > 0)
 	  BuffyCount++;
 	break;
 
       case M_MH:
-	if (option(OPTSIDEBAR))
+	if (sidebar_should_refresh()) {
 	  mh_buffy_update (tmp->path, &tmp->msgcount, &tmp->msg_unread, &tmp->msg_flagged);
+	  sidebar_updated();
+	}
 	if ((tmp->new = mh_buffy (tmp->path)) > 0)
 	  BuffyCount++;
 	break;
