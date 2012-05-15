@@ -773,6 +773,7 @@ dnl -- end socket --
 AC_ARG_ENABLE(debug, AC_HELP_STRING([--enable-debug], [Enable debugging support]),
         [ if test x$enableval = xyes ; then
                 AC_DEFINE(DEBUG,1,[ Define to enable debugging info. ])
+		CFLAGS="$CFLAGS -g"
           fi
          ])
 
