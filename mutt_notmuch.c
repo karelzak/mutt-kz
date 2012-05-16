@@ -367,7 +367,7 @@ static notmuch_database_t *do_database_open(const char *filename,
 
 	if (verbose) {
 		if (!db)
-			mutt_error (_("Cannot open notmuch database: %s: "),
+			mutt_error (_("Cannot open notmuch database: %s: %s"),
 					filename, notmuch_status_to_string(st));
 		else if (ct > 1)
 			mutt_clear_error();
