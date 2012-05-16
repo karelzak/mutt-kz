@@ -345,16 +345,18 @@ static const char *get_db_filename(struct nm_ctxdata *data)
 static notmuch_database_t *do_database_open(const char *filename,
 					    int writable, int verbose)
 {
+	notmuch_status_t st;
 	notmuch_database_t *db = NULL;
 	unsigned int ct = 0;
 
 	dprint(1, (debugfile, "nm: db open '%s' %s (timeout %d)\n", filename,
 			writable ? "[WRITE]" : "[READ]", NotmuchOpenTimeout));
 	do {
-		db = notmuch_database_open(filename,
+		st = notmuch_database_open(filename,
 					writable ? NOTMUCH_DATABASE_MODE_READ_WRITE :
-					NOTMUCH_DATABASE_MODE_READ_ONLY);
-		if (db || !NotmuchOpenTimeout || ct / 2 > NotmuchOpenTimeout)
+					NOTMUCH_DATABASE_MODE_READ_ONLY,
+					&db);
+		if (st == NOTMUCH_STATUS_SUCCESS || !NotmuchOpenTimeout || ct / 2 > NotmuchOpenTimeout)
 			break;
 
 		if (verbose && ct && ct % 2 == 0)
@@ -365,7 +367,8 @@ static notmuch_database_t *do_database_open(const char *filename,
 
 	if (verbose) {
 		if (!db)
-			mutt_error (_("Cannot open notmuch database: %s"), filename);
+			mutt_error (_("Cannot open notmuch database: %s: %s"),
+					filename, notmuch_status_to_string(st));
 		else if (ct > 1)
 			mutt_clear_error();
 	}
