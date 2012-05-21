@@ -354,6 +354,24 @@ specify the ID of the public key to be used when encrypting messages
 to a certain recipient.  The meaning of "key ID" is to be taken
 broadly: This can be a different e-mail address, a numerical key ID,
 or even just an arbitrary search string.
+.PP
+.nf
+\fBopen-hook\fP \fIregexp\fP "\fIcommand\fP"
+\fBclose-hook\fP \fIregexp\fP "\fIcommand\fP"
+\fBappend-hook\fP \fIregexp\fP "\fIcommand\fP"
+.fi
+.IP
+These commands provide a way to handle compressed folders. The given
+\fBregexp\fP specifies which folders are taken as compressed (e.g.
+"\fI\\\\.gz$\fP"). The commands tell Mutt how to uncompress a folder
+(\fBopen-hook\fP), compress a folder (\fBclose-hook\fP) or append a
+compressed mail to a compressed folder (\fBappend-hook\fP). The
+\fIcommand\fP string is the
+.BR printf (3)
+like format string, and it should accept two parameters: \fB%f\fP,
+which is replaced with the (compressed) folder name, and \fB%t\fP
+which is replaced with the name of the temporary folder to which to
+write.
 .TP
 \fBpush\fP \fIstring\fP
 This command adds the named \fIstring\fP to the keyboard buffer.
