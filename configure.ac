@@ -177,6 +177,18 @@ AC_ARG_ENABLE(notmuch, AC_HELP_STRING([--enable-notmuch], [Enable NOTMUCH suppor
 		NOTMUCH_LIBS="-lnotmuch"
 		OPS="$OPS \$(srcdir)/OPS.NOTMUCH"
 		need_notmuch="yes"
+
+		AC_MSG_CHECKING([for notmuch api version 3])
+		AC_COMPILE_IFELSE( [AC_LANG_PROGRAM(
+					[[#include <notmuch.h>]],
+					[[notmuch_database_open("/path", NOTMUCH_DATABASE_MODE_READ_ONLY, (notmuch_database_t**)NULL);]]
+					)],
+		[notmuch_api_3=yes
+			AC_DEFINE([NOTMUCH_API_3], 1, [Define to 1 if you have the notmuch api version 3.])
+			],
+		[notmuch_api_3=no]
+		)
+		AC_MSG_RESULT([$notmuch_api_3])
         fi
 ])
 AM_CONDITIONAL(BUILD_NOTMUCH, test x$need_notmuch = xyes)
