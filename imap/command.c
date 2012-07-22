@@ -774,7 +774,7 @@ static void cmd_parse_lsub (IMAP_DATA* idata, char* s)
   imap_quote_string(errstr, sizeof (errstr), list.name);
   url.path = errstr + 1;
   url.path[strlen(url.path) - 1] = '\0';
-  if (!mutt_strcmp (url.user, ImapUser))
+  if (mutt_strcmp (url.user, ImapUser))
     url.user = NULL;
   url_ciss_tostring (&url, buf + 11, sizeof (buf) - 10, 0);
   safe_strcat (buf, sizeof (buf), "\"");
