@@ -54,6 +54,10 @@
 #include <sys/time.h>
 #endif
 
+#ifdef USE_NOTMUCH
+#include "mutt_notmuch.h"
+#endif
+
 #define		INS_SORT_THRESHOLD		6
 
 struct maildir
