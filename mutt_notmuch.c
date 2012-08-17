@@ -357,7 +357,14 @@ static const char *get_db_filename(struct nm_ctxdata *data)
 	if (!data)
 		return NULL;
 
-	db_filename = data->db_filename ? data->db_filename : NotmuchDefaultUri;
+	db_filename = data->db_filename;
+
+	if (!db_filename)
+		db_filename = NotmuchDefaultUri;
+
+	if (!db_filename)
+		db_filename = Maildir;
+
 	if (!db_filename)
 		return NULL;
 	if (strncmp(db_filename, "notmuch://", 10) == 0)
@@ -876,6 +883,8 @@ char *nm_uri_from_query(CONTEXT *ctx, char *buf, size_t bufsz)
 			 get_db_filename(data), buf);
 	else if (NotmuchDefaultUri)
 		snprintf(uri, sizeof(uri), "%s?query=%s", NotmuchDefaultUri, buf);
+	else if (Maildir)
+		snprintf(uri, sizeof(uri), "notmuch://%s?query=%s", Maildir, buf);
 	else
 		return NULL;
 
@@ -1191,6 +1200,9 @@ int nm_nonctx_get_count(char *path, int *all, int *new)
 			db_filename = NotmuchDefaultUri + 10;
 		else
 			db_filename = NotmuchDefaultUri;
+		dflt = 1;
+	} else if (!db_filename && Maildir) {
+		db_filename = NotmuchDefaultUri;
 		dflt = 1;
 	}
 
