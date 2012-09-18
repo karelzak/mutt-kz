@@ -178,10 +178,6 @@ void set_curbuffy(char buf[LONG_STRING])
 }
 
 int compare_buffies(BUFFY* buffy1, BUFFY* buffy2) {
-	if( buffy1 == TopBuffy )
-		return -1;
-	else if ( buffy2 == TopBuffy )
-		return 1;
 	return mutt_strcmp(buffy1->path, buffy2->path);
 }
 
