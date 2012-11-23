@@ -65,7 +65,7 @@ notmuch support for mutt
       limit=<number>
 
          Restricts number of messages/threads in the result. The default limit
-         is nm_db_limil.
+         is nm_db_limit.
 
       type=<threads|messages>
 
