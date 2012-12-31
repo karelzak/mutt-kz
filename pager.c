@@ -300,7 +300,7 @@ resolve_color (struct line_t *lineInfo, int n, int cnt, int flags, int special,
 
   if (color != last_color)
   {
-    attrset (color);
+    ATTRSET (color);
     last_color = color;
   }
 }
@@ -1462,7 +1462,7 @@ display_line (FILE *f, LOFF_T *last_pos, struct line_t **lineInfo, int n,
 #ifndef USE_SLANG_CURSES
   if (col == 0)
   {
-    SETCOLOR (MT_COLOR_NORMAL);
+    NORMAL_COLOR;
     addch (' ');
   }
 #endif
@@ -1484,10 +1484,7 @@ display_line (FILE *f, LOFF_T *last_pos, struct line_t **lineInfo, int n,
     else
       def_color = ColorDefs[ (*lineInfo)[m].type ];
 
-    attrset (def_color);
-#ifdef HAVE_BKGDSET
-    bkgdset (def_color | ' ');
-#endif
+    ATTRSET(def_color);
   }
 
   /* ncurses always wraps lines when you get to the right side of the
@@ -1505,10 +1502,7 @@ display_line (FILE *f, LOFF_T *last_pos, struct line_t **lineInfo, int n,
    * filled to the right margin.
    */
   if (flags & M_SHOWCOLOR)
-  {
-    SETCOLOR(MT_COLOR_NORMAL);
-    BKGDSET(MT_COLOR_NORMAL);
-  }
+    NORMAL_COLOR;
 
   /* build a return code */
   if (!(flags & M_SHOW))
@@ -1645,7 +1639,7 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 
     if (redraw & REDRAW_FULL)
     {
-      SETCOLOR (MT_COLOR_NORMAL);
+      NORMAL_COLOR;
       /* clear() doesn't optimize screen redraws */
       move (0, 0);
       clrtobot ();
@@ -1683,7 +1677,7 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 	SETCOLOR (MT_COLOR_STATUS);
 	move (helpoffset, 0);
 	mutt_paddstr (COLS, helpstr);
-	SETCOLOR (MT_COLOR_NORMAL);
+	NORMAL_COLOR;
       }
 
 #if defined (USE_SLANG_CURSES) || defined (HAVE_RESIZETERM)
@@ -1716,7 +1710,7 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 	  index->current = extra->hdr->virtual;
 	}
 
-	SETCOLOR (MT_COLOR_NORMAL);
+	NORMAL_COLOR;
 	index->offset  = indexoffset + (option (OPTSTATUSONTOP) ? 1 : 0);
 
 	index->pagelen = indexlen - 1;
@@ -1773,7 +1767,6 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
       } while (force_redraw);
 
       SETCOLOR (MT_COLOR_TILDE);
-      BKGDSET (MT_COLOR_TILDE);
       while (lines < bodylen)
       {
 	clrtoeol ();
@@ -1783,6 +1776,8 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 	lines++;
 	move(lines + bodyoffset, SidebarWidth);
       }
+      NORMAL_COLOR;
+
       /* We are going to update the pager status bar, so it isn't
        * necessary to reset to normal color now. */
 
@@ -1804,8 +1799,6 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 
       /* print out the pager status bar */
       SETCOLOR (MT_COLOR_STATUS);
-      BKGDSET (MT_COLOR_STATUS);
-      CLEARLINE_WIN (statusoffset);
 
       if (IsHeader (extra) || IsMsgAttach (extra))
       {
@@ -1821,8 +1814,7 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 	snprintf (bn, sizeof (bn), "%s (%s)", banner, pager_progress_str);
 	mutt_paddstr (COLS-SidebarWidth, bn);
       }
-      BKGDSET (MT_COLOR_NORMAL);
-      SETCOLOR (MT_COLOR_NORMAL);
+      NORMAL_COLOR;
     }
 
     if ((redraw & REDRAW_INDEX) && index)
@@ -1837,10 +1829,8 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
  
       move (indexoffset + (option (OPTSTATUSONTOP) ? 0 : (indexlen - 1)), SidebarWidth);
       SETCOLOR (MT_COLOR_STATUS);
-      BKGDSET (MT_COLOR_STATUS);
       mutt_paddstr (COLS-SidebarWidth, buffer);
-      SETCOLOR (MT_COLOR_NORMAL);
-      BKGDSET (MT_COLOR_NORMAL);
+      NORMAL_COLOR;
     }
 
     /* if we're not using the index, update every time */
