@@ -1115,9 +1115,9 @@ static void maildir_delayed_parsing (CONTEXT * ctx, struct maildir **md,
       p->header_parsed = 1;
 #if USE_HCACHE
       if (ctx->magic == M_MH)
-	mutt_hcache_store (hc, p->h->path, p->h, 0, strlen);
+	mutt_hcache_store (hc, p->h->path, p->h, 0, strlen, M_GENERATE_UIDVALIDITY);
       else
-	mutt_hcache_store (hc, p->h->path + 3, p->h, 0, &maildir_hcache_keylen);
+	mutt_hcache_store (hc, p->h->path + 3, p->h, 0, &maildir_hcache_keylen, M_GENERATE_UIDVALIDITY);
 #endif
     } else
       mutt_free_header (&p->h);
@@ -1732,9 +1732,9 @@ int mh_sync_mailbox_message (CONTEXT * ctx, int msgno)
     if (hc && h->changed)
     {
       if (ctx->magic == M_MAILDIR)
-	mutt_hcache_store (hc, h->path + 3, h, 0, &maildir_hcache_keylen);
+	mutt_hcache_store (hc, h->path + 3, h, 0, &maildir_hcache_keylen, M_GENERATE_UIDVALIDITY);
       else if (ctx->magic == M_MH)
-	mutt_hcache_store (hc, h->path, h, 0, strlen);
+	mutt_hcache_store (hc, h->path, h, 0, strlen, M_GENERATE_UIDVALIDITY);
     }
 #endif
 
