@@ -566,7 +566,8 @@ static void buffy_check(BUFFY *tmp, struct stat *contex_sb)
 	  mh_buffy_update (tmp->path, &tmp->msgcount, &tmp->msg_unread, &tmp->msg_flagged);
 	  sidebar_updated();
 	}
-	if ((tmp->new = mh_buffy (tmp->path)) > 0)
+	mh_buffy(tmp);
+	if (tmp->new)
 	  BuffyCount++;
 	break;
 #ifdef USE_NOTMUCH
