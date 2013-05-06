@@ -96,6 +96,7 @@ static const struct mapping_t Fields[] =
   { "sidebar_new",	MT_COLOR_NEW },
   { "sidebar_flagged",	MT_COLOR_FLAGGED },
   { "sidebar",		MT_COLOR_SIDEBAR },
+  { "progress",		MT_COLOR_PROGRESS },
   { NULL,		0 }
 };
 
