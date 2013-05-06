@@ -204,7 +204,7 @@ static void show_version (void)
 	  _LIBICONV_VERSION & 0xff);
 #endif
 
-#ifdef HAVE_STRINGPREP_H
+#ifdef HAVE_LIBIDN
   printf ("\nlibidn: %s (compiled with %s)", stringprep_check_version (NULL), 
 	  STRINGPREP_VERSION);
 #endif
