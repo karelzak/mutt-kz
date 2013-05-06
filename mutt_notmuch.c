@@ -374,7 +374,14 @@ static const char *get_db_filename(struct nm_ctxdata *data)
 	if (!data)
 		return NULL;
 
-	db_filename = data->db_filename ? data->db_filename : NotmuchDefaultUri;
+	db_filename = data->db_filename;
+
+	if (!db_filename)
+		db_filename = NotmuchDefaultUri;
+
+	if (!db_filename)
+		db_filename = Maildir;
+
 	if (!db_filename)
 		db_filename = Maildir;
 	if (!db_filename)
@@ -1340,6 +1347,9 @@ int nm_nonctx_get_count(char *path, int *all, int *new)
 				db_filename = NotmuchDefaultUri;
 		} else if (Maildir)
 			db_filename = Maildir;
+		dflt = 1;
+	} else if (!db_filename && Maildir) {
+		db_filename = NotmuchDefaultUri;
 		dflt = 1;
 	}
 
