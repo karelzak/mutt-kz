@@ -2657,9 +2657,11 @@ static int complete_all_nm_tags (const char *pt)
   memset (Matches, 0, Matches_listsize);
   memset (Completed, 0, sizeof (Completed));
 
+  nm_longrun_init(Context, FALSE);
+
   /* Work out how many tags there are. */
   if (nm_get_all_tags(Context, NULL, &tag_count_1) || tag_count_1 == 0)
-    return 0;
+    goto done;
 
   /* Free the old list, if any. */
   if (nm_tags != NULL) {
@@ -2677,6 +2679,7 @@ static int complete_all_nm_tags (const char *pt)
       tag_count_1 != tag_count_2) {
     FREE (&nm_tags);
     nm_tags = NULL;
+    nm_longrun_done(Context);
     return -1;
   }
 
@@ -2687,6 +2690,9 @@ static int complete_all_nm_tags (const char *pt)
 
   matches_ensure_morespace (Num_matched);
   Matches[Num_matched++] = User_typed;
+
+done:
+  nm_longrun_done(Context);
   return 0;
 }
 
