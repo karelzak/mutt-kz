@@ -90,6 +90,16 @@ static int browser_compare_subject (const void *a, const void *b)
   return ((BrowserSort & SORT_REVERSE) ? -r : r);
 }
 
+static int browser_compare_desc (const void *a, const void *b)
+{
+  struct folder_file *pa = (struct folder_file *) a;
+  struct folder_file *pb = (struct folder_file *) b;
+
+  int r = mutt_strcoll (pa->desc, pb->desc);
+
+  return ((BrowserSort & SORT_REVERSE) ? -r : r);
+}
+
 static int browser_compare_date (const void *a, const void *b)
 {
   struct folder_file *pa = (struct folder_file *) a;
@@ -110,6 +120,26 @@ static int browser_compare_size (const void *a, const void *b)
   return ((BrowserSort & SORT_REVERSE) ? -r : r);
 }
 
+static int browser_compare_count (const void *a, const void *b)
+{
+  struct folder_file *pa = (struct folder_file *) a;
+  struct folder_file *pb = (struct folder_file *) b;
+
+  int r = pa->all - pb->all;
+
+  return ((BrowserSort & SORT_REVERSE) ? -r : r);
+}
+
+static int browser_compare_count_new (const void *a, const void *b)
+{
+  struct folder_file *pa = (struct folder_file *) a;
+  struct folder_file *pb = (struct folder_file *) b;
+
+  int r = pa->new - pb->new;
+
+  return ((BrowserSort & SORT_REVERSE) ? -r : r);
+}
+
 static void browser_sort (struct browser_state *state)
 {
   int (*f) (const void *, const void *);
@@ -123,6 +153,15 @@ static void browser_sort (struct browser_state *state)
       break;
     case SORT_SIZE:
       f = browser_compare_size;
+      break;
+    case SORT_DESC:
+      f = browser_compare_desc;
+      break;
+    case SORT_COUNT:
+      f = browser_compare_count;
+      break;
+    case SORT_COUNT_NEW:
+      f = browser_compare_count_new;
       break;
     case SORT_SUBJECT:
     default:
@@ -1226,9 +1265,9 @@ void _mutt_select_file (char *f, size_t flen, int flags, char ***files, int *num
 	  int reverse = (i == OP_SORT_REVERSE);
 	  
 	  switch (mutt_multi_choice ((reverse) ?
-	      _("Reverse sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? ") :
-	      _("Sort by (d)ate, (a)lpha, si(z)e or do(n)'t sort? "),
-	      _("dazn")))
+	      _("Reverse sort by (d)ate, (a)lpha, si(z)e, d(e)scription, (c)ount, ne(w) count, or do(n)'t sort? ") :
+	      _("Sort by (d)ate, (a)lpha, si(z)e, d(e)scription, (c)ount, ne(w) count, or do(n)'t sort? "),
+	      _("dazecwn")))
 	  {
 	    case -1: /* abort */
 	      resort = 0;
@@ -1246,7 +1285,19 @@ void _mutt_select_file (char *f, size_t flen, int flags, char ***files, int *num
 	      BrowserSort = SORT_SIZE;
 	      break;
 
-            case 4: /* do(n)'t sort */
+            case 4: /* d(e)scription */
+	      BrowserSort = SORT_DESC;
+	      break;
+
+            case 5: /* (c)ount */
+	      BrowserSort = SORT_COUNT;
+	      break;
+
+            case 6: /* ne(w) count */
+	      BrowserSort = SORT_COUNT_NEW;
+	      break;
+
+            case 7: /* do(n)'t sort */
 	      BrowserSort = SORT_ORDER;
 	      resort = 0;
 	      break;
