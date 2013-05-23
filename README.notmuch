@@ -82,15 +82,18 @@ notmuch support for mutt
    vfolder-from-query:
       - generate new virtual folder from notmuch search query
       - default key: <Esc>X
+      - note: TAB completion of 'tag:' names is available
 
    modify-labels:
       - add or remove notmuch tags; [+]<tag> to add, -<tag> to remove
       - default key: `
+      - note: TAB completion of tag names is available
       - example: "+AAA +BBB -CCC"
 
    modify-labels-then-hide:
       - same as <modify-labels> but message is marked by <quasi-delete>
       - not mapped to any key
+      - note: TAB completion of tag names is available
       - example (add "archive" notmuch tag and remove message from screen):
 
        macro index A "<modify-labels-then-hide>+archive -inbox\n<sync-mailbox>"
