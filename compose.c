@@ -72,7 +72,6 @@ enum
 
 #define HDR_XOFFSET 10
 #define TITLE_FMT "%10s" /* Used for Prompts, which are ASCII */
-#define W (COLS - HDR_XOFFSET)
 #define W (COLS - HDR_XOFFSET - SidebarWidth)
 
 static const char * const Prompts[] =
