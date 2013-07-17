@@ -42,11 +42,12 @@
 #define DTYPE(x) ((x) & DT_MASK)
 
 /* subtypes */
-#define DT_SUBTYPE_MASK	0xf0
+#define DT_SUBTYPE_MASK	0xff0
 #define DT_SORT_ALIAS	0x10
 #define DT_SORT_BROWSER 0x20
 #define DT_SORT_KEYS	0x40
 #define DT_SORT_AUX	0x80
+#define DT_SORT_SIDEBAR	0x100
 
 /* flags to parse_set() */
 #define M_SET_INV	(1<<0)	/* default is to invert all vars */
@@ -2987,15 +2988,35 @@ struct option_t MuttVars[] = {
   { "sort_re",		DT_BOOL, R_INDEX|R_RESORT|R_RESORT_INIT, OPTSORTRE, 1 },
   /*
   ** .pp
-  ** This variable is only useful when sorting by threads with
-  ** $$strict_threads \fIunset\fP.  In that case, it changes the heuristic
-  ** mutt uses to thread messages by subject.  With $$sort_re \fIset\fP, mutt will
-  ** only attach a message as the child of another message by subject if
-  ** the subject of the child message starts with a substring matching the
-  ** setting of $$reply_regexp.  With $$sort_re \fIunset\fP, mutt will attach
-  ** the message whether or not this is the case, as long as the
-  ** non-$$reply_regexp parts of both messages are identical.
+  ** This variable is only useful when sorting by mailboxes in sidebar. By default,
+  ** entries are unsorted.  Valid values:
+  ** .il
+  ** .dd count (all message count)
+  ** .dd desc  (virtual mailbox description)
+  ** .dd new (new message count)
+  ** .dd path
+  ** .dd unsorted
+  ** .ie
   */
+  { "sort_sidebar",	DT_SORT|DT_SORT_SIDEBAR, R_NONE, UL &SidebarSort, SORT_ORDER },
+  /*
+  ** .pp
+  ** Specifies how to sort entries in the file browser.  By default, the
+  ** entries are sorted alphabetically.  Valid values:
+  ** .il
+  ** .dd alpha (alphabetically)
+  ** .dd count (all message count)
+  ** .dd date
+  ** .dd desc (description)
+  ** .dd new (new message count)
+  ** .dd size
+  ** .dd unsorted
+  ** .ie
+  ** .pp
+  ** You may optionally use the ``reverse-'' prefix to specify reverse sorting
+  ** order (example: ``\fCset sort_browser=reverse-date\fP'').
+  */
+
   { "spam_separator",   DT_STR, R_NONE, UL &SpamSep, UL "," },
   /*
   ** .pp
@@ -3573,6 +3594,15 @@ const struct mapping_t SortKeyMethods[] = {
   { "date",	SORT_DATE },
   { "keyid",	SORT_KEYID },
   { "trust",	SORT_TRUST },
+  { NULL,       0 }
+};
+
+const struct mapping_t SortSidebarMethods[] = {
+  { "count",	SORT_COUNT },
+  { "desc",	SORT_DESC },
+  { "new",	SORT_COUNT_NEW },
+  { "path",	SORT_PATH },
+  { "unsorted",	SORT_ORDER },
   { NULL,       0 }
 };
 

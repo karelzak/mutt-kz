@@ -34,6 +34,8 @@
 #define SORT_DESC	15
 #define SORT_COUNT	16
 #define SORT_COUNT_NEW	17
+#define SORT_PATH	18
+
 /* dgc: Sort & SortAux are shorts, so I'm bumping these bitflags up from
  * bits 4 & 5 to bits 8 & 9 to make room for more sort keys in the future. */
 #define SORT_MASK	0xff
@@ -53,6 +55,7 @@ WHERE short BrowserSort INITVAL (SORT_SUBJECT);
 WHERE short Sort INITVAL (SORT_DATE);
 WHERE short SortAux INITVAL (SORT_DATE); /* auxiallary sorting method */
 WHERE short SortAlias INITVAL (SORT_ALIAS);
+WHERE short SidebarSort INITVAL (SORT_ORDER);
 
 /* FIXME: This one does not belong to here */
 WHERE short PgpSortKeys INITVAL (SORT_ADDRESS);
