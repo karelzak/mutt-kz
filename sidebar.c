@@ -177,6 +177,10 @@ void set_curbuffy(char buf[LONG_STRING])
   }
 }
 
+int compare_buffies(BUFFY* buffy1, BUFFY* buffy2) {
+	return mutt_strcmp(buffy1->path, buffy2->path);
+}
+
 int draw_sidebar(int menu) {
 
 	char folder_buffer[LINE_MAX];
@@ -274,8 +278,54 @@ int draw_sidebar(int menu) {
 	if ( CurBuffy == 0 )
 		CurBuffy = get_incoming();
 
-	tmp = TopBuffy;
+	/* Sort the mailboxes -- this is a basic bubble sort */
+	BUFFY *prev = 0;
+	BUFFY *otherPrev = 0;
+	for (tmp = TopBuffy; tmp; prev = tmp, tmp = tmp->next) {
+		otherPrev = tmp;
+		BUFFY *other = tmp->next;
+		for( ; other; otherPrev = other, other = other->next) {
+			/* compare_buffies could actually sort in user-configured ways
+			 * using a sidebar_sort option. Now it only sorts by name */
+			int compare = compare_buffies(tmp, other);
+			if( compare > 0 ) {
 
+				BUFFY *otherNext = other->next;
+				BUFFY *tmpNext   = tmp->next;
+
+				if( prev ) {
+					prev->next = other;
+					other->prev = prev;
+				}
+				else {
+					TopBuffy = other;
+					other->prev = 0;
+				}
+
+				tmp->next = otherNext;
+				if( otherNext)
+					otherNext->prev = tmp;
+
+				if( tmpNext == other ) {
+					other->next = tmp;
+					tmp->prev = other;
+				}
+				else {
+					other->next = tmpNext;
+					tmpNext->prev = other;
+					otherPrev->next = tmp;
+					tmp->prev = otherPrev;
+				}
+
+				/* Rest tmp and other to be used by the loop */
+				BUFFY *buffyAux = tmp;
+				tmp = other;
+				other = buffyAux;
+			}
+		}
+	}
+
+	tmp = TopBuffy;
 	SETCOLOR(MT_COLOR_NORMAL);
 
 	for ( ; tmp && lines < LINES-1 - (menu != MENU_PAGER ||
