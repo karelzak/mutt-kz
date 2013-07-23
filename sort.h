@@ -53,7 +53,7 @@ THREAD *mutt_sort_subthreads (THREAD *, int);
 
 WHERE short BrowserSort INITVAL (SORT_SUBJECT);
 WHERE short Sort INITVAL (SORT_DATE);
-WHERE short SortAux INITVAL (SORT_DATE); /* auxiallary sorting method */
+WHERE short SortAux INITVAL (SORT_DATE); /* auxiliary sorting method */
 WHERE short SortAlias INITVAL (SORT_ALIAS);
 WHERE short SidebarSort INITVAL (SORT_ORDER);
 

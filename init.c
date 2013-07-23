@@ -267,7 +267,7 @@ int mutt_extract_token (BUFFER *dest, BUFFER *tok, int flags)
       safe_fclose (&fp);
       mutt_wait_filter (pid);
 
-      /* if we got output, make a new string consiting of the shell ouptput
+      /* if we got output, make a new string consiting of the shell output
 	 plus whatever else was left on the original line */
       /* BUT: If this is inside a quoted string, directly add output to 
        * the token */
@@ -2479,7 +2479,7 @@ int mutt_command_complete (char *buffer, size_t len, int pos, int numtabs)
     if (Completed[0] == 0 && User_typed[0])
       return 0;
 
-     /* Num_matched will _always_ be atleast 1 since the initial
+     /* Num_matched will _always_ be at least 1 since the initial
       * user-typed string is always stored */
     if (numtabs == 1 && Num_matched == 2)
       snprintf(Completed, sizeof(Completed),"%s", Matches[0]);
@@ -2535,7 +2535,7 @@ int mutt_command_complete (char *buffer, size_t len, int pos, int numtabs)
     if (Completed[0] == 0 && User_typed[0])
       return 0;
 
-    /* Num_matched will _always_ be atleast 1 since the initial
+    /* Num_matched will _always_ be at least 1 since the initial
      * user-typed string is always stored */
     if (numtabs == 1 && Num_matched == 2)
       snprintf(Completed, sizeof(Completed),"%s", Matches[0]);
@@ -2582,7 +2582,7 @@ int mutt_command_complete (char *buffer, size_t len, int pos, int numtabs)
     if (Completed[0] == 0 && User_typed[0])
       return 0;
 
-    /* Num_matched will _always_ be atleast 1 since the initial
+    /* Num_matched will _always_ be at least 1 since the initial
      * user-typed string is always stored */
     if (numtabs == 1 && Num_matched == 2)
       snprintf(Completed, sizeof(Completed),"%s", Matches[0]);
