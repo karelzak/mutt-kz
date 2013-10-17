@@ -30,7 +30,45 @@ extern size_t UngetCount;
 
 char* SearchBuffers[MENU_MAX];
 
-static void print_enriched_string (int attr, unsigned char *s, int do_color)
+static int get_color(int index, unsigned char *s) {
+  COLOR_LINE *color;
+  HEADER *hdr = Context->hdrs[Context->v2r[index]];
+  int type = *s;
+
+  switch (type) {
+    case MT_COLOR_INDEX_SUBJECT:
+      color = ColorIndexSubjectList;
+      break;
+    case MT_COLOR_INDEX_AUTHOR:
+      color = ColorIndexAuthorList;
+      break;
+    case MT_COLOR_INDEX_FLAGS:
+      color = ColorIndexFlagsList;
+      break;
+#ifdef USE_NOTMUCH
+    case MT_COLOR_INDEX_TAG:
+      for (color = ColorIndexTagList; color; color = color->next)
+      {
+          const char * transform = hash_find(TagTransforms, color->pattern);
+          if (transform && (strncmp((const char *)(s+1),
+                                    transform, strlen(transform)) == 0))
+              return color->pair;
+      }
+      return 0;
+#endif
+    default:
+      return ColorDefs[type];
+  }
+
+  for (; color; color = color->next)
+    if (mutt_pattern_exec (color->color_pattern, M_MATCH_FULL_ADDRESS, 
+                           Context, hdr))
+      return color->pair;
+
+  return 0;
+}
+
+static void print_enriched_string (int index, int attr, unsigned char *s, int do_color)
 {
   wchar_t wc;
   size_t k;
@@ -162,6 +200,23 @@ static void print_enriched_string (int attr, unsigned char *s, int do_color)
       }
       if (do_color) ATTRSET(attr);
     }
+    else if (*s == M_SPECIAL_INDEX)
+    {
+      s++;
+      if (do_color) {
+        if (*s == MT_COLOR_INDEX)
+          attrset(attr);
+        else
+        {
+          if (get_color(index, s) == 0)
+            attron(attr);
+          else
+            attron(get_color(index, s));
+        }
+      }
+      s++; 
+      n -= 2;
+    }
     else if ((k = mbrtowc (&wc, (char *)s, n, &mbstate)) > 0)
     {
       addnstr ((char *)s, k);
@@ -269,7 +324,7 @@ void menu_redraw_index (MUTTMENU *menu)
       else if (option(OPTARROWCURSOR))
 	addstr("   ");
 
-      print_enriched_string (attr, (unsigned char *) buf, do_color);
+      print_enriched_string (i, attr, (unsigned char *) buf, do_color);
     }
     else
     {
@@ -305,7 +360,7 @@ void menu_redraw_motion (MUTTMENU *menu)
       menu_make_entry (buf, sizeof (buf), menu, menu->oldcurrent);
       menu_pad_string (buf, sizeof (buf));
       move (menu->oldcurrent + menu->offset - menu->top, SidebarWidth + 3);
-      print_enriched_string (menu->color(menu->oldcurrent), (unsigned char *) buf, 1);
+      print_enriched_string (menu->oldcurrent, menu->color(menu->oldcurrent), (unsigned char *) buf, 1);
     }
 
     /* now draw it in the new location */
@@ -317,14 +372,14 @@ void menu_redraw_motion (MUTTMENU *menu)
     /* erase the current indicator */
     menu_make_entry (buf, sizeof (buf), menu, menu->oldcurrent);
     menu_pad_string (buf, sizeof (buf));
-    print_enriched_string (menu->color(menu->oldcurrent), (unsigned char *) buf, 1);
+    print_enriched_string (menu->oldcurrent, menu->color(menu->oldcurrent), (unsigned char *) buf, 1);
 
     /* now draw the new one to reflect the change */
     menu_make_entry (buf, sizeof (buf), menu, menu->current);
     menu_pad_string (buf, sizeof (buf));
     SETCOLOR(MT_COLOR_INDICATOR);
     move(menu->current - menu->top + menu->offset, SidebarWidth);
-    print_enriched_string (menu->color(menu->current), (unsigned char *) buf, 0);
+    print_enriched_string (menu->current, menu->color(menu->current), (unsigned char *) buf, 0);
   }
   menu->redraw &= REDRAW_STATUS;
   NORMAL_COLOR;
@@ -346,10 +401,10 @@ void menu_redraw_current (MUTTMENU *menu)
     ATTRSET(attr);
     addch (' ');
     menu_pad_string (buf, sizeof (buf));
-    print_enriched_string (attr, (unsigned char *) buf, 1);
+    print_enriched_string (menu->current, attr, (unsigned char *) buf, 1);
   }
   else
-    print_enriched_string (attr, (unsigned char *) buf, 0);
+    print_enriched_string (menu->current, attr, (unsigned char *) buf, 0);
   menu->redraw &= REDRAW_STATUS;
   NORMAL_COLOR;
 }

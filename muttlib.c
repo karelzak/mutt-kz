@@ -1259,6 +1259,11 @@ void mutt_FormatString (char *dest,		/* output buffer */
 
       if (flags & M_FORMAT_OPTIONAL)
       {
+#ifdef USE_NOTMUCH
+        /* index format %G takes an extra char */
+        if ((flags & M_FORMAT_INDEX) && (ch == 'G'))
+            src++;
+#endif
         if (*src != '?')
           break; /* bad format */
         src++;
