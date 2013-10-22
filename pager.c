@@ -1816,6 +1816,13 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 	mutt_draw_statusline (COLS - SidebarWidth, bn);
       }
       NORMAL_COLOR;
+      if (option(OPTTSENABLED) && TSSupported)
+      {
+	menu_status_line (buffer, sizeof (buffer), index, NONULL (TSStatusFormat));
+	mutt_ts_status(buffer);
+	menu_status_line (buffer, sizeof (buffer), index, NONULL (TSIconFormat));
+	mutt_ts_icon(buffer);
+      }
     }
 
     if ((redraw & REDRAW_INDEX) && index)
