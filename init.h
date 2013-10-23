@@ -1313,6 +1313,35 @@ struct option_t MuttVars[] = {
   ** .dt %*X    .dd soft-fill with character ``X'' as pad
   ** .de
   ** .pp
+  ** Date format expressions can be constructed based on relative dates. Using
+  ** the date formatting operators along with nested conditionals, the date
+  ** format can be modified based on how old a message is. These conditionals
+  ** are:
+  ** .dl
+  ** .dt y  .dd years
+  ** .dt m  .dd months
+  ** .dt w  .dd weeks
+  ** .dt d  .dd days
+  ** .dt H  .dd hours
+  ** .dt M  .dd minutes
+  ** .de
+  ** .pp
+  ** Each of these can be prefixed with a value specifying how many back:
+  ** .ts
+  ** %?[1y?less than one year&greater than one year?
+  ** %?[3d?less than three days&greater than three days?
+  ** .te
+  ** .pp
+  ** Using these date format conditionals along with nested conditionals:
+  ** .ts
+  ** %<[1y?%<[1w?%<[1d?%[ %H:%M]&%[%a %d]>&%[%b %d]>&%[%y%m%d]>
+  ** .te
+  ** .pp
+  ** This shows the "YYMMDD" date for messages older than one year, the
+  ** "Mon DD" date for messages from one week to one year, the "Day DD" date
+  ** for messages from 1 to 7 days old, and the "HH:MM" time for messages
+  ** under one day old.
+  ** .pp
   ** ``Soft-fill'' deserves some explanation: Normal right-justification
   ** will print everything to the left of the ``%>'', displaying padding and
   ** whatever lies to the right only if there's room. By contrast,

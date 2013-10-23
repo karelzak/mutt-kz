@@ -4532,6 +4532,15 @@ If the value of <emphasis>sequence_char</emphasis> is non-zero,
 <emphasis>else_string</emphasis> will be expanded.
 </para>
 
+<para>
+The conditional sequences can also be nested by using the %&lt; and &gt;
+operators. The %? notation can still be used but requires quoting. For example:
+<screen>
+%&lt;x?true&amp;false&gt;
+%&lt;x?%&lt;y?%&lt;z?xyz&amp;xy&gt;&amp;x&gt;&amp;none&gt;
+</screen>
+</para>
+
 </sect2>
 
 <sect2 id="formatstrings-filters">
