@@ -2580,7 +2580,7 @@ silently truncated at the screen width, and are not wrapped.
 
 <command>color</command>
 <arg choice="plain">
-<option>index</option>
+<option><emphasis>index-object</emphasis></option>
 </arg>
 <arg choice="plain">
 <replaceable class="parameter">foreground</replaceable>
@@ -2595,7 +2595,7 @@ silently truncated at the screen width, and are not wrapped.
 <command>uncolor</command>
 <group choice="req">
 <arg choice="plain">
-<option>index</option>
+<option><emphasis>index-object</emphasis></option>
 </arg>
 <arg choice="plain">
 <option>header</option>
@@ -2625,8 +2625,8 @@ specify one or the other).
 <para>
 <emphasis>header</emphasis> and <emphasis>body</emphasis> match
 <emphasis>regexp</emphasis> in the header/body of a message,
-<emphasis>index</emphasis> matches <emphasis>pattern</emphasis> (see
-<xref linkend="patterns"/>) in the message index.
+<emphasis>index-object</emphasis> can match <emphasis>pattern</emphasis>
+(see <xref linkend="patterns"/>) in the message index.
 </para>
 
 <para>
@@ -2650,6 +2650,24 @@ specify one or the other).
 <listitem><para>tilde (the <quote>~</quote> used to pad blank lines in the pager)</para></listitem>
 <listitem><para>tree (thread tree drawn in the message index and attachment menu)</para></listitem>
 <listitem><para>underline (highlighting underlined patterns in the body of messages)</para></listitem>
+</itemizedlist>
+
+<para>
+<emphasis>index-object</emphasis> can be one of the following:
+</para>
+
+<itemizedlist>
+<listitem><para>index (default highlighting of the entire index line, uses <emphasis>pattern</emphasis>)</para></listitem>
+<listitem><para>index_date (the date field)</para></listitem>
+<listitem><para>index_flags (the message flags, %S %Z, uses <emphasis>pattern</emphasis>)</para></listitem>
+<listitem><para>index_number (the message number, %C)</para></listitem>
+<listitem><para>index_collapsed (the number of messages in a collapsed thread, %M)</para></listitem>
+<listitem><para>index_author (the author name, %A %a %F %L %n, uses <emphasis>pattern</emphasis>)</para></listitem>
+<listitem><para>index_subject (the subject, %s, uses <emphasis>pattern</emphasis>)</para></listitem>
+<listitem><para>index_size (the message size, %c %l)</para></listitem>
+<listitem><para>index_label (the message label, %y %Y)</para></listitem>
+<listitem><para>index_tags (the transformed message tags, %g)</para></listitem>
+<listitem><para>index_tag (an individual message tag, %G, uses <emphasis>pattern / tag name</emphasis>)</para></listitem>
 </itemizedlist>
 
 <para>
@@ -2769,7 +2787,7 @@ command. Usage:
 <command>unmono</command>
 <group choice="req">
 <arg choice="plain">
-<option>index</option>
+<option><emphasis>index-object</emphasis></option>
 </arg>
 <arg choice="plain">
 <option>header</option>
@@ -4512,6 +4530,15 @@ You can also switch between two strings using the following construct:
 If the value of <emphasis>sequence_char</emphasis> is non-zero,
 <emphasis>if_string</emphasis> will be expanded, otherwise
 <emphasis>else_string</emphasis> will be expanded.
+</para>
+
+<para>
+The conditional sequences can also be nested by using the %&lt; and &gt;
+operators. The %? notation can still be used but requires quoting. For example:
+<screen>
+%&lt;x?true&amp;false&gt;
+%&lt;x?%&lt;y?%&lt;z?xyz&amp;xy&gt;&amp;x&gt;&amp;none&gt;
+</screen>
 </para>
 
 </sect2>

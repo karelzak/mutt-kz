@@ -35,6 +35,12 @@ int ColorDefs[MT_COLOR_MAX];
 COLOR_LINE *ColorHdrList = NULL;
 COLOR_LINE *ColorBodyList = NULL;
 COLOR_LINE *ColorIndexList = NULL;
+COLOR_LINE *ColorIndexSubjectList = NULL;
+COLOR_LINE *ColorIndexAuthorList = NULL;
+COLOR_LINE *ColorIndexFlagsList = NULL;
+#ifdef USE_NOTMUCH
+COLOR_LINE *ColorIndexTagList = NULL;
+#endif
 
 /* local to this file */
 static int ColorQuoteSize;
@@ -93,6 +99,18 @@ static const struct mapping_t Fields[] =
   { "bold",		MT_COLOR_BOLD },
   { "underline",	MT_COLOR_UNDERLINE },
   { "index",		MT_COLOR_INDEX },
+  { "index_subject",	MT_COLOR_INDEX_SUBJECT },
+  { "index_author",	MT_COLOR_INDEX_AUTHOR },
+  { "index_collapsed",	MT_COLOR_INDEX_COLLAPSED },
+  { "index_date",	MT_COLOR_INDEX_DATE },
+  { "index_flags",	MT_COLOR_INDEX_FLAGS },
+  { "index_label",	MT_COLOR_INDEX_LABEL },
+  { "index_number",	MT_COLOR_INDEX_NUMBER },
+  { "index_size",	MT_COLOR_INDEX_SIZE },
+#ifdef USE_NOTMUCH
+  { "index_tags",	MT_COLOR_INDEX_TAGS },
+  { "index_tag",	MT_COLOR_INDEX_TAG },
+#endif
   { "sidebar_new",	MT_COLOR_NEW },
   { "sidebar_flagged",	MT_COLOR_FLAGGED },
   { "sidebar",		MT_COLOR_SIDEBAR },
@@ -369,12 +387,54 @@ int mutt_parse_unmono (BUFFER *buf, BUFFER *s, unsigned long data,
   return _mutt_parse_uncolor(buf, s, data, err, 0);
 }
 
+static void
+mutt_do_uncolor (BUFFER *buf, BUFFER *s, COLOR_LINE **ColorList,
+                 int *do_cache, int parse_uncolor)
+{
+  COLOR_LINE *tmp, *last = NULL;
+
+  do
+  {
+    mutt_extract_token (buf, s, 0);
+    if (!mutt_strcmp ("*", buf->data))
+    {
+      for (tmp = *ColorList; tmp; )
+      {
+        if (!*do_cache)
+          *do_cache = 1;
+        last = tmp;
+        tmp = tmp->next;
+        mutt_free_color_line(&last, parse_uncolor);
+      }
+      *ColorList = NULL;
+    }
+    else
+    {
+      for (last = NULL, tmp = *ColorList; tmp; last = tmp, tmp = tmp->next)
+      {
+        if (!mutt_strcmp (buf->data, tmp->pattern))
+        {
+          if (!*do_cache)
+            *do_cache = 1;
+          dprint(1,(debugfile,"Freeing pattern \"%s\" from ColorList\n",
+                               tmp->pattern));
+          if (last)
+            last->next = tmp->next;
+          else
+            *ColorList = tmp->next;
+          mutt_free_color_line(&tmp, parse_uncolor);
+          break;
+        }
+      }
+    }
+  }
+  while (MoreArgs (s));
+}
+
 static int _mutt_parse_uncolor (BUFFER *buf, BUFFER *s, unsigned long data,
 				BUFFER *err, short parse_uncolor)
 {
   int object = 0, do_cache = 0;
-  COLOR_LINE *tmp, *last = NULL;
-  COLOR_LINE **list;
 
   mutt_extract_token (buf, s, 0);
 
@@ -384,13 +444,16 @@ static int _mutt_parse_uncolor (BUFFER *buf, BUFFER *s, unsigned long data,
     return (-1);
   }
 
-  if (mutt_strncmp (buf->data, "index", 5) == 0)
-    list = &ColorIndexList;
-  else if (mutt_strncmp (buf->data, "body", 4) == 0)
-    list = &ColorBodyList;
-  else if (mutt_strncmp (buf->data, "header", 7) == 0)
-    list = &ColorHdrList;
-  else
+  if (object > MT_COLOR_INDEX_AUTHOR) /* uncolor index column */
+  {
+    ColorDefs[object] = 0;
+    set_option (OPTFORCEREDRAWINDEX);
+    return (0);
+  }
+
+  if ((mutt_strncmp (buf->data, "index", 5) != 0) &&
+      (mutt_strncmp (buf->data, "body", 4) != 0) &&
+      (mutt_strncmp (buf->data, "header", 6) != 0))
   {
     snprintf (err->data, err->dsize,
 	      _("%s: command valid only for index, body, header objects"),
@@ -427,43 +490,18 @@ static int _mutt_parse_uncolor (BUFFER *buf, BUFFER *s, unsigned long data,
     return 0;
   }
 
-  do
-  {
-    mutt_extract_token (buf, s, 0);
-    if (!mutt_strcmp ("*", buf->data))
-    {
-      for (tmp = *list; tmp; )
-      {
-        if (!do_cache)
-	  do_cache = 1;
-	last = tmp;
-	tmp = tmp->next;
-	mutt_free_color_line(&last, parse_uncolor);
-      }
-      *list = NULL;
-    }
-    else
-    {
-      for (last = NULL, tmp = *list; tmp; last = tmp, tmp = tmp->next)
-      {
-	if (!mutt_strcmp (buf->data, tmp->pattern))
-	{
-          if (!do_cache)
-	    do_cache = 1;
-	  dprint(1,(debugfile,"Freeing pattern \"%s\" from color list\n",
-	                       tmp->pattern));
-	  if (last)
-	    last->next = tmp->next;
-	  else
-	    *list = tmp->next;
-	  mutt_free_color_line(&tmp, parse_uncolor);
-	  break;
-	}
-      }
-    }
-  }
-  while (MoreArgs (s));
-
+  if (object == MT_COLOR_INDEX)
+    mutt_do_uncolor(buf, s, &ColorIndexList, &do_cache, parse_uncolor);
+  else if (object == MT_COLOR_INDEX_SUBJECT)
+    mutt_do_uncolor(buf, s, &ColorIndexSubjectList, &do_cache, parse_uncolor);
+  else if (object == MT_COLOR_INDEX_AUTHOR)
+    mutt_do_uncolor(buf, s, &ColorIndexAuthorList, &do_cache, parse_uncolor);
+  else if (object == MT_COLOR_INDEX_FLAGS)
+    mutt_do_uncolor(buf, s, &ColorIndexFlagsList, &do_cache, parse_uncolor);
+#ifdef USE_NOTMUCH
+  else if (object == MT_COLOR_INDEX_TAG)
+    mutt_do_uncolor(buf, s, &ColorIndexTagList, &do_cache, parse_uncolor);
+#endif
 
   if (do_cache && !option (OPTNOCURSES))
   {
@@ -703,7 +741,16 @@ _mutt_parse_color (BUFFER *buf, BUFFER *s, BUFFER *err,
 
   /* extract a regular expression if needed */
   
-  if (object == MT_COLOR_HEADER || object == MT_COLOR_BODY || object == MT_COLOR_INDEX)
+  if (object == MT_COLOR_HEADER ||
+      object == MT_COLOR_BODY ||
+      object == MT_COLOR_INDEX ||
+      object == MT_COLOR_INDEX_SUBJECT ||
+      object == MT_COLOR_INDEX_AUTHOR ||
+      object == MT_COLOR_INDEX_FLAGS ||
+#ifdef USE_NOTMUCH
+      object == MT_COLOR_INDEX_TAG
+#endif
+      )
   {
     if (!MoreArgs (s))
     {
@@ -747,6 +794,32 @@ _mutt_parse_color (BUFFER *buf, BUFFER *s, BUFFER *err,
     r = add_pattern (&ColorIndexList, buf->data, 1, fg, bg, attr, err, 1);
     set_option (OPTFORCEREDRAWINDEX);
   }
+  else if (object == MT_COLOR_INDEX_SUBJECT)
+  {
+    r = add_pattern (&ColorIndexSubjectList, buf->data,
+                     1, fg, bg, attr, err, 1);
+    set_option (OPTFORCEREDRAWINDEX);
+  }
+  else if (object == MT_COLOR_INDEX_AUTHOR)
+  {
+    r = add_pattern (&ColorIndexAuthorList, buf->data,
+                     1, fg, bg, attr, err, 1);
+    set_option (OPTFORCEREDRAWINDEX);
+  }
+  else if (object == MT_COLOR_INDEX_FLAGS)
+  {
+    r = add_pattern (&ColorIndexFlagsList, buf->data,
+                     1, fg, bg, attr, err, 1);
+    set_option (OPTFORCEREDRAWINDEX);
+  }
+#ifdef USE_NOTMUCH
+  else if (object == MT_COLOR_INDEX_TAG)
+  {
+    r = add_pattern (&ColorIndexTagList, buf->data,
+                     1, fg, bg, attr, err, 1);
+    set_option (OPTFORCEREDRAWINDEX);
+  }
+#endif
   else if (object == MT_COLOR_QUOTED)
   {
     if (q_level >= ColorQuoteSize)
@@ -772,7 +845,11 @@ _mutt_parse_color (BUFFER *buf, BUFFER *s, BUFFER *err,
       ColorQuote[q_level] = fgbgattr_to_color(fg, bg, attr);
   }
   else
+  {
     ColorDefs[object] = fgbgattr_to_color(fg, bg, attr);
+    if (object > MT_COLOR_INDEX_AUTHOR)
+      set_option (OPTFORCEREDRAWINDEX);
+  }
 
   return (r);
 }
