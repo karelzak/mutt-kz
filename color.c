@@ -746,9 +746,9 @@ _mutt_parse_color (BUFFER *buf, BUFFER *s, BUFFER *err,
       object == MT_COLOR_INDEX ||
       object == MT_COLOR_INDEX_SUBJECT ||
       object == MT_COLOR_INDEX_AUTHOR ||
-      object == MT_COLOR_INDEX_FLAGS ||
+      object == MT_COLOR_INDEX_FLAGS
 #ifdef USE_NOTMUCH
-      object == MT_COLOR_INDEX_TAG
+      || object == MT_COLOR_INDEX_TAG
 #endif
       )
   {
