@@ -108,8 +108,8 @@ static const struct mapping_t Fields[] =
   { "index_number",	MT_COLOR_INDEX_NUMBER },
   { "index_size",	MT_COLOR_INDEX_SIZE },
 #ifdef USE_NOTMUCH
-  { "index_tags",	MT_COLOR_INDEX_TAGS },
   { "index_tag",	MT_COLOR_INDEX_TAG },
+  { "index_tags",	MT_COLOR_INDEX_TAGS },
 #endif
   { "sidebar_new",	MT_COLOR_NEW },
   { "sidebar_flagged",	MT_COLOR_FLAGGED },
