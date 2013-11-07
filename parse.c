@@ -1135,21 +1135,6 @@ int mutt_parse_rfc822_line (ENVELOPE *e, HEADER *hdr, char *line, char *p, short
       /* We add a new "Message-ID:" when building a message */
       FREE (&e->message_id);
       e->message_id = mutt_extract_message_id (p, NULL);
-
-      if (NULL == e->message_id)
-      {
-        /**
-         * so the message-id doesn't follow the spec. Take the whole thing in
-         * angle-brackets and use as the message-id
-         */
-        size_t message_id_length = strlen (p);
-        e->message_id = safe_malloc (message_id_length + 3);
-        memcpy (e->message_id + 1, p, message_id_length);
-        e->message_id[0] = '<';
-        e->message_id[1 + message_id_length] = '>';
-        e->message_id[1 + message_id_length + 1] = '\0';
-      }
-
       matched = 1;
     }
     else if (!ascii_strncasecmp (line + 1, "ail-", 4))
