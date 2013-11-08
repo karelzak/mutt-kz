@@ -2051,7 +2051,7 @@ struct option_t MuttVars[] = {
   ** not used.
   ** (PGP only)
   */
-  {"sidebar_delim", DT_STR, R_BOTH, UL &SidebarDelim, "|"},
+  { "sidebar_delim", DT_STR, R_BOTH, UL &SidebarDelim, UL "|" },
   /*
   ** .pp
   ** This specifies the delimiter between the sidebar (if visible) and
