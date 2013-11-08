@@ -750,7 +750,7 @@ static void print_confline (const char *varname, int type, const char *val, FILE
  ** - .dt starts a term in a definition list.
  ** - .dd starts a definition in a definition list.
  ** - .de on a line finishes a definition list.
- ** - .il on a line starts an itemzied list
+ ** - .il on a line starts an itemized list
  ** - .dd starts an item in an itemized list
  ** - .ie on a line finishes an itemized list
  ** - .ts on a line starts a "tscreen" environment (name taken from SGML).
@@ -976,13 +976,13 @@ static int print_it (int special, char *str, FILE *out, int docstat)
 	}
 	case SP_START_TAB:
 	{
-	  fputs ("\n.IP\n.DS\n.sp\n.ft CR\n.nf\n", out);
+	  fputs ("\n.IP\n.EX\n", out);
 	  docstat |= D_TAB | D_NL;
 	  break;
 	}
 	case SP_END_TAB:
 	{
-	  fputs ("\n.fi\n.ec\n.ft P\n.sp\n", out);
+	  fputs ("\n.EE\n", out);
 	  docstat &= ~D_TAB;
 	  docstat |= D_NL;
 	  break;
