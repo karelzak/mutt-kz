@@ -1158,7 +1158,7 @@ mutt_hcache_open(const char *path, const char *folder, hcache_namer_t namer)
 
     /* Get a hash and take its bytes as an (unsigned int) hash version */
     md5_finish_ctx(&ctx, digest);
-    hcachever = *((unsigned int *)digest);
+    memcpy(&hcachever, digest, sizeof(hcachever));
   }
 
   h->db = NULL;
