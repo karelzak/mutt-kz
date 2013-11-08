@@ -455,8 +455,9 @@ int km_dokey (int menu)
     /* hide timeouts from line editor */
     if (menu == MENU_EDITOR && tmp.ch == -2)
       continue;
-
+#ifdef USE_IMAP
   gotkey:
+#endif
     LastKey = tmp.ch;
     if (LastKey < 0)
       return -1;
