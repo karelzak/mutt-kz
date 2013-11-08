@@ -408,7 +408,7 @@ static int retry_generic (int menu, keycode_t *keys, int keyslen, int lastkey)
 /* return values:
  *	>0		function to execute
  *	OP_NULL		no function bound to key sequence
- *	-1		error occured while reading input
+ *	-1		error occurred while reading input
  */
 int km_dokey (int menu)
 {
@@ -866,7 +866,7 @@ static char *parse_keymap (int *menu, BUFFER *s, int maxmenus, int *nummenus, BU
   int i=0;
   char *p, *q;
 
-  memset (&buf, 0, sizeof (buf));
+  mutt_buffer_init (&buf);
 
   /* menu name */
   mutt_extract_token (&buf, s, 0);

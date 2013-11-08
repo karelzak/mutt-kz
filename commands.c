@@ -617,9 +617,10 @@ void mutt_enter_command (void)
   buffer[0] = 0;
   if (mutt_get_field (":", buffer, sizeof (buffer), M_COMMAND) != 0 || !buffer[0])
     return;
+  mutt_buffer_init (&err);
   err.dsize = STRING;
   err.data = safe_malloc(err.dsize);
-  memset (&token, 0, sizeof (token));
+  mutt_buffer_init (&token);
   r = mutt_parse_rc_line (buffer, &token, &err);
   FREE (&token.data);
   if (err.data[0])
