@@ -1315,14 +1315,19 @@ int mutt_index_menu (void)
 	    break;
 	  }
 	}
+#ifdef USE_NOTMUCH
+	else if (op == OP_MAIN_CHANGE_VFOLDER) {
+	  mutt_enter_vfolder (cp, buf, sizeof (buf), &menu->redraw, 1);
+	  if (!buf[0])
+	  {
+	    CLEARLINE (LINES-1);
+	    break;
+	  }
+	}
+#endif
 	else
 	{
 	  mutt_buffy (buf, sizeof (buf));
-#ifdef USE_NOTMUCH
-	  if (op == OP_MAIN_CHANGE_VFOLDER)
-	    mutt_enter_vfolder (cp, buf, sizeof (buf), &menu->redraw, 1);
-	  else
-#endif
           if ( op == OP_SIDEBAR_OPEN )
 	  {
             if(!CurBuffy)
