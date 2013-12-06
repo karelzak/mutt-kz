@@ -75,3 +75,7 @@ stamp-h1
 *.swp
 TAGS
 .xcodeproj/*
+keymap_alldefs.h
+po/mutt-kz.pot
+txt2c
+

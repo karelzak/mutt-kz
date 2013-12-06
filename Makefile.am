@@ -32,7 +32,6 @@ mutt_SOURCES = \
 	rfc822.c rfc1524.c rfc2047.c rfc2231.c rfc3676.c \
 	score.c send.c sendlib.c signal.c sort.c \
 	status.c system.c thread.c charset.c history.c lib.c \
-	sidebar.c \
 	muttlib.c editmsg.c mbyte.c \
 	url.c ascii.c crypt-mod.c crypt-mod.h safe_asprintf.c
 
@@ -71,19 +70,25 @@ EXTRA_DIST = COPYRIGHT GPL OPS OPS.PGP OPS.CRYPT OPS.SMIME TODO UPDATING \
 	rfc2231.h rfc822.h rfc3676.h sha1.h sort.h mime.types VERSION prepare \
 	_regex.h OPS.MIX README.SECURITY remailer.c remailer.h browser.h \
 	mbyte.h lib.h extlib.c pgpewrap.c smime_keys.pl pgplib.h \
-	sidebar.h \
 	README.SSL smime.h group.h \
 	muttbug pgppacket.h depcomp ascii.h BEWARE PATCHES patchlist.sh \
 	ChangeLog mkchangelog.sh mutt_idna.h \
 	snprintf.c regex.c crypt-gpgme.h hcachever.sh.in \
-	txt2c.c txt2c.sh README.notmuch OPS.NOTMUCH version.sh check_sec.sh
+	txt2c.c txt2c.sh version.sh check_sec.sh
 
 EXTRA_SCRIPTS = smime_keys
+
+
 
 if BUILD_NOTMUCH
 mutt_SOURCES += mutt_notmuch.c mutt_notmuch.h
 mutt_LDADD += $(NOTMUCH_LIBS)
 endif
+
+# kz
+EXTRA_DIST += UPDATING.kz VERSION.kz README.notmuch OPS.NOTMUCH sidebar.h
+mutt_SOURCES += sidebar.c
+
 
 
 mutt_dotlock_SOURCES = mutt_dotlock.c
@@ -122,7 +127,7 @@ conststrings.c: txt2c config.status
 
 CLEANFILES = mutt_dotlock.c keymap_alldefs.h $(BUILT_SOURCES)
 
-DISTCLEANFILES= flea smime_keys txt2c po/mutt-kz.pot
+DISTCLEANFILES= flea smime_keys txt2c po/$(PACKAGE).pot
 
 ACLOCAL_AMFLAGS = -I m4
 
