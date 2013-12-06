@@ -329,6 +329,12 @@ int mutt_get_postponed (CONTEXT *ctx, HEADER *hdr, HEADER **cur, char *fcc, size
       tmp->next = NULL;
       mutt_free_list (&tmp);
       tmp = next;
+     /* note that x-mutt-fcc was present.  we do this because we want to add a
+      * default fcc if the header was missing, but preserve the request of the
+      * user to not make a copy if the header field is present, but empty.
+      * see http://dev.mutt.org/trac/ticket/3653
+      */
+      code |= SENDPOSTPONEDFCC;
     }
     else if ((WithCrypto & APPLICATION_PGP)
              && (mutt_strncmp ("Pgp:", tmp->data, 4) == 0 /* this is generated
@@ -545,8 +551,15 @@ int mutt_prepare_template (FILE *fp, CONTEXT *ctx, HEADER *newhdr, HEADER *hdr,
   newhdr->content->length = hdr->content->length;
   mutt_parse_part (fp, newhdr->content);
 
-  FREE (&newhdr->env->message_id);
-  FREE (&newhdr->env->mail_followup_to); /* really? */
+  /* If message_id is set, then we are resending a message and don't want
+   * message_id or mail_followup_to. Otherwise, we are resuming a
+   * postponed message, and want to keep the mail_followup_to.
+   */
+  if (newhdr->env->message_id != NULL)
+  {
+    FREE (&newhdr->env->message_id);
+    FREE (&newhdr->env->mail_followup_to);
+  }
 
   /* decrypt pgp/mime encoded messages */
 
