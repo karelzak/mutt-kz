@@ -290,6 +290,7 @@ const struct binding_t OpPager[] = { /* map: pager */
   { "vfolder-from-query",	OP_MAIN_VFOLDER_FROM_QUERY,	"\033X" },
   { "modify-labels",		OP_MAIN_MODIFY_LABELS,		"`" },
   { "modify-labels-then-hide",	OP_MAIN_MODIFY_LABELS_THEN_HIDE, NULL },
+  { "entire-thread",		OP_MAIN_ENTIRE_THREAD,          "+" },
 #endif
   { "sidebar-scroll-up",	OP_SIDEBAR_SCROLL_UP, NULL },
   { "sidebar-scroll-down",	OP_SIDEBAR_SCROLL_DOWN, NULL },
