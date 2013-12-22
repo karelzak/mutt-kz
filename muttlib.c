@@ -1426,9 +1426,9 @@ void mutt_FormatString (char *dest,		/* output buffer */
 	    /* \0-terminate dest for length computation in mutt_wstr_trunc() */
 	    *wptr = 0;
 	    /* make sure right part is at most as wide as display */
-	    len = mutt_wstr_trunc (buf, destlen, COLS, &wid);
+	    len = mutt_wstr_trunc (buf, destlen, COLS - SidebarWidth, &wid);
 	    /* truncate left so that right part fits completely in */
-	    wlen = mutt_wstr_trunc (dest, destlen - len, col + pad, &col);
+	    wlen = mutt_wstr_trunc (dest, destlen - len, col + pad*pw, &col);
 	    wptr = dest + wlen;
 	  }
 	  if (len + wlen > destlen)
