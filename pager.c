@@ -1807,13 +1807,13 @@ mutt_pager (const char *banner, const char *fname, int flags, pager_t *extra)
 	size_t l2 = sizeof (buffer);
 	hfi.hdr = (IsHeader (extra)) ? extra->hdr : extra->bdy->hdr;
 	mutt_make_string_info (buffer, l1 < l2 ? l1 : l2, NONULL (PagerFmt), &hfi, M_FORMAT_MAKEPRINT);
-	mutt_paddstr (COLS-SidebarWidth, buffer);
+	mutt_draw_statusline (COLS - SidebarWidth, buffer);
       }
       else
       {
 	char bn[STRING];
 	snprintf (bn, sizeof (bn), "%s (%s)", banner, pager_progress_str);
-	mutt_paddstr (COLS-SidebarWidth, bn);
+	mutt_draw_statusline (COLS - SidebarWidth, bn);
       }
       NORMAL_COLOR;
     }
