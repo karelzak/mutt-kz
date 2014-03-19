@@ -417,7 +417,7 @@ mutt_draw_statusline(int cols, char *inbuf)
   int offset     = 0;
   int found = 0;
   int null_rx = 0;
-  unsigned char buf[2048];
+  char buf[2048];
 
   struct line_t {
 	  short chunks;
