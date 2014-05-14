@@ -507,7 +507,8 @@ mutt_draw_statusline(int cols, char *inbuf)
 		    attrset (color);
 		    last_color = color;
 	    }
-	    addch (buf[cnt]); /* XXX more than one char at a time? */
+	    /* XXX more than one char at a time? */
+	    addch ((unsigned char)buf[cnt]);
 #if 0
 	    waddnstr(stdscr, tgbuf, 10);
 	    SETCOLOR (MT_COLOR_NORMAL);
