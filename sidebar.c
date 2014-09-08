@@ -362,8 +362,21 @@ int draw_sidebar(int menu) {
 			SETCOLOR(MT_COLOR_NEW);
 		else if ( tmp->msg_flagged > 0 )
 		        SETCOLOR(MT_COLOR_FLAGGED);
-		else
-			SETCOLOR(MT_COLOR_NORMAL);
+		else {
+                  /* make sure the path is either:
+                     1.  Containing new mail.
+                     2.  The inbox.
+                     3.  The current box.
+                   */
+                  if ((option (OPTSIDEBARNEWMAILONLY)) &&
+                      ( (tmp->msg_unread <= 0)  &&
+                        ( tmp != Incoming ) &&
+                        Context &&
+                        ( strcmp( tmp->path, Context->path ) != 0 ) ) )
+                    continue;
+                  else
+                    SETCOLOR(MT_COLOR_NORMAL);
+                }
 
 		move( lines, 0 );
 		if ( Context && !strcmp( tmp->path, Context->path ) ) {
@@ -442,6 +455,29 @@ int draw_sidebar(int menu) {
 	return 0;
 }
 
+BUFFY * exist_next_new()
+{
+       BUFFY *tmp = CurBuffy;
+       if(tmp == NULL) return NULL;
+       while (tmp->next != NULL)
+       {
+              tmp = tmp->next;
+               if(tmp->msg_unread) return tmp;
+       }
+       return NULL;
+}
+
+BUFFY * exist_prev_new()
+{
+       BUFFY *tmp = CurBuffy;
+       if(tmp == NULL) return NULL;
+       while (tmp->prev != NULL)
+       {
+               tmp = tmp->prev;
+               if(tmp->msg_unread) return tmp;
+       }
+       return NULL;
+}
 
 void set_buffystats(CONTEXT* Context)
 {
@@ -458,18 +494,33 @@ void set_buffystats(CONTEXT* Context)
 
 void scroll_sidebar(int op, int menu)
 {
+        BUFFY *tmp;
         if(!SidebarWidth) return;
         if(!CurBuffy) return;
 
 	switch (op) {
 		case OP_SIDEBAR_NEXT:
+                if (!option (OPTSIDEBARNEWMAILONLY)) {
 			if ( CurBuffy->next == NULL ) return;
 			CurBuffy = CurBuffy->next;
 			break;
+                }
+                case OP_SIDEBAR_NEXT_NEW:
+                        if ( (tmp = exist_next_new()) == NULL)
+                                return;
+                        else CurBuffy = tmp;
+                        break;
 		case OP_SIDEBAR_PREV:
+                 if (!option (OPTSIDEBARNEWMAILONLY)) {
 			if ( CurBuffy->prev == NULL ) return;
 			CurBuffy = CurBuffy->prev;
 			break;
+                }
+                case OP_SIDEBAR_PREV_NEW:
+                       if ( (tmp = exist_prev_new()) == NULL)
+                               return;
+                       else CurBuffy = tmp;
+                       break;
 		case OP_SIDEBAR_SCROLL_UP:
 			CurBuffy = TopBuffy;
 			if ( CurBuffy != get_incoming() ) {

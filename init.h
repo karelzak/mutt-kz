@@ -2073,6 +2073,11 @@ struct option_t MuttVars[] = {
   ** .pp
   ** The width of the sidebar.
   */
+  {"sidebar_newmail_only", DT_BOOL, R_BOTH, OPTSIDEBARNEWMAILONLY, 0 },
+  /*
+  ** .pp
+  ** Show only new mail in the sidebar.
+  */
   { "pgp_use_gpg_agent", DT_BOOL, R_NONE, OPTUSEGPGAGENT, 0},
   /*
   ** .pp
