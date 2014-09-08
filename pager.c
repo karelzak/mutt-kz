@@ -2778,6 +2778,7 @@ search_next:
       case OP_SIDEBAR_PREV:
       case OP_SIDEBAR_NEXT_NEW:
       case OP_SIDEBAR_PREV_NEW:
+      case OP_SIDEBAR_NEW:
 	scroll_sidebar(ch, MENU_PAGER);
 	break;
 

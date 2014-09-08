@@ -535,6 +535,12 @@ void scroll_sidebar(int op, int menu)
 				CurBuffy = CurBuffy->next;
 			}
 			break;
+                case OP_SIDEBAR_NEW:
+                        if ( (tmp = exist_next_new()) == NULL)
+                                CurBuffy = TopBuffy;
+                        else 
+				CurBuffy = tmp;
+                        break;
 		default:
 			return;
 	}
