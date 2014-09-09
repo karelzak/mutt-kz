@@ -537,8 +537,12 @@ void scroll_sidebar(int op, int menu)
 			break;
                 case OP_SIDEBAR_NEW:
                         if ( (tmp = exist_next_new()) == NULL)
-                                CurBuffy = TopBuffy;
-                        else 
+                                tmp = TopBuffy;
+			if ( tmp->msg_unread == 0 ) {
+				CurBuffy = tmp;
+				tmp = exist_next_new();
+			}
+			if ( tmp != NULL )
 				CurBuffy = tmp;
                         break;
 		default:

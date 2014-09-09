@@ -302,6 +302,7 @@ const struct binding_t OpPager[] = { /* map: pager */
   { "sidebar-next-new", OP_SIDEBAR_NEXT_NEW, NULL},
   { "sidebar-prev-new", OP_SIDEBAR_PREV_NEW, NULL},
   { "sidebar-open", OP_SIDEBAR_OPEN, NULL },
+  { "sidebar-new", OP_SIDEBAR_NEW, NULL },
   { "sidebar-toggle",	OP_SIDEBAR_TOGGLE, NULL },
 
   { NULL,		0,				NULL }
