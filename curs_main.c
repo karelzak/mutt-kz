@@ -2518,6 +2518,9 @@ int mutt_index_menu (void)
       case OP_SIDEBAR_SCROLL_DOWN:
       case OP_SIDEBAR_NEXT:
       case OP_SIDEBAR_PREV:
+      case OP_SIDEBAR_NEXT_NEW:
+      case OP_SIDEBAR_PREV_NEW:
+      case OP_SIDEBAR_NEW:
         scroll_sidebar(op, menu->menu);
         break;
 
