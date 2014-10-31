@@ -78,4 +78,8 @@ TAGS
 keymap_alldefs.h
 po/mutt-kz.pot
 txt2c
+conststrings.c
+doc/pgpewrap.1
+doc/pgpring.1
+mutt-kz-*.tar.*
 
