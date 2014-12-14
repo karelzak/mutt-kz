@@ -1646,7 +1646,7 @@ main_loop:
       /* save the decrypted attachments */
       clear_content = msg->content;
   
-      if ((crypt_get_keys (msg, &pgpkeylist) == -1) ||
+      if ((crypt_get_keys (msg, &pgpkeylist, 0) == -1) ||
           mutt_protect (msg, pgpkeylist) == -1)
       {
         msg->content = mutt_remove_multipart (msg->content);
