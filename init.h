@@ -492,6 +492,23 @@ struct option_t MuttVars[] = {
   ** $$crypt_replyencrypt,
   ** $$crypt_autosign, $$crypt_replysign and $$smime_is_default.
   */
+  { "crypt_opportunistic_encrypt", DT_BOOL, R_NONE, OPTCRYPTOPPORTUNISTICENCRYPT, 0 },
+  /*
+  ** .pp
+  ** Setting this variable will cause Mutt to automatically enable and
+  ** disable encryption, based on whether all message recipient keys
+  ** can be located by mutt.
+  ** .pp
+  ** When this option is enabled, mutt will determine the encryption
+  ** setting each time the TO, CC, and BCC lists are edited.  If
+  ** $$edit_headers is set, mutt will also do so each time the message
+  ** is edited.  If you wish to manually enable/disable encryption with
+  ** this option set, you should do so after editing the message and
+  ** recipients, to avoid mutt changing your setting.
+  ** .pp
+  ** \fBNote:\fP this option has no effect when $$crypt_autoencrypt is enabled.
+  ** (Crypto only)
+   */
   { "pgp_replyencrypt",		DT_SYN,  R_NONE, UL "crypt_replyencrypt", 1  },
   { "crypt_replyencrypt",	DT_BOOL, R_NONE, OPTCRYPTREPLYENCRYPT, 1 },
   /*
