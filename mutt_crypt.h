@@ -153,6 +153,9 @@ int crypt_valid_passphrase (int);
    TEMPFILE.  */
 int crypt_write_signed(BODY *a, STATE *s, const char *tempf);
 
+/* Check if a string contains a numerical key */
+short crypt_is_numerical_keyid (const char *s);
+
 
 
 /*-- cryptglue.c --*/
