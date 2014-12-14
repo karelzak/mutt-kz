@@ -1147,8 +1147,10 @@ static short is_numerical_keyid (const char *s)
 
 /* This routine attempts to find the keyids of the recipients of a message.
  * It returns NULL if any of the keys can not be found.
+ * If auto_mode is true, only keys that can be determined without
+ * prompting will be used.
  */
-char *pgp_findKeys (ADDRESS *adrlist)
+char *pgp_findKeys (ADDRESS *adrlist, int auto_mode)
 {
   char *keyID, *keylist = NULL;
   size_t keylist_size = 0;

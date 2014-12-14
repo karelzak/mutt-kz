@@ -49,7 +49,7 @@ pgp_key_t pgp_get_candidates (pgp_ring_t, LIST *);
 pgp_key_t pgp_getkeybyaddr (ADDRESS *, short, pgp_ring_t);
 pgp_key_t pgp_getkeybystr (char *, short, pgp_ring_t);
 
-char *pgp_findKeys (ADDRESS *adrlist);
+char *pgp_findKeys (ADDRESS *adrlist, int auto_mode);
 
 void pgp_forget_passphrase (void);
 int pgp_application_pgp_handler (BODY *, STATE *);
