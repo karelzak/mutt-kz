@@ -141,6 +141,7 @@ enum
 #ifdef USE_NOTMUCH
   MT_COLOR_INDEX_TAGS,
 #endif
+  MT_COLOR_PROMPT,
   MT_COLOR_MAX
 };
 
