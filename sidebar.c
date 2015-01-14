@@ -356,27 +356,28 @@ int draw_sidebar(int menu) {
 		int sidebar_folder_depth = 0;
 		char *sidebar_folder_name = NULL;
 
+		/* make sure the path is either:
+		   1.  Containing new mail.
+		   2.  The inbox.
+		   3.  The current box.
+		   4.  Any mailboxes listed in SidebarWhitelist
+		*/
 		if ( tmp == CurBuffy )
 			SETCOLOR(MT_COLOR_INDICATOR);
 		else if ( tmp->msg_unread > 0 )
 			SETCOLOR(MT_COLOR_NEW);
 		else if ( tmp->msg_flagged > 0 )
-		        SETCOLOR(MT_COLOR_FLAGGED);
-		else {
-                  /* make sure the path is either:
-                     1.  Containing new mail.
-                     2.  The inbox.
-                     3.  The current box.
-                   */
-                  if ((option (OPTSIDEBARNEWMAILONLY)) &&
-                      ( (tmp->msg_unread <= 0)  &&
-                        ( tmp != Incoming ) &&
-                        Context &&
-                        ( strcmp( tmp->path, Context->path ) != 0 ) ) )
-                    continue;
-                  else
-                    SETCOLOR(MT_COLOR_NORMAL);
-                }
+			SETCOLOR(MT_COLOR_FLAGGED);
+		else if ( option(OPTSIDEBARNEWMAILONLY) ) {
+			if	( tmp == Incoming ||
+					( Context && ( strcmp(tmp->path, Context->path) == 0 ) ) ||
+					mutt_find_list(SidebarWhitelist, tmp->path) )
+				SETCOLOR(MT_COLOR_NORMAL);
+			else
+				continue;
+		}
+		else
+			SETCOLOR(MT_COLOR_NORMAL);
 
 		move( lines, 0 );
 		if ( Context && !strcmp( tmp->path, Context->path ) ) {
@@ -457,26 +458,30 @@ int draw_sidebar(int menu) {
 
 BUFFY * exist_next_new()
 {
-       BUFFY *tmp = CurBuffy;
-       if(tmp == NULL) return NULL;
-       while (tmp->next != NULL)
-       {
-              tmp = tmp->next;
-               if(tmp->msg_unread) return tmp;
-       }
-       return NULL;
+	BUFFY *tmp = CurBuffy;
+	if(tmp == NULL) return NULL;
+	while (tmp->next != NULL)
+	{
+		tmp = tmp->next;
+		if(tmp->msg_unread || tmp->msg_flagged ||
+				mutt_find_list(SidebarWhitelist, tmp->path))
+			return tmp;
+	}
+	return NULL;
 }
 
 BUFFY * exist_prev_new()
 {
-       BUFFY *tmp = CurBuffy;
-       if(tmp == NULL) return NULL;
-       while (tmp->prev != NULL)
-       {
-               tmp = tmp->prev;
-               if(tmp->msg_unread) return tmp;
-       }
-       return NULL;
+	BUFFY *tmp = CurBuffy;
+	if(tmp == NULL) return NULL;
+	while (tmp->prev != NULL)
+	{
+		tmp = tmp->prev;
+		if(tmp->msg_unread || tmp->msg_flagged ||
+				mutt_find_list(SidebarWhitelist, tmp->path))
+			return tmp;
+	}
+	return NULL;
 }
 
 void set_buffystats(CONTEXT* Context)

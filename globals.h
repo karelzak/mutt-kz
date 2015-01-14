@@ -218,6 +218,7 @@ WHERE short DrawFullLine INITVAL(0);
 WHERE short SidebarWidth;
 WHERE short SidebarRefresh;
 WHERE short SidebarLastRefresh;
+WHERE LIST *SidebarWhitelist INITVAL(0);
 #ifdef USE_IMAP
 WHERE short ImapKeepalive;
 WHERE short ImapPipelineDepth;

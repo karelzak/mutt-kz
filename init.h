@@ -2065,18 +2065,18 @@ struct option_t MuttVars[] = {
   { "sidebar_width", DT_NUM, R_BOTH, UL &SidebarWidth, 0 },
   /*
   ** .pp
-  ** Do not refresh sidebar in less than $sidebar_refresh seconds,
-  ** (0 disables refreshing).
+  ** The width of the sidebar.
   */
   { "sidebar_refresh", DT_NUM, R_BOTH, UL &SidebarRefresh, 60 },
   /*
   ** .pp
-  ** The width of the sidebar.
+  ** Do not refresh sidebar in less than $sidebar_refresh seconds,
+  ** (0 disables refreshing).
   */
   {"sidebar_newmail_only", DT_BOOL, R_BOTH, OPTSIDEBARNEWMAILONLY, 0 },
   /*
   ** .pp
-  ** Show only new mail in the sidebar.
+  ** Show only new and flagged mail in the sidebar.
   */
   { "pgp_use_gpg_agent", DT_BOOL, R_NONE, OPTUSEGPGAGENT, 0},
   /*
@@ -3741,6 +3741,7 @@ const struct command_t Commands[] = {
   { "send-hook",	mutt_parse_hook,	M_SENDHOOK },
   { "send2-hook",	mutt_parse_hook,	M_SEND2HOOK },
   { "set",		parse_set,		0 },
+  { "sidebar_whitelist",parse_list,		UL &SidebarWhitelist },
   { "source",		parse_source,		0 },
   { "spam",		parse_spam_list,	M_SPAM },
   { "nospam",		parse_spam_list,	M_NOSPAM },
