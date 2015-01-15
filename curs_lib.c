@@ -619,8 +619,10 @@ int _mutt_enter_fname (const char *prompt, char *buf, size_t blen,
 {
   event_t ch;
 
+  SETCOLOR (MT_COLOR_PROMPT);
   mvaddstr (LINES-1, 0, (char *) prompt);
   addstr (_(" ('?' for list): "));
+  NORMAL_COLOR;
   if (buf[0])
     addstr (buf);
   clrtoeol ();
