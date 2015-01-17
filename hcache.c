@@ -911,12 +911,15 @@ static int
 hcache_open_tc (struct header_cache* h, const char* path)
 {
   h->db = tcbdbnew();
+  if (!h->db)
+      return -1;
   if (option(OPTHCACHECOMPRESS))
     tcbdbtune(h->db, 0, 0, 0, -1, -1, BDBTDEFLATE);
   if (tcbdbopen(h->db, path, BDBOWRITER | BDBOCREAT))
     return 0;
   else
   {
+    dprint(2, (debugfile, "tcbdbopen %s failed: %s\n", path, errno));
     tcbdbdel(h->db);
     return -1;
   }
@@ -928,7 +931,8 @@ mutt_hcache_close(header_cache_t *h)
   if (!h)
     return;
 
-  tcbdbclose(h->db);
+  if (!tcbdbclose(h->db))
+      dprint (2, (debugfile, "tcbdbclose failed for %s: %d\n", h->folder, errno));
   tcbdbdel(h->db);
   FREE(&h->folder);
   FREE(&h);
@@ -1131,7 +1135,10 @@ mutt_hcache_open(const char *path, const char *folder, hcache_namer_t namer)
 
   /* Calculate the current hcache version from dynamic configuration */
   if (hcachever == 0x0) {
-    unsigned char digest[16];
+    union {
+      unsigned char charval[16];
+      unsigned int intval;
+    } digest;
     struct md5_ctx ctx;
     SPAM_LIST *spam;
     RX_LIST *nospam;
@@ -1157,8 +1164,8 @@ mutt_hcache_open(const char *path, const char *folder, hcache_namer_t namer)
     }
 
     /* Get a hash and take its bytes as an (unsigned int) hash version */
-    md5_finish_ctx(&ctx, digest);
-    memcpy(&hcachever, digest, sizeof(hcachever));
+    md5_finish_ctx(&ctx, digest.charval);
+    hcachever = digest.intval;
   }
 
   h->db = NULL;
