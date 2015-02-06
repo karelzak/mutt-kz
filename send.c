@@ -1475,7 +1475,7 @@ ci_send_message (int flags,		/* send mode */
 	msg->security |= INLINE;
     }
 
-    if (msg->security)
+    if (msg->security || option (OPTCRYPTOPPORTUNISTICENCRYPT))
     {
       /* 
        * When replying / forwarding, use the original message's
@@ -1510,6 +1510,12 @@ ci_send_message (int flags,		/* send mode */
 	else if ((WithCrypto & APPLICATION_SMIME) && option (OPTCRYPTAUTOSMIME))
 	  msg->security |= APPLICATION_SMIME;
       }
+    }
+
+    /* opportunistic encrypt relys on SMIME or PGP already being selected */
+    if (option (OPTCRYPTOPPORTUNISTICENCRYPT))
+    {
+      crypt_opportunistic_encrypt(msg);
     }
 
     /* No permissible mechanisms found.  Don't sign or encrypt. */
@@ -1646,7 +1652,7 @@ main_loop:
       /* save the decrypted attachments */
       clear_content = msg->content;
   
-      if ((crypt_get_keys (msg, &pgpkeylist) == -1) ||
+      if ((crypt_get_keys (msg, &pgpkeylist, 0) == -1) ||
           mutt_protect (msg, pgpkeylist) == -1)
       {
         msg->content = mutt_remove_multipart (msg->content);

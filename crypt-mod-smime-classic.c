@@ -46,9 +46,9 @@ static int crypt_mod_smime_application_handler (BODY *m, STATE *s)
   return smime_application_smime_handler (m, s);
 }
 
-static char *crypt_mod_smime_findkeys (ADDRESS *to, ADDRESS *cc, ADDRESS *bcc)
+static char *crypt_mod_smime_findkeys (ADDRESS *adrlist, int auto_mode)
 {
-  return smime_findKeys (to, cc, bcc);
+  return smime_findKeys (adrlist, auto_mode);
 }
 
 static BODY *crypt_mod_smime_sign_message (BODY *a)

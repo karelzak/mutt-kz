@@ -140,8 +140,14 @@ void crypt_extract_keys_from_messages (HEADER *h);
 
 /* Do a quick check to make sure that we can find all of the
    encryption keys if the user has requested this service. 
-   Return the list of keys in KEYLIST. */
-int crypt_get_keys (HEADER *msg, char **keylist);
+   Return the list of keys in KEYLIST.
+   If auto_mode is true, only keys that can be determined without
+   prompting will be used.  */
+int crypt_get_keys (HEADER *msg, char **keylist, int auto_mode);
+
+/* Check if all recipients keys can be automatically determined.
+ * Enable encryption if they can, otherwise disable encryption.  */
+void crypt_opportunistic_encrypt(HEADER *msg);
 
 /* Forget a passphrase and display a message. */
 void crypt_forget_passphrase (void);
@@ -152,6 +158,9 @@ int crypt_valid_passphrase (int);
 /* Write the message body/part A described by state S to a the given
    TEMPFILE.  */
 int crypt_write_signed(BODY *a, STATE *s, const char *tempf);
+
+/* Check if a string contains a numerical key */
+short crypt_is_numerical_keyid (const char *s);
 
 
 
@@ -196,8 +205,10 @@ void crypt_pgp_free_key (pgp_key_t *kpp);
 BODY *crypt_pgp_make_key_attachment (char *tempf);
 
 /* This routine attempts to find the keyids of the recipients of a
-   message.  It returns NULL if any of the keys can not be found.  */
-char *crypt_pgp_findkeys (ADDRESS *to, ADDRESS *cc, ADDRESS *bcc);
+   message.  It returns NULL if any of the keys can not be found.
+   If auto_mode is true, only keys that can be determined without
+   prompting will be used.  */
+char *crypt_pgp_findkeys (ADDRESS *adrlist, int auto_mode);
 
 /* Create a new body with a PGP signed message from A. */
 BODY *crypt_pgp_sign_message (BODY *a);
@@ -245,8 +256,10 @@ int crypt_smime_verify_sender(HEADER *h);
 char *crypt_smime_ask_for_key (char *prompt, char *mailbox, short public);
 
 /* This routine attempts to find the keyids of the recipients of a
-   message.  It returns NULL if any of the keys can not be found.  */
-char *crypt_smime_findkeys (ADDRESS *to, ADDRESS *cc, ADDRESS *bcc);
+   message.  It returns NULL if any of the keys can not be found.
+   If auto_mode is true, only keys that can be determined without
+   prompting will be used.  */
+char *crypt_smime_findkeys (ADDRESS *adrlist, int auto_mode);
 
 /* fixme: Needs documentation. */
 BODY *crypt_smime_sign_message (BODY *a);

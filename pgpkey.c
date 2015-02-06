@@ -812,7 +812,8 @@ static pgp_key_t *pgp_get_lastp (pgp_key_t p)
   return NULL;
 }
 
-pgp_key_t pgp_getkeybyaddr (ADDRESS * a, short abilities, pgp_ring_t keyring)
+pgp_key_t pgp_getkeybyaddr (ADDRESS * a, short abilities, pgp_ring_t keyring,
+                            int auto_mode)
 {
   ADDRESS *r, *p;
   LIST *hints = NULL;
@@ -831,7 +832,8 @@ pgp_key_t pgp_getkeybyaddr (ADDRESS * a, short abilities, pgp_ring_t keyring)
   if (a && a->personal)
     hints = pgp_add_string_to_hints (hints, a->personal);
 
-  mutt_message (_("Looking for keys matching \"%s\"..."), a->mailbox);
+  if (! auto_mode )
+    mutt_message (_("Looking for keys matching \"%s\"..."), a->mailbox);
   keys = pgp_get_candidates (keyring, hints);
 
   mutt_free_list (&hints);
@@ -895,7 +897,19 @@ pgp_key_t pgp_getkeybyaddr (ADDRESS * a, short abilities, pgp_ring_t keyring)
 
   if (matches)
   {
-    if (the_valid_key && !multi)
+    if (auto_mode)
+    {
+      if (the_valid_key)
+      {
+        pgp_remove_key (&matches, the_valid_key);
+        k = the_valid_key;
+      }
+      else
+      {
+        k = NULL;
+      }
+    }
+    else if (the_valid_key && !multi)
     {
       /*
        * There was precisely one strong match on a valid ID.
@@ -903,7 +917,6 @@ pgp_key_t pgp_getkeybyaddr (ADDRESS * a, short abilities, pgp_ring_t keyring)
        * Proceed without asking the user.
        */
       pgp_remove_key (&matches, the_valid_key);
-      pgp_free_key (&matches);
       k = the_valid_key;
     }
     else 
@@ -913,8 +926,9 @@ pgp_key_t pgp_getkeybyaddr (ADDRESS * a, short abilities, pgp_ring_t keyring)
        */
       if ((k = pgp_select_key (matches, a, NULL)))
 	pgp_remove_key (&matches, k);
-      pgp_free_key (&matches);
     }
+
+    pgp_free_key (&matches);
 
     return k;
   }

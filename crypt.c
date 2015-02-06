@@ -707,8 +707,11 @@ void crypt_extract_keys_from_messages (HEADER * h)
 
 
 
-int crypt_get_keys (HEADER *msg, char **keylist)
+int crypt_get_keys (HEADER *msg, char **keylist, int auto_mode)
 {
+  ADDRESS *adrlist = NULL, *last = NULL;
+  const char *fqdn = mutt_fqdn (1);
+
   /* Do a quick check to make sure that we can find all of the encryption
    * keys if the user has requested this service.
    */
@@ -719,28 +722,68 @@ int crypt_get_keys (HEADER *msg, char **keylist)
   if ((WithCrypto & APPLICATION_PGP))
     set_option (OPTPGPCHECKTRUST);
 
+  last = rfc822_append (&adrlist, msg->env->to, 0);
+  last = rfc822_append (last ? &last : &adrlist, msg->env->cc, 0);
+  rfc822_append (last ? &last : &adrlist, msg->env->bcc, 0);
+
+  if (fqdn)
+    rfc822_qualify (adrlist, fqdn);
+  adrlist = mutt_remove_duplicates (adrlist);
+
   *keylist = NULL;
 
-  if (msg->security & ENCRYPT)
+  if (auto_mode || (msg->security & ENCRYPT))
   {
      if ((WithCrypto & APPLICATION_PGP)
          && (msg->security & APPLICATION_PGP))
      {
-       if ((*keylist = crypt_pgp_findkeys (msg->env->to, msg->env->cc,
-      			       msg->env->bcc)) == NULL)
+       if ((*keylist = crypt_pgp_findkeys (adrlist, auto_mode)) == NULL)
+       {
+           rfc822_free_address (&adrlist);
            return (-1);
+       }
        unset_option (OPTPGPCHECKTRUST);
      }
      if ((WithCrypto & APPLICATION_SMIME)
          && (msg->security & APPLICATION_SMIME))
      {
-       if ((*keylist = crypt_smime_findkeys (msg->env->to, msg->env->cc,
-      				             msg->env->bcc)) == NULL)
+       if ((*keylist = crypt_smime_findkeys (adrlist, auto_mode)) == NULL)
+       {
+           rfc822_free_address (&adrlist);
            return (-1);
+       }
      }
   }
+
+  rfc822_free_address (&adrlist);
     
   return (0);
+}
+
+
+/*
+ * Check if all recipients keys can be automatically determined.
+ * Enable encryption if they can, otherwise disable encryption.
+ */
+
+void crypt_opportunistic_encrypt(HEADER *msg)
+{
+  char *pgpkeylist = NULL;
+
+  /* crypt_autoencrypt should override crypt_opportunistic_encrypt */
+  if (option (OPTCRYPTAUTOENCRYPT))
+    return;
+
+  crypt_get_keys (msg, &pgpkeylist, 1);
+  if (pgpkeylist != NULL )
+  {
+    msg->security |= ENCRYPT;
+    FREE (&pgpkeylist);
+  }
+  else
+  {
+    msg->security &= ~ENCRYPT;
+  }
 }
 
 
@@ -897,6 +940,26 @@ int mutt_signed_handler (BODY *a, STATE *s)
     state_attach_puts (_("\n[-- End of signed data --]\n"), s);
   
   return rc;
+}
+
+
+/*
+ * Used by pgp_findKeys and find_keys to check if a crypt-hook
+ * value is a key id.
+ */
+
+short crypt_is_numerical_keyid (const char *s)
+{
+  /* or should we require the "0x"? */
+  if (strncmp (s, "0x", 2) == 0)
+    s += 2;
+  if (strlen (s) % 8)
+    return 0;
+  while (*s)
+    if (strchr ("0123456789ABCDEFabcdef", *s++) == NULL)
+      return 0;
+
+  return 1;
 }
 
 
