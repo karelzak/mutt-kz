@@ -746,7 +746,7 @@ char *smime_findKeys (ADDRESS *adrlist, int auto_mode)
 
     q = p;
 
-    keyID = smime_get_field_from_db (q->mailbox, NULL, 1, 1);
+    keyID = smime_get_field_from_db (q->mailbox, NULL, 1, !auto_mode);
     if ((keyID == NULL) && (! auto_mode))
     {
       snprintf(buf, sizeof(buf),
