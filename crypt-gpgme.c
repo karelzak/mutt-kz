@@ -4213,6 +4213,7 @@ static crypt_key_t *crypt_getkeybyaddr (ADDRESS * a, short abilities,
            */
           k = crypt_select_key (matches, a, NULL, app, forced_valid);
         }
+
       crypt_free_key (&matches);
     }
   else 
