@@ -813,7 +813,7 @@ static pgp_key_t *pgp_get_lastp (pgp_key_t p)
 }
 
 pgp_key_t pgp_getkeybyaddr (ADDRESS * a, short abilities, pgp_ring_t keyring,
-                            int auto_mode)
+                            int oppenc_mode)
 {
   ADDRESS *r, *p;
   LIST *hints = NULL;
@@ -833,7 +833,7 @@ pgp_key_t pgp_getkeybyaddr (ADDRESS * a, short abilities, pgp_ring_t keyring,
   if (a && a->personal)
     hints = pgp_add_string_to_hints (hints, a->personal);
 
-  if (! auto_mode )
+  if (! oppenc_mode )
     mutt_message (_("Looking for keys matching \"%s\"..."), a->mailbox);
   keys = pgp_get_candidates (keyring, hints);
 
@@ -904,7 +904,7 @@ pgp_key_t pgp_getkeybyaddr (ADDRESS * a, short abilities, pgp_ring_t keyring,
 
   if (matches)
   {
-    if (auto_mode)
+    if (oppenc_mode)
     {
       if (the_strong_valid_key)
       {

@@ -141,9 +141,9 @@ void crypt_extract_keys_from_messages (HEADER *h);
 /* Do a quick check to make sure that we can find all of the
    encryption keys if the user has requested this service. 
    Return the list of keys in KEYLIST.
-   If auto_mode is true, only keys that can be determined without
+   If oppenc_mode is true, only keys that can be determined without
    prompting will be used.  */
-int crypt_get_keys (HEADER *msg, char **keylist, int auto_mode);
+int crypt_get_keys (HEADER *msg, char **keylist, int oppenc_mode);
 
 /* Check if all recipients keys can be automatically determined.
  * Enable encryption if they can, otherwise disable encryption.  */
@@ -206,9 +206,9 @@ BODY *crypt_pgp_make_key_attachment (char *tempf);
 
 /* This routine attempts to find the keyids of the recipients of a
    message.  It returns NULL if any of the keys can not be found.
-   If auto_mode is true, only keys that can be determined without
+   If oppenc_mode is true, only keys that can be determined without
    prompting will be used.  */
-char *crypt_pgp_findkeys (ADDRESS *adrlist, int auto_mode);
+char *crypt_pgp_findkeys (ADDRESS *adrlist, int oppenc_mode);
 
 /* Create a new body with a PGP signed message from A. */
 BODY *crypt_pgp_sign_message (BODY *a);
@@ -257,9 +257,9 @@ char *crypt_smime_ask_for_key (char *prompt, char *mailbox, short public);
 
 /* This routine attempts to find the keyids of the recipients of a
    message.  It returns NULL if any of the keys can not be found.
-   If auto_mode is true, only keys that can be determined without
+   If oppenc_mode is true, only keys that can be determined without
    prompting will be used.  */
-char *crypt_smime_findkeys (ADDRESS *adrlist, int auto_mode);
+char *crypt_smime_findkeys (ADDRESS *adrlist, int oppenc_mode);
 
 /* fixme: Needs documentation. */
 BODY *crypt_smime_sign_message (BODY *a);

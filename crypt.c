@@ -707,7 +707,7 @@ void crypt_extract_keys_from_messages (HEADER * h)
 
 
 
-int crypt_get_keys (HEADER *msg, char **keylist, int auto_mode)
+int crypt_get_keys (HEADER *msg, char **keylist, int oppenc_mode)
 {
   ADDRESS *adrlist = NULL, *last = NULL;
   const char *fqdn = mutt_fqdn (1);
@@ -732,12 +732,12 @@ int crypt_get_keys (HEADER *msg, char **keylist, int auto_mode)
 
   *keylist = NULL;
 
-  if (auto_mode || (msg->security & ENCRYPT))
+  if (oppenc_mode || (msg->security & ENCRYPT))
   {
      if ((WithCrypto & APPLICATION_PGP)
          && (msg->security & APPLICATION_PGP))
      {
-       if ((*keylist = crypt_pgp_findkeys (adrlist, auto_mode)) == NULL)
+       if ((*keylist = crypt_pgp_findkeys (adrlist, oppenc_mode)) == NULL)
        {
            rfc822_free_address (&adrlist);
            return (-1);
@@ -747,7 +747,7 @@ int crypt_get_keys (HEADER *msg, char **keylist, int auto_mode)
      if ((WithCrypto & APPLICATION_SMIME)
          && (msg->security & APPLICATION_SMIME))
      {
-       if ((*keylist = crypt_smime_findkeys (adrlist, auto_mode)) == NULL)
+       if ((*keylist = crypt_smime_findkeys (adrlist, oppenc_mode)) == NULL)
        {
            rfc822_free_address (&adrlist);
            return (-1);
@@ -769,6 +769,9 @@ int crypt_get_keys (HEADER *msg, char **keylist, int auto_mode)
 void crypt_opportunistic_encrypt(HEADER *msg)
 {
   char *pgpkeylist = NULL;
+
+  if (!WithCrypto)
+    return;
 
   /* crypt_autoencrypt should override crypt_opportunistic_encrypt */
   if (option (OPTCRYPTAUTOENCRYPT))

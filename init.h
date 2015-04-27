@@ -502,11 +502,15 @@ struct option_t MuttVars[] = {
   ** When this option is enabled, mutt will determine the encryption
   ** setting each time the TO, CC, and BCC lists are edited.  If
   ** $$edit_headers is set, mutt will also do so each time the message
-  ** is edited.  If you wish to manually enable/disable encryption with
-  ** this option set, you should do so after editing the message and
-  ** recipients, to avoid mutt changing your setting.
+  ** is edited.
   ** .pp
-  ** \fBNote:\fP this option has no effect when $$crypt_autoencrypt is enabled.
+  ** While this is set, encryption settings can't be manually changed.
+  ** The pgp or smime menus provide an option to disable the option for
+  ** a particular message.
+  ** .pp
+  ** If $$crypt_autoencrypt or $$crypt_replyencrypt enable encryption for
+  ** a message, this option will be disabled for the message.  It can
+  ** be manually re-enabled in the pgp or smime menus.
   ** (Crypto only)
    */
   { "pgp_replyencrypt",		DT_SYN,  R_NONE, UL "crypt_replyencrypt", 1  },

@@ -200,12 +200,12 @@ BODY *crypt_pgp_make_key_attachment (char *tempf)
 
 /* This routine attempts to find the keyids of the recipients of a
    message.  It returns NULL if any of the keys can not be found.
-   If auto_mode is true, only keys that can be determined without
+   If oppenc_mode is true, only keys that can be determined without
    prompting will be used.  */
-char *crypt_pgp_findkeys (ADDRESS *adrlist, int auto_mode)
+char *crypt_pgp_findkeys (ADDRESS *adrlist, int oppenc_mode)
 {
   if (CRYPT_MOD_CALL_CHECK (PGP, findkeys))
-    return (CRYPT_MOD_CALL (PGP, findkeys)) (adrlist, auto_mode);
+    return (CRYPT_MOD_CALL (PGP, findkeys)) (adrlist, oppenc_mode);
 
   return NULL;
 }
@@ -336,12 +336,12 @@ int crypt_smime_verify_sender(HEADER *h)
 
 /* This routine attempts to find the keyids of the recipients of a
    message.  It returns NULL if any of the keys can not be found.
-   If auto_mode is true, only keys that can be determined without
+   If oppenc_mode is true, only keys that can be determined without
    prompting will be used.  */
-char *crypt_smime_findkeys (ADDRESS *adrlist, int auto_mode)
+char *crypt_smime_findkeys (ADDRESS *adrlist, int oppenc_mode)
 {
   if (CRYPT_MOD_CALL_CHECK (SMIME, findkeys))
-    return (CRYPT_MOD_CALL (SMIME, findkeys)) (adrlist, auto_mode);
+    return (CRYPT_MOD_CALL (SMIME, findkeys)) (adrlist, oppenc_mode);
 
   return NULL;
 }

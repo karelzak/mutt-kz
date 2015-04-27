@@ -1157,10 +1157,10 @@ BODY *pgp_sign_message (BODY *a)
 
 /* This routine attempts to find the keyids of the recipients of a message.
  * It returns NULL if any of the keys can not be found.
- * If auto_mode is true, only keys that can be determined without
+ * If oppenc_mode is true, only keys that can be determined without
  * prompting will be used.
  */
-char *pgp_findKeys (ADDRESS *adrlist, int auto_mode)
+char *pgp_findKeys (ADDRESS *adrlist, int oppenc_mode)
 {
   char *keyID, *keylist = NULL;
   size_t keylist_size = 0;
@@ -1181,12 +1181,12 @@ char *pgp_findKeys (ADDRESS *adrlist, int auto_mode)
     if ((keyID = mutt_crypt_hook (p)) != NULL)
     {
       int r = M_NO;
-      if (! auto_mode)
+      if (! oppenc_mode)
       {
         snprintf (buf, sizeof (buf), _("Use keyID = \"%s\" for %s?"), keyID, p->mailbox);
         r = mutt_yesorno (buf, M_YES);
       }
-      if (auto_mode || (r == M_YES))
+      if (oppenc_mode || (r == M_YES))
       {
 	if (crypt_is_numerical_keyid (keyID))
 	{
@@ -1202,7 +1202,7 @@ char *pgp_findKeys (ADDRESS *adrlist, int auto_mode)
 	  if (fqdn) rfc822_qualify (addr, fqdn);
 	  q = addr;
 	}
-	else if (! auto_mode)
+	else if (! oppenc_mode)
 	{
 	  k_info = pgp_getkeybystr (keyID, KEYFLAG_CANENCRYPT, PGP_PUBRING);
 	}
@@ -1218,10 +1218,10 @@ char *pgp_findKeys (ADDRESS *adrlist, int auto_mode)
     if (k_info == NULL)
     {
       pgp_invoke_getkeys (q);
-      k_info = pgp_getkeybyaddr (q, KEYFLAG_CANENCRYPT, PGP_PUBRING, auto_mode);
+      k_info = pgp_getkeybyaddr (q, KEYFLAG_CANENCRYPT, PGP_PUBRING, oppenc_mode);
     }
 
-    if ((k_info == NULL) && (! auto_mode))
+    if ((k_info == NULL) && (! oppenc_mode))
     {
       snprintf (buf, sizeof (buf), _("Enter keyID for %s: "), q->mailbox);
       k_info = pgp_ask_for_key (buf, q->mailbox,

@@ -729,11 +729,11 @@ void smime_getkeys (ENVELOPE *env)
 
 /* This routine attempts to find the keyids of the recipients of a message.
  * It returns NULL if any of the keys can not be found.
- * If auto_mode is true, only keys that can be determined without
+ * If oppenc_mode is true, only keys that can be determined without
  * prompting will be used.
  */
 
-char *smime_findKeys (ADDRESS *adrlist, int auto_mode)
+char *smime_findKeys (ADDRESS *adrlist, int oppenc_mode)
 {
   char *keyID, *keylist = NULL;
   size_t keylist_size = 0;
@@ -746,8 +746,8 @@ char *smime_findKeys (ADDRESS *adrlist, int auto_mode)
 
     q = p;
 
-    keyID = smime_get_field_from_db (q->mailbox, NULL, 1, !auto_mode);
-    if ((keyID == NULL) && (! auto_mode))
+    keyID = smime_get_field_from_db (q->mailbox, NULL, 1, !oppenc_mode);
+    if ((keyID == NULL) && (! oppenc_mode))
     {
       snprintf(buf, sizeof(buf),
 	       _("Enter keyID for %s: "),
@@ -756,7 +756,7 @@ char *smime_findKeys (ADDRESS *adrlist, int auto_mode)
     }
     if(!keyID)
     {
-      if (! auto_mode)
+      if (! oppenc_mode)
         mutt_message (_("No (valid) certificate found for %s."), q->mailbox);
       FREE (&keylist);
       return NULL;
