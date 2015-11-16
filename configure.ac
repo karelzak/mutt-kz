@@ -377,7 +377,7 @@ AC_CHECK_DECLS([sys_siglist],[],[],[#include <signal.h>
 AC_TYPE_PID_T
 AC_CHECK_TYPE(ssize_t, int)
 
-AC_CHECK_FUNCS(fgetpos memmove setegid srand48 strerror)
+AC_CHECK_FUNCS(fgetpos memmove setegid strerror)
 
 AC_REPLACE_FUNCS([setenv strcasecmp strdup strndup strnlen strsep strtok_r wcscasecmp])
 AC_REPLACE_FUNCS([strcasestr mkdtemp])
@@ -707,7 +707,7 @@ AC_ARG_WITH(ssl, AS_HELP_STRING([--with-ssl@<:@=PFX@:>@],[Enable TLS support usi
               AC_MSG_ERROR([Unable to find SSL library]), [$crypto_libs])
 
             LIBS="$LIBS $crypto_libs"
-            AC_CHECK_FUNCS(RAND_status RAND_egd)
+            AC_CHECK_FUNCS(RAND_status RAND_egd getrandom)
 
             AC_DEFINE(USE_SSL,1,[ Define if you want support for SSL. ])
             AC_DEFINE(USE_SSL_OPENSSL,1,[ Define if you want support for SSL via OpenSSL. ])
