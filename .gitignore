@@ -74,6 +74,8 @@ stamp-doc-rc
 stamp-h1
 *.swp
 TAGS
+ID
+tags
 .xcodeproj/*
 keymap_alldefs.h
 po/mutt-kz.pot
