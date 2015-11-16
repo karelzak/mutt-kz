@@ -54,6 +54,7 @@ int mmdf_parse_mailbox (CONTEXT *);
 void mbox_unlock_mailbox (CONTEXT *);
 int mbox_check_empty (const char *);
 void mbox_reset_atime (CONTEXT *, struct stat *);
+void maildir_flags (char *, size_t, HEADER *);
 
 int mh_read_dir (CONTEXT *, const char *);
 int mh_sync_mailbox (CONTEXT *, int *);

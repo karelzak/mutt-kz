@@ -968,7 +968,12 @@ int mx_close_mailbox (CONTEXT *ctx, int *index_hint)
 	if (ctx->hdrs[i]->read && !ctx->hdrs[i]->deleted
             && !(ctx->hdrs[i]->flagged && option (OPTKEEPFLAGGED)))
         {
-	  if (mutt_append_message (&f, ctx, ctx->hdrs[i], 0, CH_UPDATE_LEN) == 0)
+          /* First try if moving maildir message using link() works */
+          if (mutt_move_message (&f, ctx, ctx->hdrs[i]) == 0)
+          {
+            mutt_set_flag (ctx, ctx->hdrs[i], M_DELETE, 1);
+          }
+          else if (mutt_append_message (&f, ctx, ctx->hdrs[i], 0, CH_UPDATE_LEN) == 0)
 	  {
 	    mutt_set_flag (ctx, ctx->hdrs[i], M_DELETE, 1);
 	  }

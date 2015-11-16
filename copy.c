@@ -765,6 +765,32 @@ mutt_append_message (CONTEXT *dest, CONTEXT *src, HEADER *hdr, int cmflags,
   return r;
 }
 
+/* Try to move a maildir message */
+int
+mutt_move_message (CONTEXT *dest, CONTEXT *src, HEADER *hdr)
+{
+  char fndest[PATH_MAX];
+  char fnsrc[PATH_MAX];
+  char *atpath;
+  char suffix[16];
+
+  if (dest->magic != M_MAILDIR || src->magic != M_MAILDIR)
+    return -1;
+  if (hdr->attach_del)
+    return -1;
+  atpath = strchr(hdr->path, '/');
+  if (!atpath)
+    return -1;
+
+  maildir_flags (suffix, sizeof (suffix), hdr);
+  snprintf(fndest, sizeof(fndest), "%s/cur/%s%s", dest->path, atpath+1, suffix);
+  snprintf(fnsrc, sizeof(fnsrc), "%s/%s", src->path, hdr->path);
+  if (link(fnsrc, fndest) == 0) {
+    return 0;
+  }
+  return -1;
+}
+
 /*
  * This function copies a message body, while deleting _in_the_copy_
  * any attachments which are marked for deletion.

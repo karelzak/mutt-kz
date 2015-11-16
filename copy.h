@@ -16,6 +16,9 @@
  *     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 
+#ifndef _COPY_H_
+#define _COPY_H_
+
 /* flags to _mutt_copy_message */
 #define M_CM_NOHEADER	1	/* don't copy the message header */
 #define M_CM_PREFIX	(1<<1)	/* quote the message */
@@ -86,3 +89,10 @@ int mutt_append_message (CONTEXT *dest,
 			 HEADER *hdr,
 			 int cmflags,
 			 int chflags);
+
+int mutt_move_message (CONTEXT *dest,
+		       CONTEXT *src,
+		       HEADER *hdr);
+
+#endif
+
