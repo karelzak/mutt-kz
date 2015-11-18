@@ -771,21 +771,34 @@ mutt_move_message (CONTEXT *dest, CONTEXT *src, HEADER *hdr)
 {
   char fndest[PATH_MAX];
   char fnsrc[PATH_MAX];
-  char *atpath;
+  char newdest[PATH_MAX];
+  char *p;
   char suffix[16];
 
   if (dest->magic != M_MAILDIR || src->magic != M_MAILDIR)
     return -1;
   if (hdr->attach_del)
     return -1;
-  atpath = strchr(hdr->path, '/');
-  if (!atpath)
+  p = strchr(hdr->path, '/');
+  if (!p)
     return -1;
 
+  strfcpy(newdest, p + 1, sizeof(newdest));
+  /* kill the previous flags to prevent double :2, flags */
+  if ((p = strchr (newdest, ':')) != NULL)
+    *p = 0;
   maildir_flags (suffix, sizeof (suffix), hdr);
-  snprintf(fndest, sizeof(fndest), "%s/cur/%s%s", dest->path, atpath+1, suffix);
+  snprintf(fndest, sizeof(fndest), "%s/cur/%s%s", dest->path, newdest, suffix);
   snprintf(fnsrc, sizeof(fnsrc), "%s/%s", src->path, hdr->path);
   if (link(fnsrc, fndest) == 0) {
+    struct stat st;
+
+    /* NFS sanity check */
+    if (stat(fndest, &st) == -1)
+      return -1;
+    if ((st.st_mode & S_IFMT) != S_IFREG)
+      return -1;
+
     return 0;
   }
   return -1;
