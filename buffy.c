@@ -455,6 +455,9 @@ void buffy_maildir_update (BUFFY* mailbox)
   }
 
   closedir (dirp);
+
+  /* make sure the updates are actually put on screen */
+  draw_sidebar(0);
 }
 
 /* returns 1 if mailbox has new mail */ 
@@ -500,6 +503,9 @@ void buffy_mbox_update (BUFFY* mailbox)
     mailbox->msg_unread = ctx->unread;
     mx_close_mailbox(ctx, 0);
   }
+
+  /* make sure the updates are actually put on screen */
+  draw_sidebar(0);
 }
 
 static void buffy_check(BUFFY *tmp, struct stat *contex_sb)
