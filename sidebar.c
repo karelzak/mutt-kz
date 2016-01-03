@@ -589,3 +589,9 @@ void sidebar_updated()
 {
 	SidebarLastRefresh = time(NULL);
 }
+
+void reinit_sidebar_buffies()
+{
+    CurBuffy = get_incoming();
+    TopBuffy = BottomBuffy = 0;
+}

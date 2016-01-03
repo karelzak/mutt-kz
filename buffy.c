@@ -238,6 +238,10 @@ int mutt_parse_mailboxes (BUFFER *path, BUFFER *s, unsigned long data, BUFFER *e
         buffy_free (tmp);
         *tmp=tmp1;
       }
+
+      /* Sidebar still holds pointers to objects we just deleted */
+      reinit_sidebar_buffies();
+
       return 0;
     }
 
@@ -266,6 +270,10 @@ int mutt_parse_mailboxes (BUFFER *path, BUFFER *s, unsigned long data, BUFFER *e
         buffy_free (tmp);
         *tmp=tmp1;
       }
+
+      /* Sidebar may hold pointers to objects we just deleted */
+      reinit_sidebar_buffies();
+
       continue;
     }
 
@@ -289,6 +297,15 @@ int mutt_parse_mailboxes (BUFFER *path, BUFFER *s, unsigned long data, BUFFER *e
     else
       (*tmp)->size = 0;
   }
+
+  /* Update message counts, prevents a bug: if a message is currently open in
+   * pager and we reinit mailboxes (for example, switch to another email
+   * account, which would involve 'unmailboxes *' followed by adding some
+   * mailboxes), message counts will all be zeroes, which won't be visible in
+   * regular mutt but is visible in the sidebar
+  */
+  mutt_buffy_check(0);
+
   return 0;
 }
 

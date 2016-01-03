@@ -35,5 +35,6 @@ void set_buffystats(CONTEXT*);
 void toggle_sidebar(int menu);
 int sidebar_should_refresh();
 void sidebar_updated();
+void reinit_sidebar_buffies();
 
 #endif /* SIDEBAR_H */
