@@ -1286,6 +1286,7 @@ static int update_tags(notmuch_message_t *msg, const char *tags)
 	}
 
 	notmuch_message_thaw(msg);
+	notmuch_message_tags_to_maildir_flags(msg);
 	FREE(&buf);
 	return 0;
 }
