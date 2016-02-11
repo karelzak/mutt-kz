@@ -1719,7 +1719,7 @@ static int maildir_sync_message (CONTEXT * ctx, int msgno)
     /* record that the message is possibly marked as trashed on disk */
     h->trash = h->deleted;
 
-    if (rename (oldpath, fullpath) != 0)
+    if (access (oldpath, F_OK) == 0 && rename (oldpath, fullpath) != 0)
     {
       mutt_perror ("rename");
       return (-1);
