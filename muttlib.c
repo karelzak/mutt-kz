@@ -395,7 +395,7 @@ char *_mutt_expand_path (char *s, size_t slen, int rx)
 {
   char p[_POSIX_PATH_MAX] = "";
   char q[_POSIX_PATH_MAX] = "";
-  char tmp[_POSIX_PATH_MAX];
+  char tmp[_POSIX_PATH_MAX + LONG_STRING + 32];
   char *t;
 
   char *tail = ""; 

@@ -34,7 +34,7 @@ void mutt_edit_headers (const char *editor,
 			char *fcc,
 			size_t fcclen)
 {
-  char path[_POSIX_PATH_MAX];	/* tempfile used to edit headers + body */
+  char path[_POSIX_PATH_MAX + LONG_STRING + 32];	/* tempfile used to edit headers + body */
   char buffer[LONG_STRING];
   const char *p;
   FILE *ifp, *ofp;

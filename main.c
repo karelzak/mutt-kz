@@ -561,7 +561,7 @@ init_extended_keys();
 
 int main (int argc, char **argv)
 {
-  char folder[_POSIX_PATH_MAX] = "";
+  char folder[_POSIX_PATH_MAX + LONG_STRING + 32] = "";
   char *subject = NULL;
   char *includeFile = NULL;
   char *draftFile = NULL;
