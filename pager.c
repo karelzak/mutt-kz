@@ -1497,7 +1497,7 @@ display_line (FILE *f, LOFF_T *last_pos, struct line_t **lineInfo, int n,
    * a newline (grr!).
    */
 #ifndef USE_SLANG_CURSES
-    if (col < COLS)
+    if (col < (COLS - SidebarWidth))
 #endif
       addch ('\n');
 
@@ -2541,8 +2541,12 @@ search_next:
 	  ch = 0;
 	}
 
-	if (option (OPTFORCEREDRAWPAGER))
+	if (option (OPTFORCEREDRAWPAGER)) {
 	  redraw = REDRAW_FULL;
+#ifdef USE_SIDEBAR
+	  sb_draw();
+#endif
+	}
 	unset_option (OPTFORCEREDRAWINDEX);
 	unset_option (OPTFORCEREDRAWPAGER);
 	break;
