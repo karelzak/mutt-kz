@@ -2729,11 +2729,9 @@ struct option_t MuttVars[] = {
   { "sidebar_divider_char", DT_STR, R_BOTH, UL &SidebarDividerChar, UL "|" },
   /*
   ** .pp
-  ** This specifies the character to be drawn between the sidebar (when
+  ** This specifies the characters to be drawn between the sidebar (when
   ** visible) and the other Mutt panels. ASCII and Unicode line-drawing
   ** characters are supported.
-  ** .pp
-  ** \fBNote:\fP Only the first character of sidebar_divider_char is used.
   */
   { "sidebar_delim_chars", DT_STR, R_NONE, UL &SidebarDelimChars, UL "/." },
   /*
@@ -3887,15 +3885,16 @@ const struct mapping_t SortKeyMethods[] = {
 };
 
 const struct mapping_t SortSidebarMethods[] = {
-  { "count",	SORT_COUNT },
-  { "desc",	SORT_DESC },
-  { "flagged",	SORT_FLAGGED },
-  { "new",	SORT_COUNT_NEW },
-  { "path",	SORT_PATH },
-  { "alpha",	SORT_PATH },
-  { "name",	SORT_PATH },
-  { "unsorted",	SORT_ORDER },
-  { NULL,       0 }
+  { "alpha",		SORT_PATH },
+  { "count",		SORT_COUNT },
+  { "desc",		SORT_DESC },
+  { "flagged",		SORT_FLAGGED },
+  { "mailbox-order",	SORT_ORDER },
+  { "name",		SORT_PATH },
+  { "new",		SORT_COUNT_NEW },
+  { "path",		SORT_PATH },
+  { "unsorted",		SORT_ORDER },
+  { NULL,		0 }
 };
 
 

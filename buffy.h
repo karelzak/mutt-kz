@@ -16,6 +16,9 @@
  *     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#ifndef _BUFFY_H
+#define _BUFFY_H
+
 /*parameter to mutt_parse_mailboxes*/
 #define M_MAILBOXES   1
 #define M_UNMAILBOXES 2 
@@ -33,12 +36,10 @@ typedef struct buffy_t
   struct buffy_t *prev;
 #endif
   short new;			/* mailbox has new mail */
-#ifdef USE_SIDEBAR
   int msg_count;		/* total number of messages */
   int msg_unread;		/* number of unread messages */
   int msg_flagged;		/* number of flagged messages */
   short is_hidden;		/* is hidden from the sidebar */
-#endif
   short notified;		/* user has been notified */
   short magic;			/* mailbox type */
   short newly_created;		/* mbox or mmdf just popped into existence */
@@ -70,3 +71,5 @@ void mutt_buffy_cleanup (const char *buf, struct stat *st);
 void mutt_buffy_setnotified (const char *path);
 
 void mh_buffy (BUFFY *);
+
+#endif /* _BUFFY_H */
